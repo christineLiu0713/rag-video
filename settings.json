@@ -1,0 +1,21 @@
+{
+  "interval": 1,
+  "min_confidence": 0.7,
+  "min_line_chars": 4,
+  "footer_y": 0.94,
+  "header_y": 0.0,
+  "bad_words": ["simplilearn", "rights reserved", "©"],
+  "skip_similar": true,
+  "similar_threshold": 3.0,
+  "ocr_detection_model": "PP-OCRv4_mobile_det",
+  "ocr_recognition_model": "en_PP-OCRv4_mobile_rec",
+  "use_gpu": true,
+  "preprocess_image": true,
+  "filter_gibberish": true,
+  "target_sec": 45,
+  "max_words": 180,
+  "overlap": 1,
+  "min_words": 2,
+  "min_overlap_sec": 3,
+  "slide_boundary_window_sec": 15
+}
