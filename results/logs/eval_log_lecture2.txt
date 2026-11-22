@@ -1,0 +1,79 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading BGE-M3 on cuda...
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 15050.46it/s]
+30 questions, 95 chunks in database
+
+# 檢索方法比較（vector / bm25 / hybrid）
+
+- 題目數：30　片段數：95　向量模型：BAAI/bge-m3（cuda）
+- RRF：k=60、vector_weight=1.0、bm25_weight=1.0
+
+## ALL（30 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 73% | 90% | 0.819 | 40 |
+| bm25 | 37% | 60% | 0.505 | 29 |
+| hybrid | 57% | 87% | 0.706 | 32 |
+
+## keyword（12 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 83% | 92% | 0.896 | 52 |
+| bm25 | 58% | 83% | 0.715 | 28 |
+| hybrid | 75% | 92% | 0.822 | 30 |
+
+## paraphrase（12 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 58% | 83% | 0.708 | 34 |
+| bm25 | 17% | 50% | 0.380 | 32 |
+| hybrid | 33% | 83% | 0.565 | 34 |
+
+## chinese（6 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 83% | 100% | 0.889 | 30 |
+| bm25 | 33% | 33% | 0.333 | 27 |
+| hybrid | 67% | 83% | 0.756 | 30 |
+
+## 每題正確片段的名次（越小越好，- = 沒找到）
+
+| 類型 | 問題 | vector | bm25 | hybrid |
+|---|---|---|---|---|
+| keyword | what does elif stand for | 1 | - | 5 |
+| keyword | Control-C stops an infinite loop | 2 | 4 | 3 |
+| keyword | range(start, stop, step) default values | 1 | 1 | 1 |
+| keyword | SyntaxError when using one equal sign | 1 | 1 | 1 |
+| keyword | Legend of Zelda lost woods | 4 | 2 | 3 |
+| keyword | break statement | 1 | 1 | 1 |
+| keyword | concatenation operator plus does not add spaces | 1 | 2 | 1 |
+| keyword | compare strings lexicographically | 1 | 1 | 1 |
+| keyword | free food mailing list | 1 | 1 | 1 |
+| keyword | mysum is 7 plus 8 plus 9 | 1 | 1 | 1 |
+| keyword | star operator repeats a string | 1 | 3 | 1 |
+| keyword | input function prompt | 1 | 1 | 1 |
+| paraphrase | how do I glue two pieces of text together | 12 | 3 | 4 |
+| paraphrase | what happens if the loop condition never becomes false | 4 | 4 | 2 |
+| paraphrase | how can a program choose between several alternatives | 3 | 1 | 2 |
+| paraphrase | what kind of data does whatever the user types become | 1 | 2 | 1 |
+| paraphrase | how do I turn the user's text into a number | 3 | 3 | 3 |
+| paraphrase | can I check whether a word is bigger than a number | 1 | 4 | 1 |
+| paraphrase | how do I leave a loop early | 1 | 1 | 1 |
+| paraphrase | when should I repeat a fixed number of times versus until something happens | 1 | 18 | 3 |
+| paraphrase | how are groups of statements marked in Python | 1 | 11 | 3 |
+| paraphrase | difference between giving a variable a value and checking if two values are the same | 1 | 4 | 1 |
+| paraphrase | a strategy to get through a maze by keeping one hand on the wall | 2 | 2 | 2 |
+| paraphrase | can the counting function use decimal numbers | 1 | - | 33 |
+| chinese | elif 是什麼意思 | 1 | - | 5 |
+| chinese | 無窮迴圈要怎麼停止 | 3 | - | 3 |
+| chinese | 字串可以和數字比較大小嗎 | 1 | - | 1 |
+| chinese | for 迴圈和 while 迴圈有什麼差別 | 1 | 1 | 1 |
+| chinese | break 會跳出哪一個迴圈 | 1 | 1 | 1 |
+| chinese | 怎麼讓使用者輸入資料 | 1 | - | 1 |
+
+Saved: output/eval_result.md, output/eval_detail.csv
+EVAL_FINISHED 

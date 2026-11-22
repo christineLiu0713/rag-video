@@ -1,0 +1,152 @@
+[
+  {
+    "start": 2.0,
+    "end": 6.8,
+    "text": "Okay, I've got less than three minutes to tell you about for loops in Python"
+  },
+  {
+    "start": 6.8,
+    "end": 11.5,
+    "text": "And the first thing we need to know about the for loop is that it's used to make the computer"
+  },
+  {
+    "start": 12.3,
+    "end": 19.5,
+    "text": "Repeat the processing of a few lines of code so you can repeat a few instructions many times in your program"
+  },
+  {
+    "start": 19.8,
+    "end": 25.0,
+    "text": "Let's look at an example here. We've got a for loop on line 5 so it start with the keyword for"
+  },
+  {
+    "start": 25.6,
+    "end": 30.9,
+    "text": "then counter in range 1 2 5 and then underneath that for loop"
+  },
+  {
+    "start": 31.3,
+    "end": 37.6,
+    "text": "Our code is indented, which means it's got a bit of space before the code printHelloWorld."
+  },
+  {
+    "start": 37.6,
+    "end": 41.5,
+    "text": "And then we've got a line 8, where the code is back to the left."
+  },
+  {
+    "start": 41.5,
+    "end": 42.9,
+    "text": "So let's see what happens here."
+  },
+  {
+    "start": 42.9,
+    "end": 49.4,
+    "text": "When I run this code, it starts with follow-up, which is this instruction here, and then it's"
+  },
+  {
+    "start": 49.4,
+    "end": 54.3,
+    "text": "going to print HelloWorld, and it's done it one, two, three, four times, and then it's"
+  },
+  {
+    "start": 54.3,
+    "end": 56.6,
+    "text": "printed the end."
+  },
+  {
+    "start": 60.3,
+    "end": 65.8,
+    "text": "four times now that is a bit unexpected because we said from one to five so i was expecting to"
+  },
+  {
+    "start": 65.8,
+    "end": 71.7,
+    "text": "see the word hello world five times and it's only appearing four times and the reason being"
+  },
+  {
+    "start": 71.7,
+    "end": 79.5,
+    "text": "is because python um start at position one and it stopped just before the last position"
+  },
+  {
+    "start": 84.1,
+    "end": 90.5,
+    "text": "loops through this is that you can say it's going to do it from 5 take away 1 which is 4 times."
+  },
+  {
+    "start": 90.5,
+    "end": 96.9,
+    "text": "Okay and that's how it works. Now in a for loop we can have multiple lines of codes. As long as"
+  },
+  {
+    "start": 96.9,
+    "end": 102.9,
+    "text": "we keep them indented to the right they will be part of the for loop hence the code will be"
+  },
+  {
+    "start": 102.9,
+    "end": 110.3,
+    "text": "repeated. So for instance I could print something else here or I could also print and use"
+  },
+  {
+    "start": 113.9,
+    "end": 118.1,
+    "text": "in my for loop. Let's see what happens. Now both those lines would be repeated"
+  },
+  {
+    "start": 118.1,
+    "end": 122.1,
+    "text": "because the bus indented whereas this one is not indented so it"
+  },
+  {
+    "start": 122.1,
+    "end": 126.7,
+    "text": "will only happen once, once it's finished looping. Okay let's"
+  },
+  {
+    "start": 126.7,
+    "end": 132.3,
+    "text": "try this, see what happens. Hello world one, hello world two, hello"
+  },
+  {
+    "start": 132.3,
+    "end": 136.6,
+    "text": "world three, hello world four, the end. So as you can see here my"
+  },
+  {
+    "start": 136.6,
+    "end": 140.0,
+    "text": "counter started at one which is my starting position"
+  },
+  {
+    "start": 140.0,
+    "end": 144.6,
+    "text": "and then progressively it did increment so it"
+  },
+  {
+    "start": 142.9,
+    "end": 149.7,
+    "text": "raised by one every time it went through the loop. And it stopped, as I said, always one before the"
+  },
+  {
+    "start": 149.7,
+    "end": 156.1,
+    "text": "last. This is why very often people don't call it counter. Programmers don't call it counter. They"
+  },
+  {
+    "start": 156.1,
+    "end": 164.3,
+    "text": "call it I for I in range. And I stands for increment. It's because the increment goes up by"
+  },
+  {
+    "start": 164.3,
+    "end": 169.3,
+    "text": "one. But to be honest, you can call it whatever you want. So let's try this. It should be exactly"
+  },
+  {
+    "start": 172.6,
+    "end": 178.2,
+    "text": "And that's it. That's all I wanted to explain about for loops. I hope you enjoyed this."
+  }
+]

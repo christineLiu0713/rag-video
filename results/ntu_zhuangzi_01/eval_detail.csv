@@ -1,0 +1,199 @@
+﻿question,type,mode,rank,top3,ms
+北冥有魚，其名為鯤,keyword,vector,2,ntu_zhuangzi_01_005 ntu_zhuangzi_01_012 ntu_zhuangzi_01_013,256.8
+北冥有魚，其名為鯤,keyword,bm25,3,ntu_zhuangzi_01_005 ntu_zhuangzi_01_013 ntu_zhuangzi_01_012,57.0
+北冥有魚，其名為鯤,keyword,"hybrid (all, w=1)",2,ntu_zhuangzi_01_005 ntu_zhuangzi_01_012 ntu_zhuangzi_01_013,55.0
+北冥有魚，其名為鯤,keyword,"hybrid (top10, w=1)",2,ntu_zhuangzi_01_005 ntu_zhuangzi_01_012 ntu_zhuangzi_01_013,48.0
+北冥有魚，其名為鯤,keyword,"hybrid (top10, w=0.5)",2,ntu_zhuangzi_01_005 ntu_zhuangzi_01_012 ntu_zhuangzi_01_013,54.0
+北冥有魚，其名為鯤,keyword,"hybrid (top10, w=0.3)",2,ntu_zhuangzi_01_005 ntu_zhuangzi_01_012 ntu_zhuangzi_01_013,51.0
+北冥有魚，其名為鯤,keyword,vector + rerank,2,ntu_zhuangzi_01_005 ntu_zhuangzi_01_012 ntu_zhuangzi_01_013,1569.1
+北冥有魚，其名為鯤,keyword,hybrid + rerank,2,ntu_zhuangzi_01_005 ntu_zhuangzi_01_012 ntu_zhuangzi_01_013,1019.4
+北冥有魚，其名為鯤,keyword,hybrid20 + rerank,2,ntu_zhuangzi_01_005 ntu_zhuangzi_01_012 ntu_zhuangzi_01_013,2123.8
+鯤是什麼意思,keyword,vector,40,ntu_zhuangzi_01_069 ntu_zhuangzi_01_023 ntu_zhuangzi_01_005,41.0
+鯤是什麼意思,keyword,bm25,47,ntu_zhuangzi_01_016 ntu_zhuangzi_01_025 ntu_zhuangzi_01_021,53.0
+鯤是什麼意思,keyword,"hybrid (all, w=1)",42,ntu_zhuangzi_01_021 ntu_zhuangzi_01_023 ntu_zhuangzi_01_025,34.0
+鯤是什麼意思,keyword,"hybrid (top10, w=1)",,ntu_zhuangzi_01_021 ntu_zhuangzi_01_023 ntu_zhuangzi_01_025,36.0
+鯤是什麼意思,keyword,"hybrid (top10, w=0.5)",,ntu_zhuangzi_01_023 ntu_zhuangzi_01_014 ntu_zhuangzi_01_021,38.0
+鯤是什麼意思,keyword,"hybrid (top10, w=0.3)",,ntu_zhuangzi_01_023 ntu_zhuangzi_01_014 ntu_zhuangzi_01_021,37.0
+鯤是什麼意思,keyword,vector + rerank,,ntu_zhuangzi_01_014 ntu_zhuangzi_01_023 ntu_zhuangzi_01_069,1434.2
+鯤是什麼意思,keyword,hybrid + rerank,,ntu_zhuangzi_01_014 ntu_zhuangzi_01_023 ntu_zhuangzi_01_069,1217.9
+鯤是什麼意思,keyword,hybrid20 + rerank,,ntu_zhuangzi_01_014 ntu_zhuangzi_01_023 ntu_zhuangzi_01_069,2100.8
+大鵬要飛上九萬里,keyword,vector,3,ntu_zhuangzi_01_070 ntu_zhuangzi_01_029 ntu_zhuangzi_01_028,41.0
+大鵬要飛上九萬里,keyword,bm25,2,ntu_zhuangzi_01_070 ntu_zhuangzi_01_028 ntu_zhuangzi_01_039,42.0
+大鵬要飛上九萬里,keyword,"hybrid (all, w=1)",2,ntu_zhuangzi_01_070 ntu_zhuangzi_01_028 ntu_zhuangzi_01_029,37.0
+大鵬要飛上九萬里,keyword,"hybrid (top10, w=1)",2,ntu_zhuangzi_01_070 ntu_zhuangzi_01_028 ntu_zhuangzi_01_029,36.0
+大鵬要飛上九萬里,keyword,"hybrid (top10, w=0.5)",3,ntu_zhuangzi_01_070 ntu_zhuangzi_01_029 ntu_zhuangzi_01_028,33.0
+大鵬要飛上九萬里,keyword,"hybrid (top10, w=0.3)",3,ntu_zhuangzi_01_070 ntu_zhuangzi_01_029 ntu_zhuangzi_01_028,37.0
+大鵬要飛上九萬里,keyword,vector + rerank,2,ntu_zhuangzi_01_029 ntu_zhuangzi_01_028 ntu_zhuangzi_01_066,1633.1
+大鵬要飛上九萬里,keyword,hybrid + rerank,2,ntu_zhuangzi_01_029 ntu_zhuangzi_01_028 ntu_zhuangzi_01_066,1298.3
+大鵬要飛上九萬里,keyword,hybrid20 + rerank,2,ntu_zhuangzi_01_029 ntu_zhuangzi_01_028 ntu_zhuangzi_01_066,1871.9
+蜩與學鳩,keyword,vector,1,ntu_zhuangzi_01_046 ntu_zhuangzi_01_048 ntu_zhuangzi_01_081,31.0
+蜩與學鳩,keyword,bm25,1,ntu_zhuangzi_01_046 ntu_zhuangzi_01_049 ntu_zhuangzi_01_122,36.0
+蜩與學鳩,keyword,"hybrid (all, w=1)",1,ntu_zhuangzi_01_046 ntu_zhuangzi_01_048 ntu_zhuangzi_01_049,34.0
+蜩與學鳩,keyword,"hybrid (top10, w=1)",1,ntu_zhuangzi_01_046 ntu_zhuangzi_01_048 ntu_zhuangzi_01_049,32.0
+蜩與學鳩,keyword,"hybrid (top10, w=0.5)",1,ntu_zhuangzi_01_046 ntu_zhuangzi_01_048 ntu_zhuangzi_01_049,36.0
+蜩與學鳩,keyword,"hybrid (top10, w=0.3)",1,ntu_zhuangzi_01_046 ntu_zhuangzi_01_048 ntu_zhuangzi_01_049,34.0
+蜩與學鳩,keyword,vector + rerank,1,ntu_zhuangzi_01_046 ntu_zhuangzi_01_067 ntu_zhuangzi_01_057,1426.2
+蜩與學鳩,keyword,hybrid + rerank,1,ntu_zhuangzi_01_046 ntu_zhuangzi_01_067 ntu_zhuangzi_01_048,998.0
+蜩與學鳩,keyword,hybrid20 + rerank,1,ntu_zhuangzi_01_046 ntu_zhuangzi_01_067 ntu_zhuangzi_01_057,2226.7
+朝菌不知晦朔,keyword,vector,1,ntu_zhuangzi_01_060 ntu_zhuangzi_01_009 ntu_zhuangzi_01_024,39.0
+朝菌不知晦朔,keyword,bm25,1,ntu_zhuangzi_01_060 ntu_zhuangzi_01_003 ntu_zhuangzi_01_004,41.0
+朝菌不知晦朔,keyword,"hybrid (all, w=1)",1,ntu_zhuangzi_01_060 ntu_zhuangzi_01_005 ntu_zhuangzi_01_061,41.0
+朝菌不知晦朔,keyword,"hybrid (top10, w=1)",1,ntu_zhuangzi_01_060 ntu_zhuangzi_01_005 ntu_zhuangzi_01_009,35.0
+朝菌不知晦朔,keyword,"hybrid (top10, w=0.5)",1,ntu_zhuangzi_01_060 ntu_zhuangzi_01_005 ntu_zhuangzi_01_009,35.0
+朝菌不知晦朔,keyword,"hybrid (top10, w=0.3)",1,ntu_zhuangzi_01_060 ntu_zhuangzi_01_005 ntu_zhuangzi_01_009,33.0
+朝菌不知晦朔,keyword,vector + rerank,1,ntu_zhuangzi_01_060 ntu_zhuangzi_01_061 ntu_zhuangzi_01_058,1440.2
+朝菌不知晦朔,keyword,hybrid + rerank,1,ntu_zhuangzi_01_060 ntu_zhuangzi_01_061 ntu_zhuangzi_01_027,1271.3
+朝菌不知晦朔,keyword,hybrid20 + rerank,1,ntu_zhuangzi_01_060 ntu_zhuangzi_01_061 ntu_zhuangzi_01_058,2359.6
+彭祖活了七百八十歲,keyword,vector,1,ntu_zhuangzi_01_063 ntu_zhuangzi_01_061 ntu_zhuangzi_01_066,55.0
+彭祖活了七百八十歲,keyword,bm25,1,ntu_zhuangzi_01_063 ntu_zhuangzi_01_056 ntu_zhuangzi_01_057,60.0
+彭祖活了七百八十歲,keyword,"hybrid (all, w=1)",1,ntu_zhuangzi_01_063 ntu_zhuangzi_01_066 ntu_zhuangzi_01_065,51.0
+彭祖活了七百八十歲,keyword,"hybrid (top10, w=1)",1,ntu_zhuangzi_01_063 ntu_zhuangzi_01_066 ntu_zhuangzi_01_065,45.0
+彭祖活了七百八十歲,keyword,"hybrid (top10, w=0.5)",1,ntu_zhuangzi_01_063 ntu_zhuangzi_01_066 ntu_zhuangzi_01_065,46.0
+彭祖活了七百八十歲,keyword,"hybrid (top10, w=0.3)",1,ntu_zhuangzi_01_063 ntu_zhuangzi_01_066 ntu_zhuangzi_01_065,48.0
+彭祖活了七百八十歲,keyword,vector + rerank,1,ntu_zhuangzi_01_063 ntu_zhuangzi_01_066 ntu_zhuangzi_01_064,1524.9
+彭祖活了七百八十歲,keyword,hybrid + rerank,1,ntu_zhuangzi_01_063 ntu_zhuangzi_01_066 ntu_zhuangzi_01_064,1332.2
+彭祖活了七百八十歲,keyword,hybrid20 + rerank,1,ntu_zhuangzi_01_063 ntu_zhuangzi_01_066 ntu_zhuangzi_01_064,2426.6
+宋榮子猶然笑之,keyword,vector,1,ntu_zhuangzi_01_088 ntu_zhuangzi_01_090 ntu_zhuangzi_01_089,35.0
+宋榮子猶然笑之,keyword,bm25,1,ntu_zhuangzi_01_088 ntu_zhuangzi_01_090 ntu_zhuangzi_01_089,44.0
+宋榮子猶然笑之,keyword,"hybrid (all, w=1)",1,ntu_zhuangzi_01_088 ntu_zhuangzi_01_090 ntu_zhuangzi_01_089,35.0
+宋榮子猶然笑之,keyword,"hybrid (top10, w=1)",1,ntu_zhuangzi_01_088 ntu_zhuangzi_01_090 ntu_zhuangzi_01_089,35.0
+宋榮子猶然笑之,keyword,"hybrid (top10, w=0.5)",1,ntu_zhuangzi_01_088 ntu_zhuangzi_01_090 ntu_zhuangzi_01_089,36.0
+宋榮子猶然笑之,keyword,"hybrid (top10, w=0.3)",1,ntu_zhuangzi_01_088 ntu_zhuangzi_01_090 ntu_zhuangzi_01_089,35.0
+宋榮子猶然笑之,keyword,vector + rerank,1,ntu_zhuangzi_01_088 ntu_zhuangzi_01_092 ntu_zhuangzi_01_090,1572.1
+宋榮子猶然笑之,keyword,hybrid + rerank,1,ntu_zhuangzi_01_088 ntu_zhuangzi_01_092 ntu_zhuangzi_01_090,903.5
+宋榮子猶然笑之,keyword,hybrid20 + rerank,1,ntu_zhuangzi_01_088 ntu_zhuangzi_01_092 ntu_zhuangzi_01_090,1785.0
+列子御風而行,keyword,vector,1,ntu_zhuangzi_01_099 ntu_zhuangzi_01_107 ntu_zhuangzi_01_115,43.0
+列子御風而行,keyword,bm25,1,ntu_zhuangzi_01_099 ntu_zhuangzi_01_115 ntu_zhuangzi_01_104,50.0
+列子御風而行,keyword,"hybrid (all, w=1)",1,ntu_zhuangzi_01_099 ntu_zhuangzi_01_115 ntu_zhuangzi_01_107,40.0
+列子御風而行,keyword,"hybrid (top10, w=1)",1,ntu_zhuangzi_01_099 ntu_zhuangzi_01_115 ntu_zhuangzi_01_107,36.0
+列子御風而行,keyword,"hybrid (top10, w=0.5)",1,ntu_zhuangzi_01_099 ntu_zhuangzi_01_107 ntu_zhuangzi_01_115,37.0
+列子御風而行,keyword,"hybrid (top10, w=0.3)",1,ntu_zhuangzi_01_099 ntu_zhuangzi_01_107 ntu_zhuangzi_01_115,34.0
+列子御風而行,keyword,vector + rerank,1,ntu_zhuangzi_01_099 ntu_zhuangzi_01_115 ntu_zhuangzi_01_106,1509.1
+列子御風而行,keyword,hybrid + rerank,1,ntu_zhuangzi_01_099 ntu_zhuangzi_01_115 ntu_zhuangzi_01_106,1052.4
+列子御風而行,keyword,hybrid20 + rerank,1,ntu_zhuangzi_01_099 ntu_zhuangzi_01_115 ntu_zhuangzi_01_106,2102.1
+至人無己，神人無功，聖人無名,keyword,vector,5,ntu_zhuangzi_01_121 ntu_zhuangzi_01_119 ntu_zhuangzi_01_120,54.0
+至人無己，神人無功，聖人無名,keyword,bm25,1,ntu_zhuangzi_01_118 ntu_zhuangzi_01_119 ntu_zhuangzi_01_121,58.0
+至人無己，神人無功，聖人無名,keyword,"hybrid (all, w=1)",3,ntu_zhuangzi_01_121 ntu_zhuangzi_01_119 ntu_zhuangzi_01_118,47.0
+至人無己，神人無功，聖人無名,keyword,"hybrid (top10, w=1)",3,ntu_zhuangzi_01_121 ntu_zhuangzi_01_119 ntu_zhuangzi_01_118,45.0
+至人無己，神人無功，聖人無名,keyword,"hybrid (top10, w=0.5)",4,ntu_zhuangzi_01_121 ntu_zhuangzi_01_119 ntu_zhuangzi_01_120,46.0
+至人無己，神人無功，聖人無名,keyword,"hybrid (top10, w=0.3)",4,ntu_zhuangzi_01_121 ntu_zhuangzi_01_119 ntu_zhuangzi_01_120,47.0
+至人無己，神人無功，聖人無名,keyword,vector + rerank,5,ntu_zhuangzi_01_119 ntu_zhuangzi_01_121 ntu_zhuangzi_01_120,1449.2
+至人無己，神人無功，聖人無名,keyword,hybrid + rerank,5,ntu_zhuangzi_01_119 ntu_zhuangzi_01_121 ntu_zhuangzi_01_120,1144.3
+至人無己，神人無功，聖人無名,keyword,hybrid20 + rerank,5,ntu_zhuangzi_01_119 ntu_zhuangzi_01_121 ntu_zhuangzi_01_120,2344.7
+乘天地之正，御六氣之辯,keyword,vector,1,ntu_zhuangzi_01_110 ntu_zhuangzi_01_113 ntu_zhuangzi_01_111,43.0
+乘天地之正，御六氣之辯,keyword,bm25,3,ntu_zhuangzi_01_113 ntu_zhuangzi_01_115 ntu_zhuangzi_01_110,52.0
+乘天地之正，御六氣之辯,keyword,"hybrid (all, w=1)",2,ntu_zhuangzi_01_113 ntu_zhuangzi_01_110 ntu_zhuangzi_01_115,40.0
+乘天地之正，御六氣之辯,keyword,"hybrid (top10, w=1)",2,ntu_zhuangzi_01_113 ntu_zhuangzi_01_110 ntu_zhuangzi_01_115,35.0
+乘天地之正，御六氣之辯,keyword,"hybrid (top10, w=0.5)",1,ntu_zhuangzi_01_110 ntu_zhuangzi_01_113 ntu_zhuangzi_01_115,36.0
+乘天地之正，御六氣之辯,keyword,"hybrid (top10, w=0.3)",1,ntu_zhuangzi_01_110 ntu_zhuangzi_01_113 ntu_zhuangzi_01_111,35.0
+乘天地之正，御六氣之辯,keyword,vector + rerank,4,ntu_zhuangzi_01_111 ntu_zhuangzi_01_113 ntu_zhuangzi_01_114,1396.8
+乘天地之正，御六氣之辯,keyword,hybrid + rerank,4,ntu_zhuangzi_01_111 ntu_zhuangzi_01_113 ntu_zhuangzi_01_114,986.4
+乘天地之正，御六氣之辯,keyword,hybrid20 + rerank,4,ntu_zhuangzi_01_111 ntu_zhuangzi_01_113 ntu_zhuangzi_01_114,1919.9
+魚變成鳥代表什麼樣的改變,paraphrase,vector,1,ntu_zhuangzi_01_014 ntu_zhuangzi_01_015 ntu_zhuangzi_01_005,40.0
+魚變成鳥代表什麼樣的改變,paraphrase,bm25,4,ntu_zhuangzi_01_023 ntu_zhuangzi_01_025 ntu_zhuangzi_01_015,40.0
+魚變成鳥代表什麼樣的改變,paraphrase,"hybrid (all, w=1)",1,ntu_zhuangzi_01_014 ntu_zhuangzi_01_023 ntu_zhuangzi_01_015,39.0
+魚變成鳥代表什麼樣的改變,paraphrase,"hybrid (top10, w=1)",1,ntu_zhuangzi_01_014 ntu_zhuangzi_01_023 ntu_zhuangzi_01_015,38.0
+魚變成鳥代表什麼樣的改變,paraphrase,"hybrid (top10, w=0.5)",1,ntu_zhuangzi_01_014 ntu_zhuangzi_01_015 ntu_zhuangzi_01_023,34.0
+魚變成鳥代表什麼樣的改變,paraphrase,"hybrid (top10, w=0.3)",1,ntu_zhuangzi_01_014 ntu_zhuangzi_01_015 ntu_zhuangzi_01_023,39.0
+魚變成鳥代表什麼樣的改變,paraphrase,vector + rerank,3,ntu_zhuangzi_01_023 ntu_zhuangzi_01_015 ntu_zhuangzi_01_014,1481.2
+魚變成鳥代表什麼樣的改變,paraphrase,hybrid + rerank,3,ntu_zhuangzi_01_023 ntu_zhuangzi_01_015 ntu_zhuangzi_01_014,1310.3
+魚變成鳥代表什麼樣的改變,paraphrase,hybrid20 + rerank,3,ntu_zhuangzi_01_023 ntu_zhuangzi_01_015 ntu_zhuangzi_01_014,2284.7
+為什麼大鳥起飛需要很強的風,paraphrase,vector,2,ntu_zhuangzi_01_019 ntu_zhuangzi_01_039 ntu_zhuangzi_01_029,45.0
+為什麼大鳥起飛需要很強的風,paraphrase,bm25,1,ntu_zhuangzi_01_039 ntu_zhuangzi_01_020 ntu_zhuangzi_01_028,53.0
+為什麼大鳥起飛需要很強的風,paraphrase,"hybrid (all, w=1)",1,ntu_zhuangzi_01_039 ntu_zhuangzi_01_019 ntu_zhuangzi_01_020,44.0
+為什麼大鳥起飛需要很強的風,paraphrase,"hybrid (top10, w=1)",1,ntu_zhuangzi_01_039 ntu_zhuangzi_01_019 ntu_zhuangzi_01_020,42.0
+為什麼大鳥起飛需要很強的風,paraphrase,"hybrid (top10, w=0.5)",1,ntu_zhuangzi_01_039 ntu_zhuangzi_01_019 ntu_zhuangzi_01_044,44.0
+為什麼大鳥起飛需要很強的風,paraphrase,"hybrid (top10, w=0.3)",1,ntu_zhuangzi_01_039 ntu_zhuangzi_01_019 ntu_zhuangzi_01_044,36.0
+為什麼大鳥起飛需要很強的風,paraphrase,vector + rerank,4,ntu_zhuangzi_01_020 ntu_zhuangzi_01_044 ntu_zhuangzi_01_037,1508.7
+為什麼大鳥起飛需要很強的風,paraphrase,hybrid + rerank,4,ntu_zhuangzi_01_020 ntu_zhuangzi_01_044 ntu_zhuangzi_01_037,1121.3
+為什麼大鳥起飛需要很強的風,paraphrase,hybrid20 + rerank,4,ntu_zhuangzi_01_020 ntu_zhuangzi_01_044 ntu_zhuangzi_01_037,1963.9
+要去越遠的地方就要準備越多東西,paraphrase,vector,1,ntu_zhuangzi_01_050 ntu_zhuangzi_01_052 ntu_zhuangzi_01_051,55.0
+要去越遠的地方就要準備越多東西,paraphrase,bm25,4,ntu_zhuangzi_01_052 ntu_zhuangzi_01_070 ntu_zhuangzi_01_022,62.0
+要去越遠的地方就要準備越多東西,paraphrase,"hybrid (all, w=1)",2,ntu_zhuangzi_01_052 ntu_zhuangzi_01_050 ntu_zhuangzi_01_051,53.0
+要去越遠的地方就要準備越多東西,paraphrase,"hybrid (top10, w=1)",2,ntu_zhuangzi_01_052 ntu_zhuangzi_01_050 ntu_zhuangzi_01_070,47.0
+要去越遠的地方就要準備越多東西,paraphrase,"hybrid (top10, w=0.5)",2,ntu_zhuangzi_01_052 ntu_zhuangzi_01_050 ntu_zhuangzi_01_051,45.0
+要去越遠的地方就要準備越多東西,paraphrase,"hybrid (top10, w=0.3)",1,ntu_zhuangzi_01_050 ntu_zhuangzi_01_052 ntu_zhuangzi_01_051,51.0
+要去越遠的地方就要準備越多東西,paraphrase,vector + rerank,1,ntu_zhuangzi_01_050 ntu_zhuangzi_01_051 ntu_zhuangzi_01_052,1379.2
+要去越遠的地方就要準備越多東西,paraphrase,hybrid + rerank,1,ntu_zhuangzi_01_050 ntu_zhuangzi_01_051 ntu_zhuangzi_01_052,1321.2
+要去越遠的地方就要準備越多東西,paraphrase,hybrid20 + rerank,1,ntu_zhuangzi_01_050 ntu_zhuangzi_01_051 ntu_zhuangzi_01_052,2340.7
+壽命很短的生物沒辦法理解時間,paraphrase,vector,2,ntu_zhuangzi_01_061 ntu_zhuangzi_01_060 ntu_zhuangzi_01_031,49.0
+壽命很短的生物沒辦法理解時間,paraphrase,bm25,1,ntu_zhuangzi_01_060 ntu_zhuangzi_01_096 ntu_zhuangzi_01_080,60.0
+壽命很短的生物沒辦法理解時間,paraphrase,"hybrid (all, w=1)",1,ntu_zhuangzi_01_060 ntu_zhuangzi_01_031 ntu_zhuangzi_01_080,51.0
+壽命很短的生物沒辦法理解時間,paraphrase,"hybrid (top10, w=1)",1,ntu_zhuangzi_01_060 ntu_zhuangzi_01_031 ntu_zhuangzi_01_061,52.0
+壽命很短的生物沒辦法理解時間,paraphrase,"hybrid (top10, w=0.5)",1,ntu_zhuangzi_01_060 ntu_zhuangzi_01_031 ntu_zhuangzi_01_061,48.0
+壽命很短的生物沒辦法理解時間,paraphrase,"hybrid (top10, w=0.3)",1,ntu_zhuangzi_01_060 ntu_zhuangzi_01_031 ntu_zhuangzi_01_061,43.0
+壽命很短的生物沒辦法理解時間,paraphrase,vector + rerank,1,ntu_zhuangzi_01_060 ntu_zhuangzi_01_010 ntu_zhuangzi_01_061,1334.8
+壽命很短的生物沒辦法理解時間,paraphrase,hybrid + rerank,1,ntu_zhuangzi_01_060 ntu_zhuangzi_01_010 ntu_zhuangzi_01_061,1467.2
+壽命很短的生物沒辦法理解時間,paraphrase,hybrid20 + rerank,1,ntu_zhuangzi_01_060 ntu_zhuangzi_01_010 ntu_zhuangzi_01_061,2523.6
+全世界的人都批評他也不在意,paraphrase,vector,2,ntu_zhuangzi_01_091 ntu_zhuangzi_01_092 ntu_zhuangzi_01_093,34.0
+全世界的人都批評他也不在意,paraphrase,bm25,2,ntu_zhuangzi_01_091 ntu_zhuangzi_01_092 ntu_zhuangzi_01_122,46.0
+全世界的人都批評他也不在意,paraphrase,"hybrid (all, w=1)",2,ntu_zhuangzi_01_091 ntu_zhuangzi_01_092 ntu_zhuangzi_01_121,42.0
+全世界的人都批評他也不在意,paraphrase,"hybrid (top10, w=1)",2,ntu_zhuangzi_01_091 ntu_zhuangzi_01_092 ntu_zhuangzi_01_121,38.0
+全世界的人都批評他也不在意,paraphrase,"hybrid (top10, w=0.5)",2,ntu_zhuangzi_01_091 ntu_zhuangzi_01_092 ntu_zhuangzi_01_097,31.0
+全世界的人都批評他也不在意,paraphrase,"hybrid (top10, w=0.3)",2,ntu_zhuangzi_01_091 ntu_zhuangzi_01_092 ntu_zhuangzi_01_097,33.0
+全世界的人都批評他也不在意,paraphrase,vector + rerank,1,ntu_zhuangzi_01_092 ntu_zhuangzi_01_091 ntu_zhuangzi_01_098,1566.1
+全世界的人都批評他也不在意,paraphrase,hybrid + rerank,1,ntu_zhuangzi_01_092 ntu_zhuangzi_01_091 ntu_zhuangzi_01_098,1269.3
+全世界的人都批評他也不在意,paraphrase,hybrid20 + rerank,1,ntu_zhuangzi_01_092 ntu_zhuangzi_01_091 ntu_zhuangzi_01_098,2072.8
+還要等待外在條件才能行動，所以不是最高境界,paraphrase,vector,1,ntu_zhuangzi_01_108 ntu_zhuangzi_01_116 ntu_zhuangzi_01_109,45.0
+還要等待外在條件才能行動，所以不是最高境界,paraphrase,bm25,1,ntu_zhuangzi_01_108 ntu_zhuangzi_01_029 ntu_zhuangzi_01_116,56.0
+還要等待外在條件才能行動，所以不是最高境界,paraphrase,"hybrid (all, w=1)",1,ntu_zhuangzi_01_108 ntu_zhuangzi_01_116 ntu_zhuangzi_01_037,51.0
+還要等待外在條件才能行動，所以不是最高境界,paraphrase,"hybrid (top10, w=1)",1,ntu_zhuangzi_01_108 ntu_zhuangzi_01_116 ntu_zhuangzi_01_037,50.0
+還要等待外在條件才能行動，所以不是最高境界,paraphrase,"hybrid (top10, w=0.5)",1,ntu_zhuangzi_01_108 ntu_zhuangzi_01_116 ntu_zhuangzi_01_037,49.0
+還要等待外在條件才能行動，所以不是最高境界,paraphrase,"hybrid (top10, w=0.3)",1,ntu_zhuangzi_01_108 ntu_zhuangzi_01_116 ntu_zhuangzi_01_037,50.0
+還要等待外在條件才能行動，所以不是最高境界,paraphrase,vector + rerank,1,ntu_zhuangzi_01_108 ntu_zhuangzi_01_029 ntu_zhuangzi_01_116,1418.8
+還要等待外在條件才能行動，所以不是最高境界,paraphrase,hybrid + rerank,1,ntu_zhuangzi_01_108 ntu_zhuangzi_01_029 ntu_zhuangzi_01_028,1103.4
+還要等待外在條件才能行動，所以不是最高境界,paraphrase,hybrid20 + rerank,1,ntu_zhuangzi_01_108 ntu_zhuangzi_01_029 ntu_zhuangzi_01_028,1731.0
+別人得到你想要的東西，你也替他高興,paraphrase,vector,2,ntu_zhuangzi_01_103 ntu_zhuangzi_01_119 ntu_zhuangzi_01_002,39.0
+別人得到你想要的東西，你也替他高興,paraphrase,bm25,1,ntu_zhuangzi_01_119 ntu_zhuangzi_01_009 ntu_zhuangzi_01_021,47.0
+別人得到你想要的東西，你也替他高興,paraphrase,"hybrid (all, w=1)",1,ntu_zhuangzi_01_119 ntu_zhuangzi_01_120 ntu_zhuangzi_01_103,46.0
+別人得到你想要的東西，你也替他高興,paraphrase,"hybrid (top10, w=1)",1,ntu_zhuangzi_01_119 ntu_zhuangzi_01_120 ntu_zhuangzi_01_103,38.0
+別人得到你想要的東西，你也替他高興,paraphrase,"hybrid (top10, w=0.5)",1,ntu_zhuangzi_01_119 ntu_zhuangzi_01_120 ntu_zhuangzi_01_103,40.0
+別人得到你想要的東西，你也替他高興,paraphrase,"hybrid (top10, w=0.3)",1,ntu_zhuangzi_01_119 ntu_zhuangzi_01_120 ntu_zhuangzi_01_103,41.0
+別人得到你想要的東西，你也替他高興,paraphrase,vector + rerank,1,ntu_zhuangzi_01_119 ntu_zhuangzi_01_120 ntu_zhuangzi_01_058,1313.3
+別人得到你想要的東西，你也替他高興,paraphrase,hybrid + rerank,1,ntu_zhuangzi_01_119 ntu_zhuangzi_01_120 ntu_zhuangzi_01_095,1468.1
+別人得到你想要的東西，你也替他高興,paraphrase,hybrid20 + rerank,1,ntu_zhuangzi_01_119 ntu_zhuangzi_01_120 ntu_zhuangzi_01_095,2499.6
+冥這個字的意思,paraphrase,vector,1,ntu_zhuangzi_01_021 ntu_zhuangzi_01_011 ntu_zhuangzi_01_009,40.0
+冥這個字的意思,paraphrase,bm25,2,ntu_zhuangzi_01_016 ntu_zhuangzi_01_021 ntu_zhuangzi_01_023,51.0
+冥這個字的意思,paraphrase,"hybrid (all, w=1)",1,ntu_zhuangzi_01_021 ntu_zhuangzi_01_023 ntu_zhuangzi_01_020,36.0
+冥這個字的意思,paraphrase,"hybrid (top10, w=1)",1,ntu_zhuangzi_01_021 ntu_zhuangzi_01_023 ntu_zhuangzi_01_020,36.0
+冥這個字的意思,paraphrase,"hybrid (top10, w=0.5)",1,ntu_zhuangzi_01_021 ntu_zhuangzi_01_023 ntu_zhuangzi_01_020,29.0
+冥這個字的意思,paraphrase,"hybrid (top10, w=0.3)",1,ntu_zhuangzi_01_021 ntu_zhuangzi_01_023 ntu_zhuangzi_01_020,32.0
+冥這個字的意思,paraphrase,vector + rerank,1,ntu_zhuangzi_01_021 ntu_zhuangzi_01_009 ntu_zhuangzi_01_011,1429.0
+冥這個字的意思,paraphrase,hybrid + rerank,1,ntu_zhuangzi_01_021 ntu_zhuangzi_01_009 ntu_zhuangzi_01_011,1237.3
+冥這個字的意思,paraphrase,hybrid20 + rerank,1,ntu_zhuangzi_01_021 ntu_zhuangzi_01_009 ntu_zhuangzi_01_011,2006.9
+why does the giant bird need such a strong wind to fly,english,vector,1,ntu_zhuangzi_01_039 ntu_zhuangzi_01_019 ntu_zhuangzi_01_029,50.0
+why does the giant bird need such a strong wind to fly,english,bm25,,,46.0
+why does the giant bird need such a strong wind to fly,english,"hybrid (all, w=1)",1,ntu_zhuangzi_01_039 ntu_zhuangzi_01_019 ntu_zhuangzi_01_029,50.0
+why does the giant bird need such a strong wind to fly,english,"hybrid (top10, w=1)",1,ntu_zhuangzi_01_039 ntu_zhuangzi_01_019 ntu_zhuangzi_01_029,48.0
+why does the giant bird need such a strong wind to fly,english,"hybrid (top10, w=0.5)",1,ntu_zhuangzi_01_039 ntu_zhuangzi_01_019 ntu_zhuangzi_01_029,48.0
+why does the giant bird need such a strong wind to fly,english,"hybrid (top10, w=0.3)",1,ntu_zhuangzi_01_039 ntu_zhuangzi_01_019 ntu_zhuangzi_01_029,42.0
+why does the giant bird need such a strong wind to fly,english,vector + rerank,1,ntu_zhuangzi_01_039 ntu_zhuangzi_01_044 ntu_zhuangzi_01_020,1494.7
+why does the giant bird need such a strong wind to fly,english,hybrid + rerank,1,ntu_zhuangzi_01_039 ntu_zhuangzi_01_044 ntu_zhuangzi_01_019,890.5
+why does the giant bird need such a strong wind to fly,english,hybrid20 + rerank,1,ntu_zhuangzi_01_039 ntu_zhuangzi_01_044 ntu_zhuangzi_01_020,1491.1
+what is the highest state described by Zhuangzi,english,vector,97,ntu_zhuangzi_01_116 ntu_zhuangzi_01_037 ntu_zhuangzi_01_114,43.0
+what is the highest state described by Zhuangzi,english,bm25,,ntu_zhuangzi_01_037 ntu_zhuangzi_01_001 ntu_zhuangzi_01_088,36.0
+what is the highest state described by Zhuangzi,english,"hybrid (all, w=1)",97,ntu_zhuangzi_01_037 ntu_zhuangzi_01_088 ntu_zhuangzi_01_001,40.0
+what is the highest state described by Zhuangzi,english,"hybrid (top10, w=1)",,ntu_zhuangzi_01_037 ntu_zhuangzi_01_116 ntu_zhuangzi_01_001,40.0
+what is the highest state described by Zhuangzi,english,"hybrid (top10, w=0.5)",,ntu_zhuangzi_01_037 ntu_zhuangzi_01_116 ntu_zhuangzi_01_114,34.0
+what is the highest state described by Zhuangzi,english,"hybrid (top10, w=0.3)",,ntu_zhuangzi_01_037 ntu_zhuangzi_01_116 ntu_zhuangzi_01_114,35.0
+what is the highest state described by Zhuangzi,english,vector + rerank,,ntu_zhuangzi_01_037 ntu_zhuangzi_01_088 ntu_zhuangzi_01_116,1550.7
+what is the highest state described by Zhuangzi,english,hybrid + rerank,,ntu_zhuangzi_01_037 ntu_zhuangzi_01_088 ntu_zhuangzi_01_001,959.5
+what is the highest state described by Zhuangzi,english,hybrid20 + rerank,,ntu_zhuangzi_01_037 ntu_zhuangzi_01_088 ntu_zhuangzi_01_001,1585.1
+the story of a huge fish that turns into a bird,english,vector,1,ntu_zhuangzi_01_014 ntu_zhuangzi_01_015 ntu_zhuangzi_01_012,52.0
+the story of a huge fish that turns into a bird,english,bm25,,,42.0
+the story of a huge fish that turns into a bird,english,"hybrid (all, w=1)",1,ntu_zhuangzi_01_014 ntu_zhuangzi_01_015 ntu_zhuangzi_01_012,50.0
+the story of a huge fish that turns into a bird,english,"hybrid (top10, w=1)",1,ntu_zhuangzi_01_014 ntu_zhuangzi_01_015 ntu_zhuangzi_01_012,45.0
+the story of a huge fish that turns into a bird,english,"hybrid (top10, w=0.5)",1,ntu_zhuangzi_01_014 ntu_zhuangzi_01_015 ntu_zhuangzi_01_012,42.0
+the story of a huge fish that turns into a bird,english,"hybrid (top10, w=0.3)",1,ntu_zhuangzi_01_014 ntu_zhuangzi_01_015 ntu_zhuangzi_01_012,45.0
+the story of a huge fish that turns into a bird,english,vector + rerank,2,ntu_zhuangzi_01_023 ntu_zhuangzi_01_014 ntu_zhuangzi_01_015,1554.1
+the story of a huge fish that turns into a bird,english,hybrid + rerank,2,ntu_zhuangzi_01_023 ntu_zhuangzi_01_014 ntu_zhuangzi_01_015,918.5
+the story of a huge fish that turns into a bird,english,hybrid20 + rerank,2,ntu_zhuangzi_01_023 ntu_zhuangzi_01_014 ntu_zhuangzi_01_015,1534.1
+does Zhuangzi think small birds are as good as the big one,english,vector,1,ntu_zhuangzi_01_080 ntu_zhuangzi_01_059 ntu_zhuangzi_01_087,51.0
+does Zhuangzi think small birds are as good as the big one,english,bm25,,ntu_zhuangzi_01_037 ntu_zhuangzi_01_001 ntu_zhuangzi_01_088,41.0
+does Zhuangzi think small birds are as good as the big one,english,"hybrid (all, w=1)",4,ntu_zhuangzi_01_037 ntu_zhuangzi_01_001 ntu_zhuangzi_01_088,50.0
+does Zhuangzi think small birds are as good as the big one,english,"hybrid (top10, w=1)",2,ntu_zhuangzi_01_037 ntu_zhuangzi_01_080 ntu_zhuangzi_01_059,52.0
+does Zhuangzi think small birds are as good as the big one,english,"hybrid (top10, w=0.5)",2,ntu_zhuangzi_01_037 ntu_zhuangzi_01_080 ntu_zhuangzi_01_059,47.0
+does Zhuangzi think small birds are as good as the big one,english,"hybrid (top10, w=0.3)",2,ntu_zhuangzi_01_037 ntu_zhuangzi_01_080 ntu_zhuangzi_01_059,46.0
+does Zhuangzi think small birds are as good as the big one,english,vector + rerank,4,ntu_zhuangzi_01_087 ntu_zhuangzi_01_037 ntu_zhuangzi_01_086,1658.1
+does Zhuangzi think small birds are as good as the big one,english,hybrid + rerank,5,ntu_zhuangzi_01_087 ntu_zhuangzi_01_037 ntu_zhuangzi_01_086,1049.0
+does Zhuangzi think small birds are as good as the big one,english,hybrid20 + rerank,5,ntu_zhuangzi_01_087 ntu_zhuangzi_01_037 ntu_zhuangzi_01_086,1722.0

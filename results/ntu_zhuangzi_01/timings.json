@@ -1,0 +1,54 @@
+{
+  "video": {
+    "seconds": 0,
+    "duration_sec": 4149.0,
+    "file": "D:\\7\\413410654\\專題\\rag-video-main\\videos\\ntu_zhuangzi_01.mp4",
+    "language": "zh"
+  },
+  "screenshots": {
+    "seconds": 14.6,
+    "count": 1383
+  },
+  "audio": {
+    "seconds": 3.6
+  },
+  "whisper": {
+    "seconds": 523.0,
+    "sentences": 1032,
+    "model": "medium",
+    "batch_size": 8,
+    "load_sec": 8.7,
+    "device": "cuda",
+    "compute_type": "int8_float32"
+  },
+  "ocr": {
+    "seconds": 406.7,
+    "screenshots": 1383,
+    "ocr_calls": 619,
+    "adaptive": true,
+    "slide_match": "tokens",
+    "text_blocks": 208,
+    "overlays_removed": 0,
+    "workers": 1,
+    "threads": 8,
+    "total_sec_incl_model_load": 421.8
+  },
+  "steps": {
+    "extract": {
+      "seconds": 968.4,
+      "peak_ram_mb": 1917,
+      "peak_vram_mb": 5732
+    },
+    "build_chunks": {
+      "seconds": 1.2,
+      "peak_ram_mb": 0,
+      "peak_vram_mb": 0
+    },
+    "build_db": {
+      "seconds": 33.1,
+      "peak_ram_mb": 1481,
+      "peak_vram_mb": 3378
+    }
+  },
+  "ok": true
+}

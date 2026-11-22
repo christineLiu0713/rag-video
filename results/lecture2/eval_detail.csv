@@ -1,0 +1,271 @@
+﻿question,type,mode,rank,top3,ms
+what does elif stand for,keyword,vector,1,lecture2_034 lecture2_035 lecture2_032,280.8
+what does elif stand for,keyword,bm25,6,lecture2_038 lecture2_031 lecture2_032,34.0
+what does elif stand for,keyword,"hybrid (all, w=1)",2,lecture2_032 lecture2_034 lecture2_038,34.0
+what does elif stand for,keyword,"hybrid (top10, w=1)",2,lecture2_032 lecture2_034 lecture2_038,31.0
+what does elif stand for,keyword,"hybrid (top10, w=0.5)",1,lecture2_034 lecture2_032 lecture2_035,32.0
+what does elif stand for,keyword,"hybrid (top10, w=0.3)",1,lecture2_034 lecture2_032 lecture2_035,37.0
+what does elif stand for,keyword,vector + rerank,2,lecture2_032 lecture2_034 lecture2_035,2055.7
+what does elif stand for,keyword,hybrid + rerank,2,lecture2_032 lecture2_034 lecture2_035,896.0
+what does elif stand for,keyword,hybrid20 + rerank,2,lecture2_032 lecture2_034 lecture2_035,2011.8
+Control-C stops an infinite loop,keyword,vector,1,lecture2_051 lecture2_049 lecture2_054,46.0
+Control-C stops an infinite loop,keyword,bm25,1,lecture2_051 lecture2_049 lecture2_050,50.0
+Control-C stops an infinite loop,keyword,"hybrid (all, w=1)",1,lecture2_051 lecture2_049 lecture2_050,45.0
+Control-C stops an infinite loop,keyword,"hybrid (top10, w=1)",1,lecture2_051 lecture2_049 lecture2_050,46.0
+Control-C stops an infinite loop,keyword,"hybrid (top10, w=0.5)",1,lecture2_051 lecture2_049 lecture2_064,46.0
+Control-C stops an infinite loop,keyword,"hybrid (top10, w=0.3)",1,lecture2_051 lecture2_049 lecture2_064,47.0
+Control-C stops an infinite loop,keyword,vector + rerank,1,lecture2_051 lecture2_050 lecture2_049,1867.9
+Control-C stops an infinite loop,keyword,hybrid + rerank,1,lecture2_051 lecture2_050 lecture2_049,1258.3
+Control-C stops an infinite loop,keyword,hybrid20 + rerank,1,lecture2_051 lecture2_050 lecture2_049,2678.5
+"range(start, stop, step) default values",keyword,vector,1,lecture2_056 lecture2_057 lecture2_058,50.0
+"range(start, stop, step) default values",keyword,bm25,1,lecture2_056 lecture2_057 lecture2_058,42.0
+"range(start, stop, step) default values",keyword,"hybrid (all, w=1)",1,lecture2_056 lecture2_057 lecture2_058,51.0
+"range(start, stop, step) default values",keyword,"hybrid (top10, w=1)",1,lecture2_056 lecture2_057 lecture2_058,48.0
+"range(start, stop, step) default values",keyword,"hybrid (top10, w=0.5)",1,lecture2_056 lecture2_057 lecture2_058,43.0
+"range(start, stop, step) default values",keyword,"hybrid (top10, w=0.3)",1,lecture2_056 lecture2_057 lecture2_058,43.0
+"range(start, stop, step) default values",keyword,vector + rerank,1,lecture2_056 lecture2_061 lecture2_058,2139.6
+"range(start, stop, step) default values",keyword,hybrid + rerank,1,lecture2_056 lecture2_061 lecture2_058,1223.3
+"range(start, stop, step) default values",keyword,hybrid20 + rerank,1,lecture2_056 lecture2_061 lecture2_058,2626.5
+SyntaxError when using one equal sign,keyword,vector,1,lecture2_039 lecture2_023 lecture2_005,50.0
+SyntaxError when using one equal sign,keyword,bm25,1,lecture2_039 lecture2_023 lecture2_005,43.0
+SyntaxError when using one equal sign,keyword,"hybrid (all, w=1)",1,lecture2_039 lecture2_023 lecture2_005,46.0
+SyntaxError when using one equal sign,keyword,"hybrid (top10, w=1)",1,lecture2_039 lecture2_023 lecture2_005,49.0
+SyntaxError when using one equal sign,keyword,"hybrid (top10, w=0.5)",1,lecture2_039 lecture2_023 lecture2_005,50.0
+SyntaxError when using one equal sign,keyword,"hybrid (top10, w=0.3)",1,lecture2_039 lecture2_023 lecture2_005,47.0
+SyntaxError when using one equal sign,keyword,vector + rerank,1,lecture2_039 lecture2_023 lecture2_005,2535.5
+SyntaxError when using one equal sign,keyword,hybrid + rerank,1,lecture2_039 lecture2_023 lecture2_005,1846.0
+SyntaxError when using one equal sign,keyword,hybrid20 + rerank,1,lecture2_039 lecture2_023 lecture2_005,3368.6
+Legend of Zelda lost woods,keyword,vector,1,lecture2_040 lecture2_042 lecture2_041,32.0
+Legend of Zelda lost woods,keyword,bm25,1,lecture2_040 lecture2_042 lecture2_043,40.0
+Legend of Zelda lost woods,keyword,"hybrid (all, w=1)",1,lecture2_040 lecture2_042 lecture2_041,35.0
+Legend of Zelda lost woods,keyword,"hybrid (top10, w=1)",1,lecture2_040 lecture2_042 lecture2_041,36.0
+Legend of Zelda lost woods,keyword,"hybrid (top10, w=0.5)",1,lecture2_040 lecture2_042 lecture2_041,29.0
+Legend of Zelda lost woods,keyword,"hybrid (top10, w=0.3)",1,lecture2_040 lecture2_042 lecture2_041,33.0
+Legend of Zelda lost woods,keyword,vector + rerank,1,lecture2_040 lecture2_041 lecture2_042,2482.6
+Legend of Zelda lost woods,keyword,hybrid + rerank,1,lecture2_040 lecture2_041 lecture2_042,1464.1
+Legend of Zelda lost woods,keyword,hybrid20 + rerank,1,lecture2_040 lecture2_041 lecture2_042,2481.6
+break statement,keyword,vector,1,lecture2_062 lecture2_063 lecture2_061,33.0
+break statement,keyword,bm25,1,lecture2_062 lecture2_063 lecture2_061,32.0
+break statement,keyword,"hybrid (all, w=1)",1,lecture2_062 lecture2_063 lecture2_061,32.0
+break statement,keyword,"hybrid (top10, w=1)",1,lecture2_062 lecture2_063 lecture2_061,33.0
+break statement,keyword,"hybrid (top10, w=0.5)",1,lecture2_062 lecture2_063 lecture2_061,34.0
+break statement,keyword,"hybrid (top10, w=0.3)",1,lecture2_062 lecture2_063 lecture2_061,33.0
+break statement,keyword,vector + rerank,1,lecture2_062 lecture2_061 lecture2_063,2136.4
+break statement,keyword,hybrid + rerank,1,lecture2_062 lecture2_061 lecture2_063,1334.3
+break statement,keyword,hybrid20 + rerank,1,lecture2_062 lecture2_061 lecture2_063,2200.7
+concatenation operator plus does not add spaces,keyword,vector,1,lecture2_007 lecture2_006 lecture2_008,33.0
+concatenation operator plus does not add spaces,keyword,bm25,4,lecture2_013 lecture2_006 lecture2_012,40.0
+concatenation operator plus does not add spaces,keyword,"hybrid (all, w=1)",2,lecture2_006 lecture2_007 lecture2_013,35.0
+concatenation operator plus does not add spaces,keyword,"hybrid (top10, w=1)",2,lecture2_006 lecture2_007 lecture2_013,35.0
+concatenation operator plus does not add spaces,keyword,"hybrid (top10, w=0.5)",1,lecture2_007 lecture2_006 lecture2_013,39.0
+concatenation operator plus does not add spaces,keyword,"hybrid (top10, w=0.3)",1,lecture2_007 lecture2_006 lecture2_013,35.0
+concatenation operator plus does not add spaces,keyword,vector + rerank,3,lecture2_012 lecture2_006 lecture2_008,2164.8
+concatenation operator plus does not add spaces,keyword,hybrid + rerank,3,lecture2_012 lecture2_006 lecture2_008,1484.1
+concatenation operator plus does not add spaces,keyword,hybrid20 + rerank,3,lecture2_012 lecture2_006 lecture2_008,2885.9
+compare strings lexicographically,keyword,vector,1,lecture2_025 lecture2_022 lecture2_023,37.0
+compare strings lexicographically,keyword,bm25,1,lecture2_025 lecture2_022 lecture2_021,32.0
+compare strings lexicographically,keyword,"hybrid (all, w=1)",1,lecture2_025 lecture2_022 lecture2_021,36.0
+compare strings lexicographically,keyword,"hybrid (top10, w=1)",1,lecture2_025 lecture2_022 lecture2_021,30.0
+compare strings lexicographically,keyword,"hybrid (top10, w=0.5)",1,lecture2_025 lecture2_022 lecture2_021,39.0
+compare strings lexicographically,keyword,"hybrid (top10, w=0.3)",1,lecture2_025 lecture2_022 lecture2_021,36.0
+compare strings lexicographically,keyword,vector + rerank,1,lecture2_025 lecture2_022 lecture2_023,2470.6
+compare strings lexicographically,keyword,hybrid + rerank,1,lecture2_025 lecture2_022 lecture2_023,1517.1
+compare strings lexicographically,keyword,hybrid20 + rerank,1,lecture2_025 lecture2_022 lecture2_023,2632.1
+free food mailing list,keyword,vector,1,lecture2_027 lecture2_034 lecture2_004,39.0
+free food mailing list,keyword,bm25,1,lecture2_027 lecture2_029 lecture2_001,30.0
+free food mailing list,keyword,"hybrid (all, w=1)",1,lecture2_027 lecture2_001 lecture2_029,38.0
+free food mailing list,keyword,"hybrid (top10, w=1)",1,lecture2_027 lecture2_001 lecture2_029,34.0
+free food mailing list,keyword,"hybrid (top10, w=0.5)",1,lecture2_027 lecture2_001 lecture2_029,43.0
+free food mailing list,keyword,"hybrid (top10, w=0.3)",1,lecture2_027 lecture2_001 lecture2_029,34.0
+free food mailing list,keyword,vector + rerank,1,lecture2_027 lecture2_029 lecture2_007,2045.7
+free food mailing list,keyword,hybrid + rerank,1,lecture2_027 lecture2_029 lecture2_026,1221.3
+free food mailing list,keyword,hybrid20 + rerank,1,lecture2_027 lecture2_029 lecture2_007,2052.8
+mysum is 7 plus 8 plus 9,keyword,vector,1,lecture2_059 lecture2_058 lecture2_057,33.0
+mysum is 7 plus 8 plus 9,keyword,bm25,1,lecture2_059 lecture2_058 lecture2_057,35.0
+mysum is 7 plus 8 plus 9,keyword,"hybrid (all, w=1)",1,lecture2_059 lecture2_058 lecture2_057,34.0
+mysum is 7 plus 8 plus 9,keyword,"hybrid (top10, w=1)",1,lecture2_059 lecture2_058 lecture2_057,34.0
+mysum is 7 plus 8 plus 9,keyword,"hybrid (top10, w=0.5)",1,lecture2_059 lecture2_058 lecture2_057,34.0
+mysum is 7 plus 8 plus 9,keyword,"hybrid (top10, w=0.3)",1,lecture2_059 lecture2_058 lecture2_057,34.0
+mysum is 7 plus 8 plus 9,keyword,vector + rerank,1,lecture2_059 lecture2_058 lecture2_057,2159.8
+mysum is 7 plus 8 plus 9,keyword,hybrid + rerank,1,lecture2_059 lecture2_058 lecture2_057,1564.1
+mysum is 7 plus 8 plus 9,keyword,hybrid20 + rerank,1,lecture2_059 lecture2_058 lecture2_057,2541.1
+star operator repeats a string,keyword,vector,1,lecture2_009 lecture2_008 lecture2_004,40.0
+star operator repeats a string,keyword,bm25,1,lecture2_009 lecture2_006 lecture2_013,43.0
+star operator repeats a string,keyword,"hybrid (all, w=1)",1,lecture2_009 lecture2_006 lecture2_008,39.0
+star operator repeats a string,keyword,"hybrid (top10, w=1)",1,lecture2_009 lecture2_006 lecture2_008,43.0
+star operator repeats a string,keyword,"hybrid (top10, w=0.5)",1,lecture2_009 lecture2_008 lecture2_006,40.0
+star operator repeats a string,keyword,"hybrid (top10, w=0.3)",1,lecture2_009 lecture2_008 lecture2_006,35.0
+star operator repeats a string,keyword,vector + rerank,1,lecture2_009 lecture2_008 lecture2_017,2592.5
+star operator repeats a string,keyword,hybrid + rerank,1,lecture2_009 lecture2_008 lecture2_017,1675.0
+star operator repeats a string,keyword,hybrid20 + rerank,1,lecture2_009 lecture2_008 lecture2_017,3014.3
+input function prompt,keyword,vector,1,lecture2_016 lecture2_010 lecture2_050,32.0
+input function prompt,keyword,bm25,1,lecture2_016 lecture2_018 lecture2_017,34.0
+input function prompt,keyword,"hybrid (all, w=1)",1,lecture2_016 lecture2_019 lecture2_050,35.0
+input function prompt,keyword,"hybrid (top10, w=1)",1,lecture2_016 lecture2_019 lecture2_050,35.0
+input function prompt,keyword,"hybrid (top10, w=0.5)",1,lecture2_016 lecture2_050 lecture2_019,36.0
+input function prompt,keyword,"hybrid (top10, w=0.3)",1,lecture2_016 lecture2_050 lecture2_019,39.0
+input function prompt,keyword,vector + rerank,1,lecture2_016 lecture2_019 lecture2_045,2438.2
+input function prompt,keyword,hybrid + rerank,1,lecture2_016 lecture2_019 lecture2_045,1829.0
+input function prompt,keyword,hybrid20 + rerank,1,lecture2_016 lecture2_019 lecture2_045,3051.3
+how do I glue two pieces of text together,paraphrase,vector,1,lecture2_008 lecture2_006 lecture2_005,49.0
+how do I glue two pieces of text together,paraphrase,bm25,3,lecture2_006 lecture2_012 lecture2_007,49.0
+how do I glue two pieces of text together,paraphrase,"hybrid (all, w=1)",2,lecture2_006 lecture2_007 lecture2_012,50.0
+how do I glue two pieces of text together,paraphrase,"hybrid (top10, w=1)",2,lecture2_006 lecture2_007 lecture2_012,49.0
+how do I glue two pieces of text together,paraphrase,"hybrid (top10, w=0.5)",2,lecture2_006 lecture2_007 lecture2_012,49.0
+how do I glue two pieces of text together,paraphrase,"hybrid (top10, w=0.3)",2,lecture2_006 lecture2_007 lecture2_012,52.0
+how do I glue two pieces of text together,paraphrase,vector + rerank,1,lecture2_007 lecture2_012 lecture2_006,2375.6
+how do I glue two pieces of text together,paraphrase,hybrid + rerank,1,lecture2_007 lecture2_012 lecture2_006,1896.5
+how do I glue two pieces of text together,paraphrase,hybrid20 + rerank,1,lecture2_007 lecture2_012 lecture2_006,3459.0
+what happens if the loop condition never becomes false,paraphrase,vector,5,lecture2_043 lecture2_044 lecture2_062,46.0
+what happens if the loop condition never becomes false,paraphrase,bm25,3,lecture2_043 lecture2_061 lecture2_049,50.0
+what happens if the loop condition never becomes false,paraphrase,"hybrid (all, w=1)",2,lecture2_043 lecture2_049 lecture2_044,49.0
+what happens if the loop condition never becomes false,paraphrase,"hybrid (top10, w=1)",2,lecture2_043 lecture2_049 lecture2_044,51.0
+what happens if the loop condition never becomes false,paraphrase,"hybrid (top10, w=0.5)",3,lecture2_043 lecture2_044 lecture2_049,50.0
+what happens if the loop condition never becomes false,paraphrase,"hybrid (top10, w=0.3)",4,lecture2_043 lecture2_044 lecture2_062,48.0
+what happens if the loop condition never becomes false,paraphrase,vector + rerank,8,lecture2_043 lecture2_044 lecture2_061,1933.9
+what happens if the loop condition never becomes false,paraphrase,hybrid + rerank,7,lecture2_043 lecture2_044 lecture2_061,1287.3
+what happens if the loop condition never becomes false,paraphrase,hybrid20 + rerank,8,lecture2_043 lecture2_044 lecture2_061,2515.6
+how can a program choose between several alternatives,paraphrase,vector,3,lecture2_030 lecture2_029 lecture2_034,51.0
+how can a program choose between several alternatives,paraphrase,bm25,1,lecture2_034 lecture2_030 lecture2_035,44.0
+how can a program choose between several alternatives,paraphrase,"hybrid (all, w=1)",2,lecture2_030 lecture2_034 lecture2_035,45.0
+how can a program choose between several alternatives,paraphrase,"hybrid (top10, w=1)",2,lecture2_030 lecture2_034 lecture2_035,44.6
+how can a program choose between several alternatives,paraphrase,"hybrid (top10, w=0.5)",2,lecture2_030 lecture2_034 lecture2_029,51.0
+how can a program choose between several alternatives,paraphrase,"hybrid (top10, w=0.3)",2,lecture2_030 lecture2_034 lecture2_029,47.0
+how can a program choose between several alternatives,paraphrase,vector + rerank,3,lecture2_029 lecture2_030 lecture2_034,1890.9
+how can a program choose between several alternatives,paraphrase,hybrid + rerank,3,lecture2_029 lecture2_030 lecture2_034,1547.1
+how can a program choose between several alternatives,paraphrase,hybrid20 + rerank,3,lecture2_029 lecture2_030 lecture2_034,3036.3
+what kind of data does whatever the user types become,paraphrase,vector,1,lecture2_017 lecture2_016 lecture2_004,50.0
+what kind of data does whatever the user types become,paraphrase,bm25,1,lecture2_017 lecture2_016 lecture2_018,52.0
+what kind of data does whatever the user types become,paraphrase,"hybrid (all, w=1)",1,lecture2_017 lecture2_016 lecture2_018,50.0
+what kind of data does whatever the user types become,paraphrase,"hybrid (top10, w=1)",1,lecture2_017 lecture2_016 lecture2_018,46.0
+what kind of data does whatever the user types become,paraphrase,"hybrid (top10, w=0.5)",1,lecture2_017 lecture2_016 lecture2_018,46.0
+what kind of data does whatever the user types become,paraphrase,"hybrid (top10, w=0.3)",1,lecture2_017 lecture2_016 lecture2_018,48.0
+what kind of data does whatever the user types become,paraphrase,vector + rerank,1,lecture2_017 lecture2_016 lecture2_018,2100.8
+what kind of data does whatever the user types become,paraphrase,hybrid + rerank,1,lecture2_017 lecture2_016 lecture2_018,1839.6
+what kind of data does whatever the user types become,paraphrase,hybrid20 + rerank,1,lecture2_017 lecture2_016 lecture2_018,2744.6
+how do I turn the user's text into a number,paraphrase,vector,4,lecture2_017 lecture2_019 lecture2_016,41.0
+how do I turn the user's text into a number,paraphrase,bm25,3,lecture2_017 lecture2_016 lecture2_018,45.0
+how do I turn the user's text into a number,paraphrase,"hybrid (all, w=1)",4,lecture2_017 lecture2_016 lecture2_019,39.0
+how do I turn the user's text into a number,paraphrase,"hybrid (top10, w=1)",4,lecture2_017 lecture2_016 lecture2_019,39.0
+how do I turn the user's text into a number,paraphrase,"hybrid (top10, w=0.5)",4,lecture2_017 lecture2_019 lecture2_016,36.0
+how do I turn the user's text into a number,paraphrase,"hybrid (top10, w=0.3)",4,lecture2_017 lecture2_019 lecture2_016,40.0
+how do I turn the user's text into a number,paraphrase,vector + rerank,1,lecture2_018 lecture2_019 lecture2_016,2136.8
+how do I turn the user's text into a number,paraphrase,hybrid + rerank,1,lecture2_018 lecture2_019 lecture2_016,1872.9
+how do I turn the user's text into a number,paraphrase,hybrid20 + rerank,1,lecture2_018 lecture2_019 lecture2_016,3086.8
+can I check whether a word is bigger than a number,paraphrase,vector,2,lecture2_025 lecture2_022 lecture2_023,36.0
+can I check whether a word is bigger than a number,paraphrase,bm25,4,lecture2_034 lecture2_044 lecture2_030,42.0
+can I check whether a word is bigger than a number,paraphrase,"hybrid (all, w=1)",1,lecture2_022 lecture2_034 lecture2_026,33.0
+can I check whether a word is bigger than a number,paraphrase,"hybrid (top10, w=1)",1,lecture2_022 lecture2_034 lecture2_026,39.0
+can I check whether a word is bigger than a number,paraphrase,"hybrid (top10, w=0.5)",1,lecture2_022 lecture2_026 lecture2_034,38.0
+can I check whether a word is bigger than a number,paraphrase,"hybrid (top10, w=0.3)",1,lecture2_022 lecture2_026 lecture2_034,35.0
+can I check whether a word is bigger than a number,paraphrase,vector + rerank,3,lecture2_026 lecture2_025 lecture2_022,2085.8
+can I check whether a word is bigger than a number,paraphrase,hybrid + rerank,3,lecture2_026 lecture2_025 lecture2_022,1959.9
+can I check whether a word is bigger than a number,paraphrase,hybrid20 + rerank,3,lecture2_026 lecture2_025 lecture2_022,2994.3
+how do I leave a loop early,paraphrase,vector,1,lecture2_064 lecture2_062 lecture2_047,35.0
+how do I leave a loop early,paraphrase,bm25,1,lecture2_064 lecture2_061 lecture2_051,32.0
+how do I leave a loop early,paraphrase,"hybrid (all, w=1)",1,lecture2_064 lecture2_062 lecture2_061,45.0
+how do I leave a loop early,paraphrase,"hybrid (top10, w=1)",1,lecture2_064 lecture2_062 lecture2_061,38.0
+how do I leave a loop early,paraphrase,"hybrid (top10, w=0.5)",1,lecture2_064 lecture2_062 lecture2_061,35.0
+how do I leave a loop early,paraphrase,"hybrid (top10, w=0.3)",1,lecture2_064 lecture2_062 lecture2_061,38.0
+how do I leave a loop early,paraphrase,vector + rerank,2,lecture2_061 lecture2_064 lecture2_062,1943.4
+how do I leave a loop early,paraphrase,hybrid + rerank,2,lecture2_061 lecture2_064 lecture2_062,1383.2
+how do I leave a loop early,paraphrase,hybrid20 + rerank,2,lecture2_061 lecture2_064 lecture2_062,2295.7
+when should I repeat a fixed number of times versus until something happens,paraphrase,vector,1,lecture2_064 lecture2_047 lecture2_049,47.0
+when should I repeat a fixed number of times versus until something happens,paraphrase,bm25,23,lecture2_044 lecture2_030 lecture2_018,49.0
+when should I repeat a fixed number of times versus until something happens,paraphrase,"hybrid (all, w=1)",5,lecture2_044 lecture2_048 lecture2_052,46.0
+when should I repeat a fixed number of times versus until something happens,paraphrase,"hybrid (top10, w=1)",4,lecture2_044 lecture2_048 lecture2_052,43.0
+when should I repeat a fixed number of times versus until something happens,paraphrase,"hybrid (top10, w=0.5)",4,lecture2_044 lecture2_048 lecture2_052,48.0
+when should I repeat a fixed number of times versus until something happens,paraphrase,"hybrid (top10, w=0.3)",4,lecture2_044 lecture2_048 lecture2_052,48.0
+when should I repeat a fixed number of times versus until something happens,paraphrase,vector + rerank,2,lecture2_044 lecture2_064 lecture2_048,1658.1
+when should I repeat a fixed number of times versus until something happens,paraphrase,hybrid + rerank,3,lecture2_044 lecture2_009 lecture2_064,1950.9
+when should I repeat a fixed number of times versus until something happens,paraphrase,hybrid20 + rerank,3,lecture2_044 lecture2_009 lecture2_064,2926.9
+how are groups of statements marked in Python,paraphrase,vector,2,lecture2_005 lecture2_038 lecture2_039,47.0
+how are groups of statements marked in Python,paraphrase,bm25,20,lecture2_033 lecture2_031 lecture2_042,52.0
+how are groups of statements marked in Python,paraphrase,"hybrid (all, w=1)",8,lecture2_005 lecture2_031 lecture2_006,44.0
+how are groups of statements marked in Python,paraphrase,"hybrid (top10, w=1)",7,lecture2_005 lecture2_031 lecture2_006,43.0
+how are groups of statements marked in Python,paraphrase,"hybrid (top10, w=0.5)",6,lecture2_005 lecture2_006 lecture2_031,48.0
+how are groups of statements marked in Python,paraphrase,"hybrid (top10, w=0.3)",6,lecture2_005 lecture2_006 lecture2_031,51.0
+how are groups of statements marked in Python,paraphrase,vector + rerank,4,lecture2_031 lecture2_005 lecture2_039,2178.8
+how are groups of statements marked in Python,paraphrase,hybrid + rerank,4,lecture2_031 lecture2_005 lecture2_039,1857.0
+how are groups of statements marked in Python,paraphrase,hybrid20 + rerank,4,lecture2_031 lecture2_005 lecture2_039,2859.4
+difference between giving a variable a value and checking if two values are the same,paraphrase,vector,1,lecture2_023 lecture2_021 lecture2_025,47.0
+difference between giving a variable a value and checking if two values are the same,paraphrase,bm25,4,lecture2_056 lecture2_057 lecture2_006,48.0
+difference between giving a variable a value and checking if two values are the same,paraphrase,"hybrid (all, w=1)",1,lecture2_023 lecture2_024 lecture2_021,47.0
+difference between giving a variable a value and checking if two values are the same,paraphrase,"hybrid (top10, w=1)",1,lecture2_023 lecture2_024 lecture2_054,43.0
+difference between giving a variable a value and checking if two values are the same,paraphrase,"hybrid (top10, w=0.5)",1,lecture2_023 lecture2_024 lecture2_054,48.0
+difference between giving a variable a value and checking if two values are the same,paraphrase,"hybrid (top10, w=0.3)",1,lecture2_023 lecture2_024 lecture2_054,44.0
+difference between giving a variable a value and checking if two values are the same,paraphrase,vector + rerank,1,lecture2_023 lecture2_038 lecture2_021,2234.3
+difference between giving a variable a value and checking if two values are the same,paraphrase,hybrid + rerank,1,lecture2_023 lecture2_038 lecture2_021,2003.8
+difference between giving a variable a value and checking if two values are the same,paraphrase,hybrid20 + rerank,1,lecture2_023 lecture2_038 lecture2_021,3053.3
+a strategy to get through a maze by keeping one hand on the wall,paraphrase,vector,3,lecture2_027 lecture2_040 lecture2_028,48.0
+a strategy to get through a maze by keeping one hand on the wall,paraphrase,bm25,2,lecture2_027 lecture2_028 lecture2_029,51.0
+a strategy to get through a maze by keeping one hand on the wall,paraphrase,"hybrid (all, w=1)",2,lecture2_027 lecture2_028 lecture2_029,46.0
+a strategy to get through a maze by keeping one hand on the wall,paraphrase,"hybrid (top10, w=1)",2,lecture2_027 lecture2_028 lecture2_029,44.0
+a strategy to get through a maze by keeping one hand on the wall,paraphrase,"hybrid (top10, w=0.5)",2,lecture2_027 lecture2_028 lecture2_029,44.0
+a strategy to get through a maze by keeping one hand on the wall,paraphrase,"hybrid (top10, w=0.3)",2,lecture2_027 lecture2_028 lecture2_029,45.0
+a strategy to get through a maze by keeping one hand on the wall,paraphrase,vector + rerank,2,lecture2_027 lecture2_029 lecture2_028,2142.8
+a strategy to get through a maze by keeping one hand on the wall,paraphrase,hybrid + rerank,2,lecture2_027 lecture2_029 lecture2_028,1897.9
+a strategy to get through a maze by keeping one hand on the wall,paraphrase,hybrid20 + rerank,2,lecture2_027 lecture2_029 lecture2_028,3614.2
+can the counting function use decimal numbers,paraphrase,vector,1,lecture2_059 lecture2_004 lecture2_047,50.0
+can the counting function use decimal numbers,paraphrase,bm25,,lecture2_004 lecture2_013 lecture2_016,50.0
+can the counting function use decimal numbers,paraphrase,"hybrid (all, w=1)",27,lecture2_004 lecture2_013 lecture2_055,51.0
+can the counting function use decimal numbers,paraphrase,"hybrid (top10, w=1)",6,lecture2_004 lecture2_013 lecture2_055,44.0
+can the counting function use decimal numbers,paraphrase,"hybrid (top10, w=0.5)",6,lecture2_004 lecture2_013 lecture2_055,48.0
+can the counting function use decimal numbers,paraphrase,"hybrid (top10, w=0.3)",6,lecture2_004 lecture2_055 lecture2_013,49.0
+can the counting function use decimal numbers,paraphrase,vector + rerank,1,lecture2_059 lecture2_004 lecture2_058,2030.9
+can the counting function use decimal numbers,paraphrase,hybrid + rerank,1,lecture2_059 lecture2_004 lecture2_009,1722.0
+can the counting function use decimal numbers,paraphrase,hybrid20 + rerank,1,lecture2_059 lecture2_004 lecture2_058,2603.1
+elif 是什麼意思,chinese,vector,1,lecture2_034 lecture2_035 lecture2_033,32.0
+elif 是什麼意思,chinese,bm25,6,lecture2_038 lecture2_031 lecture2_032,32.0
+elif 是什麼意思,chinese,"hybrid (all, w=1)",1,lecture2_034 lecture2_038 lecture2_031,32.0
+elif 是什麼意思,chinese,"hybrid (top10, w=1)",1,lecture2_034 lecture2_038 lecture2_031,34.0
+elif 是什麼意思,chinese,"hybrid (top10, w=0.5)",1,lecture2_034 lecture2_035 lecture2_033,31.0
+elif 是什麼意思,chinese,"hybrid (top10, w=0.3)",1,lecture2_034 lecture2_035 lecture2_033,35.0
+elif 是什麼意思,chinese,vector + rerank,2,lecture2_032 lecture2_034 lecture2_035,2005.9
+elif 是什麼意思,chinese,hybrid + rerank,2,lecture2_032 lecture2_034 lecture2_035,904.5
+elif 是什麼意思,chinese,hybrid20 + rerank,2,lecture2_032 lecture2_034 lecture2_035,2014.8
+無窮迴圈要怎麼停止,chinese,vector,4,lecture2_041 lecture2_042 lecture2_064,31.0
+無窮迴圈要怎麼停止,chinese,bm25,,,36.0
+無窮迴圈要怎麼停止,chinese,"hybrid (all, w=1)",4,lecture2_041 lecture2_042 lecture2_064,33.0
+無窮迴圈要怎麼停止,chinese,"hybrid (top10, w=1)",4,lecture2_041 lecture2_042 lecture2_064,37.0
+無窮迴圈要怎麼停止,chinese,"hybrid (top10, w=0.5)",4,lecture2_041 lecture2_042 lecture2_064,38.0
+無窮迴圈要怎麼停止,chinese,"hybrid (top10, w=0.3)",4,lecture2_041 lecture2_042 lecture2_064,34.0
+無窮迴圈要怎麼停止,chinese,vector + rerank,1,lecture2_051 lecture2_050 lecture2_043,1962.9
+無窮迴圈要怎麼停止,chinese,hybrid + rerank,1,lecture2_051 lecture2_050 lecture2_061,1054.4
+無窮迴圈要怎麼停止,chinese,hybrid20 + rerank,1,lecture2_051 lecture2_050 lecture2_043,1970.5
+字串可以和數字比較大小嗎,chinese,vector,1,lecture2_022 lecture2_021 lecture2_025,50.0
+字串可以和數字比較大小嗎,chinese,bm25,,,41.0
+字串可以和數字比較大小嗎,chinese,"hybrid (all, w=1)",1,lecture2_022 lecture2_021 lecture2_025,49.0
+字串可以和數字比較大小嗎,chinese,"hybrid (top10, w=1)",1,lecture2_022 lecture2_021 lecture2_025,51.0
+字串可以和數字比較大小嗎,chinese,"hybrid (top10, w=0.5)",1,lecture2_022 lecture2_021 lecture2_025,47.0
+字串可以和數字比較大小嗎,chinese,"hybrid (top10, w=0.3)",1,lecture2_022 lecture2_021 lecture2_025,46.0
+字串可以和數字比較大小嗎,chinese,vector + rerank,1,lecture2_022 lecture2_021 lecture2_023,2134.8
+字串可以和數字比較大小嗎,chinese,hybrid + rerank,1,lecture2_022 lecture2_021 lecture2_023,1375.2
+字串可以和數字比較大小嗎,chinese,hybrid20 + rerank,1,lecture2_022 lecture2_021 lecture2_023,2130.8
+for 迴圈和 while 迴圈有什麼差別,chinese,vector,1,lecture2_064 lecture2_049 lecture2_051,41.0
+for 迴圈和 while 迴圈有什麼差別,chinese,bm25,1,lecture2_064 lecture2_048 lecture2_049,39.0
+for 迴圈和 while 迴圈有什麼差別,chinese,"hybrid (all, w=1)",1,lecture2_064 lecture2_049 lecture2_048,37.0
+for 迴圈和 while 迴圈有什麼差別,chinese,"hybrid (top10, w=1)",1,lecture2_064 lecture2_049 lecture2_048,34.0
+for 迴圈和 while 迴圈有什麼差別,chinese,"hybrid (top10, w=0.5)",1,lecture2_064 lecture2_049 lecture2_048,37.0
+for 迴圈和 while 迴圈有什麼差別,chinese,"hybrid (top10, w=0.3)",1,lecture2_064 lecture2_049 lecture2_051,39.0
+for 迴圈和 while 迴圈有什麼差別,chinese,vector + rerank,1,lecture2_064 lecture2_063 lecture2_051,1607.1
+for 迴圈和 while 迴圈有什麼差別,chinese,hybrid + rerank,1,lecture2_064 lecture2_063 lecture2_051,1455.2
+for 迴圈和 while 迴圈有什麼差別,chinese,hybrid20 + rerank,1,lecture2_064 lecture2_063 lecture2_051,2417.2
+break 會跳出哪一個迴圈,chinese,vector,1,lecture2_062 lecture2_061 lecture2_063,55.0
+break 會跳出哪一個迴圈,chinese,bm25,1,lecture2_062 lecture2_064 lecture2_063,44.0
+break 會跳出哪一個迴圈,chinese,"hybrid (all, w=1)",1,lecture2_062 lecture2_061 lecture2_063,48.0
+break 會跳出哪一個迴圈,chinese,"hybrid (top10, w=1)",1,lecture2_062 lecture2_061 lecture2_063,47.0
+break 會跳出哪一個迴圈,chinese,"hybrid (top10, w=0.5)",1,lecture2_062 lecture2_061 lecture2_063,48.0
+break 會跳出哪一個迴圈,chinese,"hybrid (top10, w=0.3)",1,lecture2_062 lecture2_061 lecture2_063,49.0
+break 會跳出哪一個迴圈,chinese,vector + rerank,1,lecture2_062 lecture2_063 lecture2_061,2050.8
+break 會跳出哪一個迴圈,chinese,hybrid + rerank,1,lecture2_062 lecture2_063 lecture2_061,1257.3
+break 會跳出哪一個迴圈,chinese,hybrid20 + rerank,1,lecture2_062 lecture2_063 lecture2_061,2170.8
+怎麼讓使用者輸入資料,chinese,vector,1,lecture2_016 lecture2_017 lecture2_019,35.0
+怎麼讓使用者輸入資料,chinese,bm25,,,31.0
+怎麼讓使用者輸入資料,chinese,"hybrid (all, w=1)",1,lecture2_016 lecture2_017 lecture2_019,36.0
+怎麼讓使用者輸入資料,chinese,"hybrid (top10, w=1)",1,lecture2_016 lecture2_017 lecture2_019,36.0
+怎麼讓使用者輸入資料,chinese,"hybrid (top10, w=0.5)",1,lecture2_016 lecture2_017 lecture2_019,33.0
+怎麼讓使用者輸入資料,chinese,"hybrid (top10, w=0.3)",1,lecture2_016 lecture2_017 lecture2_019,35.0
+怎麼讓使用者輸入資料,chinese,vector + rerank,1,lecture2_016 lecture2_019 lecture2_045,2149.5
+怎麼讓使用者輸入資料,chinese,hybrid + rerank,1,lecture2_016 lecture2_019 lecture2_048,1400.2
+怎麼讓使用者輸入資料,chinese,hybrid20 + rerank,1,lecture2_016 lecture2_019 lecture2_045,2146.8

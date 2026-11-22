@@ -1,0 +1,87 @@
+Loading BGE-M3 on cuda...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 15047.00it/s]
+25 questions, 127 chunks in database
+
+# 檢索方法比較（vector / bm25 / hybrid）
+
+- 資料庫：output\chroma_db　題目檔：evaluation\questions\ntu_cs_12.json
+- all = 每種方法排完所有片段再合併；top10 = 各取前 10 名再合併（系統實際設定）；w = bm25_weight
+- 題目數：25　片段數：127　向量模型：BAAI/bge-m3（cuda）
+- RRF：k=60、vector_weight=1.0
+
+## ALL（25 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 44% | 68% | 0.593 | 44 |
+| bm25 | 44% | 72% | 0.581 | 35 |
+| hybrid (all, w=1) | 48% | 68% | 0.617 | 34 |
+| hybrid (top10, w=1) | 48% | 76% | 0.641 | 30 |
+| hybrid (top10, w=0.5) | 48% | 76% | 0.632 | 29 |
+| hybrid (top10, w=0.3) | 44% | 76% | 0.612 | 30 |
+
+## keyword（10 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 40% | 70% | 0.603 | 57 |
+| bm25 | 60% | 80% | 0.711 | 34 |
+| hybrid (all, w=1) | 70% | 90% | 0.808 | 33 |
+| hybrid (top10, w=1) | 70% | 90% | 0.808 | 30 |
+| hybrid (top10, w=0.5) | 70% | 90% | 0.808 | 28 |
+| hybrid (top10, w=0.3) | 60% | 90% | 0.758 | 28 |
+
+## paraphrase（10 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 30% | 50% | 0.446 | 35 |
+| bm25 | 40% | 80% | 0.576 | 39 |
+| hybrid (all, w=1) | 30% | 50% | 0.480 | 36 |
+| hybrid (top10, w=1) | 30% | 50% | 0.477 | 32 |
+| hybrid (top10, w=0.5) | 30% | 50% | 0.439 | 31 |
+| hybrid (top10, w=0.3) | 30% | 50% | 0.439 | 31 |
+
+## english（5 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 80% | 100% | 0.867 | 35 |
+| bm25 | 20% | 40% | 0.331 | 31 |
+| hybrid (all, w=1) | 40% | 60% | 0.507 | 33 |
+| hybrid (top10, w=1) | 40% | 100% | 0.633 | 29 |
+| hybrid (top10, w=0.5) | 40% | 100% | 0.667 | 29 |
+| hybrid (top10, w=0.3) | 40% | 100% | 0.667 | 29 |
+
+## 每題正確片段的名次（越小越好，- = 沒找到）
+
+| 類型 | 問題 | vector | bm25 | hybrid (all, w=1) | hybrid (top10, w=1) | hybrid (top10, w=0.5) | hybrid (top10, w=0.3) |
+|---|---|---|---|---|---|---|---|
+| keyword | assembler 是做什麼的 | 4 | 5 | 1 | 1 | 1 | 2 |
+| keyword | compiler 和 interpreter 有什麼不同 | 1 | 13 | 4 | 4 | 4 | 4 |
+| keyword | 什麼是 portability 可攜性 | 2 | 1 | 1 | 1 | 1 | 1 |
+| keyword | 第四代程式語言 SQL | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | 第一代 Machine Instruction | 5 | 1 | 1 | 1 | 1 | 1 |
+| keyword | declarative 和 prologue | 2 | 1 | 1 | 1 | 1 | 1 |
+| keyword | Lisp 的括號 match | 4 | 2 | 2 | 2 | 2 | 2 |
+| keyword | encapsulation 封裝 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | 什麼是 l value | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | go to 指令 | 3 | 3 | 3 | 3 | 3 | 3 |
+| paraphrase | 為什麼要發明組合語言 | 5 | 3 | 2 | 2 | 2 | 2 |
+| paraphrase | 翻譯一次之後就可以一直重複執行的方式 | 12 | 2 | 4 | 5 | 11 | 11 |
+| paraphrase | 為什麼驅動程式很難直接搬到別台電腦 | 2 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | 把整個程式看成一個函數的寫法 | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | 只要把問題描述清楚電腦就會自己找答案 | 14 | 3 | 4 | 5 | 12 | 12 |
+| paraphrase | 用 n 乘上前一項來定義階乘 | 32 | 2 | 7 | 5 | 11 | 11 |
+| paraphrase | 不准別人直接修改我類別裡面的資料 | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | 同一個函式名稱在不同物件會執行不同的版本 | 13 | 1 | 4 | 6 | 11 | 11 |
+| paraphrase | 為什麼老師不建議用跳躍指令 | 2 | 62 | 13 | 6 | 5 | 5 |
+| paraphrase | 用很小的空間存機率值的例子 | 1 | 13 | 3 | 3 | 3 | 3 |
+| english | what is the difference between a compiler and an interpreter | 1 | 2 | 1 | 1 | 1 | 1 |
+| english | why is Java so portable | 3 | 9 | 3 | 3 | 2 | 2 |
+| english | what are the four programming paradigms | 1 | 35 | 8 | 2 | 2 | 2 |
+| english | how to compute an average in functional programming | 1 | 61 | 13 | 3 | 3 | 3 |
+| english | why should we avoid goto statements | 1 | 1 | 1 | 1 | 1 | 1 |
+
+Saved: output\eval_result.md, output\eval_detail.csv

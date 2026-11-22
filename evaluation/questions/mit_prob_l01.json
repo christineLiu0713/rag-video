@@ -1,0 +1,152 @@
+{
+ "video": "mit_prob_l01",
+ "note": "MIT RES.6-012 Introduction to Probability, Lecture 1（10 段接成一支）。anchors = 答案出現的時間點（秒），依官方字幕標定。 2026-11-22 重新對照字幕逐句校正 anchors（原本有幾題標在答案前後幾十秒到幾分鐘）。",
+ "questions": [
+  {
+   "q": "mutually exclusive and collectively exhaustive",
+   "type": "keyword",
+   "anchors": [
+    196.6
+   ]
+  },
+  {
+   "q": "tetrahedral die with 16 possible outcomes",
+   "type": "keyword",
+   "anchors": [
+    2475.2
+   ]
+  },
+  {
+   "q": "what is the union bound",
+   "type": "keyword",
+   "anchors": [
+    2315.7
+   ]
+  },
+  {
+   "q": "countable additivity axiom",
+   "type": "keyword",
+   "anchors": [
+    3500,
+    3770
+   ]
+  },
+  {
+   "q": "nonnegativity axiom",
+   "type": "keyword",
+   "anchors": [
+    997.0
+   ]
+  },
+  {
+   "q": "discrete uniform probability law",
+   "type": "keyword",
+   "anchors": [
+    2695
+   ]
+  },
+  {
+   "q": "why is the unit square an uncountable set",
+   "type": "keyword",
+   "anchors": [
+    3707.9
+   ]
+  },
+  {
+   "q": "probability of the empty set",
+   "type": "keyword",
+   "anchors": [
+    1331.6
+   ]
+  },
+  {
+   "q": "does the weather outside matter when listing outcomes of a coin flip",
+   "type": "paraphrase",
+   "anchors": [
+    318,
+    330
+   ]
+  },
+  {
+   "q": "why can't each point of a continuous target get its own positive probability",
+   "type": "paraphrase",
+   "anchors": [
+    837.0
+   ]
+  },
+  {
+   "q": "how do we draw an experiment that happens in stages",
+   "type": "paraphrase",
+   "anchors": [
+    614.5
+   ]
+  },
+  {
+   "q": "if one event is contained in another which one is more likely",
+   "type": "paraphrase",
+   "anchors": [
+    1995.7
+   ]
+  },
+  {
+   "q": "how to get a probability by counting when all outcomes are equally likely",
+   "type": "paraphrase",
+   "anchors": [
+    2765
+   ]
+  },
+  {
+   "q": "what are the general steps for solving a probability problem",
+   "type": "paraphrase",
+   "anchors": [
+    3000
+   ]
+  },
+  {
+   "q": "how do we check that the given probabilities of the integers really add to one",
+   "type": "paraphrase",
+   "anchors": [
+    3187.9
+   ]
+  },
+  {
+   "q": "what is the chance that the dart hits one exact point",
+   "type": "paraphrase",
+   "anchors": [
+    815,
+    2960
+   ]
+  },
+  {
+   "q": "樣本空間要怎麼選才適當",
+   "type": "chinese",
+   "anchors": [
+    396.6
+   ]
+  },
+  {
+   "q": "機率的公理有哪些",
+   "type": "chinese",
+   "anchors": [
+    1003,
+    1055,
+    1290
+   ]
+  },
+  {
+   "q": "兩個事件聯集的機率怎麼算",
+   "type": "chinese",
+   "anchors": [
+    2117,
+    2220
+   ]
+  },
+  {
+   "q": "連續樣本空間的例子",
+   "type": "chinese",
+   "anchors": [
+    694.5
+   ]
+  }
+ ]
+}

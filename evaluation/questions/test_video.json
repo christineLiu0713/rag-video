@@ -1,0 +1,152 @@
+{
+ "video": "test_video",
+ "note": "anchors = 答案在影片中出現的時間點（秒）；評估時自動對應到包含這些時間點的片段，所以重新切片段後題目仍然可以用。",
+ "questions": [
+  {
+   "q": "what does i stand for in for i in range",
+   "type": "keyword",
+   "anchors": [
+    145.6,
+    166.6
+   ]
+  },
+  {
+   "q": "why does range(1,5) print only four times",
+   "type": "keyword",
+   "anchors": [
+    83.2
+   ]
+  },
+  {
+   "q": "Line 9 is not indented",
+   "type": "keyword",
+   "anchors": [
+    124.0
+   ]
+  },
+  {
+   "q": "what does print(counter) output",
+   "type": "keyword",
+   "anchors": [
+    145.6
+   ]
+  },
+  {
+   "q": "which keyword starts the for loop on line five",
+   "type": "keyword",
+   "anchors": [
+    25.2
+   ]
+  },
+  {
+   "q": "101computing tutorial introduction",
+   "type": "keyword",
+   "anchors": [
+    10.8
+   ]
+  },
+  {
+   "q": "increment",
+   "type": "keyword",
+   "anchors": [
+    145.6,
+    166.6
+   ]
+  },
+  {
+   "q": "five take away one",
+   "type": "keyword",
+   "anchors": [
+    83.2
+   ]
+  },
+  {
+   "q": "how can I make the computer repeat some instructions many times",
+   "type": "paraphrase",
+   "anchors": [
+    10.8
+   ]
+  },
+  {
+   "q": "why did the message appear fewer times than I expected",
+   "type": "paraphrase",
+   "anchors": [
+    83.2
+   ]
+  },
+  {
+   "q": "what happens to a statement that is not shifted to the right",
+   "type": "paraphrase",
+   "anchors": [
+    36.2,
+    124.0
+   ]
+  },
+  {
+   "q": "does renaming the loop variable change the result",
+   "type": "paraphrase",
+   "anchors": [
+    166.6
+   ]
+  },
+  {
+   "q": "how do I put several statements inside the loop body",
+   "type": "paraphrase",
+   "anchors": [
+    83.2,
+    109.5
+   ]
+  },
+  {
+   "q": "what is displayed when the program is executed",
+   "type": "paraphrase",
+   "anchors": [
+    44.9,
+    54.0
+   ]
+  },
+  {
+   "q": "how does the loop variable change on each pass",
+   "type": "paraphrase",
+   "anchors": [
+    145.6
+   ]
+  },
+  {
+   "q": "how does the lesson finish",
+   "type": "paraphrase",
+   "anchors": [
+    175.1
+   ]
+  },
+  {
+   "q": "for 迴圈的用途是什麼",
+   "type": "chinese",
+   "anchors": [
+    10.8
+   ]
+  },
+  {
+   "q": "為什麼只印出四次而不是五次",
+   "type": "chinese",
+   "anchors": [
+    83.2
+   ]
+  },
+  {
+   "q": "沒有縮排的程式碼會執行幾次",
+   "type": "chinese",
+   "anchors": [
+    124.0
+   ]
+  },
+  {
+   "q": "變數名稱 i 代表什麼意思",
+   "type": "chinese",
+   "anchors": [
+    145.6,
+    166.6
+   ]
+  }
+ ]
+}

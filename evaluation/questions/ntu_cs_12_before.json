@@ -1,0 +1,201 @@
+{
+ "video": "ntu_cs_12",
+ "note": "台大計算機概論第12講前50分鐘。relevant 由答案所在的逐字稿時間點對應到片段。type: keyword=用影片裡出現的詞；paraphrase=換句話說；english=用英文問中文影片",
+ "questions": [
+  {
+   "q": "assembler 是做什麼的",
+   "relevant": [
+    "ntu_cs_12_030",
+    "ntu_cs_12_031"
+   ],
+   "type": "keyword"
+  },
+  {
+   "q": "compiler 和 interpreter 有什麼不同",
+   "relevant": [
+    "ntu_cs_12_036"
+   ],
+   "type": "keyword"
+  },
+  {
+   "q": "什麼是 portability 可攜性",
+   "relevant": [
+    "ntu_cs_12_077",
+    "ntu_cs_12_079"
+   ],
+   "type": "keyword"
+  },
+  {
+   "q": "第四代程式語言 SQL",
+   "relevant": [
+    "ntu_cs_12_013",
+    "ntu_cs_12_014"
+   ],
+   "type": "keyword"
+  },
+  {
+   "q": "第一代 Machine Instruction",
+   "relevant": [
+    "ntu_cs_12_009",
+    "ntu_cs_12_010"
+   ],
+   "type": "keyword"
+  },
+  {
+   "q": "declarative 和 prologue",
+   "relevant": [
+    "ntu_cs_12_179",
+    "ntu_cs_12_180",
+    "ntu_cs_12_186"
+   ],
+   "type": "keyword"
+  },
+  {
+   "q": "Lisp 的括號 match",
+   "relevant": [
+    "ntu_cs_12_313"
+   ],
+   "type": "keyword"
+  },
+  {
+   "q": "encapsulation 封裝",
+   "relevant": [
+    "ntu_cs_12_389",
+    "ntu_cs_12_390"
+   ],
+   "type": "keyword"
+  },
+  {
+   "q": "什麼是 l value",
+   "relevant": [
+    "ntu_cs_12_484"
+   ],
+   "type": "keyword"
+  },
+  {
+   "q": "go to 指令",
+   "relevant": [
+    "ntu_cs_12_512",
+    "ntu_cs_12_513",
+    "ntu_cs_12_528"
+   ],
+   "type": "keyword"
+  },
+  {
+   "q": "為什麼要發明組合語言",
+   "relevant": [
+    "ntu_cs_12_011",
+    "ntu_cs_12_012"
+   ],
+   "type": "paraphrase"
+  },
+  {
+   "q": "翻譯一次之後就可以一直重複執行的方式",
+   "relevant": [
+    "ntu_cs_12_036"
+   ],
+   "type": "paraphrase"
+  },
+  {
+   "q": "為什麼驅動程式很難直接搬到別台電腦",
+   "relevant": [
+    "ntu_cs_12_095"
+   ],
+   "type": "paraphrase"
+  },
+  {
+   "q": "把整個程式看成一個函數的寫法",
+   "relevant": [
+    "ntu_cs_12_170",
+    "ntu_cs_12_171",
+    "ntu_cs_12_172"
+   ],
+   "type": "paraphrase"
+  },
+  {
+   "q": "只要把問題描述清楚電腦就會自己找答案",
+   "relevant": [
+    "ntu_cs_12_186"
+   ],
+   "type": "paraphrase"
+  },
+  {
+   "q": "用 n 乘上前一項來定義階乘",
+   "relevant": [
+    "ntu_cs_12_204",
+    "ntu_cs_12_205"
+   ],
+   "type": "paraphrase"
+  },
+  {
+   "q": "不准別人直接修改我類別裡面的資料",
+   "relevant": [
+    "ntu_cs_12_382",
+    "ntu_cs_12_388"
+   ],
+   "type": "paraphrase"
+  },
+  {
+   "q": "同一個函式名稱在不同物件會執行不同的版本",
+   "relevant": [
+    "ntu_cs_12_401",
+    "ntu_cs_12_402"
+   ],
+   "type": "paraphrase"
+  },
+  {
+   "q": "為什麼老師不建議用跳躍指令",
+   "relevant": [
+    "ntu_cs_12_528"
+   ],
+   "type": "paraphrase"
+  },
+  {
+   "q": "用很小的空間存機率值的例子",
+   "relevant": [
+    "ntu_cs_12_372"
+   ],
+   "type": "paraphrase"
+  },
+  {
+   "q": "what is the difference between a compiler and an interpreter",
+   "relevant": [
+    "ntu_cs_12_036"
+   ],
+   "type": "english"
+  },
+  {
+   "q": "why is Java so portable",
+   "relevant": [
+    "ntu_cs_12_041",
+    "ntu_cs_12_112"
+   ],
+   "type": "english"
+  },
+  {
+   "q": "what are the four programming paradigms",
+   "relevant": [
+    "ntu_cs_12_132",
+    "ntu_cs_12_133",
+    "ntu_cs_12_228",
+    "ntu_cs_12_229"
+   ],
+   "type": "english"
+  },
+  {
+   "q": "how to compute an average in functional programming",
+   "relevant": [
+    "ntu_cs_12_292",
+    "ntu_cs_12_293"
+   ],
+   "type": "english"
+  },
+  {
+   "q": "why should we avoid goto statements",
+   "relevant": [
+    "ntu_cs_12_528"
+   ],
+   "type": "english"
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+  "video": {
+    "seconds": 0,
+    "duration_sec": 4059.6,
+    "file": "D:\\7\\413410654\\專題\\rag-video-main\\videos\\mit_prob_l01.mp4",
+    "language": "en"
+  },
+  "screenshots": {
+    "seconds": 12.2,
+    "count": 1353
+  },
+  "audio": {
+    "seconds": 3.7
+  },
+  "whisper": {
+    "seconds": 183.8,
+    "sentences": 1026,
+    "model": "small.en",
+    "batch_size": 8,
+    "load_sec": 3.5,
+    "device": "cuda",
+    "compute_type": "int8_float32"
+  },
+  "ocr": {
+    "seconds": 41.3,
+    "screenshots": 1353,
+    "ocr_calls": 36,
+    "adaptive": true,
+    "slide_match": "tokens",
+    "text_blocks": 14,
+    "overlays_removed": 0,
+    "workers": 1,
+    "threads": 8,
+    "total_sec_incl_model_load": 56.1
+  },
+  "steps": {
+    "extract": {
+      "seconds": 261.0,
+      "peak_ram_mb": 1726,
+      "peak_vram_mb": 2787
+    },
+    "build_chunks": {
+      "seconds": 0.9,
+      "peak_ram_mb": 0,
+      "peak_vram_mb": 0
+    },
+    "build_db": {
+      "seconds": 30.1,
+      "peak_ram_mb": 1460,
+      "peak_vram_mb": 3749
+    }
+  },
+  "ok": true
+}

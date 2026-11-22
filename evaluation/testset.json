@@ -1,0 +1,58 @@
+{
+ "videos": [
+  {
+   "name": "test_video",
+   "video": "videos/test_video.mp4",
+   "lang": "en",
+   "type": "英文・短片",
+   "questions": "evaluation/questions/test_video.json",
+   "duration_min": 3.0
+  },
+  {
+   "name": "mit_prob_l01",
+   "video": "videos/mit_prob_l01.mp4",
+   "lang": "en",
+   "type": "英文・投影片螢幕錄影",
+   "questions": "evaluation/questions/mit_prob_l01.json",
+   "reference_srt": [
+    "evaluation/references/mit_prob_l01.srt"
+   ],
+   "duration_min": 67.7
+  },
+  {
+   "name": "mit_1806_l01",
+   "video": "videos/mit_1806_l01.mp4",
+   "lang": "en",
+   "type": "英文・黑板課",
+   "questions": "evaluation/questions/mit_1806_l01.json",
+   "reference_srt": [
+    "evaluation/references/mit_1806_l01.srt"
+   ],
+   "duration_min": 39.8
+  },
+  {
+   "name": "lecture2",
+   "video": "videos/lecture2.mp4",
+   "lang": "en",
+   "type": "英文・教室錄影",
+   "questions": "evaluation/questions/lecture2.json",
+   "duration_min": 43.5
+  },
+  {
+   "name": "ntu_cs_12",
+   "video": "videos/ntu_cs_12_full.mp4",
+   "lang": "zh",
+   "type": "中文・教室錄影（英文投影片）・長片",
+   "questions": "evaluation/questions/ntu_cs_12.json",
+   "duration_min": 82.3
+  },
+  {
+   "name": "ntu_zhuangzi_01",
+   "video": "videos/ntu_zhuangzi_01.mp4",
+   "lang": "zh",
+   "type": "中文・人文課程",
+   "questions": "evaluation/questions/ntu_zhuangzi_01.json",
+   "duration_min": 69.1
+  }
+ ]
+}

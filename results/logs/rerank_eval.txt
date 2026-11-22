@@ -1,0 +1,1230 @@
+===== pip install opencc 
+Collecting opencc-python-reimplemented
+  Downloading opencc_python_reimplemented-0.1.7-py2.py3-none-any.whl.metadata (4.6 kB)
+Downloading opencc_python_reimplemented-0.1.7-py2.py3-none-any.whl (481 kB)
+Installing collected packages: opencc-python-reimplemented
+Successfully installed opencc-python-reimplemented-0.1.7
+===== build_library 
+  + lecture2               65 chunks  (results/lecture2)
+  + mit_1806_l01           65 chunks  (results/mit_1806_l01)
+  + mit_prob_l01           95 chunks  (results/mit_prob_l01)
+  + ntu_cs_12             126 chunks  (results/ntu_cs_12)
+  + ntu_zhuangzi_01       123 chunks  (results/ntu_zhuangzi_01)
+  + test_video              5 chunks  (results/test_video)
+
+Library: 6 videos, 479 chunks -> library/chroma_db
+===== eval test_video 
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading BGE-M3 on cuda...
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 15648.89it/s]
+C:\Users\mskid\AppData\Local\Programs\Python\Python311\Lib\site-packages\huggingface_hub\file_download.py:149: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\Users\mskid\.cache\huggingface\hub\models--BAAI--bge-reranker-v2-m3. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+C:\Users\mskid\AppData\Local\Programs\Python\Python311\Lib\site-packages\huggingface_hub\file_download.py:149: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\Users\mskid\.cache\huggingface\hub. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+Loading re-ranker BAAI/bge-reranker-v2-m3 (first time: downloading ~2 GB)...
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights:   6%|▌         | 23/393 [00:00<00:03, 112.26it/s]Loading weights:   9%|▉         | 35/393 [00:00<00:04, 86.38it/s] Loading weights:  11%|█         | 44/393 [00:00<00:04, 81.76it/s]Loading weights:  13%|█▎        | 52/393 [00:00<00:06, 51.38it/s]Loading weights:  15%|█▍        | 58/393 [00:00<00:06, 49.68it/s]Loading weights:  23%|██▎       | 92/393 [00:01<00:02, 109.99it/s]Loading weights: 100%|██████████| 393/393 [00:01<00:00, 364.10it/s]
+20 questions, 5 chunks in database
+
+# 檢索方法比較（vector / bm25 / hybrid）
+
+- 資料庫：results\test_video\chroma_db　題目檔：evaluation\questions\test_video.json
+- all = 每種方法排完所有片段再合併；top10 = 各取前 10 名再合併（系統實際設定）；w = bm25_weight
+- 題目數：20　片段數：5　向量模型：BAAI/bge-m3（cuda）
+- RRF：k=60、vector_weight=1.0
+- 重新排序模型：BAAI/bge-reranker-v2-m3
+
+## ALL（20 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 80% | 100% | 100% | 0.892 | 50 |
+| bm25 | 55% | 75% | 75% | 0.625 | 38 |
+| hybrid (all, w=1) | 75% | 100% | 100% | 0.875 | 40 |
+| hybrid (top10, w=1) | 75% | 100% | 100% | 0.875 | 40 |
+| hybrid (top10, w=0.5) | 85% | 100% | 100% | 0.917 | 40 |
+| hybrid (top10, w=0.3) | 85% | 100% | 100% | 0.917 | 39 |
+| vector + rerank | 85% | 100% | 100% | 0.925 | 503 |
+| hybrid + rerank | 85% | 100% | 100% | 0.925 | 477 |
+| hybrid20 + rerank | 85% | 100% | 100% | 0.925 | 479 |
+
+## keyword（8 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 88% | 100% | 100% | 0.917 | 63 |
+| bm25 | 88% | 100% | 100% | 0.917 | 38 |
+| hybrid (all, w=1) | 75% | 100% | 100% | 0.875 | 40 |
+| hybrid (top10, w=1) | 75% | 100% | 100% | 0.875 | 40 |
+| hybrid (top10, w=0.5) | 88% | 100% | 100% | 0.917 | 40 |
+| hybrid (top10, w=0.3) | 88% | 100% | 100% | 0.917 | 39 |
+| vector + rerank | 100% | 100% | 100% | 1.000 | 543 |
+| hybrid + rerank | 100% | 100% | 100% | 1.000 | 476 |
+| hybrid20 + rerank | 100% | 100% | 100% | 1.000 | 478 |
+
+## paraphrase（8 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 75% | 100% | 100% | 0.875 | 43 |
+| bm25 | 50% | 88% | 88% | 0.646 | 37 |
+| hybrid (all, w=1) | 75% | 100% | 100% | 0.875 | 41 |
+| hybrid (top10, w=1) | 75% | 100% | 100% | 0.875 | 41 |
+| hybrid (top10, w=0.5) | 88% | 100% | 100% | 0.938 | 42 |
+| hybrid (top10, w=0.3) | 88% | 100% | 100% | 0.938 | 40 |
+| vector + rerank | 75% | 100% | 100% | 0.875 | 476 |
+| hybrid + rerank | 75% | 100% | 100% | 0.875 | 478 |
+| hybrid20 + rerank | 75% | 100% | 100% | 0.875 | 480 |
+
+## chinese（4 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 75% | 100% | 100% | 0.875 | 40 |
+| bm25 | 0% | 0% | 0% | 0.000 | 38 |
+| hybrid (all, w=1) | 75% | 100% | 100% | 0.875 | 38 |
+| hybrid (top10, w=1) | 75% | 100% | 100% | 0.875 | 40 |
+| hybrid (top10, w=0.5) | 75% | 100% | 100% | 0.875 | 40 |
+| hybrid (top10, w=0.3) | 75% | 100% | 100% | 0.875 | 38 |
+| vector + rerank | 75% | 100% | 100% | 0.875 | 479 |
+| hybrid + rerank | 75% | 100% | 100% | 0.875 | 476 |
+| hybrid20 + rerank | 75% | 100% | 100% | 0.875 | 477 |
+
+## 每題正確片段的名次（越小越好，- = 沒找到）
+
+| 類型 | 問題 | vector | bm25 | hybrid (all, w=1) | hybrid (top10, w=1) | hybrid (top10, w=0.5) | hybrid (top10, w=0.3) | vector + rerank | hybrid + rerank | hybrid20 + rerank |
+|---|---|---|---|---|---|---|---|---|---|---|
+| keyword | what does i stand for in for i in range | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | why does range(1,5) print only four times | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | Line 9 is not indented | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | what does print(counter) output | 3 | 1 | 2 | 2 | 3 | 3 | 1 | 1 | 1 |
+| keyword | which keyword starts the for loop on line five | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | 101computing tutorial introduction | 1 | 3 | 2 | 2 | 1 | 1 | 1 | 1 | 1 |
+| keyword | increment | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | five take away one | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | how can I make the computer repeat some instructions many times | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | why did the message appear fewer times than I expected | 1 | 2 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | what happens to a statement that is not shifted to the right | 1 | 1 | 1 | 1 | 1 | 1 | 2 | 2 | 2 |
+| paraphrase | does renaming the loop variable change the result | 1 | 3 | 1 | 1 | 1 | 1 | 2 | 2 | 2 |
+| paraphrase | how do I put several statements inside the loop body | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | what is displayed when the program is executed | 2 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | how does the loop variable change on each pass | 1 | 3 | 2 | 2 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | how does the lesson finish | 2 | - | 2 | 2 | 2 | 2 | 1 | 1 | 1 |
+| chinese | for 迴圈的用途是什麼 | 1 | - | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| chinese | 為什麼只印出四次而不是五次 | 1 | - | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| chinese | 沒有縮排的程式碼會執行幾次 | 2 | - | 2 | 2 | 2 | 2 | 2 | 2 | 2 |
+| chinese | 變數名稱 i 代表什麼意思 | 1 | - | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+
+Saved: results\test_video\eval_result.md, results\test_video\eval_detail.csv, results\test_video\eval_summary.json
+===== eval mit_prob_l01 
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading BGE-M3 on cuda...
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 15041.76it/s]
+Loading re-ranker BAAI/bge-reranker-v2-m3 (first time: downloading ~2 GB)...
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights:   2%|▏         | 8/393 [00:00<00:05, 71.47it/s]Loading weights:   4%|▍         | 16/393 [00:00<00:13, 28.15it/s]Loading weights:   5%|▌         | 21/393 [00:00<00:11, 32.04it/s]Loading weights:  11%|█         | 44/393 [00:00<00:04, 76.57it/s]Loading weights:  14%|█▍        | 55/393 [00:01<00:06, 54.40it/s]Loading weights: 100%|██████████| 393/393 [00:01<00:00, 356.18it/s]
+20 questions, 95 chunks in database
+
+# 檢索方法比較（vector / bm25 / hybrid）
+
+- 資料庫：results\mit_prob_l01\chroma_db　題目檔：evaluation\questions\mit_prob_l01.json
+- all = 每種方法排完所有片段再合併；top10 = 各取前 10 名再合併（系統實際設定）；w = bm25_weight
+- 題目數：20　片段數：95　向量模型：BAAI/bge-m3（cuda）
+- RRF：k=60、vector_weight=1.0
+- 重新排序模型：BAAI/bge-reranker-v2-m3
+
+## ALL（20 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 75% | 95% | 95% | 0.849 | 57 |
+| bm25 | 60% | 70% | 70% | 0.651 | 42 |
+| hybrid (all, w=1) | 70% | 95% | 100% | 0.818 | 42 |
+| hybrid (top10, w=1) | 70% | 100% | 100% | 0.833 | 41 |
+| hybrid (top10, w=0.5) | 70% | 100% | 100% | 0.842 | 40 |
+| hybrid (top10, w=0.3) | 75% | 100% | 100% | 0.867 | 40 |
+| vector + rerank | 60% | 95% | 95% | 0.775 | 1347 |
+| hybrid + rerank | 65% | 90% | 95% | 0.796 | 945 |
+| hybrid20 + rerank | 60% | 95% | 95% | 0.772 | 1766 |
+
+## keyword（8 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 88% | 100% | 100% | 0.938 | 75 |
+| bm25 | 75% | 100% | 100% | 0.854 | 38 |
+| hybrid (all, w=1) | 88% | 100% | 100% | 0.938 | 39 |
+| hybrid (top10, w=1) | 88% | 100% | 100% | 0.938 | 37 |
+| hybrid (top10, w=0.5) | 88% | 100% | 100% | 0.938 | 38 |
+| hybrid (top10, w=0.3) | 88% | 100% | 100% | 0.938 | 36 |
+| vector + rerank | 62% | 100% | 100% | 0.812 | 1343 |
+| hybrid + rerank | 62% | 100% | 100% | 0.812 | 895 |
+| hybrid20 + rerank | 62% | 100% | 100% | 0.812 | 1678 |
+
+## paraphrase（8 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 75% | 88% | 88% | 0.830 | 46 |
+| bm25 | 75% | 75% | 75% | 0.775 | 47 |
+| hybrid (all, w=1) | 62% | 88% | 100% | 0.754 | 46 |
+| hybrid (top10, w=1) | 62% | 100% | 100% | 0.792 | 43 |
+| hybrid (top10, w=0.5) | 62% | 100% | 100% | 0.812 | 43 |
+| hybrid (top10, w=0.3) | 75% | 100% | 100% | 0.875 | 45 |
+| vector + rerank | 62% | 88% | 88% | 0.771 | 1371 |
+| hybrid + rerank | 62% | 88% | 88% | 0.771 | 1117 |
+| hybrid20 + rerank | 62% | 88% | 88% | 0.764 | 2087 |
+
+## chinese（4 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 50% | 100% | 100% | 0.708 | 42 |
+| bm25 | 0% | 0% | 0% | 0.000 | 38 |
+| hybrid (all, w=1) | 50% | 100% | 100% | 0.708 | 42 |
+| hybrid (top10, w=1) | 50% | 100% | 100% | 0.708 | 43 |
+| hybrid (top10, w=0.5) | 50% | 100% | 100% | 0.708 | 37 |
+| hybrid (top10, w=0.3) | 50% | 100% | 100% | 0.708 | 40 |
+| vector + rerank | 50% | 100% | 100% | 0.708 | 1305 |
+| hybrid + rerank | 75% | 75% | 100% | 0.812 | 700 |
+| hybrid20 + rerank | 50% | 100% | 100% | 0.708 | 1299 |
+
+## 每題正確片段的名次（越小越好，- = 沒找到）
+
+| 類型 | 問題 | vector | bm25 | hybrid (all, w=1) | hybrid (top10, w=1) | hybrid (top10, w=0.5) | hybrid (top10, w=0.3) | vector + rerank | hybrid + rerank | hybrid20 + rerank |
+|---|---|---|---|---|---|---|---|---|---|---|
+| keyword | mutually exclusive and collectively exhaustive | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | tetrahedral die with 16 possible outcomes | 1 | 1 | 1 | 1 | 1 | 1 | 2 | 2 | 2 |
+| keyword | what is the union bound | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | countable additivity axiom | 2 | 1 | 2 | 2 | 2 | 2 | 2 | 2 | 2 |
+| keyword | nonnegativity axiom | 1 | 3 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | discrete uniform probability law | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | why is the unit square an uncountable set | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | probability of the empty set | 1 | 2 | 1 | 1 | 1 | 1 | 2 | 2 | 2 |
+| paraphrase | does the weather outside matter when listing outcomes of a coin flip | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | why can't each point of a continuous target get its own positive probability | 1 | 6 | 3 | 3 | 2 | 1 | 2 | 2 | 2 |
+| paraphrase | how do we draw an experiment that happens in stages | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | if one event is contained in another which one is more likely | 1 | 34 | 5 | 2 | 2 | 2 | 6 | 6 | 9 |
+| paraphrase | how to get a probability by counting when all outcomes are equally likely | 7 | 1 | 1 | 1 | 1 | 1 | 2 | 2 | 2 |
+| paraphrase | what are the general steps for solving a probability problem | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | how do we check that the given probabilities of the integers really add to one | 2 | 1 | 2 | 2 | 2 | 2 | 1 | 1 | 1 |
+| paraphrase | what is the chance that the dart hits one exact point | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| chinese | 樣本空間要怎麼選才適當 | 1 | - | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| chinese | 機率的公理有哪些 | 3 | - | 3 | 3 | 3 | 3 | 3 | 4 | 3 |
+| chinese | 兩個事件聯集的機率怎麼算 | 1 | - | 1 | 1 | 1 | 1 | 2 | 1 | 2 |
+| chinese | 連續樣本空間的例子 | 2 | - | 2 | 2 | 2 | 2 | 1 | 1 | 1 |
+
+Saved: results\mit_prob_l01\eval_result.md, results\mit_prob_l01\eval_detail.csv, results\mit_prob_l01\eval_summary.json
+===== eval mit_1806_l01 
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading BGE-M3 on cuda...
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 14479.97it/s]
+Loading re-ranker BAAI/bge-reranker-v2-m3 (first time: downloading ~2 GB)...
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights:   1%|▏         | 5/393 [00:00<00:15, 25.79it/s]Loading weights:  12%|█▏        | 49/393 [00:00<00:04, 85.36it/s]Loading weights:  15%|█▌        | 60/393 [00:00<00:03, 85.51it/s]Loading weights:  17%|█▋        | 68/393 [00:00<00:04, 77.46it/s]Loading weights:  19%|█▉        | 75/393 [00:01<00:04, 68.96it/s]Loading weights: 100%|██████████| 393/393 [00:01<00:00, 373.08it/s]
+18 questions, 65 chunks in database
+
+# 檢索方法比較（vector / bm25 / hybrid）
+
+- 資料庫：results\mit_1806_l01\chroma_db　題目檔：evaluation\questions\mit_1806_l01.json
+- all = 每種方法排完所有片段再合併；top10 = 各取前 10 名再合併（系統實際設定）；w = bm25_weight
+- 題目數：18　片段數：65　向量模型：BAAI/bge-m3（cuda）
+- RRF：k=60、vector_weight=1.0
+- 重新排序模型：BAAI/bge-reranker-v2-m3
+
+## ALL（18 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 72% | 89% | 89% | 0.799 | 51 |
+| bm25 | 50% | 56% | 67% | 0.569 | 39 |
+| hybrid (all, w=1) | 67% | 94% | 94% | 0.783 | 39 |
+| hybrid (top10, w=1) | 67% | 94% | 94% | 0.782 | 39 |
+| hybrid (top10, w=0.5) | 67% | 89% | 94% | 0.786 | 38 |
+| hybrid (top10, w=0.3) | 67% | 89% | 94% | 0.784 | 39 |
+| vector + rerank | 72% | 89% | 89% | 0.800 | 1224 |
+| hybrid + rerank | 72% | 89% | 89% | 0.800 | 835 |
+| hybrid20 + rerank | 72% | 89% | 89% | 0.799 | 1515 |
+
+## keyword（7 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 71% | 86% | 86% | 0.780 | 65 |
+| bm25 | 57% | 71% | 100% | 0.714 | 36 |
+| hybrid (all, w=1) | 71% | 100% | 100% | 0.810 | 36 |
+| hybrid (top10, w=1) | 71% | 100% | 100% | 0.810 | 35 |
+| hybrid (top10, w=0.5) | 71% | 86% | 100% | 0.798 | 36 |
+| hybrid (top10, w=0.3) | 71% | 86% | 100% | 0.790 | 36 |
+| vector + rerank | 71% | 86% | 86% | 0.782 | 1239 |
+| hybrid + rerank | 71% | 86% | 86% | 0.782 | 856 |
+| hybrid20 + rerank | 71% | 86% | 86% | 0.782 | 1527 |
+
+## paraphrase（7 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 71% | 86% | 86% | 0.774 | 44 |
+| bm25 | 71% | 71% | 71% | 0.749 | 43 |
+| hybrid (all, w=1) | 57% | 86% | 86% | 0.705 | 44 |
+| hybrid (top10, w=1) | 57% | 86% | 86% | 0.701 | 43 |
+| hybrid (top10, w=0.5) | 57% | 86% | 86% | 0.724 | 41 |
+| hybrid (top10, w=0.3) | 57% | 86% | 86% | 0.724 | 42 |
+| vector + rerank | 71% | 86% | 86% | 0.798 | 1180 |
+| hybrid + rerank | 71% | 86% | 86% | 0.799 | 926 |
+| hybrid20 + rerank | 71% | 86% | 86% | 0.795 | 1645 |
+
+## chinese（4 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 75% | 100% | 100% | 0.875 | 38 |
+| bm25 | 0% | 0% | 0% | 0.000 | 37 |
+| hybrid (all, w=1) | 75% | 100% | 100% | 0.875 | 37 |
+| hybrid (top10, w=1) | 75% | 100% | 100% | 0.875 | 37 |
+| hybrid (top10, w=0.5) | 75% | 100% | 100% | 0.875 | 37 |
+| hybrid (top10, w=0.3) | 75% | 100% | 100% | 0.875 | 37 |
+| vector + rerank | 75% | 100% | 100% | 0.833 | 1275 |
+| hybrid + rerank | 75% | 100% | 100% | 0.833 | 639 |
+| hybrid20 + rerank | 75% | 100% | 100% | 0.833 | 1265 |
+
+## 每題正確片段的名次（越小越好，- = 沒找到）
+
+| 類型 | 問題 | vector | bm25 | hybrid (all, w=1) | hybrid (top10, w=1) | hybrid (top10, w=0.5) | hybrid (top10, w=0.3) | vector + rerank | hybrid + rerank | hybrid20 + rerank |
+|---|---|---|---|---|---|---|---|---|---|---|
+| keyword | fundamental problem of linear algebra | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | row picture where two lines meet | 3 | 4 | 3 | 3 | 3 | 3 | 3 | 3 | 3 |
+| keyword | linear combination of the columns | 1 | 2 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | column picture in three dimensions | 8 | 4 | 3 | 3 | 4 | 5 | 7 | 7 | 7 |
+| keyword | non-singular invertible matrix | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | dot product of a row with x | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | nine vectors in nine-dimensional space | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | what shape is the set of solutions of one equation in three unknowns | 12 | 10 | 10 | 14 | 14 | 14 | 12 | 11 | 15 |
+| paraphrase | when is it impossible to reach every right-hand side | 1 | 7 | 3 | 3 | 2 | 2 | 1 | 1 | 1 |
+| paraphrase | how do you multiply a matrix by a vector | 1 | 1 | 1 | 1 | 1 | 1 | 2 | 2 | 2 |
+| paraphrase | which point solves both equations in the two by two example | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | why is it hard to see three planes meeting | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | what happens if we keep the matrix but change the right-hand side | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | what do all combinations of the two columns fill | 3 | 1 | 2 | 2 | 2 | 2 | 1 | 1 | 1 |
+| chinese | 線性代數的基本問題是什麼 | 1 | - | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| chinese | 矩陣乘以向量怎麼算 | 1 | - | 1 | 1 | 1 | 1 | 3 | 3 | 3 |
+| chinese | 奇異矩陣是什麼情況 | 2 | - | 2 | 2 | 2 | 2 | 1 | 1 | 1 |
+| chinese | 行向量的線性組合 | 1 | - | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+
+Saved: results\mit_1806_l01\eval_result.md, results\mit_1806_l01\eval_detail.csv, results\mit_1806_l01\eval_summary.json
+===== eval lecture2 
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading BGE-M3 on cuda...
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 14482.79it/s]
+Loading re-ranker BAAI/bge-reranker-v2-m3 (first time: downloading ~2 GB)...
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights:   3%|▎         | 13/393 [00:00<00:03, 118.27it/s]Loading weights:   6%|▋         | 25/393 [00:00<00:03, 93.01it/s] Loading weights:   9%|▉         | 35/393 [00:00<00:04, 84.91it/s]Loading weights:  12%|█▏        | 46/393 [00:00<00:04, 76.57it/s]Loading weights:  14%|█▎        | 54/393 [00:00<00:04, 69.59it/s]Loading weights:  17%|█▋        | 68/393 [00:00<00:03, 82.09it/s]Loading weights:  21%|██▏       | 84/393 [00:00<00:03, 98.23it/s]Loading weights: 100%|██████████| 393/393 [00:00<00:00, 406.23it/s]
+30 questions, 65 chunks in database
+
+# 檢索方法比較（vector / bm25 / hybrid）
+
+- 資料庫：results\lecture2\chroma_db　題目檔：evaluation\questions\lecture2.json
+- all = 每種方法排完所有片段再合併；top10 = 各取前 10 名再合併（系統實際設定）；w = bm25_weight
+- 題目數：30　片段數：65　向量模型：BAAI/bge-m3（cuda）
+- RRF：k=60、vector_weight=1.0
+- 重新排序模型：BAAI/bge-reranker-v2-m3
+
+## ALL（30 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 77% | 90% | 100% | 0.846 | 50 |
+| bm25 | 50% | 63% | 73% | 0.589 | 41 |
+| hybrid (all, w=1) | 63% | 83% | 93% | 0.762 | 41 |
+| hybrid (top10, w=1) | 63% | 83% | 93% | 0.769 | 41 |
+| hybrid (top10, w=0.5) | 70% | 83% | 93% | 0.797 | 41 |
+| hybrid (top10, w=0.3) | 70% | 80% | 93% | 0.794 | 41 |
+| vector + rerank | 67% | 93% | 97% | 0.796 | 2124 |
+| hybrid + rerank | 67% | 93% | 97% | 0.791 | 1533 |
+| hybrid20 + rerank | 67% | 93% | 97% | 0.790 | 2653 |
+
+## keyword（12 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 100% | 100% | 100% | 1.000 | 59 |
+| bm25 | 83% | 83% | 92% | 0.868 | 38 |
+| hybrid (all, w=1) | 83% | 100% | 100% | 0.917 | 38 |
+| hybrid (top10, w=1) | 83% | 100% | 100% | 0.917 | 38 |
+| hybrid (top10, w=0.5) | 100% | 100% | 100% | 1.000 | 39 |
+| hybrid (top10, w=0.3) | 100% | 100% | 100% | 1.000 | 38 |
+| vector + rerank | 83% | 100% | 100% | 0.903 | 2257 |
+| hybrid + rerank | 83% | 100% | 100% | 0.903 | 1443 |
+| hybrid20 + rerank | 83% | 100% | 100% | 0.903 | 2629 |
+
+## paraphrase（12 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 50% | 83% | 100% | 0.676 | 46 |
+| bm25 | 25% | 58% | 75% | 0.424 | 47 |
+| hybrid (all, w=1) | 33% | 67% | 83% | 0.551 | 45 |
+| hybrid (top10, w=1) | 33% | 67% | 83% | 0.567 | 44 |
+| hybrid (top10, w=0.5) | 33% | 67% | 83% | 0.556 | 45 |
+| hybrid (top10, w=0.3) | 33% | 58% | 83% | 0.549 | 45 |
+| vector + rerank | 42% | 83% | 92% | 0.628 | 2059 |
+| hybrid + rerank | 42% | 83% | 92% | 0.616 | 1768 |
+| hybrid20 + rerank | 42% | 83% | 92% | 0.615 | 2932 |
+
+## chinese（6 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 83% | 83% | 100% | 0.875 | 41 |
+| bm25 | 33% | 33% | 33% | 0.361 | 37 |
+| hybrid (all, w=1) | 83% | 83% | 100% | 0.875 | 39 |
+| hybrid (top10, w=1) | 83% | 83% | 100% | 0.875 | 40 |
+| hybrid (top10, w=0.5) | 83% | 83% | 100% | 0.875 | 39 |
+| hybrid (top10, w=0.3) | 83% | 83% | 100% | 0.875 | 40 |
+| vector + rerank | 83% | 100% | 100% | 0.917 | 1985 |
+| hybrid + rerank | 83% | 100% | 100% | 0.917 | 1241 |
+| hybrid20 + rerank | 83% | 100% | 100% | 0.917 | 2142 |
+
+## 每題正確片段的名次（越小越好，- = 沒找到）
+
+| 類型 | 問題 | vector | bm25 | hybrid (all, w=1) | hybrid (top10, w=1) | hybrid (top10, w=0.5) | hybrid (top10, w=0.3) | vector + rerank | hybrid + rerank | hybrid20 + rerank |
+|---|---|---|---|---|---|---|---|---|---|---|
+| keyword | what does elif stand for | 1 | 6 | 2 | 2 | 1 | 1 | 2 | 2 | 2 |
+| keyword | Control-C stops an infinite loop | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | range(start, stop, step) default values | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | SyntaxError when using one equal sign | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | Legend of Zelda lost woods | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | break statement | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | concatenation operator plus does not add spaces | 1 | 4 | 2 | 2 | 1 | 1 | 3 | 3 | 3 |
+| keyword | compare strings lexicographically | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | free food mailing list | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | mysum is 7 plus 8 plus 9 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | star operator repeats a string | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | input function prompt | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | how do I glue two pieces of text together | 1 | 3 | 2 | 2 | 2 | 2 | 1 | 1 | 1 |
+| paraphrase | what happens if the loop condition never becomes false | 5 | 3 | 2 | 2 | 3 | 4 | 8 | 7 | 8 |
+| paraphrase | how can a program choose between several alternatives | 3 | 1 | 2 | 2 | 2 | 2 | 3 | 3 | 3 |
+| paraphrase | what kind of data does whatever the user types become | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | how do I turn the user's text into a number | 4 | 3 | 4 | 4 | 4 | 4 | 1 | 1 | 1 |
+| paraphrase | can I check whether a word is bigger than a number | 2 | 4 | 1 | 1 | 1 | 1 | 3 | 3 | 3 |
+| paraphrase | how do I leave a loop early | 1 | 1 | 1 | 1 | 1 | 1 | 2 | 2 | 2 |
+| paraphrase | when should I repeat a fixed number of times versus until something happens | 1 | 23 | 5 | 4 | 4 | 4 | 2 | 3 | 3 |
+| paraphrase | how are groups of statements marked in Python | 2 | 20 | 8 | 7 | 6 | 6 | 4 | 4 | 4 |
+| paraphrase | difference between giving a variable a value and checking if two values are the same | 1 | 4 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | a strategy to get through a maze by keeping one hand on the wall | 3 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 |
+| paraphrase | can the counting function use decimal numbers | 1 | - | 27 | 6 | 6 | 6 | 1 | 1 | 1 |
+| chinese | elif 是什麼意思 | 1 | 6 | 1 | 1 | 1 | 1 | 2 | 2 | 2 |
+| chinese | 無窮迴圈要怎麼停止 | 4 | - | 4 | 4 | 4 | 4 | 1 | 1 | 1 |
+| chinese | 字串可以和數字比較大小嗎 | 1 | - | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| chinese | for 迴圈和 while 迴圈有什麼差別 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| chinese | break 會跳出哪一個迴圈 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| chinese | 怎麼讓使用者輸入資料 | 1 | - | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+
+Saved: results\lecture2\eval_result.md, results\lecture2\eval_detail.csv, results\lecture2\eval_summary.json
+===== eval ntu_cs_12 
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading BGE-M3 on cuda...
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 15046.17it/s]
+Loading re-ranker BAAI/bge-reranker-v2-m3 (first time: downloading ~2 GB)...
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights:   4%|▎         | 14/393 [00:00<00:03, 108.59it/s]Loading weights: 100%|██████████| 393/393 [00:00<00:00, 2504.57it/s]
+25 questions, 126 chunks in database
+
+# 檢索方法比較（vector / bm25 / hybrid）
+
+- 資料庫：results\ntu_cs_12\chroma_db　題目檔：evaluation\questions\ntu_cs_12.json
+- all = 每種方法排完所有片段再合併；top10 = 各取前 10 名再合併（系統實際設定）；w = bm25_weight
+- 題目數：25　片段數：126　向量模型：BAAI/bge-m3（cuda）
+- RRF：k=60、vector_weight=1.0
+- 重新排序模型：BAAI/bge-reranker-v2-m3
+
+## ALL（25 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 60% | 92% | 96% | 0.765 | 51 |
+| bm25 | 52% | 76% | 84% | 0.660 | 46 |
+| hybrid (all, w=1) | 60% | 92% | 100% | 0.758 | 43 |
+| hybrid (top10, w=1) | 60% | 92% | 96% | 0.748 | 39 |
+| hybrid (top10, w=0.5) | 60% | 92% | 96% | 0.760 | 38 |
+| hybrid (top10, w=0.3) | 60% | 92% | 96% | 0.760 | 39 |
+| vector + rerank | 60% | 100% | 100% | 0.780 | 1807 |
+| hybrid + rerank | 56% | 100% | 100% | 0.760 | 1532 |
+| hybrid20 + rerank | 56% | 100% | 100% | 0.760 | 2939 |
+
+## keyword（10 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 80% | 100% | 100% | 0.883 | 62 |
+| bm25 | 70% | 90% | 90% | 0.796 | 44 |
+| hybrid (all, w=1) | 80% | 100% | 100% | 0.883 | 42 |
+| hybrid (top10, w=1) | 80% | 100% | 100% | 0.883 | 39 |
+| hybrid (top10, w=0.5) | 70% | 100% | 100% | 0.850 | 36 |
+| hybrid (top10, w=0.3) | 70% | 100% | 100% | 0.833 | 37 |
+| vector + rerank | 80% | 100% | 100% | 0.900 | 1709 |
+| hybrid + rerank | 80% | 100% | 100% | 0.900 | 1445 |
+| hybrid20 + rerank | 80% | 100% | 100% | 0.900 | 2704 |
+
+## paraphrase（10 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 40% | 80% | 90% | 0.628 | 44 |
+| bm25 | 60% | 70% | 80% | 0.680 | 50 |
+| hybrid (all, w=1) | 40% | 90% | 100% | 0.637 | 46 |
+| hybrid (top10, w=1) | 40% | 80% | 90% | 0.603 | 41 |
+| hybrid (top10, w=0.5) | 50% | 80% | 90% | 0.651 | 41 |
+| hybrid (top10, w=0.3) | 50% | 80% | 90% | 0.667 | 41 |
+| vector + rerank | 50% | 100% | 100% | 0.700 | 1924 |
+| hybrid + rerank | 40% | 100% | 100% | 0.650 | 1647 |
+| hybrid20 + rerank | 40% | 100% | 100% | 0.650 | 3149 |
+
+## english（5 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 60% | 100% | 100% | 0.800 | 42 |
+| bm25 | 0% | 60% | 80% | 0.351 | 40 |
+| hybrid (all, w=1) | 60% | 80% | 100% | 0.750 | 41 |
+| hybrid (top10, w=1) | 60% | 100% | 100% | 0.767 | 37 |
+| hybrid (top10, w=0.5) | 60% | 100% | 100% | 0.800 | 37 |
+| hybrid (top10, w=0.3) | 60% | 100% | 100% | 0.800 | 39 |
+| vector + rerank | 40% | 100% | 100% | 0.700 | 1771 |
+| hybrid + rerank | 40% | 100% | 100% | 0.700 | 1478 |
+| hybrid20 + rerank | 40% | 100% | 100% | 0.700 | 2990 |
+
+## 每題正確片段的名次（越小越好，- = 沒找到）
+
+| 類型 | 問題 | vector | bm25 | hybrid (all, w=1) | hybrid (top10, w=1) | hybrid (top10, w=0.5) | hybrid (top10, w=0.3) | vector + rerank | hybrid + rerank | hybrid20 + rerank |
+|---|---|---|---|---|---|---|---|---|---|---|
+| keyword | assembler 是做什麼的 | 1 | 3 | 1 | 1 | 1 | 1 | 2 | 2 | 2 |
+| keyword | compiler 和 interpreter 有什麼不同 | 1 | 8 | 3 | 3 | 2 | 2 | 2 | 2 | 2 |
+| keyword | 什麼是 portability 可攜性 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | 第四代程式語言 SQL | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | 第一代 Machine Instruction | 3 | 1 | 2 | 2 | 2 | 3 | 1 | 1 | 1 |
+| keyword | declarative 和 prologue | 1 | 2 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | Lisp 的括號 match | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | encapsulation 封裝 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | 什麼是 l value | 2 | 1 | 1 | 1 | 2 | 2 | 1 | 1 | 1 |
+| keyword | go to 指令 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | 為什麼要發明組合語言 | 2 | 3 | 3 | 3 | 3 | 2 | 3 | 3 | 3 |
+| paraphrase | 翻譯一次之後就可以一直重複執行的方式 | 2 | 1 | 2 | 2 | 2 | 2 | 1 | 1 | 1 |
+| paraphrase | 為什麼驅動程式很難直接搬到別台電腦 | 2 | 1 | 1 | 1 | 1 | 1 | 2 | 2 | 2 |
+| paraphrase | 把整個程式看成一個函數的寫法 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | 只要把問題描述清楚電腦就會自己找答案 | 5 | 1 | 3 | 3 | 3 | 3 | 2 | 2 | 2 |
+| paraphrase | 用 n 乘上前一項來定義階乘 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | 不准別人直接修改我類別裡面的資料 | 1 | 4 | 1 | 1 | 1 | 1 | 3 | 3 | 3 |
+| paraphrase | 同一個函式名稱在不同物件會執行不同的版本 | 12 | 1 | 5 | 6 | 11 | 11 | 1 | 1 | 1 |
+| paraphrase | 為什麼老師不建議用跳躍指令 | 1 | 7 | 2 | 2 | 1 | 1 | 3 | 3 | 3 |
+| paraphrase | 用很小的空間存機率值的例子 | 2 | 14 | 2 | 5 | 4 | 4 | 1 | 2 | 2 |
+| english | what is the difference between a compiler and an interpreter | 1 | 2 | 1 | 1 | 1 | 1 | 2 | 2 | 2 |
+| english | why is Java so portable | 1 | 2 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| english | what are the four programming paradigms | 2 | 19 | 4 | 3 | 2 | 2 | 2 | 2 | 2 |
+| english | how to compute an average in functional programming | 1 | 5 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| english | why should we avoid goto statements | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 |
+
+Saved: results\ntu_cs_12\eval_result.md, results\ntu_cs_12\eval_detail.csv, results\ntu_cs_12\eval_summary.json
+===== eval ntu_zhuangzi_01 
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading BGE-M3 on cuda...
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 15648.15it/s]
+Loading re-ranker BAAI/bge-reranker-v2-m3 (first time: downloading ~2 GB)...
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights:   2%|▏         | 7/393 [00:00<00:06, 61.99it/s]Loading weights:   6%|▌         | 22/393 [00:00<00:03, 107.58it/s]Loading weights:  12%|█▏        | 48/393 [00:00<00:02, 145.51it/s]Loading weights:  17%|█▋        | 65/393 [00:00<00:02, 120.52it/s]Loading weights:  20%|█▉        | 78/393 [00:00<00:03, 91.50it/s] Loading weights: 100%|██████████| 393/393 [00:00<00:00, 494.63it/s]
+22 questions, 123 chunks in database
+
+# 檢索方法比較（vector / bm25 / hybrid）
+
+- 資料庫：results\ntu_zhuangzi_01\chroma_db　題目檔：evaluation\questions\ntu_zhuangzi_01.json
+- all = 每種方法排完所有片段再合併；top10 = 各取前 10 名再合併（系統實際設定）；w = bm25_weight
+- 題目數：22　片段數：123　向量模型：BAAI/bge-m3（cuda）
+- RRF：k=60、vector_weight=1.0
+- 重新排序模型：BAAI/bge-reranker-v2-m3
+
+## ALL（22 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 59% | 86% | 91% | 0.730 | 54 |
+| bm25 | 45% | 68% | 77% | 0.577 | 49 |
+| hybrid (all, w=1) | 59% | 86% | 91% | 0.733 | 44 |
+| hybrid (top10, w=1) | 59% | 91% | 91% | 0.742 | 41 |
+| hybrid (top10, w=0.5) | 64% | 86% | 91% | 0.754 | 40 |
+| hybrid (top10, w=0.3) | 68% | 86% | 91% | 0.777 | 40 |
+| vector + rerank | 55% | 73% | 91% | 0.672 | 1484 |
+| hybrid + rerank | 55% | 73% | 91% | 0.670 | 1152 |
+| hybrid20 + rerank | 55% | 73% | 91% | 0.670 | 2046 |
+
+## keyword（10 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 60% | 80% | 90% | 0.706 | 64 |
+| bm25 | 60% | 90% | 90% | 0.719 | 49 |
+| hybrid (all, w=1) | 50% | 90% | 90% | 0.686 | 41 |
+| hybrid (top10, w=1) | 50% | 90% | 90% | 0.683 | 38 |
+| hybrid (top10, w=0.5) | 60% | 80% | 90% | 0.708 | 40 |
+| hybrid (top10, w=0.3) | 60% | 80% | 90% | 0.708 | 39 |
+| vector + rerank | 50% | 70% | 90% | 0.645 | 1495 |
+| hybrid + rerank | 50% | 70% | 90% | 0.645 | 1122 |
+| hybrid20 + rerank | 50% | 70% | 90% | 0.645 | 2126 |
+
+## paraphrase（8 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 50% | 100% | 100% | 0.750 | 43 |
+| bm25 | 50% | 75% | 100% | 0.688 | 52 |
+| hybrid (all, w=1) | 75% | 100% | 100% | 0.875 | 45 |
+| hybrid (top10, w=1) | 75% | 100% | 100% | 0.875 | 43 |
+| hybrid (top10, w=0.5) | 75% | 100% | 100% | 0.875 | 40 |
+| hybrid (top10, w=0.3) | 88% | 100% | 100% | 0.938 | 41 |
+| vector + rerank | 75% | 88% | 100% | 0.823 | 1429 |
+| hybrid + rerank | 75% | 88% | 100% | 0.823 | 1287 |
+| hybrid20 + rerank | 75% | 88% | 100% | 0.823 | 2178 |
+
+## english（4 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 75% | 75% | 75% | 0.753 | 49 |
+| bm25 | 0% | 0% | 0% | 0.000 | 41 |
+| hybrid (all, w=1) | 50% | 50% | 75% | 0.565 | 48 |
+| hybrid (top10, w=1) | 50% | 75% | 75% | 0.625 | 46 |
+| hybrid (top10, w=0.5) | 50% | 75% | 75% | 0.625 | 43 |
+| hybrid (top10, w=0.3) | 50% | 75% | 75% | 0.625 | 42 |
+| vector + rerank | 25% | 50% | 75% | 0.438 | 1564 |
+| hybrid + rerank | 25% | 50% | 75% | 0.425 | 954 |
+| hybrid20 + rerank | 25% | 50% | 75% | 0.425 | 1583 |
+
+## 每題正確片段的名次（越小越好，- = 沒找到）
+
+| 類型 | 問題 | vector | bm25 | hybrid (all, w=1) | hybrid (top10, w=1) | hybrid (top10, w=0.5) | hybrid (top10, w=0.3) | vector + rerank | hybrid + rerank | hybrid20 + rerank |
+|---|---|---|---|---|---|---|---|---|---|---|
+| keyword | 北冥有魚，其名為鯤 | 2 | 3 | 2 | 2 | 2 | 2 | 2 | 2 | 2 |
+| keyword | 鯤是什麼意思 | 40 | 47 | 42 | - | - | - | - | - | - |
+| keyword | 大鵬要飛上九萬里 | 3 | 2 | 2 | 2 | 3 | 3 | 2 | 2 | 2 |
+| keyword | 蜩與學鳩 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | 朝菌不知晦朔 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | 彭祖活了七百八十歲 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | 宋榮子猶然笑之 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | 列子御風而行 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | 至人無己，神人無功，聖人無名 | 5 | 1 | 3 | 3 | 4 | 4 | 5 | 5 | 5 |
+| keyword | 乘天地之正，御六氣之辯 | 1 | 3 | 2 | 2 | 1 | 1 | 4 | 4 | 4 |
+| paraphrase | 魚變成鳥代表什麼樣的改變 | 1 | 4 | 1 | 1 | 1 | 1 | 3 | 3 | 3 |
+| paraphrase | 為什麼大鳥起飛需要很強的風 | 2 | 1 | 1 | 1 | 1 | 1 | 4 | 4 | 4 |
+| paraphrase | 要去越遠的地方就要準備越多東西 | 1 | 4 | 2 | 2 | 2 | 1 | 1 | 1 | 1 |
+| paraphrase | 壽命很短的生物沒辦法理解時間 | 2 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | 全世界的人都批評他也不在意 | 2 | 2 | 2 | 2 | 2 | 2 | 1 | 1 | 1 |
+| paraphrase | 還要等待外在條件才能行動，所以不是最高境界 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | 別人得到你想要的東西，你也替他高興 | 2 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | 冥這個字的意思 | 1 | 2 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| english | why does the giant bird need such a strong wind to fly | 1 | - | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| english | what is the highest state described by Zhuangzi | 97 | - | 97 | - | - | - | - | - | - |
+| english | the story of a huge fish that turns into a bird | 1 | - | 1 | 1 | 1 | 1 | 2 | 2 | 2 |
+| english | does Zhuangzi think small birds are as good as the big one | 1 | - | 4 | 2 | 2 | 2 | 4 | 5 | 5 |
+
+Saved: results\ntu_zhuangzi_01\eval_result.md, results\ntu_zhuangzi_01\eval_detail.csv, results\ntu_zhuangzi_01\eval_summary.json
+===== library eval test_video 
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading BGE-M3 on cuda...
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 14489.82it/s]
+Loading re-ranker BAAI/bge-reranker-v2-m3 (first time: downloading ~2 GB)...
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights:   2%|▏         | 6/393 [00:00<00:09, 38.98it/s]Loading weights:   6%|▌         | 23/393 [00:00<00:03, 93.12it/s]Loading weights:   9%|▉         | 35/393 [00:00<00:05, 69.02it/s]Loading weights:  11%|█         | 43/393 [00:00<00:05, 64.53it/s]Loading weights: 100%|██████████| 393/393 [00:00<00:00, 584.62it/s]
+20 questions, 479 chunks in database
+
+# 檢索方法比較（vector / bm25 / hybrid）
+
+- 資料庫：library\chroma_db　題目檔：evaluation\questions\test_video.json
+- all = 每種方法排完所有片段再合併；top10 = 各取前 10 名再合併（系統實際設定）；w = bm25_weight
+- 題目數：20　片段數：479　向量模型：BAAI/bge-m3（cuda）
+- RRF：k=60、vector_weight=1.0
+- 重新排序模型：BAAI/bge-reranker-v2-m3　搜尋範圍：影片庫全部影片
+
+## ALL（20 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 30% | 45% | 60% | 0.437 | 74 |
+| bm25 | 30% | 45% | 45% | 0.377 | 49 |
+| hybrid (all, w=1) | 30% | 45% | 45% | 0.415 | 66 |
+| hybrid (top10, w=1) | 40% | 45% | 50% | 0.467 | 42 |
+| hybrid (top10, w=0.5) | 40% | 45% | 55% | 0.469 | 40 |
+| hybrid (top10, w=0.3) | 40% | 45% | 50% | 0.467 | 42 |
+| vector + rerank | 60% | 65% | 65% | 0.646 | 2026 |
+| hybrid + rerank | 60% | 65% | 65% | 0.640 | 1681 |
+| hybrid20 + rerank | 60% | 70% | 70% | 0.668 | 2983 |
+
+## keyword（8 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 50% | 75% | 75% | 0.644 | 85 |
+| bm25 | 62% | 88% | 88% | 0.718 | 44 |
+| hybrid (all, w=1) | 62% | 75% | 75% | 0.726 | 65 |
+| hybrid (top10, w=1) | 62% | 62% | 75% | 0.683 | 41 |
+| hybrid (top10, w=0.5) | 62% | 62% | 75% | 0.674 | 39 |
+| hybrid (top10, w=0.3) | 62% | 62% | 62% | 0.669 | 39 |
+| vector + rerank | 88% | 88% | 88% | 0.875 | 1976 |
+| hybrid + rerank | 100% | 100% | 100% | 1.000 | 1575 |
+| hybrid20 + rerank | 100% | 100% | 100% | 1.000 | 2781 |
+
+## paraphrase（8 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 0% | 12% | 50% | 0.188 | 67 |
+| bm25 | 12% | 25% | 25% | 0.225 | 47 |
+| hybrid (all, w=1) | 12% | 38% | 38% | 0.301 | 65 |
+| hybrid (top10, w=1) | 12% | 25% | 25% | 0.234 | 43 |
+| hybrid (top10, w=0.5) | 12% | 25% | 38% | 0.248 | 41 |
+| hybrid (top10, w=0.3) | 12% | 25% | 38% | 0.248 | 43 |
+| vector + rerank | 38% | 38% | 38% | 0.447 | 2038 |
+| hybrid + rerank | 25% | 38% | 38% | 0.351 | 1658 |
+| hybrid20 + rerank | 25% | 38% | 38% | 0.378 | 2815 |
+
+## chinese（4 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 50% | 50% | 50% | 0.523 | 65 |
+| bm25 | 0% | 0% | 0% | 0.000 | 64 |
+| hybrid (all, w=1) | 0% | 0% | 0% | 0.018 | 69 |
+| hybrid (top10, w=1) | 50% | 50% | 50% | 0.500 | 44 |
+| hybrid (top10, w=0.5) | 50% | 50% | 50% | 0.500 | 43 |
+| hybrid (top10, w=0.3) | 50% | 50% | 50% | 0.500 | 48 |
+| vector + rerank | 50% | 75% | 75% | 0.583 | 2102 |
+| hybrid + rerank | 50% | 50% | 50% | 0.500 | 1938 |
+| hybrid20 + rerank | 50% | 75% | 75% | 0.583 | 3724 |
+
+## 每題正確片段的名次（越小越好，- = 沒找到）
+
+| 類型 | 問題 | vector | bm25 | hybrid (all, w=1) | hybrid (top10, w=1) | hybrid (top10, w=0.5) | hybrid (top10, w=0.3) | vector + rerank | hybrid + rerank | hybrid20 + rerank |
+|---|---|---|---|---|---|---|---|---|---|---|
+| keyword | what does i stand for in for i in range | 2 | 13 | 7 | 10 | 9 | 9 | 1 | 1 | 1 |
+| keyword | why does range(1,5) print only four times | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | Line 9 is not indented | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | what does print(counter) output | 8 | 3 | 6 | 5 | 5 | 6 | 1 | 1 | 1 |
+| keyword | which keyword starts the for loop on line five | 2 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | 101computing tutorial introduction | 40 | 3 | 2 | 6 | 13 | 13 | - | 1 | 1 |
+| keyword | increment | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | five take away one | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | how can I make the computer repeat some instructions many times | 2 | 1 | 2 | 2 | 2 | 2 | 1 | 1 | 1 |
+| paraphrase | why did the message appear fewer times than I expected | 4 | 13 | 2 | 6 | 4 | 4 | 1 | 1 | 1 |
+| paraphrase | what happens to a statement that is not shifted to the right | 4 | 2 | 1 | 1 | 1 | 1 | 1 | 2 | 2 |
+| paraphrase | does renaming the loop variable change the result | 4 | 27 | 11 | 9 | 8 | 8 | 8 | 7 | 8 |
+| paraphrase | how do I put several statements inside the loop body | 14 | 22 | 12 | - | - | - | 7 | - | 11 |
+| paraphrase | what is displayed when the program is executed | 17 | 11 | 7 | - | - | - | 7 | - | 7 |
+| paraphrase | how does the loop variable change on each pass | 9 | 21 | 12 | 11 | 9 | 9 | 6 | 6 | 6 |
+| paraphrase | how does the lesson finish | 115 | - | 115 | - | - | - | - | - | - |
+| chinese | for 迴圈的用途是什麼 | 1 | - | 39 | 1 | 1 | 1 | 1 | 1 | 1 |
+| chinese | 為什麼只印出四次而不是五次 | 1 | - | 34 | 1 | 1 | 1 | 1 | 1 | 1 |
+| chinese | 沒有縮排的程式碼會執行幾次 | 13 | - | 85 | - | - | - | 3 | - | 3 |
+| chinese | 變數名稱 i 代表什麼意思 | 66 | - | 182 | - | - | - | - | - | - |
+
+Saved: library\eval_test_video\eval_result.md, library\eval_test_video\eval_detail.csv, library\eval_test_video\eval_summary.json
+===== library eval mit_prob_l01 
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading BGE-M3 on cuda...
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 15649.34it/s]
+Loading re-ranker BAAI/bge-reranker-v2-m3 (first time: downloading ~2 GB)...
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights:   1%|          | 4/393 [00:00<00:21, 18.19it/s]Loading weights:   4%|▎         | 14/393 [00:00<00:09, 40.27it/s]Loading weights:   8%|▊         | 31/393 [00:00<00:04, 77.63it/s]Loading weights:  10%|█         | 41/393 [00:00<00:04, 70.43it/s]Loading weights: 100%|██████████| 393/393 [00:00<00:00, 572.38it/s]
+20 questions, 479 chunks in database
+
+# 檢索方法比較（vector / bm25 / hybrid）
+
+- 資料庫：library\chroma_db　題目檔：evaluation\questions\mit_prob_l01.json
+- all = 每種方法排完所有片段再合併；top10 = 各取前 10 名再合併（系統實際設定）；w = bm25_weight
+- 題目數：20　片段數：479　向量模型：BAAI/bge-m3（cuda）
+- RRF：k=60、vector_weight=1.0
+- 重新排序模型：BAAI/bge-reranker-v2-m3　搜尋範圍：影片庫全部影片
+
+## ALL（20 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 75% | 95% | 95% | 0.849 | 77 |
+| bm25 | 65% | 70% | 70% | 0.674 | 51 |
+| hybrid (all, w=1) | 65% | 75% | 75% | 0.702 | 66 |
+| hybrid (top10, w=1) | 75% | 95% | 100% | 0.843 | 42 |
+| hybrid (top10, w=0.5) | 75% | 100% | 100% | 0.867 | 40 |
+| hybrid (top10, w=0.3) | 75% | 100% | 100% | 0.867 | 41 |
+| vector + rerank | 60% | 95% | 95% | 0.775 | 1442 |
+| hybrid + rerank | 65% | 90% | 95% | 0.796 | 1174 |
+| hybrid20 + rerank | 60% | 95% | 95% | 0.773 | 2355 |
+
+## keyword（8 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 88% | 100% | 100% | 0.938 | 93 |
+| bm25 | 88% | 100% | 100% | 0.917 | 39 |
+| hybrid (all, w=1) | 88% | 100% | 100% | 0.938 | 61 |
+| hybrid (top10, w=1) | 88% | 100% | 100% | 0.938 | 37 |
+| hybrid (top10, w=0.5) | 88% | 100% | 100% | 0.938 | 34 |
+| hybrid (top10, w=0.3) | 88% | 100% | 100% | 0.938 | 36 |
+| vector + rerank | 62% | 100% | 100% | 0.812 | 1402 |
+| hybrid + rerank | 62% | 100% | 100% | 0.812 | 878 |
+| hybrid20 + rerank | 62% | 100% | 100% | 0.812 | 1793 |
+
+## paraphrase（8 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 75% | 88% | 88% | 0.830 | 66 |
+| bm25 | 75% | 75% | 75% | 0.769 | 56 |
+| hybrid (all, w=1) | 75% | 88% | 88% | 0.799 | 70 |
+| hybrid (top10, w=1) | 75% | 100% | 100% | 0.854 | 46 |
+| hybrid (top10, w=0.5) | 75% | 100% | 100% | 0.875 | 43 |
+| hybrid (top10, w=0.3) | 75% | 100% | 100% | 0.875 | 46 |
+| vector + rerank | 62% | 88% | 88% | 0.771 | 1504 |
+| hybrid + rerank | 62% | 88% | 88% | 0.771 | 1160 |
+| hybrid20 + rerank | 62% | 88% | 88% | 0.766 | 2406 |
+
+## chinese（4 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 50% | 100% | 100% | 0.708 | 64 |
+| bm25 | 0% | 0% | 0% | 0.000 | 66 |
+| hybrid (all, w=1) | 0% | 0% | 0% | 0.039 | 67 |
+| hybrid (top10, w=1) | 50% | 75% | 100% | 0.633 | 45 |
+| hybrid (top10, w=0.5) | 50% | 100% | 100% | 0.708 | 44 |
+| hybrid (top10, w=0.3) | 50% | 100% | 100% | 0.708 | 42 |
+| vector + rerank | 50% | 100% | 100% | 0.708 | 1398 |
+| hybrid + rerank | 75% | 75% | 100% | 0.812 | 1795 |
+| hybrid20 + rerank | 50% | 100% | 100% | 0.708 | 3375 |
+
+## 每題正確片段的名次（越小越好，- = 沒找到）
+
+| 類型 | 問題 | vector | bm25 | hybrid (all, w=1) | hybrid (top10, w=1) | hybrid (top10, w=0.5) | hybrid (top10, w=0.3) | vector + rerank | hybrid + rerank | hybrid20 + rerank |
+|---|---|---|---|---|---|---|---|---|---|---|
+| keyword | mutually exclusive and collectively exhaustive | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | tetrahedral die with 16 possible outcomes | 1 | 1 | 1 | 1 | 1 | 1 | 2 | 2 | 2 |
+| keyword | what is the union bound | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | countable additivity axiom | 2 | 1 | 2 | 2 | 2 | 2 | 2 | 2 | 2 |
+| keyword | nonnegativity axiom | 1 | 3 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | discrete uniform probability law | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | why is the unit square an uncountable set | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | probability of the empty set | 1 | 1 | 1 | 1 | 1 | 1 | 2 | 2 | 2 |
+| paraphrase | does the weather outside matter when listing outcomes of a coin flip | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | why can't each point of a continuous target get its own positive probability | 1 | 7 | 3 | 3 | 1 | 1 | 2 | 2 | 2 |
+| paraphrase | how do we draw an experiment that happens in stages | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | if one event is contained in another which one is more likely | 1 | 96 | 17 | 2 | 2 | 2 | 6 | 6 | 8 |
+| paraphrase | how to get a probability by counting when all outcomes are equally likely | 7 | 1 | 1 | 1 | 1 | 1 | 2 | 2 | 2 |
+| paraphrase | what are the general steps for solving a probability problem | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | how do we check that the given probabilities of the integers really add to one | 2 | 1 | 1 | 1 | 2 | 2 | 1 | 1 | 1 |
+| paraphrase | what is the chance that the dart hits one exact point | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| chinese | 樣本空間要怎麼選才適當 | 1 | - | 27 | 1 | 1 | 1 | 1 | 1 | 1 |
+| chinese | 機率的公理有哪些 | 3 | - | 28 | 5 | 3 | 3 | 3 | 4 | 3 |
+| chinese | 兩個事件聯集的機率怎麼算 | 1 | - | 21 | 1 | 1 | 1 | 2 | 1 | 2 |
+| chinese | 連續樣本空間的例子 | 2 | - | 27 | 3 | 2 | 2 | 1 | 1 | 1 |
+
+Saved: library\eval_mit_prob_l01\eval_result.md, library\eval_mit_prob_l01\eval_detail.csv, library\eval_mit_prob_l01\eval_summary.json
+===== library eval mit_1806_l01 
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading BGE-M3 on cuda...
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 15648.45it/s]
+Loading re-ranker BAAI/bge-reranker-v2-m3 (first time: downloading ~2 GB)...
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights:   3%|▎         | 11/393 [00:00<00:07, 51.43it/s]Loading weights:   4%|▍         | 17/393 [00:00<00:07, 53.59it/s]Loading weights: 100%|██████████| 393/393 [00:00<00:00, 1021.33it/s]
+18 questions, 479 chunks in database
+
+# 檢索方法比較（vector / bm25 / hybrid）
+
+- 資料庫：library\chroma_db　題目檔：evaluation\questions\mit_1806_l01.json
+- all = 每種方法排完所有片段再合併；top10 = 各取前 10 名再合併（系統實際設定）；w = bm25_weight
+- 題目數：18　片段數：479　向量模型：BAAI/bge-m3（cuda）
+- RRF：k=60、vector_weight=1.0
+- 重新排序模型：BAAI/bge-reranker-v2-m3　搜尋範圍：影片庫全部影片
+
+## ALL（18 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 61% | 83% | 83% | 0.718 | 79 |
+| bm25 | 50% | 61% | 67% | 0.560 | 50 |
+| hybrid (all, w=1) | 50% | 67% | 72% | 0.590 | 68 |
+| hybrid (top10, w=1) | 50% | 72% | 89% | 0.622 | 42 |
+| hybrid (top10, w=0.5) | 50% | 78% | 89% | 0.648 | 41 |
+| hybrid (top10, w=0.3) | 56% | 72% | 89% | 0.669 | 40 |
+| vector + rerank | 72% | 89% | 89% | 0.800 | 1396 |
+| hybrid + rerank | 67% | 83% | 83% | 0.739 | 1129 |
+| hybrid20 + rerank | 72% | 89% | 89% | 0.799 | 2254 |
+
+## keyword（7 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 71% | 86% | 86% | 0.780 | 101 |
+| bm25 | 71% | 86% | 100% | 0.798 | 41 |
+| hybrid (all, w=1) | 71% | 100% | 100% | 0.810 | 63 |
+| hybrid (top10, w=1) | 71% | 100% | 100% | 0.810 | 39 |
+| hybrid (top10, w=0.5) | 71% | 100% | 100% | 0.810 | 38 |
+| hybrid (top10, w=0.3) | 71% | 86% | 100% | 0.790 | 37 |
+| vector + rerank | 71% | 86% | 86% | 0.782 | 1437 |
+| hybrid + rerank | 71% | 86% | 86% | 0.782 | 954 |
+| hybrid20 + rerank | 71% | 86% | 86% | 0.782 | 1954 |
+
+## paraphrase（7 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 71% | 86% | 86% | 0.771 | 67 |
+| bm25 | 57% | 71% | 71% | 0.642 | 52 |
+| hybrid (all, w=1) | 57% | 71% | 86% | 0.692 | 75 |
+| hybrid (top10, w=1) | 57% | 71% | 86% | 0.679 | 45 |
+| hybrid (top10, w=0.5) | 57% | 86% | 86% | 0.714 | 44 |
+| hybrid (top10, w=0.3) | 71% | 86% | 86% | 0.786 | 42 |
+| vector + rerank | 71% | 86% | 86% | 0.799 | 1245 |
+| hybrid + rerank | 71% | 86% | 86% | 0.786 | 965 |
+| hybrid20 + rerank | 71% | 86% | 86% | 0.796 | 1930 |
+
+## chinese（4 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 25% | 75% | 75% | 0.518 | 64 |
+| bm25 | 0% | 0% | 0% | 0.000 | 63 |
+| hybrid (all, w=1) | 0% | 0% | 0% | 0.029 | 65 |
+| hybrid (top10, w=1) | 0% | 25% | 75% | 0.196 | 42 |
+| hybrid (top10, w=0.5) | 0% | 25% | 75% | 0.250 | 38 |
+| hybrid (top10, w=0.3) | 0% | 25% | 75% | 0.250 | 40 |
+| vector + rerank | 75% | 100% | 100% | 0.833 | 1588 |
+| hybrid + rerank | 50% | 75% | 75% | 0.583 | 1723 |
+| hybrid20 + rerank | 75% | 100% | 100% | 0.833 | 3346 |
+
+## 每題正確片段的名次（越小越好，- = 沒找到）
+
+| 類型 | 問題 | vector | bm25 | hybrid (all, w=1) | hybrid (top10, w=1) | hybrid (top10, w=0.5) | hybrid (top10, w=0.3) | vector + rerank | hybrid + rerank | hybrid20 + rerank |
+|---|---|---|---|---|---|---|---|---|---|---|
+| keyword | fundamental problem of linear algebra | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | row picture where two lines meet | 3 | 4 | 3 | 3 | 3 | 3 | 3 | 3 | 3 |
+| keyword | linear combination of the columns | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | column picture in three dimensions | 8 | 3 | 3 | 3 | 3 | 5 | 7 | 7 | 7 |
+| keyword | non-singular invertible matrix | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | dot product of a row with x | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | nine vectors in nine-dimensional space | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | what shape is the set of solutions of one equation in three unknowns | 15 | 16 | 11 | - | - | - | 11 | - | 14 |
+| paraphrase | when is it impossible to reach every right-hand side | 1 | 10 | 4 | 4 | 2 | 1 | 1 | 1 | 1 |
+| paraphrase | how do you multiply a matrix by a vector | 1 | 1 | 1 | 1 | 1 | 1 | 2 | 2 | 2 |
+| paraphrase | which point solves both equations in the two by two example | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | why is it hard to see three planes meeting | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | what happens if we keep the matrix but change the right-hand side | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | what do all combinations of the two columns fill | 3 | 3 | 2 | 2 | 2 | 2 | 1 | 1 | 1 |
+| chinese | 線性代數的基本問題是什麼 | 1 | - | 37 | 4 | 4 | 4 | 1 | 1 | 1 |
+| chinese | 矩陣乘以向量怎麼算 | 2 | - | 35 | 5 | 4 | 4 | 3 | 3 | 3 |
+| chinese | 奇異矩陣是什麼情況 | 14 | - | 58 | - | - | - | 1 | - | 1 |
+| chinese | 行向量的線性組合 | 2 | - | 24 | 3 | 2 | 2 | 1 | 1 | 1 |
+
+Saved: library\eval_mit_1806_l01\eval_result.md, library\eval_mit_1806_l01\eval_detail.csv, library\eval_mit_1806_l01\eval_summary.json
+===== library eval lecture2 
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading BGE-M3 on cuda...
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 14483.30it/s]
+Loading re-ranker BAAI/bge-reranker-v2-m3 (first time: downloading ~2 GB)...
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights:   2%|▏         | 6/393 [00:00<00:07, 50.87it/s]Loading weights:   3%|▎         | 12/393 [00:00<00:17, 22.06it/s]Loading weights:   4%|▍         | 16/393 [00:00<00:14, 26.11it/s]Loading weights:   6%|▌         | 23/393 [00:00<00:10, 36.13it/s]Loading weights:   7%|▋         | 28/393 [00:00<00:09, 38.24it/s]Loading weights: 100%|██████████| 393/393 [00:00<00:00, 433.55it/s]
+30 questions, 479 chunks in database
+
+# 檢索方法比較（vector / bm25 / hybrid）
+
+- 資料庫：library\chroma_db　題目檔：evaluation\questions\lecture2.json
+- all = 每種方法排完所有片段再合併；top10 = 各取前 10 名再合併（系統實際設定）；w = bm25_weight
+- 題目數：30　片段數：479　向量模型：BAAI/bge-m3（cuda）
+- RRF：k=60、vector_weight=1.0
+- 重新排序模型：BAAI/bge-reranker-v2-m3　搜尋範圍：影片庫全部影片
+
+## ALL（30 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 70% | 83% | 93% | 0.795 | 74 |
+| bm25 | 43% | 57% | 60% | 0.507 | 50 |
+| hybrid (all, w=1) | 50% | 77% | 80% | 0.647 | 65 |
+| hybrid (top10, w=1) | 53% | 87% | 90% | 0.722 | 41 |
+| hybrid (top10, w=0.5) | 57% | 87% | 90% | 0.735 | 42 |
+| hybrid (top10, w=0.3) | 60% | 83% | 90% | 0.749 | 43 |
+| vector + rerank | 63% | 90% | 97% | 0.769 | 2032 |
+| hybrid + rerank | 63% | 87% | 97% | 0.761 | 1735 |
+| hybrid20 + rerank | 63% | 87% | 97% | 0.761 | 3078 |
+
+## keyword（12 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 92% | 100% | 100% | 0.958 | 84 |
+| bm25 | 83% | 92% | 92% | 0.872 | 41 |
+| hybrid (all, w=1) | 83% | 100% | 100% | 0.917 | 61 |
+| hybrid (top10, w=1) | 83% | 100% | 100% | 0.917 | 38 |
+| hybrid (top10, w=0.5) | 92% | 100% | 100% | 0.958 | 38 |
+| hybrid (top10, w=0.3) | 100% | 100% | 100% | 1.000 | 38 |
+| vector + rerank | 83% | 100% | 100% | 0.903 | 2066 |
+| hybrid + rerank | 83% | 100% | 100% | 0.903 | 1617 |
+| hybrid20 + rerank | 83% | 100% | 100% | 0.903 | 2820 |
+
+## paraphrase（12 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 42% | 67% | 92% | 0.598 | 70 |
+| bm25 | 25% | 50% | 58% | 0.389 | 52 |
+| hybrid (all, w=1) | 33% | 75% | 83% | 0.561 | 69 |
+| hybrid (top10, w=1) | 33% | 75% | 83% | 0.587 | 43 |
+| hybrid (top10, w=0.5) | 33% | 75% | 83% | 0.574 | 46 |
+| hybrid (top10, w=0.3) | 33% | 67% | 83% | 0.567 | 48 |
+| vector + rerank | 33% | 75% | 92% | 0.562 | 2007 |
+| hybrid + rerank | 33% | 67% | 92% | 0.541 | 1787 |
+| hybrid20 + rerank | 33% | 67% | 92% | 0.541 | 3130 |
+
+## chinese（6 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 83% | 83% | 83% | 0.861 | 64 |
+| bm25 | 0% | 0% | 0% | 0.014 | 64 |
+| hybrid (all, w=1) | 17% | 33% | 33% | 0.277 | 65 |
+| hybrid (top10, w=1) | 33% | 83% | 83% | 0.602 | 42 |
+| hybrid (top10, w=0.5) | 33% | 83% | 83% | 0.611 | 42 |
+| hybrid (top10, w=0.3) | 33% | 83% | 83% | 0.611 | 42 |
+| vector + rerank | 83% | 100% | 100% | 0.917 | 2012 |
+| hybrid + rerank | 83% | 100% | 100% | 0.917 | 1867 |
+| hybrid20 + rerank | 83% | 100% | 100% | 0.917 | 3493 |
+
+## 每題正確片段的名次（越小越好，- = 沒找到）
+
+| 類型 | 問題 | vector | bm25 | hybrid (all, w=1) | hybrid (top10, w=1) | hybrid (top10, w=0.5) | hybrid (top10, w=0.3) | vector + rerank | hybrid + rerank | hybrid20 + rerank |
+|---|---|---|---|---|---|---|---|---|---|---|
+| keyword | what does elif stand for | 1 | 8 | 2 | 2 | 1 | 1 | 2 | 2 | 2 |
+| keyword | Control-C stops an infinite loop | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | range(start, stop, step) default values | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | SyntaxError when using one equal sign | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | Legend of Zelda lost woods | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | break statement | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | concatenation operator plus does not add spaces | 2 | 3 | 2 | 2 | 2 | 1 | 3 | 3 | 3 |
+| keyword | compare strings lexicographically | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | free food mailing list | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | mysum is 7 plus 8 plus 9 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | star operator repeats a string | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | input function prompt | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | how do I glue two pieces of text together | 1 | 13 | 2 | 2 | 2 | 2 | 1 | 1 | 1 |
+| paraphrase | what happens if the loop condition never becomes false | 5 | 3 | 2 | 2 | 3 | 4 | 8 | 8 | 8 |
+| paraphrase | how can a program choose between several alternatives | 7 | 1 | 2 | 2 | 2 | 2 | 3 | 3 | 3 |
+| paraphrase | what kind of data does whatever the user types become | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | how do I turn the user's text into a number | 4 | 3 | 4 | 4 | 4 | 4 | 1 | 1 | 1 |
+| paraphrase | can I check whether a word is bigger than a number | 2 | 7 | 1 | 1 | 1 | 1 | 3 | 3 | 3 |
+| paraphrase | how do I leave a loop early | 1 | 1 | 1 | 1 | 1 | 1 | 2 | 2 | 2 |
+| paraphrase | when should I repeat a fixed number of times versus until something happens | 1 | 27 | 3 | 2 | 2 | 2 | 2 | 4 | 4 |
+| paraphrase | how are groups of statements marked in Python | 2 | 25 | 8 | 6 | 6 | 6 | 4 | 4 | 4 |
+| paraphrase | difference between giving a variable a value and checking if two values are the same | 1 | 5 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | a strategy to get through a maze by keeping one hand on the wall | 3 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 |
+| paraphrase | can the counting function use decimal numbers | 4 | - | 40 | 8 | 7 | 7 | 5 | 5 | 5 |
+| chinese | elif 是什麼意思 | 1 | 93 | 10 | 2 | 2 | 2 | 2 | 2 | 2 |
+| chinese | 無窮迴圈要怎麼停止 | 6 | - | 52 | 9 | 6 | 6 | 1 | 1 | 1 |
+| chinese | 字串可以和數字比較大小嗎 | 1 | - | 47 | 1 | 1 | 1 | 1 | 1 | 1 |
+| chinese | for 迴圈和 while 迴圈有什麼差別 | 1 | 37 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| chinese | break 會跳出哪一個迴圈 | 1 | 21 | 2 | 2 | 2 | 2 | 1 | 1 | 1 |
+| chinese | 怎麼讓使用者輸入資料 | 1 | - | 42 | 2 | 2 | 2 | 1 | 1 | 1 |
+
+Saved: library\eval_lecture2\eval_result.md, library\eval_lecture2\eval_detail.csv, library\eval_lecture2\eval_summary.json
+===== library eval ntu_cs_12 
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading BGE-M3 on cuda...
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 14480.36it/s]
+Loading re-ranker BAAI/bge-reranker-v2-m3 (first time: downloading ~2 GB)...
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights:   6%|▌         | 24/393 [00:00<00:02, 176.59it/s]Loading weights:  11%|█         | 42/393 [00:00<00:05, 69.61it/s] Loading weights:  13%|█▎        | 52/393 [00:01<00:08, 42.18it/s]Loading weights: 100%|██████████| 393/393 [00:01<00:00, 381.41it/s]
+25 questions, 479 chunks in database
+
+# 檢索方法比較（vector / bm25 / hybrid）
+
+- 資料庫：library\chroma_db　題目檔：evaluation\questions\ntu_cs_12.json
+- all = 每種方法排完所有片段再合併；top10 = 各取前 10 名再合併（系統實際設定）；w = bm25_weight
+- 題目數：25　片段數：479　向量模型：BAAI/bge-m3（cuda）
+- RRF：k=60、vector_weight=1.0
+- 重新排序模型：BAAI/bge-reranker-v2-m3　搜尋範圍：影片庫全部影片
+
+## ALL（25 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 60% | 88% | 88% | 0.747 | 71 |
+| bm25 | 56% | 68% | 76% | 0.658 | 56 |
+| hybrid (all, w=1) | 60% | 88% | 100% | 0.746 | 64 |
+| hybrid (top10, w=1) | 60% | 88% | 92% | 0.729 | 41 |
+| hybrid (top10, w=0.5) | 64% | 88% | 88% | 0.761 | 40 |
+| hybrid (top10, w=0.3) | 60% | 88% | 88% | 0.741 | 40 |
+| vector + rerank | 56% | 96% | 96% | 0.742 | 1819 |
+| hybrid + rerank | 56% | 96% | 96% | 0.744 | 1583 |
+| hybrid20 + rerank | 56% | 96% | 96% | 0.742 | 3075 |
+
+## keyword（10 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 80% | 100% | 100% | 0.883 | 81 |
+| bm25 | 70% | 90% | 90% | 0.808 | 54 |
+| hybrid (all, w=1) | 80% | 90% | 100% | 0.870 | 61 |
+| hybrid (top10, w=1) | 80% | 90% | 90% | 0.861 | 40 |
+| hybrid (top10, w=0.5) | 80% | 90% | 90% | 0.861 | 37 |
+| hybrid (top10, w=0.3) | 70% | 90% | 90% | 0.794 | 39 |
+| vector + rerank | 80% | 100% | 100% | 0.900 | 1836 |
+| hybrid + rerank | 80% | 100% | 100% | 0.900 | 1511 |
+| hybrid20 + rerank | 80% | 100% | 100% | 0.900 | 2974 |
+
+## paraphrase（10 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 40% | 70% | 70% | 0.585 | 66 |
+| bm25 | 60% | 60% | 80% | 0.663 | 66 |
+| hybrid (all, w=1) | 40% | 90% | 100% | 0.625 | 68 |
+| hybrid (top10, w=1) | 40% | 80% | 90% | 0.579 | 44 |
+| hybrid (top10, w=0.5) | 50% | 80% | 80% | 0.642 | 45 |
+| hybrid (top10, w=0.3) | 50% | 80% | 80% | 0.659 | 44 |
+| vector + rerank | 40% | 90% | 90% | 0.605 | 1819 |
+| hybrid + rerank | 40% | 90% | 90% | 0.610 | 1675 |
+| hybrid20 + rerank | 40% | 90% | 90% | 0.605 | 3186 |
+
+## english（5 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 60% | 100% | 100% | 0.800 | 61 |
+| bm25 | 20% | 40% | 40% | 0.349 | 42 |
+| hybrid (all, w=1) | 60% | 80% | 100% | 0.740 | 63 |
+| hybrid (top10, w=1) | 60% | 100% | 100% | 0.767 | 38 |
+| hybrid (top10, w=0.5) | 60% | 100% | 100% | 0.800 | 38 |
+| hybrid (top10, w=0.3) | 60% | 100% | 100% | 0.800 | 35 |
+| vector + rerank | 40% | 100% | 100% | 0.700 | 1788 |
+| hybrid + rerank | 40% | 100% | 100% | 0.700 | 1543 |
+| hybrid20 + rerank | 40% | 100% | 100% | 0.700 | 3057 |
+
+## 每題正確片段的名次（越小越好，- = 沒找到）
+
+| 類型 | 問題 | vector | bm25 | hybrid (all, w=1) | hybrid (top10, w=1) | hybrid (top10, w=0.5) | hybrid (top10, w=0.3) | vector + rerank | hybrid + rerank | hybrid20 + rerank |
+|---|---|---|---|---|---|---|---|---|---|---|
+| keyword | assembler 是做什麼的 | 1 | 2 | 1 | 1 | 1 | 1 | 2 | 2 | 2 |
+| keyword | compiler 和 interpreter 有什麼不同 | 1 | 13 | 5 | 9 | 9 | 9 | 2 | 2 | 2 |
+| keyword | 什麼是 portability 可攜性 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | 第四代程式語言 SQL | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | 第一代 Machine Instruction | 3 | 1 | 2 | 2 | 2 | 3 | 1 | 1 | 1 |
+| keyword | declarative 和 prologue | 1 | 2 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | Lisp 的括號 match | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | encapsulation 封裝 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | 什麼是 l value | 2 | 1 | 1 | 1 | 1 | 2 | 1 | 1 | 1 |
+| keyword | go to 指令 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | 為什麼要發明組合語言 | 2 | 4 | 3 | 3 | 3 | 2 | 3 | 3 | 3 |
+| paraphrase | 翻譯一次之後就可以一直重複執行的方式 | 2 | 1 | 2 | 2 | 2 | 2 | 1 | 1 | 1 |
+| paraphrase | 為什麼驅動程式很難直接搬到別台電腦 | 2 | 1 | 1 | 1 | 1 | 1 | 2 | 2 | 2 |
+| paraphrase | 把整個程式看成一個函數的寫法 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | 只要把問題描述清楚電腦就會自己找答案 | 10 | 1 | 3 | 3 | 3 | 3 | 2 | 2 | 2 |
+| paraphrase | 用 n 乘上前一項來定義階乘 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | 不准別人直接修改我類別裡面的資料 | 1 | 4 | 1 | 1 | 1 | 1 | 3 | 3 | 3 |
+| paraphrase | 同一個函式名稱在不同物件會執行不同的版本 | 12 | 1 | 4 | 5 | 11 | 11 | 1 | 1 | 1 |
+| paraphrase | 為什麼老師不建議用跳躍指令 | 1 | 10 | 3 | 3 | 1 | 1 | 3 | 3 | 3 |
+| paraphrase | 用很小的空間存機率值的例子 | 6 | 30 | 2 | 11 | 6 | 6 | 19 | 10 | 20 |
+| english | what is the difference between a compiler and an interpreter | 1 | 2 | 1 | 1 | 1 | 1 | 2 | 2 | 2 |
+| english | why is Java so portable | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| english | what are the four programming paradigms | 2 | 38 | 5 | 3 | 2 | 2 | 2 | 2 | 2 |
+| english | how to compute an average in functional programming | 1 | 7 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| english | why should we avoid goto statements | 2 | 13 | 2 | 2 | 2 | 2 | 2 | 2 | 2 |
+
+Saved: library\eval_ntu_cs_12\eval_result.md, library\eval_ntu_cs_12\eval_detail.csv, library\eval_ntu_cs_12\eval_summary.json
+===== library eval ntu_zhuangzi_01 
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading BGE-M3 on cuda...
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 12225.28it/s]
+Loading re-ranker BAAI/bge-reranker-v2-m3 (first time: downloading ~2 GB)...
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights:   2%|▏         | 9/393 [00:00<00:04, 82.60it/s]Loading weights:   7%|▋         | 27/393 [00:00<00:03, 119.60it/s]Loading weights:  10%|▉         | 39/393 [00:00<00:05, 63.20it/s] Loading weights: 100%|██████████| 393/393 [00:00<00:00, 679.14it/s]
+22 questions, 479 chunks in database
+
+# 檢索方法比較（vector / bm25 / hybrid）
+
+- 資料庫：library\chroma_db　題目檔：evaluation\questions\ntu_zhuangzi_01.json
+- all = 每種方法排完所有片段再合併；top10 = 各取前 10 名再合併（系統實際設定）；w = bm25_weight
+- 題目數：22　片段數：479　向量模型：BAAI/bge-m3（cuda）
+- RRF：k=60、vector_weight=1.0
+- 重新排序模型：BAAI/bge-reranker-v2-m3　搜尋範圍：影片庫全部影片
+
+## ALL（22 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 59% | 86% | 91% | 0.730 | 73 |
+| bm25 | 50% | 73% | 73% | 0.607 | 58 |
+| hybrid (all, w=1) | 50% | 82% | 82% | 0.643 | 68 |
+| hybrid (top10, w=1) | 64% | 91% | 91% | 0.758 | 41 |
+| hybrid (top10, w=0.5) | 73% | 86% | 91% | 0.807 | 42 |
+| hybrid (top10, w=0.3) | 73% | 86% | 91% | 0.807 | 42 |
+| vector + rerank | 55% | 73% | 91% | 0.672 | 1491 |
+| hybrid + rerank | 55% | 73% | 91% | 0.672 | 1257 |
+| hybrid20 + rerank | 55% | 73% | 91% | 0.672 | 2331 |
+
+## keyword（10 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 60% | 80% | 90% | 0.706 | 80 |
+| bm25 | 70% | 90% | 90% | 0.785 | 57 |
+| hybrid (all, w=1) | 60% | 90% | 90% | 0.735 | 66 |
+| hybrid (top10, w=1) | 60% | 90% | 90% | 0.733 | 39 |
+| hybrid (top10, w=0.5) | 60% | 80% | 90% | 0.725 | 41 |
+| hybrid (top10, w=0.3) | 60% | 80% | 90% | 0.725 | 40 |
+| vector + rerank | 50% | 70% | 90% | 0.645 | 1498 |
+| hybrid + rerank | 50% | 70% | 90% | 0.645 | 1131 |
+| hybrid20 + rerank | 50% | 70% | 90% | 0.645 | 2162 |
+
+## paraphrase（8 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 50% | 100% | 100% | 0.750 | 66 |
+| bm25 | 50% | 88% | 88% | 0.688 | 65 |
+| hybrid (all, w=1) | 62% | 100% | 100% | 0.792 | 67 |
+| hybrid (top10, w=1) | 62% | 100% | 100% | 0.792 | 42 |
+| hybrid (top10, w=0.5) | 88% | 100% | 100% | 0.938 | 42 |
+| hybrid (top10, w=0.3) | 88% | 100% | 100% | 0.938 | 42 |
+| vector + rerank | 75% | 88% | 100% | 0.823 | 1449 |
+| hybrid + rerank | 75% | 88% | 100% | 0.823 | 1372 |
+| hybrid20 + rerank | 75% | 88% | 100% | 0.823 | 2543 |
+
+## english（4 題）
+
+| 方法 | Hit@1 | Hit@3 | Hit@5 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|---|
+| vector | 75% | 75% | 75% | 0.752 | 71 |
+| bm25 | 0% | 0% | 0% | 0.000 | 46 |
+| hybrid (all, w=1) | 0% | 25% | 25% | 0.114 | 74 |
+| hybrid (top10, w=1) | 75% | 75% | 75% | 0.750 | 42 |
+| hybrid (top10, w=0.5) | 75% | 75% | 75% | 0.750 | 44 |
+| hybrid (top10, w=0.3) | 75% | 75% | 75% | 0.750 | 44 |
+| vector + rerank | 25% | 50% | 75% | 0.438 | 1557 |
+| hybrid + rerank | 25% | 50% | 75% | 0.438 | 1345 |
+| hybrid20 + rerank | 25% | 50% | 75% | 0.438 | 2327 |
+
+## 每題正確片段的名次（越小越好，- = 沒找到）
+
+| 類型 | 問題 | vector | bm25 | hybrid (all, w=1) | hybrid (top10, w=1) | hybrid (top10, w=0.5) | hybrid (top10, w=0.3) | vector + rerank | hybrid + rerank | hybrid20 + rerank |
+|---|---|---|---|---|---|---|---|---|---|---|
+| keyword | 北冥有魚，其名為鯤 | 2 | 3 | 2 | 2 | 2 | 2 | 2 | 2 | 2 |
+| keyword | 鯤是什麼意思 | 42 | 82 | 53 | - | - | - | - | - | - |
+| keyword | 大鵬要飛上九萬里 | 3 | 1 | 2 | 2 | 2 | 2 | 2 | 2 | 2 |
+| keyword | 蜩與學鳩 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | 朝菌不知晦朔 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | 彭祖活了七百八十歲 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | 宋榮子猶然笑之 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | 列子御風而行 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | 至人無己，神人無功，聖人無名 | 5 | 1 | 3 | 3 | 4 | 4 | 5 | 5 | 5 |
+| keyword | 乘天地之正，御六氣之辯 | 1 | 2 | 1 | 1 | 1 | 1 | 4 | 4 | 4 |
+| paraphrase | 魚變成鳥代表什麼樣的改變 | 1 | 6 | 3 | 3 | 1 | 1 | 3 | 3 | 3 |
+| paraphrase | 為什麼大鳥起飛需要很強的風 | 2 | 1 | 1 | 1 | 1 | 1 | 4 | 4 | 4 |
+| paraphrase | 要去越遠的地方就要準備越多東西 | 1 | 3 | 2 | 2 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | 壽命很短的生物沒辦法理解時間 | 2 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | 全世界的人都批評他也不在意 | 2 | 2 | 2 | 2 | 2 | 2 | 1 | 1 | 1 |
+| paraphrase | 還要等待外在條件才能行動，所以不是最高境界 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | 別人得到你想要的東西，你也替他高興 | 2 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | 冥這個字的意思 | 1 | 2 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| english | why does the giant bird need such a strong wind to fly | 1 | - | 17 | 1 | 1 | 1 | 1 | 1 | 1 |
+| english | what is the highest state described by Zhuangzi | 110 | - | 112 | - | - | - | - | - | - |
+| english | the story of a huge fish that turns into a bird | 1 | - | 3 | 1 | 1 | 1 | 2 | 2 | 2 |
+| english | does Zhuangzi think small birds are as good as the big one | 1 | - | 18 | 1 | 1 | 1 | 4 | 4 | 4 |
+
+Saved: library\eval_ntu_zhuangzi_01\eval_result.md, library\eval_ntu_zhuangzi_01\eval_detail.csv, library\eval_ntu_zhuangzi_01\eval_summary.json
+
+Report: results\testset_report.md
+RERANK_EVAL_DONE 

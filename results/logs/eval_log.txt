@@ -1,0 +1,69 @@
+Loading BGE-M3 on cuda...
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 15047.42it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+20 questions, 11 chunks in database
+
+# 檢索方法比較（vector / bm25 / hybrid）
+
+- 題目數：20　片段數：11　向量模型：BAAI/bge-m3（cuda）
+- RRF：k=60、vector_weight=1.0、bm25_weight=1.0
+
+## ALL（20 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 75% | 85% | 0.818 | 189 |
+| bm25 | 40% | 60% | 0.515 | 29 |
+| hybrid | 70% | 85% | 0.802 | 29 |
+
+## keyword（8 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 75% | 88% | 0.823 | 430 |
+| bm25 | 62% | 88% | 0.768 | 30 |
+| hybrid | 75% | 88% | 0.844 | 29 |
+
+## paraphrase（8 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 62% | 75% | 0.721 | 29 |
+| bm25 | 38% | 62% | 0.521 | 28 |
+| hybrid | 50% | 75% | 0.661 | 29 |
+
+## chinese（4 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 100% | 100% | 1.000 | 30 |
+| bm25 | 0% | 0% | 0.000 | 27 |
+| hybrid | 100% | 100% | 1.000 | 30 |
+
+## 每題正確片段的名次（越小越好，- = 沒找到）
+
+| 類型 | 問題 | vector | bm25 | hybrid |
+|---|---|---|---|---|
+| keyword | what does i stand for in for i in range | 1 | 2 | 1 |
+| keyword | why does range(1,5) print only four times | 1 | 1 | 1 |
+| keyword | Line 9 is not indented | 1 | 1 | 1 |
+| keyword | what does print(counter) output | 1 | 2 | 1 |
+| keyword | which keyword starts the for loop on line five | 1 | 1 | 1 |
+| keyword | 101computing tutorial introduction | 3 | 7 | 4 |
+| keyword | increment | 1 | 1 | 1 |
+| keyword | five take away one | 4 | 1 | 2 |
+| paraphrase | how can I make the computer repeat some instructions many times | 1 | 1 | 1 |
+| paraphrase | why did the message appear fewer times than I expected | 1 | 2 | 1 |
+| paraphrase | what happens to a statement that is not shifted to the right | 1 | 1 | 1 |
+| paraphrase | does renaming the loop variable change the result | 1 | 1 | 1 |
+| paraphrase | how do I put several statements inside the loop body | 2 | 2 | 2 |
+| paraphrase | what is displayed when the program is executed | 1 | - | 2 |
+| paraphrase | how does the loop variable change on each pass | 8 | 6 | 7 |
+| paraphrase | how does the lesson finish | 7 | - | 7 |
+| chinese | for 迴圈的用途是什麼 | 1 | - | 1 |
+| chinese | 為什麼只印出四次而不是五次 | 1 | - | 1 |
+| chinese | 沒有縮排的程式碼會執行幾次 | 1 | - | 1 |
+| chinese | 變數名稱 i 代表什麼意思 | 1 | - | 1 |
+
+Saved: output/eval_result.md, output/eval_detail.csv
+EVAL_FINISHED 

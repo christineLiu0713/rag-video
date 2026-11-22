@@ -1,0 +1,2379 @@
+START 週四 2026/11/19 11:39:02.60 
+[STEP extract] 11:39:02.61 
+[1/4] Extracting screenshots (one every 1 second(s))...
+      Extracting audio...
+[2/4] Whisper is listening...
+      Whisper device: CUDA
+       0.4 ->     3.2 | The following content is provided under a Creative
+       3.2 ->     4.6 | Commons license.
+       4.6 ->     7.0 | Your support will help MIT OpenCourseWare
+       7.0 ->    11.3 | continue to offer high quality educational resources for free.
+      11.3 ->    14.0 | To make a donation or view additional materials
+      14.0 ->    18.0 | from hundreds of MIT courses, visit MIT OpenCourseWare
+      18.0 ->    31.1 | at ocw.mit.edu.
+      31.1 ->    35.1 | All right, let's get started, everyone.
+      35.1 ->    37.4 | So good afternoon.
+      37.4 ->    40.1 | Welcome to the second lecture of 60001.
+      40.3 ->    42.4 | And also of 600.
+      42.4 ->    46.0 | So as always, if you'd like to follow along with the lectures,
+      46.0 ->    48.9 | please go ahead and download the slides and the code
+      48.9 ->    53.5 | that I'll provide at least an hour before class every day.
+      53.5 ->    56.4 | All right, so quick recap of what we did last time.
+      56.4 ->    60.6 | So last time we talked a little bit about what a computer is.
+      60.6 ->    63.1 | And I think the main takeaway from the last lecture
+      63.1 ->    66.7 | is really that a computer only does what it is told.
+      66.7 ->    68.8 | So it's not going to spontaneously make
+      68.8 ->    70.1 | decisions on its own.
+      70.1 ->    72.7 | You as the programmer have to tell it
+      72.7 ->    76.0 | what you want it to do by writing programs.
+      76.0 ->    78.6 | So we talked about simple objects.
+      78.6 ->    82.0 | And these objects were of different types.
+      82.0 ->    85.1 | So we saw integers, floats, and Booleans.
+      85.1 ->    88.4 | And then we did a couple of simple operations with them.
+      88.4 ->    92.5 | Today we're going to look at a new type of object
+      92.5 ->    93.8 | called a string.
+      93.8 ->    95.2 | And then we're going to introduce
+      95.2 ->   102.1 | some more powerful things in our programming toolbox.
+     102.1 ->   104.7 | So we're going to look at how to branch within a program
+     104.7 ->   108.4 | and how to make the computer repeat certain tasks
+     108.4 ->   110.2 | within our program.
+     110.2 ->   113.5 | All right, so let's begin by looking at strings.
+     113.5 ->   116.5 | So strings are a new object type.
+     116.5 ->   119.2 | We've seen so far integers, which were whole numbers,
+     119.2 ->   122.4 | floats, which were decimal numbers.
+     122.4 ->   125.9 | And we've seen Booleans, which were true and false.
+     125.9 ->   129.8 | So strings are going to be sequences of characters.
+     129.8 ->   131.7 | And these characters can be anything.
+     131.7 ->   134.7 | They could be letters, digits, special characters,
+     134.7 ->   137.0 | and also spaces.
+     137.0 ->   140.6 | And you tell Python that you're talking about a string object
+     140.6 ->   143.3 | by enclosing it in quotation marks.
+     143.3 ->   147.6 | So in this case, I'm creating an object
+     147.6 ->   152.7 | whose value is H-E-L-L-O space T-H-E-R-E.
+     152.7 ->   154.4 | And Python knows it's a string object
+     154.4 ->   156.6 | because we're enclosing it in quotations.
+     156.6 ->   158.6 | They could be either double quotes or single quotes.
+     158.6 ->   161.2 | But as long as you're consistent, it doesn't matter.
+     161.2 ->   164.6 | And this object, we're binding it
+     164.6 ->   166.7 | to this variable named high.
+     166.7 ->   169.2 | And we're using that using the equal sign, which
+     169.2 ->   171.5 | is the assignment operator.
+     171.5 ->   175.3 | So from now on, whenever we refer to this variable high,
+     175.3 ->   177.6 | Python's going to say, oh, I know what the value is.
+     177.6 ->   180.9 | And it's that string of characters.
+     180.9 ->   182.5 | So we're going to learn about two things
+     182.5 ->   185.2 | that you can do on strings today, two operations.
+     185.2 ->   187.1 | One is to concatenate them.
+     187.1 ->   189.6 | And concatenation is really just a fancy word
+     189.6 ->   191.9 | for using this plus operator, which
+     191.9 ->   194.6 | means put the strings together.
+     194.6 ->   198.6 | So I have this original variable named high.
+     198.6 ->   200.9 | And I create a new variable called name.
+     200.9 ->   204.5 | And in it, I'm going to assign the string
+     204.5 ->   207.1 | a-n-a to the variable name.
+     207.1 ->   211.0 | And when I use the plus operator in between high and name,
+     211.0 ->   212.9 | those two variables, Python's going
+     212.9 ->   214.9 | to look at the values of those two.
+     214.9 ->   216.7 | And it's going to just put them together.
+     219.8 ->   223.1 | I'm going to switch to spider.
+     223.1 ->   229.7 | And this is just that example from the slides.
+     229.7 ->   230.8 | So let's see what happens.
+     230.8 ->   234.8 | So I have the variable high, the variable name.
+     234.8 ->   237.2 | And I'm just concatenating those two together.
+     237.2 ->   239.4 | And then I'm going to print that out.
+     239.4 ->   245.4 | So if I run the code, notice it prints out hello there, Anna.
+     245.4 ->   246.5 | There's no space.
+     246.5 ->   249.6 | And there's no space because the concatenation operator,
+     249.6 ->   253.4 | the plus, doesn't add any spaces implicitly.
+     253.4 ->   256.2 | So again, another example of just a computer
+     256.2 ->   257.8 | just doing what it's told.
+     257.8 ->   259.2 | If we want to add a space, we'd
+     259.2 ->   262.4 | have to actually insert the space manually.
+     262.4 ->   265.3 | So that's this line here, line 8.
+     265.3 ->   268.2 | And in this line, we're concatenating
+     268.2 ->   271.3 | the value of the variable high with a space.
+     271.3 ->   274.8 | Notice we're putting it in quotation marks, just a space,
+     274.8 ->   277.0 | and then with name.
+     277.0 ->   281.4 | So if we go ahead and print that value,
+     281.4 ->   285.4 | notice this was that garbage greeting there.
+     285.4 ->   292.9 | And now we have a proper greeting.
+     292.9 ->   296.7 | So that's the concatenation between strings.
+     296.7 ->   299.9 | And then the other thing we're going to look at related
+     299.9 ->   304.3 | to strings is the star operator.
+     304.3 ->   307.2 | So that's this one here on line 10.
+     307.2 ->   309.9 | So Python allows you to use the star operator, which
+     309.9 ->   315.3 | stands for multiplication, between a string and a number.
+     315.3 ->   319.1 | And when you do that, Python interprets it
+     319.1 ->   325.5 | as repeat that string that many number of times.
+     325.5 ->   329.2 | So in this case, I'm creating a silly greeting.
+     329.2 ->   333.5 | And I'm concatenating the value of high, which is hello there,
+     333.5 ->   337.2 | with the space plus the name.
+     337.2 ->   338.9 | So notice here, I'm using parentheses
+     338.9 ->   342.0 | to tell Python do this operation first,
+     342.0 ->   348.2 | and then multiply whatever the result of this is by 3.
+     348.2 ->   351.7 | So if I print that out, it's going
+     351.7 ->   355.3 | to multiply the space with my name three times.
+     355.3 ->   358.1 | And it's going to concatenate that with hello there.
+     358.1 ->   362.6 | So that's exactly what it printed out there.
+     362.6 ->   365.1 | Last lecture, we talked a little bit about print.
+     365.1 ->   369.1 | Today, I'm going to talk about some nuances related to print.
+     369.1 ->   372.6 | So use print to interact with the user.
+     372.6 ->   375.7 | It's cool to write programs that print things out to the user.
+     375.8 ->   379.1 | So the keyword here being print.
+     379.1 ->   382.1 | And then you put parentheses after print.
+     382.1 ->   385.2 | And in the parentheses, you put in whatever
+     385.2 ->   387.8 | you want to show the user.
+     387.8 ->   392.0 | So in this little program, I create a variable named x.
+     392.0 ->   395.8 | I assign it the value 1, and then I print 1.
+     395.8 ->   398.4 | Here, I'm casting.
+     398.4 ->   400.9 | So I'm taking the number 1, the integer 1,
+     400.9 ->   403.6 | and I'm casting it to a string.
+     403.6 ->   406.3 | You'll see why in a moment.
+     406.3 ->   408.3 | So I want to bring to your attention a couple of things
+     408.3 ->   408.8 | here.
+     408.8 ->   414.8 | So in the first print, I'm using commas everywhere here.
+     414.8 ->   421.1 | And in the second print, I'm using plus.
+     421.1 ->   426.9 | So by definition, you can use commas inside the parentheses
+     426.9 ->   428.8 | of print.
+     428.8 ->   432.4 | And if you use a comma, Python's
+     432.4 ->   436.0 | going to automatically add a space in between the two
+     436.0 ->   440.0 | things that the commas in between, the values.
+     440.0 ->   443.4 | So my fave num is, is the first thing.
+     443.4 ->   447.3 | And the second thing is whatever is after the comma.
+     447.3 ->   449.1 | Let's take x.
+     449.1 ->   452.1 | So if you use a comma, Python's going to automatically insert
+     452.1 ->   454.6 | a space for you.
+     454.6 ->   456.9 | Sometimes you might want that, sometimes you might not.
+     456.9 ->   460.0 | If you don't want that, you can use the concatenation
+     460.0 ->   462.0 | operation, the plus.
+     462.0 ->   464.9 | And you can add all of your little bits together
+     464.9 ->   468.1 | to create one big string.
+     468.1 ->   471.4 | If you're using commas, the items, the objects
+     471.4 ->   474.4 | in between the commas do not all have to be strings.
+     474.4 ->   476.1 | That's the plus side of using commas.
+     476.1 ->   480.0 | But the downside is you get spaces everywhere.
+     480.0 ->   483.6 | If you use plus operator, the plus side
+     483.6 ->   486.9 | is Python does exactly what you tell it to do.
+     486.9 ->   489.3 | But everything has to be a string object.
+     489.3 ->   492.7 | So my fave num is a string object.
+     492.7 ->   495.8 | You have to convert all of your numbers to string objects,
+     495.8 ->   498.3 | and so on.
+     498.3 ->   511.0 | So if we look at spider, this is almost the same code.
+     511.0 ->   514.0 | So here, I don't have spaces anywhere.
+     514.0 ->   517.8 | So you can see that the first line here
+     517.8 ->   519.5 | has commas everywhere.
+     519.5 ->   523.1 | So I'm going to have spaces in between every one of the things
+     523.1 ->   527.3 | that I'm printing out.
+     527.3 ->   534.1 | This line here is a combination between commas and concatenation.
+     534.1 ->   536.6 | So depending on where I use the comma,
+     536.6 ->   538.0 | I'm going to have an extra space.
+     538.0 ->   542.1 | And this line here just has concatenation everywhere.
+     542.1 ->   547.5 | So if I run this, notice this very first line,
+     547.5 ->   549.9 | added spaces everywhere in between all my objects.
+     549.9 ->   552.1 | The second one, added spaces somewhere.
+     552.1 ->   554.2 | And you can trace through and see exactly where
+     554.2 ->   556.4 | the spaces were added.
+     556.4 ->   573.1 | And the last line here didn't add spaces anywhere.
+     573.1 ->   577.6 | So printing things out to the console is nice.
+     577.6 ->   580.9 | But the second part of writing an interactive program
+     580.9 ->   583.2 | is getting input from the user.
+     583.2 ->   585.5 | And that's a more interesting part.
+     585.5 ->   587.3 | So if you've done problem set 0, you
+     587.3 ->   590.6 | might have sort of already tried to understand this on your own.
+     590.6 ->   592.0 | But here we are.
+     592.0 ->   595.6 | So the way you get input from the user
+     595.6 ->   600.0 | is using this command function called input.
+     600.0 ->   603.4 | And inside the parentheses, you type in whatever
+     603.4 ->   607.7 | you'd like to prompt the user with.
+     607.7 ->   611.5 | So in this case, in my example here, I have input.
+     611.5 ->   614.0 | And then here I said, type anything.
+     614.0 ->   616.7 | So the user is going to see this text here.
+     616.7 ->   619.4 | And then the program is just going to stop.
+     619.4 ->   621.9 | And it's going to wait for the user to type in something
+     621.9 ->   623.8 | and hit Enter.
+     623.8 ->   627.1 | As soon as the user types in Enter,
+     627.1 ->   631.4 | whatever the user types in becomes a string.
+     631.4 ->   633.8 | If the user types in a number, for example,
+     633.8 ->   636.8 | that becomes the string, that number.
+     636.8 ->   643.2 | So everything the user types in is going to be made as a string.
+     643.2 ->   646.2 | In this line right here, whatever the user types in
+     646.2 ->   647.9 | becomes a string.
+     647.9 ->   650.7 | And we're going to bind that string object
+     650.7 ->   654.6 | to this variable named called text.
+     654.6 ->   656.7 | So now further in my program, I could do whatever
+     656.7 ->   658.3 | I want with this variable text.
+     658.3 ->   663.6 | In this case, I'm going to print five star text.
+     663.6 ->   667.1 | So if the user, for example, gave me ha,
+     667.1 ->   670.0 | I'm going to print ha five times.
+     670.0 ->   675.4 | If the user gave me five, what do you think the user's going
+     675.4 ->   678.3 | to be printed out?
+     678.3 ->   682.6 | 25 or five five times?
+     682.6 ->   683.0 | Great.
+     683.0 ->   683.7 | Yes, exactly.
+     683.7 ->   688.3 | Five five times.
+     688.3 ->   692.2 | Oftentimes, you don't want to work with numbers as strings.
+     692.2 ->   694.7 | You want to work with numbers as numbers.
+     694.7 ->   696.8 | So you have to cast.
+     696.8 ->   698.1 | And we learned that last lecture.
+     698.1 ->   701.1 | You cast by just putting in this little bit right
+     701.1 ->   703.4 | in front of the input.
+     703.4 ->   705.2 | And you can cast it to whatever type you want.
+     705.2 ->   707.2 | Here I cast it to an int, but you can also
+     707.2 ->   710.6 | cast to a float if you want to work with floats.
+     710.6 ->   713.8 | And that converts whatever the user typed in,
+     713.8 ->   717.3 | as long as it's some number that Python knows how to convert
+     717.3 ->   719.1 | into the number itself.
+     719.1 ->   721.2 | So in this case, if the user gives me five,
+     721.2 ->   725.1 | I'm going to print out five times five instead of five
+     725.1 ->   727.0 | five times.
+     727.0 ->   734.8 | So that's the code here.
+     734.8 ->   736.9 | So the first bit is I'm going to get the user
+     736.9 ->   738.1 | to type in anything.
+     738.1 ->   743.1 | And I'm going to put five five five.
+     743.1 ->   744.7 | And then when I type in the number,
+     744.7 ->   746.1 | since I'm casting it, I'm going
+     746.1 ->   748.0 | to do operations with the number.
+     748.0 ->   752.4 | Yeah, question.
+     752.4 ->   756.6 | Why do you want to cast to?
+     756.6 ->   761.2 | Oh, the question is, why do you want to cast to a string?
+     761.2 ->   766.8 | Why do you want to cast a string to a number?
+     766.8 ->   772.1 | Oh, so Python always, whatever you type in,
+     772.1 ->   775.2 | just by default, by definition of the input command,
+     775.2 ->   778.0 | Python always makes it a string.
+     778.0 ->   779.5 | So if you want to work with numbers,
+     779.5 ->   780.9 | you have to explicitly tell it I'm
+     780.9 ->   783.1 | going to work with a number.
+     783.1 ->   784.7 | So even if you give it the number five,
+     784.7 ->   788.2 | it's going to think it's the string five.
+     788.2 ->   793.9 | Yeah, that's just how input works.
+     793.9 ->   798.1 | The next thing we're going to look at
+     798.1 ->   805.2 | is ways that you can start adding tests in your code.
+     805.2 ->   809.6 | And before you can start adding tests in your code,
+     809.6 ->   812.7 | you need to be able to do the actual tests.
+     812.7 ->   819.8 | So this is where comparison operators come in.
+     819.8 ->   824.6 | So here, let's assume that i and j are variables.
+     824.6 ->   828.0 | The following comparisons are going to give you a Boolean.
+     828.0 ->   831.3 | So it's either going to say this is true or this is false.
+     831.3 ->   834.8 | So that's going to be your test.
+     834.8 ->   836.8 | So if i and j are variables, you're
+     836.8 ->   839.9 | allowed to compare ints with ints, floats with floats,
+     839.9 ->   841.8 | strings with strings.
+     841.8 ->   844.1 | And you're allowed to compare ints and floats
+     844.1 ->   845.4 | between themselves, but you're not
+     845.4 ->   849.5 | allowed to compare a string with a number.
+     849.5 ->   852.8 | In fact, if you even try to do that in Python,
+     852.8 ->   854.5 | in Spider here, if I try to say,
+     854.5 ->   858.3 | is the letter a greater than five,
+     858.3 ->   862.4 | I get some angry text right here.
+     862.4 ->   864.9 | And this just tells me Python doesn't understand
+     864.9 ->   871.8 | the meaning of how do I compare a string with a number.
+     871.8 ->   876.1 | So just like in math, we can do these usual comparisons.
+     876.1 ->   878.2 | We can say if something's greater than something,
+     878.2 ->   881.1 | greater or equal to, less than, less than or equal to.
+     881.1 ->   884.3 | I'd like to bring to your attention the equality.
+     884.3 ->   886.9 | So the single equal sign is an assignment.
+     886.9 ->   888.3 | So you're taking a value and you're
+     888.3 ->   889.4 | signing it to a variable.
+     889.4 ->   891.4 | But when you're doing the double equal sign,
+     891.4 ->   893.5 | this is the test for equality.
+     893.5 ->   895.8 | Is the value of variable i the same
+     895.8 ->   898.5 | as the value of the variable j?
+     898.5 ->   900.5 | And that's, again, also going to give you a Boolean,
+     900.5 ->   902.1 | either true or false.
+     902.1 ->   903.8 | And you can also test for inequality
+     903.8 ->   906.7 | with the exclamation equal.
+     906.7 ->   909.3 | So that means is the value of the variable i
+     909.3 ->   912.0 | not equal to the value of the variable j?
+     912.0 ->   917.2 | True if yes, false if no.
+     917.2 ->   918.8 | So those are comparison operators
+     918.8 ->   921.2 | on integer floats and strings.
+     921.2 ->   925.6 | On Booleans, you can do some logic operators.
+     925.6 ->   930.6 | And the simplest is just inverting.
+     930.6 ->   935.8 | So if a is a variable that has a Boolean value,
+     935.8 ->   937.5 | not a is just going to invert it.
+     937.5 ->   942.5 | So if a is true, then not a is false, and vice versa.
+     942.5 ->   945.9 | This is a table that sort of represents what I've said here.
+     945.9 ->   949.8 | So you can use and and or.
+     949.8 ->   952.0 | These are keywords in Python.
+     952.0 ->   957.8 | You can use those two keywords on Boolean variables.
+     957.8 ->   961.9 | And you get the result a and b is only true
+     961.9 ->   964.7 | if both a and b are true.
+     964.7 ->   971.0 | And a or b is only false if a and b are false.
+     971.0 ->   973.4 | And this is the complete table, just in case
+     973.4 ->   977.8 | you need to reference it.
+     977.8 ->   981.0 | So now that we have ways to do logical test, question
+     981.0 ->   986.4 | right there.
+     986.4 ->   987.4 | Yeah, great question.
+     987.4 ->   989.5 | So what does it mean to compare a string with a string
+     989.5 ->   990.6 | with a greater than?
+     990.6 ->   994.1 | So that's just going to compare them lexicographically.
+     994.1 ->   997.2 | So does it come first in the alphabet?
+     997.2 ->   999.4 | So we can even test that out.
+     999.4 ->  1004.5 | We can say, is a greater than b?
+    1004.5 ->  1008.1 | And it's false.
+    1008.1 ->  1013.8 | So b becomes later in the alphabet than a.
+    1013.8 ->  1016.6 | OK, so now we have ways to do the tests.
+    1016.6 ->  1022.7 | So we can add some branching to our programming toolbox
+    1022.7 ->  1025.1 | now that we have ways to do tests.
+    1025.1 ->  1026.7 | This is a map of MIT.
+    1026.7 ->  1030.3 | I'm going to go through sort of a little example
+    1030.3 ->  1035.1 | to motivate why we would want to do branching in our code.
+    1035.1 ->  1036.6 | And I think after this lecture, you'll
+    1036.6 ->  1038.5 | be able to sort of code up this algorithm
+    1038.5 ->  1040.1 | that I'm going to explain.
+    1040.1 ->  1041.9 | So most of us see MIT as a maze.
+    1041.9 ->  1046.8 | I first did when I came here.
+    1046.8 ->  1048.2 | When I first came here, obviously,
+    1048.2 ->  1050.6 | I signed up for the free food mailing list.
+    1050.6 ->  1053.1 | And MIT being a maze, I had no idea
+    1053.1 ->  1057.0 | where to go, what the shortest path was to free food.
+    1057.2 ->  1061.0 | So one way to think about it is all I wanted to do
+    1061.0 ->  1064.6 | was get to the free food.
+    1064.6 ->  1067.0 | A very simple algorithm to get there
+    1067.0 ->  1069.3 | would be to say, OK, I'm going to take my right hand,
+    1069.3 ->  1071.6 | and I'm going to make sure that my right hand is always
+    1071.6 ->  1073.3 | on a wall.
+    1073.3 ->  1075.3 | And I'm going to go around campus with my right hand
+    1075.3 ->  1076.9 | always being at a wall.
+    1076.9 ->  1079.6 | And eventually, I'll get to where the free food is.
+    1079.6 ->  1083.2 | There might not be any left, but I'll be there.
+    1083.2 ->  1085.6 | So the algorithm is as follows.
+    1085.6 ->  1087.5 | If my right hand always has to be on a wall,
+    1087.5 ->  1091.9 | I'm going to say, if there's no wall to my right side,
+    1091.9 ->  1097.8 | then I'm going to go right until I get to a wall.
+    1097.8 ->  1102.6 | Then if there's a wall to my right and I can go forward,
+    1102.6 ->  1106.1 | I'm just going to keep going forward.
+    1106.1 ->  1108.4 | If I keep going forward and there's a wall to my right
+    1108.4 ->  1111.7 | and in front of me, I'm going to turn around and go left.
+    1111.7 ->  1114.5 | And then if there's a wall to my right in front of me
+    1114.5 ->  1116.1 | and to the left, then I'm going to turn around and go
+    1116.1 ->  1117.1 | back.
+    1117.1 ->  1120.5 | So with this fairly simple algorithm,
+    1120.5 ->  1126.9 | I just follow the path, always keeping the wall to my right.
+    1126.9 ->  1130.1 | And eventually, I end up where I need to be.
+    1130.1 ->  1134.1 | So notice, I used, just in plain English, a few key words.
+    1134.1 ->  1137.9 | If, otherwise, things like that.
+    1137.9 ->  1141.7 | So in programming, we have those same constructs.
+    1141.7 ->  1144.0 | And those same intuitive words can
+    1144.0 ->  1147.3 | be used to tell Python to do something
+    1147.3 ->  1149.2 | or to do something else or to choose
+    1149.2 ->  1154.7 | from a different set of possibilities.
+    1154.7 ->  1156.4 | And this way, we can get the computer
+    1156.4 ->  1158.5 | to make decisions for us.
+    1158.5 ->  1160.1 | Now, you might be thinking, well, you
+    1160.1 ->  1163.1 | said that computers can't make decisions on their own.
+    1163.1 ->  1164.3 | It's not.
+    1164.3 ->  1166.6 | US programmers are going to build these decisions
+    1166.6 ->  1167.6 | into the program.
+    1167.6 ->  1169.1 | And all the computer is going to do
+    1169.1 ->  1171.0 | is going to reach the decision point
+    1171.0 ->  1173.5 | and say, OK, this is a decision point.
+    1173.5 ->  1175.3 | Should I go left or should I go right?
+    1175.3 ->  1176.9 | Or which one do I pick?
+    1176.9 ->  1180.2 | And these sort of decisions are created by you as a programmer.
+    1180.2 ->  1182.3 | And the computer just has to make the decision
+    1182.3 ->  1184.1 | and choose a path.
+    1184.1 ->  1187.7 | OK, so in programming, there's three sort of simple ways
+    1187.7 ->  1190.9 | that you can add control flow to your programs.
+    1190.9 ->  1193.5 | And that's making one decision and choosing
+    1193.5 ->  1197.9 | whether to execute something or execute something else.
+    1197.9 ->  1201.8 | The first is the simple if.
+    1201.8 ->  1205.3 | And given a program that just linearly has statements
+    1205.3 ->  1211.6 | I get executed, whenever I reach an if statement,
+    1211.6 ->  1213.9 | you're going to check the condition.
+    1213.9 ->  1215.5 | The condition is going to be something
+    1215.5 ->  1218.6 | that's going to get evaluated to either true or false.
+    1221.6 ->  1225.1 | So I've reached the condition here.
+    1225.1 ->  1226.8 | And if the condition's true, then I'm
+    1226.8 ->  1231.4 | going to additionally execute this extra set of expressions.
+    1231.4 ->  1233.3 | But if the condition's false, then I'm just
+    1233.3 ->  1235.5 | going to keep going through the program
+    1235.5 ->  1241.5 | and not execute that extra set of instructions.
+    1241.5 ->  1244.3 | How does Python know which instructions to execute?
+    1244.3 ->  1248.5 | They're going to be inside this what we call code block.
+    1248.5 ->  1251.7 | And the code block's denoted by indentation.
+    1251.7 ->  1254.5 | So it's going to be everything that's indented
+    1254.5 ->  1258.0 | is part of that if code block.
+    1258.0 ->  1261.5 | Typically, four spaces indentation.
+    1262.5 ->  1266.9 | So that's how you'd write code that
+    1266.9 ->  1270.8 | decides whether to execute this extra thing or not.
+    1270.8 ->  1275.8 | Now, let's say I don't just want to execute an extra thing.
+    1275.8 ->  1278.2 | I want to reach a point where I say I'll either go down
+    1278.2 ->  1282.5 | this path or I'll do something else.
+    1282.5 ->  1287.9 | That's this right here.
+    1287.9 ->  1294.3 | So this if else construct says, this is my code.
+    1294.3 ->  1297.1 | I've reached my decision point here.
+    1297.1 ->  1301.9 | If the condition inside this if is true,
+    1301.9 ->  1308.7 | then I'm going to execute maybe this set of statements here.
+    1308.7 ->  1311.6 | But if the condition's not true, then I'm
+    1311.6 ->  1313.8 | not going to execute that set of statements.
+    1313.8 ->  1320.7 | And instead, I'm going to execute under whatever else is.
+    1320.7 ->  1322.4 | So using this construct, I'm either
+    1322.4 ->  1324.8 | going to do one set of expressions or the other,
+    1324.8 ->  1326.8 | but never both.
+    1326.8 ->  1328.6 | And after I've executed one or the other,
+    1328.6 ->  1331.2 | I'm going to continue on with just the regular execution
+    1331.2 ->  1340.5 | of the program.
+    1340.5 ->  1342.2 | So we're able to either choose one thing,
+    1342.2 ->  1343.4 | choose one thing or another.
+    1343.4 ->  1347.6 | But what if we want to have more than one choice?
+    1347.7 ->  1351.7 | So if some number is equal to 0, I want to do this.
+    1351.7 ->  1353.7 | If it's equal to 1, I want to do this.
+    1353.7 ->  1356.2 | If it's equal to 2, I want to do this, and so on.
+    1356.2 ->  1359.0 | That's where this last one comes in.
+    1359.0 ->  1365.7 | And we introduce this other keyword here called LIF.
+    1365.7 ->  1369.2 | So that stands for short form for else if.
+    1369.2 ->  1373.1 | So first, we check if this condition is true.
+    1373.1 ->  1374.8 | So we're going through our program.
+    1374.8 ->  1377.0 | We've reached our decision point.
+    1377.0 ->  1378.6 | If the condition's true, we're going
+    1378.6 ->  1384.3 | to execute maybe this set of instructions.
+    1384.3 ->  1388.4 | If the condition's not true, maybe we'll check.
+    1388.4 ->  1391.9 | If the condition's not true, we will check this next condition.
+    1391.9 ->  1394.8 | That's part of the LIF right here.
+    1394.8 ->  1396.2 | And if that one's true, we're going
+    1396.2 ->  1398.7 | to execute a different set of instructions.
+    1398.7 ->  1401.1 | You can have more than one LIF.
+    1401.1 ->  1402.7 | And depending on which one's true,
+    1402.7 ->  1405.9 | you're going to execute a different set of instructions.
+    1405.9 ->  1408.4 | And then this last else is sort of a catch-all
+    1408.4 ->  1411.4 | where if none of the previous conditions were true,
+    1411.4 ->  1415.1 | then just do this last set of expressions.
+    1415.1 ->  1417.6 | So in this case, you're going to choose
+    1417.6 ->  1420.7 | between one of these three, one of these four roots,
+    1420.7 ->  1423.1 | or however many you have.
+    1423.1 ->  1425.0 | And then when you're done making your choice,
+    1425.0 ->  1431.3 | you're going to execute the remaining set of instructions.
+    1431.3 ->  1434.4 | So the way this works is if more than one condition is true,
+    1434.4 ->  1438.0 | you're actually just going to enter one of them.
+    1438.0 ->  1441.0 | And you're going to enter the very first one that's true.
+    1441.0 ->  1444.9 | So you're never going to enter more than one of these code
+    1444.9 ->  1445.7 | blocks.
+    1445.7 ->  1448.6 | You always enter one, and you enter the first one
+    1448.6 ->  1455.7 | that evaluates to true.
+    1455.7 ->  1459.6 | So notice that we denoted code blocks using indentation.
+    1459.6 ->  1461.1 | And that's actually one of the things
+    1461.1 ->  1462.9 | that I really like about Python.
+    1462.9 ->  1465.6 | It sort of forces you to write pretty code
+    1465.6 ->  1471.9 | and nice-looking code, and just code that's very readable.
+    1471.9 ->  1474.2 | And that enforces you to indent everything
+    1474.2 ->  1476.1 | that's a code block.
+    1476.1 ->  1479.0 | So you can easily see sort of where the flow of control is,
+    1479.0 ->  1481.2 | and where decision-making points are,
+    1481.2 ->  1484.6 | and things like that.
+    1484.6 ->  1489.5 | So in this particular example, we have one if statement here.
+    1489.5 ->  1495.3 | And it checks if two variables are equal.
+    1495.3 ->  1498.7 | And we have an if elif else.
+    1498.7 ->  1501.3 | And in this example, we're going to enter either this code
+    1501.3 ->  1503.8 | block, or this one, or this one,
+    1503.8 ->  1506.1 | depending on the variables of x and y.
+    1506.1 ->  1508.7 | And we're only going to enter one code block.
+    1508.7 ->  1510.6 | And we'll enter the first one.
+    1510.6 ->  1513.5 | That's true.
+    1513.5 ->  1515.9 | Notice you can have nested conditionals.
+    1515.9 ->  1523.0 | So inside this first if, we have another if here.
+    1523.0 ->  1527.5 | And this inner if is only going to be checked
+    1527.5 ->  1536.6 | when we enter the first, this outer if.
+    1536.6 ->  1539.2 | I do want to make one point, though.
+    1539.2 ->  1542.8 | So sometimes, you might forget to do the double equal sign
+    1542.8 ->  1544.3 | when you're checking for equality.
+    1544.3 ->  1546.2 | And that's OK.
+    1546.2 ->  1548.2 | If you just use one equal sign, Python's
+    1548.2 ->  1550.9 | going to give you an error.
+    1550.9 ->  1553.6 | And it's going to say syntax error.
+    1553.6 ->  1555.7 | And it's going to highlight this line.
+    1555.7 ->  1558.7 | And then you're going to know that there's a mistake there.
+    1558.7 ->  1561.2 | You should be using equality, because it doesn't make sense
+    1561.2 ->  1567.2 | to be making an assignment inside the if.
+    1567.2 ->  1570.8 | OK.
+    1570.8 ->  1572.5 | All right.
+    1572.5 ->  1573.8 | So we've learned about branching.
+    1573.8 ->  1577.1 | And we know about conditionals.
+    1577.1 ->  1582.7 | Let's try to apply this to a little game.
+    1582.7 ->  1585.0 | And spoiler, we won't be able to.
+    1585.0 ->  1587.0 | We'll have to learn about a new thing.
+    1587.0 ->  1592.6 | But back in 1980s, there was the Legend of Zelda cool graphics,
+    1592.6 ->  1596.4 | where there was a scene with the lost woods.
+    1596.4 ->  1600.9 | Oversimplification, if anyone's a Zelda die hard fan.
+    1600.9 ->  1605.2 | But the basic idea was, if you entered the woods,
+    1605.2 ->  1607.4 | you entered from the left to the right.
+    1607.4 ->  1609.9 | And then as long as you kept going right,
+    1609.9 ->  1613.4 | it would show you the same screen over and over again.
+    1613.4 ->  1616.0 | And the trick was, you just had to go backward.
+    1616.0 ->  1618.5 | And then you'd exit the woods.
+    1618.5 ->  1620.3 | So very simple.
+    1620.3 ->  1624.5 | Using what we know so far, we could sort of code this up.
+    1624.5 ->  1626.1 | And we'd say something like this.
+    1626.1 ->  1629.0 | If the user exits right, then set the background
+    1629.0 ->  1631.2 | to the woods background.
+    1631.2 ->  1635.6 | Otherwise, set the background to the exit background.
+    1635.6 ->  1638.9 | Now, let's say the user and the else were done.
+    1638.9 ->  1640.9 | Let's say the user went right.
+    1640.9 ->  1642.8 | Well, you'd show them the woods background.
+    1642.8 ->  1645.3 | And now, ask them again, where do they want to go?
+    1645.3 ->  1646.9 | If they exit right, set the background
+    1646.9 ->  1648.0 | to the woods background.
+    1648.0 ->  1650.5 | Otherwise, set the background to the exit background.
+    1650.5 ->  1651.0 | And so on.
+    1651.0 ->  1656.0 | So you notice that there's sort of no end to this.
+    1656.0 ->  1658.5 | Do you know how many times the user
+    1658.5 ->  1659.4 | might keep going right?
+    1659.4 ->  1661.4 | They might be really persistent, right?
+    1661.4 ->  1664.2 | And they'll be like, maybe if I go 1,000 times,
+    1664.2 ->  1665.7 | I'll get out of the woods.
+    1665.7 ->  1667.6 | Or maybe 1,001?
+    1667.6 ->  1668.6 | Maybe.
+    1668.6 ->  1676.2 | So this would probably be who knows how deep,
+    1676.2 ->  1677.6 | these nested ifs.
+    1677.6 ->  1680.9 | So we don't know.
+    1680.9 ->  1682.8 | So with what we know so far, we can't really
+    1682.8 ->  1684.7 | code this cute little game.
+    1684.7 ->  1687.7 | But enter loops.
+    1687.7 ->  1691.1 | And specifically, a while loop.
+    1691.1 ->  1695.3 | So this code here that could be infinitely number
+    1695.3 ->  1698.7 | of nested if statements deep can be rewritten
+    1698.7 ->  1701.6 | using these three lines.
+    1701.6 ->  1704.3 | So we say while the user exits right,
+    1704.3 ->  1706.9 | set the background to the woods background.
+    1706.9 ->  1708.3 | And with a while loop, it's going
+    1708.3 ->  1710.1 | to do what we tell it to do inside the loop.
+    1710.1 ->  1712.3 | And then it's going to check the condition again.
+    1712.3 ->  1714.3 | And then it's going to do what we
+    1714.3 ->  1716.8 | say it should do inside the code block.
+    1716.8 ->  1719.6 | And then it's going to check the condition again.
+    1719.6 ->  1722.5 | And then as long as the condition is true,
+    1722.5 ->  1725.3 | it's going to keep doing that little loop there.
+    1725.3 ->  1727.1 | And as soon as the condition becomes false,
+    1727.1 ->  1728.7 | it's going to stop doing the loop
+    1728.7 ->  1733.5 | and do whatever is right after the while.
+    1733.5 ->  1737.5 | So that's basically how a while loop works.
+    1737.5 ->  1738.5 | We have while.
+    1738.5 ->  1740.1 | That's the keyword.
+    1740.1 ->  1743.8 | The condition is something that gets evaluated to true or false.
+    1743.8 ->  1747.0 | And once again, we have a code block that's indented.
+    1747.0 ->  1748.9 | And it tells Python, these are the expressions
+    1748.9 ->  1756.2 | I want to do as long as the condition is true.
+    1756.2 ->  1757.4 | So the condition is true.
+    1757.4 ->  1759.5 | You evaluate every expression in the code block.
+    1759.5 ->  1762.3 | When you reach the end of the code block,
+    1762.3 ->  1764.1 | you check the condition again.
+    1764.1 ->  1767.2 | If it's true still, you keep doing the expressions,
+    1767.2 ->  1772.8 | check it again, and so on.
+    1772.8 ->  1775.5 | So here's a little game.
+    1775.5 ->  1778.7 | And with these lines of code, we
+    1778.7 ->  1784.4 | can code up the lost woods of Zelda, even worse graphics,
+    1784.4 ->  1787.5 | by the way, than the original Zelda is this one
+    1787.5 ->  1788.9 | that I coded up here.
+    1788.9 ->  1791.0 | So I print out the following things.
+    1791.0 ->  1794.5 | You're in the lost forest, go left or right.
+    1794.5 ->  1797.1 | And my program is going to say, you're in the lost forest,
+    1797.1 ->  1798.0 | go left or right.
+    1798.0 ->  1799.6 | It's going to get user input.
+    1799.6 ->  1803.9 | It's going to say, while the user keeps typing in right,
+    1803.9 ->  1807.2 | show them this text and ask them again.
+    1807.2 ->  1811.0 | So I'm asking them again by just saying input here again.
+    1811.0 ->  1811.6 | And that's it.
+    1811.6 ->  1815.0 | That's going to just keep getting input from the user.
+    1815.0 ->  1818.5 | And if the user doesn't type in right and maybe types in left,
+    1818.5 ->  1820.7 | you're going to exit out of this loop
+    1820.7 ->  1824.8 | and print out you got out of the lost forest.
+    1824.8 ->  1826.9 | So I have to show you this because I
+    1826.9 ->  1830.7 | spent too much time on it.
+    1830.7 ->  1837.8 | But I decided to improve on the code that's in the slides.
+    1837.8 ->  1842.0 | And I've written here ways that you guys can also improve it.
+    1842.0 ->  1845.2 | So if I run my code, you're in the lost forest,
+    1845.2 ->  1846.0 | go left or right.
+    1846.0 ->  1851.2 | So if I say left, then yay, I got out of the lost forest.
+    1851.2 ->  1856.4 | But if I go right, then I'm stuck.
+    1856.4 ->  1858.0 | I took down some trees.
+    1858.0 ->  1859.6 | You can see there's no more trees here.
+    1859.6 ->  1861.6 | I made a table, and then I flipped it over.
+    1864.9 ->  1867.7 | So the expansion to this, if you want to try it out,
+    1867.7 ->  1872.2 | I put this in the comments here is try to use a counter.
+    1872.2 ->  1874.8 | If the user types in right the first two times,
+    1874.8 ->  1877.5 | just make that a sad face.
+    1877.5 ->  1879.3 | But if the user types in more than two times,
+    1879.3 ->  1884.5 | make them cut down some trees and build a table and flip it.
+    1884.5 ->  1885.9 | That's a cute little expansion if you
+    1885.9 ->  1891.4 | want to test yourself to make sure you're getting loops.
+    1891.4 ->  1894.6 | So so far, we've used while loops to ask for user input.
+    1894.6 ->  1896.8 | And that's actually somewhere where
+    1896.8 ->  1898.3 | it makes sense to use while loops
+    1898.3 ->  1900.5 | because you don't actually know how many times the user is
+    1900.5 ->  1903.3 | going to type in something.
+    1903.3 ->  1907.1 | You can use while loops to keep sort of a counter
+    1907.1 ->  1912.4 | and to write code that counts something.
+    1912.4 ->  1915.1 | If you do that, though, there's two things
+    1915.1 ->  1916.3 | you need to take care of.
+    1916.3 ->  1920.7 | The first is this first line here,
+    1920.7 ->  1922.8 | which is sort of an initialization
+    1922.8 ->  1926.8 | of this loop counter.
+    1926.8 ->  1929.6 | And the second is this line here,
+    1929.6 ->  1935.6 | which is incrementing your loop counter.
+    1935.6 ->  1937.9 | The reason why the second one's important
+    1937.9 ->  1940.7 | is because let's look at our condition here.
+    1940.7 ->  1944.2 | So while n is less than 5.
+    1944.2 ->  1947.0 | If you didn't have this line here,
+    1947.0 ->  1949.2 | you would never increment n.
+    1949.2 ->  1953.0 | So every time through the loop, you'd just keep printing zeros.
+    1953.0 ->  1954.8 | And you'd have an infinite loop.
+    1954.8 ->  1958.4 | I do want to show, though, if you do have an infinite loop,
+    1958.4 ->  1960.5 | it's not the end of the world.
+    1960.5 ->  1973.3 | So I can say something like, so while true, print 0.
+    1973.3 ->  1975.7 | So this is going to give me an infinite loop in my program.
+    1988.0 ->  1992.1 | So notice it's just printing the letter p over and over again.
+    1992.1 ->  1993.8 | And if I let it go any longer, it's
+    1993.8 ->  1995.2 | going to slow down the computer.
+    1995.2 ->  1998.6 | So I'm going to hit Control-C, or Command-C maybe.
+    1998.7 ->  2002.6 | And it's going to stop the program from printing.
+    2002.6 ->  2004.7 | So just in case you ever enter infinite loops
+    2004.7 ->  2008.6 | in your programs, just go to the console and hit Control-C.
+    2008.6 ->  2015.2 | And that's going to stop it from slowing down the computer.
+    2015.2 ->  2016.6 | So going back to this example, I
+    2016.6 ->  2020.6 | was saying that if you're using variables in order
+    2020.6 ->  2022.5 | to count up inside the while loop,
+    2022.5 ->  2025.7 | you have to take care to initialize a counter variable
+    2025.7 ->  2028.6 | first and then to increment it.
+    2028.6 ->  2031.3 | Otherwise, you'll enter an infinite loop.
+    2031.3 ->  2033.7 | That feels a little bit tedious.
+    2033.7 ->  2037.7 | And so there's a shortcut for doing that exact same thing.
+    2037.7 ->  2040.3 | So these four lines, you can rewrite those
+    2040.3 ->  2044.3 | into these two lines right here using this new type of loop
+    2044.3 ->  2047.3 | called a for loop.
+    2047.3 ->  2050.4 | So the for loop says for some loop variable.
+    2050.4 ->  2051.9 | In this case, I named it n.
+    2051.9 ->  2054.0 | You can name it whatever you want.
+    2054.0 ->  2055.5 | In range 5, we're going to come back
+    2055.5 ->  2058.4 | to what range means in a little bit, print n.
+    2062.0 ->  2063.6 | So every time through the loop, you're
+    2063.6 ->  2066.9 | going to print out what the value of n is.
+    2066.9 ->  2072.8 | Range 5 actually creates internally a sequence of numbers
+    2072.8 ->  2076.8 | starting from 0 and going to that number 5 minus 1.
+    2076.8 ->  2081.8 | So the sequence is going to be 0, 1, 2, 3, and 4.
+    2081.8 ->  2083.1 | The first time through the loop,
+    2083.1 ->  2085.6 | you're going to say n is equal to 0.
+    2085.6 ->  2087.1 | Internally, this is what happens.
+    2087.1 ->  2088.8 | n gets the value 0.
+    2088.8 ->  2091.1 | You're going to print n.
+    2091.1 ->  2093.8 | Then you're going to go back to the top.
+    2093.8 ->  2095.2 | n gets the value 1.
+    2095.2 ->  2098.1 | Then you're going to go execute whatever is inside.
+    2098.1 ->  2100.3 | So you're going to print 1.
+    2100.3 ->  2101.7 | Then you're going to increment that
+    2101.7 ->  2103.4 | to the next value in the sequence.
+    2103.4 ->  2107.6 | You're going to print out 2, and so on.
+    2107.6 ->  2112.0 | So this is the general look of a for loop.
+    2112.0 ->  2115.7 | So we have for some loop variable.
+    2115.7 ->  2121.4 | Again, it can be named whatever you want in range some number.
+    2121.4 ->  2123.6 | Do a bunch of stuff.
+    2123.6 ->  2126.9 | And again, these are part of this for loop code block,
+    2126.9 ->  2129.8 | so you should indent them to tell Python that these are
+    2129.8 ->  2132.6 | the things that you should do.
+    2132.6 ->  2134.4 | So when you're using range some number,
+    2134.4 ->  2138.8 | you start out with variable getting the value 0.
+    2142.4 ->  2144.4 | With variable having value 0, you're
+    2144.4 ->  2147.9 | going to execute all of these expressions.
+    2147.9 ->  2150.6 | After all the expressions in the code block are done,
+    2150.6 ->  2156.0 | you're going to go on to the next value, so 1.
+    2156.0 ->  2157.8 | You're going to execute all these expressions
+    2157.8 ->  2162.8 | with variable being value 1, and then so on and so on,
+    2162.8 ->  2171.9 | until you go to some num minus 1.
+    2171.9 ->  2175.5 | So using range in that way is a little bit constraining,
+    2175.5 ->  2178.5 | because you're always going to get values starting from 0
+    2178.5 ->  2181.7 | and ending at some num minus 1, whatever
+    2181.7 ->  2183.8 | is in the parentheses and range.
+    2183.8 ->  2185.6 | Sometimes you might want to write programs
+    2185.6 ->  2187.5 | that maybe start at a custom value.
+    2187.5 ->  2188.3 | Don't start at 0.
+    2188.3 ->  2190.1 | Maybe they start at 5.
+    2190.1 ->  2192.3 | Maybe they start at minus 10.
+    2192.3 ->  2194.2 | And sometimes you might want to write programs
+    2194.2 ->  2197.6 | that don't increment the numbers by 1,
+    2197.6 ->  2200.3 | but maybe skip every other number or go every two numbers,
+    2200.3 ->  2202.2 | every three numbers, and so on.
+    2202.2 ->  2207.5 | So you can customize range to your needs.
+    2207.5 ->  2210.2 | The one thing you do need to give it is the stop.
+    2210.2 ->  2212.4 | So if you give it only one value in the parentheses,
+    2212.4 ->  2215.0 | that stands for stop.
+    2215.0 ->  2217.5 | And by default, start is going to have the value 0
+    2217.5 ->  2221.5 | and step is going to have the value 1.
+    2221.5 ->  2224.0 | If you give it two things in the parentheses,
+    2224.0 ->  2226.5 | you're giving it start and stop.
+    2226.5 ->  2228.9 | So the first being start, the second being stop.
+    2228.9 ->  2232.8 | And step gets this value of 1 by default.
+    2232.8 ->  2235.0 | And if you give it three things in the parentheses,
+    2235.0 ->  2242.5 | you're giving it start, stop, and step in that order.
+    2242.5 ->  2246.2 | And you're always going to start at the start value
+    2246.2 ->  2250.3 | and stop at or so you're going to start at the start value
+    2250.3 ->  2252.3 | and you're going to go until stop minus 1.
+    2252.3 ->  2256.9 | So those are the sequences of numbers.
+    2256.9 ->  2259.1 | So in this first code right here,
+    2259.1 ->  2260.9 | my sum is going to get the value 0
+    2260.9 ->  2264.2 | and you're going to have a for loop.
+    2264.2 ->  2266.7 | We're going to start from 7 because we're
+    2266.7 ->  2268.0 | giving it two numbers.
+    2268.0 ->  2269.3 | And when you give it two numbers,
+    2269.3 ->  2273.6 | it represents start and stop with step being 1.
+    2273.6 ->  2275.9 | So you're starting at 7.
+    2275.9 ->  2280.2 | If step is 1, the next value is 8.
+    2280.2 ->  2285.1 | What's the value after that?
+    2285.1 ->  2292.7 | If we're incrementing by 1, 9.
+    2292.7 ->  2297.4 | And since we're going until stop minus 1,
+    2297.4 ->  2301.3 | we're not actually going to pick up on 10.
+    2301.3 ->  2304.4 | So this loop variable i, the very first time through the loop
+    2304.4 ->  2308.2 | is going to have the value 7.
+    2308.2 ->  2317.5 | So my sum is going to be 0 plus 7.
+    2317.5 ->  2320.6 | That's everything that's inside the code block.
+    2320.6 ->  2325.5 | The next time through the loop, i gets the value 8.
+    2325.5 ->  2332.9 | So inside the for loop, my sum gets
+    2332.9 ->  2336.6 | whatever the previous value was, which was 7 plus 8.
+    2340.3 ->  2344.5 | The next time through the loop, my sum
+    2344.5 ->  2348.2 | gets the value 7 plus 8 plus 9.
+    2348.2 ->  2353.2 | Obviously replacing that with the previous value, so 15.
+    2353.2 ->  2355.9 | Since we're not going through 10, that's where we stop.
+    2355.9 ->  2357.6 | And we're going to print out my sum, which
+    2357.6 ->  2359.8 | is going to be the value of 7 plus 8 plus 9.
+    2368.5 ->  2369.6 | Do they have to be integers?
+    2372.7 ->  2373.7 | That's a great question.
+    2373.7 ->  2374.8 | We can try that out.
+    2374.8 ->  2378.7 | I'm not actually sure right off the top of my head.
+    2378.7 ->  2385.7 | So you can go in spider and say,
+    2385.7 ->  2392.1 | let's say in this example here.
+    2392.1 ->  2399.0 | So we can say 7.1, 10.3.
+    2399.0 ->  2409.2 | So they have to be integers.
+    2409.2 ->  2413.3 | So that's that example, and let's erase that.
+    2413.3 ->  2416.5 | In this particular example, we have start, stop, and step.
+    2416.5 ->  2420.0 | And here, we're going every other value.
+    2420.0 ->  2422.3 | So we're starting at 5.
+    2422.3 ->  2425.4 | Tell me what the next value is supposed to be
+    2425.4 ->  2427.8 | if we're taking every other one.
+    2427.8 ->  2435.0 | 7, and then 9, and then are we doing 11 or not?
+    2435.0 ->  2436.0 | Excellent.
+    2436.0 ->  2437.6 | Nice.
+    2437.6 ->  2441.5 | So we're going to the n minus 1.
+    2441.5 ->  2443.4 | So it's possible that sometimes you
+    2443.4 ->  2447.5 | write code where you might want to exit out of the loop early.
+    2447.5 ->  2449.5 | You don't want to go through all of the sequences
+    2449.5 ->  2451.0 | of your numbers.
+    2451.0 ->  2452.7 | Maybe there's a condition inside there
+    2452.7 ->  2455.5 | where you just want to exit the loop early.
+    2455.5 ->  2456.8 | Inside the while loop, maybe you
+    2456.8 ->  2460.5 | want to exit the loop before the condition becomes false.
+    2460.5 ->  2463.0 | So that's where the break statement comes in.
+    2463.0 ->  2465.9 | So the break works like this.
+    2465.9 ->  2468.3 | It's going to, as soon as Python
+    2468.3 ->  2473.1 | sees this break statement, it's going to say, OK,
+    2473.1 ->  2478.1 | I'm going to look at whatever loop I'm currently in.
+    2478.1 ->  2480.9 | I'm not evaluating any expression after it
+    2480.9 ->  2483.7 | that comes within my loop.
+    2483.7 ->  2486.1 | And I'm going to immediately exit the loop.
+    2486.1 ->  2488.8 | So I'm going inside this while, this while.
+    2488.8 ->  2490.6 | I'm evaluating this one expression,
+    2490.6 ->  2493.4 | and then I suddenly see a break.
+    2493.4 ->  2497.9 | Expression B does not get evaluated.
+    2497.9 ->  2501.8 | And break is going to immediately exit out of the innermost loop
+    2501.8 ->  2503.1 | that it's in.
+    2503.1 ->  2506.3 | So this while loop that has condition 2,
+    2506.3 ->  2510.9 | that's the innermost loop that the break is found in.
+    2510.9 ->  2514.7 | So we're going to exit out of this innermost loop here,
+    2514.7 ->  2517.1 | and we're evaluating expression C.
+    2517.1 ->  2518.9 | And notice we're evaluating expression C
+    2518.9 ->  2525.1 | because expression C is part of the outer while loop.
+    2525.1 ->  2528.4 | It's at the same level as this one.
+    2528.4 ->  2534.0 | And these ones are part of the inner while loop.
+    2534.0 ->  2536.1 | OK, last thing I want to say is just a little bit
+    2536.1 ->  2538.4 | of a comparison between for and while loops.
+    2538.4 ->  2541.2 | So when would you use one or the other?
+    2541.2 ->  2543.2 | This might be useful in your problem sets.
+    2543.2 ->  2544.5 | So for loops you usually use when
+    2544.5 ->  2547.5 | you know the number of iterations.
+    2547.5 ->  2549.8 | While loops are very useful when, for example,
+    2549.8 ->  2552.7 | you're getting user input, and user input is unpredictable.
+    2552.7 ->  2555.0 | You don't know how many times they're going to do
+    2555.0 ->  2556.8 | a certain task.
+    2556.8 ->  2559.2 | For both for and while loops, you can end out of the loop
+    2559.2 ->  2560.7 | early using the break.
+    2560.7 ->  2562.4 | The for loop uses this counter.
+    2562.4 ->  2565.4 | It's inherent inside the for loop.
+    2565.4 ->  2568.1 | A while loop, you can use a counter in order.
+    2568.1 ->  2570.8 | You can use a while loop to count things,
+    2570.8 ->  2573.8 | but you must initialize the counter before the while loop.
+    2573.8 ->  2576.2 | And you have to remember to increment it within the loop,
+    2576.2 ->  2580.7 | otherwise you may be lead to an infinite loop.
+    2580.7 ->  2584.2 | We've seen as the very first example of a for loop
+    2584.2 ->  2588.2 | that the for loop could be rewritten as a while loop,
+    2588.2 ->  2591.1 | but the vice versa is not necessarily true.
+    2591.1 ->  2594.4 | And the counter example to that is just user input.
+    2594.4 ->  2596.4 | So you might not know how many times
+    2596.4 ->  2598.6 | you might do a certain task.
+    2598.6 ->  2600.5 | All right, great.
+    2600.5 ->  2602.5 | That's all for today.
+   Done: 804 sentences. Saved to output/whisper.json
+[3/4] PaddleOCR is reading text from the screenshots...
+      1244 of 2610 screenshots changed and need OCR (compared in 4.8s)
+INFO: Could not find files for the given pattern(s).
+C:\Users\mskid\AppData\Local\Programs\Python\Python311\Lib\site-packages\paddle\utils\cpp_extension\extension_utils.py:718: UserWarning: No ccache found. Please be aware that recompiling all source files may be required. You can download and install ccache from: https://github.com/ccache/ccache/blob/master/doc/INSTALL.md
+  warnings.warn(warning_message)
+[32mCreating model: ('PP-OCRv4_mobile_det', None, None)[0m
+[32mModel files already exist. Using cached files. To redownload, please delete the directory manually: `C:\Users\mskid\.paddlex\official_models\PP-OCRv4_mobile_det`.[0m
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I1119 11:43:14.684101 13600 onednn_context.cc:81] oneDNN v3.6.2
+[32mCreating model: ('en_PP-OCRv4_mobile_rec', None, None)[0m
+[32mModel files already exist. Using cached files. To redownload, please delete the directory manually: `C:\Users\mskid\.paddlex\official_models\en_PP-OCRv4_mobile_rec`.[0m
+      PaddleOCR device: CPU (MKL-DNN on, 8 threads)
+   second     0: Massachusetts Institute of Technology 6.0001,Fall2016 Introduction to 
+   second     1: Massachusetts Institute of Technology 6.0001, Fall 2016 Introduction t
+   second    21: Massachusetts Institute of Technologye 6.0001,Fall2016 Introduction to
+   second    22: Some content in this video is not covered under our Creative Commons l
+   second    23: Some content in this video is not covered under. our Creative Commons 
+   second    28: Some content in this video is not covered under. our Creative Commons 
+   second    29: 
+   second    30: 
+   second    31: 
+   second    32: 
+   second    33: 
+   second    34: 
+   second    35: 
+   second    36: 
+   second    37: 
+   second    38: 
+   second    39: 
+   second    40: 
+   second    41: 
+   second    42: BRANCHING, ITERATION (download slides and .py files to follow along!) 
+   second    53: 
+   second    54: 
+   second    55: 
+   second    56: 
+   second    57: 
+   second    58: 
+   second    59: 
+   second    60: 
+   second    61: 
+   second    62: 
+   second    63: 
+   second    64: 
+   second    65: 
+   second    66: 
+   second    67: 
+   second    68: 
+   second    69: 
+   second    70: 
+   second    71: 
+   second    72: 
+   second    73: 
+   second    74: 
+   second    75: 
+   second    76: 
+   second    77: 
+   second    78: 
+   second    79: 
+   second    80: 
+   second    81: 
+   second    82: 
+   second    83: 
+   second    84: 
+   second    85: 
+   second    86: 
+   second    87: 
+   second    88: 
+   second    89: 
+   second    90: 
+   second    91: 
+   second    92: 
+   second    93: 
+   second    94: 
+   second    95: 
+   second    96: 
+   second    97: 
+   second    98: 
+   second    99: 
+   second   100: 
+   second   101: 
+   second   102: 
+   second   103: 
+   second   104: 
+   second   105: 
+   second   106: 
+   second   107: 
+   second   108: 
+   second   109: 
+   second   110: 
+   second   111: 
+   second   112: 
+   second   113: 
+   second   114: 
+   second   115: 
+   second   116: 
+   second   117: 
+   second   118: 
+   second   119: 
+   second   120: 
+   second   121: 
+   second   122: 
+   second   123: 
+   second   124: 
+   second   125: 
+   second   126: 
+   second   127: Title: STRINGSE Body: letters, special characters spaces, digits enclo
+   second   160: 
+   second   161: 
+   second   162: 
+   second   163: 
+   second   165: 
+   second   166: 
+   second   167: 
+   second   168: 
+   second   169: 
+   second   170: 
+   second   172: 
+   second   173: 
+   second   175: 
+   second   176: 
+   second   177: 
+   second   178: 
+   second   179: 
+   second   180: 
+   second   181: 
+   second   182: 
+   second   183: 
+   second   184: 
+   second   185: 
+   second   186: 
+   second   187: Title: STRINGSE Body: letters, special characters spaces, digits enclo
+   second   215: 
+   second   216: 
+   second   217: 
+   second   218: 
+   second   219: 
+   second   220: 
+   second   221: 
+   second   222: 
+   second   224: 
+   second   227: Title: 2##EXAMPLE:strings Body: You got out of the Lost Forest! 4hi=he
+   second   240: Title: 2## EXAKPLE:strings 6greet = hi + nane In [26] Body: 4hi = hell
+   second   246: 
+   second   247: 
+   second   248: 
+   second   249: 
+   second   250: 
+   second   251: 
+   second   252: 
+   second   253: 
+   second   254: 
+   second   255: 
+   second   256: 
+   second   257: 
+   second   258: 
+   second   259: 
+   second   260: 1n[26 2## EXAMPLE:strings 4hi = "hello there" 5nane = "ana" 6greet = h
+   second   280: 2## EXAMPLE:strings 4hi = *hello there 5nane = "ana" 6greet = hi + nan
+   second   288: 
+   second   289: 
+   second   291: 
+   second   292: 
+   second   293: 
+   second   294: 
+   second   295: 
+   second   296: 
+   second   297: 
+   second   298: 
+   second   299: 
+   second   300: 
+   second   301: 
+   second   302: 
+   second   303: 2## EXAMPLE:strings 4hi = "hello there" 5nane = "ana" 6greet = hi + na
+   second   312: 
+   second   313: 
+   second   314: 
+   second   315: 
+   second   316: 
+   second   317: 
+   second   318: 
+   second   319: 
+   second   320: 
+   second   321: 
+   second   322: 
+   second   323: 
+   second   324: 
+   second   325: Title: 8greeting = hi+"+ name Body: 2## EXAMPLE:strings 4hi = "hello t
+   second   350: 2## EXAKPLE:strings /lectures/lec2_branch_loops.py* wdir='C:/Users/Ana
+   second   361: 
+   second   362: 
+   second   363: 
+   second   364: 
+   second   365: 
+   second   366: 
+   second   367: 
+   second   368: 
+   second   369: 
+   second   370: 
+   second   371: 
+   second   372: 
+   second   373: 
+   second   374: 
+   second   375: 
+   second   376: 
+   second   378: 
+   second   379: 
+   second   380: 
+   second   382: 
+   second   383: 
+   second   384: 
+   second   385: 
+   second   386: 
+   second   387: 
+   second   388: 
+   second   389: Title: INPUT/OUTPUT: print Body: used to output stuff to console keywo
+   second   405: 
+   second   406: 
+   second   407: 
+   second   408: 
+   second   409: 
+   second   411: Title: INPUT/OUTPUT: print Body: used to output stuff to console -keyw
+   second   421: 
+   second   422: 
+   second   423: 
+   second   424: 
+   second   425: 
+   second   426: 
+   second   427: 
+   second   428: 
+   second   429: 
+   second   432: 
+   second   433: 
+   second   434: 
+   second   435: 
+   second   437: 
+   second   440: Title: INPUT/OUTPUT: print Body: " used to output stuff to console "ke
+   second   453: 
+   second   454: 
+   second   455: 
+   second   456: 
+   second   457: 
+   second   458: 
+   second   459: 
+   second   460: 
+   second   461: Title: INPUT/OUTPUT: print Body: " used to output stuff to console "ke
+   second   466: 
+   second   467: 
+   second   468: 
+   second   469: 
+   second   471: 
+   second   472: 
+   second   473: 
+   second   474: 
+   second   475: 
+   second   476: 
+   second   477: 
+   second   478: 
+   second   479: 
+   second   480: 
+   second   481: 
+   second   482: 
+   second   483: 
+   second   484: 
+   second   485: 
+   second   486: 
+   second   487: 
+   second   490: 
+   second   491: 
+   second   492: 
+   second   493: 
+   second   494: 
+   second   495: 
+   second   496: 
+   second   497: 
+   second   498: 
+   second   501: 2## EXAMPLE:strings /lectures/lec2_branch_loops.py* wdir='C:/Users/Ana
+   second   502: 2## EXAMPLE: strings /lectures/lec2_branch_loops.py wdir='C:/Users/Ana
+   second   504: 2## EXAMPLE: strings /lectures/lec2_branch_loops.py* wdir='C:/Users/An
+   second   505: Title: 8=greeting = hi+ Body: 4#ht = hello there /lectures/lec2_branch
+   second   506: Title: 8=greeting = hi+ Body: 4#ht = "hello there' /lectures/lec2_bran
+   second   543: 4#ht = "hello there' hello thereana hello there ana S#ngne = ang 6#gre
+   second   544: 4#ht = "hello there' /lectures/lec2_branch_loops.py, wdir=C:/Users/Ana
+   second   562: 
+   second   567: 
+   second   568: 
+   second   569: 
+   second   570: 
+   second   571: 
+   second   572: 
+   second   573: 
+   second   574: 
+   second   575: 
+   second   576: 
+   second   577: 
+   second   578: 
+   second   579: 
+   second   580: 
+   second   581: 
+   second   582: 
+   second   583: 
+   second   584: 
+   second   585: 
+   second   586: 
+   second   587: 
+   second   588: 
+   second   589: 
+   second   590: 
+   second   591: 
+   second   592: 
+   second   593: 
+   second   594: 
+   second   595: 
+   second   596: 
+   second   597: Title: INPUT/OUTPUT: input ("") Body: prints whatever is in the quotes
+   second   607: 
+   second   608: 
+   second   609: 
+   second   610: 
+   second   611: 
+   second   612: 
+   second   613: 
+   second   614: 
+   second   615: 
+   second   616: 
+   second   617: 
+   second   618: 
+   second   619: 
+   second   620: 
+   second   621: 
+   second   622: 
+   second   623: 
+   second   624: 
+   second   625: 
+   second   626: 
+   second   627: 
+   second   628: 
+   second   629: 
+   second   630: 
+   second   631: 
+   second   632: 
+   second   633: 
+   second   634: 
+   second   635: 
+   second   636: 
+   second   637: 
+   second   638: 
+   second   639: 
+   second   640: 
+   second   641: 
+   second   642: 
+   second   644: 
+   second   645: Title: INPUT/OUTPUT: input ("") Body: prints whatever is in the quotes
+   second   661: 
+   second   662: 
+   second   663: 
+   second   664: 
+   second   666: Title: INPUT/OUTPUT: input ("") Body: prints whatever is in the quotes
+   second   686: 
+   second   687: 
+   second   688: 
+   second   689: 
+   second   690: 
+   second   691: 
+   second   692: 
+   second   693: 
+   second   694: 
+   second   695: 
+   second   696: 
+   second   697: 
+   second   698: 
+   second   699: 
+   second   700: 
+   second   701: 
+   second   702: Title: INPUT/OUTPUT: input ("") Body: prints whatever is in the quotes
+   second   724: 
+   second   725: 
+   second   726: 
+   second   727: 
+   second   731: 
+   second   732: 17#print(x) /lectures/lec2_branch_loops.py', 18#x_str = str(x) 19#prin
+   second   738: 17#print(x) 18#x_str = str(x) wdir+'C:/Users/Ana/Docunents/MIT/6/Fal11
+   second   739: 17#print(x) 18#x_str = str(x) hello there ana ana ana 19#printy fov nu
+   second   745: 17#print(x) 18#x_str = str(x) 19printy fav nunber {sxx=x runfi1le(*C:/
+   second   748: 
+   second   749: 
+   second   750: 
+   second   751: 
+   second   752: 
+   second   753: 
+   second   754: 
+   second   755: 
+   second   756: 
+   second   757: 
+   second   758: 
+   second   759: 
+   second   760: 
+   second   761: 
+   second   763: 
+   second   764: 
+   second   765: 
+   second   766: 
+   second   767: 
+   second   768: 
+   second   769: 
+   second   770: 
+   second   772: 
+   second   774: 
+   second   775: 
+   second   776: 
+   second   779: 
+   second   780: 
+   second   781: 
+   second   783: 
+   second   784: 
+   second   785: 
+   second   786: 
+   second   787: 
+   second   788: 
+   second   789: 
+   second   790: 
+   second   791: 
+   second   792: 
+   second   793: Title: int, float, string Body: COMPARISON OPERATORS ON " 1 and j are 
+   second   800: 
+   second   801: 
+   second   802: 
+   second   803: 
+   second   804: 
+   second   805: 
+   second   806: 
+   second   807: 
+   second   808: 
+   second   809: 
+   second   810: 
+   second   811: 
+   second   812: 
+   second   813: 
+   second   814: Title: int, float, string Body: COMPARISON OPERATORS ON " 1 and j are 
+   second   849: 
+   second   850: 
+   second   851: 
+   second   854: Title: 19printy fov nunber {sxx=x Body: 17#print(x) runfile(*C:/Users/
+   second   857: Title: 19printy fav nunber sxx=x Body: 17#print(x) 18#x_str = str(x) r
+   second   862: 
+   second   863: 
+   second   864: 
+   second   865: 
+   second   866: 
+   second   867: 
+   second   868: 
+   second   870: 
+   second   871: 
+   second   872: 
+   second   873: 
+   second   874: 
+   second   875: 
+   second   876: 
+   second   877: 
+   second   878: 
+   second   879: 
+   second   880: 
+   second   881: 
+   second   882: 
+   second   883: 
+   second   884: Title: int, float, string Body: COMPARISON OPERATORS ON i and j are va
+   second   906: 
+   second   907: 
+   second   908: 
+   second   910: 
+   second   911: 
+   second   912: 
+   second   913: 
+   second   914: 
+   second   915: 
+   second   916: 
+   second   917: 
+   second   918: 
+   second   919: 
+   second   920: 
+   second   921: 
+   second   922: 
+   second   923: 
+   second   924: 
+   second   925: 
+   second   927: 
+   second   928: 
+   second   929: 
+   second   930: 
+   second   931: 
+   second   932: 
+   second   933: 
+   second   934: 
+   second   935: 
+   second   936: 
+   second   937: 
+   second   938: 
+   second   939: 
+   second   940: 
+   second   941: 
+   second   942: 
+   second   943: Title: LOGIC OPERATORS ON booIs Body: " a and b are variable names (wi
+   second   976: 
+   second   977: 
+   second   978: 
+   second   979: 
+   second   980: 
+   second   981: 
+   second   982: 
+   second   983: 
+   second   984: 
+   second   985: 
+   second   986: 
+   second   987: 
+   second   988: 
+   second   989: 
+   second   990: 
+   second   991: 
+   second   992: 
+   second   993: 
+   second   994: 
+   second   995: 
+   second   996: 
+   second   997: 
+   second   998: 
+   second   999: 17#print(x) 18#x_str = str(x) 19#printy fav number isxx=x runfi1e(*C:/
+   second  1004: Title: 19printy fav number {sxx=x In [32]a>5 Body: 17#print(x) 18#x_st
+   second  1006: 
+   second  1007: 
+   second  1008: 
+   second  1009: 
+   second  1010: 
+   second  1011: 
+   second  1012: 
+   second  1013: 
+   second  1014: 
+   second  1015: 
+   second  1016: 
+   second  1017: 
+   second  1018: 
+   second  1019: 
+   second  1020: 
+   second  1021: 
+   second  1022: 
+   second  1023: 
+   second  1024: 
+   second  1025: 
+   second  1026: 
+   second  1034: 
+   second  1035: 
+   second  1036: 
+   second  1037: 
+   second  1038: 
+   second  1039: 
+   second  1040: 
+   second  1041: 
+   second  1042: 
+   second  1043: 
+   second  1044: 
+   second  1045: 
+   second  1046: 
+   second  1047: 
+   second  1048: 
+   second  1049: 
+   second  1050: 
+   second  1051: 
+   second  1052: 
+   second  1053: 
+   second  1054: 
+   second  1055: 
+   second  1056: 
+   second  1057: 
+   second  1058: 
+   second  1059: 
+   second  1060: 
+   second  1061: 
+   second  1062: 
+   second  1063: 
+   second  1064: 
+   second  1065: 
+   second  1066: 
+   second  1067: 
+   second  1068: 
+   second  1069: 
+   second  1070: 
+   second  1071: 
+   second  1072: 
+   second  1073: 
+   second  1074: 
+   second  1075: 
+   second  1076: 
+   second  1077: 
+   second  1078: 
+   second  1079: 
+   second  1080: 
+   second  1081: 
+   second  1082: 
+   second  1083: 
+   second  1084: 
+   second  1085: If right clear, go right free food
+   second  1089: 
+   second  1090: 
+   second  1091: 
+   second  1092: 
+   second  1093: 
+   second  1094: 
+   second  1095: 
+   second  1097: 
+   second  1098: 
+   second  1099: 
+   second  1100: 
+   second  1101: 
+   second  1102: 
+   second  1103: 
+   second  1104: 
+   second  1105: 
+   second  1106: 
+   second  1107: 
+   second  1108: 
+   second  1109: 
+   second  1110: 
+   second  1111: 
+   second  1112: 
+   second  1113: If right clear, If right blocked, If right and If right, front go righ
+   second  1130: 
+   second  1131: 
+   second  1132: 
+   second  1133: 
+   second  1134: 
+   second  1135: 
+   second  1136: 
+   second  1137: 
+   second  1138: 
+   second  1139: 
+   second  1140: 
+   second  1141: 
+   second  1142: 
+   second  1143: 
+   second  1144: 
+   second  1145: 
+   second  1146: 
+   second  1147: 
+   second  1148: 
+   second  1149: 
+   second  1150: 
+   second  1151: 
+   second  1152: 
+   second  1153: 
+   second  1154: 
+   second  1155: 
+   second  1156: 
+   second  1157: 
+   second  1158: 
+   second  1159: 
+   second  1160: 
+   second  1161: 
+   second  1162: 
+   second  1163: 
+   second  1164: 
+   second  1165: 
+   second  1166: 
+   second  1167: 
+   second  1168: 
+   second  1169: 
+   second  1170: 
+   second  1171: 
+   second  1172: 
+   second  1173: 
+   second  1174: 
+   second  1175: 
+   second  1176: 
+   second  1177: 
+   second  1178: 
+   second  1179: 
+   second  1180: 
+   second  1181: 
+   second  1182: 
+   second  1183: 
+   second  1184: 
+   second  1185: 
+   second  1186: 
+   second  1187: 
+   second  1188: 
+   second  1189: 
+   second  1190: 
+   second  1191: 
+   second  1192: 
+   second  1193: 
+   second  1194: 
+   second  1195: 
+   second  1196: 
+   second  1197: 
+   second  1198: 
+   second  1199: Title: CONTROL FLOW - BRANCHING Body: fcondition>: 1f <condition>: <ex
+   second  1238: 
+   second  1239: 
+   second  1240: 
+   second  1241: 
+   second  1242: 
+   second  1243: 
+   second  1244: Title: CONTROL FLOW - BRANCHING Body: ifAcondition> if <condition>: <e
+   second  1254: 
+   second  1255: 
+   second  1256: 
+   second  1257: 
+   second  1258: 
+   second  1259: 
+   second  1260: 
+   second  1261: 
+   second  1262: 
+   second  1263: 
+   second  1264: 
+   second  1265: 
+   second  1266: 
+   second  1267: 
+   second  1268: 
+   second  1269: 
+   second  1270: 
+   second  1271: 
+   second  1272: 
+   second  1273: 
+   second  1274: 
+   second  1275: 
+   second  1276: 
+   second  1277: 
+   second  1278: 
+   second  1279: 
+   second  1280: 
+   second  1281: 
+   second  1282: 
+   second  1283: Title: CONTROL FLOW - BRANCHING Body: 1f<condition> if <condition>: <e
+   second  1320: 
+   second  1321: 
+   second  1322: 
+   second  1323: 
+   second  1324: 
+   second  1325: 
+   second  1326: 
+   second  1327: Title: CONTROL FLOW - BRANCHING Body: f<condition> if <condition>: <ex
+   second  1333: 
+   second  1334: 
+   second  1335: 
+   second  1336: 
+   second  1339: 
+   second  1340: 
+   second  1341: 
+   second  1342: 
+   second  1343: 
+   second  1344: 
+   second  1345: 
+   second  1346: 
+   second  1348: 
+   second  1349: 
+   second  1350: 
+   second  1351: 
+   second  1352: 
+   second  1353: 
+   second  1354: 
+   second  1355: 
+   second  1356: Title: CONTROL FLOW - BRANCHING Body: f<condition> i <condition>: <exp
+   second  1429: 
+   second  1430: 
+   second  1431: 
+   second  1432: 
+   second  1433: 
+   second  1434: 
+   second  1435: 
+   second  1437: 
+   second  1438: 
+   second  1439: 
+   second  1440: 
+   second  1441: 
+   second  1442: 
+   second  1444: 
+   second  1445: 
+   second  1446: 
+   second  1447: 
+   second  1448: 
+   second  1449: 
+   second  1450: 
+   second  1451: 
+   second  1452: 
+   second  1454: 
+   second  1455: 
+   second  1456: 
+   second  1457: 
+   second  1458: 
+   second  1459: 
+   second  1460: 
+   second  1461: 
+   second  1462: 
+   second  1463: 
+   second  1464: 
+   second  1465: 
+   second  1466: 
+   second  1467: 
+   second  1468: 
+   second  1469: 
+   second  1470: 
+   second  1471: 
+   second  1472: 
+   second  1473: 
+   second  1474: 
+   second  1475: 
+   second  1476: 
+   second  1477: 
+   second  1478: 
+   second  1479: 
+   second  1480: 
+   second  1481: 
+   second  1482: 
+   second  1483: 
+   second  1484: 
+   second  1485: 
+   second  1486: 
+   second  1487: 
+   second  1488: 
+   second  1489: Title: INDENTATION Body: matters in Pythone -how you denote blocks of 
+   second  1533: 
+   second  1534: 
+   second  1535: 
+   second  1536: 
+   second  1537: 
+   second  1538: 
+   second  1539: 
+   second  1540: 
+   second  1541: 
+   second  1542: 
+   second  1543: 
+   second  1544: 
+   second  1545: Title: Wha if = here? get a SyntaxError Body: x = float(input"Enter a 
+   second  1566: 
+   second  1567: 
+   second  1568: 
+   second  1569: 
+   second  1570: 
+   second  1571: 
+   second  1572: 
+   second  1573: 
+   second  1574: 
+   second  1575: 
+   second  1576: 
+   second  1577: 
+   second  1578: 
+   second  1579: 
+   second  1580: 
+   second  1581: 
+   second  1582: 
+   second  1583: 
+   second  1584: 
+   second  1585: 
+   second  1586: 
+   second  1587: 
+   second  1588: 
+   second  1589: 
+   second  1590: 
+   second  1591: Title: - Legend of Zelda - keep going right, same screen,stuck in a lo
+   second  1625: Title: - keep going right, aloop Body: - Legend of Zelda-- Lost Woods 
+   second  1646: Title: - Legend of Zelda - -keep going right, same screen, stuck in al
+   second  1655: 
+   second  1656: 
+   second  1657: 
+   second  1658: 
+   second  1659: 
+   second  1660: 
+   second  1661: 
+   second  1662: 
+   second  1663: 
+   second  1664: 
+   second  1665: 
+   second  1666: 
+   second  1667: 
+   second  1668: 
+   second  1669: 
+   second  1671: 
+   second  1672: 
+   second  1673: 
+   second  1674: 
+   second  1675: 
+   second  1676: 
+   second  1677: 
+   second  1678: 
+   second  1679: 
+   second  1680: 
+   second  1681: 
+   second  1682: 
+   second  1683: 
+   second  1684: 
+   second  1685: 
+   second  1686: 
+   second  1687: Title: - keep going right, Body: - Legend of Zelda -- Lost Woods takes
+   second  1692: Title: - keep going right, aloop Body: - Legend of Zelda - Lost Woods 
+   second  1697: Title: - keep going right, Body: - Legend of Zelda -- Lost Woods takes
+   second  1732: 
+   second  1733: 
+   second  1734: 
+   second  1735: 
+   second  1736: 
+   second  1737: 
+   second  1738: Title: while LOOPS Body: CONTROL FLOW: while <condition>: <expression>
+   second  1769: 
+   second  1770: 
+   second  1771: 
+   second  1772: 
+   second  1773: 
+   second  1774: 
+   second  1775: 
+   second  1776: 
+   second  1777: 
+   second  1778: 
+   second  1779: 
+   second  1780: 
+   second  1781: 
+   second  1782: 
+   second  1783: 
+   second  1785: 
+   second  1786: 
+   second  1787: 
+   second  1788: 
+   second  1789: Title: whi1e LOOP EXAMPLE Body: You are in the Lost Forest. Go left or
+   second  1814: 
+   second  1815: 
+   second  1816: 
+   second  1817: 
+   second  1818: 
+   second  1821: 
+   second  1822: 
+   second  1823: 
+   second  1824: 
+   second  1827: 
+   second  1833: 53#num =int(inputEnter a number:) wdir-'C:/Users/Ana/Docunents/MIT/6/F
+   second  1834: 53#num =int(inputEnter a number:") wdir='C:/Users/Ana/Docunents/MIT/6/
+   second  1839: 53#num =int(inputEnter a number:) wdir-'C:/Users/Ana/Docunents/MIT/6/F
+   second  1843: 53#num =int(inputEnter a number") F11e "<1python-input-32-7a9f6659128b
+   second  1844: 53#num =int(inputEnter a number:) print(number is even) TypeError: uno
+   second  1847: Title: Out[33]:False Body: 53#num =int(inputEnter a number:") unoruera
+   second  1851: 53#num =int(inputEnter a number:) print(nunber is even") 56#else: prin
+   second  1852: 53#num =int(inputEnter a number:") print(nunber is even) Go left or ri
+   second  1854: 53#nus =int(inputEnter a number:) print(number is even") 56#else: runf
+   second  1870: 
+   second  1871: 
+   second  1872: 
+   second  1873: 
+   second  1874: 
+   second  1875: 
+   second  1877: 
+   second  1878: 
+   second  1879: 
+   second  1880: 
+   second  1881: 
+   second  1882: 
+   second  1883: 
+   second  1884: 
+   second  1885: 
+   second  1886: 
+   second  1887: 
+   second  1888: 
+   second  1889: 
+   second  1891: Title: while and for LOOPS Body: CONTROL FLOW: iterate through numbers
+   second  1896: 
+   second  1897: 
+   second  1898: 
+   second  1899: 
+   second  1900: 
+   second  1901: 
+   second  1902: 
+   second  1903: 
+   second  1904: 
+   second  1905: 
+   second  1906: 
+   second  1907: 
+   second  1908: 
+   second  1909: 
+   second  1910: 
+   second  1911: 
+   second  1912: 
+   second  1913: 
+   second  1914: 
+   second  1915: 
+   second  1916: 
+   second  1917: Title: while and for LOOPS Body: CONTROL FLOW: iterate through numbers
+   second  1943: 
+   second  1944: 
+   second  1946: 
+   second  1947: 
+   second  1948: 
+   second  1949: 
+   second  1950: 
+   second  1951: 
+   second  1952: 
+   second  1953: 
+   second  1954: 
+   second  1955: 
+   second  1956: 
+   second  1962: 
+   second  1965: 53#num =int(inputEnter a number:") ctures') print(nunber is even) 56#e
+   second  1971: 53#num =int(inputEnter a number) print(nunber is even") 56#else: print
+   second  1977: 53#num =int(inputEnter a number") print(number is even") 56#else: prin
+   second  1979: Title: Fi11e "<ipython-input-36-32e9d9ec79dc>", Body: 53#num =int(inpu
+   second  1985: Title: Fi1e "<ipython-input-36-32e9d9ec79dc>", Body: 53#num =int(input
+   second  1994: 53#num =int(input"Enter a number: ") print(number is even") 56#else: p
+   second  2003: 
+   second  2004: 
+   second  2006: 
+   second  2007: 
+   second  2008: 
+   second  2009: 
+   second  2010: 
+   second  2011: 
+   second  2012: 
+   second  2013: Title: while and for LOOPS Body: CONTROL FLOW: iterate through numbers
+   second  2026: 
+   second  2027: 
+   second  2028: 
+   second  2029: 
+   second  2030: 
+   second  2031: 
+   second  2032: 
+   second  2033: 
+   second  2034: 
+   second  2035: Title: while and for LOOPS. Body: CONTROL FLOW: iterate through number
+   second  2060: 
+   second  2061: 
+   second  2062: 
+   second  2063: 
+   second  2064: 
+   second  2065: 
+   second  2066: 
+   second  2067: 
+   second  2068: 
+   second  2069: 
+   second  2070: 
+   second  2071: 
+   second  2072: 
+   second  2073: 
+   second  2074: 
+   second  2075: 
+   second  2076: 
+   second  2078: Title: while and for LOOPS. Body: CONTROL FLOW:E - iterate through num
+   second  2088: 
+   second  2090: 
+   second  2091: 
+   second  2092: 
+   second  2095: 
+   second  2097: 
+   second  2098: 
+   second  2099: 
+   second  2100: 
+   second  2104: 
+   second  2105: 
+   second  2106: 
+   second  2107: 
+   second  2108: 
+   second  2109: Title: CONTROL FLOW: for LOOPS Body: for <variable> in range(<some_num
+   second  2164: 
+   second  2165: 
+   second  2166: 
+   second  2167: 
+   second  2168: 
+   second  2169: 
+   second  2170: 
+   second  2171: 
+   second  2172: 
+   second  2173: 
+   second  2174: 
+   second  2175: 
+   second  2176: 
+   second  2177: 
+   second  2178: 
+   second  2179: 
+   second  2180: 
+   second  2181: 
+   second  2182: 
+   second  2183: 
+   second  2184: 
+   second  2185: 
+   second  2186: 
+   second  2187: 
+   second  2188: 
+   second  2189: 
+   second  2190: 
+   second  2191: 
+   second  2192: 
+   second  2193: 
+   second  2194: 
+   second  2195: 
+   second  2196: 
+   second  2197: 
+   second  2198: 
+   second  2199: 
+   second  2200: 
+   second  2201: 
+   second  2202: 
+   second  2203: 
+   second  2204: Title: range(start, stop, step). Body: - default values are start = 0 
+   second  2239: 
+   second  2240: 
+   second  2241: 
+   second  2242: 
+   second  2243: 
+   second  2244: 
+   second  2246: 
+   second  2247: 
+   second  2248: 
+   second  2249: 
+   second  2250: 
+   second  2251: 
+   second  2252: 
+   second  2253: 
+   second  2254: 
+   second  2255: 
+   second  2256: 
+   second  2257: 
+   second  2258: Title: range(start/stop,step) Body: -default values are start = 0 and 
+   second  2279: 
+   second  2280: 
+   second  2281: 
+   second  2282: 
+   second  2283: 
+   second  2284: 
+   second  2285: 
+   second  2286: 
+   second  2287: 
+   second  2288: 
+   second  2291: 
+   second  2292: 
+   second  2293: 
+   second  2294: 
+   second  2295: 
+   second  2297: 
+   second  2298: 
+   second  2299: 
+   second  2300: 
+   second  2301: 
+   second  2302: 
+   second  2303: 
+   second  2305: 
+   second  2306: 
+   second  2307: 
+   second  2308: 
+   second  2309: Title: range (start/stop,step) Body: -default values are start = 0 and
+   second  2352: 
+   second  2353: 
+   second  2354: 
+   second  2356: 
+   second  2357: 
+   second  2358: 
+   second  2359: 
+   second  2360: 
+   second  2361: 
+   second  2362: 
+   second  2363: 
+   second  2364: 
+   second  2365: 
+   second  2366: 
+   second  2367: 
+   second  2368: 
+   second  2369: 
+   second  2370: 
+   second  2371: 
+   second  2373: 
+   second  2374: 
+   second  2375: 
+   second  2376: 
+   second  2377: 
+   second  2378: 
+   second  2379: 
+   second  2381: Title: Fi1e "<ipython-input-37-aabeeb5893e0>", Body: 80## EXAMPLE: for
+   second  2386: Title: 85foryigng10 Fi1e "<ipython-input-37-aabeeb5893e0>", Body: 82=f
+   second  2388: 82#for n in range(5) print(n) 85#nysum=0 86#for i (n ronge(10) sysum+=
+   second  2397: 82#for n in range(5): print(n) File "C:\Anaconda3\lib\site- packages\s
+   second  2401: 
+   second  2402: 
+   second  2404: 
+   second  2405: 
+   second  2406: 
+   second  2407: 
+   second  2408: 
+   second  2409: 
+   second  2410: 
+   second  2411: 
+   second  2412: 
+   second  2413: 
+   second  2414: 
+   second  2415: 
+   second  2416: 
+   second  2417: 
+   second  2418: 
+   second  2419: Title: range(start, stop,step) mysum = 0 Body: - default values are st
+   second  2440: 
+   second  2441: 
+   second  2442: 
+   second  2443: 
+   second  2444: 
+   second  2445: 
+   second  2446: 
+   second  2447: 
+   second  2448: 
+   second  2449: 
+   second  2450: 
+   second  2451: 
+   second  2452: 
+   second  2453: 
+   second  2454: 
+   second  2455: 
+   second  2456: 
+   second  2457: 
+   second  2458: 
+   second  2459: 
+   second  2460: 
+   second  2461: 
+   second  2462: 
+   second  2463: 
+   second  2464: 
+   second  2465: Title: break STATEMENT Body: immediately exits whatever loop it is in 
+   second  2533: 
+   second  2534: 
+   second  2535: 
+   second  2536: 
+   second  2537: 
+   second  2538: 
+   second  2539: 
+   second  2540: 
+   second  2541: 
+   second  2542: 
+   second  2543: 
+   second  2544: 
+   second  2545: 
+   second  2546: Title: VS while LOOPS Body: for loops while loops - know number of " u
+   second  2570: 
+   second  2571: 
+   second  2572: 
+   second  2573: 
+   second  2574: 
+   second  2575: 
+   second  2576: 
+   second  2577: 
+   second  2578: 
+   second  2579: 
+   second  2580: Title: VS while LOOPS Body: for loops while loops - know number of unb
+   second  2590: 
+   second  2591: 
+   second  2592: 
+   second  2593: 
+   second  2594: 
+   second  2595: 
+   second  2596: 
+   second  2597: 
+   second  2598: 
+   second  2599: 
+   second  2600: 
+   second  2601: 
+   second  2602: 
+   second  2603: Sources of content @ the respective copyright holders, all For more in
+   second  2604: Sources of content @ the respective copyright holders, all For more in
+   second  2609: Sources of content @ the respective copyright holders, all For more in
+   OCR was run on 1244 of 2610 screenshots (the rest were unchanged).
+   OCR time: 350.3s total, 0.28s per screenshot (1 process(es) x 8 thread(s))
+   Done: 74 text blocks. Saved to output/ocr.json
+[4/4] Finished!
+Open these files in the output folder to see the results:
+  - output/whisper.json  (speech)
+  - output/ocr.json      (on-screen text)
+[STEP build_chunks] 11:48:53.13 
+Speech sentences kept: 796 / 804
+Slide text blocks kept: 74 / 74
+
+Created 95 chunks -> output\chunks.jsonl
+
+lecture2_001     0.4s ->   18.0s   41 words  image=frame_0010.jpg
+    slide : Massachusetts Institute of Technology 6.0001, Fall 2016 Introduction to Computer
+    speech: The following content is provided under a Creative Commons license. Your support...
+lecture2_002    18.0s ->   42.4s   22 words  image=frame_0027.jpg
+    slide : Massachusetts Institute of Technology 6.0001, Fall 2016 Introduction to Computer
+    speech: at ocw.mit.edu. All right, let's get started, everyone. So good afternoon. Welco...
+lecture2_003    42.4s ->   88.4s  137 words  image=frame_0049.jpg
+    slide : BRANCHING, ITERATION (download slides and .py files to follow along!) 6.0001 LEC
+    speech: So as always, if you'd like to follow along with the lectures, please go ahead a...
+lecture2_004    85.1s ->  125.9s  102 words  image=frame_0107.jpg
+    slide : (no slide text)
+    speech: And then we did a couple of simple operations with them. Today we're going to lo...
+lecture2_005   125.9s ->  171.5s  111 words  image=frame_0150.jpg
+    slide : Title: STRINGSE Body: letters, special characters spaces, digits enclose in quot
+    speech: So strings are going to be sequences of characters. And these characters can be ...
+lecture2_006   169.2s ->  214.9s  128 words  image=frame_0193.jpg
+    slide : Title: STRINGSE Body: letters, special characters spaces, digits enclose in quot
+    speech: is the assignment operator. So from now on, whenever we refer to this variable h...
+lecture2_007   212.9s ->  229.7s   31 words  image=frame_0222.jpg
+    slide : (no slide text)
+    speech: to look at the values of those two. And it's going to just put them together. I'...
+lecture2_008   229.7s ->  239.4s   29 words  image=frame_0236.jpg
+    slide : Title: 2##EXAMPLE:strings Body: You got out of the Lost Forest! 4hi=hello there"
+    speech: So let's see what happens. So I have the variable high, the variable name. And I...
+lecture2_009   239.4s ->  259.2s   52 words  image=frame_0244.jpg
+    slide : Title: 2## EXAKPLE:strings 6greet = hi + nane In [26] Body: 4hi = hello there" 5
+    speech: So if I run the code, notice it prints out hello there, Anna. There's no space. ...
+lecture2_010   259.2s ->  281.4s   52 words  image=frame_0271.jpg
+    slide : 1n[26 2## EXAMPLE:strings 4hi = "hello there" 5nane = "ana" 6greet = hi + nane 7
+    speech: have to actually insert the space manually. So that's this line here, line 8. An...
+lecture2_011   281.4s ->  304.3s   37 words  image=frame_0286.jpg
+    slide : 2## EXAMPLE:strings 4hi = *hello there 5nane = "ana" 6greet = hi + nane In [26] 
+    speech: notice this was that garbage greeting there. And now we have a proper greeting. ...
+lecture2_012   304.3s ->  351.7s  102 words  image=frame_0328.jpg
+    slide : Title: 8greeting = hi+"+ name Body: 2## EXAMPLE:strings 4hi = "hello there" 5nan
+    speech: So that's this one here on line 10. So Python allows you to use the star operato...
+lecture2_013   351.7s ->  387.8s   93 words  image=frame_0357.jpg
+    slide : 2## EXAKPLE:strings /lectures/lec2_branch_loops.py* wdir='C:/Users/Ana/Docunents
+    speech: to multiply the space with my name three times. And it's going to concatenate th...
+lecture2_014   387.8s ->  436.0s  106 words  image=frame_0413.jpg
+    slide : Title: INPUT/OUTPUT: print Body: " used to output stuff to console "keywordis pr
+    speech: So in this little program, I create a variable named x. I assign it the value 1,...
+lecture2_015   432.4s ->  480.0s  126 words  image=frame_0450.jpg
+    slide : Title: INPUT/OUTPUT: print Body: " used to output stuff to console "keywordis pr
+    speech: going to automatically add a space in between the two things that the commas in ...
+lecture2_016   476.1s ->  498.3s   56 words  image=frame_0488.jpg
+    slide : (no slide text)
+    speech: But the downside is you get spaces everywhere. If you use plus operator, the plu...
+lecture2_017   498.3s ->  511.0s   12 words  image=frame_0509.jpg
+    slide : 2## EXAMPLE:strings /lectures/lec2_branch_loops.py* wdir='C:/Users/Ana/Docunents
+    speech: So if we look at spider, this is almost the same code....
+lecture2_018   511.0s ->  542.1s   69 words  image=frame_0528.jpg
+    slide : Title: 8=greeting = hi+ Body: 4#ht = "hello there' /lectures/lec2_branch_loops.p
+    speech: So here, I don't have spaces anywhere. So you can see that the first line here h...
+lecture2_019   542.1s ->  547.5s   10 words  image=frame_0547.jpg
+    slide : 4#ht = "hello there' /lectures/lec2_branch_loops.py, wdir=C:/Users/Ana/Docunents
+    speech: So if I run this, notice this very first line,...
+lecture2_020   547.5s ->  595.6s   99 words  image=frame_0556.jpg
+    slide : 4#ht = "hello there' /lectures/lec2_branch_loops.py, wdir=C:/Users/Ana/Docunents
+    speech: added spaces everywhere in between all my objects. The second one, added spaces ...
+lecture2_021   592.0s ->  595.6s    9 words  image=frame_0595.jpg
+    slide : (no slide text)
+    speech: So the way you get input from the user...
+lecture2_022   595.6s ->  643.2s  119 words  image=frame_0621.jpg
+    slide : Title: INPUT/OUTPUT: input ("") Body: prints whatever is in the quotes. user typ
+    speech: is using this command function called input. And inside the parentheses, you typ...
+lecture2_023   636.8s ->  682.6s  105 words  image=frame_0661.jpg
+    slide : Title: INPUT/OUTPUT: input ("") Body: prints whatever is in the quotes. user typ
+    speech: So everything the user types in is going to be made as a string. In this line ri...
+lecture2_024   678.3s ->  725.1s  131 words  image=frame_0702.jpg
+    slide : Title: INPUT/OUTPUT: input ("") Body: prints whatever is in the quotes. user typ
+    speech: 25 or five five times? Yes, exactly. Five five times. Oftentimes, you don't want...
+lecture2_025   721.2s ->  734.8s   18 words  image=frame_0729.jpg
+    slide : (no slide text)
+    speech: I'm going to print out five times five instead of five five times. So that's the...
+lecture2_026   734.8s ->  738.1s   15 words  image=frame_0737.jpg
+    slide : 17#print(x) /lectures/lec2_branch_loops.py', 18#x_str = str(x) 19#printy fov num
+    speech: So the first bit is I'm going to get the user to type in anything....
+lecture2_027   738.1s ->  743.1s    8 words  image=frame_0742.jpg
+    slide : 17#print(x) 18#x_str = str(x) hello there ana ana ana 19#printy fov number {sxx=
+    speech: And I'm going to put five five five....
+lecture2_028   743.1s ->  744.7s    8 words  image=frame_0745.jpg
+    slide : (no slide text)
+    speech: And then when I type in the number,...
+lecture2_029   744.7s ->  793.9s  112 words  image=frame_0747.jpg
+    slide : 17#print(x) 18#x_str = str(x) 19printy fav nunber {sxx=x runfi1le(*C:/Users/Ana/
+    speech: since I'm casting it, I'm going to do operations with the number. Yeah, question...
+lecture2_030   793.9s ->  839.9s  104 words  image=frame_0818.jpg
+    slide : Title: int, float, string Body: COMPARISON OPERATORS ON " 1 and j are variable n
+    speech: The next thing we're going to look at is ways that you can start adding tests in...
+lecture2_031   836.8s ->  854.5s   52 words  image=frame_0844.jpg
+    slide : Title: int, float, string Body: COMPARISON OPERATORS ON " 1 and j are variable n
+    speech: allowed to compare ints with ints, floats with floats, strings with strings. And...
+lecture2_032   854.5s ->  858.3s    7 words  image=frame_0857.jpg
+    slide : (no slide text)
+    speech: is the letter a greater than five,...
+lecture2_033   858.3s ->  884.3s   66 words  image=frame_0861.jpg
+    slide : Title: 19printy fav nunber sxx=x Body: 17#print(x) 18#x_str = str(x) runfi1le(*C
+    speech: I get some angry text right here. And this just tells me Python doesn't understa...
+lecture2_034   884.3s ->  930.6s  123 words  image=frame_0896.jpg
+    slide : Title: int, float, string Body: COMPARISON OPERATORS ON i and j are variable nam
+    speech: So the single equal sign is an assignment. So you're taking a value and you're s...
+lecture2_035   925.6s ->  942.5s   38 words  image=frame_0935.jpg
+    slide : (no slide text)
+    speech: And the simplest is just inverting. So if a is a variable that has a Boolean val...
+lecture2_036   942.5s ->  989.5s  106 words  image=frame_0961.jpg
+    slide : Title: LOGIC OPERATORS ON booIs Body: " a and b are variable names (with Boolean
+    speech: This is a table that sort of represents what I've said here. So you can use and ...
+lecture2_037   987.4s ->  999.4s   39 words  image=frame_0994.jpg
+    slide : (no slide text)
+    speech: So what does it mean to compare a string with a string with a greater than? So t...
+lecture2_038   999.4s -> 1004.5s    8 words  image=frame_1003.jpg
+    slide : 17#print(x) 18#x_str = str(x) 19#printy fav number isxx=x runfi1e(*C:/Users/Ana/
+    speech: We can say, is a greater than b?...
+lecture2_039  1004.5s -> 1050.6s  120 words  image=frame_1029.jpg
+    slide : (no slide text)
+    speech: And it's false. So b becomes later in the alphabet than a. OK, so now we have wa...
+lecture2_040  1048.2s -> 1085.6s  124 words  image=frame_1068.jpg
+    slide : (no slide text)
+    speech: I signed up for the free food mailing list. And MIT being a maze, I had no idea ...
+lecture2_041  1085.6s -> 1111.7s   80 words  image=frame_1088.jpg
+    slide : If right clear, go right free food
+    speech: If my right hand always has to be on a wall, I'm going to say, if there's no wal...
+lecture2_042  1111.7s -> 1158.5s  119 words  image=frame_1123.jpg
+    slide : If right clear, If right blocked, If right and If right, front go right go forwa
+    speech: And then if there's a wall to my right in front of me and to the left, then I'm ...
+lecture2_043  1156.4s -> 1197.9s  131 words  image=frame_1178.jpg
+    slide : (no slide text)
+    speech: to make decisions for us. Now, you might be thinking, well, you said that comput...
+lecture2_044  1197.9s -> 1244.3s  100 words  image=frame_1219.jpg
+    slide : Title: CONTROL FLOW - BRANCHING Body: fcondition>: 1f <condition>: <expressica> 
+    speech: The first is the simple if. And given a program that just linearly has statement...
+lecture2_045  1244.3s -> 1282.5s   85 words  image=frame_1250.jpg
+    slide : Title: CONTROL FLOW - BRANCHING Body: ifAcondition> if <condition>: <expression>
+    speech: They're going to be inside this what we call code block. And the code block's de...
+lecture2_046  1282.5s -> 1326.8s   84 words  image=frame_1303.jpg
+    slide : Title: CONTROL FLOW - BRANCHING Body: 1f<condition> if <condition>: <expression>
+    speech: That's this right here. So this if else construct says, this is my code. I've re...
+lecture2_047  1326.8s -> 1356.2s   81 words  image=frame_1331.jpg
+    slide : Title: CONTROL FLOW - BRANCHING Body: f<condition> if <condition>: <expression> 
+    speech: And after I've executed one or the other, I'm going to continue on with just the...
+lecture2_048  1356.2s -> 1402.7s  111 words  image=frame_1380.jpg
+    slide : Title: CONTROL FLOW - BRANCHING Body: f<condition> i <condition>: <expression> <
+    speech: That's where this last one comes in. And we introduce this other keyword here ca...
+lecture2_049  1401.1s -> 1448.6s  137 words  image=frame_1416.jpg
+    slide : Title: CONTROL FLOW - BRANCHING Body: f<condition> i <condition>: <expression> <
+    speech: And depending on which one's true, you're going to execute a different set of in...
+lecture2_050  1445.7s -> 1489.5s   98 words  image=frame_1469.jpg
+    slide : (no slide text)
+    speech: You always enter one, and you enter the first one that evaluates to true. So not...
+lecture2_051  1489.5s -> 1536.6s   92 words  image=frame_1512.jpg
+    slide : Title: INDENTATION Body: matters in Pythone -how you denote blocks of code x = f
+    speech: And it checks if two variables are equal. And we have an if elif else. And in th...
+lecture2_052  1527.5s -> 1544.3s   32 words  image=frame_1531.jpg
+    slide : Title: INDENTATION Body: matters in Pythone -how you denote blocks of code x = f
+    speech: when we enter the first, this outer if. I do want to make one point, though. So ...
+lecture2_053  1544.3s -> 1592.6s  108 words  image=frame_1557.jpg
+    slide : Title: Wha if = here? get a SyntaxError Body: x = float(input"Enter a number for
+    speech: And that's OK. If you just use one equal sign, Python's going to give you an err...
+lecture2_054  1592.6s -> 1624.5s   87 words  image=frame_1610.jpg
+    slide : Title: - Legend of Zelda - keep going right, same screen,stuck in a loop Body: L
+    speech: where there was a scene with the lost woods. Oversimplification, if anyone's a Z...
+lecture2_055  1624.5s -> 1645.3s   61 words  image=frame_1636.jpg
+    slide : Title: - keep going right, aloop Body: - Legend of Zelda-- Lost Woods takes you 
+    speech: And we'd say something like this. If the user exits right, then set the backgrou...
+lecture2_056  1645.3s -> 1687.7s  104 words  image=frame_1651.jpg
+    slide : Title: - Legend of Zelda - -keep going right, same screen, stuck in aloop Body: 
+    speech: If they exit right, set the background to the woods background. Otherwise, set t...
+lecture2_057  1687.7s -> 1691.1s    5 words  image=frame_1690.jpg
+    slide : Title: - keep going right, Body: - Legend of Zelda -- Lost Woods takes you back 
+    speech: And specifically, a while loop....
+lecture2_058  1691.1s -> 1695.3s    9 words  image=frame_1695.jpg
+    slide : Title: - keep going right, aloop Body: - Legend of Zelda - Lost Woods takes you 
+    speech: So this code here that could be infinitely number...
+lecture2_059  1695.3s -> 1737.5s  128 words  image=frame_1715.jpg
+    slide : Title: - keep going right, Body: - Legend of Zelda -- Lost Woods takes you back 
+    speech: of nested if statements deep can be rewritten using these three lines. So we say...
+lecture2_060  1737.5s -> 1784.4s  111 words  image=frame_1755.jpg
+    slide : Title: while LOOPS Body: CONTROL FLOW: while <condition>: <expression> <expressi
+    speech: We have while. That's the keyword. The condition is something that gets evaluate...
+lecture2_061  1778.7s -> 1788.9s   26 words  image=frame_1785.jpg
+    slide : (no slide text)
+    speech: can code up the lost woods of Zelda, even worse graphics, by the way, than the o...
+lecture2_062  1788.9s -> 1830.7s  127 words  image=frame_1803.jpg
+    slide : Title: whi1e LOOP EXAMPLE Body: You are in the Lost Forest. Go left or right? PR
+    speech: So I print out the following things. You're in the lost forest, go left or right...
+lecture2_063  1830.7s -> 1842.0s   24 words  image=frame_1839.jpg
+    slide : 53#num =int(inputEnter a number:") wdir='C:/Users/Ana/Docunents/MIT/6/Fal116/1e 
+    speech: But I decided to improve on the code that's in the slides. And I've written here...
+lecture2_064  1842.0s -> 1845.2s   11 words  image=frame_1845.jpg
+    slide : (no slide text)
+    speech: So if I run my code, you're in the lost forest,...
+lecture2_065  1845.2s -> 1846.0s    4 words  image=frame_1847.jpg
+    slide : (no slide text)
+    speech: go left or right....
+lecture2_066  1846.0s -> 1851.2s   14 words  image=frame_1850.jpg
+    slide : Title: Out[33]:False Body: 53#num =int(inputEnter a number:") unorueraoretypessm
+    speech: So if I say left, then yay, I got out of the lost forest....
+lecture2_067  1851.2s -> 1856.4s    8 words  image=frame_1855.jpg
+    slide : (no slide text)
+    speech: But if I go right, then I'm stuck....
+lecture2_068  1856.4s -> 1891.4s  104 words  image=frame_1864.jpg
+    slide : 53#nus =int(inputEnter a number:) print(number is even") 56#else: runfile(*C:/Us
+    speech: I took down some trees. You can see there's no more trees here. I made a table, ...
+lecture2_069  1891.4s -> 1937.9s  109 words  image=frame_1916.jpg
+    slide : Title: while and for LOOPS Body: CONTROL FLOW: iterate through numbers in a sequ
+    speech: So so far, we've used while loops to ask for user input. And that's actually som...
+lecture2_070  1935.6s -> 1960.5s   71 words  image=frame_1940.jpg
+    slide : Title: while and for LOOPS Body: CONTROL FLOW: iterate through numbers in a sequ
+    speech: The reason why the second one's important is because let's look at our condition...
+lecture2_071  1960.5s -> 1973.3s   11 words  image=frame_1969.jpg
+    slide : 53#num =int(inputEnter a number:") ctures') print(nunber is even) 56#else: You a
+    speech: So I can say something like, so while true, print 0....
+lecture2_072  1973.3s -> 1975.7s   13 words  image=frame_1975.jpg
+    slide : (no slide text)
+    speech: So this is going to give me an infinite loop in my program....
+lecture2_073  1988.0s -> 1993.8s   21 words  image=frame_1992.jpg
+    slide : Title: Fi1e "<ipython-input-36-32e9d9ec79dc>", Body: 53#num =int(inputEnter a nu
+    speech: So notice it's just printing the letter p over and over again. And if I let it g...
+lecture2_074  1993.8s -> 2015.2s   55 words  image=frame_1999.jpg
+    slide : 53#num =int(input"Enter a number: ") print(number is even") 56#else: print(numbe
+    speech: going to slow down the computer. So I'm going to hit Control-C, or Command-C may...
+lecture2_075  2015.2s -> 2033.7s   51 words  image=frame_2022.jpg
+    slide : Title: while and for LOOPS Body: CONTROL FLOW: iterate through numbers in a sequ
+    speech: So going back to this example, I was saying that if you're using variables in or...
+lecture2_076  2033.7s -> 2081.8s  126 words  image=frame_2059.jpg
+    slide : Title: while and for LOOPS. Body: CONTROL FLOW: iterate through numbers in a seq
+    speech: And so there's a shortcut for doing that exact same thing. So these four lines, ...
+lecture2_077  2076.8s -> 2107.6s   94 words  image=frame_2083.jpg
+    slide : Title: while and for LOOPS. Body: CONTROL FLOW: iterate through numbers in a seq
+    speech: So the sequence is going to be 0, 1, 2, 3, and 4. The first time through the loo...
+lecture2_078  2107.6s -> 2156.0s  112 words  image=frame_2133.jpg
+    slide : Title: CONTROL FLOW: for LOOPS Body: for <variable> in range(<some_num>): <expre
+    speech: So this is the general look of a for loop. So we have for some loop variable. Ag...
+lecture2_079  2150.6s -> 2197.6s  117 words  image=frame_2158.jpg
+    slide : Title: CONTROL FLOW: for LOOPS Body: for <variable> in range(<some_num>): <expre
+    speech: you're going to go on to the next value, so 1. You're going to execute all these...
+lecture2_080  2194.2s -> 2202.2s   24 words  image=frame_2199.jpg
+    slide : (no slide text)
+    speech: that don't increment the numbers by 1, but maybe skip every other number or go e...
+lecture2_081  2202.2s -> 2250.3s  131 words  image=frame_2223.jpg
+    slide : Title: range(start, stop, step). Body: - default values are start = 0 and step =
+    speech: So you can customize range to your needs. The one thing you do need to give it i...
+lecture2_082  2246.2s -> 2256.9s   29 words  image=frame_2253.jpg
+    slide : (no slide text)
+    speech: and stop at or so you're going to start at the start value and you're going to g...
+lecture2_083  2256.9s -> 2304.4s  106 words  image=frame_2269.jpg
+    slide : Title: range(start/stop,step) Body: -default values are start = 0 and step = 1 a
+    speech: So in this first code right here, my sum is going to get the value 0 and you're ...
+lecture2_084  2301.3s -> 2308.2s   19 words  image=frame_2306.jpg
+    slide : (no slide text)
+    speech: So this loop variable i, the very first time through the loop is going to have t...
+lecture2_085  2308.2s -> 2353.2s   71 words  image=frame_2331.jpg
+    slide : Title: range (start/stop,step) Body: -default values are start = 0 and step = 1 
+    speech: So my sum is going to be 0 plus 7. That's everything that's inside the code bloc...
+lecture2_086  2348.2s -> 2378.7s   66 words  image=frame_2351.jpg
+    slide : Title: range (start/stop,step) Body: -default values are start = 0 and step = 1 
+    speech: Obviously replacing that with the previous value, so 15. Since we're not going t...
+lecture2_087  2378.7s -> 2385.7s    8 words  image=frame_2384.jpg
+    slide : Title: Fi1e "<ipython-input-37-aabeeb5893e0>", Body: 80## EXAMPLE: for Loops 82=
+    speech: So you can go in spider and say,...
+lecture2_088  2385.7s -> 2392.1s    6 words  image=frame_2391.jpg
+    slide : 82#for n in range(5) print(n) 85#nysum=0 86#for i (n ronge(10) sysum+= 88#print(
+    speech: let's say in this example here....
+lecture2_089  2392.1s -> 2399.0s    6 words  image=frame_2396.jpg
+    slide : 82#for n in range(5) print(n) 85#nysum=0 86#for i (n ronge(10) sysum+= 88#print(
+    speech: So we can say 7.1, 10.3....
+lecture2_090  2399.0s -> 2420.0s   31 words  image=frame_2411.jpg
+    slide : (no slide text)
+    speech: So they have to be integers. So that's that example, and let's erase that. In th...
+lecture2_091  2420.0s -> 2465.9s  118 words  image=frame_2431.jpg
+    slide : Title: range(start, stop,step) mysum = 0 Body: - default values are start = 0 an
+    speech: So we're starting at 5. Tell me what the next value is supposed to be if we're t...
+lecture2_092  2465.9s -> 2510.9s  105 words  image=frame_2489.jpg
+    slide : Title: break STATEMENT Body: immediately exits whatever loop it is in - skips re
+    speech: It's going to, as soon as Python sees this break statement, it's going to say, O...
+lecture2_093  2506.3s -> 2544.5s  104 words  image=frame_2521.jpg
+    slide : Title: break STATEMENT Body: immediately exits whatever loop it is in - skips re
+    speech: that's the innermost loop that the break is found in. So we're going to exit out...
+lecture2_094  2544.5s -> 2580.7s  114 words  image=frame_2559.jpg
+    slide : Title: VS while LOOPS Body: for loops while loops - know number of " unbounded n
+    speech: you know the number of iterations. While loops are very useful when, for example...
+lecture2_095  2580.7s -> 2602.5s   61 words  image=frame_2586.jpg
+    slide : Title: VS while LOOPS Body: for loops while loops - know number of unbounded num
+    speech: We've seen as the very first example of a for loop that the for loop could be re...
+[STEP build_db] 11:48:54.79 
+Loaded 95 chunks
+Loading BGE-M3 (first time: downloading, please wait)...
+Embedding device: cuda
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 15040.24it/s]
+Creating vectors...
+Batches:   0%|          | 0/3 [00:00<?, ?it/s]Batches:  33%|███▎      | 1/3 [00:08<00:17,  8.86s/it]Batches:  67%|██████▋   | 2/3 [00:12<00:05,  5.99s/it]Batches: 100%|██████████| 3/3 [00:15<00:00,  4.32s/it]Batches: 100%|██████████| 3/3 [00:15<00:00,  5.06s/it]
+Each vector has 1024 numbers
+
+Done! Saved 95 chunks to output/chroma_db
+Now run: python search.py
+[END] 11:49:35.22 
+PIPELINE_FINISHED 

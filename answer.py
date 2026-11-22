@@ -1,119 +1,66 @@
 """
-Step 4: question -> find parts of the video (Chroma) -> short answer (Gemini)
+Step 4: 問問題 -> 找出影片片段 -> Gemini 寫出簡短回答，附上影片名稱與時間
 
-Full RAG loop:
-    Retrieval  : BGE-M3 + Chroma find the most relevant parts of the video
-    Generation : Google Gemini reads only those parts and writes a short answer
+完整流程在 rag.py：
+    檢索    : BM25 關鍵字 + BGE-M3 向量（RRF 合併）
+    重新排序 : bge-reranker-v2-m3 把問題和片段一起讀，排出最相關的 5 段
+    生成    : Gemini 只讀這些片段，找不到答案時會說找不到（不亂猜）
 
-Setup (in the same CMD window, before running):
+準備（只要一次）:
     pip install google-genai
-    set GEMINI_API_KEY=your-key        (get one at https://aistudio.google.com/apikey)
+    金鑰：在專案資料夾建立 gemini_key.txt，裡面貼上金鑰（https://aistudio.google.com/apikey）
+          或在 CMD 先執行  set GEMINI_API_KEY=你的金鑰
 
 Usage:
-    python answer.py
-    (type a question, press Enter; empty line to quit)
+    python answer.py                          # 搜尋影片庫裡全部影片（library/），沒有就用 output/
+    python answer.py --video mit_prob_l01     # 只問某支影片
+    python answer.py --db results/lecture2/chroma_db
+    python answer.py -q "what is the union bound"   # 只問一題就結束
 """
-import os
+import argparse
+import json
 import sys
 
-# ------------------------------------------------------------------
-# Settings you can edit
-# ------------------------------------------------------------------
-# 使用目前 Gemini API 可用的穩定 Flash-Lite 模型代號。
-GEMINI_MODEL = "gemini-3.5-flash-lite"
+from rag import VideoRAG, format_result
 
-DB_DIR = "output/chroma_db"
-COLLECTION = "lecture_chunks"
-EMBED_MODEL = "BAAI/bge-m3"
-TOP_K = 3            # how many parts of the video to read
-MAX_DISTANCE = 0.95  # parts farther than this are treated as "not related"
-# ------------------------------------------------------------------
-
-SYSTEM_PROMPT = (
-    "You answer questions about a lecture video using ONLY the video parts "
-    "provided by the user. Rules:\n"
-    "- Give a short, direct answer (1 to 3 sentences). Do not copy long passages.\n"
-    "- Mention the time of the part you used, like (00:41).\n"
-    "- If the parts do not contain the answer, say you cannot find it in the "
-    "video. Never guess.\n"
-    "- Slide text comes from OCR: it may contain mistakes, and it does not tell "
-    "which number belongs to which picture. Prefer the speech text for facts.\n"
-    "- Answer in the same language as the question."
-)
-
-api_key = os.environ.get("GEMINI_API_KEY")
-if not api_key:
-    sys.exit("GEMINI_API_KEY is not set. In CMD run:  set GEMINI_API_KEY=your-key")
-
-import chromadb
-from google import genai
-from google.genai import types
-from sentence_transformers import SentenceTransformer
+parser = argparse.ArgumentParser()
+parser.add_argument("--db", help="Chroma folder (default: library/chroma_db, else output/chroma_db)")
+parser.add_argument("--video", help="only these videos, comma-separated")
+parser.add_argument("-q", "--question", help="ask one question and exit")
+parser.add_argument("--json", action="store_true", help="print the full result as JSON")
+args = parser.parse_args()
 
 try:
-    collection = chromadb.PersistentClient(path=DB_DIR).get_collection(COLLECTION)
-except Exception:
-    sys.exit("Database not found. Run build_db.py first.")
+    rag = VideoRAG(args.db)
+except RuntimeError as e:
+    sys.exit(str(e))
 
-client = genai.Client(api_key=api_key)
-print(f"Using Gemini model: {GEMINI_MODEL}")
-print("Loading BGE-M3...")
-import torch
-
-# 問題向量化同樣使用可用的 CUDA 裝置，否則退回 CPU。
-DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
-print(f"Answer embedding device: {DEVICE}")
-embedder = SentenceTransformer(EMBED_MODEL, device=DEVICE)
+videos = args.video.split(",") if args.video else None
+print(f"Database: {rag.db_dir}  ({len(rag.videos)} videos: {', '.join(rag.videos)})")
+print(f"Gemini model: {rag.s['gemini_model']}   re-ranker: "
+      f"{'on' if rag.retriever.reranker else 'off'}")
 
 
-def mmss(seconds):
-    seconds = int(seconds)
-    return f"{seconds // 60:02d}:{seconds % 60:02d}"
+def run(question):
+    r = rag.ask(question, videos)
+    if args.json:
+        print(json.dumps(r, ensure_ascii=False, indent=1))
+        return
+    print("\n" + format_result(r, show_video=len(rag.videos) > 1))
+    if r["error"]:
+        print(f"\n({r['error']})")
+    print(f"\n[檢索 {r['retrieve_ms']} ms, Gemini {r['llm_ms']} ms, 讀了 {len(r['parts'])} 段]")
 
+
+if args.question:
+    run(args.question)
+    sys.exit()
 
 while True:
-    question = input("\nQuestion (empty to quit): ").strip()
+    try:
+        question = input("\nQuestion (empty to quit): ").strip()
+    except EOFError:
+        break
     if not question:
         break
-
-    # 1. Retrieval: find the closest parts of the video
-    vector = embedder.encode([question], normalize_embeddings=True)[0].tolist()
-    result = collection.query(query_embeddings=[vector], n_results=TOP_K)
-
-    parts = []
-    for i in range(len(result["ids"][0])):
-        if result["distances"][0][i] <= MAX_DISTANCE:
-            parts.append({
-                "meta": result["metadatas"][0][i],
-                "text": result["documents"][0][i],
-                "distance": result["distances"][0][i],
-            })
-
-    if not parts:
-        print("\nNo related part found in the video.")
-        continue
-
-    # 2. Generation: give those parts to Gemini and ask for a short answer
-    context = "\n\n".join(
-        f"[Part {n} | {mmss(p['meta']['start'])} - {mmss(p['meta']['end'])}]\n{p['text']}"
-        for n, p in enumerate(parts, start=1)
-    )
-    user_message = f"Video parts:\n{context}\n\nQuestion: {question}"
-
-    try:
-        response = client.models.generate_content(
-            model=GEMINI_MODEL,
-            contents=user_message,
-            config=types.GenerateContentConfig(system_instruction=SYSTEM_PROMPT),
-        )
-        answer = response.text
-    except Exception as e:
-        print(f"\nGemini error: {e}")
-        print("(404 = wrong model name; 400/401/403 = wrong key; 429 = free limit reached, wait a bit)")
-        continue
-
-    print(f"\nAnswer: {answer}")
-    print("\nSources:")
-    for p in parts:
-        print(f"  {mmss(p['meta']['start'])} -> {mmss(p['meta']['end'])}"
-              f"  (distance {p['distance']:.3f})  {p['meta']['image']}")
+    run(question)

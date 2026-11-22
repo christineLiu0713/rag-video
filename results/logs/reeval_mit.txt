@@ -1,0 +1,165 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading BGE-M3 on cuda...
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 15046.31it/s]
+20 questions, 95 chunks in database
+
+# 檢索方法比較（vector / bm25 / hybrid）
+
+- 資料庫：results\mit_prob_l01\chroma_db　題目檔：evaluation\questions\mit_prob_l01.json
+- all = 每種方法排完所有片段再合併；top10 = 各取前 10 名再合併（系統實際設定）；w = bm25_weight
+- 題目數：20　片段數：95　向量模型：BAAI/bge-m3（cuda）
+- RRF：k=60、vector_weight=1.0
+
+## ALL（20 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 75% | 95% | 0.849 | 51 |
+| bm25 | 60% | 70% | 0.651 | 37 |
+| hybrid (all, w=1) | 70% | 95% | 0.818 | 39 |
+| hybrid (top10, w=1) | 70% | 100% | 0.833 | 35 |
+| hybrid (top10, w=0.5) | 70% | 100% | 0.842 | 36 |
+| hybrid (top10, w=0.3) | 75% | 100% | 0.867 | 35 |
+
+## keyword（8 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 88% | 100% | 0.938 | 66 |
+| bm25 | 75% | 100% | 0.854 | 34 |
+| hybrid (all, w=1) | 88% | 100% | 0.938 | 36 |
+| hybrid (top10, w=1) | 88% | 100% | 0.938 | 32 |
+| hybrid (top10, w=0.5) | 88% | 100% | 0.938 | 32 |
+| hybrid (top10, w=0.3) | 88% | 100% | 0.938 | 31 |
+
+## paraphrase（8 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 75% | 88% | 0.830 | 43 |
+| bm25 | 75% | 75% | 0.775 | 42 |
+| hybrid (all, w=1) | 62% | 88% | 0.754 | 42 |
+| hybrid (top10, w=1) | 62% | 100% | 0.792 | 39 |
+| hybrid (top10, w=0.5) | 62% | 100% | 0.812 | 40 |
+| hybrid (top10, w=0.3) | 75% | 100% | 0.875 | 39 |
+
+## chinese（4 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 50% | 100% | 0.708 | 38 |
+| bm25 | 0% | 0% | 0.000 | 34 |
+| hybrid (all, w=1) | 50% | 100% | 0.708 | 40 |
+| hybrid (top10, w=1) | 50% | 100% | 0.708 | 35 |
+| hybrid (top10, w=0.5) | 50% | 100% | 0.708 | 34 |
+| hybrid (top10, w=0.3) | 50% | 100% | 0.708 | 34 |
+
+## 每題正確片段的名次（越小越好，- = 沒找到）
+
+| 類型 | 問題 | vector | bm25 | hybrid (all, w=1) | hybrid (top10, w=1) | hybrid (top10, w=0.5) | hybrid (top10, w=0.3) |
+|---|---|---|---|---|---|---|---|
+| keyword | mutually exclusive and collectively exhaustive | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | tetrahedral die with 16 possible outcomes | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | what is the union bound | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | countable additivity axiom | 2 | 1 | 2 | 2 | 2 | 2 |
+| keyword | nonnegativity axiom | 1 | 3 | 1 | 1 | 1 | 1 |
+| keyword | discrete uniform probability law | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | why is the unit square an uncountable set | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | probability of the empty set | 1 | 2 | 1 | 1 | 1 | 1 |
+| paraphrase | does the weather outside matter when listing outcomes of a coin flip | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | why can't each point of a continuous target get its own positive probability | 1 | 6 | 3 | 3 | 2 | 1 |
+| paraphrase | how do we draw an experiment that happens in stages | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | if one event is contained in another which one is more likely | 1 | 34 | 5 | 2 | 2 | 2 |
+| paraphrase | how to get a probability by counting when all outcomes are equally likely | 7 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | what are the general steps for solving a probability problem | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | how do we check that the given probabilities of the integers really add to one | 2 | 1 | 2 | 2 | 2 | 2 |
+| paraphrase | what is the chance that the dart hits one exact point | 1 | 1 | 1 | 1 | 1 | 1 |
+| chinese | 樣本空間要怎麼選才適當 | 1 | - | 1 | 1 | 1 | 1 |
+| chinese | 機率的公理有哪些 | 3 | - | 3 | 3 | 3 | 3 |
+| chinese | 兩個事件聯集的機率怎麼算 | 1 | - | 1 | 1 | 1 | 1 |
+| chinese | 連續樣本空間的例子 | 2 | - | 2 | 2 | 2 | 2 |
+
+Saved: results\mit_prob_l01\eval_result.md, results\mit_prob_l01\eval_detail.csv, results\mit_prob_l01\eval_summary.json
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading BGE-M3 on cuda...
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 13972.44it/s]
+18 questions, 65 chunks in database
+
+# 檢索方法比較（vector / bm25 / hybrid）
+
+- 資料庫：results\mit_1806_l01\chroma_db　題目檔：evaluation\questions\mit_1806_l01.json
+- all = 每種方法排完所有片段再合併；top10 = 各取前 10 名再合併（系統實際設定）；w = bm25_weight
+- 題目數：18　片段數：65　向量模型：BAAI/bge-m3（cuda）
+- RRF：k=60、vector_weight=1.0
+
+## ALL（18 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 72% | 89% | 0.799 | 53 |
+| bm25 | 50% | 56% | 0.569 | 34 |
+| hybrid (all, w=1) | 67% | 94% | 0.783 | 35 |
+| hybrid (top10, w=1) | 67% | 94% | 0.782 | 34 |
+| hybrid (top10, w=0.5) | 67% | 89% | 0.786 | 34 |
+| hybrid (top10, w=0.3) | 67% | 89% | 0.784 | 34 |
+
+## keyword（7 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 71% | 86% | 0.780 | 78 |
+| bm25 | 57% | 71% | 0.714 | 32 |
+| hybrid (all, w=1) | 71% | 100% | 0.810 | 32 |
+| hybrid (top10, w=1) | 71% | 100% | 0.810 | 31 |
+| hybrid (top10, w=0.5) | 71% | 86% | 0.798 | 31 |
+| hybrid (top10, w=0.3) | 71% | 86% | 0.790 | 31 |
+
+## paraphrase（7 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 71% | 86% | 0.774 | 41 |
+| bm25 | 71% | 71% | 0.749 | 38 |
+| hybrid (all, w=1) | 57% | 86% | 0.705 | 39 |
+| hybrid (top10, w=1) | 57% | 86% | 0.701 | 38 |
+| hybrid (top10, w=0.5) | 57% | 86% | 0.724 | 37 |
+| hybrid (top10, w=0.3) | 57% | 86% | 0.724 | 37 |
+
+## chinese（4 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 75% | 100% | 0.875 | 33 |
+| bm25 | 0% | 0% | 0.000 | 28 |
+| hybrid (all, w=1) | 75% | 100% | 0.875 | 35 |
+| hybrid (top10, w=1) | 75% | 100% | 0.875 | 31 |
+| hybrid (top10, w=0.5) | 75% | 100% | 0.875 | 31 |
+| hybrid (top10, w=0.3) | 75% | 100% | 0.875 | 32 |
+
+## 每題正確片段的名次（越小越好，- = 沒找到）
+
+| 類型 | 問題 | vector | bm25 | hybrid (all, w=1) | hybrid (top10, w=1) | hybrid (top10, w=0.5) | hybrid (top10, w=0.3) |
+|---|---|---|---|---|---|---|---|
+| keyword | fundamental problem of linear algebra | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | row picture where two lines meet | 3 | 4 | 3 | 3 | 3 | 3 |
+| keyword | linear combination of the columns | 1 | 2 | 1 | 1 | 1 | 1 |
+| keyword | column picture in three dimensions | 8 | 4 | 3 | 3 | 4 | 5 |
+| keyword | non-singular invertible matrix | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | dot product of a row with x | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | nine vectors in nine-dimensional space | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | what shape is the set of solutions of one equation in three unknowns | 12 | 10 | 10 | 14 | 14 | 14 |
+| paraphrase | when is it impossible to reach every right-hand side | 1 | 7 | 3 | 3 | 2 | 2 |
+| paraphrase | how do you multiply a matrix by a vector | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | which point solves both equations in the two by two example | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | why is it hard to see three planes meeting | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | what happens if we keep the matrix but change the right-hand side | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | what do all combinations of the two columns fill | 3 | 1 | 2 | 2 | 2 | 2 |
+| chinese | 線性代數的基本問題是什麼 | 1 | - | 1 | 1 | 1 | 1 |
+| chinese | 矩陣乘以向量怎麼算 | 1 | - | 1 | 1 | 1 | 1 |
+| chinese | 奇異矩陣是什麼情況 | 2 | - | 2 | 2 | 2 | 2 |
+| chinese | 行向量的線性組合 | 1 | - | 1 | 1 | 1 | 1 |
+
+Saved: results\mit_1806_l01\eval_result.md, results\mit_1806_l01\eval_detail.csv, results\mit_1806_l01\eval_summary.json
+
+Report: results\testset_report.md
+REEVAL_DONE 

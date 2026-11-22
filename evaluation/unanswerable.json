@@ -1,0 +1,15 @@
+{
+ "note": "影片裡都沒有講的問題：系統應該回答「找不到」，不能用 Gemini 自己的知識亂答。題目刻意避開測試集影片的主題（機率、線性代數、程式、莊子）。",
+ "questions": [
+  {"q": "How do I bake sourdough bread?", "type": "unanswerable"},
+  {"q": "Who won the 2022 FIFA World Cup?", "type": "unanswerable"},
+  {"q": "What is photosynthesis?", "type": "unanswerable"},
+  {"q": "How do you change a flat car tire?", "type": "unanswerable"},
+  {"q": "What does the lecturer say about the French Revolution?", "type": "unanswerable"},
+  {"q": "台北101有幾層樓？", "type": "unanswerable"},
+  {"q": "怎麼申請護照？", "type": "unanswerable"},
+  {"q": "如何訓練小狗不亂咬東西？", "type": "unanswerable"},
+  {"q": "這堂課有介紹日本料理怎麼做嗎？", "type": "unanswerable"},
+  {"q": "颱風是怎麼形成的？", "type": "unanswerable"}
+ ]
+}

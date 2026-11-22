@@ -1,0 +1,22 @@
+[
+  {
+    "start": 0.0,
+    "end": 117.0,
+    "text": "Title: 1#For Loops - 1 minute video tutorial by 101computing.net Body: File Edit Search View Project Run Tools Help 5for counter in range1,5 print(\"Hello World\") Python Interpreter *** Python 3.3.5 v3.3.5:62cf4e77f785 Mar 9 201410:3712 [MSC v.1600 32 bit Intel] on win32.*** Remote Interpreter Reinitialized *** Hello world Hello World Hello World Hello World The End"
+  },
+  {
+    "start": 117.0,
+    "end": 144.0,
+    "text": "Title: Both lines 6 and 7 are indented to the right. Body: File Edit Search View Project Run Tools Help 1#For Loops - 1 minute video tutorial by 10icomputing.net 3print----ForLoop ---- 5for counter in range1,5): print(\"Hello World\") print(counter) print ***Python 3.3.5 v3.3.5:62cf4e77t785Mar 9 201410:37:12 [MSC v.1600 32 bit Intel]on win32.*** Remote Interpreter Reinitialized*** For Loop - Hello world Hello World Hello world Hello World The End"
+  },
+  {
+    "start": 144.0,
+    "end": 177.0,
+    "text": "Title: 1#For Loops - 1 minute video tutorial by 10lcomputing.net print(\"Hello World\") print(counter) Body: File Edit Search View Project Run Tools Help 5for counter in range1,5: Python Interpreter Remote Interpreter Reinitialized*** For Loop Hello world Hello world Hello world Hello world The End --"
+  },
+  {
+    "start": 177.0,
+    "end": 180.0,
+    "text": "Computing .net The End. Thanks for watching. Find out more on www.101computing.net"
+  }
+]

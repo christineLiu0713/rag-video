@@ -1,0 +1,190 @@
+
+===== [16:55:42] extract: D:\7\413410654\專題\rag-video-main\venv\Scripts\python.exe extract.py D:\7\413410654\專題\rag-video-main\videos\test_video.mp4 --lang en
+Language: en   Whisper model: small.en
+[1/4] Extracting screenshots (one every 3 second(s))...
+      Extracting audio...
+[2/4] Whisper is listening...
+      Whisper device: CUDA
+      Whisper: {'model': 'small.en', 'batch_size': 8, 'load_sec': 3.6, 'device': 'cuda', 'compute_type': 'int8_float32'}
+       2.0 ->     6.8 | Okay, I've got less than three minutes to tell you about for loops in Python
+       6.8 ->    11.5 | And the first thing we need to know about the for loop is that it's used to make the computer
+      12.3 ->    19.5 | Repeat the processing of a few lines of code so you can repeat a few instructions many times in your program
+      19.8 ->    25.0 | Let's look at an example here. We've got a for loop on line 5 so it start with the keyword for
+      25.6 ->    30.9 | then counter in range 1 2 5 and then underneath that for loop
+      31.3 ->    37.6 | Our code is indented, which means it's got a bit of space before the code printHelloWorld.
+      37.6 ->    41.5 | And then we've got a line 8, where the code is back to the left.
+      41.5 ->    42.9 | So let's see what happens here.
+      42.9 ->    49.4 | When I run this code, it starts with follow-up, which is this instruction here, and then it's
+      49.4 ->    54.3 | going to print HelloWorld, and it's done it one, two, three, four times, and then it's
+      54.3 ->    56.6 | printed the end.
+      60.3 ->    65.8 | four times now that is a bit unexpected because we said from one to five so i was expecting to
+      65.8 ->    71.7 | see the word hello world five times and it's only appearing four times and the reason being
+      71.7 ->    79.5 | is because python um start at position one and it stopped just before the last position
+      84.1 ->    90.5 | loops through this is that you can say it's going to do it from 5 take away 1 which is 4 times.
+      90.5 ->    96.9 | Okay and that's how it works. Now in a for loop we can have multiple lines of codes. As long as
+      96.9 ->   102.9 | we keep them indented to the right they will be part of the for loop hence the code will be
+     102.9 ->   110.3 | repeated. So for instance I could print something else here or I could also print and use
+     113.9 ->   118.1 | in my for loop. Let's see what happens. Now both those lines would be repeated
+     118.1 ->   122.1 | because the bus indented whereas this one is not indented so it
+     122.1 ->   126.7 | will only happen once, once it's finished looping. Okay let's
+     126.7 ->   132.3 | try this, see what happens. Hello world one, hello world two, hello
+     132.3 ->   136.6 | world three, hello world four, the end. So as you can see here my
+     136.6 ->   140.0 | counter started at one which is my starting position
+     140.0 ->   144.6 | and then progressively it did increment so it
+     142.9 ->   149.7 | raised by one every time it went through the loop. And it stopped, as I said, always one before the
+     149.7 ->   156.1 | last. This is why very often people don't call it counter. Programmers don't call it counter. They
+     156.1 ->   164.3 | call it I for I in range. And I stands for increment. It's because the increment goes up by
+     164.3 ->   169.3 | one. But to be honest, you can call it whatever you want. So let's try this. It should be exactly
+     172.6 ->   178.2 | And that's it. That's all I wanted to explain about for loops. I hope you enjoyed this.
+   Done: 30 sentences. Saved to output/whisper.json
+[3/4] PaddleOCR is reading text from the screenshots...
+INFO: Could not find files for the given pattern(s).
+C:\Users\mskid\AppData\Local\Programs\Python\Python311\Lib\site-packages\paddle\utils\cpp_extension\extension_utils.py:718: UserWarning: No ccache found. Please be aware that recompiling all source files may be required. You can download and install ccache from: https://github.com/ccache/ccache/blob/master/doc/INSTALL.md
+  warnings.warn(warning_message)
+[32mCreating model: ('PP-OCRv4_mobile_det', None, None)[0m
+[32mModel files already exist. Using cached files. To redownload, please delete the directory manually: `C:\Users\mskid\.paddlex\official_models\PP-OCRv4_mobile_det`.[0m
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I1122 16:56:13.249902  3016 onednn_context.cc:81] oneDNN v3.6.2
+[32mCreating model: ('en_PP-OCRv4_mobile_rec', None, None)[0m
+[32mModel files already exist. Using cached files. To redownload, please delete the directory manually: `C:\Users\mskid\.paddlex\official_models\en_PP-OCRv4_mobile_rec`.[0m
+      PaddleOCR device: CPU (MKL-DNN on, 8 threads), language en, model en_PP-OCRv4_mobile_rec
+      Adaptive sampling on (after 2 same slides, up to every 4 screenshots; slide match: tokens)
+   second     0: Computing .net <3 min For Loops - Python Tutorial
+   second     3: FileEdit Search View Project Run Tools Help 1#For Loops -1 minute vide
+   second    21: 1#For Loops - 1 minute video tutorial by 10lcomputing.net 3print("----
+   second    30: For Loops 1 minute video totorial by leicomputingonet 5for counter in 
+   second    42: File Edit Search View Project Run Tools Help 1#For Loops -1 minute vid
+   second    54: Title: 1#For Loops - 1 minute video tutoriol by Jeicomputing.net print
+   second    66: Title: 1#For Loops - 1 minute video tutorial by 101computing.net Body:
+   second   117: Title: Both lines 6 and 7 are indented to the right. Body: File Edit S
+   second   120: File Edit Search View Project Run Tools Help 1#For Loops - 1 minute vi
+   second   126: File Edit Search View Project Run Tools Help 1#For Loops - 1 minute vi
+   second   132: Search 1#For Loops - 1 minute video tutorial by leicomputing.net 3prin
+   second   144: Title: 1#For Loops - 1 minute video tutorial by 10lcomputing.net print
+   second   177: Computing .net The End. Thanks for watching. Find out more on www.101c
+   OCR was run 13 times for 60 screenshots (13 regular + 0 to locate slide changes).
+   OCR time: 36.3s total, 2.79s per OCR call (1 process(es) x 8 thread(s))
+   Done: 4 text blocks. Saved to output/ocr.json
+[4/4] Finished!
+Open these files in the output folder to see the results:
+  - output/whisper.json  (speech)
+  - output/ocr.json      (on-screen text)
+
+===== [16:56:52] build_chunks: D:\7\413410654\專題\rag-video-main\venv\Scripts\python.exe build_chunks.py test_video
+Speech sentences kept: 30 / 30
+Slide text blocks kept: 4 / 4
+
+Created 5 chunks -> output\chunks.jsonl
+
+test_video_001     2.0s ->   49.4s  153 words  image=frame_0010.jpg
+    slide : Title: 1#For Loops - 1 minute video tutorial by 101computing.net Body: File Edit
+    speech: Okay, I've got less than three minutes to tell you about for loops in Python And...
+test_video_002    42.9s ->   90.5s  117 words  image=frame_0023.jpg
+    slide : Title: 1#For Loops - 1 minute video tutorial by 101computing.net Body: File Edit
+    speech: When I run this code, it starts with follow-up, which is this instruction here, ...
+test_video_003    84.1s ->  118.1s   98 words  image=frame_0035.jpg
+    slide : Title: 1#For Loops - 1 minute video tutorial by 101computing.net Body: File Edit
+    speech: loops through this is that you can say it's going to do it from 5 take away 1 wh...
+test_video_004   118.1s ->  144.6s   67 words  image=frame_0045.jpg
+    slide : Title: Both lines 6 and 7 are indented to the right. Body: File Edit Search View
+    speech: because the bus indented whereas this one is not indented so it will only happen...
+test_video_005   142.9s ->  178.2s   99 words  image=frame_0055.jpg
+    slide : Title: 1#For Loops - 1 minute video tutorial by 10lcomputing.net print("Hello Wo
+    speech: raised by one every time it went through the loop. And it stopped, as I said, al...
+
+===== [16:56:52] build_db: D:\7\413410654\專題\rag-video-main\venv\Scripts\python.exe build_db.py
+Loaded 5 chunks
+Loading BGE-M3 (first time: downloading, please wait)...
+Embedding device: cuda
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 17013.05it/s]
+Creating vectors...
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.54it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.54it/s]
+Each vector has 1024 numbers
+
+Done! Saved 5 chunks to output/chroma_db
+Now run: python search.py
+
+===== [16:57:17] eval_search: D:\7\413410654\專題\rag-video-main\venv\Scripts\python.exe evaluation/eval_search.py evaluation/questions/test_video.json output/chroma_db
+Loading BGE-M3 on cuda...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 12620.22it/s]
+20 questions, 5 chunks in database
+
+# 檢索方法比較（vector / bm25 / hybrid）
+
+- 資料庫：output/chroma_db　題目檔：evaluation/questions/test_video.json
+- all = 每種方法排完所有片段再合併；top10 = 各取前 10 名再合併（系統實際設定）；w = bm25_weight
+- 題目數：20　片段數：5　向量模型：BAAI/bge-m3（cuda）
+- RRF：k=60、vector_weight=1.0
+
+## ALL（20 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 80% | 100% | 0.892 | 39 |
+| bm25 | 55% | 75% | 0.625 | 27 |
+| hybrid (all, w=1) | 75% | 100% | 0.875 | 28 |
+| hybrid (top10, w=1) | 75% | 100% | 0.875 | 28 |
+| hybrid (top10, w=0.5) | 85% | 100% | 0.917 | 28 |
+| hybrid (top10, w=0.3) | 85% | 100% | 0.917 | 28 |
+
+## keyword（8 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 88% | 100% | 0.917 | 54 |
+| bm25 | 88% | 100% | 0.917 | 27 |
+| hybrid (all, w=1) | 75% | 100% | 0.875 | 27 |
+| hybrid (top10, w=1) | 75% | 100% | 0.875 | 27 |
+| hybrid (top10, w=0.5) | 88% | 100% | 0.917 | 27 |
+| hybrid (top10, w=0.3) | 88% | 100% | 0.917 | 27 |
+
+## paraphrase（8 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 75% | 100% | 0.875 | 28 |
+| bm25 | 50% | 88% | 0.646 | 28 |
+| hybrid (all, w=1) | 75% | 100% | 0.875 | 28 |
+| hybrid (top10, w=1) | 75% | 100% | 0.875 | 28 |
+| hybrid (top10, w=0.5) | 88% | 100% | 0.938 | 28 |
+| hybrid (top10, w=0.3) | 88% | 100% | 0.938 | 29 |
+
+## chinese（4 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 75% | 100% | 0.875 | 28 |
+| bm25 | 0% | 0% | 0.000 | 26 |
+| hybrid (all, w=1) | 75% | 100% | 0.875 | 29 |
+| hybrid (top10, w=1) | 75% | 100% | 0.875 | 29 |
+| hybrid (top10, w=0.5) | 75% | 100% | 0.875 | 28 |
+| hybrid (top10, w=0.3) | 75% | 100% | 0.875 | 29 |
+
+## 每題正確片段的名次（越小越好，- = 沒找到）
+
+| 類型 | 問題 | vector | bm25 | hybrid (all, w=1) | hybrid (top10, w=1) | hybrid (top10, w=0.5) | hybrid (top10, w=0.3) |
+|---|---|---|---|---|---|---|---|
+| keyword | what does i stand for in for i in range | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | why does range(1,5) print only four times | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | Line 9 is not indented | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | what does print(counter) output | 3 | 1 | 2 | 2 | 3 | 3 |
+| keyword | which keyword starts the for loop on line five | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | 101computing tutorial introduction | 1 | 3 | 2 | 2 | 1 | 1 |
+| keyword | increment | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | five take away one | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | how can I make the computer repeat some instructions many times | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | why did the message appear fewer times than I expected | 1 | 2 | 1 | 1 | 1 | 1 |
+| paraphrase | what happens to a statement that is not shifted to the right | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | does renaming the loop variable change the result | 1 | 3 | 1 | 1 | 1 | 1 |
+| paraphrase | how do I put several statements inside the loop body | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | what is displayed when the program is executed | 2 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | how does the loop variable change on each pass | 1 | 3 | 2 | 2 | 1 | 1 |
+| paraphrase | how does the lesson finish | 2 | - | 2 | 2 | 2 | 2 |
+| chinese | for 迴圈的用途是什麼 | 1 | - | 1 | 1 | 1 | 1 |
+| chinese | 為什麼只印出四次而不是五次 | 1 | - | 1 | 1 | 1 | 1 |
+| chinese | 沒有縮排的程式碼會執行幾次 | 2 | - | 2 | 2 | 2 | 2 |
+| chinese | 變數名稱 i 代表什麼意思 | 1 | - | 1 | 1 | 1 | 1 |
+
+Saved: output\eval_result.md, output\eval_detail.csv, output\eval_summary.json

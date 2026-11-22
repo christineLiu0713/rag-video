@@ -24,7 +24,8 @@ from pathlib import Path
 DEFAULT_SETTINGS = {
     "target_sec": 45, "max_words": 180, "overlap": 1,
     "min_words": 2, "min_overlap_sec": 3,
-    "slide_boundary_window_sec": 15
+    "slide_boundary_window_sec": 15,
+    "min_chunk_sec": 20
 }
 settings_path = Path("settings.json")
 if settings_path.exists():
@@ -37,6 +38,9 @@ MAX_WORDS = SETTINGS["max_words"]
 OVERLAP = SETTINGS["overlap"]
 MIN_WORDS = SETTINGS["min_words"]
 MIN_OVERLAP_SEC = SETTINGS["min_overlap_sec"]
+# 換頁切點至少要離片段開頭這麼多秒才採用；鏡頭一直切換（畫面文字一直變）時，
+# 才不會把影片切成好幾百個只有幾秒的碎片段
+MIN_CHUNK_SEC = SETTINGS["min_chunk_sec"]
 # ------------------------------------------------------------------
 
 VIDEO_NAME = sys.argv[1] if len(sys.argv) > 1 else "video"
@@ -71,13 +75,21 @@ def clean_text(text):
     return re.sub(r"\s+", " ", text).strip()
 
 
+WORD_RE = re.compile(r"[A-Za-z0-9]+|[\u4e00-\u9fff]")
+
+
+def count_words(text):
+    """英文以單字計算；中文沒有空格，每個中文字算一個字。"""
+    return len(WORD_RE.findall(text))
+
+
 whisper = load_json(OUT / "whisper.json")
 ocr = load_json(OUT / "ocr.json")
 
 segments = []
 for s in whisper:
     text = clean_text(s["text"])
-    if len(text.split()) >= MIN_WORDS:
+    if count_words(text) >= MIN_WORDS:
         segments.append({"start": s["start"], "end": s["end"], "text": text})
 
 ocr_blocks = []
@@ -106,7 +118,7 @@ def make_chunks(segs, slide_blocks):
         split_at_slide = False
         words = 0
         while j < len(segs):
-            words += len(segs[j]["text"].split())
+            words += count_words(segs[j]["text"])
             j += 1
             duration = segs[j - 1]["end"] - segs[i]["start"]
             if duration >= TARGET_SEC or words >= MAX_WORDS:
@@ -117,7 +129,8 @@ def make_chunks(segs, slide_blocks):
             chunk_start = segs[i]["start"]
             chunk_end = segs[j - 1]["end"]
             transitions = [t for t in slide_boundaries
-                           if t not in used_boundaries and chunk_start < t <= chunk_end]
+                           if t not in used_boundaries
+                           and chunk_start + MIN_CHUNK_SEC <= t <= chunk_end]
             if transitions:
                 split_at_slide = True
                 boundary = transitions[0]
@@ -208,7 +221,7 @@ if old_backup.exists():
 
 print(f"\nCreated {len(chunks)} chunks -> {out_path}\n")
 for c in chunks:
-    words = len(c["speech_text"].split())
+    words = count_words(c["speech_text"])
     print(f"{c['id']}  {c['start']:6.1f}s -> {c['end']:6.1f}s  {words:3d} words  "
           f"image={Path(c['image']).name if c['image'] else None}")
     print(f"    slide : {c['slide_text'][:80] or '(no slide text)'}")

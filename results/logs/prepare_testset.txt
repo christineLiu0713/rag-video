@@ -1,0 +1,37 @@
+[1] MIT probability lecture 1
+  joined 10 segments -> videos/mit_prob_l01.mp4 (67.7 min)
+  joined 10 subtitle files -> evaluation/references/mit_prob_l01.srt
+  moved prob_MITRES6_012S18_L01-01_300k.mp4 -> _to_delete\downloads_used\prob_MITRES6_012S18_L01-01_300k.mp4
+  moved prob_MITRES6_012S18_L01-02_300k.mp4 -> _to_delete\downloads_used\prob_MITRES6_012S18_L01-02_300k.mp4
+  moved prob_MITRES6_012S18_L01-03_300k.mp4 -> _to_delete\downloads_used\prob_MITRES6_012S18_L01-03_300k.mp4
+  moved prob_MITRES6_012S18_L01-04_300k.mp4 -> _to_delete\downloads_used\prob_MITRES6_012S18_L01-04_300k.mp4
+  moved prob_MITRES6_012S18_L01-05_300k.mp4 -> _to_delete\downloads_used\prob_MITRES6_012S18_L01-05_300k.mp4
+  moved prob_MITRES6_012S18_L01-06_300k.mp4 -> _to_delete\downloads_used\prob_MITRES6_012S18_L01-06_300k.mp4
+  moved prob_MITRES6_012S18_L01-07_300k.mp4 -> _to_delete\downloads_used\prob_MITRES6_012S18_L01-07_300k.mp4
+  moved prob_MITRES6_012S18_L01-08_300k.mp4 -> _to_delete\downloads_used\prob_MITRES6_012S18_L01-08_300k.mp4
+  moved prob_MITRES6_012S18_L01-09_300k.mp4 -> _to_delete\downloads_used\prob_MITRES6_012S18_L01-09_300k.mp4
+  moved prob_MITRES6_012S18_L01-10_300k.mp4 -> _to_delete\downloads_used\prob_MITRES6_012S18_L01-10_300k.mp4
+  moved prob_MITRES6_012S18_L01-01_300k.srt -> _to_delete\downloads_used\prob_MITRES6_012S18_L01-01_300k.srt
+  moved prob_MITRES6_012S18_L01-02_300k.srt -> _to_delete\downloads_used\prob_MITRES6_012S18_L01-02_300k.srt
+  moved prob_MITRES6_012S18_L01-03_300k.srt -> _to_delete\downloads_used\prob_MITRES6_012S18_L01-03_300k.srt
+  moved prob_MITRES6_012S18_L01-04_300k.srt -> _to_delete\downloads_used\prob_MITRES6_012S18_L01-04_300k.srt
+  moved prob_MITRES6_012S18_L01-05_300k.srt -> _to_delete\downloads_used\prob_MITRES6_012S18_L01-05_300k.srt
+  moved prob_MITRES6_012S18_L01-06_300k.srt -> _to_delete\downloads_used\prob_MITRES6_012S18_L01-06_300k.srt
+  moved prob_MITRES6_012S18_L01-07_300k.srt -> _to_delete\downloads_used\prob_MITRES6_012S18_L01-07_300k.srt
+  moved prob_MITRES6_012S18_L01-08_300k.srt -> _to_delete\downloads_used\prob_MITRES6_012S18_L01-08_300k.srt
+  moved prob_MITRES6_012S18_L01-09_300k.srt -> _to_delete\downloads_used\prob_MITRES6_012S18_L01-09_300k.srt
+  moved prob_MITRES6_012S18_L01-10_300k.srt -> _to_delete\downloads_used\prob_MITRES6_012S18_L01-10_300k.srt
+  wrote evaluation/questions/mit_prob_l01.json
+[2] MIT 18.06 lecture 1
+  moved strang_1806_lec01.mp4 -> videos\mit_1806_l01.mp4
+  moved strang_1806_lec01.srt -> _to_delete\downloads_used\strang_1806_lec01.srt
+[3] NTU Zhuangzi lecture 1
+  moved 1_逍遙遊 (一) ─ 北冥有魚.mp4 -> videos\ntu_zhuangzi_01.mp4
+[4] wrote evaluation/testset.json
+  OK  test_video          3.0 min  英文・短片  (questions OK)
+  OK  mit_prob_l01       67.7 min  英文・投影片螢幕錄影  (questions OK)
+  OK  mit_1806_l01       39.8 min  英文・黑板課  (questions OK)
+  OK  lecture2           43.5 min  英文・教室錄影  (questions OK)
+  OK  ntu_cs_12          82.3 min  中文・教室錄影（英文投影片）・長片  (questions OK)
+  OK  ntu_zhuangzi_01    69.1 min  中文・人文課程  (no questions yet)
+PREPARE_FINISHED

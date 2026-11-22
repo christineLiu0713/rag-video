@@ -1,0 +1,163 @@
+﻿question,type,mode,rank,top3,ms
+fundamental problem of linear algebra,keyword,vector,1,mit_1806_l01_003 mit_1806_l01_019 mit_1806_l01_008,219.9
+fundamental problem of linear algebra,keyword,bm25,1,mit_1806_l01_003 mit_1806_l01_004 mit_1806_l01_019,36.0
+fundamental problem of linear algebra,keyword,"hybrid (all, w=1)",1,mit_1806_l01_003 mit_1806_l01_019 mit_1806_l01_008,36.0
+fundamental problem of linear algebra,keyword,"hybrid (top10, w=1)",1,mit_1806_l01_003 mit_1806_l01_019 mit_1806_l01_008,37.0
+fundamental problem of linear algebra,keyword,"hybrid (top10, w=0.5)",1,mit_1806_l01_003 mit_1806_l01_019 mit_1806_l01_008,31.0
+fundamental problem of linear algebra,keyword,"hybrid (top10, w=0.3)",1,mit_1806_l01_003 mit_1806_l01_019 mit_1806_l01_008,37.0
+fundamental problem of linear algebra,keyword,vector + rerank,1,mit_1806_l01_003 mit_1806_l01_019 mit_1806_l01_036,1367.2
+fundamental problem of linear algebra,keyword,hybrid + rerank,1,mit_1806_l01_003 mit_1806_l01_019 mit_1806_l01_036,860.5
+fundamental problem of linear algebra,keyword,hybrid20 + rerank,1,mit_1806_l01_003 mit_1806_l01_019 mit_1806_l01_036,1836.7
+row picture where two lines meet,keyword,vector,3,mit_1806_l01_003 mit_1806_l01_037 mit_1806_l01_016,36.0
+row picture where two lines meet,keyword,bm25,4,mit_1806_l01_037 mit_1806_l01_003 mit_1806_l01_038,36.0
+row picture where two lines meet,keyword,"hybrid (all, w=1)",3,mit_1806_l01_003 mit_1806_l01_037 mit_1806_l01_016,33.0
+row picture where two lines meet,keyword,"hybrid (top10, w=1)",3,mit_1806_l01_003 mit_1806_l01_037 mit_1806_l01_016,33.0
+row picture where two lines meet,keyword,"hybrid (top10, w=0.5)",3,mit_1806_l01_003 mit_1806_l01_037 mit_1806_l01_016,35.0
+row picture where two lines meet,keyword,"hybrid (top10, w=0.3)",3,mit_1806_l01_003 mit_1806_l01_037 mit_1806_l01_016,30.0
+row picture where two lines meet,keyword,vector + rerank,3,mit_1806_l01_003 mit_1806_l01_037 mit_1806_l01_016,1292.3
+row picture where two lines meet,keyword,hybrid + rerank,3,mit_1806_l01_003 mit_1806_l01_037 mit_1806_l01_016,799.6
+row picture where two lines meet,keyword,hybrid20 + rerank,3,mit_1806_l01_003 mit_1806_l01_037 mit_1806_l01_016,1618.1
+linear combination of the columns,keyword,vector,1,mit_1806_l01_019 mit_1806_l01_020 mit_1806_l01_026,33.0
+linear combination of the columns,keyword,bm25,2,mit_1806_l01_062 mit_1806_l01_019 mit_1806_l01_048,36.0
+linear combination of the columns,keyword,"hybrid (all, w=1)",1,mit_1806_l01_019 mit_1806_l01_062 mit_1806_l01_020,34.0
+linear combination of the columns,keyword,"hybrid (top10, w=1)",1,mit_1806_l01_019 mit_1806_l01_062 mit_1806_l01_020,32.0
+linear combination of the columns,keyword,"hybrid (top10, w=0.5)",1,mit_1806_l01_019 mit_1806_l01_062 mit_1806_l01_020,32.0
+linear combination of the columns,keyword,"hybrid (top10, w=0.3)",1,mit_1806_l01_019 mit_1806_l01_020 mit_1806_l01_062,39.0
+linear combination of the columns,keyword,vector + rerank,1,mit_1806_l01_019 mit_1806_l01_062 mit_1806_l01_020,1182.3
+linear combination of the columns,keyword,hybrid + rerank,1,mit_1806_l01_019 mit_1806_l01_062 mit_1806_l01_020,943.5
+linear combination of the columns,keyword,hybrid20 + rerank,1,mit_1806_l01_019 mit_1806_l01_062 mit_1806_l01_020,1305.3
+column picture in three dimensions,keyword,vector,8,mit_1806_l01_030 mit_1806_l01_004 mit_1806_l01_021,40.0
+column picture in three dimensions,keyword,bm25,4,mit_1806_l01_030 mit_1806_l01_037 mit_1806_l01_032,35.0
+column picture in three dimensions,keyword,"hybrid (all, w=1)",3,mit_1806_l01_030 mit_1806_l01_021 mit_1806_l01_038,31.0
+column picture in three dimensions,keyword,"hybrid (top10, w=1)",3,mit_1806_l01_030 mit_1806_l01_021 mit_1806_l01_038,33.0
+column picture in three dimensions,keyword,"hybrid (top10, w=0.5)",4,mit_1806_l01_030 mit_1806_l01_021 mit_1806_l01_040,35.0
+column picture in three dimensions,keyword,"hybrid (top10, w=0.3)",5,mit_1806_l01_030 mit_1806_l01_021 mit_1806_l01_040,34.0
+column picture in three dimensions,keyword,vector + rerank,7,mit_1806_l01_030 mit_1806_l01_039 mit_1806_l01_049,1149.3
+column picture in three dimensions,keyword,hybrid + rerank,7,mit_1806_l01_030 mit_1806_l01_039 mit_1806_l01_049,764.5
+column picture in three dimensions,keyword,hybrid20 + rerank,7,mit_1806_l01_030 mit_1806_l01_039 mit_1806_l01_049,1339.9
+non-singular invertible matrix,keyword,vector,1,mit_1806_l01_051 mit_1806_l01_053 mit_1806_l01_055,39.0
+non-singular invertible matrix,keyword,bm25,1,mit_1806_l01_051 mit_1806_l01_055 mit_1806_l01_053,30.0
+non-singular invertible matrix,keyword,"hybrid (all, w=1)",1,mit_1806_l01_051 mit_1806_l01_053 mit_1806_l01_055,39.0
+non-singular invertible matrix,keyword,"hybrid (top10, w=1)",1,mit_1806_l01_051 mit_1806_l01_053 mit_1806_l01_055,34.0
+non-singular invertible matrix,keyword,"hybrid (top10, w=0.5)",1,mit_1806_l01_051 mit_1806_l01_053 mit_1806_l01_055,35.0
+non-singular invertible matrix,keyword,"hybrid (top10, w=0.3)",1,mit_1806_l01_051 mit_1806_l01_053 mit_1806_l01_055,33.0
+non-singular invertible matrix,keyword,vector + rerank,1,mit_1806_l01_051 mit_1806_l01_055 mit_1806_l01_053,1179.3
+non-singular invertible matrix,keyword,hybrid + rerank,1,mit_1806_l01_051 mit_1806_l01_055 mit_1806_l01_053,852.5
+non-singular invertible matrix,keyword,hybrid20 + rerank,1,mit_1806_l01_051 mit_1806_l01_055 mit_1806_l01_053,1441.2
+dot product of a row with x,keyword,vector,1,mit_1806_l01_061 mit_1806_l01_003 mit_1806_l01_016,35.0
+dot product of a row with x,keyword,bm25,1,mit_1806_l01_061 mit_1806_l01_010 mit_1806_l01_009,35.0
+dot product of a row with x,keyword,"hybrid (all, w=1)",1,mit_1806_l01_061 mit_1806_l01_009 mit_1806_l01_010,36.0
+dot product of a row with x,keyword,"hybrid (top10, w=1)",1,mit_1806_l01_061 mit_1806_l01_009 mit_1806_l01_010,33.0
+dot product of a row with x,keyword,"hybrid (top10, w=0.5)",1,mit_1806_l01_061 mit_1806_l01_009 mit_1806_l01_016,36.0
+dot product of a row with x,keyword,"hybrid (top10, w=0.3)",1,mit_1806_l01_061 mit_1806_l01_009 mit_1806_l01_016,31.0
+dot product of a row with x,keyword,vector + rerank,1,mit_1806_l01_061 mit_1806_l01_018 mit_1806_l01_062,1296.3
+dot product of a row with x,keyword,hybrid + rerank,1,mit_1806_l01_061 mit_1806_l01_018 mit_1806_l01_013,1056.4
+dot product of a row with x,keyword,hybrid20 + rerank,1,mit_1806_l01_061 mit_1806_l01_018 mit_1806_l01_013,1762.0
+nine vectors in nine-dimensional space,keyword,vector,1,mit_1806_l01_054 mit_1806_l01_056 mit_1806_l01_057,51.0
+nine vectors in nine-dimensional space,keyword,bm25,1,mit_1806_l01_054 mit_1806_l01_056 mit_1806_l01_057,45.0
+nine vectors in nine-dimensional space,keyword,"hybrid (all, w=1)",1,mit_1806_l01_054 mit_1806_l01_056 mit_1806_l01_057,46.0
+nine vectors in nine-dimensional space,keyword,"hybrid (top10, w=1)",1,mit_1806_l01_054 mit_1806_l01_056 mit_1806_l01_057,46.0
+nine vectors in nine-dimensional space,keyword,"hybrid (top10, w=0.5)",1,mit_1806_l01_054 mit_1806_l01_056 mit_1806_l01_057,46.0
+nine vectors in nine-dimensional space,keyword,"hybrid (top10, w=0.3)",1,mit_1806_l01_054 mit_1806_l01_056 mit_1806_l01_057,50.0
+nine vectors in nine-dimensional space,keyword,vector + rerank,1,mit_1806_l01_054 mit_1806_l01_056 mit_1806_l01_057,1207.9
+nine vectors in nine-dimensional space,keyword,hybrid + rerank,1,mit_1806_l01_054 mit_1806_l01_056 mit_1806_l01_057,711.6
+nine vectors in nine-dimensional space,keyword,hybrid20 + rerank,1,mit_1806_l01_054 mit_1806_l01_056 mit_1806_l01_057,1384.2
+what shape is the set of solutions of one equation in three unknowns,paraphrase,vector,12,mit_1806_l01_003 mit_1806_l01_029 mit_1806_l01_032,45.0
+what shape is the set of solutions of one equation in three unknowns,paraphrase,bm25,10,mit_1806_l01_012 mit_1806_l01_031 mit_1806_l01_032,50.0
+what shape is the set of solutions of one equation in three unknowns,paraphrase,"hybrid (all, w=1)",10,mit_1806_l01_003 mit_1806_l01_032 mit_1806_l01_031,46.0
+what shape is the set of solutions of one equation in three unknowns,paraphrase,"hybrid (top10, w=1)",14,mit_1806_l01_003 mit_1806_l01_032 mit_1806_l01_031,45.0
+what shape is the set of solutions of one equation in three unknowns,paraphrase,"hybrid (top10, w=0.5)",14,mit_1806_l01_003 mit_1806_l01_032 mit_1806_l01_029,44.0
+what shape is the set of solutions of one equation in three unknowns,paraphrase,"hybrid (top10, w=0.3)",14,mit_1806_l01_003 mit_1806_l01_032 mit_1806_l01_029,46.0
+what shape is the set of solutions of one equation in three unknowns,paraphrase,vector + rerank,12,mit_1806_l01_031 mit_1806_l01_016 mit_1806_l01_003,1264.3
+what shape is the set of solutions of one equation in three unknowns,paraphrase,hybrid + rerank,11,mit_1806_l01_031 mit_1806_l01_016 mit_1806_l01_003,995.4
+what shape is the set of solutions of one equation in three unknowns,paraphrase,hybrid20 + rerank,15,mit_1806_l01_031 mit_1806_l01_016 mit_1806_l01_003,1819.3
+when is it impossible to reach every right-hand side,paraphrase,vector,1,mit_1806_l01_053 mit_1806_l01_047 mit_1806_l01_055,42.0
+when is it impossible to reach every right-hand side,paraphrase,bm25,7,mit_1806_l01_047 mit_1806_l01_058 mit_1806_l01_055,37.0
+when is it impossible to reach every right-hand side,paraphrase,"hybrid (all, w=1)",3,mit_1806_l01_047 mit_1806_l01_055 mit_1806_l01_053,42.0
+when is it impossible to reach every right-hand side,paraphrase,"hybrid (top10, w=1)",3,mit_1806_l01_047 mit_1806_l01_055 mit_1806_l01_053,41.0
+when is it impossible to reach every right-hand side,paraphrase,"hybrid (top10, w=0.5)",2,mit_1806_l01_047 mit_1806_l01_053 mit_1806_l01_055,37.0
+when is it impossible to reach every right-hand side,paraphrase,"hybrid (top10, w=0.3)",2,mit_1806_l01_047 mit_1806_l01_053 mit_1806_l01_055,35.0
+when is it impossible to reach every right-hand side,paraphrase,vector + rerank,1,mit_1806_l01_053 mit_1806_l01_055 mit_1806_l01_058,1118.4
+when is it impossible to reach every right-hand side,paraphrase,hybrid + rerank,1,mit_1806_l01_053 mit_1806_l01_055 mit_1806_l01_058,888.5
+when is it impossible to reach every right-hand side,paraphrase,hybrid20 + rerank,1,mit_1806_l01_053 mit_1806_l01_055 mit_1806_l01_058,1552.7
+how do you multiply a matrix by a vector,paraphrase,vector,1,mit_1806_l01_059 mit_1806_l01_058 mit_1806_l01_060,40.0
+how do you multiply a matrix by a vector,paraphrase,bm25,1,mit_1806_l01_059 mit_1806_l01_049 mit_1806_l01_007,34.0
+how do you multiply a matrix by a vector,paraphrase,"hybrid (all, w=1)",1,mit_1806_l01_059 mit_1806_l01_058 mit_1806_l01_049,38.0
+how do you multiply a matrix by a vector,paraphrase,"hybrid (top10, w=1)",1,mit_1806_l01_059 mit_1806_l01_058 mit_1806_l01_049,36.0
+how do you multiply a matrix by a vector,paraphrase,"hybrid (top10, w=0.5)",1,mit_1806_l01_059 mit_1806_l01_058 mit_1806_l01_060,38.0
+how do you multiply a matrix by a vector,paraphrase,"hybrid (top10, w=0.3)",1,mit_1806_l01_059 mit_1806_l01_058 mit_1806_l01_060,36.0
+how do you multiply a matrix by a vector,paraphrase,vector + rerank,2,mit_1806_l01_060 mit_1806_l01_059 mit_1806_l01_049,1234.3
+how do you multiply a matrix by a vector,paraphrase,hybrid + rerank,2,mit_1806_l01_060 mit_1806_l01_059 mit_1806_l01_049,811.5
+how do you multiply a matrix by a vector,paraphrase,hybrid20 + rerank,2,mit_1806_l01_060 mit_1806_l01_059 mit_1806_l01_049,1479.2
+which point solves both equations in the two by two example,paraphrase,vector,1,mit_1806_l01_016 mit_1806_l01_033 mit_1806_l01_063,48.0
+which point solves both equations in the two by two example,paraphrase,bm25,1,mit_1806_l01_016 mit_1806_l01_036 mit_1806_l01_005,44.0
+which point solves both equations in the two by two example,paraphrase,"hybrid (all, w=1)",1,mit_1806_l01_016 mit_1806_l01_036 mit_1806_l01_011,45.0
+which point solves both equations in the two by two example,paraphrase,"hybrid (top10, w=1)",1,mit_1806_l01_016 mit_1806_l01_036 mit_1806_l01_033,47.0
+which point solves both equations in the two by two example,paraphrase,"hybrid (top10, w=0.5)",1,mit_1806_l01_016 mit_1806_l01_036 mit_1806_l01_033,47.0
+which point solves both equations in the two by two example,paraphrase,"hybrid (top10, w=0.3)",1,mit_1806_l01_016 mit_1806_l01_036 mit_1806_l01_033,45.0
+which point solves both equations in the two by two example,paraphrase,vector + rerank,1,mit_1806_l01_016 mit_1806_l01_011 mit_1806_l01_063,1134.4
+which point solves both equations in the two by two example,paraphrase,hybrid + rerank,1,mit_1806_l01_016 mit_1806_l01_011 mit_1806_l01_063,1181.3
+which point solves both equations in the two by two example,paraphrase,hybrid20 + rerank,1,mit_1806_l01_016 mit_1806_l01_011 mit_1806_l01_063,1769.0
+why is it hard to see three planes meeting,paraphrase,vector,1,mit_1806_l01_037 mit_1806_l01_038 mit_1806_l01_036,50.0
+why is it hard to see three planes meeting,paraphrase,bm25,1,mit_1806_l01_037 mit_1806_l01_045 mit_1806_l01_036,47.0
+why is it hard to see three planes meeting,paraphrase,"hybrid (all, w=1)",1,mit_1806_l01_037 mit_1806_l01_038 mit_1806_l01_036,49.0
+why is it hard to see three planes meeting,paraphrase,"hybrid (top10, w=1)",1,mit_1806_l01_037 mit_1806_l01_038 mit_1806_l01_036,48.0
+why is it hard to see three planes meeting,paraphrase,"hybrid (top10, w=0.5)",1,mit_1806_l01_037 mit_1806_l01_038 mit_1806_l01_036,43.0
+why is it hard to see three planes meeting,paraphrase,"hybrid (top10, w=0.3)",1,mit_1806_l01_037 mit_1806_l01_038 mit_1806_l01_036,44.0
+why is it hard to see three planes meeting,paraphrase,vector + rerank,1,mit_1806_l01_037 mit_1806_l01_043 mit_1806_l01_038,1234.3
+why is it hard to see three planes meeting,paraphrase,hybrid + rerank,1,mit_1806_l01_037 mit_1806_l01_043 mit_1806_l01_038,920.4
+why is it hard to see three planes meeting,paraphrase,hybrid20 + rerank,1,mit_1806_l01_037 mit_1806_l01_043 mit_1806_l01_038,1591.1
+what happens if we keep the matrix but change the right-hand side,paraphrase,vector,1,mit_1806_l01_044 mit_1806_l01_055 mit_1806_l01_058,44.0
+what happens if we keep the matrix but change the right-hand side,paraphrase,bm25,1,mit_1806_l01_044 mit_1806_l01_058 mit_1806_l01_031,52.0
+what happens if we keep the matrix but change the right-hand side,paraphrase,"hybrid (all, w=1)",1,mit_1806_l01_044 mit_1806_l01_058 mit_1806_l01_055,47.0
+what happens if we keep the matrix but change the right-hand side,paraphrase,"hybrid (top10, w=1)",1,mit_1806_l01_044 mit_1806_l01_058 mit_1806_l01_055,47.0
+what happens if we keep the matrix but change the right-hand side,paraphrase,"hybrid (top10, w=0.5)",1,mit_1806_l01_044 mit_1806_l01_058 mit_1806_l01_055,44.0
+what happens if we keep the matrix but change the right-hand side,paraphrase,"hybrid (top10, w=0.3)",1,mit_1806_l01_044 mit_1806_l01_055 mit_1806_l01_058,46.0
+what happens if we keep the matrix but change the right-hand side,paraphrase,vector + rerank,1,mit_1806_l01_044 mit_1806_l01_053 mit_1806_l01_039,1229.3
+what happens if we keep the matrix but change the right-hand side,paraphrase,hybrid + rerank,1,mit_1806_l01_044 mit_1806_l01_053 mit_1806_l01_039,839.5
+what happens if we keep the matrix but change the right-hand side,paraphrase,hybrid20 + rerank,1,mit_1806_l01_044 mit_1806_l01_053 mit_1806_l01_039,1575.6
+what do all combinations of the two columns fill,paraphrase,vector,3,mit_1806_l01_048 mit_1806_l01_049 mit_1806_l01_028,37.0
+what do all combinations of the two columns fill,paraphrase,bm25,1,mit_1806_l01_028 mit_1806_l01_056 mit_1806_l01_048,39.0
+what do all combinations of the two columns fill,paraphrase,"hybrid (all, w=1)",2,mit_1806_l01_048 mit_1806_l01_028 mit_1806_l01_049,38.0
+what do all combinations of the two columns fill,paraphrase,"hybrid (top10, w=1)",2,mit_1806_l01_048 mit_1806_l01_028 mit_1806_l01_049,40.0
+what do all combinations of the two columns fill,paraphrase,"hybrid (top10, w=0.5)",2,mit_1806_l01_048 mit_1806_l01_028 mit_1806_l01_049,36.0
+what do all combinations of the two columns fill,paraphrase,"hybrid (top10, w=0.3)",2,mit_1806_l01_048 mit_1806_l01_028 mit_1806_l01_049,41.0
+what do all combinations of the two columns fill,paraphrase,vector + rerank,1,mit_1806_l01_028 mit_1806_l01_048 mit_1806_l01_027,1043.4
+what do all combinations of the two columns fill,paraphrase,hybrid + rerank,1,mit_1806_l01_028 mit_1806_l01_048 mit_1806_l01_027,844.5
+what do all combinations of the two columns fill,paraphrase,hybrid20 + rerank,1,mit_1806_l01_028 mit_1806_l01_048 mit_1806_l01_027,1730.8
+線性代數的基本問題是什麼,chinese,vector,1,mit_1806_l01_003 mit_1806_l01_019 mit_1806_l01_036,38.0
+線性代數的基本問題是什麼,chinese,bm25,,,39.0
+線性代數的基本問題是什麼,chinese,"hybrid (all, w=1)",1,mit_1806_l01_003 mit_1806_l01_019 mit_1806_l01_036,34.0
+線性代數的基本問題是什麼,chinese,"hybrid (top10, w=1)",1,mit_1806_l01_003 mit_1806_l01_019 mit_1806_l01_036,34.0
+線性代數的基本問題是什麼,chinese,"hybrid (top10, w=0.5)",1,mit_1806_l01_003 mit_1806_l01_019 mit_1806_l01_036,35.0
+線性代數的基本問題是什麼,chinese,"hybrid (top10, w=0.3)",1,mit_1806_l01_003 mit_1806_l01_019 mit_1806_l01_036,35.0
+線性代數的基本問題是什麼,chinese,vector + rerank,1,mit_1806_l01_003 mit_1806_l01_019 mit_1806_l01_036,1362.2
+線性代數的基本問題是什麼,chinese,hybrid + rerank,1,mit_1806_l01_003 mit_1806_l01_019 mit_1806_l01_036,733.6
+線性代數的基本問題是什麼,chinese,hybrid20 + rerank,1,mit_1806_l01_003 mit_1806_l01_019 mit_1806_l01_036,1343.2
+矩陣乘以向量怎麼算,chinese,vector,1,mit_1806_l01_059 mit_1806_l01_061 mit_1806_l01_058,51.0
+矩陣乘以向量怎麼算,chinese,bm25,,,45.0
+矩陣乘以向量怎麼算,chinese,"hybrid (all, w=1)",1,mit_1806_l01_059 mit_1806_l01_061 mit_1806_l01_058,46.0
+矩陣乘以向量怎麼算,chinese,"hybrid (top10, w=1)",1,mit_1806_l01_059 mit_1806_l01_061 mit_1806_l01_058,46.0
+矩陣乘以向量怎麼算,chinese,"hybrid (top10, w=0.5)",1,mit_1806_l01_059 mit_1806_l01_061 mit_1806_l01_058,50.0
+矩陣乘以向量怎麼算,chinese,"hybrid (top10, w=0.3)",1,mit_1806_l01_059 mit_1806_l01_061 mit_1806_l01_058,43.0
+矩陣乘以向量怎麼算,chinese,vector + rerank,3,mit_1806_l01_060 mit_1806_l01_061 mit_1806_l01_059,1211.3
+矩陣乘以向量怎麼算,chinese,hybrid + rerank,3,mit_1806_l01_060 mit_1806_l01_061 mit_1806_l01_059,547.7
+矩陣乘以向量怎麼算,chinese,hybrid20 + rerank,3,mit_1806_l01_060 mit_1806_l01_061 mit_1806_l01_059,1195.3
+奇異矩陣是什麼情況,chinese,vector,2,mit_1806_l01_003 mit_1806_l01_051 mit_1806_l01_007,30.0
+奇異矩陣是什麼情況,chinese,bm25,,,30.0
+奇異矩陣是什麼情況,chinese,"hybrid (all, w=1)",2,mit_1806_l01_003 mit_1806_l01_051 mit_1806_l01_007,32.0
+奇異矩陣是什麼情況,chinese,"hybrid (top10, w=1)",2,mit_1806_l01_003 mit_1806_l01_051 mit_1806_l01_007,33.0
+奇異矩陣是什麼情況,chinese,"hybrid (top10, w=0.5)",2,mit_1806_l01_003 mit_1806_l01_051 mit_1806_l01_007,31.0
+奇異矩陣是什麼情況,chinese,"hybrid (top10, w=0.3)",2,mit_1806_l01_003 mit_1806_l01_051 mit_1806_l01_007,33.0
+奇異矩陣是什麼情況,chinese,vector + rerank,1,mit_1806_l01_053 mit_1806_l01_051 mit_1806_l01_052,1318.3
+奇異矩陣是什麼情況,chinese,hybrid + rerank,1,mit_1806_l01_053 mit_1806_l01_051 mit_1806_l01_052,729.6
+奇異矩陣是什麼情況,chinese,hybrid20 + rerank,1,mit_1806_l01_053 mit_1806_l01_051 mit_1806_l01_052,1312.8
+行向量的線性組合,chinese,vector,1,mit_1806_l01_026 mit_1806_l01_020 mit_1806_l01_008,32.0
+行向量的線性組合,chinese,bm25,,,35.0
+行向量的線性組合,chinese,"hybrid (all, w=1)",1,mit_1806_l01_026 mit_1806_l01_020 mit_1806_l01_008,36.0
+行向量的線性組合,chinese,"hybrid (top10, w=1)",1,mit_1806_l01_026 mit_1806_l01_020 mit_1806_l01_008,36.0
+行向量的線性組合,chinese,"hybrid (top10, w=0.5)",1,mit_1806_l01_026 mit_1806_l01_020 mit_1806_l01_008,33.0
+行向量的線性組合,chinese,"hybrid (top10, w=0.3)",1,mit_1806_l01_026 mit_1806_l01_020 mit_1806_l01_008,37.0
+行向量的線性組合,chinese,vector + rerank,1,mit_1806_l01_020 mit_1806_l01_026 mit_1806_l01_023,1209.3
+行向量的線性組合,chinese,hybrid + rerank,1,mit_1806_l01_020 mit_1806_l01_026 mit_1806_l01_023,544.7
+行向量的線性組合,chinese,hybrid20 + rerank,1,mit_1806_l01_020 mit_1806_l01_026 mit_1806_l01_023,1208.3

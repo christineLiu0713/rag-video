@@ -1,0 +1,147 @@
+[
+  {
+    "start": 0.0,
+    "end": 21.0,
+    "text": "Massachusetts Institute ol Technology 6.0001,Fall2016 Introduction to Computer Science and Programming in Python. Ana Bell Lecture 2:Branching and Iteration MITOPENCOURSEWARE BY-NC-SA"
+  },
+  {
+    "start": 21.0,
+    "end": 30.0,
+    "text": "Some content in this video is not covered under. our Creative Commons license. See the closing credits for more information."
+  },
+  {
+    "start": 42.0,
+    "end": 54.0,
+    "text": "BRANCHING, ITERATION (download slides and .py files to follow along!) 6.0001 LECTURE 2"
+  },
+  {
+    "start": 126.0,
+    "end": 216.0,
+    "text": "Title: STRINGSE Body: letters, special characters spaces, digits enclose in quotation marks or single quotes hi = \"hello there\" \"concatenate strings name = \"ana\" greet = hi + name do some operations on a string as defined in Python docs silly =hi++ name * 3"
+  },
+  {
+    "start": 228.0,
+    "end": 360.0,
+    "text": "Title: 2## EXAKPLE:strings Body: /lectures/lec2_branch_loops.py* wdir='C:/Users/Ana/Docunents/MIT/6/Fal116/1e hello thereana ctures') 4hi = hello there\" 5nane = \"ana\" 6greet = hi + nane In [28] 7print(greet) runfi1e(*C:/Users/Ana/Docunents/MIT/6/Fa1116 8greeting =hi+ + name /lectures/lec2_branch_loops.py\", 9print(greeting) wdir='C:/Users/Ana/Docunents/M1T/6/Fal116/1e 10silly = hi+ + nane)*3 <tures') 11print(silly) hel1o thereana hello there ana 14 EXAMPLEcutput runfile(*C:/Users/Ana/Docunents/MIT/6/Fa1116 /lectures/1ec2_branch_1oops.py*, 16#x=1 wdir=C:/Users/Ana/Docurents/MIT/6/Fa1116/1e 17#print(x) <tures') 18#x_str=strx) he1lo thereana 19#printny fav nunber i5,xx=x hello there ana hello there ana ana ana 21#print(my fav number is+ x_str + . + x=+ x_ In30"
+  },
+  {
+    "start": 390.0,
+    "end": 453.0,
+    "text": "Title: INPUT/OUTPUT: print Body: used to output stuff to console -keyword is print print{x} x_str = str{x print(\"my fav num is+x_str +\".\"+\"x=\"+x_str)"
+  },
+  {
+    "start": 501.0,
+    "end": 561.0,
+    "text": "Title: 8=greeting = hi+ Body: 4#ht = \"hello there' /lectures/lec2_branch_loops.py wdir='C:/Users/Ana/Docunents/MIT/6/Fal116/1e 5#nase = ang 6greet = ht+ note he11o thereana <tures') 7#print(greet) In [28] 9=print(greeting) runfi1e(C:/Users/Ana/Docunents/HIT/6/Fa1116 10#stlly= ht+ + nore)*3 /lectures/lec2_branch_loops.py', 11#print(silly) wdir='C:/Users/Ana/Docunents/M1T/6/Fal116/1e ctures') hel1o thereana 14# EXAMPLEoutput hello there ana 16x=1 runfile(*C:/Users/Ana/Docunents/MIT/6/Fa1116 17printx) /lectures/lec2_branch_loops.py, 18x_str=str{x} wdir='C:/Users/Ana/Docunents/MIT/6/Fal116/1e 19printny fav nunber isxx=x ctures') 20printmy fav number is\"x_str ++\"x=+x_st hello there ana hell1o thereana 21printmy fav nunber is+ x_str +.+x=+x_5 hello there ana ana ana In[30]"
+  },
+  {
+    "start": 597.0,
+    "end": 723.0,
+    "text": "Title: INPUT/OUTPUT: input (\"\") Body: prints whatever is in the quotes. user types in something and hits enter binds that value to a variable text = input(\"Type anything... \"). print(5*text) input gives you a string so must cast if working. withnumbers num = int(input(\"Type a number... \")) print(5*num)"
+  },
+  {
+    "start": 732.0,
+    "end": 747.0,
+    "text": "17#print(x) 18#x_str = str(x) 19printy fav nunber {sxx=x runfi1le(*C:/Users/Ana/Docunents/HIT/6/Fa1116 20printmy fav number isx_str +.+x=+x_s /lectures/lec2_branch_loops.py wdir-'C:/users/Ana/Docunents/MIT/6/Fall16/1e 21#printmy fov nunber ts+ x_str +*.+x= ctures') sy fav nunber is 1.x1 ay fav nunber is 1.x=1 25## EXAMPLE:input ny fav nusber is1.x=1 27text = input(Type anything... \") 28print(5'text) runfile(C:/Users/Ana/Documents/mIt/6/Fa1116 /lectures/lec2_branch_loops.py, 29nun =intinputType a nunber...) wdir=C:/Users/Ana/Docunents/MIT/6/Fa1116/1e 30print(5'nun) ctures') Type anything... 5 55555 34## ExAMPLE: conditionals/bronching Jype a nunber... 5 36#x = fLost(input(Enter a nunber for x: )) 37#y = float(input(Enter a number for y)) In32]"
+  },
+  {
+    "start": 792.0,
+    "end": 849.0,
+    "text": "Title: int, float, string Body: COMPARISON OPERATORS ON \" 1 and j are variable names. comparisons below evaluate to a Boolean i =- j > equality test, True if i is the same as j i != j  inequality test, True if i not the same as j"
+  },
+  {
+    "start": 855.0,
+    "end": 861.0,
+    "text": "Title: 19printy fov nunber {sxx=x Body: 17#print(x) runfile(*C:/Users/Ana/Docunents/HIT/6/Fa1116 18#x_str = str(x) /lectures/lec2_branch_loops.py\" wdir-C:/Users/Ana/0ocunents/MET/6/Fal116/1e 20#printmy fav nunber is,x_str +.+ x= ctures') 21#print(my fov number is + x_str + .\"+ my fav nunber is 1.x=1 sy fav nunber is 1.x1 ny fav nunber is1.x1 25## EXAKPLE:input runfile(*C:/Users/Ana/Docunents/MIT/6/Fa1116 27text = input(Type anything... \") /lectures/lec2_branch_loops.py', 28print(5'text) wdir-'C:/Users/Ana/Docunents/MIT/6/Fal116/1e 29num =intinputType a nunber...) ctures') 30print(5*nun) Type anything...5 55555 34## ExAnPLE: condittonals/bronching Type a nunber... 5. 36#x = flost(input(Enter G number for x: )) 37#y = float(input(Enter a nunber for y:"
+  },
+  {
+    "start": 885.0,
+    "end": 906.0,
+    "text": "Title: int, float, string Body: COMPARISON OPERATORS ON i and j are variable names comparisons below evaluate to a Boolean i == j > equality test, True if i is the same as j i != j  inequality test, True if i not the same as j"
+  },
+  {
+    "start": 942.0,
+    "end": 975.0,
+    "text": "Title: LOGIC OPERATORS ON booIs Body: \" a and b are variable names (with Boolean values) not a True if ais False False if a is True a and b Trueif bothare True True if either or both are True Aand B AorB True True True True True False False True False True False True False False False False"
+  },
+  {
+    "start": 999.0,
+    "end": 1005.0,
+    "text": "Title: 19printy fov number {sxx=x Body: 17#print(x) 18#x_str = str(x) runfile(*C:/Users/Ana/Docunents/HIT/6/Fa1116 /lectures/1ec2_branch_loops.py 20#printy fav number is,x_str +\".+ x=+ x_s wdir+'C:/Users/Ana/Docunents/MIT/6/Fal116/1e 21#printmy fov nunber {s+ x_str +*.\"+ \"x=\" ctures') Type anything... 5. 55555 25## EXAMPLE:input Type a number... 5. 27text = input(Type anything... \") 28print(5'text) 29num =intinputType a number...) Traceback (most recent cal1 last): 30print(5'nun) F11e \"<ipython-1nput-3-7a9f6659128b>\", line 1, in<nodule> 34## ExAMPLE: conditionols/bronching TypeError: unorderable types: str()> int() 36#x = flost(inputEnter a number for x: 37#y = float(input(Enter a number for y)) In [33]a"
+  },
+  {
+    "start": 1113.0,
+    "end": 1131.0,
+    "text": "If right clear, If right blocked, If right and If right, front go right go forward front blocked, left blocked, go left go back free food"
+  },
+  {
+    "start": 1200.0,
+    "end": 1428.0,
+    "text": "Title: CONTROL FLOW - BRANCHING Body: ifcondition>: 1f <condition>: <expressioa> <exgression> <expressioa> <expression> elif <condit ion>: if <condition>: <exgression> <expressica> <exgression> <expressioa> elset else: <expression> <expressioa> <exgression> <expression> <condition>hasavalue True or False evaluate expressions in that block if<condition> is True"
+  },
+  {
+    "start": 1488.0,
+    "end": 1566.0,
+    "text": "Title: INDENTATION Body: matters in Pythone -how you denote blocks of code x = float(inputEnter a number for x:\")) y = float(input(\"Enter a number for y: \")) if x==y print\"x and y are equal\") ify=0 printtherefore,x/y is\",x/y elifx<y print(\"x is smaller\") else: print(\"y is smaller\") print(\"thanks!\")"
+  },
+  {
+    "start": 1590.0,
+    "end": 1731.0,
+    "text": "Title: - keep going right, aloop Body: - Legend of Zelda-- Lost Woods takes you back to this same screen, stuck in 11<exit right> <set background to woods_background> if<exit right>: <set background to woods_background> if <exit right>: <set background to woods_background> and so on and on and on... else: <set background to exit _background> else: <set background to exit_background> else: <set background to exit _background>"
+  },
+  {
+    "start": 1737.0,
+    "end": 1770.0,
+    "text": "Title: while LOOPS Body: CONTROL FLOW: while <condition>: <expression> <expression> <condition> evaluates to a Boolean - if <condition> is True, do all the steps inside the while code block check<condition> again -repeat until<condition> is False"
+  },
+  {
+    "start": 1788.0,
+    "end": 1869.0,
+    "text": "53#num =int(inputEnter a number\") F11e \"<1python-input-32-7a9f6659128b>\", line 1, in <nodule> print(number is even\") 56#else: print(nunber is odd) TypeError: unorderable types: str() > int() 61## EXAMPLE: whtle Loops Out[33]:False 62## Try expanding this code to show a sad face if yo 63# twice and fLip the table any more times than tha 64 Hint: use a counter runfile(*C:/Users/Ana/Documents/MIT/6/Fa1116 /lectures/lec2_branch_loops.py wdir=C:/Users/Ana/Docunents/MIT/6/Fa1116/1e 66n = input(*You are in the Lost Forest\\n**** ctures') 67while n == \"right\" or n == \"Right\": n = input(You are in the Lost Forest\\n**....* You are in the Lost Forest 69print(*\\nYou got out of the Lost Forest!\\n\\o/\") Go left or right"
+  },
+  {
+    "start": 1890.0,
+    "end": 1944.0,
+    "text": "Title: while and for LOOPS. Body: CONTROL FLOW: iterate through numbers in a sequence. more complicated with while loop while n<5: print(n)"
+  },
+  {
+    "start": 1965.0,
+    "end": 2004.0,
+    "text": "Title: Fi11e \"<ipython-input-36-32e9d9ec79dc>\", Body: 53#num =int(inputEnter a number:\") print(number is even\") 56#else: print(number is odd) eTraceback (nost recent call last) 61## EXAMPLE whtle Loops 62## Try exponding this code to show o sod face if yoi 63## twice and flip the toble any more times than tho line 2,in <nodule> 64## Hint: use a counter print(0) Fi1e \"C:\\Anaconda3\\1ib\\site- 66#n = input(You are in the Lost Forest\\n*** packages\\ipykernel\\iostream.py, line 317, 67#while n == right\" or n == Right\": in write n = input(*You Gre in the Lost Forest\\n****** se1f._buffer.write(string) 69#print(\\nYou got out of the Lost Forest!(n\\o/\") ValueError: I/0 operation on closed file In [37]: while True: print0)"
+  },
+  {
+    "start": 2013.0,
+    "end": 2088.0,
+    "text": "Title: while and for LOOPS. Body: CONTROL FLOW: iterate through numbers in a sequenced more complicated with while loop whilen<5 print(n) n=n+1 #shortcut with for loop for n in range(5): print(n)"
+  },
+  {
+    "start": 2109.0,
+    "end": 2163.0,
+    "text": "Title: CONTROL FLOW: for LOOPS Body: for/<variable> in range(<some_num>): <expression> <expression> each time through the loop,<variable> takes a value first time,<variable> starts at the smallest value - next time, <variable> gets the prev value +1"
+  },
+  {
+    "start": 2205.0,
+    "end": 2352.0,
+    "text": "Title: range(start) I /stop, step. Body: -default values are start = 0 and step = 1 and optional loop until value is stop - 1 mysum=0 for i in range(7,10) mysum += i yySum=0+7 print (mysum) mysum = 0 for i in range5,ll,2) mysum += i print (mysum)"
+  },
+  {
+    "start": 2382.0,
+    "end": 2400.0,
+    "text": "82#for n in range(5) print(n) File \"C:\\Anaconda3\\lib\\site- packages\\spyderlib\\widgets\\externa1she11\\sit 85#nysun=0 ecustonize.py\",line 714, in runfile 86#for i in ronge(10): execfile(filenane, nanespace) nysua+= 88#print(mysum) File \"c:\\Anaconda3\\lib\\site- packages\\spyder1ib\\widgets\\externa1she11\\sit 90mysum=0 ecustonize.py\"line 89, in execfile 91for i in range7.1 10.3 exec(conpile(f.read(),filenane, mysum += i exec'),nanespace) 93print(mysun) F11e \"C:/Users/Ana/Docunents/HIT/6/Fa1116/lecture 95#nysum = 0 96for i in ronge5, 11 2) s/lec2_branch_loops.pyline 91,in <module> sysun +=1 for i in range(7.1, 10.3): if mysum s= 5: break TypeError: float' object cannot be 100# sysun += 1 Snterpreted as an integer 101#print(mysum) In 39"
+  },
+  {
+    "start": 2418.0,
+    "end": 2439.0,
+    "text": "Title: range(start,stop,step) Body: - default values are start = 0 and step = 1 and optional loop until value is stop - 1 mysum = 0 for i in range7, 10 mysum += i print (mysum) mysum = 0 for i in range5, l1, 2 mysum += i print (mysum)"
+  },
+  {
+    "start": 2466.0,
+    "end": 2532.0,
+    "text": "Title: break STATEMENT Body: immediately exits whatever loop it is in - skips remaining expressions in code block exits only innermost loop! while <condition_1>: while <condition_2>: <expression_a> break <expression_b>e <expression_c>"
+  },
+  {
+    "start": 2547.0,
+    "end": 2589.0,
+    "text": "Title: VS while LOOPS Body: for loops while loops know number of \" unbounded number of iterations iterations \" can end early via can end early via break break can use a counter but must initialize before loop # uses a counter and increment it inside loop \"can rewrite a for loop may not be able to usinga while loop rewrite a while loop using a forloop"
+  }
+]

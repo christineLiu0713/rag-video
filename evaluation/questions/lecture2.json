@@ -1,0 +1,250 @@
+{
+ "video": "lecture2",
+ "note": "anchors = 答案在影片中出現的時間點（秒）；評估時自動對應到包含這些時間點的片段，所以重新切片段後題目仍然可以用。",
+ "questions": [
+  {
+   "q": "what does elif stand for",
+   "type": "keyword",
+   "anchors": [
+    1379.5
+   ]
+  },
+  {
+   "q": "Control-C stops an infinite loop",
+   "type": "keyword",
+   "anchors": [
+    1990.9,
+    2004.5
+   ]
+  },
+  {
+   "q": "range(start, stop, step) default values",
+   "type": "keyword",
+   "anchors": [
+    2226.2,
+    2251.6
+   ]
+  },
+  {
+   "q": "SyntaxError when using one equal sign",
+   "type": "keyword",
+   "anchors": [
+    1535.9,
+    1568.4
+   ]
+  },
+  {
+   "q": "Legend of Zelda lost woods",
+   "type": "keyword",
+   "anchors": [
+    1608.5,
+    1634.9,
+    1666.5
+   ]
+  },
+  {
+   "q": "break statement",
+   "type": "keyword",
+   "anchors": [
+    2488.4,
+    2525.4
+   ]
+  },
+  {
+   "q": "concatenation operator plus does not add spaces",
+   "type": "keyword",
+   "anchors": [
+    249.3,
+    270.3
+   ]
+  },
+  {
+   "q": "compare strings lexicographically",
+   "type": "keyword",
+   "anchors": [
+    993.4
+   ]
+  },
+  {
+   "q": "free food mailing list",
+   "type": "keyword",
+   "anchors": [
+    1027.5,
+    1066.9
+   ]
+  },
+  {
+   "q": "mysum is 7 plus 8 plus 9",
+   "type": "keyword",
+   "anchors": [
+    2330.7,
+    2363.4
+   ]
+  },
+  {
+   "q": "star operator repeats a string",
+   "type": "keyword",
+   "anchors": [
+    328.0
+   ]
+  },
+  {
+   "q": "input function prompt",
+   "type": "keyword",
+   "anchors": [
+    593.8,
+    619.4
+   ]
+  },
+  {
+   "q": "how do I glue two pieces of text together",
+   "type": "paraphrase",
+   "anchors": [
+    234.6,
+    249.3,
+    270.3
+   ]
+  },
+  {
+   "q": "what happens if the loop condition never becomes false",
+   "type": "paraphrase",
+   "anchors": [
+    1948.0,
+    1966.9,
+    1974.5,
+    1990.9,
+    2004.5
+   ]
+  },
+  {
+   "q": "how can a program choose between several alternatives",
+   "type": "paraphrase",
+   "anchors": [
+    1341.5,
+    1379.5,
+    1424.8
+   ]
+  },
+  {
+   "q": "what kind of data does whatever the user types become",
+   "type": "paraphrase",
+   "anchors": [
+    659.7
+   ]
+  },
+  {
+   "q": "how do I turn the user's text into a number",
+   "type": "paraphrase",
+   "anchors": [
+    701.7,
+    769.3
+   ]
+  },
+  {
+   "q": "can I check whether a word is bigger than a number",
+   "type": "paraphrase",
+   "anchors": [
+    845.6,
+    856.4,
+    871.3
+   ]
+  },
+  {
+   "q": "how do I leave a loop early",
+   "type": "paraphrase",
+   "anchors": [
+    2488.4,
+    2562.6
+   ]
+  },
+  {
+   "q": "when should I repeat a fixed number of times versus until something happens",
+   "type": "paraphrase",
+   "anchors": [
+    2562.6,
+    2591.6
+   ]
+  },
+  {
+   "q": "how are groups of statements marked in Python",
+   "type": "paraphrase",
+   "anchors": [
+    1263.4,
+    1467.6,
+    1513.0
+   ]
+  },
+  {
+   "q": "difference between giving a variable a value and checking if two values are the same",
+   "type": "paraphrase",
+   "anchors": [
+    907.5
+   ]
+  },
+  {
+   "q": "a strategy to get through a maze by keeping one hand on the wall",
+   "type": "paraphrase",
+   "anchors": [
+    1098.7,
+    1135.1
+   ]
+  },
+  {
+   "q": "can the counting function use decimal numbers",
+   "type": "paraphrase",
+   "anchors": [
+    2363.4,
+    2395.6,
+    2409.5
+   ]
+  },
+  {
+   "q": "elif 是什麼意思",
+   "type": "chinese",
+   "anchors": [
+    1379.5
+   ]
+  },
+  {
+   "q": "無窮迴圈要怎麼停止",
+   "type": "chinese",
+   "anchors": [
+    1990.9,
+    2004.5
+   ]
+  },
+  {
+   "q": "字串可以和數字比較大小嗎",
+   "type": "chinese",
+   "anchors": [
+    845.6,
+    856.4,
+    871.3
+   ]
+  },
+  {
+   "q": "for 迴圈和 while 迴圈有什麼差別",
+   "type": "chinese",
+   "anchors": [
+    2562.6,
+    2591.6
+   ]
+  },
+  {
+   "q": "break 會跳出哪一個迴圈",
+   "type": "chinese",
+   "anchors": [
+    2488.4,
+    2525.4
+   ]
+  },
+  {
+   "q": "怎麼讓使用者輸入資料",
+   "type": "chinese",
+   "anchors": [
+    593.8,
+    619.4
+   ]
+  }
+ ]
+}

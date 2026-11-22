@@ -1,0 +1,169 @@
+{
+ "video": "ntu_zhuangzi_01",
+ "note": "臺大正是時候讀莊子 第1講 逍遙遊（一）。anchors 依 Whisper 逐字稿標定（秒）。type: keyword / paraphrase / english",
+ "questions": [
+  {
+   "q": "北冥有魚，其名為鯤",
+   "type": "keyword",
+   "anchors": [
+    384
+   ]
+  },
+  {
+   "q": "鯤是什麼意思",
+   "type": "keyword",
+   "anchors": [
+    393
+   ]
+  },
+  {
+   "q": "大鵬要飛上九萬里",
+   "type": "keyword",
+   "anchors": [
+    912,
+    928
+   ]
+  },
+  {
+   "q": "蜩與學鳩",
+   "type": "keyword",
+   "anchors": [
+    1445
+   ]
+  },
+  {
+   "q": "朝菌不知晦朔",
+   "type": "keyword",
+   "anchors": [
+    1905
+   ]
+  },
+  {
+   "q": "彭祖活了七百八十歲",
+   "type": "keyword",
+   "anchors": [
+    2002
+   ]
+  },
+  {
+   "q": "宋榮子猶然笑之",
+   "type": "keyword",
+   "anchors": [
+    2907
+   ]
+  },
+  {
+   "q": "列子御風而行",
+   "type": "keyword",
+   "anchors": [
+    3261,
+    3271
+   ]
+  },
+  {
+   "q": "至人無己，神人無功，聖人無名",
+   "type": "keyword",
+   "anchors": [
+    3881
+   ]
+  },
+  {
+   "q": "乘天地之正，御六氣之辯",
+   "type": "keyword",
+   "anchors": [
+    3630
+   ]
+  },
+  {
+   "q": "魚變成鳥代表什麼樣的改變",
+   "type": "paraphrase",
+   "anchors": [
+    474
+   ]
+  },
+  {
+   "q": "為什麼大鳥起飛需要很強的風",
+   "type": "paraphrase",
+   "anchors": [
+    1267,
+    1279
+   ]
+  },
+  {
+   "q": "要去越遠的地方就要準備越多東西",
+   "type": "paraphrase",
+   "anchors": [
+    1560,
+    1578
+   ]
+  },
+  {
+   "q": "壽命很短的生物沒辦法理解時間",
+   "type": "paraphrase",
+   "anchors": [
+    1905,
+    1909
+   ]
+  },
+  {
+   "q": "全世界的人都批評他也不在意",
+   "type": "paraphrase",
+   "anchors": [
+    3080
+   ]
+  },
+  {
+   "q": "還要等待外在條件才能行動，所以不是最高境界",
+   "type": "paraphrase",
+   "anchors": [
+    3486,
+    3552
+   ]
+  },
+  {
+   "q": "別人得到你想要的東西，你也替他高興",
+   "type": "paraphrase",
+   "anchors": [
+    3902
+   ]
+  },
+  {
+   "q": "冥這個字的意思",
+   "type": "paraphrase",
+   "anchors": [
+    655,
+    668
+   ]
+  },
+  {
+   "q": "why does the giant bird need such a strong wind to fly",
+   "type": "english",
+   "anchors": [
+    1267,
+    1279
+   ]
+  },
+  {
+   "q": "what is the highest state described by Zhuangzi",
+   "type": "english",
+   "anchors": [
+    3881
+   ]
+  },
+  {
+   "q": "the story of a huge fish that turns into a bird",
+   "type": "english",
+   "anchors": [
+    384,
+    474
+   ]
+  },
+  {
+   "q": "does Zhuangzi think small birds are as good as the big one",
+   "type": "english",
+   "anchors": [
+    2635
+   ]
+  }
+ ]
+}

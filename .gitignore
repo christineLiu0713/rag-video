@@ -1,0 +1,22 @@
+# Python environments and cache
+venv/
+ocr_venv/
+__pycache__/
+
+# Videos and generated data (large; recreate with pipeline.py)
+videos/
+*.mp4
+output/
+results/*/frames/
+results/*/chroma_db/
+results/*/audio.wav
+results/_old/
+
+# Secrets
+gemini_key.txt
+
+# Leftovers waiting to be deleted
+_to_delete/
+organize_folder.bat
+organize_log.txt
+library/

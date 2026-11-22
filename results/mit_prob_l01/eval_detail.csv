@@ -1,0 +1,181 @@
+﻿question,type,mode,rank,top3,ms
+mutually exclusive and collectively exhaustive,keyword,vector,1,mit_prob_l01_006 mit_prob_l01_008 mit_prob_l01_009,343.8
+mutually exclusive and collectively exhaustive,keyword,bm25,1,mit_prob_l01_006 mit_prob_l01_010 mit_prob_l01_008,30.0
+mutually exclusive and collectively exhaustive,keyword,"hybrid (all, w=1)",1,mit_prob_l01_006 mit_prob_l01_008 mit_prob_l01_010,49.0
+mutually exclusive and collectively exhaustive,keyword,"hybrid (top10, w=1)",1,mit_prob_l01_006 mit_prob_l01_008 mit_prob_l01_010,35.0
+mutually exclusive and collectively exhaustive,keyword,"hybrid (top10, w=0.5)",1,mit_prob_l01_006 mit_prob_l01_008 mit_prob_l01_009,40.0
+mutually exclusive and collectively exhaustive,keyword,"hybrid (top10, w=0.3)",1,mit_prob_l01_006 mit_prob_l01_008 mit_prob_l01_009,37.0
+mutually exclusive and collectively exhaustive,keyword,vector + rerank,1,mit_prob_l01_006 mit_prob_l01_010 mit_prob_l01_008,1393.2
+mutually exclusive and collectively exhaustive,keyword,hybrid + rerank,1,mit_prob_l01_006 mit_prob_l01_010 mit_prob_l01_008,796.5
+mutually exclusive and collectively exhaustive,keyword,hybrid20 + rerank,1,mit_prob_l01_006 mit_prob_l01_010 mit_prob_l01_008,1361.8
+tetrahedral die with 16 possible outcomes,keyword,vector,1,mit_prob_l01_059 mit_prob_l01_016 mit_prob_l01_017,48.0
+tetrahedral die with 16 possible outcomes,keyword,bm25,1,mit_prob_l01_059 mit_prob_l01_017 mit_prob_l01_063,54.0
+tetrahedral die with 16 possible outcomes,keyword,"hybrid (all, w=1)",1,mit_prob_l01_059 mit_prob_l01_017 mit_prob_l01_063,43.0
+tetrahedral die with 16 possible outcomes,keyword,"hybrid (top10, w=1)",1,mit_prob_l01_059 mit_prob_l01_017 mit_prob_l01_063,48.0
+tetrahedral die with 16 possible outcomes,keyword,"hybrid (top10, w=0.5)",1,mit_prob_l01_059 mit_prob_l01_017 mit_prob_l01_016,47.0
+tetrahedral die with 16 possible outcomes,keyword,"hybrid (top10, w=0.3)",1,mit_prob_l01_059 mit_prob_l01_017 mit_prob_l01_016,46.0
+tetrahedral die with 16 possible outcomes,keyword,vector + rerank,2,mit_prob_l01_017 mit_prob_l01_059 mit_prob_l01_016,1270.3
+tetrahedral die with 16 possible outcomes,keyword,hybrid + rerank,2,mit_prob_l01_017 mit_prob_l01_059 mit_prob_l01_016,798.5
+tetrahedral die with 16 possible outcomes,keyword,hybrid20 + rerank,2,mit_prob_l01_017 mit_prob_l01_059 mit_prob_l01_016,1431.2
+what is the union bound,keyword,vector,1,mit_prob_l01_055 mit_prob_l01_052 mit_prob_l01_040,39.0
+what is the union bound,keyword,bm25,1,mit_prob_l01_055 mit_prob_l01_040 mit_prob_l01_041,34.0
+what is the union bound,keyword,"hybrid (all, w=1)",1,mit_prob_l01_055 mit_prob_l01_040 mit_prob_l01_052,36.0
+what is the union bound,keyword,"hybrid (top10, w=1)",1,mit_prob_l01_055 mit_prob_l01_040 mit_prob_l01_052,29.0
+what is the union bound,keyword,"hybrid (top10, w=0.5)",1,mit_prob_l01_055 mit_prob_l01_040 mit_prob_l01_052,35.0
+what is the union bound,keyword,"hybrid (top10, w=0.3)",1,mit_prob_l01_055 mit_prob_l01_040 mit_prob_l01_052,36.0
+what is the union bound,keyword,vector + rerank,1,mit_prob_l01_055 mit_prob_l01_041 mit_prob_l01_053,1349.2
+what is the union bound,keyword,hybrid + rerank,1,mit_prob_l01_055 mit_prob_l01_041 mit_prob_l01_052,990.4
+what is the union bound,keyword,hybrid20 + rerank,1,mit_prob_l01_055 mit_prob_l01_041 mit_prob_l01_053,1625.1
+countable additivity axiom,keyword,vector,2,mit_prob_l01_087 mit_prob_l01_083 mit_prob_l01_085,32.0
+countable additivity axiom,keyword,bm25,1,mit_prob_l01_089 mit_prob_l01_087 mit_prob_l01_083,37.0
+countable additivity axiom,keyword,"hybrid (all, w=1)",2,mit_prob_l01_087 mit_prob_l01_083 mit_prob_l01_089,38.0
+countable additivity axiom,keyword,"hybrid (top10, w=1)",2,mit_prob_l01_087 mit_prob_l01_083 mit_prob_l01_089,32.0
+countable additivity axiom,keyword,"hybrid (top10, w=0.5)",2,mit_prob_l01_087 mit_prob_l01_083 mit_prob_l01_085,36.0
+countable additivity axiom,keyword,"hybrid (top10, w=0.3)",2,mit_prob_l01_087 mit_prob_l01_083 mit_prob_l01_085,29.0
+countable additivity axiom,keyword,vector + rerank,2,mit_prob_l01_086 mit_prob_l01_083 mit_prob_l01_085,1464.8
+countable additivity axiom,keyword,hybrid + rerank,2,mit_prob_l01_086 mit_prob_l01_083 mit_prob_l01_085,930.5
+countable additivity axiom,keyword,hybrid20 + rerank,2,mit_prob_l01_086 mit_prob_l01_083 mit_prob_l01_085,1770.0
+nonnegativity axiom,keyword,vector,1,mit_prob_l01_024 mit_prob_l01_031 mit_prob_l01_037,30.0
+nonnegativity axiom,keyword,bm25,3,mit_prob_l01_026 mit_prob_l01_029 mit_prob_l01_024,35.0
+nonnegativity axiom,keyword,"hybrid (all, w=1)",1,mit_prob_l01_024 mit_prob_l01_026 mit_prob_l01_027,36.0
+nonnegativity axiom,keyword,"hybrid (top10, w=1)",1,mit_prob_l01_024 mit_prob_l01_026 mit_prob_l01_027,36.0
+nonnegativity axiom,keyword,"hybrid (top10, w=0.5)",1,mit_prob_l01_024 mit_prob_l01_031 mit_prob_l01_027,37.0
+nonnegativity axiom,keyword,"hybrid (top10, w=0.3)",1,mit_prob_l01_024 mit_prob_l01_031 mit_prob_l01_027,36.0
+nonnegativity axiom,keyword,vector + rerank,1,mit_prob_l01_024 mit_prob_l01_026 mit_prob_l01_025,1333.2
+nonnegativity axiom,keyword,hybrid + rerank,1,mit_prob_l01_024 mit_prob_l01_026 mit_prob_l01_025,833.5
+nonnegativity axiom,keyword,hybrid20 + rerank,1,mit_prob_l01_024 mit_prob_l01_026 mit_prob_l01_025,1671.0
+discrete uniform probability law,keyword,vector,1,mit_prob_l01_064 mit_prob_l01_065 mit_prob_l01_066,38.0
+discrete uniform probability law,keyword,bm25,1,mit_prob_l01_064 mit_prob_l01_065 mit_prob_l01_066,40.0
+discrete uniform probability law,keyword,"hybrid (all, w=1)",1,mit_prob_l01_064 mit_prob_l01_065 mit_prob_l01_066,35.0
+discrete uniform probability law,keyword,"hybrid (top10, w=1)",1,mit_prob_l01_064 mit_prob_l01_065 mit_prob_l01_066,45.0
+discrete uniform probability law,keyword,"hybrid (top10, w=0.5)",1,mit_prob_l01_064 mit_prob_l01_065 mit_prob_l01_066,37.0
+discrete uniform probability law,keyword,"hybrid (top10, w=0.3)",1,mit_prob_l01_064 mit_prob_l01_065 mit_prob_l01_066,34.0
+discrete uniform probability law,keyword,vector + rerank,1,mit_prob_l01_064 mit_prob_l01_065 mit_prob_l01_066,1297.3
+discrete uniform probability law,keyword,hybrid + rerank,1,mit_prob_l01_064 mit_prob_l01_065 mit_prob_l01_066,876.5
+discrete uniform probability law,keyword,hybrid20 + rerank,1,mit_prob_l01_064 mit_prob_l01_065 mit_prob_l01_066,1826.3
+why is the unit square an uncountable set,keyword,vector,1,mit_prob_l01_088 mit_prob_l01_087 mit_prob_l01_084,35.0
+why is the unit square an uncountable set,keyword,bm25,1,mit_prob_l01_088 mit_prob_l01_066 mit_prob_l01_085,38.0
+why is the unit square an uncountable set,keyword,"hybrid (all, w=1)",1,mit_prob_l01_088 mit_prob_l01_087 mit_prob_l01_085,40.0
+why is the unit square an uncountable set,keyword,"hybrid (top10, w=1)",1,mit_prob_l01_088 mit_prob_l01_087 mit_prob_l01_085,39.0
+why is the unit square an uncountable set,keyword,"hybrid (top10, w=0.5)",1,mit_prob_l01_088 mit_prob_l01_087 mit_prob_l01_084,36.0
+why is the unit square an uncountable set,keyword,"hybrid (top10, w=0.3)",1,mit_prob_l01_088 mit_prob_l01_087 mit_prob_l01_084,35.0
+why is the unit square an uncountable set,keyword,vector + rerank,1,mit_prob_l01_088 mit_prob_l01_087 mit_prob_l01_084,1345.2
+why is the unit square an uncountable set,keyword,hybrid + rerank,1,mit_prob_l01_088 mit_prob_l01_087 mit_prob_l01_084,1003.4
+why is the unit square an uncountable set,keyword,hybrid20 + rerank,1,mit_prob_l01_088 mit_prob_l01_087 mit_prob_l01_084,1891.9
+probability of the empty set,keyword,vector,1,mit_prob_l01_032 mit_prob_l01_078 mit_prob_l01_028,36.0
+probability of the empty set,keyword,bm25,2,mit_prob_l01_028 mit_prob_l01_032 mit_prob_l01_039,35.0
+probability of the empty set,keyword,"hybrid (all, w=1)",1,mit_prob_l01_032 mit_prob_l01_028 mit_prob_l01_078,35.0
+probability of the empty set,keyword,"hybrid (top10, w=1)",1,mit_prob_l01_032 mit_prob_l01_028 mit_prob_l01_078,34.0
+probability of the empty set,keyword,"hybrid (top10, w=0.5)",1,mit_prob_l01_032 mit_prob_l01_028 mit_prob_l01_078,36.0
+probability of the empty set,keyword,"hybrid (top10, w=0.3)",1,mit_prob_l01_032 mit_prob_l01_028 mit_prob_l01_078,34.0
+probability of the empty set,keyword,vector + rerank,2,mit_prob_l01_039 mit_prob_l01_032 mit_prob_l01_028,1292.3
+probability of the empty set,keyword,hybrid + rerank,2,mit_prob_l01_039 mit_prob_l01_032 mit_prob_l01_033,933.5
+probability of the empty set,keyword,hybrid20 + rerank,2,mit_prob_l01_039 mit_prob_l01_032 mit_prob_l01_033,1849.5
+does the weather outside matter when listing outcomes of a coin flip,paraphrase,vector,1,mit_prob_l01_009 mit_prob_l01_092 mit_prob_l01_023,50.0
+does the weather outside matter when listing outcomes of a coin flip,paraphrase,bm25,1,mit_prob_l01_008 mit_prob_l01_004 mit_prob_l01_010,42.0
+does the weather outside matter when listing outcomes of a coin flip,paraphrase,"hybrid (all, w=1)",1,mit_prob_l01_008 mit_prob_l01_009 mit_prob_l01_004,48.0
+does the weather outside matter when listing outcomes of a coin flip,paraphrase,"hybrid (top10, w=1)",1,mit_prob_l01_008 mit_prob_l01_009 mit_prob_l01_004,42.0
+does the weather outside matter when listing outcomes of a coin flip,paraphrase,"hybrid (top10, w=0.5)",1,mit_prob_l01_009 mit_prob_l01_008 mit_prob_l01_092,47.0
+does the weather outside matter when listing outcomes of a coin flip,paraphrase,"hybrid (top10, w=0.3)",1,mit_prob_l01_009 mit_prob_l01_092 mit_prob_l01_008,49.0
+does the weather outside matter when listing outcomes of a coin flip,paraphrase,vector + rerank,1,mit_prob_l01_008 mit_prob_l01_010 mit_prob_l01_009,1440.2
+does the weather outside matter when listing outcomes of a coin flip,paraphrase,hybrid + rerank,1,mit_prob_l01_008 mit_prob_l01_010 mit_prob_l01_009,1036.4
+does the weather outside matter when listing outcomes of a coin flip,paraphrase,hybrid20 + rerank,1,mit_prob_l01_008 mit_prob_l01_010 mit_prob_l01_009,2081.8
+why can't each point of a continuous target get its own positive probability,paraphrase,vector,1,mit_prob_l01_020 mit_prob_l01_070 mit_prob_l01_086,48.0
+why can't each point of a continuous target get its own positive probability,paraphrase,bm25,6,mit_prob_l01_030 mit_prob_l01_066 mit_prob_l01_070,54.0
+why can't each point of a continuous target get its own positive probability,paraphrase,"hybrid (all, w=1)",3,mit_prob_l01_070 mit_prob_l01_066 mit_prob_l01_020,49.0
+why can't each point of a continuous target get its own positive probability,paraphrase,"hybrid (top10, w=1)",3,mit_prob_l01_070 mit_prob_l01_066 mit_prob_l01_020,45.0
+why can't each point of a continuous target get its own positive probability,paraphrase,"hybrid (top10, w=0.5)",2,mit_prob_l01_070 mit_prob_l01_020 mit_prob_l01_066,44.0
+why can't each point of a continuous target get its own positive probability,paraphrase,"hybrid (top10, w=0.3)",1,mit_prob_l01_020 mit_prob_l01_070 mit_prob_l01_066,48.0
+why can't each point of a continuous target get its own positive probability,paraphrase,vector + rerank,2,mit_prob_l01_022 mit_prob_l01_020 mit_prob_l01_066,1486.2
+why can't each point of a continuous target get its own positive probability,paraphrase,hybrid + rerank,2,mit_prob_l01_022 mit_prob_l01_020 mit_prob_l01_066,1104.4
+why can't each point of a continuous target get its own positive probability,paraphrase,hybrid20 + rerank,2,mit_prob_l01_022 mit_prob_l01_020 mit_prob_l01_066,2145.5
+how do we draw an experiment that happens in stages,paraphrase,vector,1,mit_prob_l01_015 mit_prob_l01_005 mit_prob_l01_016,38.0
+how do we draw an experiment that happens in stages,paraphrase,bm25,1,mit_prob_l01_015 mit_prob_l01_014 mit_prob_l01_032,34.0
+how do we draw an experiment that happens in stages,paraphrase,"hybrid (all, w=1)",1,mit_prob_l01_015 mit_prob_l01_014 mit_prob_l01_016,39.0
+how do we draw an experiment that happens in stages,paraphrase,"hybrid (top10, w=1)",1,mit_prob_l01_015 mit_prob_l01_014 mit_prob_l01_016,37.0
+how do we draw an experiment that happens in stages,paraphrase,"hybrid (top10, w=0.5)",1,mit_prob_l01_015 mit_prob_l01_016 mit_prob_l01_005,35.0
+how do we draw an experiment that happens in stages,paraphrase,"hybrid (top10, w=0.3)",1,mit_prob_l01_015 mit_prob_l01_016 mit_prob_l01_005,39.0
+how do we draw an experiment that happens in stages,paraphrase,vector + rerank,1,mit_prob_l01_015 mit_prob_l01_014 mit_prob_l01_016,1215.3
+how do we draw an experiment that happens in stages,paraphrase,hybrid + rerank,1,mit_prob_l01_015 mit_prob_l01_014 mit_prob_l01_016,901.5
+how do we draw an experiment that happens in stages,paraphrase,hybrid20 + rerank,1,mit_prob_l01_015 mit_prob_l01_014 mit_prob_l01_016,1805.0
+if one event is contained in another which one is more likely,paraphrase,vector,1,mit_prob_l01_047 mit_prob_l01_033 mit_prob_l01_053,47.0
+if one event is contained in another which one is more likely,paraphrase,bm25,34,mit_prob_l01_026 mit_prob_l01_064 mit_prob_l01_032,53.0
+if one event is contained in another which one is more likely,paraphrase,"hybrid (all, w=1)",5,mit_prob_l01_026 mit_prob_l01_051 mit_prob_l01_037,46.0
+if one event is contained in another which one is more likely,paraphrase,"hybrid (top10, w=1)",2,mit_prob_l01_026 mit_prob_l01_047 mit_prob_l01_033,47.0
+if one event is contained in another which one is more likely,paraphrase,"hybrid (top10, w=0.5)",2,mit_prob_l01_026 mit_prob_l01_047 mit_prob_l01_033,47.0
+if one event is contained in another which one is more likely,paraphrase,"hybrid (top10, w=0.3)",2,mit_prob_l01_026 mit_prob_l01_047 mit_prob_l01_033,49.0
+if one event is contained in another which one is more likely,paraphrase,vector + rerank,6,mit_prob_l01_026 mit_prob_l01_045 mit_prob_l01_029,1373.2
+if one event is contained in another which one is more likely,paraphrase,hybrid + rerank,6,mit_prob_l01_002 mit_prob_l01_026 mit_prob_l01_029,1278.3
+if one event is contained in another which one is more likely,paraphrase,hybrid20 + rerank,9,mit_prob_l01_002 mit_prob_l01_026 mit_prob_l01_054,2247.7
+how to get a probability by counting when all outcomes are equally likely,paraphrase,vector,7,mit_prob_l01_077 mit_prob_l01_074 mit_prob_l01_079,46.0
+how to get a probability by counting when all outcomes are equally likely,paraphrase,bm25,1,mit_prob_l01_065 mit_prob_l01_064 mit_prob_l01_059,55.0
+how to get a probability by counting when all outcomes are equally likely,paraphrase,"hybrid (all, w=1)",1,mit_prob_l01_065 mit_prob_l01_059 mit_prob_l01_064,48.0
+how to get a probability by counting when all outcomes are equally likely,paraphrase,"hybrid (top10, w=1)",1,mit_prob_l01_065 mit_prob_l01_077 mit_prob_l01_074,42.0
+how to get a probability by counting when all outcomes are equally likely,paraphrase,"hybrid (top10, w=0.5)",1,mit_prob_l01_065 mit_prob_l01_077 mit_prob_l01_074,43.0
+how to get a probability by counting when all outcomes are equally likely,paraphrase,"hybrid (top10, w=0.3)",1,mit_prob_l01_065 mit_prob_l01_077 mit_prob_l01_074,46.6
+how to get a probability by counting when all outcomes are equally likely,paraphrase,vector + rerank,2,mit_prob_l01_059 mit_prob_l01_065 mit_prob_l01_077,1355.2
+how to get a probability by counting when all outcomes are equally likely,paraphrase,hybrid + rerank,2,mit_prob_l01_059 mit_prob_l01_065 mit_prob_l01_064,1354.2
+how to get a probability by counting when all outcomes are equally likely,paraphrase,hybrid20 + rerank,2,mit_prob_l01_059 mit_prob_l01_065 mit_prob_l01_064,2312.7
+what are the general steps for solving a probability problem,paraphrase,vector,1,mit_prob_l01_071 mit_prob_l01_073 mit_prob_l01_072,42.0
+what are the general steps for solving a probability problem,paraphrase,bm25,1,mit_prob_l01_071 mit_prob_l01_001 mit_prob_l01_077,41.0
+what are the general steps for solving a probability problem,paraphrase,"hybrid (all, w=1)",1,mit_prob_l01_071 mit_prob_l01_073 mit_prob_l01_072,42.0
+what are the general steps for solving a probability problem,paraphrase,"hybrid (top10, w=1)",1,mit_prob_l01_071 mit_prob_l01_073 mit_prob_l01_072,40.0
+what are the general steps for solving a probability problem,paraphrase,"hybrid (top10, w=0.5)",1,mit_prob_l01_071 mit_prob_l01_073 mit_prob_l01_072,38.0
+what are the general steps for solving a probability problem,paraphrase,"hybrid (top10, w=0.3)",1,mit_prob_l01_071 mit_prob_l01_073 mit_prob_l01_072,38.0
+what are the general steps for solving a probability problem,paraphrase,vector + rerank,1,mit_prob_l01_071 mit_prob_l01_073 mit_prob_l01_072,1370.2
+what are the general steps for solving a probability problem,paraphrase,hybrid + rerank,1,mit_prob_l01_071 mit_prob_l01_073 mit_prob_l01_072,975.4
+what are the general steps for solving a probability problem,paraphrase,hybrid20 + rerank,1,mit_prob_l01_071 mit_prob_l01_073 mit_prob_l01_072,1854.9
+how do we check that the given probabilities of the integers really add to one,paraphrase,vector,2,mit_prob_l01_029 mit_prob_l01_075 mit_prob_l01_079,50.0
+how do we check that the given probabilities of the integers really add to one,paraphrase,bm25,1,mit_prob_l01_075 mit_prob_l01_029 mit_prob_l01_032,50.0
+how do we check that the given probabilities of the integers really add to one,paraphrase,"hybrid (all, w=1)",2,mit_prob_l01_029 mit_prob_l01_075 mit_prob_l01_076,49.0
+how do we check that the given probabilities of the integers really add to one,paraphrase,"hybrid (top10, w=1)",2,mit_prob_l01_029 mit_prob_l01_075 mit_prob_l01_079,47.0
+how do we check that the given probabilities of the integers really add to one,paraphrase,"hybrid (top10, w=0.5)",2,mit_prob_l01_029 mit_prob_l01_075 mit_prob_l01_079,46.0
+how do we check that the given probabilities of the integers really add to one,paraphrase,"hybrid (top10, w=0.3)",2,mit_prob_l01_029 mit_prob_l01_075 mit_prob_l01_079,50.0
+how do we check that the given probabilities of the integers really add to one,paraphrase,vector + rerank,1,mit_prob_l01_075 mit_prob_l01_076 mit_prob_l01_074,1413.8
+how do we check that the given probabilities of the integers really add to one,paraphrase,hybrid + rerank,1,mit_prob_l01_075 mit_prob_l01_032 mit_prob_l01_074,1286.3
+how do we check that the given probabilities of the integers really add to one,paraphrase,hybrid20 + rerank,1,mit_prob_l01_075 mit_prob_l01_032 mit_prob_l01_076,2282.7
+what is the chance that the dart hits one exact point,paraphrase,vector,1,mit_prob_l01_070 mit_prob_l01_020 mit_prob_l01_066,45.0
+what is the chance that the dart hits one exact point,paraphrase,bm25,1,mit_prob_l01_020 mit_prob_l01_018 mit_prob_l01_070,49.0
+what is the chance that the dart hits one exact point,paraphrase,"hybrid (all, w=1)",1,mit_prob_l01_020 mit_prob_l01_070 mit_prob_l01_018,51.0
+what is the chance that the dart hits one exact point,paraphrase,"hybrid (top10, w=1)",1,mit_prob_l01_020 mit_prob_l01_070 mit_prob_l01_018,45.0
+what is the chance that the dart hits one exact point,paraphrase,"hybrid (top10, w=0.5)",1,mit_prob_l01_070 mit_prob_l01_020 mit_prob_l01_018,41.0
+what is the chance that the dart hits one exact point,paraphrase,"hybrid (top10, w=0.3)",1,mit_prob_l01_070 mit_prob_l01_020 mit_prob_l01_066,42.0
+what is the chance that the dart hits one exact point,paraphrase,vector + rerank,1,mit_prob_l01_020 mit_prob_l01_070 mit_prob_l01_066,1314.3
+what is the chance that the dart hits one exact point,paraphrase,hybrid + rerank,1,mit_prob_l01_020 mit_prob_l01_070 mit_prob_l01_066,997.4
+what is the chance that the dart hits one exact point,paraphrase,hybrid20 + rerank,1,mit_prob_l01_020 mit_prob_l01_070 mit_prob_l01_066,1966.9
+樣本空間要怎麼選才適當,chinese,vector,1,mit_prob_l01_010 mit_prob_l01_011 mit_prob_l01_018,44.0
+樣本空間要怎麼選才適當,chinese,bm25,,,47.0
+樣本空間要怎麼選才適當,chinese,"hybrid (all, w=1)",1,mit_prob_l01_010 mit_prob_l01_011 mit_prob_l01_018,50.0
+樣本空間要怎麼選才適當,chinese,"hybrid (top10, w=1)",1,mit_prob_l01_010 mit_prob_l01_011 mit_prob_l01_018,47.0
+樣本空間要怎麼選才適當,chinese,"hybrid (top10, w=0.5)",1,mit_prob_l01_010 mit_prob_l01_011 mit_prob_l01_018,44.0
+樣本空間要怎麼選才適當,chinese,"hybrid (top10, w=0.3)",1,mit_prob_l01_010 mit_prob_l01_011 mit_prob_l01_018,44.0
+樣本空間要怎麼選才適當,chinese,vector + rerank,1,mit_prob_l01_010 mit_prob_l01_008 mit_prob_l01_005,1243.9
+樣本空間要怎麼選才適當,chinese,hybrid + rerank,1,mit_prob_l01_010 mit_prob_l01_008 mit_prob_l01_005,688.6
+樣本空間要怎麼選才適當,chinese,hybrid20 + rerank,1,mit_prob_l01_010 mit_prob_l01_008 mit_prob_l01_005,1231.3
+機率的公理有哪些,chinese,vector,3,mit_prob_l01_002 mit_prob_l01_059 mit_prob_l01_031,39.0
+機率的公理有哪些,chinese,bm25,,,31.0
+機率的公理有哪些,chinese,"hybrid (all, w=1)",3,mit_prob_l01_002 mit_prob_l01_059 mit_prob_l01_031,33.0
+機率的公理有哪些,chinese,"hybrid (top10, w=1)",3,mit_prob_l01_002 mit_prob_l01_059 mit_prob_l01_031,38.0
+機率的公理有哪些,chinese,"hybrid (top10, w=0.5)",3,mit_prob_l01_002 mit_prob_l01_059 mit_prob_l01_031,29.0
+機率的公理有哪些,chinese,"hybrid (top10, w=0.3)",3,mit_prob_l01_002 mit_prob_l01_059 mit_prob_l01_031,31.0
+機率的公理有哪些,chinese,vector + rerank,3,mit_prob_l01_023 mit_prob_l01_002 mit_prob_l01_024,1399.2
+機率的公理有哪些,chinese,hybrid + rerank,4,mit_prob_l01_023 mit_prob_l01_002 mit_prob_l01_030,722.6
+機率的公理有哪些,chinese,hybrid20 + rerank,3,mit_prob_l01_023 mit_prob_l01_002 mit_prob_l01_024,1394.5
+兩個事件聯集的機率怎麼算,chinese,vector,1,mit_prob_l01_053 mit_prob_l01_033 mit_prob_l01_068,51.0
+兩個事件聯集的機率怎麼算,chinese,bm25,,,44.0
+兩個事件聯集的機率怎麼算,chinese,"hybrid (all, w=1)",1,mit_prob_l01_053 mit_prob_l01_033 mit_prob_l01_068,46.0
+兩個事件聯集的機率怎麼算,chinese,"hybrid (top10, w=1)",1,mit_prob_l01_053 mit_prob_l01_033 mit_prob_l01_068,49.0
+兩個事件聯集的機率怎麼算,chinese,"hybrid (top10, w=0.5)",1,mit_prob_l01_053 mit_prob_l01_033 mit_prob_l01_068,44.0
+兩個事件聯集的機率怎麼算,chinese,"hybrid (top10, w=0.3)",1,mit_prob_l01_053 mit_prob_l01_033 mit_prob_l01_068,49.0
+兩個事件聯集的機率怎麼算,chinese,vector + rerank,2,mit_prob_l01_034 mit_prob_l01_053 mit_prob_l01_049,1364.2
+兩個事件聯集的機率怎麼算,chinese,hybrid + rerank,1,mit_prob_l01_053 mit_prob_l01_050 mit_prob_l01_033,767.6
+兩個事件聯集的機率怎麼算,chinese,hybrid20 + rerank,2,mit_prob_l01_034 mit_prob_l01_053 mit_prob_l01_049,1356.8
+連續樣本空間的例子,chinese,vector,2,mit_prob_l01_012 mit_prob_l01_017 mit_prob_l01_013,35.0
+連續樣本空間的例子,chinese,bm25,,,31.0
+連續樣本空間的例子,chinese,"hybrid (all, w=1)",2,mit_prob_l01_012 mit_prob_l01_017 mit_prob_l01_013,37.0
+連續樣本空間的例子,chinese,"hybrid (top10, w=1)",2,mit_prob_l01_012 mit_prob_l01_017 mit_prob_l01_013,37.0
+連續樣本空間的例子,chinese,"hybrid (top10, w=0.5)",2,mit_prob_l01_012 mit_prob_l01_017 mit_prob_l01_013,31.0
+連續樣本空間的例子,chinese,"hybrid (top10, w=0.3)",2,mit_prob_l01_012 mit_prob_l01_017 mit_prob_l01_013,36.0
+連續樣本空間的例子,chinese,vector + rerank,1,mit_prob_l01_017 mit_prob_l01_066 mit_prob_l01_019,1213.3
+連續樣本空間的例子,chinese,hybrid + rerank,1,mit_prob_l01_017 mit_prob_l01_019 mit_prob_l01_015,619.7
+連續樣本空間的例子,chinese,hybrid20 + rerank,1,mit_prob_l01_017 mit_prob_l01_066 mit_prob_l01_019,1212.3

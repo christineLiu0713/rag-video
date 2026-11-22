@@ -1,0 +1,72 @@
+[
+  {
+    "start": 0.0,
+    "end": 111.0,
+    "text": "LECTURE 1: Probability models and axioms Sample space Probabillty laws - Axioms Properties that follow from the axioms .Examples Discrete -Continuous Discussion -Countable additivity -Mathematical subtleties Interpretations of probabilities"
+  },
+  {
+    "start": 111.0,
+    "end": 294.0,
+    "text": "Sample space"
+  },
+  {
+    "start": 294.0,
+    "end": 450.0,
+    "text": "Title: .H and raius Body: Sample space List set of possible outcomes,2 List must be: Mutually exclusive Collectively exhaustive At the \"right\"granularity H and no rau oT aud ngius amd uo rau"
+  },
+  {
+    "start": 450.0,
+    "end": 840.0,
+    "text": "Sample space: discrete/finite example Two rolls of a tetrahedral die sequential description Y=Second roll X=First roll"
+  },
+  {
+    "start": 840.0,
+    "end": 1287.0,
+    "text": "Probability axioms Event: a subset of the sample space -Probability is assigned to events Axioms: Nonnegativity:PA0 -Normalization:P=1 -Finiteadditivityto be strengthened later IfAnB=.thenPAUB=PA+PB"
+  },
+  {
+    "start": 1287.0,
+    "end": 2469.0,
+    "text": "Title: AUA= Body: Some simple consequences of the axioms Axioms PS=1 For disjoint events: PAUB=PA+PB"
+  },
+  {
+    "start": 2469.0,
+    "end": 2688.0,
+    "text": "Title: =2y=3=2 Body: Probability calculation: discrete/finite example Two rolls of a tetrahedral die Let every possible outcome have probability 1/16 LetZ=minX,Y Y=Second roll PZ=2= X= First roll"
+  },
+  {
+    "start": 2688.0,
+    "end": 2784.0,
+    "text": "Discrete uniform law -Assume 2 consists of n equally likely elements -Assume A consists of  elements prob="
+  },
+  {
+    "start": 2784.0,
+    "end": 2991.0,
+    "text": "Probability calculation: continuous example x,ysuch that0xy1"
+  },
+  {
+    "start": 2991.0,
+    "end": 3171.0,
+    "text": "Probability calculation steps Specify the sample space Specify a probability law Identify an event of interest .Calculate..."
+  },
+  {
+    "start": 3171.0,
+    "end": 3492.0,
+    "text": "Probability calculation: discrete but infinite sample space Sample space{12,...} 1/16 Poutcome is even)=24,6..3)"
+  },
+  {
+    "start": 3492.0,
+    "end": 3831.0,
+    "text": "Title: If A1.A2, A3. is an infinite sequence of disjoint events, Body: Mathematical subtleties Countable Additivity Axiom: thenPAUAUA3U=PA+PA+PA3+ Additivity holds only for \"countable\"sequences of events The unit square simlarly, the real line,etc.) is not countable (its elements cannot be arranged in a sequence)"
+  },
+  {
+    "start": 3831.0,
+    "end": 3969.0,
+    "text": "Interpretations of probability theory A narrow view: a branch of math -Axioms=theorems Thm\"Frequencyof event A\"isPA Are probabilities frequencies? -Pcoin toss yields heads=1/2 -Pthe president of..will be reelected)=0.7"
+  },
+  {
+    "start": 3969.0,
+    "end": 4059.0,
+    "text": "The role of probability theory A framework for analyzing phenomena with uncertain outcomes -Rules for consistent reasoning Used for predictions and decisions Predictions Probability theory Real world Decisions (Analysis) Data Models Inference/Statistics"
+  }
+]

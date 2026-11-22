@@ -1,0 +1,189 @@
+{
+ "video": "ntu_cs_12",
+ "note": "台大計算機概論第12講。anchors = 答案在逐字稿中出現的時間點（秒）。type: keyword / paraphrase / english",
+ "questions": [
+  {
+   "q": "assembler 是做什麼的",
+   "type": "keyword",
+   "anchors": [
+    422
+   ]
+  },
+  {
+   "q": "compiler 和 interpreter 有什麼不同",
+   "type": "keyword",
+   "anchors": [
+    542
+   ]
+  },
+  {
+   "q": "什麼是 portability 可攜性",
+   "type": "keyword",
+   "anchors": [
+    797,
+    812
+   ]
+  },
+  {
+   "q": "第四代程式語言 SQL",
+   "type": "keyword",
+   "anchors": [
+    120
+   ]
+  },
+  {
+   "q": "第一代 Machine Instruction",
+   "type": "keyword",
+   "anchors": [
+    90
+   ]
+  },
+  {
+   "q": "declarative 和 prologue",
+   "type": "keyword",
+   "anchors": [
+    1326,
+    1345
+   ]
+  },
+  {
+   "q": "Lisp 的括號 match",
+   "type": "keyword",
+   "anchors": [
+    1843
+   ]
+  },
+  {
+   "q": "encapsulation 封裝",
+   "type": "keyword",
+   "anchors": [
+    2185
+   ]
+  },
+  {
+   "q": "什麼是 l value",
+   "type": "keyword",
+   "anchors": [
+    2617,
+    2643
+   ]
+  },
+  {
+   "q": "go to 指令",
+   "type": "keyword",
+   "anchors": [
+    2778,
+    2828
+   ]
+  },
+  {
+   "q": "為什麼要發明組合語言",
+   "type": "paraphrase",
+   "anchors": [
+    100
+   ]
+  },
+  {
+   "q": "翻譯一次之後就可以一直重複執行的方式",
+   "type": "paraphrase",
+   "anchors": [
+    542
+   ]
+  },
+  {
+   "q": "為什麼驅動程式很難直接搬到別台電腦",
+   "type": "paraphrase",
+   "anchors": [
+    906
+   ]
+  },
+  {
+   "q": "把整個程式看成一個函數的寫法",
+   "type": "paraphrase",
+   "anchors": [
+    1281,
+    1301
+   ]
+  },
+  {
+   "q": "只要把問題描述清楚電腦就會自己找答案",
+   "type": "paraphrase",
+   "anchors": [
+    1345
+   ]
+  },
+  {
+   "q": "用 n 乘上前一項來定義階乘",
+   "type": "paraphrase",
+   "anchors": [
+    1421
+   ]
+  },
+  {
+   "q": "不准別人直接修改我類別裡面的資料",
+   "type": "paraphrase",
+   "anchors": [
+    2153,
+    2179
+   ]
+  },
+  {
+   "q": "同一個函式名稱在不同物件會執行不同的版本",
+   "type": "paraphrase",
+   "anchors": [
+    2232
+   ]
+  },
+  {
+   "q": "為什麼老師不建議用跳躍指令",
+   "type": "paraphrase",
+   "anchors": [
+    2828
+   ]
+  },
+  {
+   "q": "用很小的空間存機率值的例子",
+   "type": "paraphrase",
+   "anchors": [
+    2054
+   ]
+  },
+  {
+   "q": "what is the difference between a compiler and an interpreter",
+   "type": "english",
+   "anchors": [
+    542
+   ]
+  },
+  {
+   "q": "why is Java so portable",
+   "type": "english",
+   "anchors": [
+    630,
+    995
+   ]
+  },
+  {
+   "q": "what are the four programming paradigms",
+   "type": "english",
+   "anchors": [
+    1122,
+    1502
+   ]
+  },
+  {
+   "q": "how to compute an average in functional programming",
+   "type": "english",
+   "anchors": [
+    1779
+   ]
+  },
+  {
+   "q": "why should we avoid goto statements",
+   "type": "english",
+   "anchors": [
+    2828
+   ]
+  }
+ ]
+}

@@ -1,0 +1,80 @@
+# 檢索方法比較（vector / bm25 / hybrid）
+
+- 資料庫：output\chroma_db　題目檔：evaluation\questions\ntu_cs_12_before.json
+- all = 每種方法排完所有片段再合併；top10 = 各取前 10 名再合併（系統實際設定）；w = bm25_weight
+- 題目數：25　片段數：551　向量模型：BAAI/bge-m3（cuda）
+- RRF：k=60、vector_weight=1.0
+
+## ALL（25 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 32% | 48% | 0.440 | 62 |
+| bm25 | 24% | 44% | 0.387 | 53 |
+| hybrid (all, w=1) | 44% | 60% | 0.560 | 54 |
+| hybrid (top10, w=1) | 40% | 60% | 0.543 | 33 |
+| hybrid (top10, w=0.5) | 36% | 60% | 0.502 | 32 |
+| hybrid (top10, w=0.3) | 36% | 60% | 0.502 | 32 |
+
+## keyword（10 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 50% | 60% | 0.589 | 76 |
+| bm25 | 30% | 60% | 0.475 | 50 |
+| hybrid (all, w=1) | 40% | 70% | 0.575 | 52 |
+| hybrid (top10, w=1) | 40% | 60% | 0.559 | 31 |
+| hybrid (top10, w=0.5) | 40% | 60% | 0.551 | 30 |
+| hybrid (top10, w=0.3) | 40% | 60% | 0.551 | 30 |
+
+## paraphrase（10 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 10% | 30% | 0.227 | 54 |
+| bm25 | 30% | 40% | 0.397 | 66 |
+| hybrid (all, w=1) | 40% | 40% | 0.478 | 57 |
+| hybrid (top10, w=1) | 30% | 50% | 0.452 | 35 |
+| hybrid (top10, w=0.5) | 20% | 50% | 0.350 | 35 |
+| hybrid (top10, w=0.3) | 20% | 50% | 0.350 | 35 |
+
+## english（5 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 40% | 60% | 0.567 | 52 |
+| bm25 | 0% | 20% | 0.191 | 34 |
+| hybrid (all, w=1) | 60% | 80% | 0.692 | 52 |
+| hybrid (top10, w=1) | 60% | 80% | 0.692 | 32 |
+| hybrid (top10, w=0.5) | 60% | 80% | 0.707 | 31 |
+| hybrid (top10, w=0.3) | 60% | 80% | 0.707 | 30 |
+
+## 每題正確片段的名次（越小越好，- = 沒找到）
+
+| 類型 | 問題 | vector | bm25 | hybrid (all, w=1) | hybrid (top10, w=1) | hybrid (top10, w=0.5) | hybrid (top10, w=0.3) |
+|---|---|---|---|---|---|---|---|
+| keyword | assembler 是做什麼的 | 6 | 46 | 3 | 11 | 6 | 6 |
+| keyword | compiler 和 interpreter 有什麼不同 | 4 | 49 | 8 | 6 | 4 | 4 |
+| keyword | 什麼是 portability 可攜性 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | 第四代程式語言 SQL | 1 | 2 | 1 | 1 | 1 | 1 |
+| keyword | 第一代 Machine Instruction | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | declarative 和 prologue | 3 | 2 | 2 | 2 | 3 | 3 |
+| keyword | Lisp 的括號 match | 62 | 2 | 8 | 6 | 11 | 11 |
+| keyword | encapsulation 封裝 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | 什麼是 l value | 1 | 16 | 2 | 2 | 2 | 2 |
+| keyword | go to 指令 | 8 | 7 | 6 | 6 | 6 | 6 |
+| paraphrase | 為什麼要發明組合語言 | 3 | 3 | 1 | 1 | 1 | 1 |
+| paraphrase | 翻譯一次之後就可以一直重複執行的方式 | 129 | 4 | 16 | 7 | 12 | 12 |
+| paraphrase | 為什麼驅動程式很難直接搬到別台電腦 | 19 | 1 | 1 | 2 | 11 | 11 |
+| paraphrase | 把整個程式看成一個函數的寫法 | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | 只要把問題描述清楚電腦就會自己找答案 | 25 | 16 | 11 | - | - | - |
+| paraphrase | 用 n 乘上前一項來定義階乘 | 6 | 1 | 1 | 1 | 3 | 3 |
+| paraphrase | 不准別人直接修改我類別裡面的資料 | 8 | 7 | 4 | 2 | 2 | 2 |
+| paraphrase | 同一個函式名稱在不同物件會執行不同的版本 | 11 | 10 | 13 | 19 | 19 | 19 |
+| paraphrase | 為什麼老師不建議用跳躍指令 | 3 | 112 | 10 | 4 | 3 | 3 |
+| paraphrase | 用很小的空間存機率值的例子 | 8 | 13 | 5 | 13 | 9 | 9 |
+| english | what is the difference between a compiler and an interpreter | 4 | 4 | 3 | 3 | 3 | 3 |
+| english | why is Java so portable | 1 | 4 | 1 | 1 | 1 | 1 |
+| english | what are the four programming paradigms | 1 | 3 | 1 | 1 | 1 | 1 |
+| english | how to compute an average in functional programming | 4 | 42 | 8 | 8 | 5 | 5 |
+| english | why should we avoid goto statements | 3 | 10 | 1 | 1 | 1 | 1 |

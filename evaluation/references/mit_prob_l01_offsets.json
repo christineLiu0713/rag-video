@@ -1,0 +1,26 @@
+{
+ "segments": [
+  "prob_MITRES6_012S18_L01-01_300k.mp4",
+  "prob_MITRES6_012S18_L01-02_300k.mp4",
+  "prob_MITRES6_012S18_L01-03_300k.mp4",
+  "prob_MITRES6_012S18_L01-04_300k.mp4",
+  "prob_MITRES6_012S18_L01-05_300k.mp4",
+  "prob_MITRES6_012S18_L01-06_300k.mp4",
+  "prob_MITRES6_012S18_L01-07_300k.mp4",
+  "prob_MITRES6_012S18_L01-08_300k.mp4",
+  "prob_MITRES6_012S18_L01-09_300k.mp4",
+  "prob_MITRES6_012S18_L01-10_300k.mp4"
+ ],
+ "offsets_sec": [
+  0.0,
+  111.644867,
+  449.518427,
+  752.027996,
+  1286.574572,
+  1950.738061,
+  2470.168446,
+  2783.057335,
+  3102.943568,
+  3832.003704
+ ]
+}

@@ -1,0 +1,40 @@
+[STEP build_db] 11:02:42.52 
+Loaded 79 chunks
+Loading BGE-M3 (first time: downloading, please wait)...
+Embedding device: cuda
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 12052.24it/s]
+Creating vectors...
+Batches:   0%|          | 0/3 [00:00<?, ?it/s]Batches:  33%|███▎      | 1/3 [00:11<00:23, 11.67s/it]Batches:  67%|██████▋   | 2/3 [00:14<00:06,  6.70s/it]Batches: 100%|██████████| 3/3 [00:16<00:00,  4.35s/it]Batches: 100%|██████████| 3/3 [00:16<00:00,  5.48s/it]
+Each vector has 1024 numbers
+
+Done! Saved 79 chunks to output/chroma_db
+Now run: python search.py
+[STEP eval] 11:04:10.16 
+keyword assembler 是做什麼的 ['ntu_cs_12_012', 'ntu_cs_12_013', 'ntu_cs_12_014']
+keyword compiler 和 interpreter 有什麼不同 ['ntu_cs_12_018']
+keyword 什麼是 portability 可攜性 ['ntu_cs_12_024', 'ntu_cs_12_025']
+keyword 第四代程式語言 SQL ['ntu_cs_12_003', 'ntu_cs_12_004']
+keyword 第一代 Machine Instruction ['ntu_cs_12_003']
+keyword declarative 和 prologue ['ntu_cs_12_037', 'ntu_cs_12_038']
+keyword Lisp 的括號 match ['ntu_cs_12_050']
+keyword encapsulation 封裝 ['ntu_cs_12_059']
+keyword 什麼是 l value ['ntu_cs_12_069', 'ntu_cs_12_070']
+keyword go to 指令 ['ntu_cs_12_073', 'ntu_cs_12_075']
+paraphrase 為什麼要發明組合語言 ['ntu_cs_12_003']
+paraphrase 翻譯一次之後就可以一直重複執行的方式 ['ntu_cs_12_018']
+paraphrase 為什麼驅動程式很難直接搬到別台電腦 ['ntu_cs_12_027']
+paraphrase 把整個程式看成一個函數的寫法 ['ntu_cs_12_036', 'ntu_cs_12_037']
+paraphrase 只要把問題描述清楚電腦就會自己找答案 ['ntu_cs_12_038']
+paraphrase 用 n 乘上前一項來定義階乘 ['ntu_cs_12_039', 'ntu_cs_12_040']
+paraphrase 不准別人直接修改我類別裡面的資料 ['ntu_cs_12_058', 'ntu_cs_12_059']
+paraphrase 同一個函式名稱在不同物件會執行不同的版本 ['ntu_cs_12_060']
+paraphrase 為什麼老師不建議用跳躍指令 ['ntu_cs_12_075']
+paraphrase 用很小的空間存機率值的例子 ['ntu_cs_12_055', 'ntu_cs_12_056']
+english what is the difference between a compiler and an interpreter ['ntu_cs_12_018']
+english why is Java so portable ['ntu_cs_12_020', 'ntu_cs_12_029']
+english what are the four programming paradigms ['ntu_cs_12_032', 'ntu_cs_12_042']
+english how to compute an average in functional programming ['ntu_cs_12_049']
+english why should we avoid goto statements ['ntu_cs_12_075']
+[END] 11:04:47.96 
+FINISHED - you can close this window 

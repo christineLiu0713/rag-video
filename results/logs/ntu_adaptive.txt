@@ -1,0 +1,625 @@
+START 10:43:56.17 
+[STEP ocr] 10:43:56.28 
+Language: zh   Whisper model: medium
+Using the saved screenshots (one every 3 second(s))
+[2/4] Skipped Whisper (keeping the existing output/whisper.json)
+[3/4] PaddleOCR is reading text from the screenshots...
+INFO: Could not find files for the given pattern(s).
+C:\Users\mskid\AppData\Local\Programs\Python\Python311\Lib\site-packages\paddle\utils\cpp_extension\extension_utils.py:718: UserWarning: No ccache found. Please be aware that recompiling all source files may be required. You can download and install ccache from: https://github.com/ccache/ccache/blob/master/doc/INSTALL.md
+  warnings.warn(warning_message)
+[32mCreating model: ('PP-OCRv4_mobile_det', None, None)[0m
+[32mModel files already exist. Using cached files. To redownload, please delete the directory manually: `C:\Users\mskid\.paddlex\official_models\PP-OCRv4_mobile_det`.[0m
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I1122 10:45:30.310216 11888 onednn_context.cc:81] oneDNN v3.6.2
+[32mCreating model: ('PP-OCRv4_mobile_rec', None, None)[0m
+[32mModel files already exist. Using cached files. To redownload, please delete the directory manually: `C:\Users\mskid\.paddlex\official_models\PP-OCRv4_mobile_rec`.[0m
+      PaddleOCR device: CPU (MKL-DNN on, 8 threads), language zh, model PP-OCRv4_mobile_rec
+      Adaptive sampling on (after 2 same slides, up to every 4 screenshots; slide match: tokens)
+   second     0: 
+   second     3: 
+   second     6: National Taiwan n University Opencourseware 臺大开放式課程
+   second     9: National Taiwan University OpencourseWare 臺大開放式課程
+   second    12: Title: 計算機概 Body: 國立台灣大學開放式课程 授課教師：于天立助理教授 國立台灣大學電機工程學系 授課地點： 國立台灣大學明達
+   second    18: OpenCourseWare 臺大開放式課程 TaiwanEvolutionaryIntelligence Lab Department o
+   second    15: Tian-Li.Yu N a tio na l Ta i w OpenCourseware 臺大開放式課程 DepartmentofElec
+   second    21: Title: Taiwan Evolutionary Intelligence Laboratory Body: OpenCourseWar
+   second    24: Title: Taiwan EvolutionaryIntelligence Laboratory Body: OpenCourseWare
+   second    30: Title: Taiwan EvolutionaryIntelligence Laboratory( Body: OpenCourseWar
+   second    42: Title: Taiwan Evolutionary Intelligence Laboratory Body: OpenCourseWar
+   second    54: Machine Assembly National Taiwan Untversity OpenCourseWare uctions U臺大
+   second    48: Machine Assembly National Taiwan Uni OpenCourseWare Instructions (Mnem
+   second    51: Machine Assembly National Taiwan University OpenCourseware Instruction
+   second    57: Machine National Taiwan University Assembly OpenCourseWare uctions 臺大開
+   second    60: Macnine Natiｏｎaｌ Tａiwａｎ Uni versity Assembly OpenCourseWare ctions 臺大開
+   second    66: Machine National Taiwan University Assembly OpenCourseWare Instruction
+   second    78: OpenCourseWare amming Languages
+   second    72: Fortran (Mnemonic Cobol system of Mls) encourseware Basic Java
+   second    69: Machine Assembly NationalTaiwan UniV Instructions Fortran opencourseWa
+   second    81: Basic OpenCourseWare Java Programming Languages
+   second    84: Basic OpenCourseware Java Programming Languages
+   second    90: Basic enCourseWare Java
+   second   102: Machine NationalTaiwan University Assembly OpenCourseWare Instructions
+   second   114: Machine NationalFaiwa anUniversity Assembly Opencourseware Instruction
+   second   126: Machine National Taiwan Assembly OpenCo Instructions Fortran 臺大開放 (Mne
+   second   138: Machine National Taiwan University Assembly OpenCourseware FortraRTU 臺
+   second   150: 156C 166D 臺大開放式課程 5056 LDHo,Shippin ADDI RO,R5,F 306E ST RO,TotalCo CO
+   second   144: 156C 166D 臺大開放式課程 NTU- 5056 DH6Shipping ADDI RO,R5,R 306E ST RO,TotalC
+   second   141: Machine National TaiwanUniversity Assembly OpenCourseware Instructions
+   second   153: 156C 166D 臺大開放式課程 5056 R6,ShippingCh ADDI R0,R5,R6 306E ST RO, TotalCo
+   second   156: 156C 166D 臺大開放式課程 5056 n-TU LDH6,ShippingCha ADDIR0,R5,R6 306E ST RO,T
+   second   162: 156C 166D National Taiwan University 臺大開放式課程 5056 ADDI RO,R5,R6 306E S
+   second   174: 166D LD R5,Price National Taiwan Un 5056 OpenCou rseware ShippingCharg
+   second   186: Title: LD R6, ShipaCharge Body: 166D R5,Price 5056 rsit penCoursewar 3
+   second   198: Title: Machine instructions LD R6, Sh3 Body: OpenCourseware Assembly 1
+   second   210: Title: Machine instructions LD R6, ShippingCharge Body: OpencourseWare
+   second   222: Title: Machine instructions LD R6, ShippingCharge Body: OpenCourseWare
+   second   234: Title: Machine instructions Body: 01st OpehCourseWare 臺大开果程 Assembly 1
+   second   246: Title: Machine instructions LD R6, ShippingCharge Body: OpenCourseware
+   second   258: Title: Machine instructions LD R6, ShippingCharge Body: OpemCourseWare
+   second   270: Title: Machine instructions LD R6, ShippingCharge Body: OpenCourseWare
+   second   282: Title: Machine instructions LD R6, ShippingCharge Body: OpenCourseWare
+   second   294: Title: Machine instructions LD R6, ShippingCharge Body: enCourseWare 臺
+   second   306: Title: Machine instructions LD R6, ShippingCharge Body: NationalTaiwan
+   second   318: Title: Characteristics of assembly Body: National OpenCoursewane 臺大開放式
+   second   312: Title: Characteristics of assembly Body: National Taiwan Universlty Op
+   second   309: Title: Characteristics of assembly Body: National Taiwan University Op
+   second   321: Characteristics of assembly DpenCourseWare 厂武課程 -Machine dependent One
+   second   324: Title: Characteristics of assembly Body: OpenCourseWare 大開放式课栓 -Machin
+   second   330: Title: Characteristics of assembly Body: OpenCourseWare -Machine depen
+   second   342: Title: Characteristics of assembly Body: OpenCourseWare 大開放式课栓 -Machin
+   second   354: Title: Characteristics of assembly Body: OpenCourseWare 開放式课程 -Machine
+   second   366: Title: Characteristics of assembly Body: OpenCourseWare 開放式课程 -Machine
+   second   378: Title: Characteristics of assembly Body: Naulo penCourseWare 臺大顶程 -Mac
+   second   390: Title: Characteristics of assembly Body: Nallor penCourseWare 臺大厂課程 -M
+   second   402: Title: Characteristics of assembly Body: OpelrceurseWare 臺大開放工 -Machin
+   second   414: Title: Characteristics of assembly -Machine dependent -One-to-one mapp
+   second   426: Title: Characteristics of assembly Body: Nalro OpenCourseWare 臺大開放式程 -
+   second   438: Title: OCharacteristics of assembly Body: Natro OpenCourseWare 臺大開放式程 
+   second   450: Title: Characteristics of assembly Body: OpenCour seware 臺大開放式 -Machin
+   second   462: Title: Characteristics of assembly Body: Vallo enCourseWare -Machine d
+   second   474: Title: Characteristics of assembly Body: OpenLourseWare -Machine depen
+   second   486: Title: Characteristics of assembly Body: Courseware -Machine dependent
+   second   498: Title: Characteristics of assembly Body: DpenCourseWare 毫大副式程 -Machine
+   second   510: Title: Characteristics of assembly Body: Nallor penCourseware 毫大武課程 -M
+   second   522: Title: Characteristics of assembly Body: OpenCourseWare -Machine depen
+   second   534: Characteristics of assembly Natlon DenCourseWare -Machine dependent On
+   second   546: Title: Characteristics of assembly Body: OpeiLourseWare 臺大開放 -Machine 
+   second   558: Title: Characteristics of assembly Body: OpenourseWare 臺大開放 -Machine d
+   second   570: Title: Characteristics of assembly Body: OpentourseWare 臺大開放式 -Machine
+   second   582: Title: Characteristics of assembly Body: OpenCourseWare 臺大開放式 -Machine
+   second   594: Title: Characteristics of assembly Body: OpenCourseWare 臺大開放式 -Machine
+   second   606: Title: Characteristics of assembly Body: Nationa OpenCourseware 臺大開放式課
+   second   618: Title: Characteristics of assembly Body: Nationa Opencourseware 臺大開放式課
+   second   630: Title: O Characteristics of assembly Body: Nationa OpenCourseware 臺大開放
+   second   642: Title: Characteristics of assembly Body: National Taiwan University Op
+   second   654: Title: Characteristics of assembly Body: National Taiwan University Op
+   second   666: Title: Natural vs.formal languages Body: OpenCourseWare -Formal langua
+   second   660: Title: Natural vs.formal languages -Formal language →formal grammar Bo
+   second   657: Title: Natural vs. formal languages Body: National Taiwan University O
+   second   669: Title: Formal language →formal grammar Body: atural vs.formal language
+   second   672: Title: -Formal language →formal grammar Body: Natural vs. formal langu
+   second   678: Title: -Formal language →formal grammar Body: Natural vs.formal langua
+   second   690: Title: Natural vs.formal languages -Formal language →formal grammar Bo
+   second   702: Title: Natural vs. formal languages -Formal language → formal grammar 
+   second   714: Title: Natural vs. formal languages Body: OpenCourseWare -Formal langu
+   second   726: Title: Natural vs. formal languages -Formal language → formal grammar 
+   second   738: Title: Natural vs. formal languages -Formal language →formal grammar B
+   second   750: Title: Natural vs. formal languages -Formal language →formal grammar B
+   second   762: Title: Natural vs. formal languages -Formal language →formal grammar B
+   second   774: Title: Natural vs.formal languages -Formal language →formal grammar Bo
+   second   786: Title: Natural vs.formal languages -Formal language →formal grammar Bo
+   second   798: Title: Natural vs. formal languages -Formal language →formal grammar B
+   second   810: Natural vs. formal languages OpenCourseWare -Formal language →formal g
+   second   822: Natural vs. formal languages OpenCourseWare -Formal language → formal 
+   second   834: Title: Natural vs. formal languages Body: pencourseWare -Formal langua
+   second   846: Title: Natural vs. formal languages -Formal language →formal grammar B
+   second   858: Title: Natural vs. formal languages Body: enCourseWare -Formal languag
+   second   870: Title: -Formal language →formal grammar Body: Natural vs. formal langu
+   second   882: Title: Natural vs. formal languages -Formal language → formal grammar 
+   second   894: Title: Natural vs. formal languages -Formal language →formal grammar B
+   second   906: Title: Natural vs. formal languages -Formal language →formal grammar B
+   second   918: Title: Natural vs.formal languages -Formal language → formal grammar B
+   second   930: Title: Natural vs. formal languages -Formal language → formal grammar 
+   second   942: Title: Natural vs. formal languages -Formal language → formal grammar 
+   second   954: Title: Natural vs. formal languages -Formal language →formal grammar B
+   second   966: Title: Natural vs. formal languages -Formal language → formal grammar 
+   second   978: Title: Natural vs. formal languages -Formal language →formal grammar B
+   second   990: Title: Natural vs. formal languages -Formal language →formal grammar B
+   second  1002: Title: Natural vs.formal languages -Formal language →formal grammar Bo
+   second  1014: Title: ML Schema Object-oriented Body: OpenCourseware LISP 嘉大用欣 Functi
+   second  1008: Title: Machine FORTRAN Languages  COBOL ALGOL APL Body: OpencoueseWare
+   second  1005: NationalTaiwanUniversity OpenCourseWare LISP 臺大開放式課程 ML Schema Functio
+   second  1017: Title: ML Schema Object-oriented COBOL ALGOL APL Body: LISP OpenCourse
+   second  1020: Title: ML Schema Machine FORTRAN Visual Basic Object-oriented COBOL AL
+   second  1026: LISP OpenCourseWare 開放式课程 ML Schema Functional Smalltalk Machine Visua
+   second  1038: Title: ML Schema Object-oriented COBOL ALGOL APL Body: LISP OpenCourse
+   second  1050: Title: ML Schema Object-oriented COBOL ALGOL APL Body: LISP Opencourse
+   second  1062: Title: Machine FORTRAN Languages COBOL ALGOL APL Body: LISP OpenCourse
+   second  1074: Title: LanguagesCOBOL ALGOL APL Body: LISP OpenCourseWare ML Schema Fu
+   second  1086: Title: Machine FORTRAN LanguagesCOBOL ALGOL APL Body: LISP OpenCourseW
+   second  1098: Title: Machine FORTRAN LanguagesCOBOL ALGOL APL Body: LISP OpenCourseW
+   second  1110: Title: ML Schema Machine FORTRAN Object-oriented LanguagesCOBOL ALGOL 
+   second  1122: Title: ML Schema COBOL ALGOL APL Body: LISP OpenCourseWare 臺大用放式课社 Fun
+   second  1134: LISP OpencourseWare 大阳放式課程 ML Schema Functional Smalltalk lachine Visu
+   second  1146: Title: ML Schema LanguagesCOBOL ALGOL APL Body: OpenCourseware LISP 臺大
+   second  1158: Title: ML Schema Visual Basic Object-oriented COBOL ALGOL APL Body: LI
+   second  1170: Title: ML Schema Object-oriented COBOLALGOL APL Body: LISP OpenCoursew
+   second  1182: Title: ML Schema Object-oriented Body: LISP OpenCourseware 開放式课程 Funct
+   second  1194: Title: ML Schema Visual Basic Object-oriented COBOL ALGOL APL Body: LI
+   second  1206: Title: COBOLALGOL APL Body: LISP OpenCourseware 開放式课程 ML Schema Functi
+   second  1218: Title: ML Schema Object-oriented guagesCOBOL ALGOL APL Body: LISP Open
+   second  1233: Title: COBOL ALGOL APL Body: LISP OpenCourseWare ML Schema 大阁放式课程 Func
+   second  1245: Title: Machine FORTRAN Object-oriented guagesCOBOL ALGOL APL Body: LIS
+   second  1257: Title: ML Schema Visual Basic Object-oriented COBOL ALGOL APL Body: LI
+   second  1269: Title: COBOL ALGOL APL Body: LISP OpenCourseware ML Schema Functional 
+   second  1281: Title: Machine FORTRAN LanguagesCOBOL ALGO Body: urseware LISP 臺大開果程 M
+   second  1275: Title: ML Schema Object-oriented COBOL ALGOL APL Body: LISP OpenCourse
+   second  1278: Title: COBOL ALGOL APL Body: LISP OpenCourseWare ML Schema 臺大開放式保社 Fun
+   second  1284: National Taiwan Universi OpenCourseWare LISP 臺大開放式課程 ML Schema Fumctio
+   second  1287: National Taiwan Universit OpenCourseWare LISP 臺大開放式課程 ML Schema Functi
+   second  1293: National TaiwanUniversit OpenCourseWare LISP 臺大開放式課程 ML Schema Functio
+   second  1305: Title: ML Schema Object-oriented COBOL ALGOL APL Body: LISP OpenCourse
+   second  1317: Title: ML Schema Object-oriented Body: Mational Taiwan Universlty Jpen
+   second  1329: Title: ML Schema LanguagesCOBOL ALGOLAPL Body: National TaiwanUniversi
+   second  1341: Title: Machine FORTRAN Languages COBOL ALGOL APL Body: OpenCourseWare 
+   second  1335: Title: ML Schema Machine FORTRAN Object-oriented LanguagesCOBOL ALGOL 
+   second  1338: LISP OpenCourseware ML Schema 臺大團放式程 Functional Smaltalk Visual Basic 
+   second  1344: Title: ML Schema Machine FORTRAN Visual Basic Object-oriented COBOL AL
+   second  1347: Title: ML Schema Machine FORTRAN Visual Basic Object-oriented COBOL AL
+   second  1353: Title: ML Schema Machine FORTRAN Visual Basic Object-oriented COBOLALG
+   second  1365: Title: Machine FORTRAN Body: openCourseware LISP 'ML Schema Functional
+   second  1377: Title: Machine FORTRAN Body: openCourseWare 大門收式课程 LISP ML Schema Func
+   second  1389: Title: ML Schema Machine FORTRAN Visual Basic Object-oriented COBOLALG
+   second  1401: Title: ML Schema Machine FORTRAN Visual Basic Object-oriented anguages
+   second  1413: Title: ML Schema Machine FORTRAN Visual Basic Object-oriented COBOLALG
+   second  1425: Title: ML Schema Functional Machine FORTRAN Visual Basic Object-orient
+   second  1437: Title: ML Schema Machine FORTRAN Visual Basic Object-oriented COBOLALG
+   second  1449: 臺大開放式書 LISP ML Schena Functional Smalltalk Vistal Basic Object-oricute
+   second  1461: Title: 'ML Schema Machine FORTRAN Languages COBOL ALGOL APL Body: Nati
+   second  1473: Title: Machine FORTRAN LanguagesCOBOL ALGOL Body: Nalional Taiwan Uni 
+   second  1485: Title: 'ML Schema Machine FORTRAN LanguagesCOBOL ALGOL APL Body: Natio
+   second  1497: Title: ML Schema Visual Basic Object-oriente COBOLALGOLAPL Body: Natio
+   second  1509: Title: ML Schema Visual Basic COBOL ALGOL APL Body: National Taiwan Un
+   second  1521: Title: 'ML Schema Visual Basic Object-oriente COBOLALGOLAPL Body: Nati
+   second  1533: Title: ML Schema Visual Basic Body: NationalTaiwanUniversity OpenCours
+   second  1545: Title: LanguagesCOBOL ALGO Body: National TaiwanUnivet OpenCourseWare 
+   second  1539: Title: ML Schema Body: National Taiwan University OpenCourseWare LISP 
+   second  1542: National Taiwan Universi OpenCourseWare LISP 臺大開放式課程 ML Schema Functio
+   second  1548: Title: 'ML Schema Body: National Taiwan Universi OpenCourseWare LISP 臺
+   second  1551: Title: ML Schema Visual Basic Languages COBOL ALGOL APL Body: National
+   second  1554: Title: ML Schema Object-oriented COBOL ALGOL APL Body: NationalTaiwanU
+   second  1560: Title: ML Schema Languages COBOL ALGOL APL Body: NationalTaiwanUniv Op
+   second  1572: Title: Imperative paradigm Approaching a problem by finding an algorit
+   second  1566: Title: Imperativeparadigm Approaching a problem by finding an algorith
+   second  1563: Title: Imperativeparadigm Approaching a problem by finding an algorith
+   second  1575: Title: Imperativeparadigm Approaching a problem by finding an algorith
+   second  1578: Title: -Approaching a problem by finding an algorithm to solve the Bod
+   second  1584: Title: -Approaching a problem by finding an algorithm to solve the Bod
+   second  1596: Title: -Approaching a problem by finding an algorithm to solve the Bod
+   second  1608: Title: l Paradigm Body: Universlty Courseware 臺大開放程 Fid sum Oupr
+   second  1602: Title: mperativeparadigm -Approaching a problem by finding an algorith
+   second  1605: Title: -Approaching a problem by finding an algorithm to solve the Bod
+   second  1611: Title: Taradigm Old balance Credits Body: National Taiwan Uni 臺大開放式款 L
+   second  1614: Title: Old balanoe Credits Body: OpenCourseWare 臺大開放式程 Laputs: Debits 
+   second  1617: Title: Old balance Credits Body: OpenCourseware Irputs: 臺大開放式課程 Debits
+   second  1623: Title: Old balance Credits Body: National Taiwan-Univelsils OpenCourse
+   second  1635: Title: Old balance Credits Body: Laputs: OpenCourseWare 放式課程 Debits Fi
+   second  1647: Title: Old balance Credits Body: Inputs: OpenCourseWare Debits Find su
+   second  1659: Title: Old balance Credits Body: Inputs: National Taiwan University De
+   second  1671: Title: Old balance Credits Body: Inputs: National Talwan University Op
+   second  1683: Title: Old balance Credits Body: puts: OpenCourseWare Debits Find sum 
+   second  1695: Title: （Find_diff （Find_sum Old balance Credits)（Find sum Debits)) Bod
+   second  1707: Title: bits Body: Falwan Univarslly OpenCourseware 臺大用放政 ind_count Num
+   second  1701: Title: (Find_diff (Find_sum Old_balance Credits) (Find_sum Debits) Bod
+   second  1704: Title: d_diff （Find_sum Old balance Credits)（Find sum Debits)) Body: O
+   second  1710: Title: ind_count Numbers)) Body: eware 臺大開放式課程
+   second  1713: Title: umbers)) Body: Nailonal Fulwan University Jpehcou 臺大開放式課程
+   second  1719: Title: 臺大開放式課 Body: National Taiwan Univer OpenCourseWa
+   second  1731: Title: Old_balance+redit Balance←Temp_balance -To (Find_Quotiant (Find
+   second  1725: Title: 臺大開放式課程 Body: National Taiwan Unive OpenCoursew
+   second  1728: National Talwan Universiy 臺大開放式課程
+   second  1734: Title: Total debits sum of all Debits Old.balance+Credit BalanceTemp_b
+   second  1737: Title: Temp_balance←Old_balance+Credit Total_debits ← sum of all Debit
+   second  1743: Title: （Find_diff (Find_sum Oldbalance Credits)（Find sum Debits)) Body
+   second  1755: Title: （Find_diff (Find_sum Old_balance Credits) (Find.sum Debits)) Te
+   second  1767: Title: （Find_diff (Find_sum Old balance Credits)(Find_sum Debits)) Tem
+   second  1779: Title: (Find_diff （Find_sum Old_balance Credits) (Find sum Debits)) Te
+   second  1791: Title: (Find_diff （Find_sum Old.balance Credits)（Find_sum Debits)) Bod
+   second  1803: Title: （Find_diff (Find_sum Old balance Credits) (Find.sum Debits) Tem
+   second  1815: Title: Find_diff （Find_sum Old.balance Credits)（Find_sum Debits)) Temp
+   second  1827: Title: （Find_diff （Find_sum Old_balance Credits)(Find_sum Debits)) Bod
+   second  1839: Title: (Find_diff （Find_sum Old balance Credits)(Find sum Debits) Body
+   second  1851: Title: (Find_diff （Find_sum Old_balance Credits)(Find.sum Debits)) Bod
+   second  1863: Title: (Find_diff (Find_sum Old_balance Credits)(Find_sum Debits)) Bod
+   second  1875: Title: (Find_diff （Find_sum Old balance Credits)(Find.sum Debits)) Bod
+   second  1887: Title: bers) Body: National Taiwan Unive OpenCoursew 臺大開放式程
+   second  1881: Title: nbers)) Body: Na:lonal Taiwan Univers Dpencoursewa 臺大開放式課程
+   second  1878: Title: l Debits) Body: atlonal.Talw tare 臺大開放式課程 nt Numbers))
+   second  1890: Title: 臺大開放式課程 Body: Natlonal Talwan University UpenCaorseware
+   second  1893: Title: Total debitssum ofall Debits Balance-Temp_balance-Total_debits 
+   second  1896: Title: n Old balance Credits)（Find sum Debits)) Tempbalance←Oldbalance
+   second  1899: Title: （Find_diff （Find_sum Old balance Credits)(Find sum Debits) Temp
+   second  1905: Title: OoP(object-oriented programming) Body: University enCourseware 
+   second  1902: Title: ented Paradigm OoP（object-oriented programming) Body: 臺大開收式程 Ab
+   second  1908: Title: Oop （object-oriented programming) Body: sdParadigm enCourseware
+   second  1911: Title: OoP （object-oriented programming) Information hiding Body: arad
+   second  1917: Title: OoP（object-oriented programming) Body: OpenCourseware 臺大開放式課程 A
+   second  1929: Title: OoPp（object-oriented programming) Body: OpenCourseware 墓大開放式課程 
+   second  1941: Title: OoP （object-oriented programming) Body: OpenCourseware 臺大開放式課程 
+   second  1953: Title: OoP （object-oriented programming) O Information hiding Body: ve
+   second  1965: Title: OoP （object-oriented programming) Information hiding Body: Open
+   second  1977: Title: OoP （object-oriented programming) Information hiding Body: ersi
+   second  1989: Title: OOoP（object-oriented programming) Body: OpenCourseWare NTUI Abs
+   second  2001: Title: O OoP （object-oriented programming) Body: OpenCourseware Abstra
+   second  2013: Title: OoP（object-oriented programming) Information hiding Body: nal T
+   second  2025: Title: OoP （object-oriented programming) Information hiding Body: nal 
+   second  2037: Title: OoP （object-oriented programming) Information hiding Body: nal 
+   second  2049: Title: Oop（object-oriented programming) Information hiding Body: elTai
+   second  2061: Title: OoP （object-oriented programming) Information hiding Body: elTa
+   second  2073: Title: OoP （object-oriented programming) Information hiding Body: lTai
+   second  2085: Title: Oop（object-oriented programming) Body: OpenCourseWare Abstracti
+   second  2097: Title: OoP（object-oriented programming) Body: OpenCourseWare Abstracti
+   second  2109: Title: OOP（object-oriented programming) Body: OpenCourseWare Abstracti
+   second  2124: Title: Oop（object-oriented programming) Body: Opencourseware Abstracti
+   second  2136: Title: Oop（object-oriented programming) Body: ailonal TaiyanUniverslty
+   second  2148: Title: Oop（object-oriented programming) Body: 臺大開放式課程 Abstraction Info
+   second  2160: Title: OoP （object-oriented programming) Information hiding Body: 臺大開放
+   second  2172: Title: OoP （object-oriented programming) Body: 臺大開放式程 Abstraction O In
+   second  2184: Title: OoP（object-orientedprogramming) Information hiding Body: 臺大開放式課
+   second  2196: Title: Oop（object-oriented programming) Body: OpenCourseware Abstracti
+   second  2208: Title: OoP （object-oriented programming) O Information hiding Body: 臺大
+   second  2220: Title: OoP（object-oriented programming) Body: OpenCourseware Abstracti
+   second  2232: Title: OoP （object-oriented programming) Information hiding Body: penC
+   second  2244: Title: OoP（object-oriented programming) Information hiding Body: OpenC
+   second  2256: Title: OoP （object-oriented programming) Information hiding Body: penC
+   second  2268: Title: OoP（object-oriented programming) Information hiding Body: OpenC
+   second  2280: Title: OoP（object-oriented programming) Body: OpenCourseWare Abstracti
+   second  2292: Title: OoP （object-oriented programming) Information hiding Body: 臺大開放
+   second  2304: Title: Variables and data types Data structure Constants and literals 
+   second  2298: Title: OoP （object-orientedprogramming) Body: Opene 臺大開放式課程 Abstractio
+   second  2301: Title: Variables and data types Data structure Constants and literals 
+   second  2307: Title: Variables and data types Body: Opene 臺大開放式課程 Data structure Con
+   second  2310: OpenCourseWare Variables and data types Data structure Constants and l
+   second  2316: Title: ariables and data types Body: OpenCourseWare 臺大開放式課程 ata struct
+   second  2328: Title: Variables and data types Body: e Paradigm OpenCourseWare 大情放式課程
+   second  2340: Title: Variables and data types Body: National Taiwan University OpenC
+   second  2352: Title: Integer Real (floating-point) Character Boolean Body: Universis
+   second  2346: Title: Integer Real (floating-point) Character Boolean Body: OpenCours
+   second  2343: Title: Integer Real (floating-point) Character Boolean Body: Taiwan Un
+   second  2355: Title: Integer Real (floating-point) Character Boolean Body: Universit
+   second  2358: Title: Integer Real (floating-point) Character Boolean Body: OpenCours
+   second  2364: Title: Integer Real (floating-point) Character Boolean Body: OpenCours
+   second  2376: Title: Integer Real (floating-point) Character Boolean Body: aiwan Uni
+   second  2388: Title: Integer Real (floating-point) Character Boolean Body: Nallon en
+   second  2400: Title: Integer Real (floating-point) Character Boolear Body: OpenCours
+   second  2412: Title: nteger Real (floating-point) Character Boolean Body: OpenCourse
+   second  2424: Title: nteger Real (floating-point) Character Boolean Body: nal Taiwan
+   second  2436: Title: Integer Real (floating-point) Character Boolean Body: Natlonal 
+   second  2448: Title: omogeneous array eterogeneousarray INTEGER a(6,3) array[0..5,0.
+   second  2442: Title: Homogeneous array Heterogeneous array array[0..5,0..2] of integ
+   second  2445: Title: Homogeneous array Heterogeneous array INTEGER a(6,3) array[0..5
+   second  2451: Title: Homogeneous array Heterogeneous array array[0..5,0..2] of integ
+   second  2454: Title: Homogeneous array Heterogeneous array array[0..5,0..2] of integ
+   second  2460: Title: Homogeneous array Heterogeneous array array[0..5,0..2] of integ
+   second  2472: Title: Homogeneous array Heterogeneous array array[0..5,0..2] of integ
+   second  2484: Title: Homogeneous array Heterogeneous array INTEGER a(6,3) array[0..5
+   second  2496: Title: Homogeneous array Heterogeneous array array[0..5,0..2] of integ
+   second  2508: Title: Homogeneous array Heterogeneous array FORTRAN INTEGER a(6,3) Pa
+   second  2520: Title: Homogeneous array Heterogeneous array INTEGER a(6,3) array[0..5
+   second  2532: Title: OHomogeneous array Heterogeneous array INTEGER a(6,3) array[0..
+   second  2544: Title: Homogeneous array Heterogeneous array array[0..5,0..2] of integ
+   second  2556: Title: Homogeneous array Heterogeneous array array[0..5,0..2] of integ
+   second  2568: Title: Homogeneous array Heterogeneous array array[0..5,0..2] of inteq
+   second  2580: OpenCourseware a←b+645: -645isa literal const int a=645: final int a=6
+   second  2574: Natlonal Taiwan.University 臺大開放式程 a-b+645; -645 is a literal const int
+   second  2571: 臺大開放式課程 a-b+645: 645 is a literal const int a=645; final int a=645; A 
+   second  2583: NatlonalTalw jenCounseware 臺大開放式 a←b+645: 645isa literal const int a 5
+   second  2586: NallonalTaiwar purseware 臺大開放式租 a←b+645; -645 is a literal const int a
+   second  2592: DpenCourseware a←b+645: -645is a literal const int a=645; final int a=
+   second  2604: Na:lo UpenCourseWare a←b+645; - 645 is a literal const int a=645; fina
+   second  2616: OpenCourseware a←b+645; - 645 is a literal const int a=645; final int 
+   second  2628: Nallo OpenCourseWare a←b+645; -645 is a literal const int a=645; final
+   second  2640: Nallo UpenCourseWare a←b+645; -645 is a literal const int a=645; final
+   second  2652: OpenCourseWare a-b+645； 章大周放式課程 645 is a literal const int a=645; inal
+   second  2664: 台大開放式課程 a<-b+ci Ada,Pascal a:=b+ci Operator precedence Operator overlo
+   second  2658: Natlonal Taiwan UniVel eware 臺大開放式 a-b+645: 645is a literal const inta
+   second  2661: Title: Operatorprecedence Body: 臺大開放式課程 Ada,Pascal a=b+c Operator over
+   second  2667: Taiwan University 臺大開放式課程 Ada,Pascal a=b+c Operator precedence Operato
+   second  2670: Title: Operator preredence Body: nal Taiwan University 臺大開放式課程 Ada,Pas
+   second  2676: Title: Operator precedence Body: OpencourseWare Ada,Pascal a:=b+ci a=b
+   second  2688: OpenCourseware 喜大開放式課程 Ada,Pascal a:=b+ci peratorprecedence beratorove
+   second  2700: National Taiwan Univetell 臺大開放式課程 Ada,Pascal a:=b+ci a=b+c peratorprec
+   second  2712: National Taiwan Universll enCourseware 臺大開放式課程 a<-b+ci Ada,Pascal a:=b
+   second  2724: National Taiwan Universiiy 臺大開放式課程 Ada,Pascal a:=b+ci Operatorpreceden
+   second  2736: Title: Operator precedence Body: OpenCourseWare 壹大門放式课程 Ada,Pascal a:=
+   second  2748: Title: Operator precedence Body: an.University OpenCourseWare 章大兴地式課程 
+   second  2760: Title: o Old-fashion:goto if （grade<60)goto 60 Body: 臺大開放式課程 goto40 pr
+   second  2754: Title: Operator precedence Body: aiwan.University enCourseWare Ada,Pas
+   second  2757: aiwan University OpenCaurseWare a<-b+ci Ada,Pascal a:=b+ci Operatorpre
+   second  2763: Title: C/C++,Java Body: 臺大開放式課程 This is a This is a block comment docu
+   second  2766: 臺大開放式課程 Ada,Pascal a:=b+ci Operator precedence Operator overloading
+   second  2772: Title: ashion: goto print "passed." if （grade < 60） goto 60 Body: Open
+   second  2769: Title: Old-fashion:goto if （qrade < 60） qoto 60 Body: 臺大開放式課程 qoto 40 
+   second  2775: Title: ashion: goto print "passed." if （grade< 60)goto 60 Body: OpenCo
+   second  2778: Title: ashion: goto print "passd." Body: OpenCourseWare goto40 goto 70
+   second  2784: Title: ashion: goto print "passed." if （grade<60 Body: OpenCourseware 
+   second  2796: Title: ashion: goto print "passed." if （grade <60) qoto 60 Body: OpenC
+   second  2808: Title: shion: goto print "passed." if (grade < 60) goto 60 Body: Unive
+   second  2820: Title: ashion: goto print "passed." if (grade< 60)goto 60 Body: ersity
+   second  2832: Title: print "passed." if （grade < 60) goto 60 Body: Lniversit OpenCou
+   second  2844: Title: print "passed." if (grade< 60） goto 60 print "failed." Body: Op
+   second  2856: 臺大開放式課程 if (B) S1 else s2; while (B) switch(N) {case Cl:S Sl;break; ca
+   second  2850: University Oper 臺大開放式課程 if (B)S1 else S2; while (B) switch {case Cl:S 
+   second  2847: 臺大開放式課程 if (B)S1 else S2; while (B) switch {case Cl:Sl:break; case C2:
+   second  2859: Open 臺大開放式課程 if (B)S1 else S2; while (B) switch(N) {case Cl:S Sl;break
+   second  2862: Naflonal University 臺大開放式課程 if (B）S1 else S2; while (B) switch case C1
+   second  2868: OpenCourseWare if (B) S1 else S2; while (B)
+   second  2880: Title: if (B）S1 Body: Opento Uare 臺大開放式程 else S2; while (B) switch (N)
+   second  2892: Vallona eWare 臺大開放式 if (B)S1 else S2; while (B) switch {case Cl: Sl;br
+   second  2904: Title: 計算機概 Body: ImperativeParadigm National Taiwan University OpenCo
+   second  2898: Title: Functional Paradigm 計算機概 Body: Programming Languages and Paradi
+   second  2895: Title: 計算機概 Body: opencoursewars 基大開放式課程 PLGenerations Machine Asseimb
+   second  2907: Title: 計算機概 Body: ImperativeParadigm National Taiwan Unlversity OpenCo
+   second  2910: Title: 計算機概 Body: ImperativeParadigm National Taiwan University OpenCo
+   second  2916: Title: Control 計算機概 Body: Imperative Paradigm National Taiwan Universi
+   second  2937: Title: Control Structures 計算機概 Body: ImperativeParadigm National Taiwa
+   second  2961: Title: Control Structures (contd.) 計算機概 Body: Imperative Paradigm Nati
+   second  2988: Title: 計算機概 Body: Imperative Paradigm NationalTaiwan University OpenCo
+   OCR was run 350 times for 1000 screenshots (303 regular + 47 to locate slide changes).
+   OCR time: 925.2s total, 2.64s per OCR call (1 process(es) x 8 thread(s))
+   Done: 32 text blocks. Saved to output/ocr.json
+[4/4] Finished!
+Open these files in the output folder to see the results:
+  - output/whisper.json  (speech)
+  - output/ocr.json      (on-screen text)
+[STEP build_chunks] 11:01:00.04 
+Speech sentences kept: 1147 / 1155
+Slide text blocks kept: 32 / 32
+
+Created 79 chunks -> output\chunks.jsonl
+
+ntu_cs_12_001     0.0s ->   46.1s  132 words  image=frame_0011.jpg
+    slide : National Taiwan n University Opencourseware 臺大开放式課程 ; Title: 計算機概 Body: 國立台灣大學開放
+    speech: 好,接下來我們繼續要進行是其中好之前我們講完的Algorithm這一部分。 那我們接下來進去進行的新單元是Programming Languages,就是程式語...
+ntu_cs_12_002    41.1s ->   78.5s  138 words  image=frame_0018.jpg
+    slide : Title: Taiwan EvolutionaryIntelligence Laboratory Body: OpenCourseWare 臺大開放式課程 D
+    speech: 發現我們一個,發現我忘了夾這個。 你們在上計程的時候有沒有老師介紹過說CC++是所謂第三代程式語言,有這樣講過嗎?沒有。 但是你們應該蠻常聽的已經知道它是一個所...
+ntu_cs_12_003    78.5s ->  120.5s  184 words  image=frame_0034.jpg
+    slide : Machine National TaiwanUniversity Assembly OpenCourseware Instructions FortranTu
+    speech: 那其實從四,從第四代開始其實都很爭議,我不太建議說你們一定去記誰是第四代,我覺得對這個意義比較不大。 第一代第二代其實你們都接觸過,就是第一代是所謂的Machi...
+ntu_cs_12_004   108.5s ->  142.5s  137 words  image=frame_0043.jpg
+    slide : Machine National TaiwanUniversity Assembly OpenCourseware Instructions FortranTu
+    speech: 那第三代開始就百家爭鳴,就是有數不清的高階語言,包含你們可能聽過一些Fortran,Cobalt,Basic,CC++都屬於這一階這裡面。 那有所謂第四代是配合...
+ntu_cs_12_005   142.5s ->  186.7s  182 words  image=frame_0056.jpg
+    slide : 166D LD R5,Price National Taiwan Un 5056 OpenCou rseware ShippingCharge 臺大開放式 30
+    speech: 好,這邊其實是我剛剛講的,這你們我們在第二章的時候,這單元第二個單元都講過。 那第一代所謂的Machine Traction,但這些東西因為真的你打開就是16b...
+ntu_cs_12_006   181.7s ->  229.7s  250 words  image=frame_0072.jpg
+    slide : 166D LD R5,Price National Taiwan Un 5056 OpenCou rseware ShippingCharge 臺大開放式 30
+    speech: 可是你就算沒學過那些東西,你看這個你大概也猜得出他是在幹什麼,對不對。 就是你把一個Price的東西,這個Price這邊寫Price是因為讓人容易記,因為之前我...
+ntu_cs_12_007   213.7s ->  275.7s  291 words  image=frame_0083.jpg
+    slide : Title: Machine instructions LD R6, ShippingCharge Body: NationalTaiwanUniversit 
+    speech: 就是你可以把A的位置印出來嗎?你可以印那個M的A,就是A的位置,那如果A的位置印出來是100的話,其實你說100和說A只是一個我們人類比較,A對我們來說可能比較...
+ntu_cs_12_008   246.7s ->  304.7s  242 words  image=frame_0093.jpg
+    slide : Title: Machine instructions LD R6, ShippingCharge Body: NationalTaiwanUniversit 
+    speech: 就是它這邊也是代表一個記憶體位置,然後把它那個記憶體位置裡面的值load到register6,然後暫存器6,好,然後把5和6的值內容加起來,把結果存到R0,可以...
+ntu_cs_12_009   275.7s ->  304.7s  110 words  image=frame_0098.jpg
+    slide : Title: Machine instructions LD R6, ShippingCharge Body: NationalTaiwanUniversit 
+    speech: 到一個total cost所指的抽屜號碼裡面,然後接下來hold,這是組合語言,就是你真的寫組合語言的話,看起來會比較像是這個樣子,好,那重點就是你有容易記的名...
+ntu_cs_12_010   305.7s ->  360.9s  260 words  image=frame_0113.jpg
+    slide : Title: Machine instructions LD R6, ShippingCharge Body: NationalTaiwanUniversit 
+    speech: 都方便很多,這所謂第二代,好,第三代的語言,programming language,那就包含它希望能做到這些事情,就是我上面列這三件事情,最主要其實應該說最主...
+ntu_cs_12_011   331.9s ->  390.9s  307 words  image=frame_0121.jpg
+    slide : Title: Characteristics of assembly Body: National Taiwan University OpenCourseWa
+    speech: 那你如果是組合語言,或是你如果是machine instruction的話,你一定depends on你CPU支援哪一些指令,對不對,就你在這一台,這個CPU的...
+ntu_cs_12_012   361.9s ->  421.9s  276 words  image=frame_0132.jpg
+    slide : Title: Characteristics of assembly Body: National Taiwan University OpenCourseWa
+    speech: 基本上你只要相信,只要你這個電腦可以做加法,我的層次就能run,你希望是這個樣子的,好那他希望能做到幫你做到這件事,你們現在其實就已經在做這件事了啦,我剛在強調...
+ntu_cs_12_013   391.9s ->  451.9s  242 words  image=frame_0142.jpg
+    slide : Title: Characteristics of assembly Body: National Taiwan University OpenCourseWa
+    speech: 也就是說你已經假設了你寫的層次似乎在每一台機器上都可以run,這當然是我們希望能做到,那實際上不完全做得到,我要先講,那他有些特性還有包含one,對不起我要跳的...
+ntu_cs_12_014   421.9s ->  481.9s  264 words  image=frame_0152.jpg
+    slide : Title: Characteristics of assembly Body: National Taiwan University OpenCourseWa
+    speech: 跟一行組合語言對應到一個machine instruction,然後他要做的事情就把它變成把組合語言寫的層次變成機器看得懂的東西,這個過程叫assembler,...
+ntu_cs_12_015   451.9s ->  496.9s  199 words  image=frame_0159.jpg
+    slide : Title: Characteristics of assembly Body: National Taiwan University OpenCourseWa
+    speech: primitive就是就像我們有些我講if then,你知道if是什麼,你知道then是什麼,我們講for do while,你知道do是什麼,while是什麼...
+ntu_cs_12_016   481.9s ->  497.9s  191 words  image=frame_0164.jpg
+    slide : Title: Characteristics of assembly Body: National Taiwan University OpenCourseWa
+    speech: 就是一個high level的狀態,它是一個比較高階的primitive,那我們希望做到machine dependent,那這個我特別要刮胡virtually...
+ntu_cs_12_017   496.9s ->  540.9s  180 words  image=frame_0174.jpg
+    slide : Title: Characteristics of assembly Body: National Taiwan University OpenCourseWa
+    speech: 好,那一般來說一個primitive這邊在high level language的一個primitive其實很基本的,不能再分解像if then,在C++裡面你...
+ntu_cs_12_018   526.9s ->  578.9s  229 words  image=frame_0185.jpg
+    slide : Title: Characteristics of assembly Body: National Taiwan University OpenCourseWa
+    speech: 一種是compiler,一種是interpreter,就是通通這翻成編譯,這翻成解譯,一般來說是這個樣子,那你們現在用CC++的過程都是compiler 我記得...
+ntu_cs_12_019   568.9s ->  604.9s  185 words  image=frame_0197.jpg
+    slide : Title: Characteristics of assembly Body: National Taiwan University OpenCourseWa
+    speech: 所以你可以想像的出來,當然就是這個效率會比較慢一點,你要執行程式的時候,效率是比較差的,因為你每次執行這種程式的時候,它同時還在做翻譯的事情 那這個是one t...
+ntu_cs_12_020   599.9s ->  644.9s  195 words  image=frame_0208.jpg
+    slide : Title: Characteristics of assembly Body: National Taiwan University OpenCourseWa
+    speech: 那你如果一篇文章翻譯好了,就我把一個中文搞,翻譯成英文搞,結果法國人看不懂 你要到法國那邊,你就只好再做一次compile的動作,把它翻成法文 那這個反正是個萬...
+ntu_cs_12_021   638.9s ->  687.8s  179 words  image=frame_0225.jpg
+    slide : Title: Characteristics of assembly Body: National Taiwan University OpenCourseWa
+    speech: 可是大部分你interpreter這一類的語言,大部分它還是提供你compile的能力 它還是有時候為了執行效率,你可以考慮把它真的compile成一個one ...
+ntu_cs_12_022   684.8s ->  726.8s  182 words  image=frame_0236.jpg
+    slide : Title: Natural vs. formal languages -Formal language →formal grammar Body: Natio
+    speech: 我現在這樣講的話跟你們寫程式的語言 它們雖然也叫作語言,但它有很大的差異 有懂我的意思嗎?就是我講這句話裡面 加一些啦啦啦的字,你可能是不影響你理解的能力 對不...
+ntu_cs_12_023   724.8s ->  768.8s  193 words  image=frame_0250.jpg
+    slide : Title: Natural vs. formal languages -Formal language →formal grammar Body: Natio
+    speech: 其實有一門課它課名就叫formal language 如果對CS有興趣的話,這門課建議你遲早可能要修 我們系上好像沒有offer啦 我們電機系統最近也沒有開fo...
+ntu_cs_12_024   765.8s ->  810.8s  176 words  image=frame_0264.jpg
+    slide : Title: Natural vs. formal languages -Formal language →formal grammar Body: Natio
+    speech: 它其實簡單講是token的兌換,它可以換來換去 就是說我給你一個大A,你可以換成小A小B 然後給你一個小B,你可以換成什麼什麼等等 這是我們所謂formal l...
+ntu_cs_12_025   801.8s ->  847.8s  155 words  image=frame_0276.jpg
+    slide : Title: Natural vs. formal languages -Formal language →formal grammar Body: Natio
+    speech: portability意思是說你這個language多容易攜帶到不同的平台上執行 這是所謂的可攜性portability 理想上你針對不同的平台你只要用不同的c...
+ntu_cs_12_026   846.8s ->  888.8s  180 words  image=frame_0290.jpg
+    slide : Title: Natural vs. formal languages -Formal language →formal grammar Body: Natio
+    speech: 你程式碼不用動你只要今天寫好程式 你如果希望今天希望它在android上run 你就只要找android的compiler compiler完以後它就可以執行 ...
+ntu_cs_12_027   887.8s ->  926.8s  183 words  image=frame_0303.jpg
+    slide : Title: Natural vs. formal languages -Formal language →formal grammar Body: Natio
+    speech: 大部分啦 因為都跟作業系統沒什麼關係 都跟機器架構沒什麼了不起的關係 有你今天寫的程式大部分來說你寫個排序 使用者輸入一些數字 大部分真的是沒錯你找differ...
+ntu_cs_12_028   925.8s ->  965.8s  192 words  image=frame_0316.jpg
+    slide : Title: Natural vs. formal languages -Formal language →formal grammar Body: Natio
+    speech: 那這種事情就 像我是舉例啦driver是其中一個 always也是 就你今天不可能寫一個作業系統 作業系統也是程式嘛 它也是寫出來的 你今天不太可能寫一個作業系...
+ntu_cs_12_029   963.8s -> 1003.2s  155 words  image=frame_0329.jpg
+    slide : Title: Natural vs. formal languages -Formal language →formal grammar Body: Natio
+    speech: 這件事就不太可能做得非常好 今天你如果程式都沒什麼關係 就只是輸入一堆數字算平均值 像這個東西在哪一台機器上 做都差不多的話 都可以做得到的 可以嗎 那你們現在...
+ntu_cs_12_030  1010.4s -> 1055.4s  152 words  image=frame_0345.jpg
+    slide : Title: ML Schema Object-oriented Body: Mational Taiwan Universlty Jpencourseware
+    speech: 那程式語言其實很多很多 你們還會些什麼語言 CC++是我們系上一定要修的 有沒有同學會一些其他 我們舉手看看好不好 有沒有同學會Java 怎麼叫會我當然不知道 ...
+ntu_cs_12_031  1054.4s -> 1098.4s  186 words  image=frame_0360.jpg
+    slide : Title: ML Schema Object-oriented Body: Mational Taiwan Universlty Jpencourseware
+    speech: 應該不太會有人用Pasco 好像台灣要念Pascal 我不知道為什麼 好像是日本的念法 好這邊還有很多我剛講的那幾個 如果我重點是如果你學過 你會除了CC++你...
+ntu_cs_12_032  1097.4s -> 1140.4s  180 words  image=frame_0374.jpg
+    slide : Title: ML Schema Object-oriented Body: Mational Taiwan Universlty Jpencourseware
+    speech: 可是CC++那一部分你要訂class 你要訂什麼繼承 你要訂什麼overload 你有沒有覺得這個是C 以前從來沒聽過的東西 然後我要講的是說你們會 我剛講這些...
+ntu_cs_12_033  1139.4s -> 1184.4s  181 words  image=frame_0388.jpg
+    slide : Title: ML Schema Object-oriented Body: Mational Taiwan Universlty Jpencourseware
+    speech: 它是發展最早的一支 就從Machine Language開始 它就是屬於這一個 然後Fortran, Cobol 然後Basic, C, Pascal, APL...
+ntu_cs_12_034  1183.4s -> 1224.4s  190 words  image=frame_0402.jpg
+    slide : Title: ML Schema Object-oriented Body: Mational Taiwan Universlty Jpencourseware
+    speech: 其實你在設計程式的時候 你看到一個問題 你可能腦中想的 應該不是第一步第二步 你應該想的是說 我在這個問題的世界裡面 它存在哪些類別 這些類別裡面有哪些物件 你...
+ntu_cs_12_035  1222.4s -> 1259.4s  182 words  image=frame_0415.jpg
+    slide : Title: ML Schema Object-oriented Body: Mational Taiwan Universlty Jpencourseware
+    speech: 它只是一個讓人家繼承的 它叫物件就是繪圖物件 然後接下來圓圈可以繼承它 方塊可以繼承它 矩形可以繼承它 你懂我意思嗎 就是接下來我會想我哪些物件 然後一個桌布 ...
+ntu_cs_12_036  1257.4s -> 1299.4s  180 words  image=frame_0427.jpg
+    slide : Title: ML Schema Object-oriented Body: Mational Taiwan Universlty Jpencourseware
+    speech: 那這裡面有一些你們比較不熟的 譬如說像 small talk 它是很早的始祖之一 這個你們可能比較不熟 但是概念是這個 那還有兩個可能你們聽都沒聽過的 是 fu...
+ntu_cs_12_037  1298.4s -> 1341.4s  163 words  image=frame_0441.jpg
+    slide : Title: ML Schema Object-oriented Body: Mational Taiwan Universlty Jpencourseware
+    speech: 你總是輸出一些東西 這個就是所謂的函式導向 它把整個程式視為一個函式 然後接下來想的只是 你這個函式裡面 要包含哪些子函式 就是 functional deco...
+ntu_cs_12_038  1341.4s -> 1380.4s  188 words  image=frame_0455.jpg
+    slide : Title: Machine FORTRAN Languages COBOL ALGOL APL Body: OpenCourseWare LISP ML Sc
+    speech: 跟機器跟電腦定義清楚 你的問題是什麼就好了 然後它存在一個 universal 的 solver 它會把你解掉 聽起來好像很神 說實話我要先講一點都不神 說實話...
+ntu_cs_12_039  1378.4s -> 1420.3s  181 words  image=frame_0467.jpg
+    slide : Title: Machine FORTRAN Languages COBOL ALGOL APL Body: OpenCourseWare LISP ML Sc
+    speech: 你想像你如果再跟小學生講 他沒有學過階層 他會四則運算 你要他算 n 階 你要怎麼跟他講 你可以講一層層層到什麼 可是你知道那是不嚴格的定義 就是你知道我們寫什...
+ntu_cs_12_040  1417.3s -> 1457.3s  185 words  image=frame_0480.jpg
+    slide : Title: Machine FORTRAN Languages COBOL ALGOL APL Body: OpenCourseWare LISP ML Sc
+    speech: 譬如你可以跟他講0階是1 然後 n 階就是 n 乘上 n 減 1 階 我這樣已經定義完了 因為它是完整的定義 因為你可以從 0 階 你可以 apply 到任何一...
+ntu_cs_12_041  1454.3s -> 1491.3s  185 words  image=frame_0492.jpg
+    slide : Title: Machine FORTRAN Languages COBOL ALGOL APL Body: OpenCourseWare LISP ML Sc
+    speech: 就是在這種層次裡面 你一定要跟他講 n 階怎麼算 就是 0 階是 1 n 階就是 n 乘 n 減 1 階 他自己會去算任何一階 你可以問他說那 3 階是多少 他...
+ntu_cs_12_042  1488.3s -> 1536.2s  160 words  image=frame_0507.jpg
+    slide : Title: Machine FORTRAN Languages COBOL ALGOL APL Body: OpenCourseWare LISP ML Sc
+    speech: 這是這個 program 在做的事情 至於怎麼去找到那條路 他會做 那你不用管 可以嗎 這是 programming language 主要的 四個很不一樣的 ...
+ntu_cs_12_043  1533.2s -> 1561.2s  128 words  image=frame_0519.jpg
+    slide : Title: ML Schema Visual Basic Body: NationalTaiwanUniversity OpenCourseWare LISP
+    speech: programming language 基本上很少有 是偶爾會有 但很少有能力不同啦 不太多 基本上你用這個程式能寫的 用這個程式大概都能寫 基本上很少 譬如...
+ntu_cs_12_044  1561.2s -> 1610.2s  151 words  image=frame_0529.jpg
+    slide : Title: Imperativeparadigm Approaching a problem by finding an algorithm to solve
+    speech: 其實這名稱裡面就講的 就是我剛剛講的 講那些事情啦 就是 imperative 的話 其實我們也有人稱 procedural 那你針對這個東西 you appr...
+ntu_cs_12_045  1610.2s -> 1656.7s  152 words  image=frame_0546.jpg
+    slide : Title: (Find_diff (Find_sum Old_balance Credits) (Find_sum Debits) Body: Natlo p
+    speech: 那還有接下來 functional 是什麼 譬如說像這裡面 是把就是一個計算的小程式 那快遞軟體啦 把你 old balance 你之前的結餘 然後加上你的 c...
+ntu_cs_12_046  1654.7s -> 1699.5s  184 words  image=frame_0560.jpg
+    slide : Title: (Find_diff (Find_sum Old_balance Credits) (Find_sum Debits) Body: Natlo p
+    speech: 你有個 function 叫 five sum 就 five sum of the x和 y 然後 five sum 這個如果是 list 如果是一個數值大概不...
+ntu_cs_12_047  1697.5s -> 1731.5s  129 words  image=frame_0575.jpg
+    slide : Title: (Find_diff (Find_sum Old_balance Credits) (Find_sum Debits) Body: Natlo p
+    speech: 是一個 list 的寫法 list 的寫法 它很討厭就是刮糊 刮不完的糊 這個東西你們可能不太習慣 就是我說 function 在什麼地方 就是我們習慣上如果寫...
+ntu_cs_12_048  1731.5s -> 1777.8s  174 words  image=frame_0586.jpg
+    slide : Title: (Find_diff （Find_sum Old_balance Credits) (Find sum Debits)) Temp_balance
+    speech: 這樣刮糊會是找出一個數字 然後再刮糊 five sum debit 然後這兩個再 find div 然後整個刮糊起來 可以嗎 就是你的程式 基本上就是寫一個 f...
+ntu_cs_12_049  1775.8s -> 1820.9s  152 words  image=frame_0600.jpg
+    slide : Title: (Find_diff （Find_sum Old_balance Credits) (Find sum Debits)) Temp_balance
+    speech: 那在 functional 裡面 你要找它平均值的話 functional 裡面就會 find sum apply 在上面 然後再來 再 find 著 這個是 ...
+ntu_cs_12_050  1815.3s -> 1860.9s  182 words  image=frame_0614.jpg
+    slide : Title: (Find_diff （Find_sum Old_balance Credits) (Find sum Debits)) Temp_balance
+    speech: 你們知道我在做什麼 他們兩件事做都一模一樣 只是你出發點 你思考問題的方式 應該要不一樣 思考方式應該 就希望你能吸收到這一件 那他們做的事 當然是完全一樣的事...
+ntu_cs_12_051  1859.9s -> 1891.4s  126 words  image=frame_0626.jpg
+    slide : Title: (Find_diff （Find_sum Old_balance Credits) (Find sum Debits)) Temp_balance
+    speech: 通常會 我在學 Lisp 的時候 很抱歉我那時候用的 學校工作站上 然後用的 editor 是沒有這個 match 功能的 然後你知道這個層次很小 然後不久以後...
+ntu_cs_12_052  1891.4s -> 1937.2s  158 words  image=frame_0641.jpg
+    slide : Title: （Find_diff （Find_sum Old balance Credits)(Find sum Debits) Temp_balance-O
+    speech: 那時候很痛苦 那時候在做這件事的時候很痛苦 然後現在 你可以 match 這個刮鬍就小事了 事情就很簡單 接下來這個你們也算熟 可是可能不知道 花多少時間在講這...
+ntu_cs_12_053  1936.2s -> 1982.2s  180 words  image=frame_0654.jpg
+    slide : Title: OoP （object-oriented programming) Information hiding Body: aradigm Watlon
+    speech: 我們的物件類別 這都不太一樣 有人知道 OO 的目的 在幹什麼嗎 其實我這邊有寫了幾個 但是如果你只要 如果你只要 它有很多原因 有很多目的 但是你如果 一定要...
+ntu_cs_12_054  1980.2s -> 2021.2s  189 words  image=frame_0668.jpg
+    slide : Title: OoP （object-oriented programming) Information hiding Body: aradigm Watlon
+    speech: 這也是一個目的之一 可是如果 其實說真的 你們自己寫程式 有多少時候是拿給人家用 除了學弟學妹 還有那個作業 我不知道發生什麼事 之外 我在講你自己或是什麼 就...
+ntu_cs_12_055  2020.2s -> 2054.2s  182 words  image=frame_0680.jpg
+    slide : Title: OoP （object-oriented programming) Information hiding Body: aradigm Watlon
+    speech: 結果哪一天你不知道為什麼 把這個 array 裡面的第三個 第三個數字你把它改掉了 這樣程式就會 得到你不想要的結果 就那個改掉不是你想要改的 或是你給人家用的...
+ntu_cs_12_056  2052.2s -> 2092.2s  183 words  image=frame_0692.jpg
+    slide : Title: OoP （object-oriented programming) Information hiding Body: aradigm Watlon
+    speech: 我自己是寫過一個 class 就是用一個 byte 去記小數 就記幾率 我們常常 程式要寫 probability 然後你在計算 probability 的時候...
+ntu_cs_12_057  2091.2s -> 2128.2s  182 words  image=frame_0704.jpg
+    slide : Title: OoP （object-oriented programming) Information hiding Body: aradigm Watlon
+    speech: 所以我就用一個 byte 來表示一個 0 到 1 之間的數字 那你可以想像很簡單 你的精確度 2 5 6 分之 1 對不對 可是我裡面是 實際上寄的是一個 CH...
+ntu_cs_12_058  2127.2s -> 2167.0s  181 words  image=frame_0717.jpg
+    slide : Title: OoP （object-oriented programming) Information hiding Body: aradigm Watlon
+    speech: 他可能不是介到 0 到 1 之間 他就直接把它每個加 1 可是對我整個層次來說 根本不是這樣用的 你有懂我意思嗎 就是你會造成這些不必要的困擾 所以才會需要這件...
+ntu_cs_12_059  2165.0s -> 2209.0s  183 words  image=frame_0730.jpg
+    slide : Title: OoP （object-oriented programming) Information hiding Body: aradigm Watlon
+    speech: 我不准你動 或是你要動的時候 你只能透過我給你的窗口來動 我給你的窗口就是那個 我給你的 public function 可以嗎 就是你只能呼叫我的 funct...
+ntu_cs_12_060  2206.0s -> 2247.0s  180 words  image=frame_0743.jpg
+    slide : Title: OoP （object-oriented programming) Information hiding Body: aradigm Watlon
+    speech: 你可以呼叫就多行 這什麼多行 你可以呼叫 可是你呼叫的時候 你呼叫這個 function 的時候 這個 function 實際上被誰給接過去 你可以不要太 ca...
+ntu_cs_12_061  2245.0s -> 2287.0s  182 words  image=frame_0756.jpg
+    slide : Title: OoP （object-oriented programming) Information hiding Body: aradigm Watlon
+    speech: 我 rectangle 我有 circle 我可以都呼叫他們的座 那他們會 call 不同的座 一個會呼叫 rectangle 的座 一個會呼叫 circle ...
+ntu_cs_12_062  2285.0s -> 2330.5s  172 words  image=frame_0773.jpg
+    slide : Title: OoP （object-oriented programming) Information hiding Body: aradigm Watlon
+    speech: 因為其實你不需要管 然後當然還有繼承 這個你們大概也聽過一些 那其實還有很多東西你們應該 在 OO 的部分你們可以去看一下 好 OO 我們晚一點會再講一些東西 ...
+ntu_cs_12_063  2328.5s -> 2376.5s  179 words  image=frame_0788.jpg
+    slide : Title: Variables and data types Body: National Taiwan University OpenCourseWare 
+    speech: 你就可以問我或是 你可以叫我講慢一些 empirical 的話就是你們常寫 C 這種一定大部分都包含這一些 這些要素 那我們看一下就好 就是你一定會有變數 還有...
+ntu_cs_12_064  2374.5s -> 2418.5s  182 words  image=frame_0800.jpg
+    slide : Title: Integer Real (floating-point) Character Boolean Body: University OpenCour
+    speech: 需要定 floating ok 就是我沒辦法用 單一表示法 就同一個 0101 的 pattern 如果它是 integer 的話我會給你一個答案 如果你說它是...
+ntu_cs_12_065  2416.5s -> 2444.4s   88 words  image=frame_0811.jpg
+    slide : Title: Integer Real (floating-point) Character Boolean Body: University OpenCour
+    speech: 你定一個數字會比較有趣 先寫在前面冒號 integer fortran 的話是用這樣的寫法 fortran 這邊通常還要寫 field 它要寫 8、16 就是你...
+ntu_cs_12_066  2444.4s -> 2488.4s  185 words  image=frame_0823.jpg
+    slide : Title: Homogeneous array Heterogeneous array array[0..5,0..2] of integer; Body: 
+    speech: 已經含有的資料結構 資料結構是我們的下一個單元 可是你們現在 已經會一些資料結構了 你們至少會陣列 那陣列是所謂的 我們所謂的 homogeneous arra...
+ntu_cs_12_067  2486.4s -> 2532.4s  161 words  image=frame_0837.jpg
+    slide : Title: Homogeneous array Heterogeneous array array[0..5,0..2] of integer; Body: 
+    speech: 但它裡面沒有函式 它也只有不同的東西 就不同的 member variable struct 你可以想像是這個樣 那你也可以用 struct 把這幾個包在一起 ...
+ntu_cs_12_068  2530.4s -> 2568.4s  154 words  image=frame_0851.jpg
+    slide : Title: Homogeneous array Heterogeneous array array[0..5,0..2] of integer; Body: 
+    speech: 那個東西就是指標 順便講一下 它怎麼知道你到底是哪一個 我到底從哪裡開始 access 這個資料 其實它就是指標 也就是說點 age 的時候它知道 反正就是從這...
+ntu_cs_12_069  2573.5s -> 2618.9s  154 words  image=frame_0866.jpg
+    slide : NallonalTaiwar purseware 臺大開放式租 a←b+645; -645 is a literal const int a=645; fina
+    speech: 好那你有所謂的 const和 literal 這個字你們 我不知道你們有沒有學過 literal literal 就是這個東西 就你直接把它寫在裡面的 譬如說 ...
+ntu_cs_12_070  2616.9s -> 2664.2s  178 words  image=frame_0881.jpg
+    slide : NallonalTaiwar purseware 臺大開放式租 a←b+645; -645 is a literal const int a=645; fina
+    speech: 它不可以是 l value 這種名詞你們都要習慣一下 因為這是 compiler 會跟你 給你講的錯誤訊息 就你如果 你可以回去試試看好不好 就你寫一個這個 c...
+ntu_cs_12_071  2664.2s -> 2700.2s  148 words  image=frame_0895.jpg
+    slide : Title: Operator precedence Body: OpencourseWare Ada,Pascal a:=b+ci a=b+ci Operat
+    speech: 這都很簡單 你可以 assignment 其實我比較贊成像這種 或這種 assignment 我雖然很喜歡 cc++ 可是我對他的 assignment 和等於...
+ntu_cs_12_072  2700.2s -> 2742.2s  182 words  image=frame_0908.jpg
+    slide : Title: Operator precedence Body: an.University OpenCourseWare 章大兴地式課程 a<-b+ci Ad
+    speech: 它的 symbol 反正 所以又因為這個樣你們 查當 if 的時候等於等於寫成一個 single 等於 因為跟人 一般使用不習慣 不太一樣 還有這些 opera...
+ntu_cs_12_073  2740.2s -> 2785.7s  175 words  image=frame_0925.jpg
+    slide : Title: Operator precedence Body: an.University OpenCourseWare 章大兴地式課程 a<-b+ci Ad
+    speech: shift對不對 小魚小魚大魚大魚 你也學了這些東西 它們都是 operator 你要記這些優先順序 我跟你說你會累死 所以我會建議你們寫成是 就是請拼命刮壺 ...
+ntu_cs_12_074  2783.7s -> 2821.7s  181 words  image=frame_0935.jpg
+    slide : Title: shion: goto print "passed." if (grade < 60) goto 60 Body: University Open
+    speech: 那如果不是的話它就繼續走 它沒有 else 但它會繼續走 這邊又說 go to 20 20 print passed 到這邊 go to 70 到 stop 你...
+ntu_cs_12_075  2819.7s -> 2847.7s  125 words  image=frame_0945.jpg
+    slide : Title: shion: goto print "passed." if (grade < 60) goto 60 Body: University Open
+    speech: 然後其實不需要 那麼多的 go to 所以後來就有人很 應該你們可能有人教 go to 但是極力請不要用 go to 我現在是一樣的 common 可是你一樣要...
+ntu_cs_12_076  2847.7s -> 2889.7s  191 words  image=frame_0957.jpg
+    slide : Naflonal University 臺大開放式課程 if (B）S1 else S2; while (B) switch case C1:Sl:break;
+    speech: 這個因為我們講過 所以你知道我們有 義父 就 control 流程 我們有 義父 我們有 loop loop 其實還有三種我們之前都講過 就是 pretest ...
+ntu_cs_12_077  2887.7s -> 2933.7s  177 words  image=frame_0972.jpg
+    slide : Naflonal University 臺大開放式課程 if (B）S1 else S2; while (B) switch case C1:Sl:break;
+    speech: 很建議 我會建議你就 if then else if if then else if 這樣一直下來 我覺得這樣是 ok 的 那我們今天就上到這邊好了 好 這我們...
+ntu_cs_12_078  2931.7s -> 2978.5s  144 words  image=frame_0986.jpg
+    slide : Title: Control 計算機概 Body: Imperative Paradigm National Taiwan University OpenCou
+    speech: 就你如果 compile 成 assembly 的時候 它裡面其實都是 go to 而已 就是我們所謂的 conditional jump 好那 control...
+ntu_cs_12_079  2976.5s -> 3000.2s   82 words  image=frame_0997.jpg
+    slide : Title: Control 計算機概 Body: Imperative Paradigm National Taiwan University OpenCou
+    speech: 以後 true 你才會執行 body 所以 for 不保證這個 loop 一定會被執行一次 depends on your test 剩下的應該沒有什麼問題 好...
+[STEP build_db] 11:01:00.92 
+Loaded 79 chunks
+Loading BGE-M3 (first time: downloading, please wait)...
+forrtl: error (200): program aborting due to window-CLOSE event
+Image              PC                Routine            Line        Source             
+KERNELBASE.dll     00007FFEA041C203  Unknown               Unknown  Unknown
+KERNEL32.DLL       00007FFEA1BD7374  Unknown               Unknown  Unknown
+ntdll.dll          00007FFEA29FCC91  Unknown               Unknown  Unknown

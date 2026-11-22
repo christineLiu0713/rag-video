@@ -1,0 +1,1300 @@
+
+===== [15:55:22] extract: D:\7\413410654\專題\rag-video-main\venv\Scripts\python.exe extract.py D:\7\413410654\專題\rag-video-main\videos\mit_1806_l01.mp4 --lang en
+Language: en   Whisper model: small.en
+[1/4] Extracting screenshots (one every 3 second(s))...
+      Extracting audio...
+[2/4] Whisper is listening...
+      Whisper device: CUDA
+      Whisper: {'model': 'small.en', 'batch_size': 8, 'load_sec': 3.4, 'device': 'cuda', 'compute_type': 'int8_float32'}
+       8.9 ->    14.4 | Hi, this is the first lecture in MIT's course 18.06,
+      14.4 ->    16.0 | Linear Algebra.
+      16.0 ->    19.4 | And I'm Gilbert Strang.
+      19.4 ->    24.4 | The text for the course is this book, Introduction
+      24.4 ->    26.3 | to Linear Algebra.
+      26.3 ->    29.6 | And the course web page, which has
+      29.6 ->    36.7 | got a lot of exercises from the past, MATLAB codes,
+      38.4 ->    44.1 | is web.mit.edu slash 18.06.
+      44.1 ->    47.6 | And this is the first lecture, lecture one.
+      47.6 ->    53.7 | So and later we'll say where which will give the web address
+      53.7 ->    57.0 | for viewing these videotapes.
+      57.0 ->    62.4 | OK, so what's in the first lecture?
+      62.4 ->    68.7 | This is my plan, the fundamental problem of linear algebra.
+      69.3 ->    73.6 | which is to solve a system of linear equations.
+      73.6 ->    78.3 | So let's start with the case when we have some number of equations,
+      78.3 ->    81.2 | say n equations and n unknowns.
+      81.2 ->    83.8 | So an equal number of equations and unknowns.
+      83.8 ->    86.6 | That's the normal, nice case.
+      86.6 ->    91.5 | And what I want to do is, with examples of course,
+      91.5 ->    96.5 | to describe first what I call the row picture.
+      97.0 ->   100.6 | That's the picture of one equation at a time.
+     100.6 ->   105.3 | It's the picture you've seen before in two-by-two equations
+     105.3 ->   106.3 | where lines meet.
+     106.3 ->   109.2 | So in a minute, you'll see lines meeting.
+     109.2 ->   112.9 | The second picture, I'll put a star beside that,
+     112.9 ->   114.9 | because that's such an important one.
+     114.9 ->   121.3 | And maybe new to you is the picture a column at a time.
+     121.3 ->   124.7 | And those are the rows and columns of a matrix.
+     125.2 ->   128.6 | So the third, the algebra way to look at the problem
+     128.6 ->   133.6 | is the matrix form in using a matrix that I'll call A.
+     133.6 ->   134.3 | OK.
+     134.3 ->   137.3 | So can I do an example?
+     137.3 ->   141.3 | The whole semester will be examples
+     141.3 ->   145.0 | and then see what's going on with the example.
+     145.0 ->   147.8 | So take an example.
+     147.8 ->   150.2 | Two equations, two unknowns.
+     154.1 ->   165.3 | minus y equals 0, let's say, and minus x plus, say, 2y equals 3.
+     165.3 ->   168.0 | OK.
+     168.0 ->   175.3 | I can even say right away, what's the matrix that is,
+     175.3 ->   177.6 | what's the coefficient matrix?
+     177.6 ->   180.6 | The matrix that involves these numbers?
+     182.3 ->   186.8 | rectangular array of numbers, here it's two rows and two
+     186.8 ->   191.7 | columns, so two and minus one in the first row,
+     191.7 ->   196.4 | minus one and two in the second row, that's the matrix.
+     196.4 ->   201.7 | And the right-hand, the unknown, well,
+     201.7 ->   205.6 | we've got two unknowns, so we've got a vector x with two
+     205.6 ->   210.2 | components, x and y, and we've got two right-hand sides that
+     213.5 ->   218.6 | I couldn't resist writing the matrix form right even
+     218.6 ->   221.1 | before the pictures.
+     221.1 ->   225.8 | So I always will think of this as the matrix A,
+     225.8 ->   228.2 | the matrix of coefficients.
+     228.2 ->   230.1 | Then there's a vector of unknowns.
+     230.1 ->   231.8 | Here we've only got two unknowns.
+     231.8 ->   234.1 | Later we'll have any number of unknowns.
+     234.1 ->   237.9 | And that vector of unknowns, well, I'll often
+     237.9 ->   242.1 | make that extra bold.
+     242.2 ->   244.8 | And the right-hand side is also a vector
+     244.8 ->   248.2 | that I'll always call B.
+     248.2 ->   251.0 | So linear equations are Ax equal B,
+     251.0 ->   256.9 | and the idea now is to solve this particular example
+     256.9 ->   260.9 | and then step back to see the bigger picture.
+     260.9 ->   263.0 | OK, what's the picture for this example?
+     263.0 ->   264.6 | The row picture.
+     264.6 ->   270.2 | OK, so here comes the row picture.
+     270.2 ->   273.1 | So that means I take one row at a time,
+     275.6 ->   284.8 | x, y plane, and I'm going to plot all the points that satisfy
+     284.8 ->   287.8 | that first equation.
+     287.8 ->   292.1 | So I'm looking at all the points that satisfy 2x minus y equals
+     292.1 ->   293.9 | zero.
+     293.9 ->   296.8 | It's often good to start with which point
+     296.8 ->   299.5 | on the horizontal line?
+     299.5 ->   302.5 | On this horizontal line, y is zero.
+     302.5 ->   304.5 | The x-axis has y is zero.
+     304.9 ->   307.7 | And that, in this case, actually, then x is 0.
+     307.7 ->   314.7 | So the point, the origin, the point with coordinates 0, 0,
+     314.7 ->   316.5 | is on the line.
+     316.5 ->   318.2 | It solves that equation.
+     318.2 ->   319.6 | OK.
+     319.6 ->   323.8 | Tell me, well, I guess I have to tell you another point that
+     323.8 ->   326.9 | solves this same equation.
+     326.9 ->   330.1 | Let me suppose x is 1.
+     330.1 ->   332.3 | So I'll take x to be 1.
+     332.3 ->   334.0 | Then y should be 2, right?
+     334.6 ->   340.2 | So there's the point 1, 2 that also solves this equation.
+     340.2 ->   343.5 | Then I could put in more points.
+     343.5 ->   346.1 | But let me put in all the points at once,
+     346.1 ->   350.8 | because they all lie on a straight line.
+     350.8 ->   353.5 | This is a linear equation, and that word linear
+     353.5 ->   356.8 | got the letters for line in it.
+     356.8 ->   358.6 | That's the equation.
+     361.3 ->   364.7 | Solutions to two x minus y equals zero.
+     364.7 ->   368.6 | My first row, first equation.
+     368.6 ->   374.0 | So typically maybe x equal a half, y equal one will work.
+     374.0 ->   375.6 | And it sure enough it does.
+     375.6 ->   377.6 | OK, that's the first one.
+     377.6 ->   382.7 | Now the second one is not going to go through the origin.
+     382.7 ->   384.3 | It's always important.
+     384.3 ->   387.0 | Do we go through the origin or not?
+     387.0 ->   390.0 | In this case, yes, because there's a zero over there.
+     390.0 ->   392.3 | In this case, we don't go through the origin
+     393.1 ->   396.2 | If x and y are 0, we don't get 3.
+     396.2 ->   402.6 | So let me again say, suppose y is 0, what x do we actually get?
+     402.6 ->   408.2 | If y is 0, then I get x is minus 3.
+     408.2 ->   412.6 | So if y is 0, I go along minus 3.
+     412.6 ->   416.3 | So there's one point on this second line.
+     416.3 ->   423.4 | Now let me say, well, suppose x is minus 1,
+     425.2 ->   428.7 | If x is minus 1, then this is a 1,
+     428.7 ->   432.8 | and I think y should be a 1.
+     432.8 ->   437.8 | Because if x is minus 1, then I think y should be a 1,
+     437.8 ->   439.4 | and we'll get that point.
+     439.4 ->   440.7 | Is that right?
+     440.7 ->   443.1 | If x is minus 1, that's a 1.
+     443.1 ->   446.8 | If y is a 1, that's a 2, and the 1 and the 2 make 3,
+     446.8 ->   448.4 | and that point's on the equation.
+     448.4 ->   449.1 | OK.
+     449.1 ->   451.8 | Now I should just draw the line, right?
+     451.8 ->   455.2 | Connecting those two points, that will give me
+     456.2 ->   460.5 | And if I've done this reasonably well,
+     460.5 ->   463.2 | I think it's going to happen to go through, well, not happen.
+     463.2 ->   466.5 | It was arranged to go through that point.
+     466.5 ->   470.7 | So I think that the second line is this one.
+     470.7 ->   476.0 | And this is the all-important point that lies on both lines.
+     476.0 ->   479.9 | Shall we just check that that point, which is the point x
+     479.9 ->   483.6 | equals 1 and y was 2, right?
+     483.6 ->   486.0 | That's the point there.
+     486.8 ->   490.2 | I believe solves both equations.
+     490.2 ->   491.5 | Let's just check this.
+     491.5 ->   497.1 | If x is one, I have a minus one plus four equals three.
+     497.1 ->   498.3 | Okay.
+     498.3 ->   501.7 | Apologies for drawing this picture
+     501.7 ->   505.4 | that you've seen before.
+     505.4 ->   509.4 | But this seeing the row picture,
+     509.4 ->   513.1 | first of all, for n equal two, two equations and two unknowns,
+     513.1 ->   515.2 | it's the right place to start.
+     515.2 ->   516.1 | Okay.
+     517.7 ->   519.7 | The point that lies on both lines.
+     519.7 ->   523.5 | Now can I come to the column picture?
+     523.5 ->   524.3 | Pay attention.
+     524.3 ->   527.8 | This is the key point.
+     527.8 ->   529.9 | So the column picture.
+     529.9 ->   533.5 | I'm now going to look at the columns of the matrix.
+     533.5 ->   536.7 | I'm going to look at this part and this part.
+     536.7 ->   543.7 | I'm going to say that the x part is really x times
+     544.6 ->   548.2 | You see I'm putting the two, I'm kind of getting the two
+     548.2 ->   550.1 | equations at once.
+     550.1 ->   555.3 | That part, and then I have a y, and in the first equation
+     555.3 ->   559.4 | it's multiplying a minus 1, and in the second equation a 2.
+     559.4 ->   566.5 | And on the right-hand side, 0 and 3.
+     566.5 ->   568.7 | You see the columns of the matrix,
+     568.7 ->   573.1 | the columns of A are here, and the right-hand side B is there.
+     573.1 ->   576.1 | And now what is the equation asking for?
+     576.5 ->   582.8 | It's asking us to find, somehow, to combine that vector
+     582.8 ->   587.4 | and this one in the right amounts to get that one.
+     587.4 ->   591.8 | It's asking us to find the right linear combination.
+     591.8 ->   595.4 | This is called a linear combination.
+     595.4 ->   601.7 | And it's the most fundamental operation in the whole course.
+     601.7 ->   606.3 | It's a linear combination of the columns.
+     606.3 ->   608.1 | That's what we're seeing on the left side.
+     609.1 ->   613.0 | Again, I don't want to write down a big definition.
+     613.0 ->   615.0 | You can see what it is.
+     615.0 ->   617.4 | There's column one, there's column two.
+     617.4 ->   622.3 | I multiply by some numbers, and I add.
+     622.3 ->   625.0 | That's a combination, a linear combination,
+     625.0 ->   628.2 | and I want to make those numbers the right numbers
+     628.2 ->   630.8 | to produce zero three.
+     630.8 ->   632.0 | OK.
+     632.0 ->   637.1 | Now I want to draw a picture that represents what this,
+     637.1 ->   637.8 | this is algebra.
+     638.3 ->   639.5 | What's the geometry?
+     639.5 ->   641.7 | What's the picture that goes with it?
+     641.7 ->   642.3 | OK.
+     642.3 ->   645.2 | So again, these vectors have two components,
+     645.2 ->   650.7 | so I better draw a picture like that.
+     650.7 ->   652.6 | So can I put down these columns?
+     652.6 ->   655.4 | I'll draw these columns as they are,
+     655.4 ->   658.6 | and then I'll do a combination of them.
+     658.6 ->   663.9 | So the first column is over two and down one, right?
+     663.9 ->   666.4 | So there's the first column.
+     666.4 ->   668.5 | The first column, column one.
+     670.6 ->   673.8 | It's the vector two minus one.
+     673.8 ->   678.6 | The second column is, let's see, I go over,
+     678.6 ->   684.9 | minus one is the first component and up two, it's here.
+     684.9 ->   687.7 | There's column two.
+     687.7 ->   692.2 | So this, again, you see what its components are.
+     692.2 ->   695.6 | Its components are minus one, two.
+     695.6 ->   696.2 | Good.
+     696.2 ->   697.3 | That's this guy.
+     697.3 ->   701.2 | Now what is, what, now I have to take a combination.
+     703.1 ->   707.3 | What combination shall I take?
+     707.3 ->   709.4 | Why not the right combination?
+     709.4 ->   710.5 | What the hell?
+     710.5 ->   711.1 | OK.
+     711.1 ->   714.1 | So what the combination I'm going to take
+     714.1 ->   717.1 | is the right one to produce zero, three,
+     717.1 ->   719.6 | and then we'll see it happen in the picture.
+     719.6 ->   724.9 | So the right combination is to take x as one of those
+     724.9 ->   729.2 | and two of these.
+     729.2 ->   732.8 | It's because we already know that that's the right x and y,
+     732.8 ->   735.2 | so why not take the correct combination here
+     736.2 ->   741.6 | OK, so how do I picture this linear combination?
+     741.6 ->   744.9 | So I start with this vector, that's already here,
+     744.9 ->   748.9 | so that's one of column one, that's one times column one,
+     748.9 ->   752.1 | right there, and now I want to add on,
+     752.1 ->   757.1 | so I'm going to hook the next vector on to the front
+     757.1 ->   759.0 | of the arrow, we'll start the next vector,
+     759.0 ->   762.2 | and it'll go this way, so let's see, can I do it right?
+     762.6 ->   766.2 | If I added on one of these vectors,
+     766.2 ->   769.6 | it would go left one and up two, so it would go left one
+     769.6 ->   772.1 | and up two, so it would probably get us to there.
+     772.1 ->   774.6 | Maybe I'll do dotted line for that.
+     774.6 ->   775.6 | OK?
+     775.6 ->   779.7 | That's one of column two tucked onto the end,
+     779.7 ->   783.4 | but I wanted to talk on two of column two.
+     783.4 ->   787.8 | So the second one will go up left one and up two also.
+     787.8 ->   789.4 | It'll probably end there.
+     789.4 ->   790.8 | And there's another one.
+     791.5 ->   799.3 | put in here is two of column two, added on.
+     799.3 ->   803.3 | And where did I end up?
+     803.3 ->   808.2 | What are the coordinates of this result?
+     808.2 ->   812.5 | What do I get when I take one of this plus two of that?
+     812.5 ->   814.8 | I do get that, of course.
+     814.8 ->   815.4 | There it is.
+     815.4 ->   816.0 | There it is.
+     816.0 ->   817.7 | X is zero, Y is three.
+     817.7 ->   821.5 | That's B. That's the answer we wanted.
+     821.5 ->   823.5 | And how do I do it?
+     825.8 ->   830.8 | First component, I have a 2 and a minus 2 that produces a 0.
+     830.8 ->   834.6 | And in the second component, I have a minus 1 and a 4.
+     834.6 ->   837.8 | They combine to give the 3.
+     837.8 ->   841.2 | But look at this picture.
+     841.2 ->   842.9 | So here's our key picture.
+     842.9 ->   847.1 | I combine this column and this column to get,
+     847.1 ->   850.2 | maybe I better, to get this guy.
+     850.2 ->   851.5 | That was the b.
+     851.5 ->   853.6 | That's the 0, 3.
+     853.6 ->   854.1 | OK.
+     854.6 ->   858.7 | So that idea of linear combinations is crucial.
+     858.7 ->   863.5 | And also, do we want to think about this question?
+     863.5 ->   866.4 | Sure, why not?
+     866.4 ->   869.7 | What are all the combinations?
+     869.7 ->   873.3 | If I took, can I go back to x's and y's?
+     873.3 ->   879.8 | This is a question for really, it's
+     879.8 ->   881.4 | going to come up over and over.
+     881.4 ->   885.0 | But why don't we see it once now?
+     886.2 ->   890.3 | all the x's and all the y's, all the combinations,
+     890.3 ->   893.5 | what would be all the results?
+     893.5 ->   896.1 | And actually, the result would be
+     896.1 ->   899.5 | that I could get any right-hand side at all.
+     899.5 ->   902.6 | The combinations of this and this
+     902.6 ->   906.0 | would fill the whole plane.
+     906.0 ->   908.3 | You can tuck that away.
+     908.3 ->   914.0 | We'll explore it further.
+     918.3 ->   921.6 | And what do all the linear combinations give?
+     921.6 ->   924.7 | What are all the possible achievable right-hand sides
+     924.7 ->   925.0 | be?
+     925.0 ->   926.5 | That's going to be basic.
+     926.5 ->   927.2 | OK.
+     927.2 ->   932.0 | Can I move to three equations and three unknowns?
+     932.0 ->   938.5 | Because it's easy to, uh, picture the two-by-two case.
+     938.5 ->   940.9 | Let me do a three-by-three example.
+     940.9 ->   943.3 | OK, I'll sort of start it the same way.
+     945.0 ->   949.7 | minus y, and maybe I'll take no z's as a zero,
+     949.7 ->   956.2 | and maybe a minus x and a 2y, and maybe a minus z is a,
+     956.2 ->   958.9 | oh, let me make that a minus 1.
+     958.9 ->   967.6 | And just for variety, let me take minus 3z, minus 3y's.
+     967.6 ->   970.1 | I should keep the y's in that line.
+     970.1 ->   973.7 | And 4z's is, say, 4.
+     974.5 ->   979.1 | OK, that's three equations.
+     979.1 ->   982.4 | I'm in three dimensions, x, y, z,
+     982.4 ->   987.2 | and I don't have a solution yet.
+     987.2 ->   992.2 | So I want to understand the equations and then solve them.
+     992.2 ->   995.5 | OK, so how do you understand them?
+     995.5 ->   997.5 | The row picture is one way.
+     997.5 ->  1001.5 | The column picture is another very important way.
+    1001.5 ->  1004.6 | Let's remember the matrix form here, because that's easy.
+    1004.8 ->  1009.1 | The matrix form, what's our matrix A?
+    1009.1 ->  1012.0 | Our matrix A is this right-hand side,
+    1012.0 ->  1016.6 | the two and the minus one and the zero from the first row.
+    1016.6 ->  1019.5 | The minus one and the two and the minus one
+    1019.5 ->  1023.4 | from the second row, the zero, the minus three,
+    1023.4 ->  1028.5 | and the four from the third row.
+    1028.5 ->  1031.0 | So it's a three by three matrix.
+    1031.0 ->  1032.9 | Three equations, three unknowns.
+    1032.9 ->  1034.7 | And what's our right-hand side?
+    1036.4 ->  1040.2 | the vector 0, minus 1, 4.
+    1040.2 ->  1041.2 | OK.
+    1041.2 ->  1046.3 | So that's the way, well, that's the shorthand
+    1046.3 ->  1048.7 | to write out the three equations.
+    1048.7 ->  1052.0 | But it's the picture that I'm looking for today.
+    1052.0 ->  1052.7 | OK.
+    1052.7 ->  1058.4 | So the row picture.
+    1058.4 ->  1065.9 | All right, so I'm in three dimensions, x, y, and z.
+    1065.9 ->  1069.9 | And I want to take those equations one at a time
+    1071.5 ->  1075.2 | and make a picture of all the points that satisfy.
+    1075.2 ->  1078.0 | Let's take equation number two.
+    1078.0 ->  1080.8 | If I make a picture of all the points that satisfy,
+    1080.8 ->  1085.9 | all the x, y, z points that solve this equation,
+    1085.9 ->  1089.5 | well, first of all, the origin is not one of them.
+    1089.5 ->  1094.9 | x, y, z being 0, 0, 0 would not solve that equation.
+    1094.9 ->  1097.8 | What are some points that do solve the equation?
+    1097.8 ->  1098.3 | Let's see.
+    1100.9 ->  1103.7 | y and z could be 0.
+    1103.7 ->  1104.7 | That would work, right?
+    1104.7 ->  1106.8 | So there's one point.
+    1106.8 ->  1112.2 | I'm looking at this second equation here just to start
+    1112.2 ->  1113.1 | with.
+    1113.1 ->  1113.7 | Let's see.
+    1113.7 ->  1117.9 | Also, I guess if z could be 1, x and y could be 0.
+    1117.9 ->  1121.9 | So that would just go straight up that axis.
+    1121.9 ->  1126.8 | And probably I want a third point here.
+    1131.7 ->  1138.9 | Let's say x to be 0, z to be 0, then y would be minus 1 by 2,
+    1138.9 ->  1140.3 | right?
+    1140.3 ->  1143.4 | So there's a third point somewhere.
+    1143.4 ->  1143.9 | Oh, my.
+    1143.9 ->  1146.4 | OK.
+    1146.4 ->  1148.7 | Let's see.
+    1148.7 ->  1153.1 | I want to put in all the points that satisfy that equation.
+    1153.1 ->  1158.0 | Do you know what that bunch of points will be?
+    1158.0 ->  1159.4 | It's a plane.
+    1159.4 ->  1162.3 | If we have a linear equation, then fortunately,
+    1162.5 ->  1166.0 | the graph of the thing, the plot of all the points that
+    1166.0 ->  1169.1 | solve it, are a plane.
+    1169.1 ->  1172.2 | So these three points determine a plane,
+    1172.2 ->  1177.6 | but your lecture is not Rembrandt,
+    1177.6 ->  1183.4 | and the art is going to be the weak point here.
+    1183.4 ->  1186.5 | So I'm just going to draw a plane, right?
+    1186.5 ->  1188.3 | There's a plane somewhere.
+    1188.3 ->  1190.9 | That's my plane.
+    1194.6 ->  1200.0 | Then what about this one?
+    1200.0 ->  1202.7 | Two x minus y plus zero z.
+    1202.7 ->  1205.4 | So z actually can be anything.
+    1205.4 ->  1208.3 | Again, it's going to be another plane.
+    1208.3 ->  1211.3 | Each row in a three by three problem
+    1211.3 ->  1214.5 | gives us a plane in three dimensions.
+    1214.5 ->  1217.0 | So this one is going to be some other plane.
+    1217.0 ->  1220.2 | Maybe it, maybe I'll try to draw it like this.
+    1220.2 ->  1224.3 | And those two planes meet in a line.
+    1224.9 ->  1229.9 | So if I have two equations, just the first two equations
+    1229.9 ->  1232.9 | in three dimensions, those give me
+    1232.9 ->  1235.3 | a line, the line where those two planes meet.
+    1235.3 ->  1241.8 | And now the third guy is a third plane,
+    1241.8 ->  1249.3 | and it goes somewhere.
+    1249.3 ->  1251.8 | OK, those three things meet in a point.
+    1251.8 ->  1255.1 | Now, I don't know where that point is, frankly.
+    1255.1 ->  1257.5 | But linear algebra will find it.
+    1257.9 ->  1263.6 | The main point is that the three planes,
+    1263.6 ->  1268.4 | because they're not parallel, they're not special,
+    1268.4 ->  1271.8 | they do meet in one point, and that's the solution.
+    1271.8 ->  1277.7 | But maybe you can see that this row picture is getting
+    1277.7 ->  1279.4 | a little hard to see.
+    1279.4 ->  1282.5 | The row picture was a cinch when we
+    1282.5 ->  1285.0 | looked at two lines meeting.
+    1285.2 ->  1289.2 | When we look at three planes meeting, it's not so clear.
+    1289.2 ->  1294.8 | And in four dimensions, probably a little less clear.
+    1294.8 ->  1298.8 | So can I quit on the row picture?
+    1298.8 ->  1301.9 | I'll quit on the row picture before I've successfully
+    1301.9 ->  1306.0 | found the point where the three planes meet.
+    1306.0 ->  1311.5 | All I really want to see is that the row picture consists
+    1315.7 ->  1319.2 | three planes meet in one point, and that's a solution.
+    1319.2 ->  1324.6 | Now, you can tell I prefer the column picture.
+    1324.6 ->  1325.3 | Okay?
+    1325.3 ->  1326.9 | So let me take the column picture.
+    1326.9 ->  1332.6 | That's x times, so there were two x's in the first equation,
+    1332.6 ->  1336.6 | minus one x's, I'm just taking, and no x's in the third.
+    1336.6 ->  1338.9 | It's just the first column of that.
+    1338.9 ->  1341.2 | And how many y's are there?
+    1341.2 ->  1344.7 | There's minus one in the first equation, two in the second,
+    1347.1 ->  1349.8 | just the second column of my matrix.
+    1349.8 ->  1357.8 | And z times no z's, minus one z's, and four z's.
+    1357.8 ->  1361.6 | And it's those three columns, right,
+    1361.6 ->  1366.9 | that I have to combine to produce the right-hand side, which
+    1366.9 ->  1372.8 | is zero, minus one, four.
+    1372.8 ->  1374.9 | OK.
+    1374.9 ->  1377.9 | So what have we got on this left-hand side?
+    1377.9 ->  1379.3 | A linear combination.
+    1379.3 ->  1382.5 | It's a linear combination now of three vectors,
+    1382.5 ->  1386.5 | and they happen to be each one is a three-dimensional vector.
+    1386.5 ->  1389.9 | So we want to know what combination of those three
+    1389.9 ->  1392.0 | vectors produces that one.
+    1392.0 ->  1395.6 | Shall I try to draw the column picture then?
+    1395.6 ->  1398.7 | So since these vectors have three components.
+    1398.7 ->  1400.1 | So it's some multiple.
+    1400.1 ->  1402.6 | Let me draw in the first column as before.
+    1402.6 ->  1406.4 | So x is two and y is minus one.
+    1412.0 ->  1418.0 | y, the second column has maybe a minus 1 and a 2,
+    1418.0 ->  1424.2 | and the y's a minus 3, somewhere there possibly, column 2.
+    1424.2 ->  1431.0 | And the third column has no 0, minus 1, 4.
+    1431.0 ->  1432.8 | So how shall I draw that?
+    1432.8 ->  1437.0 | So nothing in this was the first component.
+    1437.0 ->  1441.3 | The second component was a minus 1, maybe up here.
+    1441.3 ->  1442.5 | That's column 3.
+    1444.0 ->  1452.0 | That's the column 0, minus 1, and 4, this guy.
+    1452.0 ->  1455.5 | So again, what's my problem?
+    1455.5 ->  1458.4 | What this equation is asking me to do
+    1458.4 ->  1465.8 | is to combine these three vectors with the right combination
+    1465.8 ->  1467.9 | to produce this one.
+    1467.9 ->  1473.2 | Well, you can see what the right combination is.
+    1473.2 ->  1477.9 | Because in this special problem, especially
+    1479.3 ->  1482.8 | That right-hand side that I'm trying to get
+    1482.8 ->  1485.0 | is actually one of these columns.
+    1485.0 ->  1486.7 | So I know how to get that one.
+    1486.7 ->  1488.5 | So what's the solution?
+    1488.5 ->  1490.9 | What combination will work?
+    1490.9 ->  1493.9 | I just want one of these and none of these.
+    1493.9 ->  1500.1 | So x should be zero, y should be zero, and z should be one.
+    1500.8 ->  1502.9 | That's the combination.
+    1502.9 ->  1505.4 | None of that, none of that, one of those
+    1505.4 ->  1506.8 | is obviously the right one.
+    1506.8 ->  1510.8 | So this column three is actually the same as B
+    1510.8 ->  1516.0 | in this particular problem.
+    1516.0 ->  1520.2 | I made it work that way just so we would get an answer, 001.
+    1520.2 ->  1525.9 | So somehow, that's the point where those three planes met
+    1525.9 ->  1528.7 | and I couldn't see it before.
+    1528.7 ->  1531.2 | Of course, I won't always be able to see it
+    1531.2 ->  1533.2 | from the column picture either.
+    1534.0 ->  1539.4 | The next lecture, actually, which is about elimination,
+    1539.4 ->  1543.5 | which is the systematic way that everybody,
+    1543.5 ->  1554.3 | every bit of software too, production large scale software
+    1554.3 ->  1556.6 | would solve the equations.
+    1556.6 ->  1558.9 | So the lecture that's coming up,
+    1558.9 ->  1562.4 | if I was to add that to the syllabus,
+    1563.7 ->  1569.0 | how to find x, y, z in all cases.
+    1569.0 ->  1575.1 | Can I just think again, though, about the big picture?
+    1575.1 ->  1578.9 | By the big picture, I mean let's keep this same matrix
+    1578.9 ->  1582.0 | on the left, but imagine that we have
+    1582.0 ->  1584.2 | a different right-hand side.
+    1584.2 ->  1587.4 | Oh, let me take a different right-hand side.
+    1587.4 ->  1589.0 | So I'll change that right-hand side
+    1589.0 ->  1592.5 | to something that actually is also pretty special.
+    1594.2 ->  1598.3 | Let me change it to, suppose I, if I add those first two
+    1598.3 ->  1602.9 | columns, that would give me a one and a one and a minus three.
+    1602.9 ->  1605.8 | There's a very special right-hand side.
+    1605.8 ->  1611.1 | I just cooked it up by adding this one to this one.
+    1611.1 ->  1615.5 | Now, what's the solution with this new right-hand side?
+    1615.5 ->  1618.6 | The solution with this new right-hand side is clear.
+    1618.6 ->  1623.5 | It took, now I took one of these, one of these,
+    1624.8 ->  1628.3 | So actually, it just changed around to this
+    1628.3 ->  1631.1 | when I took this new right-hand side.
+    1631.1 ->  1632.5 | OK.
+    1632.5 ->  1639.0 | So in the row picture, I have three different planes,
+    1639.0 ->  1643.8 | three new planes meeting now at this point.
+    1643.8 ->  1647.0 | In the column picture, I have the same three columns,
+    1647.0 ->  1650.9 | but now I'm combining them to produce this guy.
+    1650.9 ->  1653.9 | And it turned out that column one plus column two, which
+    1655.9 ->  1660.4 | there is the right column, one of this and one of this
+    1660.4 ->  1666.5 | would give me the new B. OK, so that's
+    1666.5 ->  1668.7 | like we squeezed in an extra example.
+    1668.7 ->  1674.6 | But now think about all Bs, all right-hand sides.
+    1674.6 ->  1677.5 | Could I get, can I solve these equations
+    1677.5 ->  1683.2 | for every right-hand side?
+    1683.2 ->  1685.0 | Can I say that, ask that question?
+    1685.0 ->  1687.0 | So that's the algebra question.
+    1691.4 ->  1693.4 | Let me write that down.
+    1693.4 ->  1704.3 | Can I solve Ax equal b for every right-hand side b?
+    1704.3 ->  1706.4 | I mean, is there a solution?
+    1706.4 ->  1710.2 | And then if there is, elimination will give me
+    1710.2 ->  1711.3 | a way to find it.
+    1711.3 ->  1713.2 | I'm just, I really wanted to ask,
+    1713.2 ->  1716.8 | is there a solution for every right-hand side?
+    1716.8 ->  1720.6 | So now, can I put that in different words?
+    1723.0 ->  1733.1 | So in linear combination words, do the linear combinations
+    1733.1 ->  1745.6 | of the columns fill three-dimensional space?
+    1745.6 ->  1752.3 | Every b means all the b's in three-dimensional space.
+    1752.3 ->  1755.9 | So do you see that I'm just asking the same question
+    1755.9 ->  1759.5 | in different words?
+    1761.9 ->  1765.0 | Oh, that's very important.
+    1765.0 ->  1766.2 | A times x.
+    1766.2 ->  1771.8 | When I multiply a matrix by a vector,
+    1771.8 ->  1775.0 | I get a combination of the columns.
+    1775.0 ->  1778.4 | I'll write that down in a moment.
+    1778.4 ->  1782.0 | So that you see, but in my column picture,
+    1782.0 ->  1783.5 | that's really what I'm doing.
+    1783.5 ->  1787.2 | I'm taking linear combinations of these three columns,
+    1787.2 ->  1790.1 | and I'm trying to find B.
+    1790.4 ->  1795.0 | And actually, the answer for this matrix will be yes.
+    1795.0 ->  1799.8 | For this matrix, for this, for this matrix A,
+    1799.8 ->  1808.8 | for these columns, the answer is yes.
+    1808.8 ->  1814.6 | This matrix is this, this, this matrix that I chose
+    1814.6 ->  1819.6 | for an example, is a good matrix,
+    1819.6 ->  1823.2 | a non-singular matrix, an invertible matrix.
+    1826.3 ->  1832.2 | There could be other, and we will see other matrices,
+    1832.2 ->  1834.6 | where the answer becomes no.
+    1834.6 ->  1838.6 | Oh, actually, you can see when it would become no.
+    1838.6 ->  1843.7 | When could, what could go wrong?
+    1843.7 ->  1848.5 | How could it go wrong that out of these, out of three columns
+    1848.5 ->  1852.4 | and all their combinations, when would I
+    1852.4 ->  1857.0 | not be able to produce some B off here?
+    1858.0 ->  1860.8 | When could it go wrong?
+    1860.8 ->  1864.3 | Do you see that the combinations, suppose,
+    1864.3 ->  1868.0 | let me say when it goes wrong, if these three columns all
+    1868.0 ->  1873.7 | lie in the same plane, then their combinations
+    1873.7 ->  1878.1 | will lie in that same plane.
+    1878.1 ->  1879.6 | So then we're in trouble.
+    1879.6 ->  1883.8 | If the three columns of my matrix,
+    1883.8 ->  1887.3 | if those three vectors happen to lie in the same plane,
+    1887.8 ->  1892.3 | For example, if column three is just the sum of column one
+    1892.3 ->  1896.3 | and column two, I would be in trouble.
+    1896.3 ->  1900.4 | That would be a matrix A where the answer would be no.
+    1900.4 ->  1905.6 | Because the combinations, if column three
+    1905.6 ->  1908.4 | is in the same plane as column one and two,
+    1908.4 ->  1910.3 | I don't get anything new from that.
+    1910.3 ->  1912.6 | All the combinations are in the plane,
+    1912.6 ->  1916.7 | and the only right-hand sides B that I could get
+    1916.7 ->  1918.3 | would be the ones in that plane.
+    1919.7 ->  1923.1 | So I could solve it for some right-hand sides
+    1923.1 ->  1928.3 | when B is in the plane, but most right-hand sides
+    1928.3 ->  1931.2 | would be out of the plane and unreachable.
+    1931.2 ->  1934.2 | So that would be a singular case.
+    1934.2 ->  1936.8 | The matrix would be not invertible.
+    1936.8 ->  1939.8 | There would not be a solution for every B.
+    1939.8 ->  1942.5 | The answer would become no for that.
+    1942.5 ->  1945.7 | OK.
+    1945.7 ->  1946.9 | I don't know.
+    1946.9 ->  1949.2 | So we take just a little shot at thinking
+    1951.1 ->  1957.6 | nine dimensions, imagine that we have vectors
+    1957.6 ->  1961.1 | with nine components.
+    1961.1 ->  1964.9 | Well, it's going to be hard to visualize those.
+    1964.9 ->  1966.8 | I don't pretend to do it.
+    1966.8 ->  1971.9 | But somehow, pretend you do.
+    1971.9 ->  1976.3 | Pretend we have, if this was nine equations and nine unknowns,
+    1976.3 ->  1978.3 | then we would have nine columns.
+    1979.3 ->  1982.7 | And each one would be a vector in nine-dimensional space,
+    1982.7 ->  1986.9 | and we would be looking at their linear combinations.
+    1986.9 ->  1990.6 | So we'd be having the linear combinations of nine vectors
+    1990.6 ->  1992.7 | in nine-dimensional space, and we
+    1992.7 ->  1994.8 | would be trying to find the combination that
+    1994.8 ->  1998.0 | hit the correct right-hand side B.
+    1998.0 ->  2003.0 | And we might also ask the question, can we always do it?
+    2003.0 ->  2005.4 | Can we get every right-hand side B?
+    2005.4 ->  2008.3 | And certainly it will depend on those nine columns.
+    2008.9 ->  2012.4 | Sometimes the answer will be yes.
+    2012.4 ->  2015.5 | If I picked a random matrix, it would be yes, actually.
+    2015.5 ->  2019.4 | If I used MATLAB and just used the random command,
+    2019.4 ->  2025.5 | picked out a 9 by 9 matrix, I guarantee it would be good.
+    2025.5 ->  2026.9 | It would be non-singular.
+    2026.9 ->  2029.2 | It would be invertible, all beautiful.
+    2029.2 ->  2037.5 | But if I choose those columns so that they're not
+    2039.9 ->  2044.5 | there so that the ninth column is the same as the eighth
+    2044.5 ->  2048.4 | column, then it contributes nothing new
+    2048.4 ->  2053.0 | and there would be right-hand sides b that I couldn't get.
+    2053.0 ->  2058.2 | Can you sort of think about nine vectors
+    2058.2 ->  2062.0 | in nine-dimensional space and take their combinations?
+    2062.0 ->  2066.4 | That's really the central thought
+    2066.4 ->  2068.7 | that you get kind of used to.
+    2069.4 ->  2073.3 | in linear algebra, even though you can't really visualize it,
+    2073.3 ->  2076.2 | you sort of think you can after a while.
+    2076.2 ->  2080.9 | Those nine columns and all their combinations
+    2080.9 ->  2085.3 | may very well fill out the whole nine dimensional space.
+    2085.3 ->  2087.3 | But if the ninth column happened to be
+    2087.3 ->  2089.8 | the same as the eighth column and gave nothing new,
+    2089.8 ->  2096.1 | then probably what it would fill out would be,
+    2096.1 ->  2101.8 | I hesitate even to say this, it would be a sort
+    2102.3 ->  2106.1 | plane, an eight-dimensional plane,
+    2106.1 ->  2110.1 | inside nine-dimensional space.
+    2110.1 ->  2112.9 | And it's those eight-dimensional planes
+    2112.9 ->  2116.0 | inside nine-dimensional space that we
+    2116.0 ->  2118.8 | have to work with eventually.
+    2118.8 ->  2121.8 | For now, let's stay with the nice case
+    2121.8 ->  2126.1 | where the matrices work.
+    2126.1 ->  2128.5 | We can get every right-hand side B,
+    2128.5 ->  2132.3 | and here we see how to do it with clones.
+    2134.2 ->  2137.9 | step that I realized, which I realized I was saying in words
+    2137.9 ->  2141.2 | that I now want to write in letters.
+    2141.2 ->  2146.1 | Because I'm coming back to the matrix form of the equation.
+    2146.1 ->  2149.5 | So let me write it here.
+    2149.5 ->  2154.3 | The matrix form about my equation of my system
+    2154.3 ->  2159.6 | is some matrix A times some vector x equals some right-hand
+    2159.6 ->  2161.2 | side B. OK.
+    2161.6 ->  2166.2 | So this is a multiplication, A times x, matrix times vector.
+    2166.2 ->  2167.9 | And I just want to say, how do you
+    2167.9 ->  2171.6 | multiply a matrix by a vector?
+    2171.6 ->  2176.5 | OK, so I'm just going to create a matrix.
+    2176.5 ->  2181.6 | Let me take two, five, one, three.
+    2181.6 ->  2188.9 | And let me take a vector, x to be, say, one and two.
+    2188.9 ->  2194.1 | How do I multiply a matrix by a vector?
+    2195.9 ->  2200.5 | But just think a little bit about matrix notation
+    2200.5 ->  2202.1 | and how to do that multiplication.
+    2202.1 ->  2205.4 | So let me say how I multiply a matrix by a vector.
+    2205.4 ->  2207.8 | Actually, there are two ways to do it.
+    2207.8 ->  2210.4 | Let me tell you my favorite way.
+    2210.4 ->  2212.7 | It's columns again.
+    2212.7 ->  2214.7 | It's a column at a time.
+    2214.7 ->  2218.0 | For me, this matrix multiplication
+    2218.0 ->  2222.0 | says I take one of that column and two of that column
+    2222.0 ->  2223.3 | and add.
+    2224.9 ->  2229.2 | The way I would think of it is one of the first column
+    2229.2 ->  2237.2 | and two of the second column, and let's just see what we get.
+    2237.2 ->  2241.5 | So in the first component, I'm getting a 2 and a 10.
+    2241.5 ->  2243.4 | I'm getting a 12 there.
+    2243.4 ->  2246.2 | In the second component, I'm getting a 1 and a 6.
+    2246.2 ->  2247.7 | I'm getting a 7.
+    2247.7 ->  2253.5 | So that matrix times that vector is 12, 7.
+    2253.5 ->  2255.9 | Now you could do that another way.
+    2257.0 ->  2259.3 | You could do it a row at a time.
+    2259.3 ->  2262.0 | You could do, and you would get this twelve,
+    2262.0 ->  2264.6 | and actually I pretty much did it here.
+    2264.6 ->  2268.5 | This way, two, I could take that row times my vector.
+    2268.5 ->  2272.8 | This is, this is all the time, this is the idea of a dot product.
+    2272.8 ->  2278.4 | This vector times this vector, two times one plus five times two
+    2278.4 ->  2280.4 | is the twelve.
+    2280.4 ->  2284.6 | This vector times this vector, one times one plus three times
+    2284.6 ->  2285.4 | two is the seven.
+    2285.7 ->  2290.4 | So I can do it by rows, and in each row,
+    2290.4 ->  2296.2 | each row times my x is what I'll later call a dot product.
+    2296.2 ->  2299.1 | But I also like to see it by columns.
+    2299.1 ->  2302.4 | I see this as a linear combination of the columns.
+    2302.4 ->  2303.8 | So here's my point.
+    2303.8 ->  2315.9 | A times x is a combination of the columns of A.
+    2317.7 ->  2324.1 | That's how I hope you'll think of A times x when we need it.
+    2324.1 ->  2327.2 | Right now we've got, with small ones,
+    2327.2 ->  2329.4 | we can always do it in different ways,
+    2329.4 ->  2333.5 | but later think of it that way.
+    2333.5 ->  2334.5 | OK.
+    2334.5 ->  2341.7 | So that's the picture for a two-by-two system.
+    2341.7 ->  2345.9 | And if the right-hand side B happened to be 12.7,
+    2345.9 ->  2352.0 | then, of course, the correct solution would be 1, 2.
+    2352.0 ->  2352.6 | Okay.
+    2352.6 ->  2357.8 | So let me come back next time to a systematic way,
+    2357.8 ->  2365.8 | using elimination, to find the solution, if there is one,
+    2365.8 ->  2372.5 | to any system of any size, and find out,
+    2372.5 ->  2376.5 | because if elimination fails, find out
+    2376.5 ->  2377.8 | when there isn't a solution.
+    2378.9 ->  2380.2 | OK, thanks.
+   Done: 623 sentences. Saved to output/whisper.json
+[3/4] PaddleOCR is reading text from the screenshots...
+INFO: Could not find files for the given pattern(s).
+C:\Users\mskid\AppData\Local\Programs\Python\Python311\Lib\site-packages\paddle\utils\cpp_extension\extension_utils.py:718: UserWarning: No ccache found. Please be aware that recompiling all source files may be required. You can download and install ccache from: https://github.com/ccache/ccache/blob/master/doc/INSTALL.md
+  warnings.warn(warning_message)
+[32mCreating model: ('PP-OCRv4_mobile_det', None, None)[0m
+[32mModel files already exist. Using cached files. To redownload, please delete the directory manually: `C:\Users\mskid\.paddlex\official_models\PP-OCRv4_mobile_det`.[0m
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I1122 15:57:41.538522 19740 onednn_context.cc:81] oneDNN v3.6.2
+[32mCreating model: ('en_PP-OCRv4_mobile_rec', None, None)[0m
+[32mModel files already exist. Using cached files. To redownload, please delete the directory manually: `C:\Users\mskid\.paddlex\official_models\en_PP-OCRv4_mobile_rec`.[0m
+      PaddleOCR device: CPU (MKL-DNN on, 8 threads), language en, model en_PP-OCRv4_mobile_rec
+      Adaptive sampling on (after 2 same slides, up to every 4 screenshots; slide match: tokens)
+   second     0: Linear Algebra Lecture #1 W.Gilbert Strang PROFESSOROFMATHEMATICS MASS
+   second     6: 
+   second     9: 18.06 Linear Algebm Gulbent Strang Lectrere1
+   second    12: 18.06 Linear Algebra Glbent Strang h+p://web.mt.elu/18.06 Lecture1
+   second    15: 18.06 Linear Algebra TextIntroductionboLiarA hp://web.mit.eu/18.06 Lec
+   second    21: 18.06 Linear Algebm GubetStrang
+   second    33: 18.06 Linear Algebra GlbertStrang hp// web.mt.ew/8.06 LectureI
+   second    45: 18.06 Linear Agebm Gubent Strang htp:// web.mit.elu Lecture
+   second    39: 18.06 Linear Agebm Gubent Strang ecture
+   second    36: 18.06 Linear Algebra GlbentStrang htp// web.mit.edu/8.06 LectureI
+   second    48: 18.06 Linear Algebr GilbertStrany http/ web.mit.ew/8.06 Lecture 1
+   second    51: GilbentStrany htp:// web.mit.elu//8.06 Lectuere
+   second    57: Title: 18.06 Linear Algebm Body: GlbertStrang htp// web.mt.e Lecture
+   second    60: hp// web.mit.elu/18.06 Lecture Row picture XColumn picture Matnxtom
+   second    63: .ecture n linear eguatousn unknouns Rowpicture XColumn pictune Matnxto
+   second    66: linear eguatons,n unknoune Pcture Matnxtom
+   second    69: -ecture linear eguations,n unknons XColumn pictue Matnx fom
+   second    72: linear eguations,n unhnowns picture XColumn p pictune Matnxfom
+   second    75: n linear eguations Sunknowns picture XColumn Matnxtom
+   second    78: linear eguations,n ullnowns picture XC.lumnp pictune Matnxfom
+   second    84: n linear eguations,n unhnou. picture XColumn p picture Matnxtom
+   second    96: n linear eguations,n unl owns Picture XColumn pictune MatAxtorm
+   second   108: 
+   second   102: n linear eguations,n unk picture XColumnp picture Matnxfom
+   second   105: 
+   second   111: 
+   second   114: Picture XColumn picture Matnx tomm
+   second   117: Pict XColumn pictur Matnx
+   second   120: Picture XColumn picture Matnx
+   second   126: Picture XColumn picture Matnx
+   second   138: atons,nknowns ture Jictune
+   second   132: 
+   second   129: Picture XColumn pictun Matnx
+   second   141: tonsn unhnems ture
+   second   144: eguatons. ceture picturo xtom
+   second   147: ear Agebra tranq
+   second   150: gebra
+   second   153: 
+   second   156: 2x-y
+   second   162: Ru/18.06
+   second   159: ebra 2x-y
+   second   165: 
+   second   171: ear Algebr 2x-y Stran uchontoLi
+   second   174: lear Algebmn /18.06
+   second   177: near Algebra 2x-4 eb.mit.e
+   second   180: near Algebm 2x-y luchiontoLinea eb.mit,ed
+   second   183: Introdiyn t.edu/18.06
+   second   186: 6Linear Algebra +2y=3 p/ web.mt.ey Lecture1
+   second   189: 
+   second   192: 
+   second   195: 
+   second   201: 
+   second   213: 
+   second   225: near Hgebru
+   second   237: 
+   second   249: near Algebr roductiontola web.mt 18.06
+   second   243: 
+   second   246: 
+   second   252: inear Algebra tStrang web.mit.edu cture
+   second   255: Title: inear Algebr Body: Web.mt cteere
+   second   258: Linear Algebra
+   second   261: troduchonto web.mit 8.06 ecteere
+   second   264: 18.06
+   second   267: 
+   second   270: Row picture 3.06
+   second   273: Row picture /18.06
+   second   276: picture
+   second   279: picture
+   second   282: ebra picture
+   second   288: inear Algebr 2x-y=0 -x+2y=3 Iroduchontng 48.06
+   second   285: Title: Aheo Body: _near Algebra picture 18.06
+   second   291: 2x-y pictuere 8.06
+   second   294: 
+   second   297: Jebra picture edu/18.06
+   second   300: Row pictur
+   second   309: pcture Rebra 18.06
+   second   312: 
+   second   315: Hgebra Row picture t.eu
+   second   318: inear Algebra -Strang suchion Neb.
+   second   321: inear Algebra -Strany secliontoLie veb.mit.ed, ture
+   second   324: picture Strang t.edu/i8.06
+   second   327: picture Strano hontLAebn b.mt.e
+   second   330: Title: Algebr Body: picture mt.edu/i8.06
+   second   333: Algebra picture mit.elu/i8.06
+   second   339: qebra pciure trana
+   second   336: Row pictur
+   second   342: 2x-y picture tSta web.mit.elu cturel
+   second   345: 2x-y acture tStra web.mit.eu
+   second   348: Algebr 2x-y=0 tStrany cture
+   second   351: inear Algebr Strang pctu, veb.mit.elu/i8.06
+   second   354: 2x-y=0 Strang lichonloLil eb.mt.e
+   second   357: near Algebra 2x-y pictu Strang b.mit.elu/18.06
+   second   360: ebra 2-y=0 du/18.06
+   second   363: ebra /18.06
+   second   369: 
+   second   366: ebra
+   second   372: picturk
+   second   378: Agebr
+   second   384: acture
+   second   396: ebra
+   second   408: 2x-y=C
+   second   420: ebra
+   second   432: ear Algebra Strang chontoLin b.mit.el
+   second   426: 
+   second   429: gebra
+   second   435: 
+   second   438: 1,06
+   second   441: 
+   second   447: lgebra mt.e
+   second   459: pictur2x-y=C
+   second   471: 
+   second   483: 
+   second   495: pictuy
+   second   510: 
+   second   522: mit.e18.06
+   second   516: 
+   second   519: now pictu Cang
+   second   525: 
+   second   528: nhnowns
+   second   531: 
+   second   537: 18.06
+   second   549: 56Linear Algcbra 2x-y=0 how pictur2x-y=0 nbent Strang LectureI umn pic
+   second   543: edu/18.06
+   second   540: 2du/i8.06
+   second   552: 6Linear Algebra 2x-y=0 how pictur2x-y=0 lbetStrang Lecture owpicture u
+   second   555: Row pictur/2x-y=O 2x-y=0 trang -x+2y=3 imit.elu/i8.06
+   second   558: pictur /18.06
+   second   561: 18.06
+   second   564: pictur2x-y=0 /18.06
+   second   567: picturg /18.06
+   second   570: 18.06
+   second   573: 
+   second   576: 
+   second   582: nunknowmg
+   second   594: Dus,
+   second   606: nsnunknoum Combinaten Cylumns
+   second   600: 
+   second   603: 
+   second   609: Calumns
+   second   612: Clumns
+   second   615: oF clunns
+   second   621: LOUS linear Combinatien
+   second   618: linear Conbinatien
+   second   624: Title: unear Combinatien Body: ture eeture picture fomm
+   second   627: Title: Jlinear Conbination nREylumns Body: atons,n unknoum Fure icture
+   second   630: ofalumns
+   second   633: ture picture
+   second   636: ture picture
+   second   642: binaten
+   second   654: 
+   second   666: Rinear Combinatien
+   second   678: 
+   second   690: 
+   second   702: 
+   second   714: linear Conbinatien
+   second   726: ofcalumns
+   second   738: 
+   second   750: ear Conbinaten
+   second   762: linear Comb
+   second   774: 
+   second   786: linear Combin
+   second   798: Coluan2 lnear
+   second   810: unear Combinaten
+   second   822: inear Combinatien
+   second   834: linear Combinatien oFcumns
+   second   828: linear Conbinatien
+   second   831: wear Combinaten
+   second   837: linear Conbinatien
+   second   840: ColZ inea
+   second   843: Colwun2 Linear Cone
+   second   846: liunear Comby
+   second   849: Colwun2
+   second   852: linear Conbinatien ofaumns
+   second   855: linear
+   second   858: nRar Combino columns
+   second   861: Combinote calumns
+   second   864: Combinote Icalumns
+   second   867: Combinate alumns
+   second   873: Combinate tumns
+   second   885: Combinate Calumns
+   second   897: Colwun2 Combinaten
+   second   909: linear
+   second   921: nhnowns Combinaten calumns
+   second   915: Title: linear Body: atons,en nhnowms Fure
+   second   912: ture linear
+   second   924: Title: linear Body: Combir Yumn
+   second   927: nunhnowms linear
+   second   930: linear
+   second   933: nowns binaten
+   second   939: 
+   second   951: 
+   second   963: 
+   second   975: 
+   second   987: Colunn2
+   second   999: 
+   second  1011: 2x-y -x+2y -39+4t=4
+   second  1005: 2x-y -39+Yt=
+   second  1002: 
+   second  1014: 2x-y -39+yt=4
+   second  1017: 2x-y
+   second  1020: 2x-y tYt= Y
+   second  1023: 2x-y tt= y
+   second  1029: 
+   second  1041: -x+2y
+   second  1053: 
+   second  1065: picture
+   second  1077: picture
+   second  1089: picture
+   second  1101: picture
+   second  1113: picture
+   second  1125: eicture
+   second  1137: picture
+   second  1149: Row picture
+   second  1161: 
+   second  1173: ow pictur
+   second  1185: picture
+   second  1197: picture
+   second  1209: 
+   second  1221: 
+   second  1233: 
+   second  1245: 
+   second  1257: 
+   second  1269: 
+   second  1281: 
+   second  1293: 
+   second  1305: 
+   second  1317: 
+   second  1329: picture
+   second  1341: 
+   second  1353: 
+   second  1365: 
+   second  1377: 
+   second  1389: 
+   second  1401: 
+   second  1413: 
+   second  1425: 
+   second  1437: 
+   second  1449: 
+   second  1461: 
+   second  1473: 
+   second  1488: 
+   second  1500: x=0y=0=1
+   second  1518: 
+   second  1530: 
+   second  1542: 
+   second  1554: 4=0=1
+   second  1566: 
+   second  1578: 
+   second  1590: 
+   second  1602: 
+   second  1614: x=0y=0=1
+   second  1626: Kow pictur
+   second  1638: 
+   second  1650: 
+   second  1662: 
+   second  1674: 
+   second  1686: 
+   second  1698: CanI s
+   second  1710: 
+   second  1722: 
+   second  1734: Dothe linear combs.
+   second  1728: Sdlve Ax=b fr everg b
+   second  1725: Can I slve Ax=b fr everg b?
+   second  1737: Can  slve Ax=l r ever b Dothe linear Combsn
+   second  1740: Can I solve Ax=b for everg b Dothe line combs.The crluuns
+   second  1743: Can I sol Ax-h r eue b Dothe linear comb lumns
+   second  1746: Can I solve Ax=b for every b Dothe linear Combs.s Mme crlumns fill3-D 
+   second  1749: Can I solve Ax=b for everg Dothe Linear combs. he cluuns fl3-D Space?
+   second  1755: 
+   second  1752: 
+   second  1758: 
+   second  1761: Can solue Ax=b for everg Space
+   second  1764: Can I solve Ax=b for everg Dothe Linear combs.sThe crlumns fill3-D Spa
+   second  1773: 
+   second  1776: 
+   second  1779: 
+   second  1785: 
+   second  1797: CanI solve Ax=bfor everg Dotulinear combs.The crluuns fil3-D Space?
+   second  1791: 
+   second  1794: 
+   second  1800: Can I solve Ax=b for everg Space
+   second  1803: Can I solve Ax=b for everg Space?
+   second  1809: Can I sQwe Ax=b for everg b Dothe Linear Combs.gMhe ctlumns f3-D Space
+   second  1821: 
+   second  1815: Can I solve Ax=bfor eveng Dothe Linear combs.s he ctlumns Space? ForTh
+   second  1818: Row pictu Dothe
+   second  1824: 
+   second  1827: CanI Dothe
+   second  1833: 
+   second  1845: 
+   second  1857: Dothe
+   second  1869: Dothe
+   second  1881: Dothe
+   second  1893: Dothe
+   second  1905: 
+   second  1917: Dothe
+   second  1929: Dothe
+   second  1941: Dothe
+   second  1953: 
+   second  1965: 
+   second  1977: Colwnn2
+   second  1989: 
+   second  2001: Dothe y=1=0
+   second  2013: 
+   second  2025: 
+   second  2037: 
+   second  2049: 
+   second  2061: 
+   second  2073: 
+   second  2085: 
+   second  2097: 
+   second  2109: 
+   second  2121: 
+   second  2133: 
+   second  2145: Dotho
+   second  2157: 
+   second  2169: 
+   second  2181: 
+   second  2193: 
+   second  2205: 
+   second  2217: 
+   second  2229: 
+   second  2241: 
+   second  2253: 
+   second  2265: 
+   second  2277: 
+   second  2289: 
+   second  2301: 
+   second  2313: Ax=b Ax isa comb.sfcolumn
+   second  2307: Axisaa
+   second  2310: Ax isa combs
+   second  2316: Ax=b
+   second  2319: Ax=b Ax isa comb.
+   second  2322: XSa comb.
+   second  2325: Comb.
+   second  2328: 
+   second  2334: 
+   second  2346: isa comb
+   second  2358: Ax isa comb.
+   second  2352: 
+   second  2355: Ax isa comb.
+   second  2361: Ax ia comb.
+   second  2364: 
+   second  2367: 
+   second  2370: Ax isa comb.
+   second  2373: 
+   second  2376: Ax isa comb.
+   second  2379: Ax iSacomb
+   second  2382: 2000 Massachusetts Institute of Technology
+   OCR was run 349 times for 796 screenshots (311 regular + 38 to locate slide changes).
+   OCR time: 125.7s total, 0.36s per OCR call (1 process(es) x 8 thread(s))
+   Done: 97 text blocks. Saved to output/ocr.json
+[4/4] Finished!
+Open these files in the output folder to see the results:
+  - output/whisper.json  (speech)
+  - output/ocr.json      (on-screen text)
+
+===== [15:59:49] build_chunks: D:\7\413410654\專題\rag-video-main\venv\Scripts\python.exe build_chunks.py mit_1806_l01
+Speech sentences kept: 597 / 623
+Slide text blocks kept: 97 / 97
+
+Created 65 chunks -> output\chunks.jsonl
+
+mit_1806_l01_001     8.9s ->   36.7s   48 words  image=frame_0009.jpg
+    slide : 18.06 Linear Algebra TextIntroductionboLiarA hp://web.mit.eu/18.06 Lecture
+    speech: Hi, this is the first lecture in MIT's course 18.06, Linear Algebra. And I'm Gil...
+mit_1806_l01_002    38.4s ->   62.4s   40 words  image=frame_0016.jpg
+    slide : 18.06 Linear Algebr GilbertStrany http/ web.mit.ew/8.06 Lecture 1 ; GilbentStran
+    speech: is web.mit.edu slash 18.06. And this is the first lecture, lecture one. So and l...
+mit_1806_l01_003    62.4s ->  109.2s  108 words  image=frame_0031.jpg
+    slide : .ecture n linear eguatousn unknouns Rowpicture XColumn pictune Matnxtom ; linear
+    speech: This is my plan, the fundamental problem of linear algebra. which is to solve a ...
+mit_1806_l01_004   106.3s ->  137.3s   79 words  image=frame_0043.jpg
+    slide : n linear eguations,n unhnou. picture XColumn p picture Matnxtom ; Picture XColum
+    speech: So in a minute, you'll see lines meeting. The second picture, I'll put a star be...
+mit_1806_l01_005   137.3s ->  165.3s   39 words  image=frame_0053.jpg
+    slide : atons,nknowns ture Jictune ; tonsn unhnems ture ; eguatons. ceture picturo xtom 
+    speech: The whole semester will be examples and then see what's going on with the exampl...
+mit_1806_l01_006   168.0s ->  218.6s  100 words  image=frame_0061.jpg
+    slide : ear Algebr 2x-y Stran uchontoLi ; lear Algebmn /18.06 ; near Algebm 2x-y luchion
+    speech: I can even say right away, what's the matrix that is, what's the coefficient mat...
+mit_1806_l01_007   213.5s ->  248.2s   78 words  image=frame_0078.jpg
+    slide : near Hgebru
+    speech: I couldn't resist writing the matrix form right even before the pictures. So I a...
+mit_1806_l01_008   248.2s ->  270.2s   44 words  image=frame_0085.jpg
+    slide : near Algebr roductiontola web.mt 18.06 ; inear Algebra tStrang web.mit.edu cture
+    speech: So linear equations are Ax equal B, and the idea now is to solve this particular...
+mit_1806_l01_009   270.2s ->  296.8s   50 words  image=frame_0095.jpg
+    slide : Row picture /18.06 ; ebra picture ; Title: Aheo Body: _near Algebra picture 18.0
+    speech: So that means I take one row at a time, x, y plane, and I'm going to plot all th...
+mit_1806_l01_010   296.8s ->  318.2s   47 words  image=frame_0103.jpg
+    slide : Jebra picture edu/18.06 ; Row pictur ; pcture Rebra 18.06 ; Hgebra Row picture t
+    speech: on the horizontal line? On this horizontal line, y is zero. The x-axis has y is ...
+mit_1806_l01_011   319.6s ->  343.5s   56 words  image=frame_0111.jpg
+    slide : inear Algebra -Strany secliontoLie veb.mit.ed, ture ; picture Strang t.edu/i8.06
+    speech: Tell me, well, I guess I have to tell you another point that solves this same eq...
+mit_1806_l01_012   343.5s ->  364.7s   46 words  image=frame_0121.jpg
+    slide : 2x-y picture tSta web.mit.elu cturel ; Algebr 2x-y=0 tStrany cture ; inear Algeb
+    speech: But let me put in all the points at once, because they all lie on a straight lin...
+mit_1806_l01_013   364.7s ->  412.6s  121 words  image=frame_0131.jpg
+    slide : picturk
+    speech: My first row, first equation. So typically maybe x equal a half, y equal one wil...
+mit_1806_l01_014   408.2s ->  432.8s   47 words  image=frame_0141.jpg
+    slide : picturk
+    speech: So if y is 0, I go along minus 3. So there's one point on this second line. Now ...
+mit_1806_l01_015   432.8s ->  479.9s  135 words  image=frame_0154.jpg
+    slide : pictur2x-y=C
+    speech: Because if x is minus 1, then I think y should be a 1, and we'll get that point....
+mit_1806_l01_016   476.0s ->  519.7s   89 words  image=frame_0165.jpg
+    slide : pictur2x-y=C
+    speech: Shall we just check that that point, which is the point x equals 1 and y was 2, ...
+mit_1806_l01_017   519.7s ->  536.7s   42 words  image=frame_0178.jpg
+    slide : mit.e18.06 ; nhnowns
+    speech: Now can I come to the column picture? Pay attention. This is the key point. So t...
+mit_1806_l01_018   536.7s ->  559.4s   56 words  image=frame_0183.jpg
+    slide : nhnowns ; 2du/i8.06 ; edu/18.06 ; 56Linear Algcbra 2x-y=0 how pictur2x-y=0 nbent
+    speech: I'm going to say that the x part is really x times You see I'm putting the two, ...
+mit_1806_l01_019   559.4s ->  606.3s   95 words  image=frame_0196.jpg
+    slide : 18.06 ; pictur2x-y=0 /18.06 ; nunknowmg
+    speech: And on the right-hand side, 0 and 3. You see the columns of the matrix, the colu...
+mit_1806_l01_020   606.3s ->  628.2s   60 words  image=frame_0206.jpg
+    slide : linear Conbinatien ; LOUS linear Combinatien ; Title: unear Combinatien Body: tu
+    speech: That's what we're seeing on the left side. Again, I don't want to write down a b...
+mit_1806_l01_021   628.2s ->  673.8s   98 words  image=frame_0218.jpg
+    slide : Rinear Combinatien
+    speech: to produce zero three. Now I want to draw a picture that represents what this, t...
+mit_1806_l01_022   670.6s ->  717.1s   93 words  image=frame_0232.jpg
+    slide : Rinear Combinatien
+    speech: It's the vector two minus one. The second column is, let's see, I go over, minus...
+mit_1806_l01_023   714.1s ->  762.2s  134 words  image=frame_0247.jpg
+    slide : Rinear Combinatien
+    speech: is the right one to produce zero, three, and then we'll see it happen in the pic...
+mit_1806_l01_024   759.0s ->  808.2s  122 words  image=frame_0262.jpg
+    slide : Rinear Combinatien
+    speech: and it'll go this way, so let's see, can I do it right? If I added on one of the...
+mit_1806_l01_025   803.3s ->  834.6s   81 words  image=frame_0274.jpg
+    slide : Rinear Combinatien
+    speech: What are the coordinates of this result? What do I get when I take one of this p...
+mit_1806_l01_026   834.6s ->  853.6s   42 words  image=frame_0281.jpg
+    slide : linear Conbinatien ; Colwun2 Linear Cone ; liunear Comby
+    speech: They combine to give the 3. But look at this picture. So here's our key picture....
+mit_1806_l01_027   854.6s ->  902.6s  103 words  image=frame_0295.jpg
+    slide : linear ; nRar Combino columns ; Combinote Icalumns
+    speech: So that idea of linear combinations is crucial. And also, do we want to think ab...
+mit_1806_l01_028   899.5s ->  921.6s   29 words  image=frame_0303.jpg
+    slide : Combinote Icalumns ; Title: linear Body: atons,en nhnowms Fure
+    speech: The combinations of this and this would fill the whole plane. You can tuck that ...
+mit_1806_l01_029   921.6s ->  967.6s  102 words  image=frame_0317.jpg
+    slide : Title: linear Body: Combir Yumn ; nunhnowms linear
+    speech: What are all the possible achievable right-hand sides That's going to be basic. ...
+mit_1806_l01_030   958.9s -> 1004.6s   91 words  image=frame_0327.jpg
+    slide : nunhnowms linear
+    speech: And just for variety, let me take minus 3z, minus 3y's. I should keep the y's in...
+mit_1806_l01_031  1001.5s -> 1048.7s  107 words  image=frame_0345.jpg
+    slide : 2x-y -x+2y -39+4t=4 ; 2x-y tYt= Y
+    speech: Let's remember the matrix form here, because that's easy. The matrix form, what'...
+mit_1806_l01_032  1046.3s -> 1094.9s  104 words  image=frame_0358.jpg
+    slide : 2x-y tYt= Y
+    speech: to write out the three equations. But it's the picture that I'm looking for toda...
+mit_1806_l01_033  1089.5s -> 1138.9s  103 words  image=frame_0372.jpg
+    slide : 2x-y tYt= Y
+    speech: x, y, z being 0, 0, 0 would not solve that equation. What are some points that d...
+mit_1806_l01_034  1131.7s -> 1177.6s   95 words  image=frame_0386.jpg
+    slide : 2x-y tYt= Y
+    speech: Let's say x to be 0, z to be 0, then y would be minus 1 by 2, So there's a third...
+mit_1806_l01_035  1172.2s -> 1220.2s   98 words  image=frame_0400.jpg
+    slide : 2x-y tYt= Y
+    speech: but your lecture is not Rembrandt, and the art is going to be the weak point her...
+mit_1806_l01_036  1217.0s -> 1263.6s   90 words  image=frame_0414.jpg
+    slide : 2x-y tYt= Y
+    speech: Maybe it, maybe I'll try to draw it like this. And those two planes meet in a li...
+mit_1806_l01_037  1257.9s -> 1306.0s  105 words  image=frame_0428.jpg
+    slide : 2x-y tYt= Y
+    speech: The main point is that the three planes, because they're not parallel, they're n...
+mit_1806_l01_038  1301.9s -> 1349.8s  110 words  image=frame_0443.jpg
+    slide : 2x-y tYt= Y
+    speech: found the point where the three planes meet. All I really want to see is that th...
+mit_1806_l01_039  1347.1s -> 1395.6s  102 words  image=frame_0458.jpg
+    slide : 2x-y tYt= Y
+    speech: just the second column of my matrix. And z times no z's, minus one z's, and four...
+mit_1806_l01_040  1392.0s -> 1437.0s   87 words  image=frame_0473.jpg
+    slide : 2x-y tYt= Y
+    speech: Shall I try to draw the column picture then? So since these vectors have three c...
+mit_1806_l01_041  1432.8s -> 1477.9s   76 words  image=frame_0486.jpg
+    slide : 2x-y tYt= Y
+    speech: So nothing in this was the first component. The second component was a minus 1, ...
+mit_1806_l01_042  1473.2s -> 1520.2s  109 words  image=frame_0500.jpg
+    slide : 2x-y tYt= Y
+    speech: Because in this special problem, especially That right-hand side that I'm trying...
+mit_1806_l01_043  1516.0s -> 1562.4s   92 words  image=frame_0514.jpg
+    slide : 2x-y tYt= Y
+    speech: I made it work that way just so we would get an answer, 001. So somehow, that's ...
+mit_1806_l01_044  1558.9s -> 1605.8s  113 words  image=frame_0528.jpg
+    slide : 2x-y tYt= Y
+    speech: if I was to add that to the syllabus, how to find x, y, z in all cases. Can I ju...
+mit_1806_l01_045  1602.9s -> 1650.9s  106 words  image=frame_0543.jpg
+    slide : 2x-y tYt= Y
+    speech: There's a very special right-hand side. I just cooked it up by adding this one t...
+mit_1806_l01_046  1647.0s -> 1693.4s   91 words  image=frame_0558.jpg
+    slide : 2x-y tYt= Y
+    speech: but now I'm combining them to produce this guy. And it turned out that column on...
+mit_1806_l01_047  1691.4s -> 1720.6s   63 words  image=frame_0568.jpg
+    slide : 2x-y tYt= Y
+    speech: Let me write that down. Can I solve Ax equal b for every right-hand side b? I me...
+mit_1806_l01_048  1723.0s -> 1745.6s   16 words  image=frame_0577.jpg
+    slide : Can I slve Ax=b fr everg b? ; Can slve Ax=l r ever b Dothe linear Combsn ; Can I
+    speech: So in linear combination words, do the linear combinations of the columns fill t...
+mit_1806_l01_049  1745.6s -> 1795.0s   99 words  image=frame_0587.jpg
+    slide : Can I solve Ax=b for every b Dothe linear Combs.s Mme crlumns fill3-D Space
+    speech: Every b means all the b's in three-dimensional space. So do you see that I'm jus...
+mit_1806_l01_050  1790.4s -> 1819.6s   43 words  image=frame_0602.jpg
+    slide : CanI solve Ax=bfor everg Dotulinear combs.The crluuns fil3-D Space? ; Can I sQwe
+    speech: And actually, the answer for this matrix will be yes. For this matrix, for this,...
+mit_1806_l01_051  1819.6s -> 1868.0s   91 words  image=frame_0617.jpg
+    slide : Dothe y=1=0
+    speech: a non-singular matrix, an invertible matrix. There could be other, and we will s...
+mit_1806_l01_052  1864.3s -> 1910.3s  106 words  image=frame_0630.jpg
+    slide : Dothe y=1=0
+    speech: let me say when it goes wrong, if these three columns all lie in the same plane,...
+mit_1806_l01_053  1908.4s -> 1957.6s  111 words  image=frame_0645.jpg
+    slide : Dothe y=1=0
+    speech: I don't get anything new from that. All the combinations are in the plane, and t...
+mit_1806_l01_054  1951.1s -> 1998.0s  101 words  image=frame_0659.jpg
+    slide : Dothe y=1=0
+    speech: nine dimensions, imagine that we have vectors with nine components. Well, it's g...
+mit_1806_l01_055  1994.8s -> 2044.5s  110 words  image=frame_0674.jpg
+    slide : Dothe y=1=0
+    speech: hit the correct right-hand side B. And we might also ask the question, can we al...
+mit_1806_l01_056  2039.9s -> 2085.3s   97 words  image=frame_0689.jpg
+    slide : Dothe y=1=0
+    speech: there so that the ninth column is the same as the eighth column, then it contrib...
+mit_1806_l01_057  2080.9s -> 2126.1s   88 words  image=frame_0702.jpg
+    slide : Dothe y=1=0
+    speech: may very well fill out the whole nine dimensional space. But if the ninth column...
+mit_1806_l01_058  2121.8s -> 2167.9s  104 words  image=frame_0716.jpg
+    slide : Dothe y=1=0
+    speech: where the matrices work. We can get every right-hand side B, and here we see how...
+mit_1806_l01_059  2166.2s -> 2212.7s  100 words  image=frame_0731.jpg
+    slide : Dothe y=1=0
+    speech: And I just want to say, how do you multiply a matrix by a vector? OK, so I'm jus...
+mit_1806_l01_060  2210.4s -> 2255.9s  109 words  image=frame_0745.jpg
+    slide : Dothe y=1=0
+    speech: It's columns again. It's a column at a time. For me, this matrix multiplication ...
+mit_1806_l01_061  2253.5s -> 2299.1s  123 words  image=frame_0760.jpg
+    slide : Dothe y=1=0
+    speech: Now you could do that another way. You could do it a row at a time. You could do...
+mit_1806_l01_062  2296.2s -> 2315.9s   35 words  image=frame_0769.jpg
+    slide : Dothe y=1=0 ; Ax=b Ax isa comb.sfcolumn
+    speech: But I also like to see it by columns. I see this as a linear combination of the ...
+mit_1806_l01_063  2317.7s -> 2357.8s   83 words  image=frame_0780.jpg
+    slide : Ax=b Ax isa comb. ; XSa comb.
+    speech: That's how I hope you'll think of A times x when we need it. Right now we've got...
+mit_1806_l01_064  2357.8s -> 2377.8s   31 words  image=frame_0790.jpg
+    slide : Ax isa comb.
+    speech: using elimination, to find the solution, if there is one, to any system of any s...
+mit_1806_l01_065  2378.9s -> 2380.2s    2 words  image=frame_0794.jpg
+    slide : (no slide text)
+    speech: OK, thanks....
+
+===== [15:59:50] build_db: D:\7\413410654\專題\rag-video-main\venv\Scripts\python.exe build_db.py
+Loaded 65 chunks
+Loading BGE-M3 (first time: downloading, please wait)...
+Embedding device: cuda
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 15049.35it/s]
+Creating vectors...
+Batches:   0%|          | 0/3 [00:00<?, ?it/s]Batches:  33%|███▎      | 1/3 [00:02<00:05,  2.97s/it]Batches:  67%|██████▋   | 2/3 [00:04<00:02,  2.05s/it]Batches: 100%|██████████| 3/3 [00:04<00:00,  1.47s/it]
+Each vector has 1024 numbers
+
+Done! Saved 65 chunks to output/chroma_db
+Now run: python search.py
+
+===== [16:00:19] eval_transcript: D:\7\413410654\專題\rag-video-main\venv\Scripts\python.exe evaluation/eval_transcript.py output/whisper.json evaluation/references/mit_1806_l01.srt --lang en --out output/eval_transcript.json
+WER: 8.4%  (substitutions 82, deletions 201, insertions 130, reference 4905 tokens)
+
+===== [16:00:20] eval_search: D:\7\413410654\專題\rag-video-main\venv\Scripts\python.exe evaluation/eval_search.py evaluation/questions/mit_1806_l01.json output/chroma_db
+Loading BGE-M3 on cuda...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 15039.28it/s]
+18 questions, 65 chunks in database
+
+# 檢索方法比較（vector / bm25 / hybrid）
+
+- 資料庫：output/chroma_db　題目檔：evaluation/questions/mit_1806_l01.json
+- all = 每種方法排完所有片段再合併；top10 = 各取前 10 名再合併（系統實際設定）；w = bm25_weight
+- 題目數：18　片段數：65　向量模型：BAAI/bge-m3（cuda）
+- RRF：k=60、vector_weight=1.0
+
+## ALL（18 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 56% | 67% | 0.627 | 45 |
+| bm25 | 44% | 50% | 0.519 | 28 |
+| hybrid (all, w=1) | 56% | 72% | 0.652 | 29 |
+| hybrid (top10, w=1) | 56% | 72% | 0.649 | 28 |
+| hybrid (top10, w=0.5) | 56% | 67% | 0.643 | 28 |
+| hybrid (top10, w=0.3) | 56% | 67% | 0.640 | 28 |
+
+## keyword（7 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 57% | 71% | 0.646 | 66 |
+| bm25 | 43% | 57% | 0.607 | 27 |
+| hybrid (all, w=1) | 57% | 86% | 0.685 | 28 |
+| hybrid (top10, w=1) | 57% | 86% | 0.685 | 27 |
+| hybrid (top10, w=0.5) | 57% | 71% | 0.668 | 27 |
+| hybrid (top10, w=0.3) | 57% | 71% | 0.661 | 27 |
+
+## paraphrase（7 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 57% | 71% | 0.636 | 32 |
+| bm25 | 71% | 71% | 0.729 | 31 |
+| hybrid (all, w=1) | 57% | 71% | 0.661 | 31 |
+| hybrid (top10, w=1) | 57% | 71% | 0.653 | 30 |
+| hybrid (top10, w=0.5) | 57% | 71% | 0.653 | 30 |
+| hybrid (top10, w=0.3) | 57% | 71% | 0.653 | 30 |
+
+## chinese（4 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 50% | 50% | 0.581 | 28 |
+| bm25 | 0% | 0% | 0.000 | 23 |
+| hybrid (all, w=1) | 50% | 50% | 0.581 | 28 |
+| hybrid (top10, w=1) | 50% | 50% | 0.581 | 26 |
+| hybrid (top10, w=0.5) | 50% | 50% | 0.581 | 27 |
+| hybrid (top10, w=0.3) | 50% | 50% | 0.581 | 26 |
+
+## 每題正確片段的名次（越小越好，- = 沒找到）
+
+| 類型 | 問題 | vector | bm25 | hybrid (all, w=1) | hybrid (top10, w=1) | hybrid (top10, w=0.5) | hybrid (top10, w=0.3) |
+|---|---|---|---|---|---|---|---|
+| keyword | fundamental problem of linear algebra | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | row picture where two lines meet | 3 | 4 | 3 | 3 | 3 | 3 |
+| keyword | linear combination of the columns | 1 | 2 | 1 | 1 | 1 | 1 |
+| keyword | column picture in three dimensions | 8 | 4 | 3 | 3 | 4 | 5 |
+| keyword | non-singular invertible matrix | 16 | 4 | 8 | 8 | 11 | 11 |
+| keyword | dot product of a row with x | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | nine vectors in nine-dimensional space | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | what shape is the set of solutions of one equation in three unknowns | 12 | 10 | 10 | 14 | 14 | 14 |
+| paraphrase | when is it impossible to reach every right-hand side | 31 | - | 41 | - | - | - |
+| paraphrase | how do you multiply a matrix by a vector | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | which point solves both equations in the two by two example | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | why is it hard to see three planes meeting | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | what happens if we keep the matrix but change the right-hand side | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | what do all combinations of the two columns fill | 3 | 1 | 2 | 2 | 2 | 2 |
+| chinese | 線性代數的基本問題是什麼 | 1 | - | 1 | 1 | 1 | 1 |
+| chinese | 矩陣乘以向量怎麼算 | 1 | - | 1 | 1 | 1 | 1 |
+| chinese | 奇異矩陣是什麼情況 | 5 | - | 5 | 5 | 5 | 5 |
+| chinese | 行向量的線性組合 | 8 | - | 8 | 8 | 8 | 8 |
+
+Saved: output\eval_result.md, output\eval_detail.csv, output\eval_summary.json

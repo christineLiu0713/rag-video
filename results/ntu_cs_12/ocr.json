@@ -1,0 +1,287 @@
+[
+  {
+    "start": 6.0,
+    "end": 12.0,
+    "text": "National Taiwan n University Opencourseware 臺大开放式課程"
+  },
+  {
+    "start": 12.0,
+    "end": 15.0,
+    "text": "Title: 計算機概 Body: 國立台灣大學開放式课程 授課教師：于天立助理教授 國立台灣大學電機工程學系 授課地點： 國立台灣大學明達馆231教室 授課时間：2013年04月23日 课程主题：Programming Languages(1) 版權聲明：本著作除另有明外，探取創用CC BYNC SA 「姓名標示一非商業性一相同方式分享」台灣3.0版授權出"
+  },
+  {
+    "start": 15.0,
+    "end": 18.0,
+    "text": "Tian-Li.Yu N a tio na l Ta i w DepartmentofElectrical En National Taiwan Unive tianliyuocc.ee.ntu.eo SlidesmadebyTian-Li Yu,Jie-Wei W Tian-L Yu (NTUEE）"
+  },
+  {
+    "start": 18.0,
+    "end": 48.0,
+    "text": "Title: Taiwan EvolutionaryIntelligence Laboratory Body: Department of Electrical Engineering National Taiwan University tianliyu@cc.ee.ntu.edu.tw Slides madeby Tian-LiYu,Jie-Wei Wu,and Chu Tian-L Yu NTUEE Programmung Languages"
+  },
+  {
+    "start": 48.0,
+    "end": 78.0,
+    "text": "Machine Assembly National Taiwan Uni Instructions (Mnemonic Cobol system of Mls) Basic Java Tian-L Yu NTUEE） Programming Languages"
+  },
+  {
+    "start": 78.0,
+    "end": 81.0,
+    "text": "amming Languages"
+  },
+  {
+    "start": 81.0,
+    "end": 90.0,
+    "text": "Basic Java Programming Languages"
+  },
+  {
+    "start": 90.0,
+    "end": 102.0,
+    "text": "Basic Java"
+  },
+  {
+    "start": 102.0,
+    "end": 138.0,
+    "text": "Machine NationalTaiwan University Assembly Instructions Fortran (Mnemonic Cobol systeY Basic Java LYU (TUEE) Programming Languages"
+  },
+  {
+    "start": 138.0,
+    "end": 144.0,
+    "text": "Machine National TaiwanUniversity Assembly Instructions FortranTu (Mnemonic Cobol systemofMls) Basic Java u (NTUEE） ProgrammingLanguages"
+  },
+  {
+    "start": 144.0,
+    "end": 198.0,
+    "text": "166D LD R5,Price National Taiwan Un 5056 rseware ShippingCharge 306E R0, R5, R6 COO0 TotalCost Mnemonic names for op-coo Identifiers:Descriptive names f nemo locations,chosen by theprogram Tian-Li Yu (NTUEE) Programming Languages"
+  },
+  {
+    "start": 198.0,
+    "end": 309.0,
+    "text": "Title: Machine instructions Body: NationalTaiwanUniversit Assembly 156C 166D LD R5,Price 5056 LD R6, ShippingCharge ADDI R0,R5,R6 306E ST RO,TotalCost CO00 Mnemonic names for op-codes Identifiers: Descriptive names for memory locations,chosen by theprogrammer"
+  },
+  {
+    "start": 309.0,
+    "end": 657.0,
+    "text": "Title: Characteristics of assembly Body: National Taiwan University -Machine dependent -One-to-one mapping -Assembler High-level primitives Machines independent (virtually) One primitive to many Ml mapping Compiler & interpreter"
+  },
+  {
+    "start": 657.0,
+    "end": 1005.0,
+    "text": "Title: Natural vs. formal languages Body: National Taiwan University -Formal language →formal grammar Portability -Theoretically: different compilers -Reality: Minor modifications"
+  },
+  {
+    "start": 1005.0,
+    "end": 1341.0,
+    "text": "Title: ML Schema Object-oriented Body: Mational Taiwan Universlty LISP Functional Smalltak achine Visual Basic FORTRAN BASIC C! Java guages COBOLALGOL APL Pascal Imperative GPSS Prolog Declarative 1950 1960 1970 1980 1990 2000"
+  },
+  {
+    "start": 1341.0,
+    "end": 1545.0,
+    "text": "Title: ML Schema Body: NationalTaiwanUniversity LISP Functional Smaltalk Visual Basic Object-oriente Machine FORTRAN Java BASIC Languages COBOL ALGOL APL Pascal Imperative GPSS Prolog Declarative 1950 1960 1970 1980 1990 2000"
+  },
+  {
+    "start": 1545.0,
+    "end": 1548.0,
+    "text": "Title: LanguagesCOBOL ALGO Body: National TaiwanUnivet LISP ML Schema Functional Smalltalk Visual Basic Machine Object-oriented FORTRAN Java BASIC Pascal Imperative Prolog Declarative 1960 1980 1990 2000"
+  },
+  {
+    "start": 1548.0,
+    "end": 1563.0,
+    "text": "Title: ML Schema Visual Basic Languages COBOL ALGOL APL Body: NationalTaiwanUniv LISP Functional Smalltalk Machine Object-oriented FORTRAN Java BASIC Pascal Imperative GPSS Prolog Declarative 1950 1960 1970 1980 1990 2000"
+  },
+  {
+    "start": 1563.0,
+    "end": 1608.0,
+    "text": "Title: Approaching a problem by finding an algorithm to solve the Body: Imperativeparadigm National TaiwanUniver -Procedural problem. Declarativeparadigm -Implemented a general problem solver Approaching a problem by finding a formal description of the problem. Will talk more about this later."
+  },
+  {
+    "start": 1608.0,
+    "end": 1611.0,
+    "text": "Title: l Paradigm Body: Universlty Courseware Fid sum Oupr"
+  },
+  {
+    "start": 1611.0,
+    "end": 1707.0,
+    "text": "Title: (Find_diff (Find_sum Old_balance Credits) (Find_sum Debits) Body: Natlo Temp_balance←Oldbalance+Credit Total debits  sum of all Debits Balance←Temp_balance -Totaldebits (Find_Quotiant (Find_sum Numbers) (Find.count Nurmbn Sum sum ofall Numbers Count#of Numbers QuotiantSum / Count"
+  },
+  {
+    "start": 1707.0,
+    "end": 1713.0,
+    "text": "Falwan Univarslly 臺大用放政 bits ind_count Numbers))"
+  },
+  {
+    "start": 1713.0,
+    "end": 1719.0,
+    "text": "Title: umbers)) Body: Nailonal Fulwan University Jpehcou"
+  },
+  {
+    "start": 1719.0,
+    "end": 1728.0,
+    "text": "National Taiwan Univer"
+  },
+  {
+    "start": 1728.0,
+    "end": 1731.0,
+    "text": "National Talwan Universiy"
+  },
+  {
+    "start": 1731.0,
+    "end": 1743.0,
+    "text": "Title: Temp_balance←Old_balance+Credit Body: Credits)（Find_sum Debits) Total_debits ← sum of all Debits BalanceTemp_balance-Total debits (Find_Quotiant (Find_sum Numbers) (Find_count Numbers)) Sum sum of all Numbers Count←#of Numbers Quotiant←Sum / Count Tan-L Yu NTUEE Programiming Languages"
+  },
+  {
+    "start": 1743.0,
+    "end": 1878.0,
+    "text": "Title: (Find_diff （Find_sum Old_balance Credits) (Find sum Debits)) Body: Perallve Natlonal Taiwan Universlny Temp_balance -Oldbalance + Credit Total debits ←sum of all Debits Balance ←Temp_balance -Total _debits (Find_Quotiant (Find_sum Numbers) (Find.count N Sum  sum of all Numo Count #of Numbers Quotiant←Sum / Count"
+  },
+  {
+    "start": 1878.0,
+    "end": 1881.0,
+    "text": "l Debits) atlonal.Talw tare nt Numbers))"
+  },
+  {
+    "start": 1881.0,
+    "end": 1887.0,
+    "text": "Na:lonal Taiwan Univers nbers))"
+  },
+  {
+    "start": 1887.0,
+    "end": 1890.0,
+    "text": "National Taiwan Unive bers)"
+  },
+  {
+    "start": 1890.0,
+    "end": 1893.0,
+    "text": "Natlonal Talwan University"
+  },
+  {
+    "start": 1893.0,
+    "end": 1902.0,
+    "text": "Title: （Find_diff （Find_sum Old balance Credits)(Find sum Debits) Body: atlon wan University Temp_balance-Old.balance +Credit Total debitssum of all Debits Balance Temp balance -Total debits Quotiant (Find sum Numbers)(Find.count Numbers) m←sum of all Numbers #of Numbers -Sum/ Count"
+  },
+  {
+    "start": 1902.0,
+    "end": 2301.0,
+    "text": "Title: OoP （object-oriented programming) Body: aradigm Watlonaltalwa Abstraction Information hiding -Encapsulation -Polymorphism Inheritance References: -http://www.codeproject.com/KB/architecture/0op_Concepts and_manymore.aspx -http://en.wikipedia.org/wiki/Object-oriented_programll"
+  },
+  {
+    "start": 2301.0,
+    "end": 2343.0,
+    "text": "Title: Variables and data types Body: Taiwan.University Openc Data structure Constants and literals Assignment and operators ontrol amments"
+  },
+  {
+    "start": 2343.0,
+    "end": 2442.0,
+    "text": "Title: Integer Real (floating-point) Character Boolean Body: University FORTRAN Pascal INTEGERa.b REALC.d integer; c.d:real; int a.b; BYTEe.f float c. e.f:char; LOGICAL g.h char e. g.h:boolean; bool g."
+  },
+  {
+    "start": 2442.0,
+    "end": 2571.0,
+    "text": "Title: Homogeneous array Heterogeneous array array[0..5,0..2] of integer; Body: NationalTalw urseware FORTRAN INTEGER a(6,3) Pascal struct char Name[25]; int Aqe; float SkillRatina Employee"
+  },
+  {
+    "start": 2571.0,
+    "end": 2661.0,
+    "text": "NallonalTaiwar purseware a←b+645; -645 is a literal const int a=645; final int a=645; O A constant cannot be a l-value"
+  },
+  {
+    "start": 2661.0,
+    "end": 2760.0,
+    "text": "Title: Operator precedence Body: an.University 章大兴地式課程 a<-b+ci Ada,Pascal a:=b+ci a=b+ci Operator overloading"
+  },
+  {
+    "start": 2760.0,
+    "end": 2763.0,
+    "text": "Title: o Old-fashion:goto if （grade<60)goto 60 Body: goto40 print \"passed.\" goto70 goto20 print \"failed.” stop Not recommended in modern programming Modern programming （grade<60） then print \"failed.\" else print \"passed.\""
+  },
+  {
+    "start": 2763.0,
+    "end": 2766.0,
+    "text": "Title: C/C++,Java Body: This is a This is a block comment documentation comment a=b+ci a=b+ci"
+  },
+  {
+    "start": 2766.0,
+    "end": 2769.0,
+    "text": "Ada,Pascal a:=b+ci Operator precedence Operator overloading"
+  },
+  {
+    "start": 2769.0,
+    "end": 2847.0,
+    "text": "Title: ashion: goto print \"passed.\" if (grade< 60)goto 60 Body: ersity qoto 40 qoto 70 qoto 20 print \"failed.\" stop Not recommended in modern programming Modern programming （grade<60） then print “failed.\" else print \"passed.\""
+  },
+  {
+    "start": 2847.0,
+    "end": 2895.0,
+    "text": "Naflonal University if (B）S1 else S2; while (B) switch case C1:Sl:break; case C2:s2;break; case C3: s3;break;"
+  },
+  {
+    "start": 2895.0,
+    "end": 3042.0,
+    "text": "Title: Control 計算機概 Body: Imperative Paradigm National Taiwan University OpenCourseware 臺大開放式課程 o Old-fashion: goto goto40 print \"passed.\" goto70 if（grade<60）goto60 goto20 print\"failed.\" 主罐>于天立助理教授 stop 臺大電機工程學系 ● Not recommended in modern programming 版權-國立臺灣大學 ·Modern programming if（grade<60) then print\"failed.\" elseprint \"passed.\""
+  },
+  {
+    "start": 3042.0,
+    "end": 3312.0,
+    "text": "Title: 計算機概 Body: Vtestcpp+（-)-VIM National Taiwan University Opencourseware 臺大開放式課程 This is for demo #include <iostream> #include<ftream> using namespace std; unsigned long long N; unsigned long long myPow(unsigned long long x, unsigned long long y) 主罐>于天立助理教授 if (y==1ull) 臺大電機工程學系 return x % N; 版權·國立臺灣大學 unsigned longlongtemp=myPow(x,y/2); return（temp *temp）%N; else { 3,45"
+  },
+  {
+    "start": 3312.0,
+    "end": 4362.0,
+    "text": "Title: Terminology 計算機概 Body: ImperativeParadigm National Taiwan University OpenCourseware 臺大開放式課程 Starting theheadwith the term\"void\"is The former parameter list.Note thewaythat aCprogrammer specifiesthat that C,as with many programming theprogramunitis aprocedurerather languages,requires that the data thanafunction.Wewill learnaboutfunctions type of cach parameter be specified. shortly. void ProjectPopulation (float.GrowthRate)( int Year; 主罐于天立助理教授 Population[0]=100.0; for（Year=O;Year 10;Year++） 臺大電機工程學系 Population[Year+l]=Population[Year]+(Population[Year]*GrowthRate); 版權·國立臺灣大學 This declares a local variable These statements describe how the named Year. populations are to be computed and storedintheglobalarraynamedPopulation."
+  },
+  {
+    "start": 4362.0,
+    "end": 4440.0,
+    "text": "Title: The Translation Process 計算機概 ● Parser: identifying syntax & semantics. Body: ImperativeParadigm Natlonal Taiwan University OpenCourseware 臺大開放式課程 ● Lexical analyzer: identifying tokens. 主罐?于天立助理教授 毫大電機工程學系 Source Lexical Code Object Parser program analyzer generator program 版·國立臺灣大學"
+  },
+  {
+    "start": 4440.0,
+    "end": 4443.0,
+    "text": "National Taiwan Untvensity. OLexical analyzerdentityng tokens. Parserdentitying syntax&semanbcs"
+  },
+  {
+    "start": 4443.0,
+    "end": 4446.0,
+    "text": "National Tａiwan U ni versity"
+  },
+  {
+    "start": 4446.0,
+    "end": 4485.0,
+    "text": "Na:ional Tａiwa ｎ U ni versity Tian-Ui Yu (NTUEE)"
+  },
+  {
+    "start": 4485.0,
+    "end": 4488.0,
+    "text": "Title: oParser: identitying syntax & seman Body: Na :ional  Taiw a n U ni versit y OLexical"
+  },
+  {
+    "start": 4488.0,
+    "end": 4680.0,
+    "text": "Title: The Translation Process 計算機概 OParser: identifying syntax & semantics. Body: ImperativeParadigm National Taiwan University OpenCourseware 臺大開放式課程 OLexical analyzer: identifying tokens. 主講>于天立 助理教授 毫大電機工程學系 Source Lexical Code Object Parser program analyzer generator program 版權>國立臺灣大學"
+  },
+  {
+    "start": 4680.0,
+    "end": 4692.0,
+    "text": "Taiwan University doxygeh int a1000"
+  },
+  {
+    "start": 4692.0,
+    "end": 4914.0,
+    "text": "Title: 計算機概 Factor →x| y|z Body: ImperativeParadigm National Taiwan University OpenCourseware 臺大開放式課程 GrammarforAlgebra Expression →Term |Term+Expression | Term - Expression Term →Factor|Factor*Term|Factor / Term 主罐>于天立助理教授 臺大電機工程學系 oStarting:Expression Nonterminals: Expression, Term, Factor 版權>國立臺灣大學 O Terminals: x, y, z"
+  },
+  {
+    "start": 4914.0,
+    "end": 4920.0,
+    "text": "製作人：陳竹亭 國立灣大學化學系教授 科学教育發展中心主任"
+  },
+  {
+    "start": 4920.0,
+    "end": 4926.0,
+    "text": "錄影/剪辑 祝怡瑩、黄紀惟"
+  },
+  {
+    "start": 4926.0,
+    "end": 4932.0,
+    "text": "NationalTaiwanUniversity OpencourseWare 臺大開放式課程 國立台灣大學科學教育發展中心 Center for the Aduancement of Science Education"
+  }
+]

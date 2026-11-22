@@ -1,0 +1,136 @@
+{
+ "video": "mit_1806_l01",
+ "note": "MIT 18.06 Linear Algebra (Strang), Lecture 1。anchors = 答案出現的時間點（秒），依官方字幕標定。 2026-11-22 重新對照字幕逐句校正 anchors（原本有幾題標在答案前後幾十秒到幾分鐘）。",
+ "questions": [
+  {
+   "q": "fundamental problem of linear algebra",
+   "type": "keyword",
+   "anchors": [
+    65
+   ]
+  },
+  {
+   "q": "row picture where two lines meet",
+   "type": "keyword",
+   "anchors": [
+    485
+   ]
+  },
+  {
+   "q": "linear combination of the columns",
+   "type": "keyword",
+   "anchors": [
+    605
+   ]
+  },
+  {
+   "q": "column picture in three dimensions",
+   "type": "keyword",
+   "anchors": [
+    1325
+   ]
+  },
+  {
+   "q": "non-singular invertible matrix",
+   "type": "keyword",
+   "anchors": [
+    1822,
+    1934
+   ]
+  },
+  {
+   "q": "dot product of a row with x",
+   "type": "keyword",
+   "anchors": [
+    2290
+   ]
+  },
+  {
+   "q": "nine vectors in nine-dimensional space",
+   "type": "keyword",
+   "anchors": [
+    1990
+   ]
+  },
+  {
+   "q": "what shape is the set of solutions of one equation in three unknowns",
+   "type": "paraphrase",
+   "anchors": [
+    1160
+   ]
+  },
+  {
+   "q": "when is it impossible to reach every right-hand side",
+   "type": "paraphrase",
+   "anchors": [
+    1920,
+    1935
+   ]
+  },
+  {
+   "q": "how do you multiply a matrix by a vector",
+   "type": "paraphrase",
+   "anchors": [
+    2175
+   ]
+  },
+  {
+   "q": "which point solves both equations in the two by two example",
+   "type": "paraphrase",
+   "anchors": [
+    480
+   ]
+  },
+  {
+   "q": "why is it hard to see three planes meeting",
+   "type": "paraphrase",
+   "anchors": [
+    1265
+   ]
+  },
+  {
+   "q": "what happens if we keep the matrix but change the right-hand side",
+   "type": "paraphrase",
+   "anchors": [
+    1575
+   ]
+  },
+  {
+   "q": "what do all combinations of the two columns fill",
+   "type": "paraphrase",
+   "anchors": [
+    905
+   ]
+  },
+  {
+   "q": "線性代數的基本問題是什麼",
+   "type": "chinese",
+   "anchors": [
+    65
+   ]
+  },
+  {
+   "q": "矩陣乘以向量怎麼算",
+   "type": "chinese",
+   "anchors": [
+    2175
+   ]
+  },
+  {
+   "q": "奇異矩陣是什麼情況",
+   "type": "chinese",
+   "anchors": [
+    1822,
+    1931
+   ]
+  },
+  {
+   "q": "行向量的線性組合",
+   "type": "chinese",
+   "anchors": [
+    610,
+    840
+   ]
+  }
+ ]
+}

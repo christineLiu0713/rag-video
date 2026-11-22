@@ -1,0 +1,181 @@
+﻿question,type,mode,rank,top3,ms
+what does i stand for in for i in range,keyword,vector,1,test_video_005 test_video_001 test_video_003,231.9
+what does i stand for in for i in range,keyword,bm25,1,test_video_005 test_video_001,55.0
+what does i stand for in for i in range,keyword,"hybrid (all, w=1)",1,test_video_005 test_video_001 test_video_003,54.0
+what does i stand for in for i in range,keyword,"hybrid (top10, w=1)",1,test_video_005 test_video_001 test_video_003,53.0
+what does i stand for in for i in range,keyword,"hybrid (top10, w=0.5)",1,test_video_005 test_video_001 test_video_003,54.0
+what does i stand for in for i in range,keyword,"hybrid (top10, w=0.3)",1,test_video_005 test_video_001 test_video_003,44.0
+what does i stand for in for i in range,keyword,vector + rerank,1,test_video_005 test_video_001 test_video_003,1042.4
+what does i stand for in for i in range,keyword,hybrid + rerank,1,test_video_005 test_video_001 test_video_003,495.7
+what does i stand for in for i in range,keyword,hybrid20 + rerank,1,test_video_005 test_video_001 test_video_003,506.7
+"why does range(1,5) print only four times",keyword,vector,1,test_video_002 test_video_003 test_video_005,50.0
+"why does range(1,5) print only four times",keyword,bm25,1,test_video_002 test_video_004 test_video_001,48.0
+"why does range(1,5) print only four times",keyword,"hybrid (all, w=1)",1,test_video_002 test_video_003 test_video_004,52.0
+"why does range(1,5) print only four times",keyword,"hybrid (top10, w=1)",1,test_video_002 test_video_003 test_video_004,48.0
+"why does range(1,5) print only four times",keyword,"hybrid (top10, w=0.5)",1,test_video_002 test_video_003 test_video_005,41.0
+"why does range(1,5) print only four times",keyword,"hybrid (top10, w=0.3)",1,test_video_002 test_video_003 test_video_005,49.0
+"why does range(1,5) print only four times",keyword,vector + rerank,1,test_video_002 test_video_003 test_video_004,485.7
+"why does range(1,5) print only four times",keyword,hybrid + rerank,1,test_video_002 test_video_003 test_video_004,483.7
+"why does range(1,5) print only four times",keyword,hybrid20 + rerank,1,test_video_002 test_video_003 test_video_004,494.7
+Line 9 is not indented,keyword,vector,1,test_video_004 test_video_003 test_video_001,35.0
+Line 9 is not indented,keyword,bm25,1,test_video_004 test_video_001 test_video_003,33.0
+Line 9 is not indented,keyword,"hybrid (all, w=1)",1,test_video_004 test_video_003 test_video_001,34.0
+Line 9 is not indented,keyword,"hybrid (top10, w=1)",1,test_video_004 test_video_003 test_video_001,36.0
+Line 9 is not indented,keyword,"hybrid (top10, w=0.5)",1,test_video_004 test_video_003 test_video_001,34.0
+Line 9 is not indented,keyword,"hybrid (top10, w=0.3)",1,test_video_004 test_video_003 test_video_001,36.0
+Line 9 is not indented,keyword,vector + rerank,1,test_video_004 test_video_001 test_video_003,465.7
+Line 9 is not indented,keyword,hybrid + rerank,1,test_video_004 test_video_001 test_video_003,469.7
+Line 9 is not indented,keyword,hybrid20 + rerank,1,test_video_004 test_video_001 test_video_003,464.7
+what does print(counter) output,keyword,vector,3,test_video_003 test_video_002 test_video_004,36.0
+what does print(counter) output,keyword,bm25,1,test_video_005 test_video_004 test_video_003,28.0
+what does print(counter) output,keyword,"hybrid (all, w=1)",2,test_video_003 test_video_005 test_video_004,36.0
+what does print(counter) output,keyword,"hybrid (top10, w=1)",2,test_video_003 test_video_005 test_video_004,31.0
+what does print(counter) output,keyword,"hybrid (top10, w=0.5)",3,test_video_003 test_video_002 test_video_004,45.0
+what does print(counter) output,keyword,"hybrid (top10, w=0.3)",3,test_video_003 test_video_002 test_video_004,35.0
+what does print(counter) output,keyword,vector + rerank,1,test_video_004 test_video_005 test_video_001,471.7
+what does print(counter) output,keyword,hybrid + rerank,1,test_video_004 test_video_005 test_video_001,468.7
+what does print(counter) output,keyword,hybrid20 + rerank,1,test_video_004 test_video_005 test_video_001,467.7
+which keyword starts the for loop on line five,keyword,vector,1,test_video_001 test_video_003 test_video_002,48.0
+which keyword starts the for loop on line five,keyword,bm25,1,test_video_001 test_video_002 test_video_003,48.0
+which keyword starts the for loop on line five,keyword,"hybrid (all, w=1)",1,test_video_001 test_video_003 test_video_002,43.0
+which keyword starts the for loop on line five,keyword,"hybrid (top10, w=1)",1,test_video_001 test_video_003 test_video_002,45.0
+which keyword starts the for loop on line five,keyword,"hybrid (top10, w=0.5)",1,test_video_001 test_video_003 test_video_002,45.0
+which keyword starts the for loop on line five,keyword,"hybrid (top10, w=0.3)",1,test_video_001 test_video_003 test_video_002,44.0
+which keyword starts the for loop on line five,keyword,vector + rerank,1,test_video_001 test_video_004 test_video_002,478.7
+which keyword starts the for loop on line five,keyword,hybrid + rerank,1,test_video_001 test_video_004 test_video_002,484.7
+which keyword starts the for loop on line five,keyword,hybrid20 + rerank,1,test_video_001 test_video_004 test_video_002,482.7
+101computing tutorial introduction,keyword,vector,1,test_video_001 test_video_003 test_video_005,31.0
+101computing tutorial introduction,keyword,bm25,3,test_video_003 test_video_002 test_video_001,33.0
+101computing tutorial introduction,keyword,"hybrid (all, w=1)",2,test_video_003 test_video_001 test_video_002,30.0
+101computing tutorial introduction,keyword,"hybrid (top10, w=1)",2,test_video_003 test_video_001 test_video_002,36.0
+101computing tutorial introduction,keyword,"hybrid (top10, w=0.5)",1,test_video_001 test_video_003 test_video_005,29.0
+101computing tutorial introduction,keyword,"hybrid (top10, w=0.3)",1,test_video_001 test_video_003 test_video_005,33.6
+101computing tutorial introduction,keyword,vector + rerank,1,test_video_001 test_video_003 test_video_002,468.7
+101computing tutorial introduction,keyword,hybrid + rerank,1,test_video_001 test_video_003 test_video_002,471.7
+101computing tutorial introduction,keyword,hybrid20 + rerank,1,test_video_001 test_video_003 test_video_002,472.7
+increment,keyword,vector,1,test_video_005 test_video_004 test_video_003,37.0
+increment,keyword,bm25,1,test_video_005 test_video_004,32.0
+increment,keyword,"hybrid (all, w=1)",1,test_video_005 test_video_004 test_video_003,36.0
+increment,keyword,"hybrid (top10, w=1)",1,test_video_005 test_video_004 test_video_003,41.0
+increment,keyword,"hybrid (top10, w=0.5)",1,test_video_005 test_video_004 test_video_003,35.0
+increment,keyword,"hybrid (top10, w=0.3)",1,test_video_005 test_video_004 test_video_003,36.0
+increment,keyword,vector + rerank,1,test_video_005 test_video_004 test_video_001,470.7
+increment,keyword,hybrid + rerank,1,test_video_005 test_video_004 test_video_001,463.7
+increment,keyword,hybrid20 + rerank,1,test_video_005 test_video_004 test_video_001,464.7
+five take away one,keyword,vector,1,test_video_003 test_video_002 test_video_005,33.0
+five take away one,keyword,bm25,1,test_video_002 test_video_003 test_video_005,31.0
+five take away one,keyword,"hybrid (all, w=1)",1,test_video_003 test_video_002 test_video_005,35.0
+five take away one,keyword,"hybrid (top10, w=1)",1,test_video_003 test_video_002 test_video_005,32.0
+five take away one,keyword,"hybrid (top10, w=0.5)",1,test_video_003 test_video_002 test_video_005,33.0
+five take away one,keyword,"hybrid (top10, w=0.3)",1,test_video_003 test_video_002 test_video_005,33.0
+five take away one,keyword,vector + rerank,1,test_video_003 test_video_002 test_video_005,461.7
+five take away one,keyword,hybrid + rerank,1,test_video_003 test_video_002 test_video_005,467.7
+five take away one,keyword,hybrid20 + rerank,1,test_video_003 test_video_002 test_video_005,472.6
+how can I make the computer repeat some instructions many times,paraphrase,vector,1,test_video_001 test_video_003 test_video_002,38.0
+how can I make the computer repeat some instructions many times,paraphrase,bm25,1,test_video_001 test_video_002 test_video_003,36.0
+how can I make the computer repeat some instructions many times,paraphrase,"hybrid (all, w=1)",1,test_video_001 test_video_003 test_video_002,41.0
+how can I make the computer repeat some instructions many times,paraphrase,"hybrid (top10, w=1)",1,test_video_001 test_video_003 test_video_002,33.0
+how can I make the computer repeat some instructions many times,paraphrase,"hybrid (top10, w=0.5)",1,test_video_001 test_video_003 test_video_002,40.0
+how can I make the computer repeat some instructions many times,paraphrase,"hybrid (top10, w=0.3)",1,test_video_001 test_video_003 test_video_002,34.0
+how can I make the computer repeat some instructions many times,paraphrase,vector + rerank,1,test_video_001 test_video_003 test_video_002,470.7
+how can I make the computer repeat some instructions many times,paraphrase,hybrid + rerank,1,test_video_001 test_video_003 test_video_002,467.7
+how can I make the computer repeat some instructions many times,paraphrase,hybrid20 + rerank,1,test_video_001 test_video_003 test_video_002,471.7
+why did the message appear fewer times than I expected,paraphrase,vector,1,test_video_002 test_video_004 test_video_005,35.0
+why did the message appear fewer times than I expected,paraphrase,bm25,2,test_video_001 test_video_002 test_video_003,35.0
+why did the message appear fewer times than I expected,paraphrase,"hybrid (all, w=1)",1,test_video_002 test_video_001 test_video_003,40.0
+why did the message appear fewer times than I expected,paraphrase,"hybrid (top10, w=1)",1,test_video_002 test_video_001 test_video_003,39.0
+why did the message appear fewer times than I expected,paraphrase,"hybrid (top10, w=0.5)",1,test_video_002 test_video_001 test_video_003,35.0
+why did the message appear fewer times than I expected,paraphrase,"hybrid (top10, w=0.3)",1,test_video_002 test_video_001 test_video_003,36.0
+why did the message appear fewer times than I expected,paraphrase,vector + rerank,1,test_video_002 test_video_004 test_video_001,467.7
+why did the message appear fewer times than I expected,paraphrase,hybrid + rerank,1,test_video_002 test_video_004 test_video_001,473.7
+why did the message appear fewer times than I expected,paraphrase,hybrid20 + rerank,1,test_video_002 test_video_004 test_video_001,469.7
+what happens to a statement that is not shifted to the right,paraphrase,vector,1,test_video_004 test_video_005 test_video_003,49.0
+what happens to a statement that is not shifted to the right,paraphrase,bm25,1,test_video_004 test_video_003 test_video_001,42.0
+what happens to a statement that is not shifted to the right,paraphrase,"hybrid (all, w=1)",1,test_video_004 test_video_003 test_video_001,44.0
+what happens to a statement that is not shifted to the right,paraphrase,"hybrid (top10, w=1)",1,test_video_004 test_video_003 test_video_001,47.0
+what happens to a statement that is not shifted to the right,paraphrase,"hybrid (top10, w=0.5)",1,test_video_004 test_video_003 test_video_001,47.0
+what happens to a statement that is not shifted to the right,paraphrase,"hybrid (top10, w=0.3)",1,test_video_004 test_video_003 test_video_001,43.0
+what happens to a statement that is not shifted to the right,paraphrase,vector + rerank,2,test_video_003 test_video_004 test_video_001,492.7
+what happens to a statement that is not shifted to the right,paraphrase,hybrid + rerank,2,test_video_003 test_video_004 test_video_001,499.7
+what happens to a statement that is not shifted to the right,paraphrase,hybrid20 + rerank,2,test_video_003 test_video_004 test_video_001,493.7
+does renaming the loop variable change the result,paraphrase,vector,1,test_video_005 test_video_002 test_video_003,50.0
+does renaming the loop variable change the result,paraphrase,bm25,3,test_video_003 test_video_001 test_video_005,40.0
+does renaming the loop variable change the result,paraphrase,"hybrid (all, w=1)",1,test_video_005 test_video_003 test_video_001,47.0
+does renaming the loop variable change the result,paraphrase,"hybrid (top10, w=1)",1,test_video_005 test_video_003 test_video_001,44.0
+does renaming the loop variable change the result,paraphrase,"hybrid (top10, w=0.5)",1,test_video_005 test_video_003 test_video_001,47.0
+does renaming the loop variable change the result,paraphrase,"hybrid (top10, w=0.3)",1,test_video_005 test_video_003 test_video_001,42.0
+does renaming the loop variable change the result,paraphrase,vector + rerank,2,test_video_001 test_video_005 test_video_004,487.3
+does renaming the loop variable change the result,paraphrase,hybrid + rerank,2,test_video_001 test_video_005 test_video_004,484.7
+does renaming the loop variable change the result,paraphrase,hybrid20 + rerank,2,test_video_001 test_video_005 test_video_004,477.7
+how do I put several statements inside the loop body,paraphrase,vector,1,test_video_003 test_video_004 test_video_005,38.0
+how do I put several statements inside the loop body,paraphrase,bm25,1,test_video_003 test_video_001 test_video_005,30.0
+how do I put several statements inside the loop body,paraphrase,"hybrid (all, w=1)",1,test_video_003 test_video_004 test_video_001,32.0
+how do I put several statements inside the loop body,paraphrase,"hybrid (top10, w=1)",1,test_video_003 test_video_004 test_video_001,37.0
+how do I put several statements inside the loop body,paraphrase,"hybrid (top10, w=0.5)",1,test_video_003 test_video_004 test_video_005,38.0
+how do I put several statements inside the loop body,paraphrase,"hybrid (top10, w=0.3)",1,test_video_003 test_video_004 test_video_005,36.0
+how do I put several statements inside the loop body,paraphrase,vector + rerank,1,test_video_003 test_video_005 test_video_001,471.7
+how do I put several statements inside the loop body,paraphrase,hybrid + rerank,1,test_video_003 test_video_005 test_video_001,471.7
+how do I put several statements inside the loop body,paraphrase,hybrid20 + rerank,1,test_video_003 test_video_005 test_video_001,477.7
+what is displayed when the program is executed,paraphrase,vector,2,test_video_004 test_video_001 test_video_003,51.0
+what is displayed when the program is executed,paraphrase,bm25,1,test_video_001,41.0
+what is displayed when the program is executed,paraphrase,"hybrid (all, w=1)",1,test_video_001 test_video_004 test_video_003,45.0
+what is displayed when the program is executed,paraphrase,"hybrid (top10, w=1)",1,test_video_001 test_video_004 test_video_003,44.0
+what is displayed when the program is executed,paraphrase,"hybrid (top10, w=0.5)",1,test_video_001 test_video_004 test_video_003,42.0
+what is displayed when the program is executed,paraphrase,"hybrid (top10, w=0.3)",1,test_video_001 test_video_004 test_video_003,46.0
+what is displayed when the program is executed,paraphrase,vector + rerank,1,test_video_001 test_video_002 test_video_005,482.7
+what is displayed when the program is executed,paraphrase,hybrid + rerank,1,test_video_001 test_video_002 test_video_005,478.7
+what is displayed when the program is executed,paraphrase,hybrid20 + rerank,1,test_video_001 test_video_002 test_video_005,480.7
+how does the loop variable change on each pass,paraphrase,vector,1,test_video_005 test_video_003 test_video_001,49.0
+how does the loop variable change on each pass,paraphrase,bm25,3,test_video_003 test_video_001 test_video_005,46.0
+how does the loop variable change on each pass,paraphrase,"hybrid (all, w=1)",2,test_video_003 test_video_005 test_video_001,46.0
+how does the loop variable change on each pass,paraphrase,"hybrid (top10, w=1)",2,test_video_003 test_video_005 test_video_001,51.0
+how does the loop variable change on each pass,paraphrase,"hybrid (top10, w=0.5)",1,test_video_005 test_video_003 test_video_001,48.0
+how does the loop variable change on each pass,paraphrase,"hybrid (top10, w=0.3)",1,test_video_005 test_video_003 test_video_001,45.0
+how does the loop variable change on each pass,paraphrase,vector + rerank,1,test_video_005 test_video_004 test_video_001,469.7
+how does the loop variable change on each pass,paraphrase,hybrid + rerank,1,test_video_005 test_video_004 test_video_001,479.7
+how does the loop variable change on each pass,paraphrase,hybrid20 + rerank,1,test_video_005 test_video_004 test_video_001,490.7
+how does the lesson finish,paraphrase,vector,2,test_video_004 test_video_005 test_video_002,34.0
+how does the lesson finish,paraphrase,bm25,,,28.0
+how does the lesson finish,paraphrase,"hybrid (all, w=1)",2,test_video_004 test_video_005 test_video_002,31.0
+how does the lesson finish,paraphrase,"hybrid (top10, w=1)",2,test_video_004 test_video_005 test_video_002,32.0
+how does the lesson finish,paraphrase,"hybrid (top10, w=0.5)",2,test_video_004 test_video_005 test_video_002,37.0
+how does the lesson finish,paraphrase,"hybrid (top10, w=0.3)",2,test_video_004 test_video_005 test_video_002,34.0
+how does the lesson finish,paraphrase,vector + rerank,1,test_video_005 test_video_001 test_video_004,465.7
+how does the lesson finish,paraphrase,hybrid + rerank,1,test_video_005 test_video_001 test_video_004,470.7
+how does the lesson finish,paraphrase,hybrid20 + rerank,1,test_video_005 test_video_001 test_video_004,475.7
+for 迴圈的用途是什麼,chinese,vector,1,test_video_001 test_video_005 test_video_003,28.0
+for 迴圈的用途是什麼,chinese,bm25,,,31.0
+for 迴圈的用途是什麼,chinese,"hybrid (all, w=1)",1,test_video_001 test_video_005 test_video_003,34.0
+for 迴圈的用途是什麼,chinese,"hybrid (top10, w=1)",1,test_video_001 test_video_005 test_video_003,28.0
+for 迴圈的用途是什麼,chinese,"hybrid (top10, w=0.5)",1,test_video_001 test_video_005 test_video_003,35.0
+for 迴圈的用途是什麼,chinese,"hybrid (top10, w=0.3)",1,test_video_001 test_video_005 test_video_003,32.0
+for 迴圈的用途是什麼,chinese,vector + rerank,1,test_video_001 test_video_003 test_video_005,466.7
+for 迴圈的用途是什麼,chinese,hybrid + rerank,1,test_video_001 test_video_003 test_video_005,470.7
+for 迴圈的用途是什麼,chinese,hybrid20 + rerank,1,test_video_001 test_video_003 test_video_005,466.7
+為什麼只印出四次而不是五次,chinese,vector,1,test_video_002 test_video_004 test_video_003,51.0
+為什麼只印出四次而不是五次,chinese,bm25,,,46.0
+為什麼只印出四次而不是五次,chinese,"hybrid (all, w=1)",1,test_video_002 test_video_004 test_video_003,42.0
+為什麼只印出四次而不是五次,chinese,"hybrid (top10, w=1)",1,test_video_002 test_video_004 test_video_003,48.0
+為什麼只印出四次而不是五次,chinese,"hybrid (top10, w=0.5)",1,test_video_002 test_video_004 test_video_003,47.0
+為什麼只印出四次而不是五次,chinese,"hybrid (top10, w=0.3)",1,test_video_002 test_video_004 test_video_003,41.0
+為什麼只印出四次而不是五次,chinese,vector + rerank,1,test_video_002 test_video_003 test_video_004,482.3
+為什麼只印出四次而不是五次,chinese,hybrid + rerank,1,test_video_002 test_video_003 test_video_004,484.7
+為什麼只印出四次而不是五次,chinese,hybrid20 + rerank,1,test_video_002 test_video_003 test_video_004,480.7
+沒有縮排的程式碼會執行幾次,chinese,vector,2,test_video_003 test_video_004 test_video_001,38.0
+沒有縮排的程式碼會執行幾次,chinese,bm25,,,36.0
+沒有縮排的程式碼會執行幾次,chinese,"hybrid (all, w=1)",2,test_video_003 test_video_004 test_video_001,32.0
+沒有縮排的程式碼會執行幾次,chinese,"hybrid (top10, w=1)",2,test_video_003 test_video_004 test_video_001,36.0
+沒有縮排的程式碼會執行幾次,chinese,"hybrid (top10, w=0.5)",2,test_video_003 test_video_004 test_video_001,35.0
+沒有縮排的程式碼會執行幾次,chinese,"hybrid (top10, w=0.3)",2,test_video_003 test_video_004 test_video_001,34.0
+沒有縮排的程式碼會執行幾次,chinese,vector + rerank,2,test_video_003 test_video_004 test_video_001,477.7
+沒有縮排的程式碼會執行幾次,chinese,hybrid + rerank,2,test_video_003 test_video_004 test_video_001,470.7
+沒有縮排的程式碼會執行幾次,chinese,hybrid20 + rerank,2,test_video_003 test_video_004 test_video_001,476.7
+變數名稱 i 代表什麼意思,chinese,vector,1,test_video_005 test_video_003 test_video_001,44.0
+變數名稱 i 代表什麼意思,chinese,bm25,,,41.0
+變數名稱 i 代表什麼意思,chinese,"hybrid (all, w=1)",1,test_video_005 test_video_003 test_video_001,46.0
+變數名稱 i 代表什麼意思,chinese,"hybrid (top10, w=1)",1,test_video_005 test_video_003 test_video_001,46.0
+變數名稱 i 代表什麼意思,chinese,"hybrid (top10, w=0.5)",1,test_video_005 test_video_003 test_video_001,42.0
+變數名稱 i 代表什麼意思,chinese,"hybrid (top10, w=0.3)",1,test_video_005 test_video_003 test_video_001,47.0
+變數名稱 i 代表什麼意思,chinese,vector + rerank,1,test_video_005 test_video_001 test_video_004,488.7
+變數名稱 i 代表什麼意思,chinese,hybrid + rerank,1,test_video_005 test_video_001 test_video_004,478.7
+變數名稱 i 代表什麼意思,chinese,hybrid20 + rerank,1,test_video_005 test_video_001 test_video_004,482.7

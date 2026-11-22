@@ -1,0 +1,175 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading BGE-M3 on cuda...
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 16303.38it/s]
+30 questions, 95 chunks in database
+
+# 檢索方法比較（vector / bm25 / hybrid）
+
+- 資料庫：output/chroma_db　題目檔：eval_questions_lecture2.json
+- all = 每種方法排完所有片段再合併；top10 = 各取前 10 名再合併（系統實際設定）；w = bm25_weight
+- 題目數：30　片段數：95　向量模型：BAAI/bge-m3（cuda）
+- RRF：k=60、vector_weight=1.0
+
+## ALL（30 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 73% | 90% | 0.819 | 41 |
+| bm25 | 37% | 60% | 0.505 | 29 |
+| hybrid (all, w=1) | 57% | 87% | 0.706 | 32 |
+| hybrid (top10, w=1) | 57% | 83% | 0.711 | 30 |
+| hybrid (top10, w=0.5) | 57% | 80% | 0.700 | 29 |
+| hybrid (top10, w=0.3) | 57% | 80% | 0.711 | 29 |
+
+## keyword（12 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 83% | 92% | 0.896 | 51 |
+| bm25 | 58% | 83% | 0.715 | 27 |
+| hybrid (all, w=1) | 75% | 92% | 0.822 | 30 |
+| hybrid (top10, w=1) | 75% | 92% | 0.822 | 29 |
+| hybrid (top10, w=0.5) | 75% | 83% | 0.815 | 28 |
+| hybrid (top10, w=0.3) | 75% | 83% | 0.829 | 28 |
+
+## paraphrase（12 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 58% | 83% | 0.708 | 34 |
+| bm25 | 17% | 50% | 0.380 | 32 |
+| hybrid (all, w=1) | 33% | 83% | 0.565 | 34 |
+| hybrid (top10, w=1) | 33% | 75% | 0.576 | 32 |
+| hybrid (top10, w=0.5) | 33% | 75% | 0.556 | 32 |
+| hybrid (top10, w=0.3) | 33% | 75% | 0.570 | 31 |
+
+## chinese（6 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 83% | 100% | 0.889 | 32 |
+| bm25 | 33% | 33% | 0.333 | 27 |
+| hybrid (all, w=1) | 67% | 83% | 0.756 | 32 |
+| hybrid (top10, w=1) | 67% | 83% | 0.756 | 30 |
+| hybrid (top10, w=0.5) | 67% | 83% | 0.756 | 28 |
+| hybrid (top10, w=0.3) | 67% | 83% | 0.756 | 29 |
+
+## 每題正確片段的名次（越小越好，- = 沒找到）
+
+| 類型 | 問題 | vector | bm25 | hybrid (all, w=1) | hybrid (top10, w=1) | hybrid (top10, w=0.5) | hybrid (top10, w=0.3) |
+|---|---|---|---|---|---|---|---|
+| keyword | what does elif stand for | 1 | - | 5 | 5 | 5 | 5 |
+| keyword | Control-C stops an infinite loop | 2 | 4 | 3 | 3 | 3 | 2 |
+| keyword | range(start, stop, step) default values | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | SyntaxError when using one equal sign | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | Legend of Zelda lost woods | 4 | 2 | 3 | 3 | 4 | 4 |
+| keyword | break statement | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | concatenation operator plus does not add spaces | 1 | 2 | 1 | 1 | 1 | 1 |
+| keyword | compare strings lexicographically | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | free food mailing list | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | mysum is 7 plus 8 plus 9 | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | star operator repeats a string | 1 | 3 | 1 | 1 | 1 | 1 |
+| keyword | input function prompt | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | how do I glue two pieces of text together | 12 | 3 | 4 | 6 | 11 | 11 |
+| paraphrase | what happens if the loop condition never becomes false | 4 | 4 | 2 | 2 | 3 | 3 |
+| paraphrase | how can a program choose between several alternatives | 3 | 1 | 2 | 2 | 2 | 2 |
+| paraphrase | what kind of data does whatever the user types become | 1 | 2 | 1 | 1 | 1 | 1 |
+| paraphrase | how do I turn the user's text into a number | 3 | 3 | 3 | 3 | 3 | 2 |
+| paraphrase | can I check whether a word is bigger than a number | 1 | 4 | 1 | 1 | 1 | 1 |
+| paraphrase | how do I leave a loop early | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | when should I repeat a fixed number of times versus until something happens | 1 | 18 | 3 | 2 | 2 | 2 |
+| paraphrase | how are groups of statements marked in Python | 1 | 11 | 3 | 4 | 4 | 4 |
+| paraphrase | difference between giving a variable a value and checking if two values are the same | 1 | 4 | 1 | 1 | 1 | 1 |
+| paraphrase | a strategy to get through a maze by keeping one hand on the wall | 2 | 2 | 2 | 2 | 2 | 2 |
+| paraphrase | can the counting function use decimal numbers | 1 | - | 33 | 6 | 6 | 6 |
+| chinese | elif 是什麼意思 | 1 | - | 5 | 5 | 5 | 5 |
+| chinese | 無窮迴圈要怎麼停止 | 3 | - | 3 | 3 | 3 | 3 |
+| chinese | 字串可以和數字比較大小嗎 | 1 | - | 1 | 1 | 1 | 1 |
+| chinese | for 迴圈和 while 迴圈有什麼差別 | 1 | 1 | 1 | 1 | 1 | 1 |
+| chinese | break 會跳出哪一個迴圈 | 1 | 1 | 1 | 1 | 1 | 1 |
+| chinese | 怎麼讓使用者輸入資料 | 1 | - | 1 | 1 | 1 | 1 |
+
+Saved: output\eval_result.md, output\eval_detail.csv
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading BGE-M3 on cuda...
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 15036.24it/s]
+20 questions, 11 chunks in database
+
+# 檢索方法比較（vector / bm25 / hybrid）
+
+- 資料庫：output_test_video/chroma_db　題目檔：eval_questions.json
+- all = 每種方法排完所有片段再合併；top10 = 各取前 10 名再合併（系統實際設定）；w = bm25_weight
+- 題目數：20　片段數：11　向量模型：BAAI/bge-m3（cuda）
+- RRF：k=60、vector_weight=1.0
+
+## ALL（20 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 75% | 85% | 0.818 | 42 |
+| bm25 | 40% | 60% | 0.515 | 27 |
+| hybrid (all, w=1) | 70% | 85% | 0.802 | 28 |
+| hybrid (top10, w=1) | 70% | 85% | 0.802 | 28 |
+| hybrid (top10, w=0.5) | 70% | 85% | 0.803 | 28 |
+| hybrid (top10, w=0.3) | 75% | 90% | 0.831 | 28 |
+
+## keyword（8 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 75% | 88% | 0.823 | 63 |
+| bm25 | 62% | 88% | 0.768 | 27 |
+| hybrid (all, w=1) | 75% | 88% | 0.844 | 28 |
+| hybrid (top10, w=1) | 75% | 88% | 0.844 | 27 |
+| hybrid (top10, w=0.5) | 75% | 88% | 0.844 | 28 |
+| hybrid (top10, w=0.3) | 75% | 100% | 0.854 | 27 |
+
+## paraphrase（8 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 62% | 75% | 0.721 | 28 |
+| bm25 | 38% | 62% | 0.521 | 27 |
+| hybrid (all, w=1) | 50% | 75% | 0.661 | 28 |
+| hybrid (top10, w=1) | 50% | 75% | 0.661 | 28 |
+| hybrid (top10, w=0.5) | 50% | 75% | 0.664 | 29 |
+| hybrid (top10, w=0.3) | 62% | 75% | 0.723 | 29 |
+
+## chinese（4 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 100% | 100% | 1.000 | 28 |
+| bm25 | 0% | 0% | 0.000 | 26 |
+| hybrid (all, w=1) | 100% | 100% | 1.000 | 28 |
+| hybrid (top10, w=1) | 100% | 100% | 1.000 | 28 |
+| hybrid (top10, w=0.5) | 100% | 100% | 1.000 | 28 |
+| hybrid (top10, w=0.3) | 100% | 100% | 1.000 | 28 |
+
+## 每題正確片段的名次（越小越好，- = 沒找到）
+
+| 類型 | 問題 | vector | bm25 | hybrid (all, w=1) | hybrid (top10, w=1) | hybrid (top10, w=0.5) | hybrid (top10, w=0.3) |
+|---|---|---|---|---|---|---|---|
+| keyword | what does i stand for in for i in range | 1 | 2 | 1 | 1 | 1 | 1 |
+| keyword | why does range(1,5) print only four times | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | Line 9 is not indented | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | what does print(counter) output | 1 | 2 | 1 | 1 | 1 | 1 |
+| keyword | which keyword starts the for loop on line five | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | 101computing tutorial introduction | 3 | 7 | 4 | 4 | 4 | 3 |
+| keyword | increment | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | five take away one | 4 | 1 | 2 | 2 | 2 | 2 |
+| paraphrase | how can I make the computer repeat some instructions many times | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | why did the message appear fewer times than I expected | 1 | 2 | 1 | 1 | 1 | 1 |
+| paraphrase | what happens to a statement that is not shifted to the right | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | does renaming the loop variable change the result | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | how do I put several statements inside the loop body | 2 | 2 | 2 | 2 | 2 | 1 |
+| paraphrase | what is displayed when the program is executed | 1 | - | 2 | 2 | 2 | 2 |
+| paraphrase | how does the loop variable change on each pass | 8 | 6 | 7 | 7 | 6 | 7 |
+| paraphrase | how does the lesson finish | 7 | - | 7 | 7 | 7 | 7 |
+| chinese | for 迴圈的用途是什麼 | 1 | - | 1 | 1 | 1 | 1 |
+| chinese | 為什麼只印出四次而不是五次 | 1 | - | 1 | 1 | 1 | 1 |
+| chinese | 沒有縮排的程式碼會執行幾次 | 1 | - | 1 | 1 | 1 | 1 |
+| chinese | 變數名稱 i 代表什麼意思 | 1 | - | 1 | 1 | 1 | 1 |
+
+Saved: output_test_video\eval_result.md, output_test_video\eval_detail.csv
+EVAL_FINISHED 

@@ -1,0 +1,16 @@
+# 主環境（venv，建立時加 --system-site-packages）
+# 先裝 GPU 版 PyTorch（GTX 10xx 用 CUDA 12.6 版）：
+#   pip install torch==2.7.1 --index-url https://download.pytorch.org/whl/cu126
+faster-whisper
+sentence-transformers
+chromadb
+google-genai
+psutil
+Pillow
+numpy
+opencc-python-reimplemented   # 選用：關鍵字搜尋時繁簡視為同一個字
+
+# OCR 另外裝在系統 Python（py -3.11），避免和 PyTorch 的 CUDA DLL 衝突：
+#   py -3.11 -m pip install paddlepaddle==3.2.2 paddleocr==3.7.0
+# 注意：paddlepaddle 3.3.x 開啟 MKL-DNN 會出錯，請用 3.2.2
+# 另需 FFmpeg：winget install Gyan.FFmpeg

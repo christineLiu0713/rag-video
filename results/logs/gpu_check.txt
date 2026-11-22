@@ -1,0 +1,34 @@
+GPU check  2026-11-22 20:31
+Python 3.11.9 (D:\7\413410654\專題\rag-video-main\venv\Scripts\python.exe)
+OS     Windows-10-10.0.19045-SP0
+
+1. 顯示卡與驅動 (nvidia-smi)
+  NVIDIA GeForce GTX 1060 6GB, 581.57, 6144 MiB, 1402 MiB
+  -> [OK ] NVIDIA GeForce GTX 1060 6GB, 581.57, 6144 MiB, 1402 MiB
+
+2. PyTorch (BGE-M3 向量、重新排序)
+  torch 2.7.1+cu126  CUDA build: 12.6
+  device 0: NVIDIA GeForce GTX 1060 6GB  compute capability 6.1  6.0 GB
+  -> [OK ] 可以用 GPU（NVIDIA GeForce GTX 1060 6GB, 6.0 GB）
+
+3. 實際在 GPU 上計算（4096x4096 矩陣乘法）
+  CPU 806 ms   GPU 41 ms   (GPU 用了 136 MB)
+  -> [OK ] GPU 計算正常，比 CPU 快 19.6 倍
+
+4. faster-whisper / CTranslate2 (語音辨識)
+  ctranslate2 4.8.4  CUDA devices: 1
+  supported on GPU: float32, int8, int8_float32
+  -> [OK ] 語音辨識會用 GPU
+
+5. PaddleOCR (系統 Python，設計上用 CPU + MKL-DNN)
+  paddlepaddle 3.2.2  GPU build: False
+  -> [OK ] paddlepaddle 3.2.2，OCR 用 CPU（正常）
+
+========== 結果 ==========
+[OK ] 顯示卡: NVIDIA GeForce GTX 1060 6GB, 581.57, 6144 MiB, 1402 MiB
+[OK ] PyTorch GPU: 可以用 GPU（NVIDIA GeForce GTX 1060 6GB, 6.0 GB）
+[OK ] GPU 實算: GPU 計算正常，比 CPU 快 19.6 倍
+[OK ] Whisper GPU: 語音辨識會用 GPU
+[OK ] PaddleOCR: paddlepaddle 3.2.2，OCR 用 CPU（正常）
+
+有在用 GPU：語音辨識、向量化都會用顯示卡。

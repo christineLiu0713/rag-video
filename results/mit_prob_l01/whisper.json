@@ -1,0 +1,5132 @@
+[
+  {
+    "start": 0.7,
+    "end": 4.2,
+    "text": "Welcome to the first lecture of this class."
+  },
+  {
+    "start": 4.2,
+    "end": 6.9,
+    "text": "You may be used to having a first lecture devoted"
+  },
+  {
+    "start": 6.9,
+    "end": 9.8,
+    "text": "to general comments and motivating examples."
+  },
+  {
+    "start": 9.8,
+    "end": 11.1,
+    "text": "This one will be different."
+  },
+  {
+    "start": 11.1,
+    "end": 14.6,
+    "text": "We will dive into the heart of the subject right away."
+  },
+  {
+    "start": 14.6,
+    "end": 17.1,
+    "text": "In fact, today, we will accomplish a lot."
+  },
+  {
+    "start": 17.1,
+    "end": 18.8,
+    "text": "By the end of this lecture, you will"
+  },
+  {
+    "start": 18.8,
+    "end": 22.9,
+    "text": "know about all of the elements of a probabilistic model."
+  },
+  {
+    "start": 22.8,
+    "end": 26.0,
+    "text": "A probabilistic model is a quantitative description"
+  },
+  {
+    "start": 26.0,
+    "end": 29.2,
+    "text": "of a situation, a phenomenon, or an experiment"
+  },
+  {
+    "start": 29.2,
+    "end": 31.5,
+    "text": "whose outcome is uncertain."
+  },
+  {
+    "start": 31.5,
+    "end": 34.9,
+    "text": "Putting together such a model involves two key steps."
+  },
+  {
+    "start": 34.9,
+    "end": 38.0,
+    "text": "First, we need to describe the possible outcomes"
+  },
+  {
+    "start": 38.0,
+    "end": 39.3,
+    "text": "of the experiment."
+  },
+  {
+    "start": 39.3,
+    "end": 43.0,
+    "text": "This is done by specifying a so-called sample space."
+  },
+  {
+    "start": 43.0,
+    "end": 45.5,
+    "text": "And then we specify a probability law"
+  },
+  {
+    "start": 45.5,
+    "end": 48.9,
+    "text": "which assigns probabilities to outcomes or to collections"
+  },
+  {
+    "start": 48.9,
+    "end": 49.7,
+    "text": "of outcomes."
+  },
+  {
+    "start": 50.1,
+    "end": 52.7,
+    "text": "The probability law tells us, for example,"
+  },
+  {
+    "start": 52.7,
+    "end": 57.3,
+    "text": "whether one outcome is much more likely than some other outcome."
+  },
+  {
+    "start": 57.3,
+    "end": 60.5,
+    "text": "Probabilities have to satisfy certain basic properties"
+  },
+  {
+    "start": 60.5,
+    "end": 62.1,
+    "text": "in order to be meaningful."
+  },
+  {
+    "start": 62.1,
+    "end": 65.1,
+    "text": "These are the axioms of probability theory."
+  },
+  {
+    "start": 65.1,
+    "end": 68.4,
+    "text": "For example, probabilities cannot be negative."
+  },
+  {
+    "start": 68.4,
+    "end": 71.4,
+    "text": "Interestingly, there will be very few axioms,"
+  },
+  {
+    "start": 71.4,
+    "end": 73.6,
+    "text": "but they are powerful, and we will"
+  },
+  {
+    "start": 73.6,
+    "end": 75.8,
+    "text": "see that they have lots of consequences."
+  },
+  {
+    "start": 76.3,
+    "end": 79.5,
+    "text": "we will see that they imply many other properties that"
+  },
+  {
+    "start": 79.5,
+    "end": 82.5,
+    "text": "were not part of the axioms."
+  },
+  {
+    "start": 82.5,
+    "end": 85.6,
+    "text": "We will then go through a couple of very simple examples"
+  },
+  {
+    "start": 85.6,
+    "end": 88.7,
+    "text": "involving models with either discrete or continuous"
+  },
+  {
+    "start": 88.7,
+    "end": 89.8,
+    "text": "outcomes."
+  },
+  {
+    "start": 89.8,
+    "end": 92.2,
+    "text": "As you will be seeing many times in this class,"
+  },
+  {
+    "start": 92.2,
+    "end": 95.1,
+    "text": "discrete models are conceptually much easier."
+  },
+  {
+    "start": 95.1,
+    "end": 99.2,
+    "text": "Continuous models involve some more sophisticated concepts,"
+  },
+  {
+    "start": 99.2,
+    "end": 103.3,
+    "text": "and we will point out some of the subtle issues that arise."
+  },
+  {
+    "start": 103.3,
+    "end": 105.3,
+    "text": "And finally, we will talk a little bit"
+  },
+  {
+    "start": 106.6,
+    "end": 110.5,
+    "text": "about the role of probability theory and its relation with"
+  },
+  {
+    "start": 110.5,
+    "end": 114.9,
+    "text": "the real world."
+  },
+  {
+    "start": 114.9,
+    "end": 118.4,
+    "text": "Putting together a probabilistic model, that is, a"
+  },
+  {
+    "start": 118.4,
+    "end": 121.9,
+    "text": "model of a random phenomenon or a random experiment,"
+  },
+  {
+    "start": 121.9,
+    "end": 123.9,
+    "text": "involves two steps."
+  },
+  {
+    "start": 123.9,
+    "end": 127.7,
+    "text": "First step, we describe the possible outcomes of the"
+  },
+  {
+    "start": 127.7,
+    "end": 130.6,
+    "text": "phenomenon or experiment of interest."
+  },
+  {
+    "start": 130.6,
+    "end": 134.6,
+    "text": "Second step, we describe our beliefs about the likelihood"
+  },
+  {
+    "start": 134.6,
+    "end": 137.4,
+    "text": "of the different possible outcomes by specifying a"
+  },
+  {
+    "start": 139.1,
+    "end": 143.3,
+    "text": "Here we start by just talking about the first step, namely"
+  },
+  {
+    "start": 143.3,
+    "end": 146.7,
+    "text": "the description of the possible outcomes of the experiment."
+  },
+  {
+    "start": 146.7,
+    "end": 148.4,
+    "text": "So we carry out an experiment."
+  },
+  {
+    "start": 148.4,
+    "end": 152.2,
+    "text": "For example, we flip a coin, or maybe we flip five coins"
+  },
+  {
+    "start": 152.2,
+    "end": 155.5,
+    "text": "simultaneously, or maybe we roll a die."
+  },
+  {
+    "start": 155.5,
+    "end": 160.1,
+    "text": "Whatever that experiment is, it has a number of possible"
+  },
+  {
+    "start": 160.1,
+    "end": 163.8,
+    "text": "outcomes, and we start by making a list of the"
+  },
+  {
+    "start": 163.8,
+    "end": 165.1,
+    "text": "possible outcomes."
+  },
+  {
+    "start": 165.5,
+    "end": 169.1,
+    "text": "Or a better word, instead of the word list, is to use the"
+  },
+  {
+    "start": 169.1,
+    "end": 173.2,
+    "text": "word set, which has a more formal mathematical meaning."
+  },
+  {
+    "start": 173.2,
+    "end": 179.5,
+    "text": "So we create a set that we usually denote by capital"
+  },
+  {
+    "start": 179.5,
+    "end": 181.5,
+    "text": "Omega."
+  },
+  {
+    "start": 181.5,
+    "end": 186.3,
+    "text": "That set is called the sample space and is the set of all"
+  },
+  {
+    "start": 186.3,
+    "end": 193.0,
+    "text": "possible outcomes of our experiment."
+  },
+  {
+    "start": 193.0,
+    "end": 196.4,
+    "text": "The elements of that set should have certain"
+  },
+  {
+    "start": 197.5,
+    "end": 201.2,
+    "text": "Namely, the elements should be mutually exclusive and"
+  },
+  {
+    "start": 201.2,
+    "end": 203.2,
+    "text": "collectively exhaustive."
+  },
+  {
+    "start": 203.2,
+    "end": 204.5,
+    "text": "What does that mean?"
+  },
+  {
+    "start": 204.5,
+    "end": 208.0,
+    "text": "Mutually exclusive means that if at the end of the"
+  },
+  {
+    "start": 208.0,
+    "end": 212.8,
+    "text": "experiment I tell you that this outcome happened, then it"
+  },
+  {
+    "start": 212.8,
+    "end": 216.6,
+    "text": "should not be possible that this outcome also happened."
+  },
+  {
+    "start": 216.6,
+    "end": 219.4,
+    "text": "At the end of the experiment, there can only be one of the"
+  },
+  {
+    "start": 219.4,
+    "end": 220.7,
+    "text": "outcomes that has happened."
+  },
+  {
+    "start": 221.6,
+    "end": 225.2,
+    "text": "Being collectively exhaustive means something else that"
+  },
+  {
+    "start": 225.2,
+    "end": 229.5,
+    "text": "together all these elements of the set exhausts all the"
+  },
+  {
+    "start": 229.5,
+    "end": 231.1,
+    "text": "possibilities."
+  },
+  {
+    "start": 231.1,
+    "end": 235.2,
+    "text": "So no matter what, at the end, you will be able to point to"
+  },
+  {
+    "start": 235.2,
+    "end": 239.6,
+    "text": "one of the outcomes and say that's the one that occurred."
+  },
+  {
+    "start": 239.6,
+    "end": 242.9,
+    "text": "To summarize, this set should be such that at the end of"
+  },
+  {
+    "start": 242.9,
+    "end": 245.4,
+    "text": "the experiment, you should be always"
+  },
+  {
+    "start": 245.5,
+    "end": 249.8,
+    "text": "able to point to one and exactly one of the possible"
+  },
+  {
+    "start": 249.8,
+    "end": 255.4,
+    "text": "outcomes and say that this is the outcome that occurred."
+  },
+  {
+    "start": 255.4,
+    "end": 260.5,
+    "text": "Physically different outcomes should be distinguished in the"
+  },
+  {
+    "start": 260.5,
+    "end": 264.3,
+    "text": "sample space and correspond to distinct points."
+  },
+  {
+    "start": 264.9,
+    "end": 268.5,
+    "text": "But when we say physically different outcomes, what do"
+  },
+  {
+    "start": 268.5,
+    "end": 269.5,
+    "text": "we mean?"
+  },
+  {
+    "start": 269.5,
+    "end": 273.6,
+    "text": "We really mean different in all relevant aspects, but"
+  },
+  {
+    "start": 273.6,
+    "end": 277.6,
+    "text": "perhaps not different in irrelevant aspects."
+  },
+  {
+    "start": 277.6,
+    "end": 281.3,
+    "text": "Let's make more precise what I mean by that by looking at"
+  },
+  {
+    "start": 281.3,
+    "end": 285.3,
+    "text": "the very simple and maybe silly example,"
+  },
+  {
+    "start": 285.3,
+    "end": 286.7,
+    "text": "which is the following."
+  },
+  {
+    "start": 286.7,
+    "end": 290.1,
+    "text": "Suppose that you flip a coin, and you see whether it"
+  },
+  {
+    "start": 290.1,
+    "end": 292.0,
+    "text": "resulted in heads or tails."
+  },
+  {
+    "start": 293.4,
+    "end": 297.5,
+    "text": "So you have a perfectly legitimate sample space for"
+  },
+  {
+    "start": 297.5,
+    "end": 301.6,
+    "text": "this experiment, which consists of just two points, heads"
+  },
+  {
+    "start": 301.6,
+    "end": 302.8,
+    "text": "and tails."
+  },
+  {
+    "start": 302.8,
+    "end": 308.4,
+    "text": "Together, these two outcomes exhaust all possibilities,"
+  },
+  {
+    "start": 308.4,
+    "end": 310.9,
+    "text": "and the two outcomes are mutually exclusive."
+  },
+  {
+    "start": 310.9,
+    "end": 313.2,
+    "text": "So this is a very legitimate sample"
+  },
+  {
+    "start": 313.2,
+    "end": 315.4,
+    "text": "space for this experiment."
+  },
+  {
+    "start": 315.4,
+    "end": 318.2,
+    "text": "Now, suppose that while you were flipping the coin, you"
+  },
+  {
+    "start": 318.2,
+    "end": 321.0,
+    "text": "also looked outside the window to check the weather."
+  },
+  {
+    "start": 321.6,
+    "end": 328.6,
+    "text": "And then you could say that my sample space is really heads"
+  },
+  {
+    "start": 328.6,
+    "end": 332.4,
+    "text": "and it's raining."
+  },
+  {
+    "start": 332.4,
+    "end": 340.2,
+    "text": "Another possible outcome is heads and no rain."
+  },
+  {
+    "start": 340.2,
+    "end": 346.8,
+    "text": "Another possible outcome is tails and it's raining."
+  },
+  {
+    "start": 346.8,
+    "end": 349.6,
+    "text": "And finally, another possible outcome is"
+  },
+  {
+    "start": 349.6,
+    "end": 356.9,
+    "text": "tails and no rain."
+  },
+  {
+    "start": 361.4,
+    "end": 365.6,
+    "text": "This is also a perfectly legitimate sample space for"
+  },
+  {
+    "start": 365.6,
+    "end": 367.9,
+    "text": "the experiment of flipping a coin."
+  },
+  {
+    "start": 367.9,
+    "end": 370.8,
+    "text": "The elements of this sample space are mutually exclusive"
+  },
+  {
+    "start": 370.8,
+    "end": 372.1,
+    "text": "and collectively exhausted."
+  },
+  {
+    "start": 372.1,
+    "end": 376.6,
+    "text": "Exactly one of these outcomes is going to be true or will"
+  },
+  {
+    "start": 376.6,
+    "end": 379.4,
+    "text": "have materialized at the end of the experiment."
+  },
+  {
+    "start": 379.4,
+    "end": 382.3,
+    "text": "So which sample space is the correct one?"
+  },
+  {
+    "start": 382.3,
+    "end": 385.0,
+    "text": "This sample space, the second one, involves some"
+  },
+  {
+    "start": 385.0,
+    "end": 386.7,
+    "text": "irrelevant details."
+  },
+  {
+    "start": 389.9,
+    "end": 394.4,
+    "text": "the flipping of a coin, the preferred sample space, is the"
+  },
+  {
+    "start": 394.4,
+    "end": 398.8,
+    "text": "simpler one, the first one, which is sort of at the right"
+  },
+  {
+    "start": 398.8,
+    "end": 402.3,
+    "text": "granularity, given what we're interested in."
+  },
+  {
+    "start": 402.3,
+    "end": 406.1,
+    "text": "But ultimately, the question of which one is the right sample"
+  },
+  {
+    "start": 406.1,
+    "end": 410.5,
+    "text": "space depends on what kind of questions you want to answer."
+  },
+  {
+    "start": 410.5,
+    "end": 413.9,
+    "text": "For example, if you have a theory that the weather"
+  },
+  {
+    "start": 418.1,
+    "end": 423.2,
+    "text": "play with that theory or maybe check it out and so on, then"
+  },
+  {
+    "start": 423.2,
+    "end": 426.3,
+    "text": "in such a case, you might want to work with a second sample"
+  },
+  {
+    "start": 426.3,
+    "end": 427.5,
+    "text": "space."
+  },
+  {
+    "start": 427.5,
+    "end": 430.8,
+    "text": "This is a common feature in all of science."
+  },
+  {
+    "start": 430.8,
+    "end": 434.4,
+    "text": "Whenever you put together a model, you need to decide how"
+  },
+  {
+    "start": 434.4,
+    "end": 436.8,
+    "text": "detailed you want your model to be."
+  },
+  {
+    "start": 436.8,
+    "end": 440.5,
+    "text": "And the right level of detail is the one that captures those"
+  },
+  {
+    "start": 440.5,
+    "end": 452.0,
+    "text": "aspects that are relevant and of interest to you."
+  },
+  {
+    "start": 455.6,
+    "end": 460.3,
+    "text": "Sample spaces are sets, and the set can be discrete,"
+  },
+  {
+    "start": 460.3,
+    "end": 463.8,
+    "text": "finite, infinite, continuous, and so on."
+  },
+  {
+    "start": 463.8,
+    "end": 467.3,
+    "text": "Let us start with a simpler case in which we have a sample"
+  },
+  {
+    "start": 467.3,
+    "end": 469.2,
+    "text": "space that is discrete and finite."
+  },
+  {
+    "start": 470.0,
+    "end": 474.0,
+    "text": "The particular experiment we will be looking at is the"
+  },
+  {
+    "start": 474.0,
+    "end": 474.9,
+    "text": "following."
+  },
+  {
+    "start": 474.9,
+    "end": 478.9,
+    "text": "We take a very special die, a tetrahedral die."
+  },
+  {
+    "start": 478.9,
+    "end": 483.2,
+    "text": "So it's a die that has four faces numbered from one up to"
+  },
+  {
+    "start": 483.2,
+    "end": 484.2,
+    "text": "four."
+  },
+  {
+    "start": 484.2,
+    "end": 488.9,
+    "text": "We roll it once, and then we roll it twice."
+  },
+  {
+    "start": 488.9,
+    "end": 491.7,
+    "text": "We're not dealing here with two probabilistic experiments."
+  },
+  {
+    "start": 491.7,
+    "end": 495.0,
+    "text": "We're dealing with a single probabilistic experiment that"
+  },
+  {
+    "start": 499.4,
+    "end": 502.9,
+    "text": "What is the sample space of that experiment?"
+  },
+  {
+    "start": 502.9,
+    "end": 506.4,
+    "text": "Well, one possible representation is the following."
+  },
+  {
+    "start": 506.4,
+    "end": 510.6,
+    "text": "We take note of the result of the first roll, and then we"
+  },
+  {
+    "start": 510.6,
+    "end": 513.8,
+    "text": "take note of the result of the second roll."
+  },
+  {
+    "start": 513.8,
+    "end": 516.0,
+    "text": "And this gives us a pair of numbers."
+  },
+  {
+    "start": 516.6,
+    "end": 520.5,
+    "text": "Each one of the possible pairs of numbers corresponds to one"
+  },
+  {
+    "start": 520.5,
+    "end": 523.0,
+    "text": "of the little squares in this diagram."
+  },
+  {
+    "start": 523.0,
+    "end": 527.9,
+    "text": "For example, if the first roll is 1 and the second is also 1,"
+  },
+  {
+    "start": 527.9,
+    "end": 531.5,
+    "text": "then this particular outcome has occurred."
+  },
+  {
+    "start": 531.5,
+    "end": 536.6,
+    "text": "If the first roll is a 2 and the second is a 3, then this"
+  },
+  {
+    "start": 536.6,
+    "end": 539.3,
+    "text": "particular outcome occurs."
+  },
+  {
+    "start": 539.3,
+    "end": 543.1,
+    "text": "If the first roll is a 3 and then the next one is a 2,"
+  },
+  {
+    "start": 546.0,
+    "end": 549.8,
+    "text": "Notice that these two outcomes are pretty closely related."
+  },
+  {
+    "start": 549.8,
+    "end": 553.4,
+    "text": "In both cases, we observe a 2 and we observe a 3."
+  },
+  {
+    "start": 553.4,
+    "end": 557.5,
+    "text": "But we distinguish those two outcomes because in those two"
+  },
+  {
+    "start": 557.5,
+    "end": 562.0,
+    "text": "outcomes, the 2 and the 3 happen in different order."
+  },
+  {
+    "start": 562.0,
+    "end": 565.6,
+    "text": "And the order in which they appear may be a detail which"
+  },
+  {
+    "start": 565.6,
+    "end": 567.0,
+    "text": "is of interest to us."
+  },
+  {
+    "start": 567.0,
+    "end": 570.4,
+    "text": "And so we make this distinction in the sample space."
+  },
+  {
+    "start": 574.5,
+    "end": 578.4,
+    "text": "separate outcomes."
+  },
+  {
+    "start": 578.4,
+    "end": 582.0,
+    "text": "Now this is a case of a model in which the probabilistic"
+  },
+  {
+    "start": 582.0,
+    "end": 586.7,
+    "text": "experiment can be described in phases or stages."
+  },
+  {
+    "start": 586.7,
+    "end": 591.8,
+    "text": "We could think about rolling the die once and then going"
+  },
+  {
+    "start": 591.8,
+    "end": 593.4,
+    "text": "ahead with the second roll."
+  },
+  {
+    "start": 593.4,
+    "end": 595.2,
+    "text": "So we have two stages."
+  },
+  {
+    "start": 595.2,
+    "end": 598.3,
+    "text": "A very useful way of describing the sample space"
+  },
+  {
+    "start": 598.3,
+    "end": 599.5,
+    "text": "of experiments."
+  },
+  {
+    "start": 600.7,
+    "end": 605.2,
+    "text": "We have an experiment with several stages, either real"
+  },
+  {
+    "start": 605.2,
+    "end": 607.3,
+    "text": "stages or emergent stages."
+  },
+  {
+    "start": 607.3,
+    "end": 610.5,
+    "text": "So a very useful way of describing it is by providing a"
+  },
+  {
+    "start": 610.5,
+    "end": 614.5,
+    "text": "sequential description in terms of a tree."
+  },
+  {
+    "start": 614.5,
+    "end": 618.7,
+    "text": "So a diagram of this kind, we call it a tree."
+  },
+  {
+    "start": 618.7,
+    "end": 621.8,
+    "text": "You can think of this as the root of the tree from which"
+  },
+  {
+    "start": 621.8,
+    "end": 626.5,
+    "text": "you start, and the endpoints of the tree, we usually call"
+  },
+  {
+    "start": 626.5,
+    "end": 627.7,
+    "text": "them the leaves."
+  },
+  {
+    "start": 628.0,
+    "end": 631.9,
+    "text": "So the experiment starts, we carry out the first phase,"
+  },
+  {
+    "start": 631.9,
+    "end": 634.2,
+    "text": "which in this case is the first roll,"
+  },
+  {
+    "start": 634.2,
+    "end": 635.5,
+    "text": "and we see what happens."
+  },
+  {
+    "start": 635.5,
+    "end": 639.1,
+    "text": "So maybe we get a 2 in the first roll."
+  },
+  {
+    "start": 639.1,
+    "end": 643.5,
+    "text": "And then we take note of what happened in the second roll,"
+  },
+  {
+    "start": 643.5,
+    "end": 646.4,
+    "text": "and maybe the result was a 3."
+  },
+  {
+    "start": 646.4,
+    "end": 649.8,
+    "text": "So we follow this branch here, and we end up"
+  },
+  {
+    "start": 649.8,
+    "end": 653.1,
+    "text": "at this particular leaf, which is the leaf associated"
+  },
+  {
+    "start": 653.1,
+    "end": 655.1,
+    "text": "with the outcome 2, 3."
+  },
+  {
+    "start": 655.5,
+    "end": 659.3,
+    "text": "Notice that in this tree, we once more have a distinction."
+  },
+  {
+    "start": 659.3,
+    "end": 662.8,
+    "text": "The outcome 2, followed by a 3, is different from the"
+  },
+  {
+    "start": 662.8,
+    "end": 667.2,
+    "text": "outcome 3, followed by a 2, which would correspond to this"
+  },
+  {
+    "start": 667.2,
+    "end": 670.5,
+    "text": "particular place in the diagram."
+  },
+  {
+    "start": 670.5,
+    "end": 674.1,
+    "text": "In both cases, we have 16 possible outcomes."
+  },
+  {
+    "start": 674.1,
+    "end": 675.9,
+    "text": "4 times 4 makes 16."
+  },
+  {
+    "start": 675.9,
+    "end": 679.1,
+    "text": "And similarly, if you count here, the number of leaves is"
+  },
+  {
+    "start": 679.1,
+    "end": 680.3,
+    "text": "equal to 16."
+  },
+  {
+    "start": 681.5,
+    "end": 685.2,
+    "text": "The previous example involves a sample space that was"
+  },
+  {
+    "start": 685.2,
+    "end": 687.1,
+    "text": "discrete and finite."
+  },
+  {
+    "start": 687.1,
+    "end": 690.0,
+    "text": "There were only 16 possible outcomes."
+  },
+  {
+    "start": 690.0,
+    "end": 694.2,
+    "text": "But sample spaces can also be infinite, and they could also"
+  },
+  {
+    "start": 694.2,
+    "end": 696.0,
+    "text": "be continuous sets."
+  },
+  {
+    "start": 696.0,
+    "end": 699.1,
+    "text": "Here's an example of an experiment that involves a"
+  },
+  {
+    "start": 699.1,
+    "end": 701.2,
+    "text": "continuous sample space."
+  },
+  {
+    "start": 701.2,
+    "end": 705.3,
+    "text": "So we have a rectangular target, which is the unit"
+  },
+  {
+    "start": 709.8,
+    "end": 714.8,
+    "text": "And suppose that you are so skilled that no matter what,"
+  },
+  {
+    "start": 714.8,
+    "end": 717.2,
+    "text": "when you throw the dart, it always"
+  },
+  {
+    "start": 717.2,
+    "end": 720.9,
+    "text": "falls inside the target."
+  },
+  {
+    "start": 720.9,
+    "end": 727.0,
+    "text": "Once the dart hits the target, you record the coordinates x."
+  },
+  {
+    "start": 727.3,
+    "end": 730.5,
+    "text": "and y of the particular point that"
+  },
+  {
+    "start": 730.5,
+    "end": 733.0,
+    "text": "resulted from your dart throw."
+  },
+  {
+    "start": 733.0,
+    "end": 737.9,
+    "text": "And we record x and y with infinite precision."
+  },
+  {
+    "start": 737.9,
+    "end": 740.5,
+    "text": "So x and y are real numbers."
+  },
+  {
+    "start": 740.5,
+    "end": 744.5,
+    "text": "So in this experiment, the sample space is just the set"
+  },
+  {
+    "start": 744.5,
+    "end": 749.7,
+    "text": "of xy pairs that lie between 0 and 1."
+  },
+  {
+    "start": 753.3,
+    "end": 757.0,
+    "text": "We have so far discussed the first step involved in the"
+  },
+  {
+    "start": 757.0,
+    "end": 760.6,
+    "text": "construction of a probabilistic model, namely the"
+  },
+  {
+    "start": 760.6,
+    "end": 763.7,
+    "text": "construction of a sample space, which is a description of"
+  },
+  {
+    "start": 763.7,
+    "end": 767.2,
+    "text": "the possible outcomes of a probabilistic experiment."
+  },
+  {
+    "start": 767.2,
+    "end": 771.9,
+    "text": "We now come to the second and much more interesting part."
+  },
+  {
+    "start": 774.1,
+    "end": 777.9,
+    "text": "which outcomes are more likely to occur, and which ones are"
+  },
+  {
+    "start": 777.9,
+    "end": 780.6,
+    "text": "less likely to occur, and so on."
+  },
+  {
+    "start": 780.6,
+    "end": 785.2,
+    "text": "And we will do that by assigning probabilities to"
+  },
+  {
+    "start": 785.2,
+    "end": 787.3,
+    "text": "the different outcomes."
+  },
+  {
+    "start": 787.3,
+    "end": 792.6,
+    "text": "However, as we try to do this assignment, we run into some"
+  },
+  {
+    "start": 792.6,
+    "end": 795.3,
+    "text": "kind of difficulty, which is the following."
+  },
+  {
+    "start": 795.3,
+    "end": 798.4,
+    "text": "Remember the previous experiments involving a"
+  },
+  {
+    "start": 798.4,
+    "end": 800.5,
+    "text": "continuous sample space from."
+  },
+  {
+    "start": 800.5,
+    "end": 804.8,
+    "text": "which was the unit square in which we throw a dart at"
+  },
+  {
+    "start": 804.8,
+    "end": 809.3,
+    "text": "random and record the point that occurred."
+  },
+  {
+    "start": 809.3,
+    "end": 813.2,
+    "text": "In this experiment, what do you think is the probability of a"
+  },
+  {
+    "start": 813.2,
+    "end": 815.0,
+    "text": "particular point?"
+  },
+  {
+    "start": 815.0,
+    "end": 819.7,
+    "text": "Let's say, what is the probability that my dart hits"
+  },
+  {
+    "start": 819.7,
+    "end": 822.9,
+    "text": "exactly the center of this square?"
+  },
+  {
+    "start": 823.8,
+    "end": 826.4,
+    "text": "Well, this probability would be essentially zero."
+  },
+  {
+    "start": 826.4,
+    "end": 829.7,
+    "text": "Hitting the center exactly with infinite precision"
+  },
+  {
+    "start": 829.7,
+    "end": 831.0,
+    "text": "should be zero."
+  },
+  {
+    "start": 831.0,
+    "end": 834.6,
+    "text": "And so it's natural that in such a continuous model, any"
+  },
+  {
+    "start": 834.6,
+    "end": 839.1,
+    "text": "individual point should have a zero probability."
+  },
+  {
+    "start": 839.1,
+    "end": 843.4,
+    "text": "For this reason, instead of assigning probabilities to"
+  },
+  {
+    "start": 843.4,
+    "end": 848.7,
+    "text": "individual points, we will instead assign probabilities"
+  },
+  {
+    "start": 854.6,
+    "end": 862.2,
+    "text": "So here we have our sample space, which is some abstract"
+  },
+  {
+    "start": 862.2,
+    "end": 865.7,
+    "text": "set omega."
+  },
+  {
+    "start": 865.7,
+    "end": 868.7,
+    "text": "Here's a subset of the sample space."
+  },
+  {
+    "start": 868.7,
+    "end": 873.6,
+    "text": "Call it capital A. We're going to assign a probability to"
+  },
+  {
+    "start": 873.6,
+    "end": 877.7,
+    "text": "that subset A, which we're going to denote with this"
+  },
+  {
+    "start": 877.7,
+    "end": 883.5,
+    "text": "notation, which we read as the probability of set A."
+  },
+  {
+    "start": 884.0,
+    "end": 887.7,
+    "text": "So probabilities will be assigned to subsets."
+  },
+  {
+    "start": 887.7,
+    "end": 889.9,
+    "text": "And this will not cause us difficulties in the"
+  },
+  {
+    "start": 889.9,
+    "end": 893.7,
+    "text": "continuous case, because even though individual points would"
+  },
+  {
+    "start": 893.7,
+    "end": 898.2,
+    "text": "have zero probability, if you ask me what are the odds that"
+  },
+  {
+    "start": 898.2,
+    "end": 902.6,
+    "text": "my dart falls in the upper half, let's say, of this"
+  },
+  {
+    "start": 902.6,
+    "end": 906.8,
+    "text": "diagram, then that should be a reasonable positive number."
+  },
+  {
+    "start": 906.8,
+    "end": 909.4,
+    "text": "So even though individual outcomes may have zero"
+  },
+  {
+    "start": 912.4,
+    "end": 916.2,
+    "text": "would be expected to have positive probabilities."
+  },
+  {
+    "start": 916.2,
+    "end": 920.9,
+    "text": "So coming back, we're going to assign probabilities to the"
+  },
+  {
+    "start": 920.9,
+    "end": 923.9,
+    "text": "various subsets of the sample space."
+  },
+  {
+    "start": 923.9,
+    "end": 927.2,
+    "text": "And here comes a piece of terminology that a subset of"
+  },
+  {
+    "start": 927.2,
+    "end": 930.0,
+    "text": "the sample space is called an event."
+  },
+  {
+    "start": 930.0,
+    "end": 932.0,
+    "text": "Why is it called an event?"
+  },
+  {
+    "start": 932.0,
+    "end": 936.2,
+    "text": "Because once we carry out the experiment and we observe the"
+  },
+  {
+    "start": 939.2,
+    "end": 942.5,
+    "text": "is inside the set A. And in that case,"
+  },
+  {
+    "start": 942.5,
+    "end": 946.7,
+    "text": "we say that event A has occurred or the outcome"
+  },
+  {
+    "start": 946.7,
+    "end": 950.1,
+    "text": "falls outside the set A, in which case"
+  },
+  {
+    "start": 950.1,
+    "end": 954.7,
+    "text": "we say that event A did not occur."
+  },
+  {
+    "start": 954.7,
+    "end": 958.7,
+    "text": "Now we want to move on and describe certain rules,"
+  },
+  {
+    "start": 958.7,
+    "end": 961.4,
+    "text": "the rules of the game in probabilistic models, which"
+  },
+  {
+    "start": 961.4,
+    "end": 964.9,
+    "text": "are basically the rules that these probabilities should"
+  },
+  {
+    "start": 964.9,
+    "end": 966.1,
+    "text": "satisfy."
+  },
+  {
+    "start": 966.1,
+    "end": 968.6,
+    "text": "They shouldn't be completely arbitrary."
+  },
+  {
+    "start": 968.6,
+    "end": 974.3,
+    "text": "First, by convention, probabilities are always given"
+  },
+  {
+    "start": 974.3,
+    "end": 977.4,
+    "text": "in a range between 0 and 1."
+  },
+  {
+    "start": 977.4,
+    "end": 980.5,
+    "text": "Intuitively, 0 probability means that we believe that"
+  },
+  {
+    "start": 980.5,
+    "end": 983.4,
+    "text": "something practically cannot happen."
+  },
+  {
+    "start": 983.4,
+    "end": 987.8,
+    "text": "And probability of 1 means that we're practically certain"
+  },
+  {
+    "start": 987.8,
+    "end": 991.7,
+    "text": "that an event of interest is going to happen."
+  },
+  {
+    "start": 992.0,
+    "end": 996.4,
+    "text": "So we want to specify rules of this kind for probabilities."
+  },
+  {
+    "start": 996.4,
+    "end": 999.3,
+    "text": "These rules that any probabilistic model should"
+  },
+  {
+    "start": 999.3,
+    "end": 1003.2,
+    "text": "satisfy are called the actions of probability theory."
+  },
+  {
+    "start": 1003.2,
+    "end": 1006.7,
+    "text": "And our first axiom is a non-negativity axiom."
+  },
+  {
+    "start": 1006.7,
+    "end": 1009.6,
+    "text": "Namely, probabilities will always be non-negative"
+  },
+  {
+    "start": 1009.6,
+    "end": 1011.3,
+    "text": "numbers."
+  },
+  {
+    "start": 1011.3,
+    "end": 1013.0,
+    "text": "It's a reasonable rule."
+  },
+  {
+    "start": 1015.4,
+    "end": 1019.0,
+    "text": "If the subset that we're looking at is actually not a"
+  },
+  {
+    "start": 1019.0,
+    "end": 1023.0,
+    "text": "subset but is the entire sample space omega, the"
+  },
+  {
+    "start": 1023.0,
+    "end": 1027.8,
+    "text": "probability of it should always be equal to 1."
+  },
+  {
+    "start": 1027.8,
+    "end": 1029.6,
+    "text": "What does that mean?"
+  },
+  {
+    "start": 1029.6,
+    "end": 1032.9,
+    "text": "We know that the outcome is going to be an element of the"
+  },
+  {
+    "start": 1032.9,
+    "end": 1033.9,
+    "text": "sample space."
+  },
+  {
+    "start": 1033.9,
+    "end": 1036.4,
+    "text": "This is the definition of the sample space."
+  },
+  {
+    "start": 1036.4,
+    "end": 1040.1,
+    "text": "So we have absolute certainty that our outcome is going to"
+  },
+  {
+    "start": 1040.1,
+    "end": 1041.3,
+    "text": "be an omega."
+  },
+  {
+    "start": 1041.5,
+    "end": 1044.7,
+    "text": "Or in different language, we have absolute certainty that"
+  },
+  {
+    "start": 1044.7,
+    "end": 1047.7,
+    "text": "event omega is going to occur."
+  },
+  {
+    "start": 1047.7,
+    "end": 1050.5,
+    "text": "And we capture this certainty by saying that the"
+  },
+  {
+    "start": 1050.5,
+    "end": 1054.8,
+    "text": "probability of event omega is equal to 1."
+  },
+  {
+    "start": 1054.8,
+    "end": 1059.1,
+    "text": "These two axioms are pretty simple and very intuitive."
+  },
+  {
+    "start": 1059.1,
+    "end": 1062.8,
+    "text": "The more interesting axiom is the next one."
+  },
+  {
+    "start": 1062.8,
+    "end": 1066.0,
+    "text": "That says something a little more complicated."
+  },
+  {
+    "start": 1068.0,
+    "end": 1072.2,
+    "text": "discuss that particular axiom, a quick reminder about set"
+  },
+  {
+    "start": 1072.2,
+    "end": 1074.8,
+    "text": "theoretic notation."
+  },
+  {
+    "start": 1074.8,
+    "end": 1088.2,
+    "text": "If we have two sets, let's say a set A and another set B, we"
+  },
+  {
+    "start": 1088.2,
+    "end": 1091.9,
+    "text": "use this particular notation, which we read as A"
+  },
+  {
+    "start": 1091.9,
+    "end": 1097.3,
+    "text": "intersection B, to refer to the collection of elements"
+  },
+  {
+    "start": 1100.0,
+    "end": 1104.1,
+    "text": "So in this picture, the intersection of A and B is"
+  },
+  {
+    "start": 1104.1,
+    "end": 1108.4,
+    "text": "this shaded set."
+  },
+  {
+    "start": 1108.4,
+    "end": 1115.0,
+    "text": "We use this notation, which we read as A union B, to refer"
+  },
+  {
+    "start": 1115.0,
+    "end": 1120.9,
+    "text": "to the set of elements that belong to A, or to B, or to"
+  },
+  {
+    "start": 1120.9,
+    "end": 1125.2,
+    "text": "both. So in terms of this picture, the union of the two"
+  },
+  {
+    "start": 1125.2,
+    "end": 1127.6,
+    "text": "sets would be this blue set."
+  },
+  {
+    "start": 1128.9,
+    "end": 1132.8,
+    "text": "After this reminder about set theoretic notation, now let us"
+  },
+  {
+    "start": 1132.8,
+    "end": 1135.4,
+    "text": "look at the form of the third axiom."
+  },
+  {
+    "start": 1135.4,
+    "end": 1136.9,
+    "text": "What does it say?"
+  },
+  {
+    "start": 1136.9,
+    "end": 1140.9,
+    "text": "If we have two sets, two events, two subsets of the"
+  },
+  {
+    "start": 1140.9,
+    "end": 1145.5,
+    "text": "sample space, which are disjoint?"
+  },
+  {
+    "start": 1145.5,
+    "end": 1148.5,
+    "text": "So here's our sample space."
+  },
+  {
+    "start": 1148.5,
+    "end": 1152.5,
+    "text": "And here are the two sets that are disjoint."
+  },
+  {
+    "start": 1155.0,
+    "end": 1159.1,
+    "text": "In mathematical terms, two sets being disjoint means that"
+  },
+  {
+    "start": 1159.1,
+    "end": 1163.2,
+    "text": "their intersection has no elements, so their"
+  },
+  {
+    "start": 1163.2,
+    "end": 1165.5,
+    "text": "intersection is the empty set."
+  },
+  {
+    "start": 1165.5,
+    "end": 1171.1,
+    "text": "And we use this symbol here to denote the empty set."
+  },
+  {
+    "start": 1171.1,
+    "end": 1175.1,
+    "text": "So if the intersection of two sets is empty, then the"
+  },
+  {
+    "start": 1175.1,
+    "end": 1179.8,
+    "text": "probability that the outcome of the experiment falls in"
+  },
+  {
+    "start": 1182.2,
+    "end": 1187.2,
+    "text": "That is, the probability that the outcome is here or there"
+  },
+  {
+    "start": 1187.2,
+    "end": 1190.7,
+    "text": "is equal to the sum of the probabilities"
+  },
+  {
+    "start": 1190.7,
+    "end": 1193.8,
+    "text": "of these two sets."
+  },
+  {
+    "start": 1193.8,
+    "end": 1196.2,
+    "text": "This is called the additivity axiom."
+  },
+  {
+    "start": 1196.2,
+    "end": 1200.2,
+    "text": "So it says that we can add probabilities"
+  },
+  {
+    "start": 1200.2,
+    "end": 1203.8,
+    "text": "of different sets when those two sets are disjoint."
+  },
+  {
+    "start": 1204.7,
+    "end": 1209.9,
+    "text": "In some sense, we can think of probability as being one"
+  },
+  {
+    "start": 1209.9,
+    "end": 1214.2,
+    "text": "pound of some substance which is spread over our sample"
+  },
+  {
+    "start": 1214.2,
+    "end": 1218.1,
+    "text": "space, and the probability of A is how much of that"
+  },
+  {
+    "start": 1218.1,
+    "end": 1222.5,
+    "text": "substance is sitting on top of a set A. So what this axiom"
+  },
+  {
+    "start": 1222.5,
+    "end": 1226.3,
+    "text": "is saying is that the total amount of that substance"
+  },
+  {
+    "start": 1228.6,
+    "end": 1233.5,
+    "text": "And B is how much is sitting on top of A plus how much is"
+  },
+  {
+    "start": 1233.5,
+    "end": 1237.2,
+    "text": "sitting on top of B. And that is the case whenever the"
+  },
+  {
+    "start": 1237.2,
+    "end": 1242.5,
+    "text": "sets A and B are disjoint from each other."
+  },
+  {
+    "start": 1242.5,
+    "end": 1245.9,
+    "text": "The additivity axiom needs to be refined a bit."
+  },
+  {
+    "start": 1245.9,
+    "end": 1248.6,
+    "text": "We will talk about that a little later."
+  },
+  {
+    "start": 1248.6,
+    "end": 1252.1,
+    "text": "Other than this refinement, these three axioms are the"
+  },
+  {
+    "start": 1252.1,
+    "end": 1254.5,
+    "text": "only requirements in order to have a"
+  },
+  {
+    "start": 1254.5,
+    "end": 1256.1,
+    "text": "legitimate probability model."
+  },
+  {
+    "start": 1256.8,
+    "end": 1260.0,
+    "text": "At this point you may ask, shouldn't there be more"
+  },
+  {
+    "start": 1260.0,
+    "end": 1261.4,
+    "text": "requirements?"
+  },
+  {
+    "start": 1261.4,
+    "end": 1265.0,
+    "text": "Shouldn't we, for example, say that probabilities cannot be"
+  },
+  {
+    "start": 1265.0,
+    "end": 1267.0,
+    "text": "greater than 1?"
+  },
+  {
+    "start": 1267.0,
+    "end": 1268.9,
+    "text": "Yes and no."
+  },
+  {
+    "start": 1268.9,
+    "end": 1272.7,
+    "text": "We do not want probabilities to be larger than 1, but we do"
+  },
+  {
+    "start": 1272.7,
+    "end": 1274.4,
+    "text": "not need to say it."
+  },
+  {
+    "start": 1274.4,
+    "end": 1277.6,
+    "text": "As we will see in the next segment, such a requirement"
+  },
+  {
+    "start": 1277.6,
+    "end": 1281.4,
+    "text": "follows from what we have already said, and the same is"
+  },
+  {
+    "start": 1281.4,
+    "end": 1284.9,
+    "text": "true for several other natural properties of"
+  },
+  {
+    "start": 1284.9,
+    "end": 1288.9,
+    "text": "probabilities."
+  },
+  {
+    "start": 1288.8,
+    "end": 1292.5,
+    "text": "The probability axioms are the basic rules of probability"
+  },
+  {
+    "start": 1292.5,
+    "end": 1295.9,
+    "text": "theory, and they are surprisingly few."
+  },
+  {
+    "start": 1295.9,
+    "end": 1298.0,
+    "text": "But they imply many interesting properties"
+  },
+  {
+    "start": 1298.0,
+    "end": 1299.7,
+    "text": "that we will now explore."
+  },
+  {
+    "start": 1299.7,
+    "end": 1303.6,
+    "text": "First, we will see that what you might think of as missing"
+  },
+  {
+    "start": 1303.6,
+    "end": 1308.6,
+    "text": "axioms are actually implied by the axioms already in place."
+  },
+  {
+    "start": 1308.6,
+    "end": 1313.0,
+    "text": "For example, we have an axiom that probabilities"
+  },
+  {
+    "start": 1313.0,
+    "end": 1315.8,
+    "text": "are non-negative."
+  },
+  {
+    "start": 1317.1,
+    "end": 1323.2,
+    "text": "that probabilities are also less than or equal to 1."
+  },
+  {
+    "start": 1323.2,
+    "end": 1327.0,
+    "text": "We have another axiom that says that the probability of the"
+  },
+  {
+    "start": 1327.0,
+    "end": 1329.5,
+    "text": "entire sample space is 1."
+  },
+  {
+    "start": 1329.5,
+    "end": 1332.4,
+    "text": "We will show a counterpart that the probability of the"
+  },
+  {
+    "start": 1332.4,
+    "end": 1335.2,
+    "text": "empty set is equal to 0."
+  },
+  {
+    "start": 1335.2,
+    "end": 1336.5,
+    "text": "This makes perfect sense."
+  },
+  {
+    "start": 1336.5,
+    "end": 1338.5,
+    "text": "The empty set has no elements."
+  },
+  {
+    "start": 1338.5,
+    "end": 1340.3,
+    "text": "So it is impossible."
+  },
+  {
+    "start": 1340.3,
+    "end": 1343.7,
+    "text": "There is zero probability that the outcome of the"
+  },
+  {
+    "start": 1343.7,
+    "end": 1346.1,
+    "text": "experiment would lie in the empty set."
+  },
+  {
+    "start": 1347.0,
+    "end": 1350.1,
+    "text": "We also have another intuitive property."
+  },
+  {
+    "start": 1350.1,
+    "end": 1353.5,
+    "text": "The probability that an event happens, plus the"
+  },
+  {
+    "start": 1353.5,
+    "end": 1357.2,
+    "text": "probability that the event does not happen, exhaust all"
+  },
+  {
+    "start": 1357.2,
+    "end": 1358.4,
+    "text": "possibilities."
+  },
+  {
+    "start": 1358.4,
+    "end": 1361.3,
+    "text": "And these two probabilities together should add to one."
+  },
+  {
+    "start": 1361.3,
+    "end": 1364.6,
+    "text": "For instance, if the probability of heads is 0.6,"
+  },
+  {
+    "start": 1364.6,
+    "end": 1369.1,
+    "text": "then the probability of tails should be 0.4."
+  },
+  {
+    "start": 1369.1,
+    "end": 1372.8,
+    "text": "Finally, we can generalize the additivity axiom, which was"
+  },
+  {
+    "start": 1376.7,
+    "end": 1380.6,
+    "text": "disjoint events to the case where we're dealing with the"
+  },
+  {
+    "start": 1380.6,
+    "end": 1385.3,
+    "text": "union of several disjoint events."
+  },
+  {
+    "start": 1385.3,
+    "end": 1389.7,
+    "text": "By disjoint, here we mean that the intersection of any two of"
+  },
+  {
+    "start": 1389.7,
+    "end": 1392.4,
+    "text": "these events is the empty set."
+  },
+  {
+    "start": 1392.4,
+    "end": 1395.6,
+    "text": "We will prove this for the case of three events, and then"
+  },
+  {
+    "start": 1395.6,
+    "end": 1398.9,
+    "text": "the argument generalizes for the case where we're taking"
+  },
+  {
+    "start": 1398.9,
+    "end": 1402.5,
+    "text": "the union of k disjoint events, where k is any"
+  },
+  {
+    "start": 1402.5,
+    "end": 1403.8,
+    "text": "finite number."
+  },
+  {
+    "start": 1404.1,
+    "end": 1409.0,
+    "text": "So the intuition of this result is the same as for the case of two events, but we will"
+  },
+  {
+    "start": 1409.0,
+    "end": 1414.7,
+    "text": "derive it formally and we will also use it to come up with a way of calculating the probability"
+  },
+  {
+    "start": 1414.7,
+    "end": 1421.6,
+    "text": "of a finite set by simply adding the probabilities of its individual elements."
+  },
+  {
+    "start": 1421.6,
+    "end": 1428.8,
+    "text": "All of these statements that we just presented are intuitive and you do not really need"
+  },
+  {
+    "start": 1431.1,
+    "end": 1437.8,
+    "text": "Nevertheless, it is instructive to see how these statements follow from the axioms that"
+  },
+  {
+    "start": 1437.8,
+    "end": 1442.0,
+    "text": "we have put in place."
+  },
+  {
+    "start": 1442.0,
+    "end": 1448.8,
+    "text": "So we will now present the arguments based only on the three axioms that we have available."
+  },
+  {
+    "start": 1448.8,
+    "end": 1453.4,
+    "text": "And in order to be able to refer to these axioms, let us give them some names, call"
+  },
+  {
+    "start": 1453.4,
+    "end": 1458.0,
+    "text": "them axioms A, B and C."
+  },
+  {
+    "start": 1458.0,
+    "end": 1459.8,
+    "text": "We start as follows."
+  },
+  {
+    "start": 1461.8,
+    "end": 1469.4,
+    "text": "a subset of that sample space, call it A, and consider the complement of that"
+  },
+  {
+    "start": 1469.4,
+    "end": 1475.1,
+    "text": "subset. The complement is the set of all elements that do not belong to the set A."
+  },
+  {
+    "start": 1475.1,
+    "end": 1481.6,
+    "text": "So a set together with its complement make up everything which is the"
+  },
+  {
+    "start": 1481.9,
+    "end": 1483.5,
+    "text": "entire sample space."
+  },
+  {
+    "start": 1483.5,
+    "end": 1486.1,
+    "text": "On the other hand, if an element belongs to a set A,"
+  },
+  {
+    "start": 1486.1,
+    "end": 1488.3,
+    "text": "it does not belong to its complement."
+  },
+  {
+    "start": 1488.3,
+    "end": 1490.9,
+    "text": "So the intersection of a set with its complement"
+  },
+  {
+    "start": 1490.9,
+    "end": 1493.6,
+    "text": "is the empty set."
+  },
+  {
+    "start": 1493.6,
+    "end": 1497.8,
+    "text": "Now we argue as follows."
+  },
+  {
+    "start": 1497.8,
+    "end": 1502.3,
+    "text": "We have that the probability of the entire sample space is"
+  },
+  {
+    "start": 1502.3,
+    "end": 1505.1,
+    "text": "equal to 1."
+  },
+  {
+    "start": 1505.1,
+    "end": 1508.9,
+    "text": "This is true by our second axiom."
+  },
+  {
+    "start": 1508.9,
+    "end": 1511.8,
+    "text": "Now the sample space, as we just discussed, can be"
+  },
+  {
+    "start": 1514.2,
+    "end": 1516.9,
+    "text": "and the complement of that event."
+  },
+  {
+    "start": 1516.9,
+    "end": 1521.2,
+    "text": "This is just a set-theoretic relation."
+  },
+  {
+    "start": 1521.2,
+    "end": 1527.2,
+    "text": "And next, since a set and its complement are disjoint,"
+  },
+  {
+    "start": 1527.2,
+    "end": 1530.8,
+    "text": "this means that we can apply the additivity axiom"
+  },
+  {
+    "start": 1530.8,
+    "end": 1534.6,
+    "text": "and try to this probability as the sum of the probability"
+  },
+  {
+    "start": 1534.6,
+    "end": 1539.0,
+    "text": "of event A with the probability of the complement of A."
+  },
+  {
+    "start": 1539.9,
+    "end": 1545.9,
+    "text": "This is one of the relations that we had claimed and which we have now established."
+  },
+  {
+    "start": 1545.9,
+    "end": 1557.9,
+    "text": "Based on this relation we can also write that the probability of an event A is equal to 1 minus the probability of the complement of that event."
+  },
+  {
+    "start": 1557.9,
+    "end": 1563.9,
+    "text": "And because by the non-negativity axiom this quantity here is non-negative,"
+  },
+  {
+    "start": 1568.3,
+    "end": 1571.2,
+    "text": "We're using here the non-negativity axiom."
+  },
+  {
+    "start": 1571.2,
+    "end": 1573.8,
+    "text": "And we have established another property, namely,"
+  },
+  {
+    "start": 1573.8,
+    "end": 1580.0,
+    "text": "that probabilities are always less than or equal to 1."
+  },
+  {
+    "start": 1580.0,
+    "end": 1591.1,
+    "text": "Finally, let us note that 1 is the probability always"
+  },
+  {
+    "start": 1591.1,
+    "end": 1596.5,
+    "text": "of a set plus the probability of a complement of that set."
+  },
+  {
+    "start": 1597.1,
+    "end": 1599.7,
+    "text": "And let us use this property for the case"
+  },
+  {
+    "start": 1599.7,
+    "end": 1604.6,
+    "text": "where the set of interest is the entire sample space."
+  },
+  {
+    "start": 1604.6,
+    "end": 1607.2,
+    "text": "Now the probability of the entire sample space"
+  },
+  {
+    "start": 1607.2,
+    "end": 1611.4,
+    "text": "is itself equal to 1."
+  },
+  {
+    "start": 1611.4,
+    "end": 1615.2,
+    "text": "And what is the complement of the entire sample space?"
+  },
+  {
+    "start": 1615.2,
+    "end": 1617.2,
+    "text": "The complement of the entire sample space"
+  },
+  {
+    "start": 1617.2,
+    "end": 1619.4,
+    "text": "consists of all elements that do not"
+  },
+  {
+    "start": 1619.4,
+    "end": 1620.7,
+    "text": "belong to the sample space."
+  },
+  {
+    "start": 1620.7,
+    "end": 1623.4,
+    "text": "But since the sample space is supposed"
+  },
+  {
+    "start": 1626.7,
+    "end": 1629.9,
+    "text": "Compliments is just the empty set."
+  },
+  {
+    "start": 1629.9,
+    "end": 1632.7,
+    "text": "And from this relation, we get the implication that the"
+  },
+  {
+    "start": 1632.7,
+    "end": 1637.4,
+    "text": "probability of the empty set is equal to 0."
+  },
+  {
+    "start": 1637.4,
+    "end": 1640.7,
+    "text": "This establishes yet one more of the properties that we"
+  },
+  {
+    "start": 1640.7,
+    "end": 1646.7,
+    "text": "had just claimed a little earlier."
+  },
+  {
+    "start": 1646.7,
+    "end": 1649.9,
+    "text": "We finally come to the proof of the generalization of our"
+  },
+  {
+    "start": 1649.9,
+    "end": 1653.5,
+    "text": "additivity axiom from the case of two disjoint events to"
+  },
+  {
+    "start": 1653.5,
+    "end": 1656.1,
+    "text": "the case of three disjoint events."
+  },
+  {
+    "start": 1658.9,
+    "end": 1663.4,
+    "text": "And within that sample space, we have three events, three"
+  },
+  {
+    "start": 1663.4,
+    "end": 1667.2,
+    "text": "subsets, and these subsets are disjoints in the sense that"
+  },
+  {
+    "start": 1667.2,
+    "end": 1671.6,
+    "text": "any two of those subsets have no elements in common."
+  },
+  {
+    "start": 1671.6,
+    "end": 1675.8,
+    "text": "And we're interested in the probability of the union of A,"
+  },
+  {
+    "start": 1675.8,
+    "end": 1679.0,
+    "text": "B, and C. How do we make progress?"
+  },
+  {
+    "start": 1679.0,
+    "end": 1682.4,
+    "text": "We have an additivity axiom in our hands, which applies to"
+  },
+  {
+    "start": 1682.4,
+    "end": 1685.5,
+    "text": "the case of the union of two disjoint sets."
+  },
+  {
+    "start": 1685.5,
+    "end": 1686.8,
+    "text": "Here we have three of them."
+  },
+  {
+    "start": 1687.1,
+    "end": 1689.5,
+    "text": "But we can do the following trick."
+  },
+  {
+    "start": 1689.5,
+    "end": 1693.4,
+    "text": "We can think of the union of A, B, and C as consisting"
+  },
+  {
+    "start": 1693.4,
+    "end": 1701.6,
+    "text": "of the union of this blue set with that green set."
+  },
+  {
+    "start": 1701.6,
+    "end": 1705.8,
+    "text": "Formally, what we're doing is that we're expressing the union"
+  },
+  {
+    "start": 1705.8,
+    "end": 1708.5,
+    "text": "of these three sets as follows."
+  },
+  {
+    "start": 1708.5,
+    "end": 1712.6,
+    "text": "We form one set by taking the union of A with B."
+  },
+  {
+    "start": 1712.6,
+    "end": 1717.2,
+    "text": "And we have the other set C. And the overall union"
+  },
+  {
+    "start": 1717.2,
+    "end": 1720.7,
+    "text": "can be thought of as the union of these two sets."
+  },
+  {
+    "start": 1720.7,
+    "end": 1723.5,
+    "text": "Now, since the three sets are disjoint,"
+  },
+  {
+    "start": 1723.5,
+    "end": 1727.6,
+    "text": "this implies that the blue set is disjoint from the green set."
+  },
+  {
+    "start": 1727.6,
+    "end": 1730.8,
+    "text": "And so we can use the additivity axiom here"
+  },
+  {
+    "start": 1730.8,
+    "end": 1735.7,
+    "text": "to write this probability as the probability of A union B"
+  },
+  {
+    "start": 1735.7,
+    "end": 1737.8,
+    "text": "plus the probability of C."
+  },
+  {
+    "start": 1739.3,
+    "end": 1742.2,
+    "text": "And now we can use the additivity action once more,"
+  },
+  {
+    "start": 1742.2,
+    "end": 1744.9,
+    "text": "since the sets A and B are disjoint,"
+  },
+  {
+    "start": 1744.9,
+    "end": 1747.6,
+    "text": "to write the first term as probability of A"
+  },
+  {
+    "start": 1747.6,
+    "end": 1751.1,
+    "text": "plus probability of B. We carry over the last term,"
+  },
+  {
+    "start": 1751.1,
+    "end": 1754.5,
+    "text": "and we have the relation that we wanted to prove."
+  },
+  {
+    "start": 1754.8,
+    "end": 1757.0,
+    "text": "This is the proof for the case of three events."
+  },
+  {
+    "start": 1757.0,
+    "end": 1760.5,
+    "text": "You should be able to follow this line of proof to write"
+  },
+  {
+    "start": 1760.5,
+    "end": 1763.5,
+    "text": "an argument for the case of four events and so on."
+  },
+  {
+    "start": 1763.5,
+    "end": 1766.4,
+    "text": "And you might want to continue by induction."
+  },
+  {
+    "start": 1766.4,
+    "end": 1770.3,
+    "text": "And eventually, you should be able to prove that if the"
+  },
+  {
+    "start": 1770.3,
+    "end": 1781.4,
+    "text": "sets A1 up to Ak are disjoint, then the probability of"
+  },
+  {
+    "start": 1787.3,
+    "end": 1792.9,
+    "text": "is going to be equal to the sum of their individual"
+  },
+  {
+    "start": 1792.9,
+    "end": 1794.7,
+    "text": "probabilities."
+  },
+  {
+    "start": 1794.7,
+    "end": 1798.2,
+    "text": "So this is the generalization to the case where we're dealing"
+  },
+  {
+    "start": 1798.2,
+    "end": 1804.2,
+    "text": "with the union of finitely many disjoint events."
+  },
+  {
+    "start": 1804.2,
+    "end": 1809.8,
+    "text": "A very useful application of this comes in the case where"
+  },
+  {
+    "start": 1809.8,
+    "end": 1815.5,
+    "text": "we want to calculate the probability of a finite set."
+  },
+  {
+    "start": 1819.2,
+    "end": 1825.5,
+    "text": "And within that sample space, we have some particular elements,"
+  },
+  {
+    "start": 1825.5,
+    "end": 1829.0,
+    "text": "S1, S2, up to SK, K of them."
+  },
+  {
+    "start": 1829.0,
+    "end": 1834.2,
+    "text": "And these elements together form a finite set."
+  },
+  {
+    "start": 1834.2,
+    "end": 1836.1,
+    "text": "What can we say about the probability"
+  },
+  {
+    "start": 1836.1,
+    "end": 1838.5,
+    "text": "of this finite set?"
+  },
+  {
+    "start": 1838.5,
+    "end": 1843.0,
+    "text": "The idea is to take this finite set that"
+  },
+  {
+    "start": 1843.0,
+    "end": 1845.9,
+    "text": "consists of K elements and think of it"
+  },
+  {
+    "start": 1848.9,
+    "end": 1854.4,
+    "text": "Little sets that contain one element each."
+  },
+  {
+    "start": 1854.4,
+    "end": 1856.8,
+    "text": "So set theoretically, what we're doing"
+  },
+  {
+    "start": 1856.8,
+    "end": 1860.3,
+    "text": "is that we're taking this set with k elements,"
+  },
+  {
+    "start": 1860.3,
+    "end": 1865.2,
+    "text": "and we write it as the union of a set that contains just s1,"
+  },
+  {
+    "start": 1865.2,
+    "end": 1870.0,
+    "text": "a set that contains just the second element s2, and so on,"
+  },
+  {
+    "start": 1870.0,
+    "end": 1871.4,
+    "text": "up to the kth element."
+  },
+  {
+    "start": 1874.0,
+    "end": 1877.4,
+    "text": "We're assuming, of course, that these elements are all"
+  },
+  {
+    "start": 1877.4,
+    "end": 1879.6,
+    "text": "different from each other."
+  },
+  {
+    "start": 1879.6,
+    "end": 1883.1,
+    "text": "So in that case, these sets, these single element sets, are"
+  },
+  {
+    "start": 1883.1,
+    "end": 1884.6,
+    "text": "all disjoint."
+  },
+  {
+    "start": 1884.6,
+    "end": 1888.7,
+    "text": "So using the additivity property for a union of k"
+  },
+  {
+    "start": 1888.7,
+    "end": 1894.0,
+    "text": "disjoint sets, we can write this as the sum of the"
+  },
+  {
+    "start": 1894.0,
+    "end": 1903.4,
+    "text": "probabilities of the different single element sets."
+  },
+  {
+    "start": 1904.8,
+    "end": 1909.1,
+    "text": "It is usual to start abusing or rather simplifying notation"
+  },
+  {
+    "start": 1909.1,
+    "end": 1910.2,
+    "text": "a little bit."
+  },
+  {
+    "start": 1910.2,
+    "end": 1912.7,
+    "text": "Probabilities are assigned to sets."
+  },
+  {
+    "start": 1912.7,
+    "end": 1915.7,
+    "text": "So here we're talking about the probability of a set that"
+  },
+  {
+    "start": 1915.7,
+    "end": 1917.5,
+    "text": "contains a single element."
+  },
+  {
+    "start": 1917.5,
+    "end": 1921.5,
+    "text": "But intuitively, we can also talk as just the probability"
+  },
+  {
+    "start": 1921.5,
+    "end": 1926.5,
+    "text": "of that particular element and use this simpler notation."
+  },
+  {
+    "start": 1926.5,
+    "end": 1930.1,
+    "text": "So when using this simpler notation, we will be talking"
+  },
+  {
+    "start": 1931.1,
+    "end": 1933.5,
+    "text": "probabilities of individual elements."
+  },
+  {
+    "start": 1933.5,
+    "end": 1936.6,
+    "text": "Although in terms of formal mathematics, what we really"
+  },
+  {
+    "start": 1936.6,
+    "end": 1943.1,
+    "text": "mean is the probability of this event that's comprised"
+  },
+  {
+    "start": 1943.1,
+    "end": 1952.9,
+    "text": "only of a particular element, S1, and so on."
+  },
+  {
+    "start": 1952.9,
+    "end": 1955.6,
+    "text": "We will now continue and derive some additional"
+  },
+  {
+    "start": 1955.6,
+    "end": 1958.3,
+    "text": "properties of probability laws, which are again"
+  },
+  {
+    "start": 1958.3,
+    "end": 1962.5,
+    "text": "consequences of the axioms that we have introduced."
+  },
+  {
+    "start": 1964.5,
+    "end": 1970.9,
+    "text": "If we have two sets, and one set is smaller than the other,"
+  },
+  {
+    "start": 1970.9,
+    "end": 1973.0,
+    "text": "so we have a picture as follows."
+  },
+  {
+    "start": 1973.0,
+    "end": 1977.9,
+    "text": "We have our sample space, and we have a certain set A."
+  },
+  {
+    "start": 1977.9,
+    "end": 1983.6,
+    "text": "And then we have a certain set B, which is even bigger."
+  },
+  {
+    "start": 1983.6,
+    "end": 1989.0,
+    "text": "So the set B is the bigger blue set."
+  },
+  {
+    "start": 1993.4,
+    "end": 1997.7,
+    "text": "larger than a, then naturally the probability that the"
+  },
+  {
+    "start": 1997.7,
+    "end": 2001.2,
+    "text": "outcome falls inside b should be at least as big as the"
+  },
+  {
+    "start": 2001.2,
+    "end": 2004.1,
+    "text": "probability that the outcome falls inside a."
+  },
+  {
+    "start": 2004.1,
+    "end": 2006.9,
+    "text": "How do we prove this formally?"
+  },
+  {
+    "start": 2006.9,
+    "end": 2013.1,
+    "text": "The set B can be expressed as a union of two pieces."
+  },
+  {
+    "start": 2013.1,
+    "end": 2017.0,
+    "text": "One piece is the set A itself."
+  },
+  {
+    "start": 2023.3,
+    "end": 2028.9,
+    "text": "that do not belong in A. What are these elements?"
+  },
+  {
+    "start": 2028.9,
+    "end": 2034.6,
+    "text": "They are elements that belong to B, and they do not belong"
+  },
+  {
+    "start": 2034.6,
+    "end": 2038.5,
+    "text": "to A, which means that they belong to the complement of A."
+  },
+  {
+    "start": 2038.5,
+    "end": 2042.2,
+    "text": "So we have expressed the set B as the union of two pieces."
+  },
+  {
+    "start": 2042.7,
+    "end": 2047.6,
+    "text": "Now, this piece is A. This piece here is outside A. So"
+  },
+  {
+    "start": 2047.6,
+    "end": 2049.7,
+    "text": "these two pieces are disjoint."
+  },
+  {
+    "start": 2049.7,
+    "end": 2053.1,
+    "text": "And so we can apply the additivity axiom and write"
+  },
+  {
+    "start": 2053.1,
+    "end": 2058.2,
+    "text": "that the probability of B is equal to the probability of A"
+  },
+  {
+    "start": 2058.2,
+    "end": 2064.3,
+    "text": "plus the probability of the other set."
+  },
+  {
+    "start": 2064.3,
+    "end": 2068.6,
+    "text": "And since probabilities are non-negative, this expression"
+  },
+  {
+    "start": 2068.6,
+    "end": 2072.6,
+    "text": "here is at least as large as the probability of A."
+  },
+  {
+    "start": 2072.7,
+    "end": 2075.3,
+    "text": "And this concludes the proof of the property"
+  },
+  {
+    "start": 2075.3,
+    "end": 2076.5,
+    "text": "that we wanted to show."
+  },
+  {
+    "start": 2076.5,
+    "end": 2079.8,
+    "text": "Indeed, the probability of A is less than or equal to the"
+  },
+  {
+    "start": 2079.8,
+    "end": 2083.6,
+    "text": "probability of B."
+  },
+  {
+    "start": 2083.6,
+    "end": 2087.1,
+    "text": "The next property we will show is the following."
+  },
+  {
+    "start": 2087.1,
+    "end": 2090.8,
+    "text": "It allows us to write the probability of the union of"
+  },
+  {
+    "start": 2090.8,
+    "end": 2094.9,
+    "text": "two sets for the case now where the two sets are not"
+  },
+  {
+    "start": 2094.9,
+    "end": 2097.3,
+    "text": "necessarily disjoint."
+  },
+  {
+    "start": 2097.3,
+    "end": 2102.2,
+    "text": "So the picture is as follows."
+  },
+  {
+    "start": 2104.6,
+    "end": 2114.1,
+    "text": "A and B, these sets are not necessarily disjoint."
+  },
+  {
+    "start": 2114.1,
+    "end": 2116.7,
+    "text": "And we want to say something about the probability of the"
+  },
+  {
+    "start": 2116.7,
+    "end": 2121.6,
+    "text": "union of A and B."
+  },
+  {
+    "start": 2121.6,
+    "end": 2125.6,
+    "text": "Now, the union of A and B consists of three pieces."
+  },
+  {
+    "start": 2125.6,
+    "end": 2130.1,
+    "text": "One piece is this one here."
+  },
+  {
+    "start": 2130.1,
+    "end": 2136.9,
+    "text": "And that piece consists of those elements of A that do"
+  },
+  {
+    "start": 2138.7,
+    "end": 2142.9,
+    "text": "So they belong to B complement."
+  },
+  {
+    "start": 2142.9,
+    "end": 2145.2,
+    "text": "This set has a certain probability."
+  },
+  {
+    "start": 2145.2,
+    "end": 2150.7,
+    "text": "Let's call it little a and indicate it on this diagram."
+  },
+  {
+    "start": 2150.7,
+    "end": 2154.2,
+    "text": "So a is the probability of this piece."
+  },
+  {
+    "start": 2154.2,
+    "end": 2157.1,
+    "text": "Another piece is this one here, which is the"
+  },
+  {
+    "start": 2157.1,
+    "end": 2159.5,
+    "text": "intersection of a and b."
+  },
+  {
+    "start": 2159.5,
+    "end": 2163.2,
+    "text": "It has a certain probability that we denote by little b."
+  },
+  {
+    "start": 2163.2,
+    "end": 2167.3,
+    "text": "This is the probability of a intersection b."
+  },
+  {
+    "start": 2171.2,
+    "end": 2175.4,
+    "text": "And that piece has a certain probability, C. It's the"
+  },
+  {
+    "start": 2175.4,
+    "end": 2177.0,
+    "text": "probability of that set."
+  },
+  {
+    "start": 2177.0,
+    "end": 2178.8,
+    "text": "And what is that set?"
+  },
+  {
+    "start": 2178.8,
+    "end": 2180.8,
+    "text": "That set is the following."
+  },
+  {
+    "start": 2180.8,
+    "end": 2184.7,
+    "text": "It's that part of B that consists of elements that do"
+  },
+  {
+    "start": 2184.7,
+    "end": 2189.3,
+    "text": "not belong in A. So it's B intersection with the"
+  },
+  {
+    "start": 2189.3,
+    "end": 2193.3,
+    "text": "complement of A."
+  },
+  {
+    "start": 2193.3,
+    "end": 2197.1,
+    "text": "Now let's express the two sides of this equality here in"
+  },
+  {
+    "start": 2197.1,
+    "end": 2200.1,
+    "text": "terms of little a, little b, and little c, and see whether"
+  },
+  {
+    "start": 2200.1,
+    "end": 2201.4,
+    "text": "we get the same thing."
+  },
+  {
+    "start": 2201.5,
+    "end": 2208.6,
+    "text": "So the probability of A union B. A union B consists of these"
+  },
+  {
+    "start": 2208.6,
+    "end": 2212.5,
+    "text": "three pieces that have probabilities A, little a,"
+  },
+  {
+    "start": 2212.5,
+    "end": 2215.6,
+    "text": "little b, and little c, respectively."
+  },
+  {
+    "start": 2215.6,
+    "end": 2218.5,
+    "text": "And by the additivity axiom, the probability of the union"
+  },
+  {
+    "start": 2218.5,
+    "end": 2221.6,
+    "text": "of A and B is the sum of the probabilities of these three"
+  },
+  {
+    "start": 2221.6,
+    "end": 2223.0,
+    "text": "pieces."
+  },
+  {
+    "start": 2223.0,
+    "end": 2227.1,
+    "text": "Let's look now at the right hand side of that equation"
+  },
+  {
+    "start": 2227.1,
+    "end": 2229.1,
+    "text": "and see whether we get the same thing."
+  },
+  {
+    "start": 2229.6,
+    "end": 2233.8,
+    "text": "The probability of A plus the probability of B minus the"
+  },
+  {
+    "start": 2233.8,
+    "end": 2239.9,
+    "text": "probability of A intersection B is equal to the following."
+  },
+  {
+    "start": 2239.9,
+    "end": 2243.3,
+    "text": "A consists of two pieces that have probabilities little a"
+  },
+  {
+    "start": 2243.3,
+    "end": 2246.3,
+    "text": "and little b."
+  },
+  {
+    "start": 2246.3,
+    "end": 2249.0,
+    "text": "The set B consists of two pieces that have probabilities"
+  },
+  {
+    "start": 2249.0,
+    "end": 2253.4,
+    "text": "little b and little c."
+  },
+  {
+    "start": 2253.4,
+    "end": 2255.6,
+    "text": "And then we subtract the probability of the"
+  },
+  {
+    "start": 2255.6,
+    "end": 2258.7,
+    "text": "intersection, which is B."
+  },
+  {
+    "start": 2262.3,
+    "end": 2265.9,
+    "text": "cancel here 1b with another b."
+  },
+  {
+    "start": 2265.9,
+    "end": 2274.0,
+    "text": "And what we are left with is a plus b plus c."
+  },
+  {
+    "start": 2274.0,
+    "end": 2275.9,
+    "text": "So this checks."
+  },
+  {
+    "start": 2275.9,
+    "end": 2281.3,
+    "text": "And indeed, we have this equality here."
+  },
+  {
+    "start": 2281.3,
+    "end": 2284.1,
+    "text": "We have verified that it is true."
+  },
+  {
+    "start": 2284.1,
+    "end": 2285.4,
+    "text": "One particular consequence."
+  },
+  {
+    "start": 2286.0,
+    "end": 2289.9,
+    "text": "of the equality that we derived is the following."
+  },
+  {
+    "start": 2289.9,
+    "end": 2295.0,
+    "text": "Since this term here is always non-negative,"
+  },
+  {
+    "start": 2295.0,
+    "end": 2299.6,
+    "text": "this means that the"
+  },
+  {
+    "start": 2299.8,
+    "end": 2304.3,
+    "text": "probability of A union B is always less than or equal to"
+  },
+  {
+    "start": 2304.3,
+    "end": 2308.0,
+    "text": "the probability of A plus the probability of B."
+  },
+  {
+    "start": 2308.0,
+    "end": 2311.6,
+    "text": "This inequality here is quite useful whenever we want to"
+  },
+  {
+    "start": 2311.6,
+    "end": 2314.1,
+    "text": "argue that a certain probability is smaller than"
+  },
+  {
+    "start": 2314.1,
+    "end": 2316.2,
+    "text": "something, and it has a name."
+  },
+  {
+    "start": 2316.2,
+    "end": 2318.1,
+    "text": "It's called the union bound."
+  },
+  {
+    "start": 2323.5,
+    "end": 2328.4,
+    "text": "We finally consider one last consequence of our axioms."
+  },
+  {
+    "start": 2328.4,
+    "end": 2332.3,
+    "text": "And namely, we're going to derive an expression, a way of"
+  },
+  {
+    "start": 2332.3,
+    "end": 2337.3,
+    "text": "calculating the probability of a union of three sets, not"
+  },
+  {
+    "start": 2337.3,
+    "end": 2339.6,
+    "text": "necessarily disjoint."
+  },
+  {
+    "start": 2339.6,
+    "end": 2342.7,
+    "text": "So we have our sample space."
+  },
+  {
+    "start": 2342.7,
+    "end": 2346.3,
+    "text": "And within the sample space, there are three sets."
+  },
+  {
+    "start": 2346.3,
+    "end": 2353.1,
+    "text": "Set A, set B, and set C."
+  },
+  {
+    "start": 2357.1,
+    "end": 2361.0,
+    "text": "We're going to use a set-theoretic relation."
+  },
+  {
+    "start": 2361.0,
+    "end": 2366.6,
+    "text": "We're going to express the union of these three sets as"
+  },
+  {
+    "start": 2366.6,
+    "end": 2371.1,
+    "text": "the union of three disjoint pieces."
+  },
+  {
+    "start": 2371.1,
+    "end": 2374.7,
+    "text": "What are these disjoint pieces?"
+  },
+  {
+    "start": 2374.7,
+    "end": 2383.8,
+    "text": "One piece is the set A itself."
+  },
+  {
+    "start": 2383.8,
+    "end": 2390.3,
+    "text": "The second piece is going to be that part of B which is"
+  },
+  {
+    "start": 2393.0,
+    "end": 2401.3,
+    "text": "So this is the intersection of B with the complement of A."
+  },
+  {
+    "start": 2401.3,
+    "end": 2409.3,
+    "text": "The third piece is going to be whatever is left in order to"
+  },
+  {
+    "start": 2409.3,
+    "end": 2411.1,
+    "text": "form the union of the three sets."
+  },
+  {
+    "start": 2411.1,
+    "end": 2416.5,
+    "text": "What is left is that part of C that does not belong to A"
+  },
+  {
+    "start": 2416.5,
+    "end": 2422.9,
+    "text": "and that does not belong into B. So that part is C"
+  },
+  {
+    "start": 2425.6,
+    "end": 2428.9,
+    "text": "and B complement."
+  },
+  {
+    "start": 2428.9,
+    "end": 2433.2,
+    "text": "Now this set here, of course, is the same as that set,"
+  },
+  {
+    "start": 2433.2,
+    "end": 2435.9,
+    "text": "because intersection of two sets is the same no matter in"
+  },
+  {
+    "start": 2435.9,
+    "end": 2438.2,
+    "text": "which order we take the two sets."
+  },
+  {
+    "start": 2438.2,
+    "end": 2441.8,
+    "text": "And similarly, the set that we have here is the same one"
+  },
+  {
+    "start": 2441.8,
+    "end": 2444.6,
+    "text": "that appears in that expression."
+  },
+  {
+    "start": 2444.6,
+    "end": 2447.4,
+    "text": "Now we notice that these three pieces, the red, the blue,"
+  },
+  {
+    "start": 2447.4,
+    "end": 2450.2,
+    "text": "and the green, are disjoint from each other."
+  },
+  {
+    "start": 2455.3,
+    "end": 2461.8,
+    "text": "this union here, is going to be the sum of the probabilities"
+  },
+  {
+    "start": 2461.8,
+    "end": 2463.9,
+    "text": "of the three pieces."
+  },
+  {
+    "start": 2463.9,
+    "end": 2466.2,
+    "text": "And that's exactly the expression"
+  },
+  {
+    "start": 2466.2,
+    "end": 2470.9,
+    "text": "that we have up here."
+  },
+  {
+    "start": 2470.9,
+    "end": 2475.1,
+    "text": "Let us now move from the abstracts to the concrete."
+  },
+  {
+    "start": 2475.1,
+    "end": 2477.7,
+    "text": "Recall the example that we discussed earlier, where we"
+  },
+  {
+    "start": 2477.7,
+    "end": 2481.4,
+    "text": "have two rolls of a tetrahedral die, so there are 16"
+  },
+  {
+    "start": 2481.4,
+    "end": 2485.2,
+    "text": "possible outcomes illustrated in this diagram."
+  },
+  {
+    "start": 2486.5,
+    "end": 2490.2,
+    "text": "Now we need to specify a probability law, some kind of"
+  },
+  {
+    "start": 2490.2,
+    "end": 2492.3,
+    "text": "probability assignment."
+  },
+  {
+    "start": 2492.3,
+    "end": 2495.8,
+    "text": "To keep things simple, we're going to make the assumption"
+  },
+  {
+    "start": 2495.8,
+    "end": 2500.9,
+    "text": "that the 16 possible outcomes are all equally likely, and"
+  },
+  {
+    "start": 2500.9,
+    "end": 2505.8,
+    "text": "each outcome has a probability of 1 over 16."
+  },
+  {
+    "start": 2505.8,
+    "end": 2509.0,
+    "text": "Given this assumption, we will now proceed to calculate"
+  },
+  {
+    "start": 2509.0,
+    "end": 2511.5,
+    "text": "certain probabilities."
+  },
+  {
+    "start": 2515.3,
+    "end": 2518.9,
+    "text": "x which stands for the result of the first role"
+  },
+  {
+    "start": 2518.9,
+    "end": 2523.1,
+    "text": "is equal to 1. The way to calculate this probability"
+  },
+  {
+    "start": 2523.1,
+    "end": 2525.9,
+    "text": "is to identify what exactly"
+  },
+  {
+    "start": 2525.9,
+    "end": 2530.1,
+    "text": "that event is in our picture of the sample space"
+  },
+  {
+    "start": 2530.1,
+    "end": 2534.6,
+    "text": "and then calculate. The event that x is equal to 1"
+  },
+  {
+    "start": 2534.6,
+    "end": 2537.6,
+    "text": "can happen in four different ways"
+  },
+  {
+    "start": 2537.6,
+    "end": 2541.1,
+    "text": "that correspond to these four particular"
+  },
+  {
+    "start": 2542.8,
+    "end": 2548.5,
+    "text": "Each one of these outcomes has a probability of 1 over 16. The probability"
+  },
+  {
+    "start": 2548.5,
+    "end": 2553.7,
+    "text": "of this event is the sum of the probabilities of the outcomes that it"
+  },
+  {
+    "start": 2553.7,
+    "end": 2565.7,
+    "text": "contains, so it is 4 times 1 over 16 equals to 1 fourth. Let's now z stand for"
+  },
+  {
+    "start": 2565.7,
+    "end": 2574.9,
+    "text": "the smaller of the two numbers that came up in our two rows. So for example, if x"
+  },
+  {
+    "start": 2573.5,
+    "end": 2584.2,
+    "text": "2 and y is equal to 3 then z is equal to 2, which is the smaller of the two. Let"
+  },
+  {
+    "start": 2584.2,
+    "end": 2589.5,
+    "text": "us try to calculate the probability that the smaller of the two outcomes is equal"
+  },
+  {
+    "start": 2589.5,
+    "end": 2596.4,
+    "text": "to 4. Now for the smaller of the two outcomes to be equal to 4 we must have"
+  },
+  {
+    "start": 2603.9,
+    "end": 2607.2,
+    "text": "that this particular event can happen."
+  },
+  {
+    "start": 2607.2,
+    "end": 2610.6,
+    "text": "So since there's only one outcome that makes the event"
+  },
+  {
+    "start": 2610.6,
+    "end": 2612.8,
+    "text": "happen, the probability of this event"
+  },
+  {
+    "start": 2612.8,
+    "end": 2614.9,
+    "text": "is the probability of that outcome"
+  },
+  {
+    "start": 2614.9,
+    "end": 2619.5,
+    "text": "and is equal to 1 over 16."
+  },
+  {
+    "start": 2619.5,
+    "end": 2622.7,
+    "text": "For another example, let's calculate the probability"
+  },
+  {
+    "start": 2622.7,
+    "end": 2625.4,
+    "text": "that the minimum is equal to 2."
+  },
+  {
+    "start": 2625.4,
+    "end": 2627.9,
+    "text": "What does it mean that the minimum is equal to 2?"
+  },
+  {
+    "start": 2627.9,
+    "end": 2629.9,
+    "text": "It means that one of the dies."
+  },
+  {
+    "start": 2630.4,
+    "end": 2637.6,
+    "text": "resulted in a 2, and the other die resulted in a number that's 2 or larger. So we could have both"
+  },
+  {
+    "start": 2637.6,
+    "end": 2647.3,
+    "text": "equal to 2, we could have x equal to 2 but y larger, or we could have y equal to 2 and x"
+  },
+  {
+    "start": 2647.3,
+    "end": 2654.9,
+    "text": "something larger. This green event, this green set, is the set of all outcomes for which"
+  },
+  {
+    "start": 2658.5,
+    "end": 2661.3,
+    "text": "There's a total of five such outcomes."
+  },
+  {
+    "start": 2661.3,
+    "end": 2664.8,
+    "text": "Each one of them has probability 1 over 16."
+  },
+  {
+    "start": 2664.8,
+    "end": 2668.7,
+    "text": "And we have discussed that for finite sets, the probability"
+  },
+  {
+    "start": 2668.7,
+    "end": 2672.6,
+    "text": "of a finite set is the sum of the probabilities of the"
+  },
+  {
+    "start": 2672.6,
+    "end": 2674.0,
+    "text": "elements of that set."
+  },
+  {
+    "start": 2674.0,
+    "end": 2676.9,
+    "text": "So we have five elements here, each one with"
+  },
+  {
+    "start": 2676.9,
+    "end": 2679.0,
+    "text": "probability 1 over 16."
+  },
+  {
+    "start": 2679.0,
+    "end": 2683.4,
+    "text": "And this is the answer to this problem."
+  },
+  {
+    "start": 2683.4,
+    "end": 2686.7,
+    "text": "This particular example that we saw here."
+  },
+  {
+    "start": 2687.0,
+    "end": 2693.1,
+    "text": "is a special case of what is called a discrete uniform law."
+  },
+  {
+    "start": 2693.1,
+    "end": 2696.9,
+    "text": "In a discrete uniform law, we have a sample space,"
+  },
+  {
+    "start": 2696.9,
+    "end": 2703.4,
+    "text": "which is finite, and it has n elements."
+  },
+  {
+    "start": 2703.4,
+    "end": 2708.1,
+    "text": "And we assume that these n elements are equally likely."
+  },
+  {
+    "start": 2708.1,
+    "end": 2710.5,
+    "text": "Now, since the probability of omega,"
+  },
+  {
+    "start": 2710.5,
+    "end": 2713.9,
+    "text": "the probability of the entire sample space, is equal to 1,"
+  },
+  {
+    "start": 2714.4,
+    "end": 2719.7,
+    "text": "This means that each one of these elements must have probability 1 over n."
+  },
+  {
+    "start": 2720.9,
+    "end": 2728.8,
+    "text": "That's the only way that the sum of the probabilities of the different outcomes would be equal to 1 as required by the"
+  },
+  {
+    "start": 2729.3,
+    "end": 2731.3,
+    "text": "normalization axiom."
+  },
+  {
+    "start": 2731.4,
+    "end": 2739.9,
+    "text": "Consider now some subset of the sample space, an event A, that has exactly k elements. What is the probability of the set A?"
+  },
+  {
+    "start": 2740.6,
+    "end": 2744.5,
+    "text": "It's the sum of the probabilities of its elements."
+  },
+  {
+    "start": 2744.9,
+    "end": 2752.6,
+    "text": "There are k elements, and each one of them has a probability of 1 over n, and this way"
+  },
+  {
+    "start": 2752.6,
+    "end": 2759.1,
+    "text": "we can find the probability of the set A. So when we have a discrete uniform probability"
+  },
+  {
+    "start": 2759.1,
+    "end": 2765.8,
+    "text": "law, we can find, we can calculate probabilities by simply counting the number of elements"
+  },
+  {
+    "start": 2767.4,
+    "end": 2770.3,
+    "text": "n, finding the number n, and counting the number of"
+  },
+  {
+    "start": 2770.3,
+    "end": 2774.2,
+    "text": "elements of the set A. That's the reason why counting will"
+  },
+  {
+    "start": 2774.2,
+    "end": 2777.3,
+    "text": "turn out to be an important skill, and there will be a"
+  },
+  {
+    "start": 2777.3,
+    "end": 2783.2,
+    "text": "whole lecture devoted to this particular topic."
+  },
+  {
+    "start": 2783.2,
+    "end": 2786.6,
+    "text": "We will now go through a probability calculation for the"
+  },
+  {
+    "start": 2786.6,
+    "end": 2788.8,
+    "text": "case where we have a continuous sample space."
+  },
+  {
+    "start": 2789.5,
+    "end": 2793.0,
+    "text": "We revisit our earlier example, in which we were"
+  },
+  {
+    "start": 2793.0,
+    "end": 2798.0,
+    "text": "throwing a dart into a square target, the square target"
+  },
+  {
+    "start": 2798.0,
+    "end": 2799.2,
+    "text": "being the unit square."
+  },
+  {
+    "start": 2799.2,
+    "end": 2802.2,
+    "text": "And we were guaranteed that our dart would fall somewhere"
+  },
+  {
+    "start": 2802.2,
+    "end": 2803.9,
+    "text": "inside this set."
+  },
+  {
+    "start": 2803.9,
+    "end": 2807.2,
+    "text": "So our sample space is the unit square itself."
+  },
+  {
+    "start": 2807.2,
+    "end": 2810.8,
+    "text": "We have a description of the sample space, but we do not"
+  },
+  {
+    "start": 2810.8,
+    "end": 2812.3,
+    "text": "yet have a probability law."
+  },
+  {
+    "start": 2812.3,
+    "end": 2814.5,
+    "text": "We need to specify one."
+  },
+  {
+    "start": 2816.6,
+    "end": 2818.8,
+    "text": "could be arbitrary."
+  },
+  {
+    "start": 2818.8,
+    "end": 2822.0,
+    "text": "It's up to us to choose how to model a certain situation."
+  },
+  {
+    "start": 2822.7,
+    "end": 2825.9,
+    "text": "And to keep things simple, we're going to assume that our"
+  },
+  {
+    "start": 2825.9,
+    "end": 2831.1,
+    "text": "probability law is a uniform one, which means that the"
+  },
+  {
+    "start": 2831.1,
+    "end": 2834.4,
+    "text": "probability of any particular subset of the sample space is"
+  },
+  {
+    "start": 2834.4,
+    "end": 2837.1,
+    "text": "going to be the area of that subset."
+  },
+  {
+    "start": 2837.1,
+    "end": 2840.9,
+    "text": "So if we have some subset lying somewhere here, and we"
+  },
+  {
+    "start": 2840.9,
+    "end": 2844.3,
+    "text": "ask what is the probability that we fall into that subset,"
+  },
+  {
+    "start": 2844.3,
+    "end": 2847.6,
+    "text": "the probability is exactly the area of"
+  },
+  {
+    "start": 2847.6,
+    "end": 2849.0,
+    "text": "that particular subset."
+  },
+  {
+    "start": 2849.8,
+    "end": 2854.1,
+    "text": "Once more, this is an arbitrary choice of a probability law."
+  },
+  {
+    "start": 2854.1,
+    "end": 2857.3,
+    "text": "There's nothing in our assumption so far that would"
+  },
+  {
+    "start": 2857.3,
+    "end": 2859.5,
+    "text": "force us to make this particular choice."
+  },
+  {
+    "start": 2859.5,
+    "end": 2863.4,
+    "text": "And we just use it for the purposes of this example."
+  },
+  {
+    "start": 2863.4,
+    "end": 2867.4,
+    "text": "So now let us calculate some probabilities."
+  },
+  {
+    "start": 2867.4,
+    "end": 2869.8,
+    "text": "Let us look at this event."
+  },
+  {
+    "start": 2869.8,
+    "end": 2875.4,
+    "text": "This is the event that the sum of the two numbers that we"
+  },
+  {
+    "start": 2879.2,
+    "end": 2883.2,
+    "text": "It is always useful to work in terms of a picture and to"
+  },
+  {
+    "start": 2883.2,
+    "end": 2887.3,
+    "text": "depict that event in a picture of the sample space."
+  },
+  {
+    "start": 2887.3,
+    "end": 2891.8,
+    "text": "So in terms of that sample space, the points that make"
+  },
+  {
+    "start": 2891.8,
+    "end": 2898.8,
+    "text": "this event to be true are just a triangle that lies below"
+  },
+  {
+    "start": 2898.8,
+    "end": 2904.7,
+    "text": "the line where this is the line that x plus y equals to"
+  },
+  {
+    "start": 2905.8,
+    "end": 2910.4,
+    "text": "Anything below that line, these are the outcomes that make"
+  },
+  {
+    "start": 2910.4,
+    "end": 2912.1,
+    "text": "this event happen."
+  },
+  {
+    "start": 2912.1,
+    "end": 2914.2,
+    "text": "So we're trying to find the probability"
+  },
+  {
+    "start": 2914.2,
+    "end": 2915.5,
+    "text": "of this red event."
+  },
+  {
+    "start": 2915.5,
+    "end": 2919.2,
+    "text": "We have assumed that probability is equal to area."
+  },
+  {
+    "start": 2919.2,
+    "end": 2922.4,
+    "text": "Therefore, the probability we're trying to calculate is"
+  },
+  {
+    "start": 2922.4,
+    "end": 2924.3,
+    "text": "the area of a triangle."
+  },
+  {
+    "start": 2924.3,
+    "end": 2929.0,
+    "text": "And the area of a triangle is 1 half times the base of the"
+  },
+  {
+    "start": 2929.0,
+    "end": 2933.2,
+    "text": "triangle, which is 1 half in our case, times the height of"
+  },
+  {
+    "start": 2934.5,
+    "end": 2936.8,
+    "text": "which is again 1 half in our case."
+  },
+  {
+    "start": 2936.8,
+    "end": 2942.0,
+    "text": "And the end result is 1 over 8."
+  },
+  {
+    "start": 2942.0,
+    "end": 2946.5,
+    "text": "Let us now calculate another probability."
+  },
+  {
+    "start": 2946.5,
+    "end": 2949.6,
+    "text": "Now, this is an event that consists"
+  },
+  {
+    "start": 2949.6,
+    "end": 2952.4,
+    "text": "of only a single element."
+  },
+  {
+    "start": 2952.4,
+    "end": 2958.9,
+    "text": "We take the point 0.5, 0.3, which sits somewhere here."
+  },
+  {
+    "start": 2958.9,
+    "end": 2962.6,
+    "text": "The event of interest is a set, but that set"
+  },
+  {
+    "start": 2962.6,
+    "end": 2964.2,
+    "text": "consists of a single point."
+  },
+  {
+    "start": 2964.4,
+    "end": 2967.3,
+    "text": "So we're asking for the probability that our dart"
+  },
+  {
+    "start": 2967.3,
+    "end": 2971.5,
+    "text": "falls exactly on top of that point."
+  },
+  {
+    "start": 2971.5,
+    "end": 2972.4,
+    "text": "What is it?"
+  },
+  {
+    "start": 2972.4,
+    "end": 2975.4,
+    "text": "Well, it is the area of a set that"
+  },
+  {
+    "start": 2975.4,
+    "end": 2976.9,
+    "text": "consists of a single point."
+  },
+  {
+    "start": 2976.9,
+    "end": 2979.2,
+    "text": "What is the area of a single point?"
+  },
+  {
+    "start": 2979.2,
+    "end": 2981.1,
+    "text": "It is 0."
+  },
+  {
+    "start": 2981.1,
+    "end": 2983.4,
+    "text": "And similarly, for any other single point"
+  },
+  {
+    "start": 2983.4,
+    "end": 2986.3,
+    "text": "inside that sample space that we might have considered,"
+  },
+  {
+    "start": 2986.3,
+    "end": 2990.6,
+    "text": "the answer is going to be 0."
+  },
+  {
+    "start": 2990.6,
+    "end": 2993.7,
+    "text": "Let us now abstract from this example,"
+  },
+  {
+    "start": 2993.7,
+    "end": 2995.4,
+    "text": "as well as the previous one."
+  },
+  {
+    "start": 2995.9,
+    "end": 3003.7,
+    "text": "and note the following. Probability calculations involve a sequence of four steps. Starting"
+  },
+  {
+    "start": 3003.7,
+    "end": 3009.8,
+    "text": "with the word description of a problem, of a probabilistic experiment, we first write"
+  },
+  {
+    "start": 3013.1,
+    "end": 3015.5,
+    "text": "We specify a probability law."
+  },
+  {
+    "start": 3015.5,
+    "end": 3018.3,
+    "text": "Let me emphasize again here that this step has some"
+  },
+  {
+    "start": 3018.3,
+    "end": 3020.1,
+    "text": "arbitrariness in it."
+  },
+  {
+    "start": 3020.1,
+    "end": 3022.7,
+    "text": "You can choose any probability law you like, although"
+  },
+  {
+    "start": 3022.7,
+    "end": 3025.6,
+    "text": "for your results to be useful, it would be good if your"
+  },
+  {
+    "start": 3025.6,
+    "end": 3028.5,
+    "text": "probability law captures the real world phenomenon you're"
+  },
+  {
+    "start": 3028.5,
+    "end": 3030.2,
+    "text": "trying to model."
+  },
+  {
+    "start": 3030.2,
+    "end": 3033.9,
+    "text": "Typically, you're interested in calculating the probability"
+  },
+  {
+    "start": 3033.9,
+    "end": 3036.3,
+    "text": "of some event."
+  },
+  {
+    "start": 3036.3,
+    "end": 3039.4,
+    "text": "That event may be described in some loose manner, so you"
+  },
+  {
+    "start": 3039.4,
+    "end": 3040.8,
+    "text": "need to describe it mathematically."
+  },
+  {
+    "start": 3041.8,
+    "end": 3045.6,
+    "text": "And if possible, it's always good to describe it in terms"
+  },
+  {
+    "start": 3045.6,
+    "end": 3046.8,
+    "text": "of a picture."
+  },
+  {
+    "start": 3046.8,
+    "end": 3049.1,
+    "text": "Pictures are immensely useful when"
+  },
+  {
+    "start": 3049.1,
+    "end": 3051.3,
+    "text": "going through this process."
+  },
+  {
+    "start": 3051.3,
+    "end": 3056.1,
+    "text": "And finally, the last step is to go ahead and calculate the"
+  },
+  {
+    "start": 3056.1,
+    "end": 3058.9,
+    "text": "probability of the event of interest."
+  },
+  {
+    "start": 3058.9,
+    "end": 3061.8,
+    "text": "Now, a probability law in principle specifies the"
+  },
+  {
+    "start": 3061.8,
+    "end": 3064.3,
+    "text": "probability of every event, and there is nothing."
+  },
+  {
+    "start": 3064.7,
+    "end": 3065.9,
+    "text": "else to do."
+  },
+  {
+    "start": 3065.9,
+    "end": 3068.8,
+    "text": "But quite often, the probability law will be given"
+  },
+  {
+    "start": 3068.8,
+    "end": 3071.0,
+    "text": "in some implicit manner."
+  },
+  {
+    "start": 3071.0,
+    "end": 3074.5,
+    "text": "For example, by specifying the probabilities of only some of"
+  },
+  {
+    "start": 3074.5,
+    "end": 3075.5,
+    "text": "the events."
+  },
+  {
+    "start": 3075.5,
+    "end": 3078.4,
+    "text": "In that case, you may have to do some additional work to"
+  },
+  {
+    "start": 3078.4,
+    "end": 3081.5,
+    "text": "find the probability of the particular event that you"
+  },
+  {
+    "start": 3081.5,
+    "end": 3083.0,
+    "text": "care about."
+  },
+  {
+    "start": 3083.0,
+    "end": 3086.9,
+    "text": "This last step sometimes will be easy."
+  },
+  {
+    "start": 3086.9,
+    "end": 3089.4,
+    "text": "Sometimes it may be complicated."
+  },
+  {
+    "start": 3089.4,
+    "end": 3091.2,
+    "text": "But in either case,"
+  },
+  {
+    "start": 3091.3,
+    "end": 3095.0,
+    "text": "by following this four-step procedure."
+  },
+  {
+    "start": 3095.0,
+    "end": 3098.9,
+    "text": "And by being systematic, you will always be able to come up"
+  },
+  {
+    "start": 3098.9,
+    "end": 3103.6,
+    "text": "with a single correct answer."
+  },
+  {
+    "start": 3103.6,
+    "end": 3106.7,
+    "text": "We have seen so far an example of a probability law on a"
+  },
+  {
+    "start": 3106.7,
+    "end": 3110.5,
+    "text": "discrete and finite sample space, as well as an example"
+  },
+  {
+    "start": 3110.5,
+    "end": 3113.5,
+    "text": "with an infinite and continuous sample space."
+  },
+  {
+    "start": 3113.5,
+    "end": 3117.8,
+    "text": "Let us now look at an example involving a discrete but"
+  },
+  {
+    "start": 3117.8,
+    "end": 3119.2,
+    "text": "infinite sample space."
+  },
+  {
+    "start": 3120.0,
+    "end": 3123.0,
+    "text": "We carry out an experiment whose outcome is an"
+  },
+  {
+    "start": 3123.0,
+    "end": 3125.8,
+    "text": "arbitrary positive integer."
+  },
+  {
+    "start": 3125.8,
+    "end": 3128.3,
+    "text": "As an example of such an experiment, suppose that we"
+  },
+  {
+    "start": 3128.3,
+    "end": 3131.6,
+    "text": "keep tossing a coin, and the outcome is the number of"
+  },
+  {
+    "start": 3131.6,
+    "end": 3135.8,
+    "text": "tosses until we observe heads for the first time."
+  },
+  {
+    "start": 3135.8,
+    "end": 3139.1,
+    "text": "The first heads might appear in the first toss, or the"
+  },
+  {
+    "start": 3139.1,
+    "end": 3142.1,
+    "text": "second, or the third, and so on."
+  },
+  {
+    "start": 3142.1,
+    "end": 3145.9,
+    "text": "So in this example, any positive integer is possible,"
+  },
+  {
+    "start": 3145.9,
+    "end": 3148.1,
+    "text": "and so our sample space is infinite."
+  },
+  {
+    "start": 3148.9,
+    "end": 3152.4,
+    "text": "Let us now specify a probability law."
+  },
+  {
+    "start": 3152.4,
+    "end": 3155.7,
+    "text": "A probability law should determine the probability of"
+  },
+  {
+    "start": 3155.7,
+    "end": 3159.9,
+    "text": "every event, of every subset of the sample space."
+  },
+  {
+    "start": 3159.9,
+    "end": 3163.4,
+    "text": "That is, the probability of every set of positive"
+  },
+  {
+    "start": 3163.4,
+    "end": 3164.8,
+    "text": "integers."
+  },
+  {
+    "start": 3164.8,
+    "end": 3169.2,
+    "text": "But instead, I will just tell you the probability of events"
+  },
+  {
+    "start": 3169.2,
+    "end": 3170.8,
+    "text": "that contain a single element."
+  },
+  {
+    "start": 3171.5,
+    "end": 3176.1,
+    "text": "I'm going to tell you that there is probability 1 over 2"
+  },
+  {
+    "start": 3176.1,
+    "end": 3181.0,
+    "text": "to the n that the outcome is equal to n."
+  },
+  {
+    "start": 3181.0,
+    "end": 3182.8,
+    "text": "Is this good enough?"
+  },
+  {
+    "start": 3182.8,
+    "end": 3186.8,
+    "text": "Is this information enough to determine the probability of"
+  },
+  {
+    "start": 3186.8,
+    "end": 3189.4,
+    "text": "any subset?"
+  },
+  {
+    "start": 3189.4,
+    "end": 3191.9,
+    "text": "Before we look into that question, let us first do a"
+  },
+  {
+    "start": 3191.9,
+    "end": 3195.3,
+    "text": "quick sanity check to see whether these numbers that"
+  },
+  {
+    "start": 3195.3,
+    "end": 3198.4,
+    "text": "were given look like legitimate probabilities."
+  },
+  {
+    "start": 3198.4,
+    "end": 3200.4,
+    "text": "Do they add to 1?"
+  },
+  {
+    "start": 3202.0,
+    "end": 3208.7,
+    "text": "So the sum over all the possible values of n of the"
+  },
+  {
+    "start": 3208.7,
+    "end": 3212.5,
+    "text": "probabilities that we are given, which is an infinite"
+  },
+  {
+    "start": 3212.5,
+    "end": 3218.4,
+    "text": "sum starting from 1, all the way up to infinity of 1 over"
+  },
+  {
+    "start": 3218.4,
+    "end": 3221.5,
+    "text": "2 to the n, is equal to the following."
+  },
+  {
+    "start": 3221.5,
+    "end": 3226.9,
+    "text": "First, we take out a factor of 1 half from all these terms,"
+  },
+  {
+    "start": 3226.9,
+    "end": 3230.2,
+    "text": "which reduces the exponent from n to minus 1."
+  },
+  {
+    "start": 3230.9,
+    "end": 3236.6,
+    "text": "This is the same as running the sum from n equal 0 to"
+  },
+  {
+    "start": 3236.6,
+    "end": 3242.2,
+    "text": "infinity of 1 half and to the n."
+  },
+  {
+    "start": 3242.2,
+    "end": 3247.4,
+    "text": "And now we have a usual infinite geometric series."
+  },
+  {
+    "start": 3247.4,
+    "end": 3250.6,
+    "text": "And we have a formula for this."
+  },
+  {
+    "start": 3250.6,
+    "end": 3256.7,
+    "text": "The geometric series has a value of 1 minus the number"
+  },
+  {
+    "start": 3261.9,
+    "end": 3265.7,
+    "text": "And after we do the arithmetic, this turns out to be"
+  },
+  {
+    "start": 3265.7,
+    "end": 3267.2,
+    "text": "equal to 1."
+  },
+  {
+    "start": 3267.2,
+    "end": 3273.9,
+    "text": "So indeed, it appears that we have the basic elements of"
+  },
+  {
+    "start": 3273.9,
+    "end": 3277.3,
+    "text": "what it would take to have a legitimate probability law."
+  },
+  {
+    "start": 3277.3,
+    "end": 3280.9,
+    "text": "But now, let us look into how we might calculate the"
+  },
+  {
+    "start": 3280.9,
+    "end": 3283.5,
+    "text": "probability of some general event."
+  },
+  {
+    "start": 3283.5,
+    "end": 3288.4,
+    "text": "For example, the probability that the outcome is even."
+  },
+  {
+    "start": 3288.4,
+    "end": 3290.1,
+    "text": "We proceed as follows."
+  },
+  {
+    "start": 3290.8,
+    "end": 3294.2,
+    "text": "The probability that the outcome is even, this is the"
+  },
+  {
+    "start": 3294.2,
+    "end": 3300.5,
+    "text": "probability of an infinite set that consists of all the"
+  },
+  {
+    "start": 3300.5,
+    "end": 3305.3,
+    "text": "even integers."
+  },
+  {
+    "start": 3305.3,
+    "end": 3310.1,
+    "text": "We can write this set as the union of"
+  },
+  {
+    "start": 3310.3,
+    "end": 3316.0,
+    "text": "lots of little sets that contain a single element each."
+  },
+  {
+    "start": 3316.0,
+    "end": 3319.5,
+    "text": "So it's the set containing the number 2, the set containing"
+  },
+  {
+    "start": 3319.5,
+    "end": 3323.3,
+    "text": "the number 4, the set containing the number 6, and"
+  },
+  {
+    "start": 3323.3,
+    "end": 3326.9,
+    "text": "so on."
+  },
+  {
+    "start": 3326.9,
+    "end": 3330.1,
+    "text": "At this point, we notice that we're talking about the"
+  },
+  {
+    "start": 3330.1,
+    "end": 3332.9,
+    "text": "probability of a union of sets."
+  },
+  {
+    "start": 3332.9,
+    "end": 3335.5,
+    "text": "And these sets are disjoint because they contain"
+  },
+  {
+    "start": 3335.5,
+    "end": 3337.7,
+    "text": "different elements."
+  },
+  {
+    "start": 3342.0,
+    "end": 3346.8,
+    "text": "And say that this is the probability of obtaining a 2"
+  },
+  {
+    "start": 3346.8,
+    "end": 3350.4,
+    "text": "plus the probability of obtaining a 4 plus the"
+  },
+  {
+    "start": 3350.4,
+    "end": 3355.3,
+    "text": "probability of obtaining a 6, and so on."
+  },
+  {
+    "start": 3355.3,
+    "end": 3358.6,
+    "text": "If you're curious about doing this calculation and actually"
+  },
+  {
+    "start": 3358.6,
+    "end": 3362.4,
+    "text": "obtaining a numerical answer, you would proceed as follows."
+  },
+  {
+    "start": 3362.4,
+    "end": 3367.8,
+    "text": "You notice that this is 1 over 2 to the second power"
+  },
+  {
+    "start": 3370.1,
+    "end": 3377.1,
+    "text": "to the fourth power plus 1 over 2 to the sixth power, and so on."
+  },
+  {
+    "start": 3377.1,
+    "end": 3383.6,
+    "text": "Now you factor out a factor of 1 fourth."
+  },
+  {
+    "start": 3383.6,
+    "end": 3387.6,
+    "text": "And what you're left is 1 plus 1 over 2"
+  },
+  {
+    "start": 3387.6,
+    "end": 3390.5,
+    "text": "to the second power, which is 1 fourth,"
+  },
+  {
+    "start": 3390.5,
+    "end": 3396.4,
+    "text": "plus 1 over 2 to the fourth power,"
+  },
+  {
+    "start": 3400.8,
+    "end": 3402.6,
+    "text": "And so on."
+  },
+  {
+    "start": 3402.6,
+    "end": 3407.7,
+    "text": "And now we have 1 fourth times the infinite sum of a"
+  },
+  {
+    "start": 3407.7,
+    "end": 3415.6,
+    "text": "geometric series, which gives us 1 over 1 minus 1 fourth."
+  },
+  {
+    "start": 3415.6,
+    "end": 3419.2,
+    "text": "And after you do the algebra, you obtain a numerical answer"
+  },
+  {
+    "start": 3419.2,
+    "end": 3423.2,
+    "text": "which is equal to 1 third."
+  },
+  {
+    "start": 3423.2,
+    "end": 3426.5,
+    "text": "But leaving the details of the calculation aside, the more"
+  },
+  {
+    "start": 3426.5,
+    "end": 3429.8,
+    "text": "important question I want to address is the following."
+  },
+  {
+    "start": 3429.8,
+    "end": 3431.3,
+    "text": "Is this calculation correct?"
+  },
+  {
+    "start": 3432.1,
+    "end": 3437.0,
+    "text": "We seem to have used an additivity property at this"
+  },
+  {
+    "start": 3437.0,
+    "end": 3443.6,
+    "text": "point, but the additivity properties that we have in our"
+  },
+  {
+    "start": 3443.6,
+    "end": 3448.9,
+    "text": "hands at this point only talk about disjoint unions of"
+  },
+  {
+    "start": 3448.9,
+    "end": 3450.5,
+    "text": "finitely many subsets."
+  },
+  {
+    "start": 3451.0,
+    "end": 3454.4,
+    "text": "Our initial axiom talked about a disjoint union of two"
+  },
+  {
+    "start": 3454.4,
+    "end": 3457.4,
+    "text": "subsets, and then later on we established a similar"
+  },
+  {
+    "start": 3457.4,
+    "end": 3461.7,
+    "text": "property for a disjoint union of finitely many subsets."
+  },
+  {
+    "start": 3461.7,
+    "end": 3465.6,
+    "text": "But here we're talking about the union of"
+  },
+  {
+    "start": 3465.6,
+    "end": 3468.6,
+    "text": "infinitely many subsets."
+  },
+  {
+    "start": 3468.6,
+    "end": 3474.3,
+    "text": "So this step here is not really allowed by what we"
+  },
+  {
+    "start": 3474.3,
+    "end": 3476.0,
+    "text": "have in our hands."
+  },
+  {
+    "start": 3476.0,
+    "end": 3479.4,
+    "text": "On the other hand, we would like our theory to allow this"
+  },
+  {
+    "start": 3481.2,
+    "end": 3486.0,
+    "text": "The way out of this dilemma is to introduce an additional"
+  },
+  {
+    "start": 3486.0,
+    "end": 3492.6,
+    "text": "axiom that will indeed allow this kind of calculation."
+  },
+  {
+    "start": 3492.6,
+    "end": 3496.1,
+    "text": "The axiom that we introduce is the following."
+  },
+  {
+    "start": 3496.1,
+    "end": 3503.2,
+    "text": "If we have an infinite sequence of disjoint events, as for"
+  },
+  {
+    "start": 3503.2,
+    "end": 3506.9,
+    "text": "example in this picture, we have our sample space."
+  },
+  {
+    "start": 3507.5,
+    "end": 3513.0,
+    "text": "We have a first event A1, we have a second event A2, a third"
+  },
+  {
+    "start": 3513.0,
+    "end": 3517.6,
+    "text": "event A3, and so we keep continuing, and we have an"
+  },
+  {
+    "start": 3517.6,
+    "end": 3520.4,
+    "text": "infinite sequence of such events."
+  },
+  {
+    "start": 3520.4,
+    "end": 3526.0,
+    "text": "Then the probability of the union of these events, of these"
+  },
+  {
+    "start": 3526.0,
+    "end": 3529.6,
+    "text": "infinitely many events, is the sum of their"
+  },
+  {
+    "start": 3529.6,
+    "end": 3532.4,
+    "text": "individual probabilities."
+  },
+  {
+    "start": 3538.2,
+    "end": 3543.4,
+    "text": "Namely, these events, these sets that we're dealing with,"
+  },
+  {
+    "start": 3543.4,
+    "end": 3548.1,
+    "text": "can be arranged so that we can talk about the first event,"
+  },
+  {
+    "start": 3548.1,
+    "end": 3554.5,
+    "text": "A1, the second event, A2, the third one, A3, and so on."
+  },
+  {
+    "start": 3554.5,
+    "end": 3558.3,
+    "text": "To appreciate the issue that arises here and to see why"
+  },
+  {
+    "start": 3558.3,
+    "end": 3564.0,
+    "text": "the word sequence is so important, let us consider the"
+  },
+  {
+    "start": 3564.0,
+    "end": 3565.2,
+    "text": "following calculation."
+  },
+  {
+    "start": 3565.7,
+    "end": 3571.8,
+    "text": "Our sample space is the unit square."
+  },
+  {
+    "start": 3571.8,
+    "end": 3575.3,
+    "text": "And we consider a model where the probability of a set is"
+  },
+  {
+    "start": 3575.3,
+    "end": 3579.9,
+    "text": "its area, as in the examples that we considered earlier."
+  },
+  {
+    "start": 3579.9,
+    "end": 3583.6,
+    "text": "Let us now look at the probability of the overall"
+  },
+  {
+    "start": 3583.6,
+    "end": 3585.2,
+    "text": "sample space."
+  },
+  {
+    "start": 3585.2,
+    "end": 3588.2,
+    "text": "Our sample space is the unit square."
+  },
+  {
+    "start": 3589.3,
+    "end": 3595.6,
+    "text": "unit square can be thought of as the union of various sets"
+  },
+  {
+    "start": 3595.6,
+    "end": 3598.2,
+    "text": "that consist of single points."
+  },
+  {
+    "start": 3598.2,
+    "end": 3605.7,
+    "text": "So it's the union of subsets with one element each."
+  },
+  {
+    "start": 3605.7,
+    "end": 3610.1,
+    "text": "And it's a union taken over all the points in the unit"
+  },
+  {
+    "start": 3610.1,
+    "end": 3611.7,
+    "text": "square."
+  },
+  {
+    "start": 3611.4,
+    "end": 3614.6,
+    "text": "Then we think about additivity."
+  },
+  {
+    "start": 3614.6,
+    "end": 3618.5,
+    "text": "We observe that these subsets are disjoint."
+  },
+  {
+    "start": 3618.5,
+    "end": 3621.3,
+    "text": "If we're considering different points, then we get"
+  },
+  {
+    "start": 3621.3,
+    "end": 3623.9,
+    "text": "disjoint single element sets."
+  },
+  {
+    "start": 3623.9,
+    "end": 3627.3,
+    "text": "And then an additivity property would tell us that the"
+  },
+  {
+    "start": 3627.3,
+    "end": 3632.0,
+    "text": "probability of this union is the sum of the probabilities of"
+  },
+  {
+    "start": 3632.0,
+    "end": 3634.9,
+    "text": "the different single element subsets."
+  },
+  {
+    "start": 3636.3,
+    "end": 3640.4,
+    "text": "Now, as we discussed before, single element subsets have"
+  },
+  {
+    "start": 3640.4,
+    "end": 3645.1,
+    "text": "zero probability, so we have a sum of lots of zeros, and the"
+  },
+  {
+    "start": 3645.1,
+    "end": 3649.2,
+    "text": "sum of zeros should be equal to zero."
+  },
+  {
+    "start": 3649.2,
+    "end": 3652.2,
+    "text": "On the other hand, by the probability axioms, the"
+  },
+  {
+    "start": 3652.2,
+    "end": 3654.8,
+    "text": "probability of the entire sample space"
+  },
+  {
+    "start": 3654.8,
+    "end": 3656.7,
+    "text": "should be equal to 1."
+  },
+  {
+    "start": 3656.7,
+    "end": 3661.1,
+    "text": "And so we have established that 1 is equal to 0."
+  },
+  {
+    "start": 3661.1,
+    "end": 3663.1,
+    "text": "This looks like a paradox."
+  },
+  {
+    "start": 3663.1,
+    "end": 3664.6,
+    "text": "Is it?"
+  },
+  {
+    "start": 3664.5,
+    "end": 3669.1,
+    "text": "The catch is that there is nothing in the axioms we have"
+  },
+  {
+    "start": 3669.1,
+    "end": 3672.7,
+    "text": "introduced so far or the properties we have established"
+  },
+  {
+    "start": 3672.7,
+    "end": 3675.5,
+    "text": "that would justify this step."
+  },
+  {
+    "start": 3675.5,
+    "end": 3679.9,
+    "text": "So this step here is questionable."
+  },
+  {
+    "start": 3679.9,
+    "end": 3683.4,
+    "text": "You might argue that the unit square is the union of"
+  },
+  {
+    "start": 3683.4,
+    "end": 3685.5,
+    "text": "disjoint single element sets."
+  },
+  {
+    "start": 3686.7,
+    "end": 3690.3,
+    "text": "which is the case that we have in additivity axioms."
+  },
+  {
+    "start": 3690.3,
+    "end": 3693.9,
+    "text": "But the additivity axiom only applies when we have a"
+  },
+  {
+    "start": 3693.9,
+    "end": 3696.8,
+    "text": "sequence of events."
+  },
+  {
+    "start": 3696.8,
+    "end": 3699.6,
+    "text": "And this is not what we have here."
+  },
+  {
+    "start": 3699.6,
+    "end": 3704.1,
+    "text": "This is not a union of a sequence of single element sets."
+  },
+  {
+    "start": 3704.1,
+    "end": 3707.1,
+    "text": "In fact, there is no way that the elements of the unit"
+  },
+  {
+    "start": 3707.1,
+    "end": 3710.0,
+    "text": "square can be arranged in a sequence."
+  },
+  {
+    "start": 3710.0,
+    "end": 3714.4,
+    "text": "The unit square is said to be an uncountable set."
+  },
+  {
+    "start": 3716.1,
+    "end": 3719.9,
+    "text": "This is a deep and fundamental mathematical fact."
+  },
+  {
+    "start": 3719.9,
+    "end": 3723.0,
+    "text": "What it essentially says is that there are two kinds of"
+  },
+  {
+    "start": 3723.0,
+    "end": 3727.2,
+    "text": "infinite sets, discrete ones, or informal"
+  },
+  {
+    "start": 3727.2,
+    "end": 3729.4,
+    "text": "terminology, countable."
+  },
+  {
+    "start": 3729.4,
+    "end": 3732.9,
+    "text": "These are sets whose elements can be arranged in a sequence,"
+  },
+  {
+    "start": 3732.9,
+    "end": 3738.5,
+    "text": "like the integers, and also uncountable sets, such as the"
+  },
+  {
+    "start": 3738.5,
+    "end": 3743.0,
+    "text": "unit square or the real line, whose elements cannot be"
+  },
+  {
+    "start": 3743.0,
+    "end": 3744.2,
+    "text": "arranged in a sequence."
+  },
+  {
+    "start": 3744.7,
+    "end": 3748.6,
+    "text": "If you're curious, you can find the proof of this"
+  },
+  {
+    "start": 3748.6,
+    "end": 3751.5,
+    "text": "important fact in the supplementary materials that"
+  },
+  {
+    "start": 3751.5,
+    "end": 3754.0,
+    "text": "we are providing."
+  },
+  {
+    "start": 3754.0,
+    "end": 3756.7,
+    "text": "After all this discussion, you may now have legitimate"
+  },
+  {
+    "start": 3756.7,
+    "end": 3760.3,
+    "text": "suspicions about the models we have been looking at."
+  },
+  {
+    "start": 3760.3,
+    "end": 3763.8,
+    "text": "Is area a legitimate probability law?"
+  },
+  {
+    "start": 3763.8,
+    "end": 3768.6,
+    "text": "Does it even satisfy countable additivity?"
+  },
+  {
+    "start": 3768.6,
+    "end": 3771.7,
+    "text": "This question takes us into deep waters and has to do"
+  },
+  {
+    "start": 3771.7,
+    "end": 3773.7,
+    "text": "with a deep subfield of mathematics"
+  },
+  {
+    "start": 3773.7,
+    "end": 3774.9,
+    "text": "called measure theory."
+  },
+  {
+    "start": 3775.3,
+    "end": 3778.9,
+    "text": "Fortunately, it turns out that all is well."
+  },
+  {
+    "start": 3778.9,
+    "end": 3782.0,
+    "text": "Area is a legitimate probability law."
+  },
+  {
+    "start": 3782.0,
+    "end": 3786.6,
+    "text": "It does indeed satisfy the countable additivity axiom as"
+  },
+  {
+    "start": 3786.6,
+    "end": 3792.3,
+    "text": "long as we only deal with nice subsets of the unit square."
+  },
+  {
+    "start": 3792.3,
+    "end": 3795.7,
+    "text": "Fortunately, the subsets that arise in whatever we do in"
+  },
+  {
+    "start": 3795.7,
+    "end": 3798.2,
+    "text": "this course will be nice."
+  },
+  {
+    "start": 3798.2,
+    "end": 3802.6,
+    "text": "Subsets that are not nice are quite pathological, and we"
+  },
+  {
+    "start": 3802.6,
+    "end": 3803.9,
+    "text": "will not encounter them."
+  },
+  {
+    "start": 3804.9,
+    "end": 3808.9,
+    "text": "At this stage, we are not in a position to say anything"
+  },
+  {
+    "start": 3808.9,
+    "end": 3812.9,
+    "text": "more that would be meaningful about these issues, because"
+  },
+  {
+    "start": 3812.9,
+    "end": 3816.2,
+    "text": "they're quite complicated and mathematically deep."
+  },
+  {
+    "start": 3816.2,
+    "end": 3820.5,
+    "text": "We can only say that there are some serious mathematical"
+  },
+  {
+    "start": 3820.5,
+    "end": 3824.9,
+    "text": "subtleties, but fortunately, they can all be overcome in a"
+  },
+  {
+    "start": 3824.9,
+    "end": 3826.2,
+    "text": "rigorous manner."
+  },
+  {
+    "start": 3826.2,
+    "end": 3829.2,
+    "text": "And for the rest of this class, you can just forget"
+  },
+  {
+    "start": 3829.2,
+    "end": 3830.7,
+    "text": "about these subtle issues."
+  },
+  {
+    "start": 3833.1,
+    "end": 3837.1,
+    "text": "We end this lecture sequence by stepping back to discuss what"
+  },
+  {
+    "start": 3837.1,
+    "end": 3841.1,
+    "text": "probability theory really is, and what exactly is the"
+  },
+  {
+    "start": 3841.1,
+    "end": 3844.1,
+    "text": "meaning of the word probability."
+  },
+  {
+    "start": 3844.1,
+    "end": 3847.1,
+    "text": "In the most narrow view, probability theory is just a"
+  },
+  {
+    "start": 3847.1,
+    "end": 3848.7,
+    "text": "branch of mathematics."
+  },
+  {
+    "start": 3848.7,
+    "end": 3850.7,
+    "text": "We start with some axioms."
+  },
+  {
+    "start": 3850.7,
+    "end": 3853.8,
+    "text": "We consider models that satisfy these axioms."
+  },
+  {
+    "start": 3853.8,
+    "end": 3856.5,
+    "text": "And we establish some consequences, which are the"
+  },
+  {
+    "start": 3856.5,
+    "end": 3858.1,
+    "text": "theorems of this theory."
+  },
+  {
+    "start": 3858.8,
+    "end": 3862.7,
+    "text": "You could do all that without ever asking the question of"
+  },
+  {
+    "start": 3862.7,
+    "end": 3866.2,
+    "text": "what the word probability really means."
+  },
+  {
+    "start": 3866.2,
+    "end": 3870.0,
+    "text": "Yet one of the theorems of probability theory that we will"
+  },
+  {
+    "start": 3870.0,
+    "end": 3874.0,
+    "text": "see later in this class is that probabilities can be"
+  },
+  {
+    "start": 3874.0,
+    "end": 3878.3,
+    "text": "interpreted as frequencies, very loosely speaking."
+  },
+  {
+    "start": 3878.3,
+    "end": 3882.2,
+    "text": "If I have a fair coin and I toss it infinitely many times,"
+  },
+  {
+    "start": 3882.2,
+    "end": 3885.3,
+    "text": "then the fraction of heads that I will observe"
+  },
+  {
+    "start": 3885.3,
+    "end": 3887.2,
+    "text": "will be 1 half."
+  },
+  {
+    "start": 3888.4,
+    "end": 3892.1,
+    "text": "the probability of an event A can be interpreted as the"
+  },
+  {
+    "start": 3892.1,
+    "end": 3896.0,
+    "text": "frequency with which event A will occur in an infinite"
+  },
+  {
+    "start": 3896.0,
+    "end": 3899.8,
+    "text": "number of repetitions of the experiment."
+  },
+  {
+    "start": 3899.8,
+    "end": 3902.8,
+    "text": "But is this all there is?"
+  },
+  {
+    "start": 3902.8,
+    "end": 3905.1,
+    "text": "If we're dealing with coin tosses, it makes sense to"
+  },
+  {
+    "start": 3905.1,
+    "end": 3907.4,
+    "text": "think of probabilities as frequencies."
+  },
+  {
+    "start": 3907.4,
+    "end": 3912.2,
+    "text": "But consider a statement such as, the current president of"
+  },
+  {
+    "start": 3912.2,
+    "end": 3915.6,
+    "text": "my country will be reelected in the next election with"
+  },
+  {
+    "start": 3915.6,
+    "end": 3916.9,
+    "text": "probability 0.7."
+  },
+  {
+    "start": 3918.1,
+    "end": 3924.0,
+    "text": "It is hard to think of this number 0.7 as a frequency, it does not make sense to think"
+  },
+  {
+    "start": 3924.0,
+    "end": 3928.0,
+    "text": "of infinitely many repetitions of the next election."
+  },
+  {
+    "start": 3928.0,
+    "end": 3933.9,
+    "text": "In cases like this, and in many others, it is better to think of probabilities as just"
+  },
+  {
+    "start": 3933.9,
+    "end": 3937.7,
+    "text": "some way of describing our beliefs."
+  },
+  {
+    "start": 3937.7,
+    "end": 3943.3,
+    "text": "And if you're a betting person, probabilities can be thought of as some numerical guidance"
+  },
+  {
+    "start": 3948.6,
+    "end": 3955.9,
+    "text": "But now, if we think of probabilities as beliefs, you can run into the argument that, well,"
+  },
+  {
+    "start": 3955.9,
+    "end": 3962.6,
+    "text": "beliefs are subjective. Isn't probability theory supposed to be an objective part of"
+  },
+  {
+    "start": 3962.6,
+    "end": 3970.7,
+    "text": "math and science? Is probability theory just an exercise in subjectivity? Well, not quite."
+  },
+  {
+    "start": 3970.7,
+    "end": 3976.5,
+    "text": "There is more into it. Probability, at the minimum, gives us some rules for thinking"
+  },
+  {
+    "start": 3977.8,
+    "end": 3981.3,
+    "text": "about uncertain situations."
+  },
+  {
+    "start": 3981.3,
+    "end": 3984.4,
+    "text": "And if it happens that our probability model, our"
+  },
+  {
+    "start": 3984.4,
+    "end": 3988.3,
+    "text": "subjective beliefs, have some relation with the real world,"
+  },
+  {
+    "start": 3988.3,
+    "end": 3991.9,
+    "text": "then probability theory can be a very useful tool for making"
+  },
+  {
+    "start": 3991.9,
+    "end": 3996.9,
+    "text": "predictions and decisions that apply to the real world."
+  },
+  {
+    "start": 3996.9,
+    "end": 3999.8,
+    "text": "Now, whether your predictions and decisions will be any"
+  },
+  {
+    "start": 3999.8,
+    "end": 4004.3,
+    "text": "good will depend on whether you have chosen a good model."
+  },
+  {
+    "start": 4005.1,
+    "end": 4007.7,
+    "text": "Have you chosen a model that provides a good enough"
+  },
+  {
+    "start": 4007.7,
+    "end": 4011.1,
+    "text": "representation of the real world?"
+  },
+  {
+    "start": 4011.1,
+    "end": 4013.7,
+    "text": "How do you make sure that this is the case?"
+  },
+  {
+    "start": 4013.7,
+    "end": 4017.0,
+    "text": "There is a whole field, the field of statistics, whose"
+  },
+  {
+    "start": 4017.0,
+    "end": 4021.3,
+    "text": "purpose is to complement probability theory by using"
+  },
+  {
+    "start": 4021.3,
+    "end": 4024.8,
+    "text": "data to come up with good models."
+  },
+  {
+    "start": 4024.8,
+    "end": 4029.4,
+    "text": "And so we have the following diagram that summarizes the"
+  },
+  {
+    "start": 4029.4,
+    "end": 4032.2,
+    "text": "relation between the real world statistics and"
+  },
+  {
+    "start": 4032.2,
+    "end": 4033.3,
+    "text": "probability."
+  },
+  {
+    "start": 4035.9,
+    "end": 4039.2,
+    "text": "The field of statistics and inference uses this data to"
+  },
+  {
+    "start": 4039.2,
+    "end": 4041.7,
+    "text": "come up with probabilistic models."
+  },
+  {
+    "start": 4041.7,
+    "end": 4044.7,
+    "text": "Once we have a probabilistic model, we use probability"
+  },
+  {
+    "start": 4044.7,
+    "end": 4048.4,
+    "text": "theory and the analysis tools that it provides to us."
+  },
+  {
+    "start": 4048.4,
+    "end": 4052.3,
+    "text": "And the results that we get from this analysis lead to"
+  },
+  {
+    "start": 4052.3,
+    "end": 4055.1,
+    "text": "predictions and decisions about the real world."
+  }
+]

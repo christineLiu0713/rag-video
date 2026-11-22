@@ -1,0 +1,3662 @@
+[
+  {
+    "start": 0.4,
+    "end": 3.2,
+    "text": "The following content is provided under a Creative"
+  },
+  {
+    "start": 3.2,
+    "end": 4.6,
+    "text": "Commons license."
+  },
+  {
+    "start": 4.6,
+    "end": 7.0,
+    "text": "Your support will help MIT OpenCourseWare"
+  },
+  {
+    "start": 7.0,
+    "end": 11.2,
+    "text": "continue to offer high quality educational resources for free."
+  },
+  {
+    "start": 11.2,
+    "end": 14.0,
+    "text": "To make a donation or view additional materials"
+  },
+  {
+    "start": 14.0,
+    "end": 17.9,
+    "text": "from hundreds of MIT courses, visit MIT OpenCourseWare"
+  },
+  {
+    "start": 17.9,
+    "end": 31.1,
+    "text": "at ocw.mit.edu."
+  },
+  {
+    "start": 31.1,
+    "end": 35.1,
+    "text": "All right, let's get started, everyone."
+  },
+  {
+    "start": 35.1,
+    "end": 36.1,
+    "text": "So good afternoon."
+  },
+  {
+    "start": 37.2,
+    "end": 42.3,
+    "text": "Welcome to the second lecture of 60001 and also of 600."
+  },
+  {
+    "start": 42.3,
+    "end": 44.2,
+    "text": "So as always, if you'd like to follow along"
+  },
+  {
+    "start": 44.2,
+    "end": 47.0,
+    "text": "with the lectures, please go ahead and download"
+  },
+  {
+    "start": 47.0,
+    "end": 49.2,
+    "text": "the slides and the code that I'll"
+  },
+  {
+    "start": 49.2,
+    "end": 53.7,
+    "text": "provide at least an hour before class every day."
+  },
+  {
+    "start": 53.7,
+    "end": 56.5,
+    "text": "So quick recap of what we did last time."
+  },
+  {
+    "start": 56.5,
+    "end": 60.6,
+    "text": "So last time we talked a little bit about what a computer is."
+  },
+  {
+    "start": 60.6,
+    "end": 63.1,
+    "text": "And I think the main takeaway from the last lecture"
+  },
+  {
+    "start": 66.6,
+    "end": 69.2,
+    "text": "So it's not going to spontaneously make decisions"
+  },
+  {
+    "start": 69.2,
+    "end": 70.1,
+    "text": "on its own."
+  },
+  {
+    "start": 70.1,
+    "end": 72.7,
+    "text": "You, as the programmer, have to tell it"
+  },
+  {
+    "start": 72.7,
+    "end": 76.0,
+    "text": "what you want it to do by writing programs."
+  },
+  {
+    "start": 76.0,
+    "end": 78.6,
+    "text": "So we talked about simple objects."
+  },
+  {
+    "start": 78.6,
+    "end": 82.1,
+    "text": "And these objects were of different types."
+  },
+  {
+    "start": 82.1,
+    "end": 85.1,
+    "text": "So we saw integers, floats, and Booleans."
+  },
+  {
+    "start": 85.1,
+    "end": 88.4,
+    "text": "And then we did a couple of simple operations with them."
+  },
+  {
+    "start": 88.4,
+    "end": 92.7,
+    "text": "Today, we're going to look at a new type of object called"
+  },
+  {
+    "start": 92.7,
+    "end": 93.2,
+    "text": "a string."
+  },
+  {
+    "start": 93.5,
+    "end": 95.2,
+    "text": "And then we're going to introduce"
+  },
+  {
+    "start": 95.2,
+    "end": 102.0,
+    "text": "some more powerful things in our programming toolbox."
+  },
+  {
+    "start": 102.0,
+    "end": 104.7,
+    "text": "So we're going to look at how to branch within a program"
+  },
+  {
+    "start": 104.7,
+    "end": 108.3,
+    "text": "and how to make the computer repeat certain tasks"
+  },
+  {
+    "start": 108.3,
+    "end": 110.2,
+    "text": "within our program."
+  },
+  {
+    "start": 110.2,
+    "end": 113.5,
+    "text": "All right, so let's begin by looking at strings."
+  },
+  {
+    "start": 113.5,
+    "end": 116.5,
+    "text": "So strings are a new object type."
+  },
+  {
+    "start": 116.5,
+    "end": 118.0,
+    "text": "We've seen so far integers, which"
+  },
+  {
+    "start": 118.0,
+    "end": 121.5,
+    "text": "were whole numbers, floats, which were decimal numbers."
+  },
+  {
+    "start": 122.2,
+    "end": 125.8,
+    "text": "And we've seen Booleans, which were true and false."
+  },
+  {
+    "start": 125.8,
+    "end": 129.7,
+    "text": "So strings are going to be sequences of characters."
+  },
+  {
+    "start": 129.7,
+    "end": 131.6,
+    "text": "And these characters can be anything."
+  },
+  {
+    "start": 131.6,
+    "end": 135.1,
+    "text": "They could be letters, digits, special characters, and also"
+  },
+  {
+    "start": 135.1,
+    "end": 136.9,
+    "text": "spaces."
+  },
+  {
+    "start": 136.9,
+    "end": 140.5,
+    "text": "And you tell Python that you're talking about a string object"
+  },
+  {
+    "start": 140.5,
+    "end": 143.2,
+    "text": "by enclosing it in quotation marks."
+  },
+  {
+    "start": 143.2,
+    "end": 147.6,
+    "text": "So in this case, I'm creating an object"
+  },
+  {
+    "start": 152.5,
+    "end": 154.3,
+    "text": "And Python knows it's a string object,"
+  },
+  {
+    "start": 154.3,
+    "end": 156.5,
+    "text": "because we're enclosing it in quotations."
+  },
+  {
+    "start": 156.5,
+    "end": 158.5,
+    "text": "They could be either double quotes or single quotes."
+  },
+  {
+    "start": 158.5,
+    "end": 161.2,
+    "text": "But as long as you're consistent, it doesn't matter."
+  },
+  {
+    "start": 161.2,
+    "end": 166.7,
+    "text": "And this object, we're binding it to this variable named high."
+  },
+  {
+    "start": 166.7,
+    "end": 169.1,
+    "text": "And we're using that using the equal sign, which"
+  },
+  {
+    "start": 169.1,
+    "end": 171.5,
+    "text": "is the assignment operator."
+  },
+  {
+    "start": 171.5,
+    "end": 175.3,
+    "text": "So from now on, whenever we refer to this variable high,"
+  },
+  {
+    "start": 175.3,
+    "end": 177.6,
+    "text": "Python's going to say, oh, I know what the value is."
+  },
+  {
+    "start": 177.6,
+    "end": 179.7,
+    "text": "And it's that string of characters."
+  },
+  {
+    "start": 180.8,
+    "end": 182.5,
+    "text": "So we're going to learn about two things"
+  },
+  {
+    "start": 182.5,
+    "end": 185.2,
+    "text": "that you can do on strings today, two operations."
+  },
+  {
+    "start": 185.2,
+    "end": 187.2,
+    "text": "One is to concatenate them."
+  },
+  {
+    "start": 187.2,
+    "end": 189.7,
+    "text": "And concatenation is really just a fancy word"
+  },
+  {
+    "start": 189.7,
+    "end": 191.9,
+    "text": "for using this plus operator, which"
+  },
+  {
+    "start": 191.9,
+    "end": 194.8,
+    "text": "means put the strings together."
+  },
+  {
+    "start": 194.8,
+    "end": 198.6,
+    "text": "So I have this original variable named hi,"
+  },
+  {
+    "start": 198.6,
+    "end": 200.9,
+    "text": "and I create a new variable called name."
+  },
+  {
+    "start": 200.9,
+    "end": 204.5,
+    "text": "And in it, I'm going to assign the string"
+  },
+  {
+    "start": 204.5,
+    "end": 207.2,
+    "text": "ana to the variable name."
+  },
+  {
+    "start": 207.2,
+    "end": 209.1,
+    "text": "And when I use the plus operator"
+  },
+  {
+    "start": 210.0,
+    "end": 212.3,
+    "text": "high and name, those two variables."
+  },
+  {
+    "start": 212.3,
+    "end": 214.8,
+    "text": "Python's going to look at the values of those two,"
+  },
+  {
+    "start": 214.8,
+    "end": 219.7,
+    "text": "and it's going to just put them together."
+  },
+  {
+    "start": 219.7,
+    "end": 224.5,
+    "text": "I'm going to switch to Spider, and this is just"
+  },
+  {
+    "start": 224.5,
+    "end": 229.6,
+    "text": "that example from the slides."
+  },
+  {
+    "start": 229.6,
+    "end": 230.7,
+    "text": "So let's see what happens."
+  },
+  {
+    "start": 230.7,
+    "end": 234.7,
+    "text": "So I have the variable high, the variable name,"
+  },
+  {
+    "start": 234.7,
+    "end": 237.2,
+    "text": "and I'm just concatenating those two together,"
+  },
+  {
+    "start": 237.2,
+    "end": 239.3,
+    "text": "and then I'm going to print that out."
+  },
+  {
+    "start": 241.7,
+    "end": 245.4,
+    "text": "Notice, it prints out, hello there Anna."
+  },
+  {
+    "start": 245.4,
+    "end": 246.5,
+    "text": "There's no space."
+  },
+  {
+    "start": 246.5,
+    "end": 251.7,
+    "text": "And there's no space because the concatenation operator, the plus,"
+  },
+  {
+    "start": 251.7,
+    "end": 253.5,
+    "text": "doesn't add any spaces implicitly."
+  },
+  {
+    "start": 253.5,
+    "end": 256.4,
+    "text": "So again, another example of just a computer just"
+  },
+  {
+    "start": 256.4,
+    "end": 257.8,
+    "text": "doing what it's told."
+  },
+  {
+    "start": 257.8,
+    "end": 260.9,
+    "text": "If we want to add a space, we'd have to actually insert the space"
+  },
+  {
+    "start": 260.9,
+    "end": 262.3,
+    "text": "manually."
+  },
+  {
+    "start": 262.3,
+    "end": 265.3,
+    "text": "So that's this line here, line 8."
+  },
+  {
+    "start": 265.3,
+    "end": 267.2,
+    "text": "And in this line, we're concatenating"
+  },
+  {
+    "start": 270.4,
+    "end": 277.1,
+    "text": "a space, notice we're putting it in quotation marks, just a space, and then with name."
+  },
+  {
+    "start": 277.1,
+    "end": 285.5,
+    "text": "So if we go ahead and print that value, notice this was that garbage greeting there."
+  },
+  {
+    "start": 285.5,
+    "end": 292.9,
+    "text": "And now we have a proper greeting."
+  },
+  {
+    "start": 292.9,
+    "end": 296.8,
+    "text": "So that's the concatenation between strings."
+  },
+  {
+    "start": 296.8,
+    "end": 304.4,
+    "text": "And then the other thing we're going to look at related to strings is the star operator."
+  },
+  {
+    "start": 306.8,
+    "end": 309.6,
+    "text": "So Python allows you to use the star operator, which"
+  },
+  {
+    "start": 309.6,
+    "end": 315.2,
+    "text": "stands for multiplication, between a string and a number."
+  },
+  {
+    "start": 315.2,
+    "end": 319.0,
+    "text": "And when you do that, Python interprets it"
+  },
+  {
+    "start": 319.0,
+    "end": 325.3,
+    "text": "as repeat that string that many number of times."
+  },
+  {
+    "start": 325.3,
+    "end": 329.0,
+    "text": "So in this case, I'm creating a silly greeting,"
+  },
+  {
+    "start": 329.0,
+    "end": 333.4,
+    "text": "and I'm concatenating the value of hi, which is hello there,"
+  },
+  {
+    "start": 336.9,
+    "end": 339.6,
+    "text": "So notice here, I'm using parentheses to tell Python,"
+  },
+  {
+    "start": 339.6,
+    "end": 342.3,
+    "text": "do this operation first, and then"
+  },
+  {
+    "start": 342.3,
+    "end": 348.2,
+    "text": "multiply whatever the result of this is by 3."
+  },
+  {
+    "start": 348.2,
+    "end": 351.7,
+    "text": "So if I print that out, it's going"
+  },
+  {
+    "start": 351.7,
+    "end": 355.3,
+    "text": "to multiply the space with my name three times,"
+  },
+  {
+    "start": 355.3,
+    "end": 358.1,
+    "text": "and it's going to concatenate that with hello there."
+  },
+  {
+    "start": 358.1,
+    "end": 360.8,
+    "text": "So that's exactly what it printed out there."
+  },
+  {
+    "start": 362.3,
+    "end": 365.1,
+    "text": "Last lecture, we talked a little bit about print."
+  },
+  {
+    "start": 365.1,
+    "end": 369.1,
+    "text": "Today, I'm going to talk about some nuances related to print."
+  },
+  {
+    "start": 369.1,
+    "end": 372.6,
+    "text": "So you use print to interact with the user."
+  },
+  {
+    "start": 372.6,
+    "end": 375.7,
+    "text": "It's cool to write programs that print things out to the user."
+  },
+  {
+    "start": 375.7,
+    "end": 379.1,
+    "text": "So the keyword here being print."
+  },
+  {
+    "start": 379.1,
+    "end": 382.0,
+    "text": "And then you put parentheses after print."
+  },
+  {
+    "start": 382.0,
+    "end": 385.2,
+    "text": "And in the parentheses, you put in whatever"
+  },
+  {
+    "start": 385.2,
+    "end": 387.6,
+    "text": "you want to show the user."
+  },
+  {
+    "start": 391.9,
+    "end": 395.7,
+    "text": "I assign it the value 1, and then I print 1."
+  },
+  {
+    "start": 395.7,
+    "end": 398.3,
+    "text": "Here, I'm casting."
+  },
+  {
+    "start": 398.3,
+    "end": 400.8,
+    "text": "So I'm taking the number 1, the integer 1,"
+  },
+  {
+    "start": 400.8,
+    "end": 403.5,
+    "text": "and I'm casting it to a string."
+  },
+  {
+    "start": 403.5,
+    "end": 405.1,
+    "text": "And you'll see why in a moment."
+  },
+  {
+    "start": 405.1,
+    "end": 408.2,
+    "text": "So I want to bring to your attention a couple of things"
+  },
+  {
+    "start": 408.2,
+    "end": 408.7,
+    "text": "here."
+  },
+  {
+    "start": 408.7,
+    "end": 414.7,
+    "text": "So in the first print, I'm using commas everywhere here."
+  },
+  {
+    "start": 414.7,
+    "end": 421.0,
+    "text": "And in the second print, I'm using plus."
+  },
+  {
+    "start": 421.0,
+    "end": 426.9,
+    "text": "So by definition, you can use commas inside the parentheses"
+  },
+  {
+    "start": 427.7,
+    "end": 436.0,
+    "text": "And if you use a comma, Python is going to automatically add a space in between the two"
+  },
+  {
+    "start": 436.0,
+    "end": 440.0,
+    "text": "things that the comma is in between, the values."
+  },
+  {
+    "start": 440.0,
+    "end": 445.5,
+    "text": "So my fave num is, is the first thing, and the second thing is whatever is after the"
+  },
+  {
+    "start": 445.5,
+    "end": 447.4,
+    "text": "comma."
+  },
+  {
+    "start": 447.4,
+    "end": 452.4,
+    "text": "Let's take X. So if you use a comma, Python is going to automatically insert a space"
+  },
+  {
+    "start": 452.4,
+    "end": 454.9,
+    "text": "for you."
+  },
+  {
+    "start": 456.7,
+    "end": 460.6,
+    "text": "If you don't want that, you can use the concatenation operation,"
+  },
+  {
+    "start": 460.6,
+    "end": 464.9,
+    "text": "the plus, and you can add all of your little bits together"
+  },
+  {
+    "start": 464.9,
+    "end": 468.0,
+    "text": "to create one big string."
+  },
+  {
+    "start": 468.0,
+    "end": 471.4,
+    "text": "If you're using commas, the items, the objects"
+  },
+  {
+    "start": 471.4,
+    "end": 474.3,
+    "text": "in between the commas do not all have to be strings."
+  },
+  {
+    "start": 474.3,
+    "end": 476.1,
+    "text": "That's the plus side of using commas,"
+  },
+  {
+    "start": 476.1,
+    "end": 480.0,
+    "text": "but the downside is you get spaces everywhere."
+  },
+  {
+    "start": 480.0,
+    "end": 483.6,
+    "text": "If you use plus operator, the plus side"
+  },
+  {
+    "start": 484.4,
+    "end": 486.9,
+    "text": "Python does exactly what you tell it to do,"
+  },
+  {
+    "start": 486.9,
+    "end": 489.3,
+    "text": "but everything has to be a string object."
+  },
+  {
+    "start": 489.3,
+    "end": 492.7,
+    "text": "So my fave num is a string object."
+  },
+  {
+    "start": 492.7,
+    "end": 495.8,
+    "text": "You have to convert all of your numbers to string objects,"
+  },
+  {
+    "start": 495.8,
+    "end": 498.3,
+    "text": "and so on."
+  },
+  {
+    "start": 498.3,
+    "end": 510.9,
+    "text": "So if we look at spider, this is almost the same code."
+  },
+  {
+    "start": 510.9,
+    "end": 514.0,
+    "text": "So here, I don't have spaces anywhere."
+  },
+  {
+    "start": 514.0,
+    "end": 517.8,
+    "text": "So you can see that the first line here"
+  },
+  {
+    "start": 517.8,
+    "end": 519.6,
+    "text": "has commas everywhere."
+  },
+  {
+    "start": 520.8,
+    "end": 527.2,
+    "text": "spaces in between every one of the things that I'm printing out."
+  },
+  {
+    "start": 527.2,
+    "end": 530.9,
+    "text": "This line here is sort of a combination between commas"
+  },
+  {
+    "start": 530.9,
+    "end": 534.0,
+    "text": "and concatenation."
+  },
+  {
+    "start": 534.0,
+    "end": 536.5,
+    "text": "So depending on where I use the comma,"
+  },
+  {
+    "start": 536.5,
+    "end": 537.9,
+    "text": "I'm going to have an extra space."
+  },
+  {
+    "start": 537.9,
+    "end": 542.0,
+    "text": "And this line here just has concatenation everywhere."
+  },
+  {
+    "start": 542.0,
+    "end": 547.4,
+    "text": "So if I run this, notice this very first line,"
+  },
+  {
+    "start": 547.4,
+    "end": 549.9,
+    "text": "added spaces everywhere in between all my objects."
+  },
+  {
+    "start": 549.9,
+    "end": 551.8,
+    "text": "The second one, added spaces somewhere."
+  },
+  {
+    "start": 552.2,
+    "end": 554.1,
+    "text": "And you can trace through and see exactly"
+  },
+  {
+    "start": 554.1,
+    "end": 556.4,
+    "text": "where the spaces were added."
+  },
+  {
+    "start": 556.4,
+    "end": 573.1,
+    "text": "And the last line here didn't add spaces anywhere."
+  },
+  {
+    "start": 573.1,
+    "end": 577.6,
+    "text": "So printing things out to the console is nice."
+  },
+  {
+    "start": 577.6,
+    "end": 580.9,
+    "text": "But the second part of writing an interactive program"
+  },
+  {
+    "start": 580.9,
+    "end": 583.2,
+    "text": "is getting input from the user."
+  },
+  {
+    "start": 583.2,
+    "end": 585.5,
+    "text": "And that's a more interesting part."
+  },
+  {
+    "start": 585.5,
+    "end": 587.3,
+    "text": "So if you've done problem set 0, you"
+  },
+  {
+    "start": 587.3,
+    "end": 590.6,
+    "text": "might have already tried to understand this on your own."
+  },
+  {
+    "start": 590.6,
+    "end": 592.0,
+    "text": "But here we are."
+  },
+  {
+    "start": 593.7,
+    "end": 595.6,
+    "text": "The way you get input from the user"
+  },
+  {
+    "start": 595.6,
+    "end": 600.0,
+    "text": "is using this command function called input."
+  },
+  {
+    "start": 600.0,
+    "end": 603.4,
+    "text": "And inside the parentheses, you type in whatever"
+  },
+  {
+    "start": 603.4,
+    "end": 607.7,
+    "text": "you'd like to prompt the user with."
+  },
+  {
+    "start": 607.7,
+    "end": 611.5,
+    "text": "So in this case, in my example here, I have input."
+  },
+  {
+    "start": 611.5,
+    "end": 614.0,
+    "text": "And then here, I said type anything."
+  },
+  {
+    "start": 614.0,
+    "end": 616.7,
+    "text": "So the user is going to see this text here."
+  },
+  {
+    "start": 616.7,
+    "end": 619.4,
+    "text": "And then the program is just going to stop."
+  },
+  {
+    "start": 619.4,
+    "end": 621.9,
+    "text": "And it's going to wait for the user to type in something"
+  },
+  {
+    "start": 621.9,
+    "end": 622.6,
+    "text": "and hit Enter."
+  },
+  {
+    "start": 623.3,
+    "end": 627.1,
+    "text": "As soon as the user types an enter,"
+  },
+  {
+    "start": 627.1,
+    "end": 631.5,
+    "text": "whatever the user types in becomes a string."
+  },
+  {
+    "start": 631.5,
+    "end": 633.8,
+    "text": "If the user types in a number, for example,"
+  },
+  {
+    "start": 633.8,
+    "end": 636.9,
+    "text": "that becomes the string, that number."
+  },
+  {
+    "start": 636.9,
+    "end": 643.2,
+    "text": "So everything the user types in is going to be made as a string."
+  },
+  {
+    "start": 643.2,
+    "end": 646.2,
+    "text": "In this line right here, whatever the user types in"
+  },
+  {
+    "start": 646.2,
+    "end": 647.9,
+    "text": "becomes a string."
+  },
+  {
+    "start": 647.9,
+    "end": 650.7,
+    "text": "And we're going to bind that string object"
+  },
+  {
+    "start": 650.7,
+    "end": 652.9,
+    "text": "to this variable named called text."
+  },
+  {
+    "start": 654.2,
+    "end": 656.1,
+    "text": "So now, further in my program, I could"
+  },
+  {
+    "start": 656.1,
+    "end": 658.2,
+    "text": "do whatever I want with this variable text."
+  },
+  {
+    "start": 658.2,
+    "end": 663.5,
+    "text": "In this case, I'm going to print five star text."
+  },
+  {
+    "start": 663.5,
+    "end": 667.0,
+    "text": "So if the user, for example, gave me ha,"
+  },
+  {
+    "start": 667.0,
+    "end": 670.0,
+    "text": "I'm going to print ha five times."
+  },
+  {
+    "start": 670.0,
+    "end": 675.1,
+    "text": "If the user gave me five, what do you think"
+  },
+  {
+    "start": 675.1,
+    "end": 678.2,
+    "text": "is going to be printed out?"
+  },
+  {
+    "start": 678.2,
+    "end": 682.5,
+    "text": "25 or five five times?"
+  },
+  {
+    "start": 682.5,
+    "end": 684.7,
+    "text": "Great, yes, exactly, five five times."
+  },
+  {
+    "start": 687.9,
+    "end": 692.2,
+    "text": "Oftentimes, you don't want to work with numbers as strings."
+  },
+  {
+    "start": 692.2,
+    "end": 694.6,
+    "text": "You want to work with numbers as numbers."
+  },
+  {
+    "start": 694.6,
+    "end": 696.8,
+    "text": "So you have to cast."
+  },
+  {
+    "start": 696.8,
+    "end": 698.2,
+    "text": "And we learned that last lecture."
+  },
+  {
+    "start": 698.2,
+    "end": 701.2,
+    "text": "You cast by just putting in this little bit right"
+  },
+  {
+    "start": 701.2,
+    "end": 703.4,
+    "text": "in front of the input."
+  },
+  {
+    "start": 703.4,
+    "end": 705.2,
+    "text": "And you can cast it to whatever type you want."
+  },
+  {
+    "start": 705.2,
+    "end": 708.3,
+    "text": "Here I cast it to an int, but you can also cast to a float"
+  },
+  {
+    "start": 708.3,
+    "end": 710.6,
+    "text": "if you want to work with floats."
+  },
+  {
+    "start": 710.6,
+    "end": 711.5,
+    "text": "And that converts."
+  },
+  {
+    "start": 712.2,
+    "end": 718.2,
+    "text": "Whatever the user typed in as long as it's some number that Python knows how to how to convert into the number itself"
+  },
+  {
+    "start": 718.6,
+    "end": 725.6,
+    "text": "So in this case if the user gives me five, I'm going to print out five times five instead of five five times"
+  },
+  {
+    "start": 726.3,
+    "end": 728.1,
+    "text": "so"
+  },
+  {
+    "start": 728.1,
+    "end": 732.6,
+    "text": "That's the code here"
+  },
+  {
+    "start": 732.9,
+    "end": 738.9,
+    "text": "so the first bit is I'm going to get the user to type in anything and I'm going to"
+  },
+  {
+    "start": 739.5,
+    "end": 747.1,
+    "text": "Put five five five and then when I type in the number since I'm casting it. I'm going to do operations with the number"
+  },
+  {
+    "start": 747.6,
+    "end": 752.4,
+    "text": "OK, yeah, question."
+  },
+  {
+    "start": 752.4,
+    "end": 756.6,
+    "text": "Why do you want to cast to?"
+  },
+  {
+    "start": 756.6,
+    "end": 761.2,
+    "text": "Oh, the question is, why do you want to cast to a string?"
+  },
+  {
+    "start": 761.2,
+    "end": 766.8,
+    "text": "Why do you want to cast a string to a number?"
+  },
+  {
+    "start": 766.8,
+    "end": 772.1,
+    "text": "Oh, so Python always, whatever you type in,"
+  },
+  {
+    "start": 772.1,
+    "end": 775.2,
+    "text": "just by default, by definition of the input command,"
+  },
+  {
+    "start": 775.2,
+    "end": 778.0,
+    "text": "Python always makes it a string."
+  },
+  {
+    "start": 778.0,
+    "end": 779.5,
+    "text": "So if you want to work with numbers,"
+  },
+  {
+    "start": 779.5,
+    "end": 780.9,
+    "text": "you have to explicitly tell it I'm"
+  },
+  {
+    "start": 780.9,
+    "end": 783.1,
+    "text": "going to work with a number."
+  },
+  {
+    "start": 783.1,
+    "end": 784.7,
+    "text": "So even if you give it the number five,"
+  },
+  {
+    "start": 784.7,
+    "end": 788.2,
+    "text": "it's going to think it's the string five."
+  },
+  {
+    "start": 788.8,
+    "end": 793.9,
+    "text": "That's just how input works."
+  },
+  {
+    "start": 793.9,
+    "end": 798.2,
+    "text": "The next thing we're going to look at"
+  },
+  {
+    "start": 798.2,
+    "end": 805.3,
+    "text": "is ways that you can start adding tests in your code."
+  },
+  {
+    "start": 805.3,
+    "end": 809.7,
+    "text": "And before you can start adding tests in your code,"
+  },
+  {
+    "start": 809.7,
+    "end": 812.8,
+    "text": "you need to be able to do the actual tests."
+  },
+  {
+    "start": 812.8,
+    "end": 819.8,
+    "text": "So this is where comparison operators come in."
+  },
+  {
+    "start": 822.8,
+    "end": 824.6,
+    "text": "OK?"
+  },
+  {
+    "start": 824.6,
+    "end": 828.0,
+    "text": "The following comparisons are going to give you a Boolean."
+  },
+  {
+    "start": 828.0,
+    "end": 831.5,
+    "text": "So it's either going to say this is true or this is false."
+  },
+  {
+    "start": 831.5,
+    "end": 834.8,
+    "text": "So that's going to be your test."
+  },
+  {
+    "start": 834.8,
+    "end": 836.8,
+    "text": "So if I and J are variables, you're"
+  },
+  {
+    "start": 836.8,
+    "end": 839.9,
+    "text": "allowed to compare ints with ints, floats with floats,"
+  },
+  {
+    "start": 839.9,
+    "end": 841.9,
+    "text": "strings with strings."
+  },
+  {
+    "start": 841.9,
+    "end": 844.1,
+    "text": "And you're allowed to compare ints and floats"
+  },
+  {
+    "start": 844.1,
+    "end": 846.6,
+    "text": "between themselves, but you're not allowed to compare"
+  },
+  {
+    "start": 846.6,
+    "end": 849.5,
+    "text": "a string with a number."
+  },
+  {
+    "start": 849.5,
+    "end": 852.3,
+    "text": "In fact, if you even try to do that in Python,"
+  },
+  {
+    "start": 852.5,
+    "end": 858.1,
+    "text": "In Spyder here, if I try to say, is the letter a greater than 5,"
+  },
+  {
+    "start": 858.1,
+    "end": 862.2,
+    "text": "I get some angry text right here."
+  },
+  {
+    "start": 862.2,
+    "end": 864.8,
+    "text": "And this just tells me Python doesn't understand"
+  },
+  {
+    "start": 864.8,
+    "end": 871.7,
+    "text": "the meaning of how do I compare a string with a number."
+  },
+  {
+    "start": 871.7,
+    "end": 876.0,
+    "text": "So just like in math, we can do these usual comparisons."
+  },
+  {
+    "start": 876.0,
+    "end": 878.1,
+    "text": "We can say if something is greater than something,"
+  },
+  {
+    "start": 878.1,
+    "end": 881.0,
+    "text": "greater or equal to, less than, less than or equal to."
+  },
+  {
+    "start": 881.0,
+    "end": 882.8,
+    "text": "I'd like to bring to your attention the equality."
+  },
+  {
+    "start": 883.9,
+    "end": 888.5,
+    "text": "So, the single equal sign is an assignment, so you're taking a value and you're signing"
+  },
+  {
+    "start": 888.5,
+    "end": 893.7,
+    "text": "it to a variable, but when you're doing the double equal sign, this is the test for equality."
+  },
+  {
+    "start": 893.7,
+    "end": 898.6,
+    "text": "Is the value of variable i the same as the value of the variable j?"
+  },
+  {
+    "start": 898.6,
+    "end": 902.1,
+    "text": "And that's, again, also going to give you a Boolean, either true or false."
+  },
+  {
+    "start": 902.1,
+    "end": 906.7,
+    "text": "And you can also test for inequality with the exclamation equal."
+  },
+  {
+    "start": 911.7,
+    "end": 920.6,
+    "text": "True if yes false if no, okay, so those are comparison operators on integer floats and strings on"
+  },
+  {
+    "start": 921.3,
+    "end": 923.9,
+    "text": "Booleans you can do some logic operators and"
+  },
+  {
+    "start": 926.6,
+    "end": 929.7,
+    "text": "The simplest is just"
+  },
+  {
+    "start": 929.7,
+    "end": 935.4,
+    "text": "Inverting so if a is a very if a is a variable that can that has a Boolean value"
+  },
+  {
+    "start": 935.4,
+    "end": 940.2,
+    "text": "Not a is just going to invert it. So if it is true then not a is false and vice versa"
+  },
+  {
+    "start": 940.9,
+    "end": 944.0,
+    "text": "This is a table that sort of"
+  },
+  {
+    "start": 944.4,
+    "end": 945.9,
+    "text": "represents what I've said here."
+  },
+  {
+    "start": 945.9,
+    "end": 949.7,
+    "text": "So you can use AND and OR."
+  },
+  {
+    "start": 949.7,
+    "end": 952.0,
+    "text": "These are keywords in Python."
+  },
+  {
+    "start": 952.0,
+    "end": 957.8,
+    "text": "You can use those two keywords on Boolean variables."
+  },
+  {
+    "start": 957.8,
+    "end": 961.8,
+    "text": "And you get the result A and B is only true"
+  },
+  {
+    "start": 961.8,
+    "end": 964.6,
+    "text": "if both A and B are true."
+  },
+  {
+    "start": 964.6,
+    "end": 970.9,
+    "text": "And A or B is only false if A and B are false."
+  },
+  {
+    "start": 970.9,
+    "end": 973.4,
+    "text": "And this is the complete table, just in case"
+  },
+  {
+    "start": 973.4,
+    "end": 974.6,
+    "text": "you need to reference it."
+  },
+  {
+    "start": 977.1,
+    "end": 980.6,
+    "text": "All right, so now that we have ways to do logical tests,"
+  },
+  {
+    "start": 980.6,
+    "end": 986.4,
+    "text": "question right there."
+  },
+  {
+    "start": 986.4,
+    "end": 987.4,
+    "text": "Yeah, great question."
+  },
+  {
+    "start": 987.4,
+    "end": 989.5,
+    "text": "So what does it mean to compare a string with a string"
+  },
+  {
+    "start": 989.5,
+    "end": 990.6,
+    "text": "with a greater than?"
+  },
+  {
+    "start": 990.6,
+    "end": 994.1,
+    "text": "So that's just going to compare them lexicographically."
+  },
+  {
+    "start": 994.1,
+    "end": 997.2,
+    "text": "So does it come first in the alphabet?"
+  },
+  {
+    "start": 997.2,
+    "end": 999.4,
+    "text": "So we can even test that out."
+  },
+  {
+    "start": 999.4,
+    "end": 1004.5,
+    "text": "We can say, is a greater than b?"
+  },
+  {
+    "start": 1004.5,
+    "end": 1008.0,
+    "text": "And it's false."
+  },
+  {
+    "start": 1008.0,
+    "end": 1013.8,
+    "text": "So b becomes later in the alphabet than a."
+  },
+  {
+    "start": 1013.8,
+    "end": 1016.6,
+    "text": "OK, so now we have ways to do the tests."
+  },
+  {
+    "start": 1018.5,
+    "end": 1022.6,
+    "text": "So branching to our programming toolbox,"
+  },
+  {
+    "start": 1022.6,
+    "end": 1025.1,
+    "text": "now that we have ways to do tests."
+  },
+  {
+    "start": 1025.1,
+    "end": 1026.7,
+    "text": "This is a map of MIT."
+  },
+  {
+    "start": 1026.7,
+    "end": 1030.3,
+    "text": "I'm going to go through sort of a little example"
+  },
+  {
+    "start": 1030.3,
+    "end": 1035.0,
+    "text": "to motivate why we would want to do branching in our code."
+  },
+  {
+    "start": 1035.0,
+    "end": 1036.6,
+    "text": "And I think after this lecture, you'll"
+  },
+  {
+    "start": 1036.6,
+    "end": 1038.5,
+    "text": "be able to sort of code up this algorithm"
+  },
+  {
+    "start": 1038.5,
+    "end": 1040.1,
+    "text": "that I'm going to explain."
+  },
+  {
+    "start": 1040.1,
+    "end": 1041.9,
+    "text": "So most of us see MIT as a maze."
+  },
+  {
+    "start": 1041.9,
+    "end": 1046.8,
+    "text": "I first did when I came here."
+  },
+  {
+    "start": 1046.8,
+    "end": 1048.6,
+    "text": "When I first came here, obviously, I signed up"
+  },
+  {
+    "start": 1050.3,
+    "end": 1054.3,
+    "text": "And at MIT being amazed, I had no idea where to go, right?"
+  },
+  {
+    "start": 1054.3,
+    "end": 1057.0,
+    "text": "What the shortest path was to free food."
+  },
+  {
+    "start": 1057.0,
+    "end": 1061.0,
+    "text": "So one way to think about it is all I wanted to do"
+  },
+  {
+    "start": 1061.0,
+    "end": 1064.6,
+    "text": "was get to the free food."
+  },
+  {
+    "start": 1064.6,
+    "end": 1067.0,
+    "text": "A very simple algorithm to get there"
+  },
+  {
+    "start": 1067.0,
+    "end": 1069.3,
+    "text": "would be to say, OK, I'm going to take my right hand,"
+  },
+  {
+    "start": 1069.3,
+    "end": 1071.5,
+    "text": "and I'm going to make sure that my right hand is always"
+  },
+  {
+    "start": 1071.5,
+    "end": 1073.2,
+    "text": "on a wall."
+  },
+  {
+    "start": 1073.2,
+    "end": 1075.6,
+    "text": "And I'm going to go around campus with my right hand always"
+  },
+  {
+    "start": 1075.6,
+    "end": 1076.8,
+    "text": "being at a wall."
+  },
+  {
+    "start": 1076.8,
+    "end": 1079.6,
+    "text": "And eventually, I'll get to where the free food is."
+  },
+  {
+    "start": 1079.6,
+    "end": 1081.2,
+    "text": "There might not be any left, right?"
+  },
+  {
+    "start": 1082.0,
+    "end": 1085.5,
+    "text": "OK, so the algorithm is as follows, OK?"
+  },
+  {
+    "start": 1085.5,
+    "end": 1087.3,
+    "text": "If my right hand always has to be on a wall,"
+  },
+  {
+    "start": 1087.3,
+    "end": 1091.8,
+    "text": "then I'm going to say, if there's no wall to my right side,"
+  },
+  {
+    "start": 1091.8,
+    "end": 1097.8,
+    "text": "then I'm going to go right until I get to a wall, OK?"
+  },
+  {
+    "start": 1097.8,
+    "end": 1102.5,
+    "text": "Then, if there's a wall to my right and I can go forward,"
+  },
+  {
+    "start": 1102.5,
+    "end": 1106.0,
+    "text": "I'm just going to keep going forward, OK?"
+  },
+  {
+    "start": 1106.0,
+    "end": 1108.3,
+    "text": "If I keep going forward and there's a wall to my right"
+  },
+  {
+    "start": 1108.3,
+    "end": 1110.8,
+    "text": "and in front of me, I'm going to turn around and go left,"
+  },
+  {
+    "start": 1110.8,
+    "end": 1111.6,
+    "text": "OK?"
+  },
+  {
+    "start": 1112.4,
+    "end": 1115.1,
+    "text": "if there's a wall to my right in front of me and to the left,"
+  },
+  {
+    "start": 1115.1,
+    "end": 1117.0,
+    "text": "then I'm going to turn around and go back."
+  },
+  {
+    "start": 1117.0,
+    "end": 1120.5,
+    "text": "So with this fairly simple algorithm,"
+  },
+  {
+    "start": 1120.5,
+    "end": 1126.8,
+    "text": "I just follow the path, always keeping the wall to my right,"
+  },
+  {
+    "start": 1126.8,
+    "end": 1130.0,
+    "text": "and eventually I end up where I need to be."
+  },
+  {
+    "start": 1130.0,
+    "end": 1134.0,
+    "text": "So notice I used, just in plain English, a few key words,"
+  },
+  {
+    "start": 1134.0,
+    "end": 1137.8,
+    "text": "if, otherwise, things like that."
+  },
+  {
+    "start": 1137.8,
+    "end": 1140.3,
+    "text": "So in programming, we have those same constructs."
+  },
+  {
+    "start": 1141.2,
+    "end": 1147.3,
+    "text": "And those same sort of intuitive words can be used to tell Python to do something or"
+  },
+  {
+    "start": 1147.3,
+    "end": 1154.9,
+    "text": "to do something else or to choose from a different set of possibilities."
+  },
+  {
+    "start": 1154.9,
+    "end": 1158.9,
+    "text": "And this way we can get the computer to make decisions for us."
+  },
+  {
+    "start": 1158.9,
+    "end": 1163.3,
+    "text": "You might be thinking, well, you said that computers can't make decisions on their own."
+  },
+  {
+    "start": 1163.3,
+    "end": 1164.3,
+    "text": "It's not."
+  },
+  {
+    "start": 1164.3,
+    "end": 1168.0,
+    "text": "You as programmers are going to build these decisions into the program."
+  },
+  {
+    "start": 1171.8,
+    "end": 1173.5,
+    "text": "OK, this is a decision point."
+  },
+  {
+    "start": 1173.5,
+    "end": 1175.2,
+    "text": "Should I go left or should I go right?"
+  },
+  {
+    "start": 1175.2,
+    "end": 1176.8,
+    "text": "Or which one do I pick?"
+  },
+  {
+    "start": 1176.8,
+    "end": 1180.1,
+    "text": "And these sort of decisions are created by you as a programmer."
+  },
+  {
+    "start": 1180.1,
+    "end": 1182.3,
+    "text": "And the computer just has to make the decision"
+  },
+  {
+    "start": 1182.3,
+    "end": 1184.0,
+    "text": "and choose a path."
+  },
+  {
+    "start": 1184.0,
+    "end": 1187.7,
+    "text": "OK, so in programming, there's three sort of simple ways"
+  },
+  {
+    "start": 1187.7,
+    "end": 1190.9,
+    "text": "that you can add control flow to your programs."
+  },
+  {
+    "start": 1190.9,
+    "end": 1193.4,
+    "text": "And that's making one decision and choosing"
+  },
+  {
+    "start": 1193.4,
+    "end": 1198.0,
+    "text": "whether to execute something or execute something else."
+  },
+  {
+    "start": 1198.0,
+    "end": 1199.3,
+    "text": "The first is the simple if."
+  },
+  {
+    "start": 1201.4,
+    "end": 1208.1,
+    "text": "And, given a program that just linearly has statements that get executed, whenever I reach"
+  },
+  {
+    "start": 1208.1,
+    "end": 1214.0,
+    "text": "an if statement, you're going to check the condition."
+  },
+  {
+    "start": 1214.0,
+    "end": 1219.2,
+    "text": "The condition's going to be something that's going to get evaluated to either true or false."
+  },
+  {
+    "start": 1219.2,
+    "end": 1221.3,
+    "text": "Okay?"
+  },
+  {
+    "start": 1221.3,
+    "end": 1227.9,
+    "text": "So, I've reached the condition here, and if the condition's true, then I'm going to additionally"
+  },
+  {
+    "start": 1227.9,
+    "end": 1233.4,
+    "text": "execute this extra set of expressions, but if the condition's false, then I'm just going"
+  },
+  {
+    "start": 1234.8,
+    "end": 1241.5,
+    "text": "the program and not execute that extra set of instructions."
+  },
+  {
+    "start": 1241.5,
+    "end": 1244.3,
+    "text": "How does Python know which instructions to execute?"
+  },
+  {
+    "start": 1244.3,
+    "end": 1248.4,
+    "text": "They're going to be inside this what we call code block."
+  },
+  {
+    "start": 1248.4,
+    "end": 1251.6,
+    "text": "And the code block's denoted by indentation."
+  },
+  {
+    "start": 1251.6,
+    "end": 1254.4,
+    "text": "So it's going to be everything that's indented"
+  },
+  {
+    "start": 1254.4,
+    "end": 1257.9,
+    "text": "is part of that if code block."
+  },
+  {
+    "start": 1257.9,
+    "end": 1261.4,
+    "text": "Typically, for spaces, indentation."
+  },
+  {
+    "start": 1261.4,
+    "end": 1262.4,
+    "text": "OK."
+  },
+  {
+    "start": 1262.4,
+    "end": 1266.1,
+    "text": "So that's how you'd write code."
+  },
+  {
+    "start": 1266.5,
+    "end": 1270.8,
+    "text": "that decides whether to execute this extra thing or not."
+  },
+  {
+    "start": 1270.8,
+    "end": 1275.8,
+    "text": "Now, let's say I don't just want to execute an extra thing."
+  },
+  {
+    "start": 1275.8,
+    "end": 1277.4,
+    "text": "I want to reach a point where I say,"
+  },
+  {
+    "start": 1277.4,
+    "end": 1282.4,
+    "text": "I'll either go down this path or I'll do something else."
+  },
+  {
+    "start": 1282.4,
+    "end": 1287.9,
+    "text": "That's this right here."
+  },
+  {
+    "start": 1287.9,
+    "end": 1294.2,
+    "text": "So this if-else construct says, this is my code."
+  },
+  {
+    "start": 1294.2,
+    "end": 1297.0,
+    "text": "I've reached my decision point here."
+  },
+  {
+    "start": 1298.7,
+    "end": 1308.8,
+    "text": "Inside this if is true, then I'm going to execute maybe this set of statements here."
+  },
+  {
+    "start": 1308.8,
+    "end": 1313.9,
+    "text": "But if the condition is not true, then I'm not going to execute that set of statements,"
+  },
+  {
+    "start": 1313.9,
+    "end": 1320.7,
+    "text": "and instead I'm going to execute under whatever else is."
+  },
+  {
+    "start": 1320.7,
+    "end": 1325.0,
+    "text": "So using this construct, I'm either going to do one set of expressions or the other,"
+  },
+  {
+    "start": 1325.0,
+    "end": 1326.9,
+    "text": "but never both."
+  },
+  {
+    "start": 1326.9,
+    "end": 1330.6,
+    "text": "And after I've executed one or the other, I'm going to continue on with just the regular"
+  },
+  {
+    "start": 1339.7,
+    "end": 1343.7,
+    "text": "Okay, so we're able to either choose one thing, choose one thing or another, but what if we"
+  },
+  {
+    "start": 1343.7,
+    "end": 1347.7,
+    "text": "want to have more than one choice?"
+  },
+  {
+    "start": 1347.7,
+    "end": 1351.7,
+    "text": "So if some number is equal to zero, I want to do this."
+  },
+  {
+    "start": 1351.7,
+    "end": 1353.7,
+    "text": "If it's equal to one, I want to do this."
+  },
+  {
+    "start": 1353.7,
+    "end": 1356.4,
+    "text": "If it's equal to two, I want to do this, and so on."
+  },
+  {
+    "start": 1356.4,
+    "end": 1358.9,
+    "text": "That's where this last one comes in."
+  },
+  {
+    "start": 1358.9,
+    "end": 1365.8,
+    "text": "And we introduce this other keyword here called LIF."
+  },
+  {
+    "start": 1368.9,
+    "end": 1373.2,
+    "text": "So, first, we check if this condition is true."
+  },
+  {
+    "start": 1373.2,
+    "end": 1374.9,
+    "text": "So we're going through our program."
+  },
+  {
+    "start": 1374.9,
+    "end": 1377.1,
+    "text": "We've reached our decision point."
+  },
+  {
+    "start": 1377.1,
+    "end": 1384.4,
+    "text": "If the condition's true, we're going to execute maybe the set of instructions."
+  },
+  {
+    "start": 1384.4,
+    "end": 1389.8,
+    "text": "If the condition's not true, maybe we'll check if the condition's not true, we will"
+  },
+  {
+    "start": 1389.8,
+    "end": 1392.0,
+    "text": "check this next condition."
+  },
+  {
+    "start": 1392.0,
+    "end": 1395.1,
+    "text": "That's part of the LIF right here."
+  },
+  {
+    "start": 1395.1,
+    "end": 1398.8,
+    "text": "And if that one's true, we're going to execute a different set of instructions."
+  },
+  {
+    "start": 1401.0,
+    "end": 1402.7,
+    "text": "And depending on which one's true,"
+  },
+  {
+    "start": 1402.7,
+    "end": 1405.9,
+    "text": "you're going to execute a different set of instructions."
+  },
+  {
+    "start": 1405.9,
+    "end": 1408.4,
+    "text": "And then this last else is sort of a catch all,"
+  },
+  {
+    "start": 1408.4,
+    "end": 1411.4,
+    "text": "where if none of the previous conditions were true,"
+  },
+  {
+    "start": 1411.4,
+    "end": 1415.1,
+    "text": "then just do this last set of expressions."
+  },
+  {
+    "start": 1415.1,
+    "end": 1417.6,
+    "text": "So in this case, you're going to choose"
+  },
+  {
+    "start": 1417.6,
+    "end": 1420.6,
+    "text": "between one of these three, one of these four roots,"
+  },
+  {
+    "start": 1420.6,
+    "end": 1423.2,
+    "text": "or however many you have."
+  },
+  {
+    "start": 1423.2,
+    "end": 1425.0,
+    "text": "And then when you're done making your choice,"
+  },
+  {
+    "start": 1425.0,
+    "end": 1431.3,
+    "text": "you're going to execute the remaining set of instructions."
+  },
+  {
+    "start": 1432.7,
+    "end": 1435.2,
+    "text": "more than one condition is true, you're actually just"
+  },
+  {
+    "start": 1435.2,
+    "end": 1438.0,
+    "text": "going to enter one of them."
+  },
+  {
+    "start": 1438.0,
+    "end": 1441.0,
+    "text": "And you're going to enter the very first one that's true."
+  },
+  {
+    "start": 1441.0,
+    "end": 1444.9,
+    "text": "So you're never going to enter more than one of these code"
+  },
+  {
+    "start": 1444.9,
+    "end": 1445.6,
+    "text": "blocks."
+  },
+  {
+    "start": 1445.6,
+    "end": 1449.0,
+    "text": "You always enter one, and you enter the first one that"
+  },
+  {
+    "start": 1449.0,
+    "end": 1455.7,
+    "text": "evaluates to true."
+  },
+  {
+    "start": 1455.7,
+    "end": 1459.6,
+    "text": "So notice that we denoted code blocks using indentation."
+  },
+  {
+    "start": 1459.6,
+    "end": 1461.1,
+    "text": "And that's actually one of the things"
+  },
+  {
+    "start": 1461.1,
+    "end": 1462.9,
+    "text": "that I really like about Python."
+  },
+  {
+    "start": 1462.9,
+    "end": 1465.7,
+    "text": "It sort of forces you to write pretty code"
+  },
+  {
+    "start": 1467.9,
+    "end": 1471.8,
+    "text": "and just code that's very readable."
+  },
+  {
+    "start": 1471.8,
+    "end": 1474.1,
+    "text": "And that enforces you to indent everything"
+  },
+  {
+    "start": 1474.1,
+    "end": 1476.0,
+    "text": "that's a code block."
+  },
+  {
+    "start": 1476.0,
+    "end": 1479.0,
+    "text": "So you can easily see sort of where the flow of control is"
+  },
+  {
+    "start": 1479.0,
+    "end": 1484.6,
+    "text": "and where decision making points are and things like that."
+  },
+  {
+    "start": 1484.6,
+    "end": 1489.4,
+    "text": "So in this particular example, we have one if statement here."
+  },
+  {
+    "start": 1489.4,
+    "end": 1495.3,
+    "text": "And it checks if two variables are equal."
+  },
+  {
+    "start": 1495.3,
+    "end": 1497.4,
+    "text": "And we have an if elif else."
+  },
+  {
+    "start": 1498.3,
+    "end": 1501.3,
+    "text": "And in this example, we're going to enter either this code"
+  },
+  {
+    "start": 1501.3,
+    "end": 1504.2,
+    "text": "block, or this one, or this one, depending"
+  },
+  {
+    "start": 1504.2,
+    "end": 1506.1,
+    "text": "on the variables of x and y."
+  },
+  {
+    "start": 1506.1,
+    "end": 1508.7,
+    "text": "And we're only going to enter one code block."
+  },
+  {
+    "start": 1508.7,
+    "end": 1510.6,
+    "text": "And we'll enter the first one."
+  },
+  {
+    "start": 1510.6,
+    "end": 1513.5,
+    "text": "That's true."
+  },
+  {
+    "start": 1513.5,
+    "end": 1515.9,
+    "text": "Notice you can have nested conditionals."
+  },
+  {
+    "start": 1515.9,
+    "end": 1523.0,
+    "text": "So inside this first if, we have another if here."
+  },
+  {
+    "start": 1523.0,
+    "end": 1527.5,
+    "text": "And this inner if is only going to be checked"
+  },
+  {
+    "start": 1527.5,
+    "end": 1530.5,
+    "text": "when we enter the first, this outer if."
+  },
+  {
+    "start": 1536.2,
+    "end": 1539.2,
+    "text": "I do want to make one point, though."
+  },
+  {
+    "start": 1539.2,
+    "end": 1541.8,
+    "text": "So sometimes you might forget to do the double equal sign"
+  },
+  {
+    "start": 1541.8,
+    "end": 1544.3,
+    "text": "when you're checking for equality."
+  },
+  {
+    "start": 1544.3,
+    "end": 1546.2,
+    "text": "And that's OK."
+  },
+  {
+    "start": 1546.2,
+    "end": 1548.2,
+    "text": "If you just use one equal sign, Python's"
+  },
+  {
+    "start": 1548.2,
+    "end": 1550.9,
+    "text": "going to give you an error."
+  },
+  {
+    "start": 1550.9,
+    "end": 1553.6,
+    "text": "And it's going to say syntax error."
+  },
+  {
+    "start": 1553.6,
+    "end": 1555.7,
+    "text": "And it's going to highlight this line."
+  },
+  {
+    "start": 1555.7,
+    "end": 1558.7,
+    "text": "And then you're going to know that there's a mistake there."
+  },
+  {
+    "start": 1558.7,
+    "end": 1561.2,
+    "text": "You should be using equality because it doesn't make sense"
+  },
+  {
+    "start": 1561.2,
+    "end": 1563.9,
+    "text": "to be using to assign to be making"
+  },
+  {
+    "start": 1563.9,
+    "end": 1567.2,
+    "text": "an assignment inside the if."
+  },
+  {
+    "start": 1570.5,
+    "end": 1573.8,
+    "text": "All right, so we've learned about branching,"
+  },
+  {
+    "start": 1573.8,
+    "end": 1577.1,
+    "text": "and we know about conditionals."
+  },
+  {
+    "start": 1577.1,
+    "end": 1582.7,
+    "text": "Let's try to apply this to a little game."
+  },
+  {
+    "start": 1582.7,
+    "end": 1585.0,
+    "text": "And spoiler, we won't be able to."
+  },
+  {
+    "start": 1585.0,
+    "end": 1587.0,
+    "text": "We'll have to learn about a new thing."
+  },
+  {
+    "start": 1587.0,
+    "end": 1590.2,
+    "text": "But back in 1980s, there was the Legend of Zelda cool"
+  },
+  {
+    "start": 1590.2,
+    "end": 1596.4,
+    "text": "graphics, where there was a scene with the Lost Woods."
+  },
+  {
+    "start": 1596.4,
+    "end": 1600.8,
+    "text": "Oversimplification, if anyone's a Zelda die-hard fan."
+  },
+  {
+    "start": 1601.5,
+    "end": 1604.8,
+    "text": "The basic idea was if you entered the woods,"
+  },
+  {
+    "start": 1604.8,
+    "end": 1607.1,
+    "text": "you entered from the left to the right."
+  },
+  {
+    "start": 1607.1,
+    "end": 1609.6,
+    "text": "And then as long as you kept going right,"
+  },
+  {
+    "start": 1609.6,
+    "end": 1613.1,
+    "text": "it would show you the same screen over and over again."
+  },
+  {
+    "start": 1613.1,
+    "end": 1615.8,
+    "text": "And the trick was you just had to go backward,"
+  },
+  {
+    "start": 1615.8,
+    "end": 1618.2,
+    "text": "and then you'd exit the woods."
+  },
+  {
+    "start": 1618.2,
+    "end": 1620.0,
+    "text": "So very simple."
+  },
+  {
+    "start": 1620.0,
+    "end": 1624.2,
+    "text": "Using what we know so far, we could sort of code this up."
+  },
+  {
+    "start": 1624.2,
+    "end": 1625.9,
+    "text": "And we'd say something like this."
+  },
+  {
+    "start": 1625.9,
+    "end": 1628.8,
+    "text": "If the user exits right, then set the background"
+  },
+  {
+    "start": 1630.8,
+    "end": 1635.6,
+    "text": "Otherwise, set the background to the exit background."
+  },
+  {
+    "start": 1635.6,
+    "end": 1638.9,
+    "text": "Now, let's say the user and then the else were done."
+  },
+  {
+    "start": 1638.9,
+    "end": 1640.9,
+    "text": "Let's say the user went right."
+  },
+  {
+    "start": 1640.9,
+    "end": 1642.8,
+    "text": "Well, you'd show them the wood's background"
+  },
+  {
+    "start": 1642.8,
+    "end": 1645.3,
+    "text": "and now ask them again, where do they want to go?"
+  },
+  {
+    "start": 1645.3,
+    "end": 1646.9,
+    "text": "If they exit right, set the background"
+  },
+  {
+    "start": 1646.9,
+    "end": 1647.9,
+    "text": "to the wood's background."
+  },
+  {
+    "start": 1647.9,
+    "end": 1650.5,
+    "text": "Otherwise, set the background to the exit background."
+  },
+  {
+    "start": 1650.5,
+    "end": 1650.9,
+    "text": "And so on."
+  },
+  {
+    "start": 1650.9,
+    "end": 1655.2,
+    "text": "So you notice that there's sort of no end to this, right?"
+  },
+  {
+    "start": 1655.2,
+    "end": 1656.0,
+    "text": "How many times?"
+  },
+  {
+    "start": 1656.8,
+    "end": 1659.4,
+    "text": "Do you know how many times the user might keep going right?"
+  },
+  {
+    "start": 1659.4,
+    "end": 1661.5,
+    "text": "They might be really persistent, right?"
+  },
+  {
+    "start": 1661.5,
+    "end": 1664.2,
+    "text": "And they'll be like, maybe if I go 1,000 times,"
+  },
+  {
+    "start": 1664.2,
+    "end": 1665.7,
+    "text": "I'll get out of the woods."
+  },
+  {
+    "start": 1665.7,
+    "end": 1667.7,
+    "text": "Or maybe 1,001?"
+  },
+  {
+    "start": 1667.7,
+    "end": 1668.7,
+    "text": "Maybe."
+  },
+  {
+    "start": 1668.7,
+    "end": 1676.2,
+    "text": "So this would probably be, who knows how deep?"
+  },
+  {
+    "start": 1676.2,
+    "end": 1677.6,
+    "text": "These nested ifs."
+  },
+  {
+    "start": 1677.6,
+    "end": 1680.9,
+    "text": "So we don't know."
+  },
+  {
+    "start": 1680.9,
+    "end": 1682.6,
+    "text": "So with what we know so far, we can't really"
+  },
+  {
+    "start": 1682.6,
+    "end": 1684.8,
+    "text": "code this cute little game."
+  },
+  {
+    "start": 1684.8,
+    "end": 1687.0,
+    "text": "But enter loops."
+  },
+  {
+    "start": 1687.4,
+    "end": 1690.8,
+    "text": "And specifically, a while loop."
+  },
+  {
+    "start": 1690.8,
+    "end": 1693.9,
+    "text": "So this code here that could be, you know,"
+  },
+  {
+    "start": 1693.9,
+    "end": 1697.5,
+    "text": "infinitely number of nested if statements deep"
+  },
+  {
+    "start": 1697.5,
+    "end": 1701.3,
+    "text": "can be rewritten using these three lines."
+  },
+  {
+    "start": 1701.3,
+    "end": 1704.0,
+    "text": "So we say while the user exits right,"
+  },
+  {
+    "start": 1704.0,
+    "end": 1706.5,
+    "text": "set the background to the woods background."
+  },
+  {
+    "start": 1706.5,
+    "end": 1708.0,
+    "text": "And with a while loop, it's going"
+  },
+  {
+    "start": 1708.0,
+    "end": 1709.7,
+    "text": "to do what we tell it to do inside the loop,"
+  },
+  {
+    "start": 1709.7,
+    "end": 1711.8,
+    "text": "and then it's going to check the condition again."
+  },
+  {
+    "start": 1711.8,
+    "end": 1713.9,
+    "text": "And then it's going to do what we"
+  },
+  {
+    "start": 1713.9,
+    "end": 1716.5,
+    "text": "say it should do inside the code block,"
+  },
+  {
+    "start": 1716.5,
+    "end": 1719.1,
+    "text": "and then it's going to check the condition again."
+  },
+  {
+    "start": 1719.4,
+    "end": 1722.5,
+    "text": "And then when the condition, as long as the condition is true,"
+  },
+  {
+    "start": 1722.5,
+    "end": 1725.4,
+    "text": "it's going to keep doing that little loop there."
+  },
+  {
+    "start": 1725.4,
+    "end": 1727.2,
+    "text": "And as soon as the condition becomes false,"
+  },
+  {
+    "start": 1727.2,
+    "end": 1728.7,
+    "text": "it's going to stop doing the loop"
+  },
+  {
+    "start": 1728.7,
+    "end": 1733.5,
+    "text": "and do whatever is right after the while."
+  },
+  {
+    "start": 1733.5,
+    "end": 1737.4,
+    "text": "So that's basically how a while loop works."
+  },
+  {
+    "start": 1737.4,
+    "end": 1740.1,
+    "text": "We have while, that's the keyword."
+  },
+  {
+    "start": 1740.1,
+    "end": 1743.8,
+    "text": "The condition is something that gets evaluated to true or false."
+  },
+  {
+    "start": 1743.8,
+    "end": 1746.0,
+    "text": "And once again, we have a code block that's indented."
+  },
+  {
+    "start": 1746.8,
+    "end": 1748.9,
+    "text": "And it tells Python, these are the expressions"
+  },
+  {
+    "start": 1748.9,
+    "end": 1756.2,
+    "text": "I want to do as long as the condition is true."
+  },
+  {
+    "start": 1756.2,
+    "end": 1757.4,
+    "text": "So the condition is true."
+  },
+  {
+    "start": 1757.4,
+    "end": 1759.6,
+    "text": "You evaluate every expression in the code block."
+  },
+  {
+    "start": 1759.6,
+    "end": 1762.4,
+    "text": "When you reach the end of the code block,"
+  },
+  {
+    "start": 1762.4,
+    "end": 1764.2,
+    "text": "you check the condition again."
+  },
+  {
+    "start": 1764.2,
+    "end": 1767.2,
+    "text": "If it's true still, you keep doing the expressions,"
+  },
+  {
+    "start": 1767.2,
+    "end": 1772.9,
+    "text": "check it again, and so on."
+  },
+  {
+    "start": 1772.9,
+    "end": 1775.5,
+    "text": "So here's a little game."
+  },
+  {
+    "start": 1775.5,
+    "end": 1778.8,
+    "text": "And with these lines of code, we"
+  },
+  {
+    "start": 1778.8,
+    "end": 1782.2,
+    "text": "can code up the last words of Zelda."
+  },
+  {
+    "start": 1782.8,
+    "end": 1786.9,
+    "text": "Even worse graphics, by the way, than the original Zelda"
+  },
+  {
+    "start": 1786.9,
+    "end": 1789.0,
+    "text": "is this one that I coded up here."
+  },
+  {
+    "start": 1789.0,
+    "end": 1791.1,
+    "text": "So I print out the following things."
+  },
+  {
+    "start": 1791.1,
+    "end": 1794.5,
+    "text": "You're in the Lost Forest, go left or right."
+  },
+  {
+    "start": 1794.5,
+    "end": 1797.2,
+    "text": "And my program's going to say, you're in the Lost Forest,"
+  },
+  {
+    "start": 1797.2,
+    "end": 1798.0,
+    "text": "go left or right."
+  },
+  {
+    "start": 1798.0,
+    "end": 1799.6,
+    "text": "It's going to get user input."
+  },
+  {
+    "start": 1799.6,
+    "end": 1803.9,
+    "text": "It's going to say, while the user keeps typing in right,"
+  },
+  {
+    "start": 1803.9,
+    "end": 1807.3,
+    "text": "show them this text and ask them again."
+  },
+  {
+    "start": 1807.3,
+    "end": 1811.0,
+    "text": "So I'm asking them again by just saying input here again."
+  },
+  {
+    "start": 1811.0,
+    "end": 1811.7,
+    "text": "And that's it."
+  },
+  {
+    "start": 1812.5,
+    "end": 1815.0,
+    "text": "just keep getting input from the user."
+  },
+  {
+    "start": 1815.0,
+    "end": 1818.5,
+    "text": "And if the user doesn't type in right and maybe types in left,"
+  },
+  {
+    "start": 1818.5,
+    "end": 1820.7,
+    "text": "you're going to exit out of this loop"
+  },
+  {
+    "start": 1820.7,
+    "end": 1824.8,
+    "text": "and print out you got out of the loss force."
+  },
+  {
+    "start": 1824.8,
+    "end": 1826.9,
+    "text": "So I have to show you this because I"
+  },
+  {
+    "start": 1826.9,
+    "end": 1830.7,
+    "text": "spent too much time on it."
+  },
+  {
+    "start": 1830.7,
+    "end": 1837.8,
+    "text": "But I decided to improve on the code that's in the slides."
+  },
+  {
+    "start": 1837.8,
+    "end": 1841.9,
+    "text": "And I've written here ways that you guys can also improve it."
+  },
+  {
+    "start": 1843.7,
+    "end": 1845.9,
+    "text": "You're in the Lost Forest, go left or right."
+  },
+  {
+    "start": 1845.9,
+    "end": 1851.2,
+    "text": "So if I say left, then yay, I got out of the Lost Forest."
+  },
+  {
+    "start": 1851.2,
+    "end": 1856.4,
+    "text": "But if I go right, then I'm stuck, right?"
+  },
+  {
+    "start": 1856.4,
+    "end": 1858.0,
+    "text": "I took down some trees."
+  },
+  {
+    "start": 1858.0,
+    "end": 1859.6,
+    "text": "You can see there's no more trees here."
+  },
+  {
+    "start": 1859.6,
+    "end": 1864.9,
+    "text": "I made a table, and then I flipped it over."
+  },
+  {
+    "start": 1864.9,
+    "end": 1867.8,
+    "text": "So the expansion to this, if you want to try it out,"
+  },
+  {
+    "start": 1867.8,
+    "end": 1872.2,
+    "text": "I put this in the comments here, is try to use a counter."
+  },
+  {
+    "start": 1873.6,
+    "end": 1877.5,
+    "text": "The first two times, just make that a sad face."
+  },
+  {
+    "start": 1877.5,
+    "end": 1879.3,
+    "text": "But if the user types in more than two times,"
+  },
+  {
+    "start": 1879.3,
+    "end": 1884.5,
+    "text": "make them cut down some trees and build a table and flip it."
+  },
+  {
+    "start": 1884.5,
+    "end": 1885.9,
+    "text": "That's a cute little expansion if you"
+  },
+  {
+    "start": 1885.9,
+    "end": 1891.4,
+    "text": "want to test yourself to make sure you're getting loops."
+  },
+  {
+    "start": 1891.4,
+    "end": 1894.6,
+    "text": "So so far, we've used while loops to ask for user input."
+  },
+  {
+    "start": 1894.6,
+    "end": 1896.8,
+    "text": "And that's actually somewhere where"
+  },
+  {
+    "start": 1896.8,
+    "end": 1898.3,
+    "text": "it makes sense to use while loops,"
+  },
+  {
+    "start": 1898.3,
+    "end": 1900.8,
+    "text": "because you don't actually know how many times the user is"
+  },
+  {
+    "start": 1900.8,
+    "end": 1903.3,
+    "text": "going to type in something."
+  },
+  {
+    "start": 1907.0,
+    "end": 1912.4,
+    "text": "and to write code that counts something."
+  },
+  {
+    "start": 1912.4,
+    "end": 1915.1,
+    "text": "If you do that, though, there's two things"
+  },
+  {
+    "start": 1915.1,
+    "end": 1916.4,
+    "text": "you need to take care of."
+  },
+  {
+    "start": 1916.4,
+    "end": 1920.5,
+    "text": "The first is this first line here,"
+  },
+  {
+    "start": 1920.5,
+    "end": 1923.8,
+    "text": "which is sort of an initialization of this loop"
+  },
+  {
+    "start": 1923.8,
+    "end": 1926.8,
+    "text": "counter."
+  },
+  {
+    "start": 1926.8,
+    "end": 1929.4,
+    "text": "And the second is this line here,"
+  },
+  {
+    "start": 1929.4,
+    "end": 1935.5,
+    "text": "which is incrementing your loop counter."
+  },
+  {
+    "start": 1935.5,
+    "end": 1937.9,
+    "text": "The reason why the second one's important"
+  },
+  {
+    "start": 1937.9,
+    "end": 1940.7,
+    "text": "is because let's look at our condition here."
+  },
+  {
+    "start": 1940.7,
+    "end": 1942.3,
+    "text": "So while n is less than 5."
+  },
+  {
+    "start": 1944.2,
+    "end": 1947.0,
+    "text": "If you didn't have this line here,"
+  },
+  {
+    "start": 1947.0,
+    "end": 1949.2,
+    "text": "you would never increment n."
+  },
+  {
+    "start": 1949.2,
+    "end": 1953.0,
+    "text": "So every time through the loop, you'd just keep printing zeros."
+  },
+  {
+    "start": 1953.0,
+    "end": 1954.8,
+    "text": "And you'd have an infinite loop."
+  },
+  {
+    "start": 1954.8,
+    "end": 1958.4,
+    "text": "I do want to show, though, if you do have an infinite loop,"
+  },
+  {
+    "start": 1958.4,
+    "end": 1960.5,
+    "text": "it's not the end of the world."
+  },
+  {
+    "start": 1960.5,
+    "end": 1973.3,
+    "text": "So I can say something like, so while true, print zero."
+  },
+  {
+    "start": 1973.3,
+    "end": 1977.2,
+    "text": "So this is going to give me an infinite loop in my program."
+  },
+  {
+    "start": 1987.8,
+    "end": 1992.7,
+    "text": "So, notice it's just printing the letter P over and over again."
+  },
+  {
+    "start": 1992.7,
+    "end": 1995.1,
+    "text": "And if I let it go any longer, it's going to slow down the computer."
+  },
+  {
+    "start": 1995.1,
+    "end": 2001.1,
+    "text": "So I'm going to hit control C, or command C maybe, and it's going to stop the program"
+  },
+  {
+    "start": 2001.1,
+    "end": 2002.1,
+    "text": "from printing."
+  },
+  {
+    "start": 2002.1,
+    "end": 2003.1,
+    "text": "Okay?"
+  },
+  {
+    "start": 2003.1,
+    "end": 2007.0,
+    "text": "So just in case you ever enter infinite loops in your programs, just go to the console"
+  },
+  {
+    "start": 2007.0,
+    "end": 2014.4,
+    "text": "and hit control C, and that's going to stop it from sort of slowing down the computer."
+  },
+  {
+    "start": 2014.4,
+    "end": 2015.4,
+    "text": "Okay."
+  },
+  {
+    "start": 2018.3,
+    "end": 2026.1,
+    "text": "Counters are variables in order to sort of count up inside the while loop. You have to take care to initialize account counter variable first and"
+  },
+  {
+    "start": 2026.5,
+    "end": 2032.8,
+    "text": "Then to increment it. Otherwise, you'll enter an infinite loop that feels a little bit tedious and"
+  },
+  {
+    "start": 2033.5,
+    "end": 2036.0,
+    "text": "So there's a shortcut"
+  },
+  {
+    "start": 2036.0,
+    "end": 2041.8,
+    "text": "For doing that exact same thing. So these four lines you can rewrite those into these two lines right here"
+  },
+  {
+    "start": 2042.1,
+    "end": 2044.9,
+    "text": "Using this new type of loop called a for loop"
+  },
+  {
+    "start": 2046.9,
+    "end": 2050.4,
+    "text": "So the for loop says for some loop variable."
+  },
+  {
+    "start": 2050.4,
+    "end": 2051.9,
+    "text": "In this case, I named it n."
+  },
+  {
+    "start": 2051.9,
+    "end": 2054.0,
+    "text": "You can name it whatever you want."
+  },
+  {
+    "start": 2054.0,
+    "end": 2055.5,
+    "text": "In range 5, we're going to come back"
+  },
+  {
+    "start": 2055.5,
+    "end": 2057.8,
+    "text": "to what range means in a little bit."
+  },
+  {
+    "start": 2057.8,
+    "end": 2061.9,
+    "text": "Print n."
+  },
+  {
+    "start": 2061.9,
+    "end": 2063.6,
+    "text": "So every time through the loop, you're"
+  },
+  {
+    "start": 2063.6,
+    "end": 2066.9,
+    "text": "going to print out what the value of n is."
+  },
+  {
+    "start": 2069.6,
+    "end": 2073.9,
+    "text": "creates internally a sequence of numbers, starting from 0"
+  },
+  {
+    "start": 2073.9,
+    "end": 2076.8,
+    "text": "and going to that number 5 minus 1."
+  },
+  {
+    "start": 2076.8,
+    "end": 2082.0,
+    "text": "So the sequence is going to be 0, 1, 2, 3, and 4."
+  },
+  {
+    "start": 2082.0,
+    "end": 2083.5,
+    "text": "The first time through the loop, you're"
+  },
+  {
+    "start": 2083.5,
+    "end": 2086.2,
+    "text": "going to say n is equal to 0, or internally,"
+  },
+  {
+    "start": 2086.2,
+    "end": 2088.8,
+    "text": "this is what happens, n gets the value 0."
+  },
+  {
+    "start": 2088.8,
+    "end": 2091.1,
+    "text": "You're going to print n."
+  },
+  {
+    "start": 2091.1,
+    "end": 2095.2,
+    "text": "Then you're going to go back to the top, n gets the value 1."
+  },
+  {
+    "start": 2095.2,
+    "end": 2098.1,
+    "text": "Then you're going to go execute whatever's inside."
+  },
+  {
+    "start": 2098.1,
+    "end": 2099.1,
+    "text": "So you're going to print 1."
+  },
+  {
+    "start": 2100.3,
+    "end": 2102.5,
+    "text": "Then you're going to increment that to the next value"
+  },
+  {
+    "start": 2102.5,
+    "end": 2103.4,
+    "text": "in the sequence."
+  },
+  {
+    "start": 2103.4,
+    "end": 2107.6,
+    "text": "You're going to print out 2, and so on."
+  },
+  {
+    "start": 2107.6,
+    "end": 2112.0,
+    "text": "So this is the general look of a for loop."
+  },
+  {
+    "start": 2112.0,
+    "end": 2115.7,
+    "text": "So we have for some loop variable."
+  },
+  {
+    "start": 2115.7,
+    "end": 2121.3,
+    "text": "Again, can be named whatever you want in range some number."
+  },
+  {
+    "start": 2121.3,
+    "end": 2123.7,
+    "text": "Do a bunch of stuff."
+  },
+  {
+    "start": 2123.7,
+    "end": 2126.9,
+    "text": "And again, these are part of this for loop code block,"
+  },
+  {
+    "start": 2126.9,
+    "end": 2129.3,
+    "text": "so you should indent them to tell Python"
+  },
+  {
+    "start": 2129.3,
+    "end": 2131.4,
+    "text": "that these are the things that you should do."
+  },
+  {
+    "start": 2131.4,
+    "end": 2131.9,
+    "text": "OK?"
+  },
+  {
+    "start": 2132.2,
+    "end": 2134.3,
+    "text": "So when you're using range some number,"
+  },
+  {
+    "start": 2134.3,
+    "end": 2141.9,
+    "text": "you start out with variable getting the value 0."
+  },
+  {
+    "start": 2141.9,
+    "end": 2144.3,
+    "text": "With variable having value 0, you're"
+  },
+  {
+    "start": 2144.3,
+    "end": 2147.9,
+    "text": "going to execute all of these expressions."
+  },
+  {
+    "start": 2147.9,
+    "end": 2150.5,
+    "text": "After all the expressions in the code block are done,"
+  },
+  {
+    "start": 2150.5,
+    "end": 2153.9,
+    "text": "you're going to go on to the next value."
+  },
+  {
+    "start": 2153.9,
+    "end": 2157.8,
+    "text": "So 1, you're going to execute all these expressions"
+  },
+  {
+    "start": 2157.8,
+    "end": 2162.8,
+    "text": "with variable being value 1, and then so on and so on,"
+  },
+  {
+    "start": 2164.4,
+    "end": 2171.3,
+    "text": "Minus 1."
+  },
+  {
+    "start": 2171.3,
+    "end": 2175.4,
+    "text": "So using range in that way is a little bit constraining,"
+  },
+  {
+    "start": 2175.4,
+    "end": 2178.5,
+    "text": "because you're always going to get values starting from 0"
+  },
+  {
+    "start": 2178.5,
+    "end": 2181.7,
+    "text": "and ending at some num minus 1, whatever"
+  },
+  {
+    "start": 2181.7,
+    "end": 2183.8,
+    "text": "is in the parentheses in range."
+  },
+  {
+    "start": 2183.8,
+    "end": 2186.0,
+    "text": "Sometimes you might want to write programs that maybe"
+  },
+  {
+    "start": 2186.0,
+    "end": 2187.5,
+    "text": "start at a custom value."
+  },
+  {
+    "start": 2187.5,
+    "end": 2188.2,
+    "text": "Don't start at 0."
+  },
+  {
+    "start": 2188.2,
+    "end": 2190.1,
+    "text": "Maybe they start at 5."
+  },
+  {
+    "start": 2190.1,
+    "end": 2192.1,
+    "text": "Maybe they start at minus 10."
+  },
+  {
+    "start": 2192.1,
+    "end": 2194.1,
+    "text": "And sometimes you might want to write programs"
+  },
+  {
+    "start": 2195.1,
+    "end": 2197.5,
+    "text": "with don't increment the numbers by 1,"
+  },
+  {
+    "start": 2197.5,
+    "end": 2199.8,
+    "text": "but maybe skip every other number or go every two"
+  },
+  {
+    "start": 2199.8,
+    "end": 2202.1,
+    "text": "numbers, every three numbers, and so on."
+  },
+  {
+    "start": 2202.1,
+    "end": 2207.3,
+    "text": "So you can customize range to your needs."
+  },
+  {
+    "start": 2207.3,
+    "end": 2210.1,
+    "text": "The one thing you do need to give it is the stop."
+  },
+  {
+    "start": 2210.1,
+    "end": 2212.3,
+    "text": "So if you give it only one value in the parentheses,"
+  },
+  {
+    "start": 2212.3,
+    "end": 2214.9,
+    "text": "that stands for stop."
+  },
+  {
+    "start": 2214.9,
+    "end": 2217.4,
+    "text": "And by default, start is going to have the value 0"
+  },
+  {
+    "start": 2217.4,
+    "end": 2221.3,
+    "text": "and step is going to have the value 1."
+  },
+  {
+    "start": 2221.3,
+    "end": 2223.9,
+    "text": "If you give it two things in the parentheses,"
+  },
+  {
+    "start": 2223.9,
+    "end": 2225.7,
+    "text": "you're giving it start and stop."
+  },
+  {
+    "start": 2226.2,
+    "end": 2228.8,
+    "text": "So the first being start, the second being stop,"
+  },
+  {
+    "start": 2228.8,
+    "end": 2232.8,
+    "text": "and step gets this value of 1 by default."
+  },
+  {
+    "start": 2232.8,
+    "end": 2235.0,
+    "text": "And if you give it three things in the parentheses,"
+  },
+  {
+    "start": 2235.0,
+    "end": 2242.4,
+    "text": "you're giving it start, stop, and step in that order."
+  },
+  {
+    "start": 2242.4,
+    "end": 2246.1,
+    "text": "And you're always going to start at the start value"
+  },
+  {
+    "start": 2246.1,
+    "end": 2250.2,
+    "text": "and stop at, or so you're going to start at the start value,"
+  },
+  {
+    "start": 2250.2,
+    "end": 2252.3,
+    "text": "and you're going to go until stop minus 1."
+  },
+  {
+    "start": 2252.3,
+    "end": 2256.8,
+    "text": "So those are the sequences of numbers."
+  },
+  {
+    "start": 2256.8,
+    "end": 2258.4,
+    "text": "So in this first code right here,"
+  },
+  {
+    "start": 2258.7,
+    "end": 2260.9,
+    "text": "My sum is going to get the value 0,"
+  },
+  {
+    "start": 2260.9,
+    "end": 2264.2,
+    "text": "and you're going to have a for loop."
+  },
+  {
+    "start": 2264.2,
+    "end": 2266.7,
+    "text": "We're going to start from 7, because we're"
+  },
+  {
+    "start": 2266.7,
+    "end": 2267.9,
+    "text": "giving it two numbers."
+  },
+  {
+    "start": 2267.9,
+    "end": 2269.3,
+    "text": "And when you give it two numbers,"
+  },
+  {
+    "start": 2269.3,
+    "end": 2273.6,
+    "text": "it represents start and stop, with step being 1."
+  },
+  {
+    "start": 2273.6,
+    "end": 2275.9,
+    "text": "So you're starting at 7."
+  },
+  {
+    "start": 2275.9,
+    "end": 2280.1,
+    "text": "If step is 1, the next value is 8."
+  },
+  {
+    "start": 2280.1,
+    "end": 2285.1,
+    "text": "What's the value after that?"
+  },
+  {
+    "start": 2285.1,
+    "end": 2292.7,
+    "text": "If we're incrementing by 1, 9."
+  },
+  {
+    "start": 2292.7,
+    "end": 2297.4,
+    "text": "And since we're going until stop minus 1,"
+  },
+  {
+    "start": 2300.2,
+    "end": 2301.3,
+    "text": "OK?"
+  },
+  {
+    "start": 2301.3,
+    "end": 2304.5,
+    "text": "So this loop variable i, the very first time through the loop"
+  },
+  {
+    "start": 2304.5,
+    "end": 2308.2,
+    "text": "is going to have the value 7."
+  },
+  {
+    "start": 2308.2,
+    "end": 2317.5,
+    "text": "So my sum is going to be 0 plus 7."
+  },
+  {
+    "start": 2317.5,
+    "end": 2320.6,
+    "text": "That's everything that's inside the code block."
+  },
+  {
+    "start": 2320.6,
+    "end": 2325.5,
+    "text": "The next time through the loop, i gets the value 8."
+  },
+  {
+    "start": 2325.5,
+    "end": 2332.9,
+    "text": "So inside the for loop, my sum gets"
+  },
+  {
+    "start": 2339.9,
+    "end": 2348.2,
+    "text": "The next time through the loop, my sum gets the value 7 plus 8 plus 9,"
+  },
+  {
+    "start": 2348.2,
+    "end": 2353.2,
+    "text": "obviously replacing that with the previous value, so 15."
+  },
+  {
+    "start": 2353.2,
+    "end": 2355.9,
+    "text": "Since we're not going through 10, that's where we stop."
+  },
+  {
+    "start": 2355.9,
+    "end": 2357.6,
+    "text": "And we're going to print out my sum, which"
+  },
+  {
+    "start": 2357.6,
+    "end": 2362.4,
+    "text": "is going to be the value of 7 plus 8 plus 9."
+  },
+  {
+    "start": 2362.4,
+    "end": 2364.9,
+    "text": "Oh, yeah."
+  },
+  {
+    "start": 2364.9,
+    "end": 2368.5,
+    "text": "Oh, OK, yeah."
+  },
+  {
+    "start": 2368.5,
+    "end": 2372.7,
+    "text": "Do they have to be integers?"
+  },
+  {
+    "start": 2372.7,
+    "end": 2373.7,
+    "text": "That's a great question."
+  },
+  {
+    "start": 2373.7,
+    "end": 2374.9,
+    "text": "We can try that out."
+  },
+  {
+    "start": 2374.9,
+    "end": 2375.7,
+    "text": "I'm not actually sure."
+  },
+  {
+    "start": 2376.3,
+    "end": 2378.6,
+    "text": "just off the top of my head."
+  },
+  {
+    "start": 2378.6,
+    "end": 2387.2,
+    "text": "So you can go in spider and say, let's say in this example here."
+  },
+  {
+    "start": 2387.2,
+    "end": 2392.1,
+    "text": "In this example here."
+  },
+  {
+    "start": 2392.1,
+    "end": 2398.5,
+    "text": "So we can say 7.1, 10.3."
+  },
+  {
+    "start": 2398.5,
+    "end": 2409.2,
+    "text": "Yeah, so they have to be integers."
+  },
+  {
+    "start": 2409.2,
+    "end": 2413.3,
+    "text": "So that's that example, and let's erase that."
+  },
+  {
+    "start": 2413.3,
+    "end": 2416.5,
+    "text": "In this particular example, we have start, stop, and step."
+  },
+  {
+    "start": 2416.5,
+    "end": 2419.1,
+    "text": "And here we're going every other value."
+  },
+  {
+    "start": 2419.7,
+    "end": 2422.2,
+    "text": "So we're starting at 5."
+  },
+  {
+    "start": 2422.2,
+    "end": 2425.4,
+    "text": "Tell me what the next value is supposed to be,"
+  },
+  {
+    "start": 2425.4,
+    "end": 2427.7,
+    "text": "if we're taking every other one."
+  },
+  {
+    "start": 2427.7,
+    "end": 2435.0,
+    "text": "7, and then 9, and then are we doing 11 or not?"
+  },
+  {
+    "start": 2435.0,
+    "end": 2435.9,
+    "text": "Excellent."
+  },
+  {
+    "start": 2435.9,
+    "end": 2437.5,
+    "text": "Nice."
+  },
+  {
+    "start": 2437.5,
+    "end": 2441.5,
+    "text": "So we're going to the end minus 1."
+  },
+  {
+    "start": 2441.5,
+    "end": 2443.4,
+    "text": "So it's possible that sometimes you"
+  },
+  {
+    "start": 2443.4,
+    "end": 2446.4,
+    "text": "write code where you might want to exit out of the loop early."
+  },
+  {
+    "start": 2446.7,
+    "end": 2449.5,
+    "text": "OK, you don't want to go through all of the sequences"
+  },
+  {
+    "start": 2449.5,
+    "end": 2451.0,
+    "text": "of your numbers."
+  },
+  {
+    "start": 2451.0,
+    "end": 2453.3,
+    "text": "Maybe there's a condition inside there where you just"
+  },
+  {
+    "start": 2453.3,
+    "end": 2455.5,
+    "text": "want to exit the loop early."
+  },
+  {
+    "start": 2455.5,
+    "end": 2457.7,
+    "text": "Inside the while loop, maybe you want to exit the loop"
+  },
+  {
+    "start": 2457.7,
+    "end": 2460.5,
+    "text": "before the condition becomes false."
+  },
+  {
+    "start": 2460.5,
+    "end": 2463.0,
+    "text": "So that's where the break statement comes in."
+  },
+  {
+    "start": 2463.0,
+    "end": 2465.9,
+    "text": "So the break works like this."
+  },
+  {
+    "start": 2465.9,
+    "end": 2470.7,
+    "text": "It's going to, as soon as Python sees this break statement,"
+  },
+  {
+    "start": 2470.7,
+    "end": 2473.4,
+    "text": "it's going to say, OK, I'm going"
+  },
+  {
+    "start": 2477.7,
+    "end": 2480.9,
+    "text": "I'm not evaluating any expression after it"
+  },
+  {
+    "start": 2480.9,
+    "end": 2483.7,
+    "text": "that comes within my loop."
+  },
+  {
+    "start": 2483.7,
+    "end": 2486.1,
+    "text": "And I'm going to immediately exit the loop."
+  },
+  {
+    "start": 2486.1,
+    "end": 2488.9,
+    "text": "So I'm going inside this while, this while."
+  },
+  {
+    "start": 2488.9,
+    "end": 2490.6,
+    "text": "I'm evaluating this one expression,"
+  },
+  {
+    "start": 2490.6,
+    "end": 2493.4,
+    "text": "and then I suddenly see a break."
+  },
+  {
+    "start": 2493.4,
+    "end": 2497.9,
+    "text": "Expression B does not get evaluated."
+  },
+  {
+    "start": 2497.9,
+    "end": 2501.8,
+    "text": "And break is going to immediately exit out of the innermost loop"
+  },
+  {
+    "start": 2501.8,
+    "end": 2503.2,
+    "text": "that it's in."
+  },
+  {
+    "start": 2503.2,
+    "end": 2506.3,
+    "text": "So this while loop that has condition 2,"
+  },
+  {
+    "start": 2508.1,
+    "end": 2515.6,
+    "text": "is found in. So we're going to exit out of this innermost loop here and we're evaluating"
+  },
+  {
+    "start": 2515.6,
+    "end": 2521.6,
+    "text": "expression c. And notice we're evaluating expression c because it's expression c is"
+  },
+  {
+    "start": 2521.6,
+    "end": 2529.8,
+    "text": "part of the outer y loop. It's at the same level as this one. And these ones are part of the"
+  },
+  {
+    "start": 2530.5,
+    "end": 2531.6,
+    "text": "inner y loop."
+  },
+  {
+    "start": 2533.6,
+    "end": 2536.1,
+    "text": "OK, last thing I want to say is just a little bit"
+  },
+  {
+    "start": 2536.1,
+    "end": 2538.4,
+    "text": "of a comparison between for and while loops."
+  },
+  {
+    "start": 2538.4,
+    "end": 2541.2,
+    "text": "So when would you use one or the other?"
+  },
+  {
+    "start": 2541.2,
+    "end": 2543.2,
+    "text": "This might be useful in your problem sets."
+  },
+  {
+    "start": 2543.2,
+    "end": 2544.5,
+    "text": "So for loops, you usually use when"
+  },
+  {
+    "start": 2544.5,
+    "end": 2547.5,
+    "text": "you know the number of iterations."
+  },
+  {
+    "start": 2547.5,
+    "end": 2549.8,
+    "text": "While loops are very useful when, for example,"
+  },
+  {
+    "start": 2549.8,
+    "end": 2552.7,
+    "text": "you're getting user input, and user input is unpredictable."
+  },
+  {
+    "start": 2552.7,
+    "end": 2554.2,
+    "text": "You don't know how many times they're"
+  },
+  {
+    "start": 2554.2,
+    "end": 2556.8,
+    "text": "going to do a certain task."
+  },
+  {
+    "start": 2556.8,
+    "end": 2558.1,
+    "text": "For both for and while loops, you"
+  },
+  {
+    "start": 2558.1,
+    "end": 2560.2,
+    "text": "can end out of the loop early using the break."
+  },
+  {
+    "start": 2560.5,
+    "end": 2562.4,
+    "text": "The for loop uses this counter."
+  },
+  {
+    "start": 2562.4,
+    "end": 2565.3,
+    "text": "It's inherent inside the for loop."
+  },
+  {
+    "start": 2565.3,
+    "end": 2570.7,
+    "text": "A while loop, you can use a while loop to count things."
+  },
+  {
+    "start": 2570.7,
+    "end": 2573.8,
+    "text": "But you must initialize the counter before the while loop."
+  },
+  {
+    "start": 2573.8,
+    "end": 2576.0,
+    "text": "And you have to remember to increment it within the loop."
+  },
+  {
+    "start": 2576.0,
+    "end": 2580.6,
+    "text": "Otherwise, you maybe lead to an infinite loop."
+  },
+  {
+    "start": 2580.6,
+    "end": 2584.1,
+    "text": "We've seen as the very first example of a for loop"
+  },
+  {
+    "start": 2584.1,
+    "end": 2588.1,
+    "text": "that the for loop could be rewritten as a while loop."
+  },
+  {
+    "start": 2588.1,
+    "end": 2589.9,
+    "text": "But the vice versa is not necessarily true."
+  },
+  {
+    "start": 2590.6,
+    "end": 2594.4,
+    "text": "And the counter example to that is just user input."
+  },
+  {
+    "start": 2594.4,
+    "end": 2596.4,
+    "text": "So you might not know how many times"
+  },
+  {
+    "start": 2596.4,
+    "end": 2598.6,
+    "text": "you might do a certain task."
+  },
+  {
+    "start": 2598.6,
+    "end": 2600.0,
+    "text": "All right, great."
+  },
+  {
+    "start": 2600.0,
+    "end": 2602.5,
+    "text": "That's all for today."
+  }
+]

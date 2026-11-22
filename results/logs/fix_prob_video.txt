@@ -1,0 +1,4 @@
+stream|codec_name=h264|width=640|height=352
+stream|codec_name=aac
+
+OK: mit_prob_l01.mp4 83 MB

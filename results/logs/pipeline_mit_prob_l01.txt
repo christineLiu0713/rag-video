@@ -1,0 +1,1482 @@
+
+===== [15:49:59] extract: D:\7\413410654\專題\rag-video-main\venv\Scripts\python.exe extract.py D:\7\413410654\專題\rag-video-main\videos\mit_prob_l01.mp4 --lang en
+Language: en   Whisper model: small.en
+[1/4] Extracting screenshots (one every 3 second(s))...
+      Extracting audio...
+[2/4] Whisper is listening...
+      Whisper device: CUDA
+      Whisper: {'model': 'small.en', 'batch_size': 8, 'load_sec': 3.5, 'device': 'cuda', 'compute_type': 'int8_float32'}
+       0.7 ->     4.2 | Welcome to the first lecture of this class.
+       4.2 ->     6.9 | You may be used to having a first lecture devoted
+       6.9 ->     9.8 | to general comments and motivating examples.
+       9.8 ->    11.1 | This one will be different.
+      11.1 ->    14.6 | We will dive into the heart of the subject right away.
+      14.6 ->    17.1 | In fact, today, we will accomplish a lot.
+      17.1 ->    18.8 | By the end of this lecture, you will
+      18.8 ->    22.9 | know about all of the elements of a probabilistic model.
+      22.8 ->    26.0 | A probabilistic model is a quantitative description
+      26.0 ->    29.2 | of a situation, a phenomenon, or an experiment
+      29.2 ->    31.5 | whose outcome is uncertain.
+      31.5 ->    34.9 | Putting together such a model involves two key steps.
+      34.9 ->    38.0 | First, we need to describe the possible outcomes
+      38.0 ->    39.3 | of the experiment.
+      39.3 ->    43.0 | This is done by specifying a so-called sample space.
+      43.0 ->    45.5 | And then we specify a probability law
+      45.5 ->    48.9 | which assigns probabilities to outcomes or to collections
+      48.9 ->    49.7 | of outcomes.
+      50.1 ->    52.7 | The probability law tells us, for example,
+      52.7 ->    57.3 | whether one outcome is much more likely than some other outcome.
+      57.3 ->    60.5 | Probabilities have to satisfy certain basic properties
+      60.5 ->    62.1 | in order to be meaningful.
+      62.1 ->    65.1 | These are the axioms of probability theory.
+      65.1 ->    68.4 | For example, probabilities cannot be negative.
+      68.4 ->    71.4 | Interestingly, there will be very few axioms,
+      71.4 ->    73.6 | but they are powerful, and we will
+      73.6 ->    75.8 | see that they have lots of consequences.
+      76.3 ->    79.5 | we will see that they imply many other properties that
+      79.5 ->    82.5 | were not part of the axioms.
+      82.5 ->    85.6 | We will then go through a couple of very simple examples
+      85.6 ->    88.7 | involving models with either discrete or continuous
+      88.7 ->    89.8 | outcomes.
+      89.8 ->    92.2 | As you will be seeing many times in this class,
+      92.2 ->    95.1 | discrete models are conceptually much easier.
+      95.1 ->    99.2 | Continuous models involve some more sophisticated concepts,
+      99.2 ->   103.3 | and we will point out some of the subtle issues that arise.
+     103.3 ->   105.3 | And finally, we will talk a little bit
+     106.6 ->   110.5 | about the role of probability theory and its relation with
+     110.5 ->   114.9 | the real world.
+     114.9 ->   118.4 | Putting together a probabilistic model, that is, a
+     118.4 ->   121.9 | model of a random phenomenon or a random experiment,
+     121.9 ->   123.9 | involves two steps.
+     123.9 ->   127.7 | First step, we describe the possible outcomes of the
+     127.7 ->   130.6 | phenomenon or experiment of interest.
+     130.6 ->   134.6 | Second step, we describe our beliefs about the likelihood
+     134.6 ->   137.4 | of the different possible outcomes by specifying a
+     139.1 ->   143.3 | Here we start by just talking about the first step, namely
+     143.3 ->   146.7 | the description of the possible outcomes of the experiment.
+     146.7 ->   148.4 | So we carry out an experiment.
+     148.4 ->   152.2 | For example, we flip a coin, or maybe we flip five coins
+     152.2 ->   155.5 | simultaneously, or maybe we roll a die.
+     155.5 ->   160.1 | Whatever that experiment is, it has a number of possible
+     160.1 ->   163.8 | outcomes, and we start by making a list of the
+     163.8 ->   165.1 | possible outcomes.
+     165.5 ->   169.1 | Or a better word, instead of the word list, is to use the
+     169.1 ->   173.2 | word set, which has a more formal mathematical meaning.
+     173.2 ->   179.5 | So we create a set that we usually denote by capital
+     179.5 ->   181.5 | Omega.
+     181.5 ->   186.3 | That set is called the sample space and is the set of all
+     186.3 ->   193.0 | possible outcomes of our experiment.
+     193.0 ->   196.4 | The elements of that set should have certain
+     197.5 ->   201.2 | Namely, the elements should be mutually exclusive and
+     201.2 ->   203.2 | collectively exhaustive.
+     203.2 ->   204.5 | What does that mean?
+     204.5 ->   208.0 | Mutually exclusive means that if at the end of the
+     208.0 ->   212.8 | experiment I tell you that this outcome happened, then it
+     212.8 ->   216.6 | should not be possible that this outcome also happened.
+     216.6 ->   219.4 | At the end of the experiment, there can only be one of the
+     219.4 ->   220.7 | outcomes that has happened.
+     221.6 ->   225.2 | Being collectively exhaustive means something else that
+     225.2 ->   229.5 | together all these elements of the set exhausts all the
+     229.5 ->   231.1 | possibilities.
+     231.1 ->   235.2 | So no matter what, at the end, you will be able to point to
+     235.2 ->   239.6 | one of the outcomes and say that's the one that occurred.
+     239.6 ->   242.9 | To summarize, this set should be such that at the end of
+     242.9 ->   245.4 | the experiment, you should be always
+     245.5 ->   249.8 | able to point to one and exactly one of the possible
+     249.8 ->   255.4 | outcomes and say that this is the outcome that occurred.
+     255.4 ->   260.5 | Physically different outcomes should be distinguished in the
+     260.5 ->   264.3 | sample space and correspond to distinct points.
+     264.9 ->   268.5 | But when we say physically different outcomes, what do
+     268.5 ->   269.5 | we mean?
+     269.5 ->   273.6 | We really mean different in all relevant aspects, but
+     273.6 ->   277.6 | perhaps not different in irrelevant aspects.
+     277.6 ->   281.3 | Let's make more precise what I mean by that by looking at
+     281.3 ->   285.3 | the very simple and maybe silly example,
+     285.3 ->   286.7 | which is the following.
+     286.7 ->   290.1 | Suppose that you flip a coin, and you see whether it
+     290.1 ->   292.0 | resulted in heads or tails.
+     293.4 ->   297.5 | So you have a perfectly legitimate sample space for
+     297.5 ->   301.6 | this experiment, which consists of just two points, heads
+     301.6 ->   302.8 | and tails.
+     302.8 ->   308.4 | Together, these two outcomes exhaust all possibilities,
+     308.4 ->   310.9 | and the two outcomes are mutually exclusive.
+     310.9 ->   313.2 | So this is a very legitimate sample
+     313.2 ->   315.4 | space for this experiment.
+     315.4 ->   318.2 | Now, suppose that while you were flipping the coin, you
+     318.2 ->   321.0 | also looked outside the window to check the weather.
+     321.6 ->   328.6 | And then you could say that my sample space is really heads
+     328.6 ->   332.4 | and it's raining.
+     332.4 ->   340.2 | Another possible outcome is heads and no rain.
+     340.2 ->   346.8 | Another possible outcome is tails and it's raining.
+     346.8 ->   349.6 | And finally, another possible outcome is
+     349.6 ->   356.9 | tails and no rain.
+     361.4 ->   365.6 | This is also a perfectly legitimate sample space for
+     365.6 ->   367.9 | the experiment of flipping a coin.
+     367.9 ->   370.8 | The elements of this sample space are mutually exclusive
+     370.8 ->   372.1 | and collectively exhausted.
+     372.1 ->   376.6 | Exactly one of these outcomes is going to be true or will
+     376.6 ->   379.4 | have materialized at the end of the experiment.
+     379.4 ->   382.3 | So which sample space is the correct one?
+     382.3 ->   385.0 | This sample space, the second one, involves some
+     385.0 ->   386.7 | irrelevant details.
+     389.9 ->   394.4 | the flipping of a coin, the preferred sample space, is the
+     394.4 ->   398.8 | simpler one, the first one, which is sort of at the right
+     398.8 ->   402.3 | granularity, given what we're interested in.
+     402.3 ->   406.1 | But ultimately, the question of which one is the right sample
+     406.1 ->   410.5 | space depends on what kind of questions you want to answer.
+     410.5 ->   413.9 | For example, if you have a theory that the weather
+     418.1 ->   423.2 | play with that theory or maybe check it out and so on, then
+     423.2 ->   426.3 | in such a case, you might want to work with a second sample
+     426.3 ->   427.5 | space.
+     427.5 ->   430.8 | This is a common feature in all of science.
+     430.8 ->   434.4 | Whenever you put together a model, you need to decide how
+     434.4 ->   436.8 | detailed you want your model to be.
+     436.8 ->   440.5 | And the right level of detail is the one that captures those
+     440.5 ->   452.0 | aspects that are relevant and of interest to you.
+     455.6 ->   460.3 | Sample spaces are sets, and the set can be discrete,
+     460.3 ->   463.8 | finite, infinite, continuous, and so on.
+     463.8 ->   467.3 | Let us start with a simpler case in which we have a sample
+     467.3 ->   469.2 | space that is discrete and finite.
+     470.0 ->   474.0 | The particular experiment we will be looking at is the
+     474.0 ->   474.9 | following.
+     474.9 ->   478.9 | We take a very special die, a tetrahedral die.
+     478.9 ->   483.2 | So it's a die that has four faces numbered from one up to
+     483.2 ->   484.2 | four.
+     484.2 ->   488.9 | We roll it once, and then we roll it twice.
+     488.9 ->   491.7 | We're not dealing here with two probabilistic experiments.
+     491.7 ->   495.0 | We're dealing with a single probabilistic experiment that
+     499.4 ->   502.9 | What is the sample space of that experiment?
+     502.9 ->   506.4 | Well, one possible representation is the following.
+     506.4 ->   510.6 | We take note of the result of the first roll, and then we
+     510.6 ->   513.8 | take note of the result of the second roll.
+     513.8 ->   516.0 | And this gives us a pair of numbers.
+     516.6 ->   520.5 | Each one of the possible pairs of numbers corresponds to one
+     520.5 ->   523.0 | of the little squares in this diagram.
+     523.0 ->   527.9 | For example, if the first roll is 1 and the second is also 1,
+     527.9 ->   531.5 | then this particular outcome has occurred.
+     531.5 ->   536.6 | If the first roll is a 2 and the second is a 3, then this
+     536.6 ->   539.3 | particular outcome occurs.
+     539.3 ->   543.1 | If the first roll is a 3 and then the next one is a 2,
+     546.0 ->   549.8 | Notice that these two outcomes are pretty closely related.
+     549.8 ->   553.4 | In both cases, we observe a 2 and we observe a 3.
+     553.4 ->   557.5 | But we distinguish those two outcomes because in those two
+     557.5 ->   562.0 | outcomes, the 2 and the 3 happen in different order.
+     562.0 ->   565.6 | And the order in which they appear may be a detail which
+     565.6 ->   567.0 | is of interest to us.
+     567.0 ->   570.4 | And so we make this distinction in the sample space.
+     574.5 ->   578.4 | separate outcomes.
+     578.4 ->   582.0 | Now this is a case of a model in which the probabilistic
+     582.0 ->   586.7 | experiment can be described in phases or stages.
+     586.7 ->   591.8 | We could think about rolling the die once and then going
+     591.8 ->   593.4 | ahead with the second roll.
+     593.4 ->   595.2 | So we have two stages.
+     595.2 ->   598.3 | A very useful way of describing the sample space
+     598.3 ->   599.5 | of experiments.
+     600.7 ->   605.2 | We have an experiment with several stages, either real
+     605.2 ->   607.3 | stages or emergent stages.
+     607.3 ->   610.5 | So a very useful way of describing it is by providing a
+     610.5 ->   614.5 | sequential description in terms of a tree.
+     614.5 ->   618.7 | So a diagram of this kind, we call it a tree.
+     618.7 ->   621.8 | You can think of this as the root of the tree from which
+     621.8 ->   626.5 | you start, and the endpoints of the tree, we usually call
+     626.5 ->   627.7 | them the leaves.
+     628.0 ->   631.9 | So the experiment starts, we carry out the first phase,
+     631.9 ->   634.2 | which in this case is the first roll,
+     634.2 ->   635.5 | and we see what happens.
+     635.5 ->   639.1 | So maybe we get a 2 in the first roll.
+     639.1 ->   643.5 | And then we take note of what happened in the second roll,
+     643.5 ->   646.4 | and maybe the result was a 3.
+     646.4 ->   649.8 | So we follow this branch here, and we end up
+     649.8 ->   653.1 | at this particular leaf, which is the leaf associated
+     653.1 ->   655.1 | with the outcome 2, 3.
+     655.5 ->   659.3 | Notice that in this tree, we once more have a distinction.
+     659.3 ->   662.8 | The outcome 2, followed by a 3, is different from the
+     662.8 ->   667.2 | outcome 3, followed by a 2, which would correspond to this
+     667.2 ->   670.5 | particular place in the diagram.
+     670.5 ->   674.1 | In both cases, we have 16 possible outcomes.
+     674.1 ->   675.9 | 4 times 4 makes 16.
+     675.9 ->   679.1 | And similarly, if you count here, the number of leaves is
+     679.1 ->   680.3 | equal to 16.
+     681.5 ->   685.2 | The previous example involves a sample space that was
+     685.2 ->   687.1 | discrete and finite.
+     687.1 ->   690.0 | There were only 16 possible outcomes.
+     690.0 ->   694.2 | But sample spaces can also be infinite, and they could also
+     694.2 ->   696.0 | be continuous sets.
+     696.0 ->   699.1 | Here's an example of an experiment that involves a
+     699.1 ->   701.2 | continuous sample space.
+     701.2 ->   705.3 | So we have a rectangular target, which is the unit
+     709.8 ->   714.8 | And suppose that you are so skilled that no matter what,
+     714.8 ->   717.2 | when you throw the dart, it always
+     717.2 ->   720.9 | falls inside the target.
+     720.9 ->   727.0 | Once the dart hits the target, you record the coordinates x.
+     727.3 ->   730.5 | and y of the particular point that
+     730.5 ->   733.0 | resulted from your dart throw.
+     733.0 ->   737.9 | And we record x and y with infinite precision.
+     737.9 ->   740.5 | So x and y are real numbers.
+     740.5 ->   744.5 | So in this experiment, the sample space is just the set
+     744.5 ->   749.7 | of xy pairs that lie between 0 and 1.
+     753.3 ->   757.0 | We have so far discussed the first step involved in the
+     757.0 ->   760.6 | construction of a probabilistic model, namely the
+     760.6 ->   763.7 | construction of a sample space, which is a description of
+     763.7 ->   767.2 | the possible outcomes of a probabilistic experiment.
+     767.2 ->   771.9 | We now come to the second and much more interesting part.
+     774.1 ->   777.9 | which outcomes are more likely to occur, and which ones are
+     777.9 ->   780.6 | less likely to occur, and so on.
+     780.6 ->   785.2 | And we will do that by assigning probabilities to
+     785.2 ->   787.3 | the different outcomes.
+     787.3 ->   792.6 | However, as we try to do this assignment, we run into some
+     792.6 ->   795.3 | kind of difficulty, which is the following.
+     795.3 ->   798.4 | Remember the previous experiments involving a
+     798.4 ->   800.5 | continuous sample space from.
+     800.5 ->   804.8 | which was the unit square in which we throw a dart at
+     804.8 ->   809.3 | random and record the point that occurred.
+     809.3 ->   813.2 | In this experiment, what do you think is the probability of a
+     813.2 ->   815.0 | particular point?
+     815.0 ->   819.7 | Let's say, what is the probability that my dart hits
+     819.7 ->   822.9 | exactly the center of this square?
+     823.8 ->   826.4 | Well, this probability would be essentially zero.
+     826.4 ->   829.7 | Hitting the center exactly with infinite precision
+     829.7 ->   831.0 | should be zero.
+     831.0 ->   834.6 | And so it's natural that in such a continuous model, any
+     834.6 ->   839.1 | individual point should have a zero probability.
+     839.1 ->   843.4 | For this reason, instead of assigning probabilities to
+     843.4 ->   848.7 | individual points, we will instead assign probabilities
+     854.6 ->   862.2 | So here we have our sample space, which is some abstract
+     862.2 ->   865.7 | set omega.
+     865.7 ->   868.7 | Here's a subset of the sample space.
+     868.7 ->   873.6 | Call it capital A. We're going to assign a probability to
+     873.6 ->   877.7 | that subset A, which we're going to denote with this
+     877.7 ->   883.5 | notation, which we read as the probability of set A.
+     884.0 ->   887.7 | So probabilities will be assigned to subsets.
+     887.7 ->   889.9 | And this will not cause us difficulties in the
+     889.9 ->   893.7 | continuous case, because even though individual points would
+     893.7 ->   898.2 | have zero probability, if you ask me what are the odds that
+     898.2 ->   902.6 | my dart falls in the upper half, let's say, of this
+     902.6 ->   906.8 | diagram, then that should be a reasonable positive number.
+     906.8 ->   909.4 | So even though individual outcomes may have zero
+     912.4 ->   916.2 | would be expected to have positive probabilities.
+     916.2 ->   920.9 | So coming back, we're going to assign probabilities to the
+     920.9 ->   923.9 | various subsets of the sample space.
+     923.9 ->   927.2 | And here comes a piece of terminology that a subset of
+     927.2 ->   930.0 | the sample space is called an event.
+     930.0 ->   932.0 | Why is it called an event?
+     932.0 ->   936.2 | Because once we carry out the experiment and we observe the
+     939.2 ->   942.5 | is inside the set A. And in that case,
+     942.5 ->   946.7 | we say that event A has occurred or the outcome
+     946.7 ->   950.1 | falls outside the set A, in which case
+     950.1 ->   954.7 | we say that event A did not occur.
+     954.7 ->   958.7 | Now we want to move on and describe certain rules,
+     958.7 ->   961.4 | the rules of the game in probabilistic models, which
+     961.4 ->   964.9 | are basically the rules that these probabilities should
+     964.9 ->   966.1 | satisfy.
+     966.1 ->   968.6 | They shouldn't be completely arbitrary.
+     968.6 ->   974.3 | First, by convention, probabilities are always given
+     974.3 ->   977.4 | in a range between 0 and 1.
+     977.4 ->   980.5 | Intuitively, 0 probability means that we believe that
+     980.5 ->   983.4 | something practically cannot happen.
+     983.4 ->   987.8 | And probability of 1 means that we're practically certain
+     987.8 ->   991.7 | that an event of interest is going to happen.
+     992.0 ->   996.4 | So we want to specify rules of this kind for probabilities.
+     996.4 ->   999.3 | These rules that any probabilistic model should
+     999.3 ->  1003.2 | satisfy are called the actions of probability theory.
+    1003.2 ->  1006.7 | And our first axiom is a non-negativity axiom.
+    1006.7 ->  1009.6 | Namely, probabilities will always be non-negative
+    1009.6 ->  1011.3 | numbers.
+    1011.3 ->  1013.0 | It's a reasonable rule.
+    1015.4 ->  1019.0 | If the subset that we're looking at is actually not a
+    1019.0 ->  1023.0 | subset but is the entire sample space omega, the
+    1023.0 ->  1027.8 | probability of it should always be equal to 1.
+    1027.8 ->  1029.6 | What does that mean?
+    1029.6 ->  1032.9 | We know that the outcome is going to be an element of the
+    1032.9 ->  1033.9 | sample space.
+    1033.9 ->  1036.4 | This is the definition of the sample space.
+    1036.4 ->  1040.1 | So we have absolute certainty that our outcome is going to
+    1040.1 ->  1041.3 | be an omega.
+    1041.5 ->  1044.7 | Or in different language, we have absolute certainty that
+    1044.7 ->  1047.7 | event omega is going to occur.
+    1047.7 ->  1050.5 | And we capture this certainty by saying that the
+    1050.5 ->  1054.8 | probability of event omega is equal to 1.
+    1054.8 ->  1059.1 | These two axioms are pretty simple and very intuitive.
+    1059.1 ->  1062.8 | The more interesting axiom is the next one.
+    1062.8 ->  1066.0 | That says something a little more complicated.
+    1068.0 ->  1072.2 | discuss that particular axiom, a quick reminder about set
+    1072.2 ->  1074.8 | theoretic notation.
+    1074.8 ->  1088.2 | If we have two sets, let's say a set A and another set B, we
+    1088.2 ->  1091.9 | use this particular notation, which we read as A
+    1091.9 ->  1097.3 | intersection B, to refer to the collection of elements
+    1100.0 ->  1104.1 | So in this picture, the intersection of A and B is
+    1104.1 ->  1108.4 | this shaded set.
+    1108.4 ->  1115.0 | We use this notation, which we read as A union B, to refer
+    1115.0 ->  1120.9 | to the set of elements that belong to A, or to B, or to
+    1120.9 ->  1125.2 | both. So in terms of this picture, the union of the two
+    1125.2 ->  1127.6 | sets would be this blue set.
+    1128.9 ->  1132.8 | After this reminder about set theoretic notation, now let us
+    1132.8 ->  1135.4 | look at the form of the third axiom.
+    1135.4 ->  1136.9 | What does it say?
+    1136.9 ->  1140.9 | If we have two sets, two events, two subsets of the
+    1140.9 ->  1145.5 | sample space, which are disjoint?
+    1145.5 ->  1148.5 | So here's our sample space.
+    1148.5 ->  1152.5 | And here are the two sets that are disjoint.
+    1155.0 ->  1159.1 | In mathematical terms, two sets being disjoint means that
+    1159.1 ->  1163.2 | their intersection has no elements, so their
+    1163.2 ->  1165.5 | intersection is the empty set.
+    1165.5 ->  1171.1 | And we use this symbol here to denote the empty set.
+    1171.1 ->  1175.1 | So if the intersection of two sets is empty, then the
+    1175.1 ->  1179.8 | probability that the outcome of the experiment falls in
+    1182.2 ->  1187.2 | That is, the probability that the outcome is here or there
+    1187.2 ->  1190.7 | is equal to the sum of the probabilities
+    1190.7 ->  1193.8 | of these two sets.
+    1193.8 ->  1196.2 | This is called the additivity axiom.
+    1196.2 ->  1200.2 | So it says that we can add probabilities
+    1200.2 ->  1203.8 | of different sets when those two sets are disjoint.
+    1204.7 ->  1209.9 | In some sense, we can think of probability as being one
+    1209.9 ->  1214.2 | pound of some substance which is spread over our sample
+    1214.2 ->  1218.1 | space, and the probability of A is how much of that
+    1218.1 ->  1222.5 | substance is sitting on top of a set A. So what this axiom
+    1222.5 ->  1226.3 | is saying is that the total amount of that substance
+    1228.6 ->  1233.5 | And B is how much is sitting on top of A plus how much is
+    1233.5 ->  1237.2 | sitting on top of B. And that is the case whenever the
+    1237.2 ->  1242.5 | sets A and B are disjoint from each other.
+    1242.5 ->  1245.9 | The additivity axiom needs to be refined a bit.
+    1245.9 ->  1248.6 | We will talk about that a little later.
+    1248.6 ->  1252.1 | Other than this refinement, these three axioms are the
+    1252.1 ->  1254.5 | only requirements in order to have a
+    1254.5 ->  1256.1 | legitimate probability model.
+    1256.8 ->  1260.0 | At this point you may ask, shouldn't there be more
+    1260.0 ->  1261.4 | requirements?
+    1261.4 ->  1265.0 | Shouldn't we, for example, say that probabilities cannot be
+    1265.0 ->  1267.0 | greater than 1?
+    1267.0 ->  1268.9 | Yes and no.
+    1268.9 ->  1272.7 | We do not want probabilities to be larger than 1, but we do
+    1272.7 ->  1274.4 | not need to say it.
+    1274.4 ->  1277.6 | As we will see in the next segment, such a requirement
+    1277.6 ->  1281.4 | follows from what we have already said, and the same is
+    1281.4 ->  1284.9 | true for several other natural properties of
+    1284.9 ->  1288.9 | probabilities.
+    1288.8 ->  1292.5 | The probability axioms are the basic rules of probability
+    1292.5 ->  1295.9 | theory, and they are surprisingly few.
+    1295.9 ->  1298.0 | But they imply many interesting properties
+    1298.0 ->  1299.7 | that we will now explore.
+    1299.7 ->  1303.6 | First, we will see that what you might think of as missing
+    1303.6 ->  1308.6 | axioms are actually implied by the axioms already in place.
+    1308.6 ->  1313.0 | For example, we have an axiom that probabilities
+    1313.0 ->  1315.8 | are non-negative.
+    1317.1 ->  1323.2 | that probabilities are also less than or equal to 1.
+    1323.2 ->  1327.0 | We have another axiom that says that the probability of the
+    1327.0 ->  1329.5 | entire sample space is 1.
+    1329.5 ->  1332.4 | We will show a counterpart that the probability of the
+    1332.4 ->  1335.2 | empty set is equal to 0.
+    1335.2 ->  1336.5 | This makes perfect sense.
+    1336.5 ->  1338.5 | The empty set has no elements.
+    1338.5 ->  1340.3 | So it is impossible.
+    1340.3 ->  1343.7 | There is zero probability that the outcome of the
+    1343.7 ->  1346.1 | experiment would lie in the empty set.
+    1347.0 ->  1350.1 | We also have another intuitive property.
+    1350.1 ->  1353.5 | The probability that an event happens, plus the
+    1353.5 ->  1357.2 | probability that the event does not happen, exhaust all
+    1357.2 ->  1358.4 | possibilities.
+    1358.4 ->  1361.3 | And these two probabilities together should add to one.
+    1361.3 ->  1364.6 | For instance, if the probability of heads is 0.6,
+    1364.6 ->  1369.1 | then the probability of tails should be 0.4.
+    1369.1 ->  1372.8 | Finally, we can generalize the additivity axiom, which was
+    1376.7 ->  1380.6 | disjoint events to the case where we're dealing with the
+    1380.6 ->  1385.3 | union of several disjoint events.
+    1385.3 ->  1389.7 | By disjoint, here we mean that the intersection of any two of
+    1389.7 ->  1392.4 | these events is the empty set.
+    1392.4 ->  1395.6 | We will prove this for the case of three events, and then
+    1395.6 ->  1398.9 | the argument generalizes for the case where we're taking
+    1398.9 ->  1402.5 | the union of k disjoint events, where k is any
+    1402.5 ->  1403.8 | finite number.
+    1404.1 ->  1409.0 | So the intuition of this result is the same as for the case of two events, but we will
+    1409.0 ->  1414.7 | derive it formally and we will also use it to come up with a way of calculating the probability
+    1414.7 ->  1421.6 | of a finite set by simply adding the probabilities of its individual elements.
+    1421.6 ->  1428.8 | All of these statements that we just presented are intuitive and you do not really need
+    1431.1 ->  1437.8 | Nevertheless, it is instructive to see how these statements follow from the axioms that
+    1437.8 ->  1442.0 | we have put in place.
+    1442.0 ->  1448.8 | So we will now present the arguments based only on the three axioms that we have available.
+    1448.8 ->  1453.4 | And in order to be able to refer to these axioms, let us give them some names, call
+    1453.4 ->  1458.0 | them axioms A, B and C.
+    1458.0 ->  1459.8 | We start as follows.
+    1461.8 ->  1469.4 | a subset of that sample space, call it A, and consider the complement of that
+    1469.4 ->  1475.1 | subset. The complement is the set of all elements that do not belong to the set A.
+    1475.1 ->  1481.6 | So a set together with its complement make up everything which is the
+    1481.9 ->  1483.5 | entire sample space.
+    1483.5 ->  1486.1 | On the other hand, if an element belongs to a set A,
+    1486.1 ->  1488.3 | it does not belong to its complement.
+    1488.3 ->  1490.9 | So the intersection of a set with its complement
+    1490.9 ->  1493.6 | is the empty set.
+    1493.6 ->  1497.8 | Now we argue as follows.
+    1497.8 ->  1502.3 | We have that the probability of the entire sample space is
+    1502.3 ->  1505.1 | equal to 1.
+    1505.1 ->  1508.9 | This is true by our second axiom.
+    1508.9 ->  1511.8 | Now the sample space, as we just discussed, can be
+    1514.2 ->  1516.9 | and the complement of that event.
+    1516.9 ->  1521.2 | This is just a set-theoretic relation.
+    1521.2 ->  1527.2 | And next, since a set and its complement are disjoint,
+    1527.2 ->  1530.8 | this means that we can apply the additivity axiom
+    1530.8 ->  1534.6 | and try to this probability as the sum of the probability
+    1534.6 ->  1539.0 | of event A with the probability of the complement of A.
+    1539.9 ->  1545.9 | This is one of the relations that we had claimed and which we have now established.
+    1545.9 ->  1557.9 | Based on this relation we can also write that the probability of an event A is equal to 1 minus the probability of the complement of that event.
+    1557.9 ->  1563.9 | And because by the non-negativity axiom this quantity here is non-negative,
+    1568.3 ->  1571.2 | We're using here the non-negativity axiom.
+    1571.2 ->  1573.8 | And we have established another property, namely,
+    1573.8 ->  1580.0 | that probabilities are always less than or equal to 1.
+    1580.0 ->  1591.1 | Finally, let us note that 1 is the probability always
+    1591.1 ->  1596.5 | of a set plus the probability of a complement of that set.
+    1597.1 ->  1599.7 | And let us use this property for the case
+    1599.7 ->  1604.6 | where the set of interest is the entire sample space.
+    1604.6 ->  1607.2 | Now the probability of the entire sample space
+    1607.2 ->  1611.4 | is itself equal to 1.
+    1611.4 ->  1615.2 | And what is the complement of the entire sample space?
+    1615.2 ->  1617.2 | The complement of the entire sample space
+    1617.2 ->  1619.4 | consists of all elements that do not
+    1619.4 ->  1620.7 | belong to the sample space.
+    1620.7 ->  1623.4 | But since the sample space is supposed
+    1626.7 ->  1629.9 | Compliments is just the empty set.
+    1629.9 ->  1632.7 | And from this relation, we get the implication that the
+    1632.7 ->  1637.4 | probability of the empty set is equal to 0.
+    1637.4 ->  1640.7 | This establishes yet one more of the properties that we
+    1640.7 ->  1646.7 | had just claimed a little earlier.
+    1646.7 ->  1649.9 | We finally come to the proof of the generalization of our
+    1649.9 ->  1653.5 | additivity axiom from the case of two disjoint events to
+    1653.5 ->  1656.1 | the case of three disjoint events.
+    1658.9 ->  1663.4 | And within that sample space, we have three events, three
+    1663.4 ->  1667.2 | subsets, and these subsets are disjoints in the sense that
+    1667.2 ->  1671.6 | any two of those subsets have no elements in common.
+    1671.6 ->  1675.8 | And we're interested in the probability of the union of A,
+    1675.8 ->  1679.0 | B, and C. How do we make progress?
+    1679.0 ->  1682.4 | We have an additivity axiom in our hands, which applies to
+    1682.4 ->  1685.5 | the case of the union of two disjoint sets.
+    1685.5 ->  1686.8 | Here we have three of them.
+    1687.1 ->  1689.5 | But we can do the following trick.
+    1689.5 ->  1693.4 | We can think of the union of A, B, and C as consisting
+    1693.4 ->  1701.6 | of the union of this blue set with that green set.
+    1701.6 ->  1705.8 | Formally, what we're doing is that we're expressing the union
+    1705.8 ->  1708.5 | of these three sets as follows.
+    1708.5 ->  1712.6 | We form one set by taking the union of A with B.
+    1712.6 ->  1717.2 | And we have the other set C. And the overall union
+    1717.2 ->  1720.7 | can be thought of as the union of these two sets.
+    1720.7 ->  1723.5 | Now, since the three sets are disjoint,
+    1723.5 ->  1727.6 | this implies that the blue set is disjoint from the green set.
+    1727.6 ->  1730.8 | And so we can use the additivity axiom here
+    1730.8 ->  1735.7 | to write this probability as the probability of A union B
+    1735.7 ->  1737.8 | plus the probability of C.
+    1739.3 ->  1742.2 | And now we can use the additivity action once more,
+    1742.2 ->  1744.9 | since the sets A and B are disjoint,
+    1744.9 ->  1747.6 | to write the first term as probability of A
+    1747.6 ->  1751.1 | plus probability of B. We carry over the last term,
+    1751.1 ->  1754.5 | and we have the relation that we wanted to prove.
+    1754.8 ->  1757.0 | This is the proof for the case of three events.
+    1757.0 ->  1760.5 | You should be able to follow this line of proof to write
+    1760.5 ->  1763.5 | an argument for the case of four events and so on.
+    1763.5 ->  1766.4 | And you might want to continue by induction.
+    1766.4 ->  1770.3 | And eventually, you should be able to prove that if the
+    1770.3 ->  1781.4 | sets A1 up to Ak are disjoint, then the probability of
+    1787.3 ->  1792.9 | is going to be equal to the sum of their individual
+    1792.9 ->  1794.7 | probabilities.
+    1794.7 ->  1798.2 | So this is the generalization to the case where we're dealing
+    1798.2 ->  1804.2 | with the union of finitely many disjoint events.
+    1804.2 ->  1809.8 | A very useful application of this comes in the case where
+    1809.8 ->  1815.5 | we want to calculate the probability of a finite set.
+    1819.2 ->  1825.5 | And within that sample space, we have some particular elements,
+    1825.5 ->  1829.0 | S1, S2, up to SK, K of them.
+    1829.0 ->  1834.2 | And these elements together form a finite set.
+    1834.2 ->  1836.1 | What can we say about the probability
+    1836.1 ->  1838.5 | of this finite set?
+    1838.5 ->  1843.0 | The idea is to take this finite set that
+    1843.0 ->  1845.9 | consists of K elements and think of it
+    1848.9 ->  1854.4 | Little sets that contain one element each.
+    1854.4 ->  1856.8 | So set theoretically, what we're doing
+    1856.8 ->  1860.3 | is that we're taking this set with k elements,
+    1860.3 ->  1865.2 | and we write it as the union of a set that contains just s1,
+    1865.2 ->  1870.0 | a set that contains just the second element s2, and so on,
+    1870.0 ->  1871.4 | up to the kth element.
+    1874.0 ->  1877.4 | We're assuming, of course, that these elements are all
+    1877.4 ->  1879.6 | different from each other.
+    1879.6 ->  1883.1 | So in that case, these sets, these single element sets, are
+    1883.1 ->  1884.6 | all disjoint.
+    1884.6 ->  1888.7 | So using the additivity property for a union of k
+    1888.7 ->  1894.0 | disjoint sets, we can write this as the sum of the
+    1894.0 ->  1903.4 | probabilities of the different single element sets.
+    1904.8 ->  1909.1 | It is usual to start abusing or rather simplifying notation
+    1909.1 ->  1910.2 | a little bit.
+    1910.2 ->  1912.7 | Probabilities are assigned to sets.
+    1912.7 ->  1915.7 | So here we're talking about the probability of a set that
+    1915.7 ->  1917.5 | contains a single element.
+    1917.5 ->  1921.5 | But intuitively, we can also talk as just the probability
+    1921.5 ->  1926.5 | of that particular element and use this simpler notation.
+    1926.5 ->  1930.1 | So when using this simpler notation, we will be talking
+    1931.1 ->  1933.5 | probabilities of individual elements.
+    1933.5 ->  1936.6 | Although in terms of formal mathematics, what we really
+    1936.6 ->  1943.1 | mean is the probability of this event that's comprised
+    1943.1 ->  1952.9 | only of a particular element, S1, and so on.
+    1952.9 ->  1955.6 | We will now continue and derive some additional
+    1955.6 ->  1958.3 | properties of probability laws, which are again
+    1958.3 ->  1962.5 | consequences of the axioms that we have introduced.
+    1964.5 ->  1970.9 | If we have two sets, and one set is smaller than the other,
+    1970.9 ->  1973.0 | so we have a picture as follows.
+    1973.0 ->  1977.9 | We have our sample space, and we have a certain set A.
+    1977.9 ->  1983.6 | And then we have a certain set B, which is even bigger.
+    1983.6 ->  1989.0 | So the set B is the bigger blue set.
+    1993.4 ->  1997.7 | larger than a, then naturally the probability that the
+    1997.7 ->  2001.2 | outcome falls inside b should be at least as big as the
+    2001.2 ->  2004.1 | probability that the outcome falls inside a.
+    2004.1 ->  2006.9 | How do we prove this formally?
+    2006.9 ->  2013.1 | The set B can be expressed as a union of two pieces.
+    2013.1 ->  2017.0 | One piece is the set A itself.
+    2023.3 ->  2028.9 | that do not belong in A. What are these elements?
+    2028.9 ->  2034.6 | They are elements that belong to B, and they do not belong
+    2034.6 ->  2038.5 | to A, which means that they belong to the complement of A.
+    2038.5 ->  2042.2 | So we have expressed the set B as the union of two pieces.
+    2042.7 ->  2047.6 | Now, this piece is A. This piece here is outside A. So
+    2047.6 ->  2049.7 | these two pieces are disjoint.
+    2049.7 ->  2053.1 | And so we can apply the additivity axiom and write
+    2053.1 ->  2058.2 | that the probability of B is equal to the probability of A
+    2058.2 ->  2064.3 | plus the probability of the other set.
+    2064.3 ->  2068.6 | And since probabilities are non-negative, this expression
+    2068.6 ->  2072.6 | here is at least as large as the probability of A.
+    2072.7 ->  2075.3 | And this concludes the proof of the property
+    2075.3 ->  2076.5 | that we wanted to show.
+    2076.5 ->  2079.8 | Indeed, the probability of A is less than or equal to the
+    2079.8 ->  2083.6 | probability of B.
+    2083.6 ->  2087.1 | The next property we will show is the following.
+    2087.1 ->  2090.8 | It allows us to write the probability of the union of
+    2090.8 ->  2094.9 | two sets for the case now where the two sets are not
+    2094.9 ->  2097.3 | necessarily disjoint.
+    2097.3 ->  2102.2 | So the picture is as follows.
+    2104.6 ->  2114.1 | A and B, these sets are not necessarily disjoint.
+    2114.1 ->  2116.7 | And we want to say something about the probability of the
+    2116.7 ->  2121.6 | union of A and B.
+    2121.6 ->  2125.6 | Now, the union of A and B consists of three pieces.
+    2125.6 ->  2130.1 | One piece is this one here.
+    2130.1 ->  2136.9 | And that piece consists of those elements of A that do
+    2138.7 ->  2142.9 | So they belong to B complement.
+    2142.9 ->  2145.2 | This set has a certain probability.
+    2145.2 ->  2150.7 | Let's call it little a and indicate it on this diagram.
+    2150.7 ->  2154.2 | So a is the probability of this piece.
+    2154.2 ->  2157.1 | Another piece is this one here, which is the
+    2157.1 ->  2159.5 | intersection of a and b.
+    2159.5 ->  2163.2 | It has a certain probability that we denote by little b.
+    2163.2 ->  2167.3 | This is the probability of a intersection b.
+    2171.2 ->  2175.4 | And that piece has a certain probability, C. It's the
+    2175.4 ->  2177.0 | probability of that set.
+    2177.0 ->  2178.8 | And what is that set?
+    2178.8 ->  2180.8 | That set is the following.
+    2180.8 ->  2184.7 | It's that part of B that consists of elements that do
+    2184.7 ->  2189.3 | not belong in A. So it's B intersection with the
+    2189.3 ->  2193.3 | complement of A.
+    2193.3 ->  2197.1 | Now let's express the two sides of this equality here in
+    2197.1 ->  2200.1 | terms of little a, little b, and little c, and see whether
+    2200.1 ->  2201.4 | we get the same thing.
+    2201.5 ->  2208.6 | So the probability of A union B. A union B consists of these
+    2208.6 ->  2212.5 | three pieces that have probabilities A, little a,
+    2212.5 ->  2215.6 | little b, and little c, respectively.
+    2215.6 ->  2218.5 | And by the additivity axiom, the probability of the union
+    2218.5 ->  2221.6 | of A and B is the sum of the probabilities of these three
+    2221.6 ->  2223.0 | pieces.
+    2223.0 ->  2227.1 | Let's look now at the right hand side of that equation
+    2227.1 ->  2229.1 | and see whether we get the same thing.
+    2229.6 ->  2233.8 | The probability of A plus the probability of B minus the
+    2233.8 ->  2239.9 | probability of A intersection B is equal to the following.
+    2239.9 ->  2243.3 | A consists of two pieces that have probabilities little a
+    2243.3 ->  2246.3 | and little b.
+    2246.3 ->  2249.0 | The set B consists of two pieces that have probabilities
+    2249.0 ->  2253.4 | little b and little c.
+    2253.4 ->  2255.6 | And then we subtract the probability of the
+    2255.6 ->  2258.7 | intersection, which is B.
+    2262.3 ->  2265.9 | cancel here 1b with another b.
+    2265.9 ->  2274.0 | And what we are left with is a plus b plus c.
+    2274.0 ->  2275.9 | So this checks.
+    2275.9 ->  2281.3 | And indeed, we have this equality here.
+    2281.3 ->  2284.1 | We have verified that it is true.
+    2284.1 ->  2285.4 | One particular consequence.
+    2286.0 ->  2289.9 | of the equality that we derived is the following.
+    2289.9 ->  2295.0 | Since this term here is always non-negative,
+    2295.0 ->  2299.6 | this means that the
+    2299.8 ->  2304.3 | probability of A union B is always less than or equal to
+    2304.3 ->  2308.0 | the probability of A plus the probability of B.
+    2308.0 ->  2311.6 | This inequality here is quite useful whenever we want to
+    2311.6 ->  2314.1 | argue that a certain probability is smaller than
+    2314.1 ->  2316.2 | something, and it has a name.
+    2316.2 ->  2318.1 | It's called the union bound.
+    2323.5 ->  2328.4 | We finally consider one last consequence of our axioms.
+    2328.4 ->  2332.3 | And namely, we're going to derive an expression, a way of
+    2332.3 ->  2337.3 | calculating the probability of a union of three sets, not
+    2337.3 ->  2339.6 | necessarily disjoint.
+    2339.6 ->  2342.7 | So we have our sample space.
+    2342.7 ->  2346.3 | And within the sample space, there are three sets.
+    2346.3 ->  2353.1 | Set A, set B, and set C.
+    2357.1 ->  2361.0 | We're going to use a set-theoretic relation.
+    2361.0 ->  2366.6 | We're going to express the union of these three sets as
+    2366.6 ->  2371.1 | the union of three disjoint pieces.
+    2371.1 ->  2374.7 | What are these disjoint pieces?
+    2374.7 ->  2383.8 | One piece is the set A itself.
+    2383.8 ->  2390.3 | The second piece is going to be that part of B which is
+    2393.0 ->  2401.3 | So this is the intersection of B with the complement of A.
+    2401.3 ->  2409.3 | The third piece is going to be whatever is left in order to
+    2409.3 ->  2411.1 | form the union of the three sets.
+    2411.1 ->  2416.5 | What is left is that part of C that does not belong to A
+    2416.5 ->  2422.9 | and that does not belong into B. So that part is C
+    2425.6 ->  2428.9 | and B complement.
+    2428.9 ->  2433.2 | Now this set here, of course, is the same as that set,
+    2433.2 ->  2435.9 | because intersection of two sets is the same no matter in
+    2435.9 ->  2438.2 | which order we take the two sets.
+    2438.2 ->  2441.8 | And similarly, the set that we have here is the same one
+    2441.8 ->  2444.6 | that appears in that expression.
+    2444.6 ->  2447.4 | Now we notice that these three pieces, the red, the blue,
+    2447.4 ->  2450.2 | and the green, are disjoint from each other.
+    2455.3 ->  2461.8 | this union here, is going to be the sum of the probabilities
+    2461.8 ->  2463.9 | of the three pieces.
+    2463.9 ->  2466.2 | And that's exactly the expression
+    2466.2 ->  2470.9 | that we have up here.
+    2470.9 ->  2475.1 | Let us now move from the abstracts to the concrete.
+    2475.1 ->  2477.7 | Recall the example that we discussed earlier, where we
+    2477.7 ->  2481.4 | have two rolls of a tetrahedral die, so there are 16
+    2481.4 ->  2485.2 | possible outcomes illustrated in this diagram.
+    2486.5 ->  2490.2 | Now we need to specify a probability law, some kind of
+    2490.2 ->  2492.3 | probability assignment.
+    2492.3 ->  2495.8 | To keep things simple, we're going to make the assumption
+    2495.8 ->  2500.9 | that the 16 possible outcomes are all equally likely, and
+    2500.9 ->  2505.8 | each outcome has a probability of 1 over 16.
+    2505.8 ->  2509.0 | Given this assumption, we will now proceed to calculate
+    2509.0 ->  2511.5 | certain probabilities.
+    2515.3 ->  2518.9 | x which stands for the result of the first role
+    2518.9 ->  2523.1 | is equal to 1. The way to calculate this probability
+    2523.1 ->  2525.9 | is to identify what exactly
+    2525.9 ->  2530.1 | that event is in our picture of the sample space
+    2530.1 ->  2534.6 | and then calculate. The event that x is equal to 1
+    2534.6 ->  2537.6 | can happen in four different ways
+    2537.6 ->  2541.1 | that correspond to these four particular
+    2542.8 ->  2548.5 | Each one of these outcomes has a probability of 1 over 16. The probability
+    2548.5 ->  2553.7 | of this event is the sum of the probabilities of the outcomes that it
+    2553.7 ->  2565.7 | contains, so it is 4 times 1 over 16 equals to 1 fourth. Let's now z stand for
+    2565.7 ->  2574.9 | the smaller of the two numbers that came up in our two rows. So for example, if x
+    2573.5 ->  2584.2 | 2 and y is equal to 3 then z is equal to 2, which is the smaller of the two. Let
+    2584.2 ->  2589.5 | us try to calculate the probability that the smaller of the two outcomes is equal
+    2589.5 ->  2596.4 | to 4. Now for the smaller of the two outcomes to be equal to 4 we must have
+    2603.9 ->  2607.2 | that this particular event can happen.
+    2607.2 ->  2610.6 | So since there's only one outcome that makes the event
+    2610.6 ->  2612.8 | happen, the probability of this event
+    2612.8 ->  2614.9 | is the probability of that outcome
+    2614.9 ->  2619.5 | and is equal to 1 over 16.
+    2619.5 ->  2622.7 | For another example, let's calculate the probability
+    2622.7 ->  2625.4 | that the minimum is equal to 2.
+    2625.4 ->  2627.9 | What does it mean that the minimum is equal to 2?
+    2627.9 ->  2629.9 | It means that one of the dies.
+    2630.4 ->  2637.6 | resulted in a 2, and the other die resulted in a number that's 2 or larger. So we could have both
+    2637.6 ->  2647.3 | equal to 2, we could have x equal to 2 but y larger, or we could have y equal to 2 and x
+    2647.3 ->  2654.9 | something larger. This green event, this green set, is the set of all outcomes for which
+    2658.5 ->  2661.3 | There's a total of five such outcomes.
+    2661.3 ->  2664.8 | Each one of them has probability 1 over 16.
+    2664.8 ->  2668.7 | And we have discussed that for finite sets, the probability
+    2668.7 ->  2672.6 | of a finite set is the sum of the probabilities of the
+    2672.6 ->  2674.0 | elements of that set.
+    2674.0 ->  2676.9 | So we have five elements here, each one with
+    2676.9 ->  2679.0 | probability 1 over 16.
+    2679.0 ->  2683.4 | And this is the answer to this problem.
+    2683.4 ->  2686.7 | This particular example that we saw here.
+    2687.0 ->  2693.1 | is a special case of what is called a discrete uniform law.
+    2693.1 ->  2696.9 | In a discrete uniform law, we have a sample space,
+    2696.9 ->  2703.4 | which is finite, and it has n elements.
+    2703.4 ->  2708.1 | And we assume that these n elements are equally likely.
+    2708.1 ->  2710.5 | Now, since the probability of omega,
+    2710.5 ->  2713.9 | the probability of the entire sample space, is equal to 1,
+    2714.4 ->  2719.7 | This means that each one of these elements must have probability 1 over n.
+    2720.9 ->  2728.8 | That's the only way that the sum of the probabilities of the different outcomes would be equal to 1 as required by the
+    2729.3 ->  2731.3 | normalization axiom.
+    2731.4 ->  2739.9 | Consider now some subset of the sample space, an event A, that has exactly k elements. What is the probability of the set A?
+    2740.6 ->  2744.5 | It's the sum of the probabilities of its elements.
+    2744.9 ->  2752.6 | There are k elements, and each one of them has a probability of 1 over n, and this way
+    2752.6 ->  2759.1 | we can find the probability of the set A. So when we have a discrete uniform probability
+    2759.1 ->  2765.8 | law, we can find, we can calculate probabilities by simply counting the number of elements
+    2767.4 ->  2770.3 | n, finding the number n, and counting the number of
+    2770.3 ->  2774.2 | elements of the set A. That's the reason why counting will
+    2774.2 ->  2777.3 | turn out to be an important skill, and there will be a
+    2777.3 ->  2783.2 | whole lecture devoted to this particular topic.
+    2783.2 ->  2786.6 | We will now go through a probability calculation for the
+    2786.6 ->  2788.8 | case where we have a continuous sample space.
+    2789.5 ->  2793.0 | We revisit our earlier example, in which we were
+    2793.0 ->  2798.0 | throwing a dart into a square target, the square target
+    2798.0 ->  2799.2 | being the unit square.
+    2799.2 ->  2802.2 | And we were guaranteed that our dart would fall somewhere
+    2802.2 ->  2803.9 | inside this set.
+    2803.9 ->  2807.2 | So our sample space is the unit square itself.
+    2807.2 ->  2810.8 | We have a description of the sample space, but we do not
+    2810.8 ->  2812.3 | yet have a probability law.
+    2812.3 ->  2814.5 | We need to specify one.
+    2816.6 ->  2818.8 | could be arbitrary.
+    2818.8 ->  2822.0 | It's up to us to choose how to model a certain situation.
+    2822.7 ->  2825.9 | And to keep things simple, we're going to assume that our
+    2825.9 ->  2831.1 | probability law is a uniform one, which means that the
+    2831.1 ->  2834.4 | probability of any particular subset of the sample space is
+    2834.4 ->  2837.1 | going to be the area of that subset.
+    2837.1 ->  2840.9 | So if we have some subset lying somewhere here, and we
+    2840.9 ->  2844.3 | ask what is the probability that we fall into that subset,
+    2844.3 ->  2847.6 | the probability is exactly the area of
+    2847.6 ->  2849.0 | that particular subset.
+    2849.8 ->  2854.1 | Once more, this is an arbitrary choice of a probability law.
+    2854.1 ->  2857.3 | There's nothing in our assumption so far that would
+    2857.3 ->  2859.5 | force us to make this particular choice.
+    2859.5 ->  2863.4 | And we just use it for the purposes of this example.
+    2863.4 ->  2867.4 | So now let us calculate some probabilities.
+    2867.4 ->  2869.8 | Let us look at this event.
+    2869.8 ->  2875.4 | This is the event that the sum of the two numbers that we
+    2879.2 ->  2883.2 | It is always useful to work in terms of a picture and to
+    2883.2 ->  2887.3 | depict that event in a picture of the sample space.
+    2887.3 ->  2891.8 | So in terms of that sample space, the points that make
+    2891.8 ->  2898.8 | this event to be true are just a triangle that lies below
+    2898.8 ->  2904.7 | the line where this is the line that x plus y equals to
+    2905.8 ->  2910.4 | Anything below that line, these are the outcomes that make
+    2910.4 ->  2912.1 | this event happen.
+    2912.1 ->  2914.2 | So we're trying to find the probability
+    2914.2 ->  2915.5 | of this red event.
+    2915.5 ->  2919.2 | We have assumed that probability is equal to area.
+    2919.2 ->  2922.4 | Therefore, the probability we're trying to calculate is
+    2922.4 ->  2924.3 | the area of a triangle.
+    2924.3 ->  2929.0 | And the area of a triangle is 1 half times the base of the
+    2929.0 ->  2933.2 | triangle, which is 1 half in our case, times the height of
+    2934.5 ->  2936.8 | which is again 1 half in our case.
+    2936.8 ->  2942.0 | And the end result is 1 over 8.
+    2942.0 ->  2946.5 | Let us now calculate another probability.
+    2946.5 ->  2949.6 | Now, this is an event that consists
+    2949.6 ->  2952.4 | of only a single element.
+    2952.4 ->  2958.9 | We take the point 0.5, 0.3, which sits somewhere here.
+    2958.9 ->  2962.6 | The event of interest is a set, but that set
+    2962.6 ->  2964.2 | consists of a single point.
+    2964.4 ->  2967.3 | So we're asking for the probability that our dart
+    2967.3 ->  2971.5 | falls exactly on top of that point.
+    2971.5 ->  2972.4 | What is it?
+    2972.4 ->  2975.4 | Well, it is the area of a set that
+    2975.4 ->  2976.9 | consists of a single point.
+    2976.9 ->  2979.2 | What is the area of a single point?
+    2979.2 ->  2981.1 | It is 0.
+    2981.1 ->  2983.4 | And similarly, for any other single point
+    2983.4 ->  2986.3 | inside that sample space that we might have considered,
+    2986.3 ->  2990.6 | the answer is going to be 0.
+    2990.6 ->  2993.7 | Let us now abstract from this example,
+    2993.7 ->  2995.4 | as well as the previous one.
+    2995.9 ->  3003.7 | and note the following. Probability calculations involve a sequence of four steps. Starting
+    3003.7 ->  3009.8 | with the word description of a problem, of a probabilistic experiment, we first write
+    3013.1 ->  3015.5 | We specify a probability law.
+    3015.5 ->  3018.3 | Let me emphasize again here that this step has some
+    3018.3 ->  3020.1 | arbitrariness in it.
+    3020.1 ->  3022.7 | You can choose any probability law you like, although
+    3022.7 ->  3025.6 | for your results to be useful, it would be good if your
+    3025.6 ->  3028.5 | probability law captures the real world phenomenon you're
+    3028.5 ->  3030.2 | trying to model.
+    3030.2 ->  3033.9 | Typically, you're interested in calculating the probability
+    3033.9 ->  3036.3 | of some event.
+    3036.3 ->  3039.4 | That event may be described in some loose manner, so you
+    3039.4 ->  3040.8 | need to describe it mathematically.
+    3041.8 ->  3045.6 | And if possible, it's always good to describe it in terms
+    3045.6 ->  3046.8 | of a picture.
+    3046.8 ->  3049.1 | Pictures are immensely useful when
+    3049.1 ->  3051.3 | going through this process.
+    3051.3 ->  3056.1 | And finally, the last step is to go ahead and calculate the
+    3056.1 ->  3058.9 | probability of the event of interest.
+    3058.9 ->  3061.8 | Now, a probability law in principle specifies the
+    3061.8 ->  3064.3 | probability of every event, and there is nothing.
+    3064.7 ->  3065.9 | else to do.
+    3065.9 ->  3068.8 | But quite often, the probability law will be given
+    3068.8 ->  3071.0 | in some implicit manner.
+    3071.0 ->  3074.5 | For example, by specifying the probabilities of only some of
+    3074.5 ->  3075.5 | the events.
+    3075.5 ->  3078.4 | In that case, you may have to do some additional work to
+    3078.4 ->  3081.5 | find the probability of the particular event that you
+    3081.5 ->  3083.0 | care about.
+    3083.0 ->  3086.9 | This last step sometimes will be easy.
+    3086.9 ->  3089.4 | Sometimes it may be complicated.
+    3089.4 ->  3091.2 | But in either case,
+    3091.3 ->  3095.0 | by following this four-step procedure.
+    3095.0 ->  3098.9 | And by being systematic, you will always be able to come up
+    3098.9 ->  3103.6 | with a single correct answer.
+    3103.6 ->  3106.7 | We have seen so far an example of a probability law on a
+    3106.7 ->  3110.5 | discrete and finite sample space, as well as an example
+    3110.5 ->  3113.5 | with an infinite and continuous sample space.
+    3113.5 ->  3117.8 | Let us now look at an example involving a discrete but
+    3117.8 ->  3119.2 | infinite sample space.
+    3120.0 ->  3123.0 | We carry out an experiment whose outcome is an
+    3123.0 ->  3125.8 | arbitrary positive integer.
+    3125.8 ->  3128.3 | As an example of such an experiment, suppose that we
+    3128.3 ->  3131.6 | keep tossing a coin, and the outcome is the number of
+    3131.6 ->  3135.8 | tosses until we observe heads for the first time.
+    3135.8 ->  3139.1 | The first heads might appear in the first toss, or the
+    3139.1 ->  3142.1 | second, or the third, and so on.
+    3142.1 ->  3145.9 | So in this example, any positive integer is possible,
+    3145.9 ->  3148.1 | and so our sample space is infinite.
+    3148.9 ->  3152.4 | Let us now specify a probability law.
+    3152.4 ->  3155.7 | A probability law should determine the probability of
+    3155.7 ->  3159.9 | every event, of every subset of the sample space.
+    3159.9 ->  3163.4 | That is, the probability of every set of positive
+    3163.4 ->  3164.8 | integers.
+    3164.8 ->  3169.2 | But instead, I will just tell you the probability of events
+    3169.2 ->  3170.8 | that contain a single element.
+    3171.5 ->  3176.1 | I'm going to tell you that there is probability 1 over 2
+    3176.1 ->  3181.0 | to the n that the outcome is equal to n.
+    3181.0 ->  3182.8 | Is this good enough?
+    3182.8 ->  3186.8 | Is this information enough to determine the probability of
+    3186.8 ->  3189.4 | any subset?
+    3189.4 ->  3191.9 | Before we look into that question, let us first do a
+    3191.9 ->  3195.3 | quick sanity check to see whether these numbers that
+    3195.3 ->  3198.4 | were given look like legitimate probabilities.
+    3198.4 ->  3200.4 | Do they add to 1?
+    3202.0 ->  3208.7 | So the sum over all the possible values of n of the
+    3208.7 ->  3212.5 | probabilities that we are given, which is an infinite
+    3212.5 ->  3218.4 | sum starting from 1, all the way up to infinity of 1 over
+    3218.4 ->  3221.5 | 2 to the n, is equal to the following.
+    3221.5 ->  3226.9 | First, we take out a factor of 1 half from all these terms,
+    3226.9 ->  3230.2 | which reduces the exponent from n to minus 1.
+    3230.9 ->  3236.6 | This is the same as running the sum from n equal 0 to
+    3236.6 ->  3242.2 | infinity of 1 half and to the n.
+    3242.2 ->  3247.4 | And now we have a usual infinite geometric series.
+    3247.4 ->  3250.6 | And we have a formula for this.
+    3250.6 ->  3256.7 | The geometric series has a value of 1 minus the number
+    3261.9 ->  3265.7 | And after we do the arithmetic, this turns out to be
+    3265.7 ->  3267.2 | equal to 1.
+    3267.2 ->  3273.9 | So indeed, it appears that we have the basic elements of
+    3273.9 ->  3277.3 | what it would take to have a legitimate probability law.
+    3277.3 ->  3280.9 | But now, let us look into how we might calculate the
+    3280.9 ->  3283.5 | probability of some general event.
+    3283.5 ->  3288.4 | For example, the probability that the outcome is even.
+    3288.4 ->  3290.1 | We proceed as follows.
+    3290.8 ->  3294.2 | The probability that the outcome is even, this is the
+    3294.2 ->  3300.5 | probability of an infinite set that consists of all the
+    3300.5 ->  3305.3 | even integers.
+    3305.3 ->  3310.1 | We can write this set as the union of
+    3310.3 ->  3316.0 | lots of little sets that contain a single element each.
+    3316.0 ->  3319.5 | So it's the set containing the number 2, the set containing
+    3319.5 ->  3323.3 | the number 4, the set containing the number 6, and
+    3323.3 ->  3326.9 | so on.
+    3326.9 ->  3330.1 | At this point, we notice that we're talking about the
+    3330.1 ->  3332.9 | probability of a union of sets.
+    3332.9 ->  3335.5 | And these sets are disjoint because they contain
+    3335.5 ->  3337.7 | different elements.
+    3342.0 ->  3346.8 | And say that this is the probability of obtaining a 2
+    3346.8 ->  3350.4 | plus the probability of obtaining a 4 plus the
+    3350.4 ->  3355.3 | probability of obtaining a 6, and so on.
+    3355.3 ->  3358.6 | If you're curious about doing this calculation and actually
+    3358.6 ->  3362.4 | obtaining a numerical answer, you would proceed as follows.
+    3362.4 ->  3367.8 | You notice that this is 1 over 2 to the second power
+    3370.1 ->  3377.1 | to the fourth power plus 1 over 2 to the sixth power, and so on.
+    3377.1 ->  3383.6 | Now you factor out a factor of 1 fourth.
+    3383.6 ->  3387.6 | And what you're left is 1 plus 1 over 2
+    3387.6 ->  3390.5 | to the second power, which is 1 fourth,
+    3390.5 ->  3396.4 | plus 1 over 2 to the fourth power,
+    3400.8 ->  3402.6 | And so on.
+    3402.6 ->  3407.7 | And now we have 1 fourth times the infinite sum of a
+    3407.7 ->  3415.6 | geometric series, which gives us 1 over 1 minus 1 fourth.
+    3415.6 ->  3419.2 | And after you do the algebra, you obtain a numerical answer
+    3419.2 ->  3423.2 | which is equal to 1 third.
+    3423.2 ->  3426.5 | But leaving the details of the calculation aside, the more
+    3426.5 ->  3429.8 | important question I want to address is the following.
+    3429.8 ->  3431.3 | Is this calculation correct?
+    3432.1 ->  3437.0 | We seem to have used an additivity property at this
+    3437.0 ->  3443.6 | point, but the additivity properties that we have in our
+    3443.6 ->  3448.9 | hands at this point only talk about disjoint unions of
+    3448.9 ->  3450.5 | finitely many subsets.
+    3451.0 ->  3454.4 | Our initial axiom talked about a disjoint union of two
+    3454.4 ->  3457.4 | subsets, and then later on we established a similar
+    3457.4 ->  3461.7 | property for a disjoint union of finitely many subsets.
+    3461.7 ->  3465.6 | But here we're talking about the union of
+    3465.6 ->  3468.6 | infinitely many subsets.
+    3468.6 ->  3474.3 | So this step here is not really allowed by what we
+    3474.3 ->  3476.0 | have in our hands.
+    3476.0 ->  3479.4 | On the other hand, we would like our theory to allow this
+    3481.2 ->  3486.0 | The way out of this dilemma is to introduce an additional
+    3486.0 ->  3492.6 | axiom that will indeed allow this kind of calculation.
+    3492.6 ->  3496.1 | The axiom that we introduce is the following.
+    3496.1 ->  3503.2 | If we have an infinite sequence of disjoint events, as for
+    3503.2 ->  3506.9 | example in this picture, we have our sample space.
+    3507.5 ->  3513.0 | We have a first event A1, we have a second event A2, a third
+    3513.0 ->  3517.6 | event A3, and so we keep continuing, and we have an
+    3517.6 ->  3520.4 | infinite sequence of such events.
+    3520.4 ->  3526.0 | Then the probability of the union of these events, of these
+    3526.0 ->  3529.6 | infinitely many events, is the sum of their
+    3529.6 ->  3532.4 | individual probabilities.
+    3538.2 ->  3543.4 | Namely, these events, these sets that we're dealing with,
+    3543.4 ->  3548.1 | can be arranged so that we can talk about the first event,
+    3548.1 ->  3554.5 | A1, the second event, A2, the third one, A3, and so on.
+    3554.5 ->  3558.3 | To appreciate the issue that arises here and to see why
+    3558.3 ->  3564.0 | the word sequence is so important, let us consider the
+    3564.0 ->  3565.2 | following calculation.
+    3565.7 ->  3571.8 | Our sample space is the unit square.
+    3571.8 ->  3575.3 | And we consider a model where the probability of a set is
+    3575.3 ->  3579.9 | its area, as in the examples that we considered earlier.
+    3579.9 ->  3583.6 | Let us now look at the probability of the overall
+    3583.6 ->  3585.2 | sample space.
+    3585.2 ->  3588.2 | Our sample space is the unit square.
+    3589.3 ->  3595.6 | unit square can be thought of as the union of various sets
+    3595.6 ->  3598.2 | that consist of single points.
+    3598.2 ->  3605.7 | So it's the union of subsets with one element each.
+    3605.7 ->  3610.1 | And it's a union taken over all the points in the unit
+    3610.1 ->  3611.7 | square.
+    3611.4 ->  3614.6 | Then we think about additivity.
+    3614.6 ->  3618.5 | We observe that these subsets are disjoint.
+    3618.5 ->  3621.3 | If we're considering different points, then we get
+    3621.3 ->  3623.9 | disjoint single element sets.
+    3623.9 ->  3627.3 | And then an additivity property would tell us that the
+    3627.3 ->  3632.0 | probability of this union is the sum of the probabilities of
+    3632.0 ->  3634.9 | the different single element subsets.
+    3636.3 ->  3640.4 | Now, as we discussed before, single element subsets have
+    3640.4 ->  3645.1 | zero probability, so we have a sum of lots of zeros, and the
+    3645.1 ->  3649.2 | sum of zeros should be equal to zero.
+    3649.2 ->  3652.2 | On the other hand, by the probability axioms, the
+    3652.2 ->  3654.8 | probability of the entire sample space
+    3654.8 ->  3656.7 | should be equal to 1.
+    3656.7 ->  3661.1 | And so we have established that 1 is equal to 0.
+    3661.1 ->  3663.1 | This looks like a paradox.
+    3663.1 ->  3664.6 | Is it?
+    3664.5 ->  3669.1 | The catch is that there is nothing in the axioms we have
+    3669.1 ->  3672.7 | introduced so far or the properties we have established
+    3672.7 ->  3675.5 | that would justify this step.
+    3675.5 ->  3679.9 | So this step here is questionable.
+    3679.9 ->  3683.4 | You might argue that the unit square is the union of
+    3683.4 ->  3685.5 | disjoint single element sets.
+    3686.7 ->  3690.3 | which is the case that we have in additivity axioms.
+    3690.3 ->  3693.9 | But the additivity axiom only applies when we have a
+    3693.9 ->  3696.8 | sequence of events.
+    3696.8 ->  3699.6 | And this is not what we have here.
+    3699.6 ->  3704.1 | This is not a union of a sequence of single element sets.
+    3704.1 ->  3707.1 | In fact, there is no way that the elements of the unit
+    3707.1 ->  3710.0 | square can be arranged in a sequence.
+    3710.0 ->  3714.4 | The unit square is said to be an uncountable set.
+    3716.1 ->  3719.9 | This is a deep and fundamental mathematical fact.
+    3719.9 ->  3723.0 | What it essentially says is that there are two kinds of
+    3723.0 ->  3727.2 | infinite sets, discrete ones, or informal
+    3727.2 ->  3729.4 | terminology, countable.
+    3729.4 ->  3732.9 | These are sets whose elements can be arranged in a sequence,
+    3732.9 ->  3738.5 | like the integers, and also uncountable sets, such as the
+    3738.5 ->  3743.0 | unit square or the real line, whose elements cannot be
+    3743.0 ->  3744.2 | arranged in a sequence.
+    3744.7 ->  3748.6 | If you're curious, you can find the proof of this
+    3748.6 ->  3751.5 | important fact in the supplementary materials that
+    3751.5 ->  3754.0 | we are providing.
+    3754.0 ->  3756.7 | After all this discussion, you may now have legitimate
+    3756.7 ->  3760.3 | suspicions about the models we have been looking at.
+    3760.3 ->  3763.8 | Is area a legitimate probability law?
+    3763.8 ->  3768.6 | Does it even satisfy countable additivity?
+    3768.6 ->  3771.7 | This question takes us into deep waters and has to do
+    3771.7 ->  3773.7 | with a deep subfield of mathematics
+    3773.7 ->  3774.9 | called measure theory.
+    3775.3 ->  3778.9 | Fortunately, it turns out that all is well.
+    3778.9 ->  3782.0 | Area is a legitimate probability law.
+    3782.0 ->  3786.6 | It does indeed satisfy the countable additivity axiom as
+    3786.6 ->  3792.3 | long as we only deal with nice subsets of the unit square.
+    3792.3 ->  3795.7 | Fortunately, the subsets that arise in whatever we do in
+    3795.7 ->  3798.2 | this course will be nice.
+    3798.2 ->  3802.6 | Subsets that are not nice are quite pathological, and we
+    3802.6 ->  3803.9 | will not encounter them.
+    3804.9 ->  3808.9 | At this stage, we are not in a position to say anything
+    3808.9 ->  3812.9 | more that would be meaningful about these issues, because
+    3812.9 ->  3816.2 | they're quite complicated and mathematically deep.
+    3816.2 ->  3820.5 | We can only say that there are some serious mathematical
+    3820.5 ->  3824.9 | subtleties, but fortunately, they can all be overcome in a
+    3824.9 ->  3826.2 | rigorous manner.
+    3826.2 ->  3829.2 | And for the rest of this class, you can just forget
+    3829.2 ->  3830.7 | about these subtle issues.
+    3833.1 ->  3837.1 | We end this lecture sequence by stepping back to discuss what
+    3837.1 ->  3841.1 | probability theory really is, and what exactly is the
+    3841.1 ->  3844.1 | meaning of the word probability.
+    3844.1 ->  3847.1 | In the most narrow view, probability theory is just a
+    3847.1 ->  3848.7 | branch of mathematics.
+    3848.7 ->  3850.7 | We start with some axioms.
+    3850.7 ->  3853.8 | We consider models that satisfy these axioms.
+    3853.8 ->  3856.5 | And we establish some consequences, which are the
+    3856.5 ->  3858.1 | theorems of this theory.
+    3858.8 ->  3862.7 | You could do all that without ever asking the question of
+    3862.7 ->  3866.2 | what the word probability really means.
+    3866.2 ->  3870.0 | Yet one of the theorems of probability theory that we will
+    3870.0 ->  3874.0 | see later in this class is that probabilities can be
+    3874.0 ->  3878.3 | interpreted as frequencies, very loosely speaking.
+    3878.3 ->  3882.2 | If I have a fair coin and I toss it infinitely many times,
+    3882.2 ->  3885.3 | then the fraction of heads that I will observe
+    3885.3 ->  3887.2 | will be 1 half.
+    3888.4 ->  3892.1 | the probability of an event A can be interpreted as the
+    3892.1 ->  3896.0 | frequency with which event A will occur in an infinite
+    3896.0 ->  3899.8 | number of repetitions of the experiment.
+    3899.8 ->  3902.8 | But is this all there is?
+    3902.8 ->  3905.1 | If we're dealing with coin tosses, it makes sense to
+    3905.1 ->  3907.4 | think of probabilities as frequencies.
+    3907.4 ->  3912.2 | But consider a statement such as, the current president of
+    3912.2 ->  3915.6 | my country will be reelected in the next election with
+    3915.6 ->  3916.9 | probability 0.7.
+    3918.1 ->  3924.0 | It is hard to think of this number 0.7 as a frequency, it does not make sense to think
+    3924.0 ->  3928.0 | of infinitely many repetitions of the next election.
+    3928.0 ->  3933.9 | In cases like this, and in many others, it is better to think of probabilities as just
+    3933.9 ->  3937.7 | some way of describing our beliefs.
+    3937.7 ->  3943.3 | And if you're a betting person, probabilities can be thought of as some numerical guidance
+    3948.6 ->  3955.9 | But now, if we think of probabilities as beliefs, you can run into the argument that, well,
+    3955.9 ->  3962.6 | beliefs are subjective. Isn't probability theory supposed to be an objective part of
+    3962.6 ->  3970.7 | math and science? Is probability theory just an exercise in subjectivity? Well, not quite.
+    3970.7 ->  3976.5 | There is more into it. Probability, at the minimum, gives us some rules for thinking
+    3977.8 ->  3981.3 | about uncertain situations.
+    3981.3 ->  3984.4 | And if it happens that our probability model, our
+    3984.4 ->  3988.3 | subjective beliefs, have some relation with the real world,
+    3988.3 ->  3991.9 | then probability theory can be a very useful tool for making
+    3991.9 ->  3996.9 | predictions and decisions that apply to the real world.
+    3996.9 ->  3999.8 | Now, whether your predictions and decisions will be any
+    3999.8 ->  4004.3 | good will depend on whether you have chosen a good model.
+    4005.1 ->  4007.7 | Have you chosen a model that provides a good enough
+    4007.7 ->  4011.1 | representation of the real world?
+    4011.1 ->  4013.7 | How do you make sure that this is the case?
+    4013.7 ->  4017.0 | There is a whole field, the field of statistics, whose
+    4017.0 ->  4021.3 | purpose is to complement probability theory by using
+    4021.3 ->  4024.8 | data to come up with good models.
+    4024.8 ->  4029.4 | And so we have the following diagram that summarizes the
+    4029.4 ->  4032.2 | relation between the real world statistics and
+    4032.2 ->  4033.3 | probability.
+    4035.9 ->  4039.2 | The field of statistics and inference uses this data to
+    4039.2 ->  4041.7 | come up with probabilistic models.
+    4041.7 ->  4044.7 | Once we have a probabilistic model, we use probability
+    4044.7 ->  4048.4 | theory and the analysis tools that it provides to us.
+    4048.4 ->  4052.3 | And the results that we get from this analysis lead to
+    4052.3 ->  4055.1 | predictions and decisions about the real world.
+   Done: 1026 sentences. Saved to output/whisper.json
+[3/4] PaddleOCR is reading text from the screenshots...
+INFO: Could not find files for the given pattern(s).
+C:\Users\mskid\AppData\Local\Programs\Python\Python311\Lib\site-packages\paddle\utils\cpp_extension\extension_utils.py:718: UserWarning: No ccache found. Please be aware that recompiling all source files may be required. You can download and install ccache from: https://github.com/ccache/ccache/blob/master/doc/INSTALL.md
+  warnings.warn(warning_message)
+[32mCreating model: ('PP-OCRv4_mobile_det', None, None)[0m
+[32mModel files already exist. Using cached files. To redownload, please delete the directory manually: `C:\Users\mskid\.paddlex\official_models\PP-OCRv4_mobile_det`.[0m
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I1122 15:53:36.686276 22692 onednn_context.cc:81] oneDNN v3.6.2
+[32mCreating model: ('en_PP-OCRv4_mobile_rec', None, None)[0m
+[32mModel files already exist. Using cached files. To redownload, please delete the directory manually: `C:\Users\mskid\.paddlex\official_models\en_PP-OCRv4_mobile_rec`.[0m
+      PaddleOCR device: CPU (MKL-DNN on, 8 threads), language en, model en_PP-OCRv4_mobile_rec
+      Adaptive sampling on (after 2 same slides, up to every 4 screenshots; slide match: tokens)
+   second     0: LECTURE 1: Probability models and axioms Sample space Probabillty laws
+   second   111: Sample space
+   second   294: Sample space List set of possible outcomes, List must be -Mutually exc
+   second   360: Title: .H and raius Body: Sample space List set of possible outcomes,2
+   second   450: Sample space: discrete/finite example
+   second   597: Sample space: discrete/finite example Two rolls of a tetrahedral die s
+   second   681: Sample space: continuous example x,ysuch that0xy1
+   second   840: Probability axioms Event: a subset of the sample space -Probability is
+   second  1062: Probability axioms Event: a subset of the sample space -Probability is
+   second  1287: Title: PS=1 Body: Some simple consequences of the axioms Axioms For di
+   second  1554: Title: AUA= Body: Some simple consequences of the axioms Axioms PS=1 F
+   second  1647: Some simple consequences of the axioms AB,CdisjointPAUBUC=PA+PB+PC
+   second  1752: Some simple consequences of the axioms AB,CdisjointPAUBUC=PA+PB+PC
+   second  1872: Title: S P(Ai) Body: Some simple consequences of the axioms ABCdisjoin
+   second  1950: More consequences of the axioms
+   second  2109: Title: B=AUBnA) Body: More consequences of the axioms IfACB,then PAPB 
+   second  2322: More consequences of the axioms
+   second  2391: Title: AUBUC Body: More consequences of the axioms PAUBUC=PA+PAnB+PAnB
+   second  2469: Probability calculation: discrete/finite example Two rolls of a tetrah
+   second  2619: Title: =2y=3=2 Body: Probability calculation: discrete/finite example 
+   second  2688: Discrete uniform law -Assume 2 consists of n equally likely elements -
+   second  2784: Probability calculation: continuous example x,ysuch that0xy1
+   second  3171: Probability calculation: discrete but infinite sample space Sample spa
+   second  3072: Probability calculation steps Specify the sample space Specify a proba
+   second  3024: Probability calculation steps Specify the sample space Specify a proba
+   second  3000: Probability calculation steps Specify the sample space Specify a proba
+   second  2994: Probability calculation steps Specify the sample space Specify a proba
+   second  2991: Probability calculation steps Specify the sample space Specify a proba
+   second  3366: Probability calculation: discrete but infinite sample space Sample spa
+   second  3492: Title: If A,A2.A3.. is an infinite sequence of disjoint events, Body: 
+   second  3555: Mathematical subtleties Countable Additivity Axiom: If A1,A2,A3.. is a
+   second  3714: Title: If A1.A2, A3. is an infinite sequence of disjoint events, Body:
+   second  3831: Interpretations of probability theory
+   second  3909: Interpretations of probability theory A narrow view: a branch of math 
+   second  3969: The role of probability theory A framework for analyzing phenomena wit
+   second  4026: The role of probability theory A framework for analyzing phenomena wit
+   OCR was run 36 times for 1353 screenshots (31 regular + 5 to locate slide changes).
+   OCR time: 41.3s total, 1.15s per OCR call (1 process(es) x 8 thread(s))
+   Done: 14 text blocks. Saved to output/ocr.json
+[4/4] Finished!
+Open these files in the output folder to see the results:
+  - output/whisper.json  (speech)
+  - output/ocr.json      (on-screen text)
+
+===== [15:54:20] build_chunks: D:\7\413410654\專題\rag-video-main\venv\Scripts\python.exe build_chunks.py mit_prob_l01
+Speech sentences kept: 1010 / 1026
+Slide text blocks kept: 14 / 14
+
+Created 95 chunks -> output\chunks.jsonl
+
+mit_prob_l01_001     0.7s ->   48.9s  130 words  image=frame_0009.jpg
+    slide : LECTURE 1: Probability models and axioms Sample space Probabillty laws - Axioms 
+    speech: Welcome to the first lecture of this class. You may be used to having a first le...
+mit_prob_l01_002    45.5s ->   92.2s  118 words  image=frame_0024.jpg
+    slide : LECTURE 1: Probability models and axioms Sample space Probabillty laws - Axioms 
+    speech: which assigns probabilities to outcomes or to collections of outcomes. The proba...
+mit_prob_l01_003    89.8s ->  110.5s   53 words  image=frame_0034.jpg
+    slide : LECTURE 1: Probability models and axioms Sample space Probabillty laws - Axioms 
+    speech: As you will be seeing many times in this class, discrete models are conceptually...
+mit_prob_l01_004   110.5s ->  155.5s   99 words  image=frame_0045.jpg
+    slide : Sample space
+    speech: the real world. Putting together a probabilistic model, that is, a model of a ra...
+mit_prob_l01_005   152.2s ->  201.2s   96 words  image=frame_0060.jpg
+    slide : Sample space
+    speech: simultaneously, or maybe we roll a die. Whatever that experiment is, it has a nu...
+mit_prob_l01_006   197.5s ->  242.9s  115 words  image=frame_0074.jpg
+    slide : Sample space
+    speech: Namely, the elements should be mutually exclusive and collectively exhaustive. W...
+mit_prob_l01_007   239.6s ->  285.3s  100 words  image=frame_0088.jpg
+    slide : Sample space
+    speech: To summarize, this set should be such that at the end of the experiment, you sho...
+mit_prob_l01_008   281.3s ->  328.6s  103 words  image=frame_0105.jpg
+    slide : Sample space ; Title: .H and raius Body: Sample space List set of possible outco
+    speech: the very simple and maybe silly example, which is the following. Suppose that yo...
+mit_prob_l01_009   321.6s ->  367.9s   58 words  image=frame_0116.jpg
+    slide : Title: .H and raius Body: Sample space List set of possible outcomes,2 List must
+    speech: And then you could say that my sample space is really heads and it's raining. An...
+mit_prob_l01_010   365.6s ->  413.9s  118 words  image=frame_0131.jpg
+    slide : Title: .H and raius Body: Sample space List set of possible outcomes,2 List must
+    speech: the experiment of flipping a coin. The elements of this sample space are mutuall...
+mit_prob_l01_011   410.5s ->  452.0s   84 words  image=frame_0144.jpg
+    slide : Title: .H and raius Body: Sample space List set of possible outcomes,2 List must
+    speech: For example, if you have a theory that the weather play with that theory or mayb...
+mit_prob_l01_012   455.6s ->  502.9s  104 words  image=frame_0161.jpg
+    slide : Sample space: discrete/finite example Two rolls of a tetrahedral die sequential 
+    speech: Sample spaces are sets, and the set can be discrete, finite, infinite, continuou...
+mit_prob_l01_013   499.4s ->  549.8s  125 words  image=frame_0176.jpg
+    slide : Sample space: discrete/finite example Two rolls of a tetrahedral die sequential 
+    speech: What is the sample space of that experiment? Well, one possible representation i...
+mit_prob_l01_014   546.0s ->  591.8s  101 words  image=frame_0191.jpg
+    slide : Sample space: discrete/finite example Two rolls of a tetrahedral die sequential 
+    speech: Notice that these two outcomes are pretty closely related. In both cases, we obs...
+mit_prob_l01_015   586.7s ->  631.9s  112 words  image=frame_0204.jpg
+    slide : Sample space: discrete/finite example Two rolls of a tetrahedral die sequential 
+    speech: We could think about rolling the die once and then going ahead with the second r...
+mit_prob_l01_016   628.0s ->  674.1s  122 words  image=frame_0218.jpg
+    slide : Sample space: discrete/finite example Two rolls of a tetrahedral die sequential 
+    speech: So the experiment starts, we carry out the first phase, which in this case is th...
+mit_prob_l01_017   670.5s ->  717.2s  100 words  image=frame_0232.jpg
+    slide : Sample space: discrete/finite example Two rolls of a tetrahedral die sequential 
+    speech: In both cases, we have 16 possible outcomes. 4 times 4 makes 16. And similarly, ...
+mit_prob_l01_018   714.8s ->  760.6s   88 words  image=frame_0247.jpg
+    slide : Sample space: discrete/finite example Two rolls of a tetrahedral die sequential 
+    speech: when you throw the dart, it always falls inside the target. Once the dart hits t...
+mit_prob_l01_019   757.0s ->  804.8s  106 words  image=frame_0261.jpg
+    slide : Sample space: discrete/finite example Two rolls of a tetrahedral die sequential 
+    speech: construction of a probabilistic model, namely the construction of a sample space...
+mit_prob_l01_020   800.5s ->  839.1s   86 words  image=frame_0274.jpg
+    slide : Sample space: discrete/finite example Two rolls of a tetrahedral die sequential 
+    speech: which was the unit square in which we throw a dart at random and record the poin...
+mit_prob_l01_021   839.1s ->  887.7s   76 words  image=frame_0289.jpg
+    slide : Probability axioms Event: a subset of the sample space -Probability is assigned 
+    speech: For this reason, instead of assigning probabilities to individual points, we wil...
+mit_prob_l01_022   884.0s ->  930.0s  107 words  image=frame_0303.jpg
+    slide : Probability axioms Event: a subset of the sample space -Probability is assigned 
+    speech: So probabilities will be assigned to subsets. And this will not cause us difficu...
+mit_prob_l01_023   927.2s ->  974.3s   99 words  image=frame_0318.jpg
+    slide : Probability axioms Event: a subset of the sample space -Probability is assigned 
+    speech: the sample space is called an event. Why is it called an event? Because once we ...
+mit_prob_l01_024   968.6s -> 1019.0s  104 words  image=frame_0332.jpg
+    slide : Probability axioms Event: a subset of the sample space -Probability is assigned 
+    speech: First, by convention, probabilities are always given in a range between 0 and 1....
+mit_prob_l01_025  1015.4s -> 1062.8s  120 words  image=frame_0347.jpg
+    slide : Probability axioms Event: a subset of the sample space -Probability is assigned 
+    speech: If the subset that we're looking at is actually not a subset but is the entire s...
+mit_prob_l01_026  1059.1s -> 1104.1s   71 words  image=frame_0362.jpg
+    slide : Probability axioms Event: a subset of the sample space -Probability is assigned 
+    speech: The more interesting axiom is the next one. That says something a little more co...
+mit_prob_l01_027  1100.0s -> 1145.5s   97 words  image=frame_0375.jpg
+    slide : Probability axioms Event: a subset of the sample space -Probability is assigned 
+    speech: So in this picture, the intersection of A and B is this shaded set. We use this ...
+mit_prob_l01_028  1140.9s -> 1187.2s   83 words  image=frame_0389.jpg
+    slide : Probability axioms Event: a subset of the sample space -Probability is assigned 
+    speech: sample space, which are disjoint? So here's our sample space. And here are the t...
+mit_prob_l01_029  1182.2s -> 1233.5s  116 words  image=frame_0404.jpg
+    slide : Probability axioms Event: a subset of the sample space -Probability is assigned 
+    speech: That is, the probability that the outcome is here or there is equal to the sum o...
+mit_prob_l01_030  1228.6s -> 1274.4s  117 words  image=frame_0418.jpg
+    slide : Probability axioms Event: a subset of the sample space -Probability is assigned 
+    speech: And B is how much is sitting on top of A plus how much is sitting on top of B. A...
+mit_prob_l01_031  1272.7s -> 1323.2s  103 words  image=frame_0436.jpg
+    slide : Probability axioms Event: a subset of the sample space -Probability is assigned 
+    speech: not need to say it. As we will see in the next segment, such a requirement follo...
+mit_prob_l01_032  1317.1s -> 1364.6s  114 words  image=frame_0448.jpg
+    slide : Title: AUA= Body: Some simple consequences of the axioms Axioms PS=1 For disjoin
+    speech: that probabilities are also less than or equal to 1. We have another axiom that ...
+mit_prob_l01_033  1361.3s -> 1409.0s  115 words  image=frame_0463.jpg
+    slide : Title: AUA= Body: Some simple consequences of the axioms Axioms PS=1 For disjoin
+    speech: For instance, if the probability of heads is 0.6, then the probability of tails ...
+mit_prob_l01_034  1404.1s -> 1453.4s  121 words  image=frame_0477.jpg
+    slide : Title: AUA= Body: Some simple consequences of the axioms Axioms PS=1 For disjoin
+    speech: So the intuition of this result is the same as for the case of two events, but w...
+mit_prob_l01_035  1448.8s -> 1497.8s  113 words  image=frame_0492.jpg
+    slide : Title: AUA= Body: Some simple consequences of the axioms Axioms PS=1 For disjoin
+    speech: And in order to be able to refer to these axioms, let us give them some names, c...
+mit_prob_l01_036  1493.6s -> 1539.0s   90 words  image=frame_0506.jpg
+    slide : Title: AUA= Body: Some simple consequences of the axioms Axioms PS=1 For disjoin
+    speech: Now we argue as follows. We have that the probability of the entire sample space...
+mit_prob_l01_037  1534.6s -> 1580.0s   93 words  image=frame_0520.jpg
+    slide : Title: AUA= Body: Some simple consequences of the axioms Axioms PS=1 For disjoin
+    speech: of event A with the probability of the complement of A. This is one of the relat...
+mit_prob_l01_038  1573.8s -> 1619.4s   88 words  image=frame_0533.jpg
+    slide : Title: AUA= Body: Some simple consequences of the axioms Axioms PS=1 For disjoin
+    speech: that probabilities are always less than or equal to 1. Finally, let us note that...
+mit_prob_l01_039  1617.2s -> 1663.4s   97 words  image=frame_0548.jpg
+    slide : Title: AUA= Body: Some simple consequences of the axioms Axioms PS=1 For disjoin
+    speech: consists of all elements that do not belong to the sample space. But since the s...
+mit_prob_l01_040  1658.9s -> 1705.8s  119 words  image=frame_0562.jpg
+    slide : Title: AUA= Body: Some simple consequences of the axioms Axioms PS=1 For disjoin
+    speech: And within that sample space, we have three events, three subsets, and these sub...
+mit_prob_l01_041  1701.6s -> 1747.6s  123 words  image=frame_0576.jpg
+    slide : Title: AUA= Body: Some simple consequences of the axioms Axioms PS=1 For disjoin
+    speech: Formally, what we're doing is that we're expressing the union of these three set...
+mit_prob_l01_042  1744.9s -> 1792.9s  103 words  image=frame_0591.jpg
+    slide : Title: AUA= Body: Some simple consequences of the axioms Axioms PS=1 For disjoin
+    speech: to write the first term as probability of A plus probability of B. We carry over...
+mit_prob_l01_043  1787.3s -> 1834.2s   78 words  image=frame_0605.jpg
+    slide : Title: AUA= Body: Some simple consequences of the axioms Axioms PS=1 For disjoin
+    speech: is going to be equal to the sum of their individual So this is the generalizatio...
+mit_prob_l01_044  1829.0s -> 1877.4s  101 words  image=frame_0619.jpg
+    slide : Title: AUA= Body: Some simple consequences of the axioms Axioms PS=1 For disjoin
+    speech: And these elements together form a finite set. What can we say about the probabi...
+mit_prob_l01_045  1874.0s -> 1921.5s   99 words  image=frame_0634.jpg
+    slide : Title: AUA= Body: Some simple consequences of the axioms Axioms PS=1 For disjoin
+    speech: We're assuming, of course, that these elements are all different from each other...
+mit_prob_l01_046  1917.5s -> 1962.5s   84 words  image=frame_0648.jpg
+    slide : Title: AUA= Body: Some simple consequences of the axioms Axioms PS=1 For disjoin
+    speech: But intuitively, we can also talk as just the probability of that particular ele...
+mit_prob_l01_047  1958.3s -> 2004.1s   89 words  image=frame_0661.jpg
+    slide : Title: AUA= Body: Some simple consequences of the axioms Axioms PS=1 For disjoin
+    speech: consequences of the axioms that we have introduced. If we have two sets, and one...
+mit_prob_l01_048  2001.2s -> 2047.6s   91 words  image=frame_0676.jpg
+    slide : Title: AUA= Body: Some simple consequences of the axioms Axioms PS=1 For disjoin
+    speech: probability that the outcome falls inside a. How do we prove this formally? The ...
+mit_prob_l01_049  2042.7s -> 2090.8s  113 words  image=frame_0690.jpg
+    slide : Title: AUA= Body: Some simple consequences of the axioms Axioms PS=1 For disjoin
+    speech: Now, this piece is A. This piece here is outside A. So these two pieces are disj...
+mit_prob_l01_050  2087.1s -> 2136.9s   84 words  image=frame_0705.jpg
+    slide : Title: AUA= Body: Some simple consequences of the axioms Axioms PS=1 For disjoin
+    speech: It allows us to write the probability of the union of two sets for the case now ...
+mit_prob_l01_051  2130.1s -> 2175.4s   87 words  image=frame_0719.jpg
+    slide : Title: AUA= Body: Some simple consequences of the axioms Axioms PS=1 For disjoin
+    speech: And that piece consists of those elements of A that do So they belong to B compl...
+mit_prob_l01_052  2171.2s -> 2218.5s  117 words  image=frame_0733.jpg
+    slide : Title: AUA= Body: Some simple consequences of the axioms Axioms PS=1 For disjoin
+    speech: And that piece has a certain probability, C. It's the probability of that set. A...
+mit_prob_l01_053  2215.6s -> 2265.9s  110 words  image=frame_0748.jpg
+    slide : Title: AUA= Body: Some simple consequences of the axioms Axioms PS=1 For disjoin
+    speech: And by the additivity axiom, the probability of the union of A and B is the sum ...
+mit_prob_l01_054  2262.3s -> 2308.0s   80 words  image=frame_0763.jpg
+    slide : Title: AUA= Body: Some simple consequences of the axioms Axioms PS=1 For disjoin
+    speech: cancel here 1b with another b. And what we are left with is a plus b plus c. So ...
+mit_prob_l01_055  2304.3s -> 2353.1s   94 words  image=frame_0777.jpg
+    slide : Title: AUA= Body: Some simple consequences of the axioms Axioms PS=1 For disjoin
+    speech: the probability of A plus the probability of B. This inequality here is quite us...
+mit_prob_l01_056  2346.3s -> 2401.3s   71 words  image=frame_0792.jpg
+    slide : Title: AUA= Body: Some simple consequences of the axioms Axioms PS=1 For disjoin
+    speech: Set A, set B, and set C. We're going to use a set-theoretic relation. We're goin...
+mit_prob_l01_057  2393.0s -> 2438.2s   91 words  image=frame_0806.jpg
+    slide : Title: AUA= Body: Some simple consequences of the axioms Axioms PS=1 For disjoin
+    speech: So this is the intersection of B with the complement of A. The third piece is go...
+mit_prob_l01_058  2435.9s -> 2470.9s   70 words  image=frame_0818.jpg
+    slide : Title: AUA= Body: Some simple consequences of the axioms Axioms PS=1 For disjoin
+    speech: which order we take the two sets. And similarly, the set that we have here is th...
+mit_prob_l01_059  2470.9s -> 2518.9s  100 words  image=frame_0833.jpg
+    slide : Title: =2y=3=2 Body: Probability calculation: discrete/finite example Two rolls 
+    speech: Let us now move from the abstracts to the concrete. Recall the example that we d...
+mit_prob_l01_060  2515.3s -> 2565.7s  105 words  image=frame_0848.jpg
+    slide : Title: =2y=3=2 Body: Probability calculation: discrete/finite example Two rolls 
+    speech: x which stands for the result of the first role is equal to 1. The way to calcul...
+mit_prob_l01_061  2553.7s -> 2607.2s   97 words  image=frame_0861.jpg
+    slide : Title: =2y=3=2 Body: Probability calculation: discrete/finite example Two rolls 
+    speech: contains, so it is 4 times 1 over 16 equals to 1 fourth. Let's now z stand for t...
+mit_prob_l01_062  2603.9s -> 2654.9s  130 words  image=frame_0877.jpg
+    slide : Title: =2y=3=2 Body: Probability calculation: discrete/finite example Two rolls 
+    speech: that this particular event can happen. So since there's only one outcome that ma...
+mit_prob_l01_063  2647.3s -> 2686.7s   87 words  image=frame_0890.jpg
+    slide : Title: =2y=3=2 Body: Probability calculation: discrete/finite example Two rolls 
+    speech: something larger. This green event, this green set, is the set of all outcomes f...
+mit_prob_l01_064  2687.0s -> 2739.9s  121 words  image=frame_0906.jpg
+    slide : Discrete uniform law -Assume 2 consists of n equally likely elements -Assume A c
+    speech: is a special case of what is called a discrete uniform law. In a discrete unifor...
+mit_prob_l01_065  2731.4s -> 2777.3s  119 words  image=frame_0919.jpg
+    slide : Discrete uniform law -Assume 2 consists of n equally likely elements -Assume A c
+    speech: Consider now some subset of the sample space, an event A, that has exactly k ele...
+mit_prob_l01_066  2774.2s -> 2822.0s  120 words  image=frame_0935.jpg
+    slide : Discrete uniform law -Assume 2 consists of n equally likely elements -Assume A c
+    speech: turn out to be an important skill, and there will be a whole lecture devoted to ...
+mit_prob_l01_067  2818.8s -> 2867.4s  131 words  image=frame_0949.jpg
+    slide : Probability calculation: continuous example x,ysuch that0xy1
+    speech: It's up to us to choose how to model a certain situation. And to keep things sim...
+mit_prob_l01_068  2863.4s -> 2910.4s   95 words  image=frame_0963.jpg
+    slide : Probability calculation: continuous example x,ysuch that0xy1
+    speech: So now let us calculate some probabilities. Let us look at this event. This is t...
+mit_prob_l01_069  2905.8s -> 2952.4s  108 words  image=frame_0977.jpg
+    slide : Probability calculation: continuous example x,ysuch that0xy1
+    speech: Anything below that line, these are the outcomes that make this event happen. So...
+mit_prob_l01_070  2949.6s -> 2990.6s  100 words  image=frame_0991.jpg
+    slide : Probability calculation: continuous example x,ysuch that0xy1
+    speech: of only a single element. We take the point 0.5, 0.3, which sits somewhere here....
+mit_prob_l01_071  2990.6s -> 3036.3s  102 words  image=frame_1006.jpg
+    slide : Probability calculation steps Specify the sample space Specify a probability law
+    speech: Let us now abstract from this example, as well as the previous one. and note the...
+mit_prob_l01_072  3033.9s -> 3081.5s  126 words  image=frame_1020.jpg
+    slide : Probability calculation steps Specify the sample space Specify a probability law
+    speech: of some event. That event may be described in some loose manner, so you need to ...
+mit_prob_l01_073  3078.4s -> 3125.8s  106 words  image=frame_1035.jpg
+    slide : Probability calculation steps Specify the sample space Specify a probability law
+    speech: find the probability of the particular event that you care about. This last step...
+mit_prob_l01_074  3123.0s -> 3169.2s  111 words  image=frame_1050.jpg
+    slide : Probability calculation steps Specify the sample space Specify a probability law
+    speech: arbitrary positive integer. As an example of such an experiment, suppose that we...
+mit_prob_l01_075  3164.8s -> 3212.5s  106 words  image=frame_1065.jpg
+    slide : Probability calculation steps Specify the sample space Specify a probability law
+    speech: But instead, I will just tell you the probability of events that contain a singl...
+mit_prob_l01_076  3208.7s -> 3256.7s  101 words  image=frame_1079.jpg
+    slide : Probability calculation: discrete but infinite sample space Sample space{12,...}
+    speech: probabilities that we are given, which is an infinite sum starting from 1, all t...
+mit_prob_l01_077  3250.6s -> 3300.5s   95 words  image=frame_1093.jpg
+    slide : Probability calculation: discrete but infinite sample space Sample space{12,...}
+    speech: The geometric series has a value of 1 minus the number And after we do the arith...
+mit_prob_l01_078  3294.2s -> 3346.8s   93 words  image=frame_1108.jpg
+    slide : Probability calculation: discrete but infinite sample space Sample space{12,...}
+    speech: probability of an infinite set that consists of all the even integers. We can wr...
+mit_prob_l01_079  3342.0s -> 3387.6s   94 words  image=frame_1123.jpg
+    slide : Probability calculation: discrete but infinite sample space Sample space{12,...}
+    speech: And say that this is the probability of obtaining a 2 plus the probability of ob...
+mit_prob_l01_080  3383.6s -> 3429.8s   89 words  image=frame_1137.jpg
+    slide : Probability calculation: discrete but infinite sample space Sample space{12,...}
+    speech: And what you're left is 1 plus 1 over 2 to the second power, which is 1 fourth, ...
+mit_prob_l01_081  3426.5s -> 3474.3s   97 words  image=frame_1151.jpg
+    slide : Probability calculation: discrete but infinite sample space Sample space{12,...}
+    speech: important question I want to address is the following. Is this calculation corre...
+mit_prob_l01_082  3468.6s -> 3492.6s   47 words  image=frame_1161.jpg
+    slide : Probability calculation: discrete but infinite sample space Sample space{12,...}
+    speech: So this step here is not really allowed by what we have in our hands. On the oth...
+mit_prob_l01_083  3492.6s -> 3543.4s   89 words  image=frame_1174.jpg
+    slide : Title: If A1.A2, A3. is an infinite sequence of disjoint events, Body: Mathemati
+    speech: The axiom that we introduce is the following. If we have an infinite sequence of...
+mit_prob_l01_084  3538.2s -> 3583.6s   96 words  image=frame_1188.jpg
+    slide : Title: If A1.A2, A3. is an infinite sequence of disjoint events, Body: Mathemati
+    speech: Namely, these events, these sets that we're dealing with, can be arranged so tha...
+mit_prob_l01_085  3579.9s -> 3627.3s   95 words  image=frame_1202.jpg
+    slide : Title: If A1.A2, A3. is an infinite sequence of disjoint events, Body: Mathemati
+    speech: Let us now look at the probability of the overall sample space. Our sample space...
+mit_prob_l01_086  3623.9s -> 3669.1s  106 words  image=frame_1217.jpg
+    slide : Title: If A1.A2, A3. is an infinite sequence of disjoint events, Body: Mathemati
+    speech: And then an additivity property would tell us that the probability of this union...
+mit_prob_l01_087  3664.5s -> 3710.0s  109 words  image=frame_1230.jpg
+    slide : Title: If A1.A2, A3. is an infinite sequence of disjoint events, Body: Mathemati
+    speech: The catch is that there is nothing in the axioms we have introduced so far or th...
+mit_prob_l01_088  3707.1s -> 3754.0s  100 words  image=frame_1245.jpg
+    slide : Title: If A1.A2, A3. is an infinite sequence of disjoint events, Body: Mathemati
+    speech: square can be arranged in a sequence. The unit square is said to be an uncountab...
+mit_prob_l01_089  3751.5s -> 3798.2s  103 words  image=frame_1259.jpg
+    slide : Title: If A1.A2, A3. is an infinite sequence of disjoint events, Body: Mathemati
+    speech: we are providing. After all this discussion, you may now have legitimate suspici...
+mit_prob_l01_090  3795.7s -> 3830.7s   84 words  image=frame_1272.jpg
+    slide : Title: If A1.A2, A3. is an infinite sequence of disjoint events, Body: Mathemati
+    speech: this course will be nice. Subsets that are not nice are quite pathological, and ...
+mit_prob_l01_091  3833.1s -> 3878.3s  106 words  image=frame_1286.jpg
+    slide : Interpretations of probability theory A narrow view: a branch of math -Axioms=th
+    speech: We end this lecture sequence by stepping back to discuss what probability theory...
+mit_prob_l01_092  3874.0s -> 3924.0s  124 words  image=frame_1301.jpg
+    slide : Interpretations of probability theory A narrow view: a branch of math -Axioms=th
+    speech: interpreted as frequencies, very loosely speaking. If I have a fair coin and I t...
+mit_prob_l01_093  3918.1s -> 3970.7s  112 words  image=frame_1316.jpg
+    slide : Interpretations of probability theory A narrow view: a branch of math -Axioms=th
+    speech: It is hard to think of this number 0.7 as a frequency, it does not make sense to...
+mit_prob_l01_094  3970.7s -> 4017.0s  111 words  image=frame_1332.jpg
+    slide : The role of probability theory A framework for analyzing phenomena with uncertai
+    speech: There is more into it. Probability, at the minimum, gives us some rules for thin...
+mit_prob_l01_095  4013.7s -> 4055.1s   94 words  image=frame_1346.jpg
+    slide : The role of probability theory A framework for analyzing phenomena with uncertai
+    speech: There is a whole field, the field of statistics, whose purpose is to complement ...
+
+===== [15:54:21] build_db: D:\7\413410654\專題\rag-video-main\venv\Scripts\python.exe build_db.py
+Loaded 95 chunks
+Loading BGE-M3 (first time: downloading, please wait)...
+Embedding device: cuda
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 16291.39it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Creating vectors...
+Batches:   0%|          | 0/3 [00:00<?, ?it/s]Batches:  33%|███▎      | 1/3 [00:02<00:04,  2.27s/it]Batches:  67%|██████▋   | 2/3 [00:04<00:01,  1.99s/it]Batches: 100%|██████████| 3/3 [00:05<00:00,  1.73s/it]Batches: 100%|██████████| 3/3 [00:05<00:00,  1.83s/it]
+Each vector has 1024 numbers
+
+Done! Saved 95 chunks to output/chroma_db
+Now run: python search.py
+
+===== [15:54:51] eval_transcript: D:\7\413410654\專題\rag-video-main\venv\Scripts\python.exe evaluation/eval_transcript.py output/whisper.json evaluation/references/mit_prob_l01.srt --lang en --out output/eval_transcript.json
+WER: 5.6%  (substitutions 72, deletions 417, insertions 17, reference 9067 tokens)
+
+===== [15:54:53] eval_search: D:\7\413410654\專題\rag-video-main\venv\Scripts\python.exe evaluation/eval_search.py evaluation/questions/mit_prob_l01.json output/chroma_db
+Loading BGE-M3 on cuda...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 15649.94it/s]
+20 questions, 95 chunks in database
+
+# 檢索方法比較（vector / bm25 / hybrid）
+
+- 資料庫：output/chroma_db　題目檔：evaluation/questions/mit_prob_l01.json
+- all = 每種方法排完所有片段再合併；top10 = 各取前 10 名再合併（系統實際設定）；w = bm25_weight
+- 題目數：20　片段數：95　向量模型：BAAI/bge-m3（cuda）
+- RRF：k=60、vector_weight=1.0
+
+## ALL（20 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 50% | 60% | 0.585 | 48 |
+| bm25 | 40% | 50% | 0.457 | 31 |
+| hybrid (all, w=1) | 50% | 65% | 0.593 | 32 |
+| hybrid (top10, w=1) | 50% | 70% | 0.598 | 29 |
+| hybrid (top10, w=0.5) | 45% | 70% | 0.581 | 30 |
+| hybrid (top10, w=0.3) | 50% | 70% | 0.598 | 29 |
+
+## keyword（8 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 75% | 75% | 0.756 | 69 |
+| bm25 | 50% | 75% | 0.615 | 30 |
+| hybrid (all, w=1) | 75% | 75% | 0.760 | 31 |
+| hybrid (top10, w=1) | 75% | 75% | 0.750 | 28 |
+| hybrid (top10, w=0.5) | 75% | 75% | 0.750 | 29 |
+| hybrid (top10, w=0.3) | 75% | 75% | 0.750 | 28 |
+
+## paraphrase（8 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 38% | 50% | 0.492 | 34 |
+| bm25 | 50% | 50% | 0.527 | 34 |
+| hybrid (all, w=1) | 38% | 62% | 0.509 | 34 |
+| hybrid (top10, w=1) | 38% | 75% | 0.542 | 31 |
+| hybrid (top10, w=0.5) | 25% | 75% | 0.500 | 32 |
+| hybrid (top10, w=0.3) | 38% | 75% | 0.542 | 31 |
+
+## chinese（4 題）
+
+| 方法 | Hit@1 | Hit@3 | MRR | 平均時間 (ms) |
+|---|---|---|---|---|
+| vector | 25% | 50% | 0.429 | 31 |
+| bm25 | 0% | 0% | 0.000 | 26 |
+| hybrid (all, w=1) | 25% | 50% | 0.429 | 31 |
+| hybrid (top10, w=1) | 25% | 50% | 0.406 | 30 |
+| hybrid (top10, w=0.5) | 25% | 50% | 0.406 | 28 |
+| hybrid (top10, w=0.3) | 25% | 50% | 0.406 | 28 |
+
+## 每題正確片段的名次（越小越好，- = 沒找到）
+
+| 類型 | 問題 | vector | bm25 | hybrid (all, w=1) | hybrid (top10, w=1) | hybrid (top10, w=0.5) | hybrid (top10, w=0.3) |
+|---|---|---|---|---|---|---|---|
+| keyword | mutually exclusive and collectively exhaustive | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | tetrahedral die with 16 possible outcomes | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | what is the union bound | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | countable additivity axiom | 46 | 26 | 31 | - | - | - |
+| keyword | nonnegativity axiom | 1 | 3 | 1 | 1 | 1 | 1 |
+| keyword | discrete uniform probability law | 36 | 21 | 22 | - | - | - |
+| keyword | why is the unit square an uncountable set | 1 | 1 | 1 | 1 | 1 | 1 |
+| keyword | probability of the empty set | 1 | 2 | 1 | 1 | 1 | 1 |
+| paraphrase | does the weather outside matter when listing outcomes of a coin flip | 5 | 1 | 1 | 1 | 2 | 3 |
+| paraphrase | why can't each point of a continuous target get its own positive probability | 1 | 6 | 3 | 3 | 2 | 1 |
+| paraphrase | how do we draw an experiment that happens in stages | 1 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | if one event is contained in another which one is more likely | 1 | 34 | 5 | 2 | 2 | 2 |
+| paraphrase | how to get a probability by counting when all outcomes are equally likely | 7 | 1 | 1 | 1 | 1 | 1 |
+| paraphrase | what are the general steps for solving a probability problem | 40 | 53 | 52 | - | - | - |
+| paraphrase | how do we check that the given probabilities of the integers really add to one | 2 | 1 | 2 | 2 | 2 | 2 |
+| paraphrase | what is the chance that the dart hits one exact point | 14 | - | 49 | - | - | - |
+| chinese | 樣本空間要怎麼選才適當 | 1 | - | 1 | 1 | 1 | 1 |
+| chinese | 機率的公理有哪些 | 11 | - | 11 | - | - | - |
+| chinese | 兩個事件聯集的機率怎麼算 | 8 | - | 8 | 8 | 8 | 8 |
+| chinese | 連續樣本空間的例子 | 2 | - | 2 | 2 | 2 | 2 |
+
+Saved: output\eval_result.md, output\eval_detail.csv, output\eval_summary.json

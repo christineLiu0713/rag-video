@@ -1,0 +1,9 @@
+{
+  "rate": 0.08419979612640163,
+  "substitutions": 82,
+  "deletions": 201,
+  "insertions": 130,
+  "reference_tokens": 4905,
+  "hypothesis_tokens": 4834,
+  "metric": "WER"
+}
